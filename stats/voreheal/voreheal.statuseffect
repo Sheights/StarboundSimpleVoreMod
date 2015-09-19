@@ -1,0 +1,14 @@
+{
+  "name" : "voreheal",
+  "effectConfig" : {
+    "healTime" : 60
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "voreheal.lua"
+  ],
+
+  "label" : "Regeneration",
+  "icon" : "/interface/statuses/heal.png"
+}

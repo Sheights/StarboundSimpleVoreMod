@@ -1,0 +1,140 @@
+{
+  "objectName" : "voreagumonmicrodigest",
+  "rarity" : "common",
+  "description" : "Watch your step, he looks hungry.",
+  "shortdescription" : "Hungry Agumon - Micro",
+  "race" : "digimon",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "His stomach is growling.",
+  "avianDescription" : "This digimon is making me nervous.",
+  "floranDescription" : "Agumon not eat Floran, Floran eat agumon!",
+  "glitchDescription" : "Alert. This digimon looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, are you hungry?  Want a burgermon? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this agumon's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/agumon/malefullmicro.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/vorechatscript.lua" ],
+  
+  "animation" : "maleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.wav" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "malewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "Try not to be tooooo fattening~",
+	"Ah, quit your wiggling and just digest already.",
+	"Mmm, you feel all soft and squishy.",
+	"Can I have your ship once you're done?",
+	"*burp* 'Scuse me.",
+	"Still solid in there?",
+	"Not long left till you're just padding~",
+	"Heh, you feel like clay already.",
+	"I'll be even sexier soon~",
+	"I be fulla melty things~",
+	"Easier than battling, that's for sure.",
+	"Easier than collecting data.",
+	"What do you think happened to my Tameer?",
+	"Sorry about digesting you like this, but what can I say a mon got to eat.",
+	"Don't even bother struggling in their many others came before you and they all have disappeared into my hips.",
+	"You know no matter how much you struggle you not going to get out of there.",
+	"You'll make a nice layer digifat here soon.",
+	"Just try to relax your food now just relax and become a part of me.",
+	"Just so you know once I'm done melting you down into new layer of digipudge , I'm going to be putting all your stuff into the cargo hold for resale later.",
+	"I hope you do like Agumons because soon you going to be a permanent part of one my tasty treat.",
+	"Your truly one of the best meals I've ever had. I'm going to remember you. Every time I rub this fat gut of mine.",
+	"Quickly before you melt completely away. Could I have your name so I can add it to my list like all the others?",
+	"Sorry probably should have told you beforehand, but my belly extremely good at, digesting anything in other words even after it's done, you'll still be there. *pats belly*"
+  ],
+  "gulpLines" : [
+    "A moment on my lips, a lifetime on my biceps.",
+	"Too late now!",
+	"Thanks for the meal!",
+	"Not much of a meal, but it'll do.",
+	"Sorry, i just couldn't hold back I was just too hungry, but at least you are delicious.",
+	"Thank you. I needed something to eat so badly",
+	"I have to admit, you have to be one of the most tastiest things I've ever ate",
+	"And another one disappears down into my belly",
+	"Welcome to your new permanent home"
+  ],
+  "chatIdleFull" : [
+    "Mmm, come back in a bit.",
+	"What's that you say? I don't hear anybody.",
+	"Say, are you open later? I might have some... room in my schedule.",
+	"Umm... Nothing to see here just carry-on like usual.",
+	"Nothing to see here unless you like what you see and come back a little bit later and I'll be more than happy to add you to the crew manifests",
+	"Don't mind me just adding another crew member to their new permanent position. Although if you like come back in a bit were and I think I can fit you in for a similar position"
+  ],
+  "chatIdleEmpty" : [
+    "Hey, I've got something stuck in my mouth, can you check it?",
+	"Why not add that sexy body to mine?",
+	"I'm sooo hungry...",
+	"Are you as tasty as you look?",
+	"You smell delicious!",
+	"Food belongs inside me. Not walking around.",
+	"Hey spacer, I got a space for you right in here.",
+	"Keep waving that ass around me and you'll end up padding mine.",
+	"*Loud stomach growling* Sorry about that , have not had anything to eat all day and well you look pretty delicious.",
+	"*The belly makes loud growling noise as the agumon stares at you with very hungry look on his face*.",
+	"You have to be one of the most tastiest looking things I've ever seen. If you like come over here and I'll give you a personal tour of the insides of an Agumons belly.",
+	"You smell delicious! How about you come over here and I'll add you to my personal crew manifest.",
+	"Hey can you do me a favor I'm starving here could you get me something to eat. I could eat just about anything right now.",
+	"Hey I forgot my lunch in the break room would you like to replace it?"
+  ],
+  "rubLines" : [
+    "Not often i get a rub fron the outside.",
+    "Nothing like a post-meal belly-rub.",
+    "Keep it up, it's good for digestion...",
+    "Better be good at this, or i'll have seconds.",
+    "Maybe later you can give me a rub from the inside instead.",
+    "Well aren't you nice, helping me digest your friend.",
+    "Can you feel your friend slowly digesting inside of me?",
+    "Not sure if you want to be next, or pleading for your life."
+  ]
+}

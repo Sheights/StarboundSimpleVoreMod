@@ -1,0 +1,17 @@
+{
+  "name" : "StarboundSimpleVore",
+  "path" : ".",
+  "dependencies" : [],
+  "metadata" : {
+    "displayName" : "Starbound Simple Vore",
+	"author" : "ArgobargSoup",
+	"thanks" : {
+	  "NekoYuki, Yoyox" : [ "Lines" ],
+	  "Treebuddy" : [ "Icons, Store" ],
+	  "Sheights"  :  [ "Programming" ],
+	  "Artist Credit" : [ "Credits.txt" ]
+	},
+	"description" : "A simple vore mod.",
+	"version" : "3.1.1"
+  }
+}

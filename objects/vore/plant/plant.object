@@ -1,0 +1,66 @@
+{
+  "objectName"  :  "voreplant",
+  "printable"  :  false,
+  "rarity"  :  "Common",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "Which unholy Floran birthed this!?",
+  "shortdescription"  :  "Plant",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "planticon.png",
+  "orientations" : [
+    {
+	  "image" : "plant.png:idle1.<frame>",
+	  "imagePosition" : [-15, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-15, -16]
+	},
+    {
+	  "image" : "plant.png:idle1.<frame>",
+	  "imagePosition" : [-17, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	  ,"animationPosition" : [-17, -16]
+	}
+  ],
+  
+  "animation"  :  "plant.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.wav" ],
+	  "lay" : [ "/sfx/objects/eggLay.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "plant.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/plant/plant.lua" ],
+  "scriptDelta" : 3
+}

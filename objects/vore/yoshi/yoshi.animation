@@ -1,0 +1,90 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle1",
+	    "states"  :  {
+	      "idle1"  :  {
+		    "frames"  :  1
+		  },
+		  "idle2"  :  {
+		    "frames"  :  8,
+			"cycle"  :  1.2,
+			"mode"  :  "loop"
+		  },
+		  "idle3"  :  {
+		    "frames"  :  5,
+			"cycle"  :  1.0,
+			"mode"  :  "loop"
+		  },
+		  "blink"  :  {
+		    "frames"  :  1
+		  },
+		  "egglay"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.5,
+			"mode"  :  "end"
+		  },
+		  "eating" :  {
+		    "frames"  :  8,
+		    "cycle"  :  1.1,
+		    "mode"  :  "end"
+		  },
+		  "fed" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.0,
+		    "mode"  :  "loop"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+			"idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+			"idle3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle3.<frame>"
+		      }
+		    },
+			"blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+			"egglay"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:egglay.<frame>"
+		      }
+		    },
+	        "eating"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:eating.<frame>"
+		      }
+		    },
+		    "fed"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}
