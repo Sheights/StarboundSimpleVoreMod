@@ -1,0 +1,103 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "pred" : {
+        "default" : "idle",
+        "states" : {
+          "idle"  :  {
+		    "frames"  :  1
+		  },
+		  "blink" : {
+			"frames"  :  2,
+			"cycle"  :  0.8,
+			"mode"  :  "end"
+          },
+		  "eating" : {
+		    "frames"  :  3,
+			"cycle"  :  0.5,
+			"mode"  :  "end"
+		  },
+		  "fed" : {
+		    "frames"  :  1
+		  },
+		  "fedblink" : {
+		    "frames"  :  1
+		  },
+		  "sigh" : {
+		    "frames"  :  3,
+			"cycle"  :  0.5,
+			"mode"  :  "end"
+		  },
+		  "rest" : {
+		    "frames"  :  1
+		  },
+		   "sleep" : {
+		    "frames"  :  4,
+			"cycle"  :  0.9,
+			"mode"  :  "loop"
+		  },
+		  "pain" : {
+		    "frames"  :  1
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "pred" : {
+        "properties" : {
+          "centered" : false
+        },
+        "partStates" : {
+          "pred" : {
+            "idle" :{
+              "properties" : {
+              "image" : "<partImage>:idle"
+              }
+            },
+			"blink" :{
+              "properties" : {
+              "image" : "<partImage>:blink.<frame>"
+              }
+            },
+			"eating" :{
+              "properties" : {
+              "image" : "<partImage>:eating.<frame>"
+              }
+            },
+			"fed" :{
+              "properties" : {
+              "image" : "<partImage>:fed"
+              }
+			},
+			"fedblink" :{
+              "properties" : {
+              "image" : "<partImage>:fedblink"
+              }
+            },
+			"sigh" :{
+              "properties" : {
+              "image" : "<partImage>:sigh.<frame>"
+              }
+            },
+			"rest" :{
+              "properties" : {
+              "image" : "<partImage>:rest"
+              }
+            },
+			"sleep" :{
+              "properties" : {
+              "image" : "<partImage>:sleep.<frame>"
+              }
+			},
+			"pain" :{
+              "properties" : {
+              "image" : "<partImage>:pain"
+              }
+			}
+          }
+        }
+      }
+    }
+  }
+}
