@@ -1,0 +1,51 @@
+{
+  "objectName" : "bellyBoundStore",
+  "rarity" : "Common",
+  "interactAction" : "OpenCraftingInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/crafting.config",
+    "filter" : [ "bellyBoundStore" ]
+  },
+  
+  "printable" : false,
+  "description" : "Your one stop shop for all your predatory needs!",
+  "shortdescription" : "BellyBound Store",
+  "race" : "generic",
+  "category" : "crafting",
+  "price" : 0,
+
+  "apexDescription" : "[TODO: ApexDescription]",
+  "avianDescription" : "[TODO: AvianDescription]",
+  "floranDescription" : "[TODO: FloranDescription]",
+  "glitchDescription" : "[TODO: GlitchDescription]",
+  "humanDescription" : "[TODO: HumanDescription]",
+  "hylotlDescription" : "[TODO: HylotlDescription]",
+  "novakidDescription" : "[TODO: NovakidDescription]",
+
+  "inventoryIcon" : "bellyboundIcon.png",
+  "orientations" : [
+    {
+      "dualImage" : "bellybound.png:idle.<frame>",
+      "imagePosition" : [0, 0],
+      "spaceScan" : 1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform",
+      "detectArea" : [ [2, 0], [8, 5] ]
+    }
+  ],
+  
+  "animation"  :  "bellybound.animation",
+  "animationParts"  :  {
+    "body"  :  "bellybound.png"
+  },
+  
+  "scripts" : [ "/objects/bellybound/bellybound.lua" ],
+  "scriptDelta" : 3,
+  
+  "chatIdle" : [
+    "Starlilly: Issss not our fault if you don't come backsss again...",
+    "Starlilly: No refundsss or trade-insss",
+    "Wulf: Star, why do you think we don't get many repeat customers?",
+    "Wulf: Oh no! I think another one escaped!"
+  ]
+}

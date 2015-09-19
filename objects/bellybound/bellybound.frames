@@ -1,0 +1,17 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [120, 72],
+	"dimensions"  :  [8, 5],
+	"names"  :  [
+	  ["idle.1", "blink.1", "blink.2", "blink.3", "fade.1", "fade.2", "fade.3", "fade.4"],
+	  ["fade.5", "greet.1", "greet.2", "greet.3", "greet.4", "greet.5", "greet.6", "greet.7"],
+	  ["look.1", "look.2", "look.3", "sign.1", "sign.2", "sign.3", "sign.4", "sign.5"],
+	  ["sign.6", "sign.7", "tail.1", "tail.2", "tail.3", "tail.4", "tail.5", "wave.1"],
+	  ["wave.2", "wave.3", "wave.4", "wave.5", "wave.6", "wave.7", "empty.1", "empty.2"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "idle.default"  : "idle.1"
+	}
+}

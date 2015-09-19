@@ -1,0 +1,150 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle1",
+	    "states"  :  {
+		  "idle1"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "idle2"  :  {
+		    "frames"  :  7,
+			"cycle"  :  1.4,
+			"mode"  :  "transition",
+			"transition"  :  "idle1"
+		  },
+		  "idle3"  :  {
+		    "frames"  :  4,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "idle1"
+		  },
+		  "blink"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle1"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  6,
+			"cycle"  :  1.1,
+			"mode"  :  "transition",
+			"transition"  :  "fullbig"
+		  },
+		  "fullbig" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.3,
+		    "mode"  :  "loop"
+		  },
+		  "bigtosmall" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1,
+		    "mode" : "transition",
+			"transition" : "fullsmall" 
+		  },
+		  "fullsmall" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.3,
+		    "mode" : "loop"
+		  },
+		  "smalltomicro" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1,
+		    "mode" : "transition",
+			"transition" : "fullmicro" 
+		  },
+		  "fullmicro" :  {
+		    "frames"  :  3,
+		    "cycle"  :  1.3,
+		    "mode" : "loop"
+		  },
+		  "microtonone" :  {
+		    "frames"  :  11,
+		    "cycle"  :  1.7,
+		    "mode" : "end"
+		  },
+		  "release"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.5,
+			"mode"  :  "end"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+	        "idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+	        "idle3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle3.<frame>"
+		      }
+		    },
+	        "blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "fullbig"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullbig.<frame>"
+		      }
+		    },
+	        "bigtosmall"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:bigtosmall.<frame>"
+		      }
+		    },
+	        "fullsmall"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullsmall.<frame>"
+		      }
+		    },
+	        "smalltomicro"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:smalltomicro.<frame>"
+		      }
+		    },
+	        "fullmicro"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullmicro.<frame>"
+		      }
+		    },
+	        "microtonone"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:microtonone.<frame>"
+		      }
+		    },
+	        "release"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:release.<frame>"
+		      }
+			}
+		  }
+	    }
+   	  }
+    }
+  }
+}

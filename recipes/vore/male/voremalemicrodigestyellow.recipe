@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voremalemicrodigestyellow",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "objects", "all", "other" ]
+}

@@ -1,0 +1,30 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "pred" : {
+        "default" : "pred",
+        "states" : {
+          "pred" : {
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "pred" : {
+        "properties" : {
+          "centered" : false
+        },
+        "partStates" : {
+          "pred" : {
+            "pred" :{
+              "properties" : {
+              "image" : "<partImage>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

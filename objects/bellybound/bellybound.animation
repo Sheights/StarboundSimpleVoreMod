@@ -1,0 +1,109 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+	      "idle"  :  {
+		    "frames"  :  1
+		  },
+		  "blink"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "fade"  :  {
+		    "frames"  :  5,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "greet"  :  {
+		    "frames"  :  7,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "look"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "sign" :  {
+		    "frames"  :  7,
+		    "cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "tail" :  {
+		    "frames"  :  5,
+		    "cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "wave" :  {
+		    "frames"  :  7,
+		    "cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle.<frame>"
+		      }
+		    },
+			"blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+			"fade"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fade.<frame>"
+		      }
+		    },
+			"greet"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:greet.<frame>"
+		      }
+		    },
+			"look"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:look.<frame>"
+		      }
+		    },
+	        "sign"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sign.<frame>"
+		      }
+		    },
+	        "wave"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:wave.<frame>"
+		      }
+		    },
+		    "tail"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tail.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

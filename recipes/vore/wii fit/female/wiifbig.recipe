@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "wiifbig",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "objects", "all", "other" ]
+}

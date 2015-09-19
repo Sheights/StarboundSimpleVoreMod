@@ -1,0 +1,110 @@
+{
+  "objectName" : "voredragonbluebig",
+  "rarity" : "common",
+  "description" : "A nice warm place to spend the night~",
+  "shortdescription" : "Blue Dragon Male - Big",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This dragon seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this boy seems... intriguing...",
+  "floranDescription" : "...Floran like dragon, but why?",
+  "glitchDescription" : "Wonder.  There is something about this male...",
+  "humanDescrtiption" : "Whatever it is you want sir, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this dragon's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/dragonblue/malefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/vorechatscript.lua" ],
+  
+  "animation" : "maleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.wav" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "malewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "Mmmmmmmm.",
+	"Oooh, keep wriggling.",
+	"Just have yourself a nice little nap in there.",
+	"I love having a full belly!",
+	"<3 <3 <3",
+	"Hah, maybe I should charge rent.",
+	"Stay as long as you want.",
+	"I feel like a mo- wait.",
+	"This feels so great I might have to keep you inside forever~",
+	"I be fulla happy people~"
+  ],
+  "gulpLines" : [
+    "In you go!",
+	"Best bed in the galaxy!",
+	"Enjoy your stay!",
+	"Weclome to Casa de Me!"
+  ],
+  "chatIdleFull" : [
+    "Sorry, no vacancies!",
+	"Come back later!",
+	"Sorry, one person per... room."
+  ],
+  "chatIdleEmpty" : [
+    "Come on in!",
+	"We have vacancies!",
+	"I've got some room to rent over here!",
+	"Are you as tasty as you look?",
+	"Up for some fun hon?",
+	"I've got a warm belly to escape the colds of space.",
+	"Hey spacer, I got a space for you right in here.",
+	"Why build a house when you could move into me?",
+	"Much less fierce than my cousin the Bone Dragon"
+  ],
+  "rubLines" : [
+    "You're pretty good at this, mind doing it for longer?",
+    "Ooohh! Thanks for the massage ~",
+    "Now i'm getting a massage from both sides.",
+    "I love a good belly rub ~"
+  ]
+}

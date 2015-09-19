@@ -1,0 +1,14 @@
+{
+  "name" : "stomachacid",
+  "effectConfig" : {
+    "digestTime" : 60
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "stomachacid.lua"
+  ],
+
+  "label" : "Being Digested",
+  "icon" : "/stats/stomachacid/stomachacid.png"
+}
