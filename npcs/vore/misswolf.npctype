@@ -35,29 +35,14 @@
       }
     }
   },
-   "scriptDelta" : 30,
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
 				"/npcs/vore/npcvore.lua" 
   ],
 
   "items" : {
-    "override" : [
-      [0, [
-          {
-            "head" : [
-              { "name" : "wolfcostumehead" }
-            ],
-            "chest" : [
-              { "name" : "wolfcostumechest" },
-			  { "name" : "wolfbellychest"}
-            ],
-            "legs" : [
-              { "name" : "wolfcostumelegs" },
-			  { "name" : "wolfbellylegs" }
-            ]
-          }
-        ] ]
-    ]
+    "override" : []
   }
 }

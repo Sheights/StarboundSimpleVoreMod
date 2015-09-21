@@ -34,7 +34,8 @@
       }
     }
   },
-  "scriptDelta" : 3,
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
 				"/npcs/vore/npcvore.lua" 
