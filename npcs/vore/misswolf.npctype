@@ -35,19 +35,26 @@
       }
     }
   },
+   "scriptDelta" : 30,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/npcvore.lua" 
+  ],
 
   "items" : {
     "override" : [
       [0, [
           {
             "head" : [
-              { "name" : "wolfcostumehead", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfcostumehead" }
             ],
             "chest" : [
-              { "name" : "wolfcostumechest", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfcostumechest" },
+			  { "name" : "wolfbellychest"}
             ],
             "legs" : [
-              { "name" : "wolfcostumelegs", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfcostumelegs" },
+			  { "name" : "wolfbellylegs" }
             ]
           }
         ] ]

@@ -34,6 +34,11 @@
       }
     }
   },
+  "scriptDelta" : 3,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/npcvore.lua" 
+  ],
 
   "items" : {
     "override" : [

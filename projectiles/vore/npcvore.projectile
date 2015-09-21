@@ -1,0 +1,21 @@
+{
+	"projectileName" : "npcvoreprojectile",
+	"bounces" : -1,
+	"timeToLive" : 0.001,
+	"speed" : 0,
+	"damageKindImage" : "icon.png",
+	"frames" : "npcvore.png",
+	"frameNumber" : 1,
+	"power" : 0,
+	"piercing" : true,
+	"damageKind" : "default",
+	"damageType" : "ignoresdef",
+	"damagePoly" : [ [-36, 0], [-24, -24], [0, -36], [24, -24], [36, 0], [24, 24], [0, 36], [-24, 24] ],
+	"flippable" : true,
+	"universalDamage" : true,
+	"statusEffects" : [
+	  {"effect" : "intents", "duration" : 10},
+	  {"effect" : "npcvore", "duration" : 10},
+	  {"effect" : "paralysis", "duration" : 10}
+	]
+}
