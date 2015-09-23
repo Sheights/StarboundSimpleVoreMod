@@ -43,7 +43,6 @@ Lizard 						- treebuddy
 Lucario 					- rez
 Maid Pale 					- treebuddy
 Maid Tan 					- treebuddy
-Mana Lizards				- Sheights
 Meloetta 					- treebuddy
 Meloetta Human 				- treebuddy
 Mewtwo 						- Rez
