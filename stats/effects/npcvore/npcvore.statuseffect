@@ -1,0 +1,12 @@
+{
+  "name" : "npcvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npcvore.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/wellfed.png"
+}
