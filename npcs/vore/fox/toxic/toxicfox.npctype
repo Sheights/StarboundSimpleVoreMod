@@ -1,8 +1,7 @@
 {
-  "type" : "missfox",
+  "type" : "toxicfox",
   "baseType" : "villager",
   
-
   "scriptConfig" : {
     "dialog" : {
       "tenant" : {
@@ -27,8 +26,8 @@
       "converse" : {
         "default" : {
           "default" : [
-            "I'm Miss Fox!",
-            "I don't have much dialog!"
+            "Hello",
+            "I swear my fur is natural color!"
           ]
         }
       }
@@ -38,7 +37,7 @@
   "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/npcvore.lua" 
+				"/npcs/vore/fox/toxic/tfox.lua" 
   ],
 
   "items" : {
@@ -46,13 +45,13 @@
       [0, [
           {
             "head" : [
-              { "name" : "foxcostumehead", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "foxtoxichead", "parameters" : { "colorIndex" : 0 } }
             ],
             "chest" : [
-              { "name" : "foxcostumechest", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "foxtoxicchest", "parameters" : { "colorIndex" : 0 } }
             ],
             "legs" : [
-              { "name" : "foxcostumepants", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "foxtoxiclegs", "parameters" : { "colorIndex" : 0 } }
             ]
           }
         ] ]

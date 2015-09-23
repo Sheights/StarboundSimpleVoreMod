@@ -1,8 +1,7 @@
 {
-  "type" : "missfox",
+  "type" : "poisonwolf",
   "baseType" : "villager",
   
-
   "scriptConfig" : {
     "dialog" : {
       "tenant" : {
@@ -27,8 +26,9 @@
       "converse" : {
         "default" : {
           "default" : [
-            "I'm Miss Fox!",
-            "I don't have much dialog!"
+            "*cough* Hello",
+            "I can't tell if it's something I ate or, I don't know.",
+			"I'm sure it's not contagious. From the outside anyway."
           ]
         }
       }
@@ -38,7 +38,7 @@
   "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/npcvore.lua" 
+				"/npcs/vore/wolf/poison/pwolf.lua" 
   ],
 
   "items" : {
@@ -46,13 +46,13 @@
       [0, [
           {
             "head" : [
-              { "name" : "foxcostumehead", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfpoisonhead", "parameters" : { "colorIndex" : 0 } }
             ],
             "chest" : [
-              { "name" : "foxcostumechest", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfpoisonchest", "parameters" : { "colorIndex" : 0 } }
             ],
             "legs" : [
-              { "name" : "foxcostumepants", "parameters" : { "colorIndex" : 0 } }
+              { "name" : "wolfpoisonlegs", "parameters" : { "colorIndex" : 0 } }
             ]
           }
         ] ]
