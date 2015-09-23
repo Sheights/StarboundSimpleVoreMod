@@ -1,10 +1,10 @@
 {
   "objectName"  :  "voreglazedigest",
   "printable"  :  false,
-  "rarity"  :  "Common",
+  "rarity"  :  "Uncommon",
   "catagory"  :  "furniture",
   "price"  :  20,
-  "description"  :  "A pegasus from an unknown galaxy, she seems harmless enough. Equines don't eat meat anyway, right?",
+  "description"  :  "A pegasus from an unknown galaxy, she seems harmless enough. Equines don't eat meat anyway, right? [Digestion]",
   "shortdescription"  :  "Hungry Glaze",
 
   "apexDescription" : "[TODO] Apex Description",

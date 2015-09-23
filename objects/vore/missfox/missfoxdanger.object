@@ -1,10 +1,10 @@
 {
   "objectName"  :  "voremissfoxdigest",
   "printable"  :  false,
-  "rarity"  :  "Common",
+  "rarity"  :  "Uncommon",
   "catagory"  :  "furniture",
   "price"  :  20,
-  "description" : "A foxy pred!",
+  "description" : "A foxy pred! [Digestion]",
   "shortdescription"  :  "Miss Fox",
 
   "apexDescription" : "Her stomach is growling.",

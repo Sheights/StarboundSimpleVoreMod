@@ -1,10 +1,10 @@
 {
   "objectName"  :  "vorelinkodigest",
   "printable"  :  false,
-  "rarity"  :  "Common",
+  "rarity"  :  "Uncommon",
   "catagory"  :  "furniture",
   "price"  :  20,
-  "description"  :  "[TODO] Description",
+  "description"  :  "[TODO] Description [Digestion?]",
   "shortdescription"  :  "[CV] Linko Danger",
 
   "apexDescription" : "[TODO] Apex Description",
