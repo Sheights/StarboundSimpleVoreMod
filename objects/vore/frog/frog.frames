@@ -1,0 +1,38 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [66, 53],
+	"dimensions"  :  [9, 6],
+	"names"  :  [
+	["idle", "croak.1", "croak.2", "eat.1", "eat.2", "eat.4", "eat.5", "eat.6", "eat.7"],
+	["eat.8", "eat.9", "eat.10", "eat.11", "eat.12", "eat.13", "chew.1", "chew.2", "chew.3"],
+	["chew.4", "chew.5", "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7"],
+	["swallow.8", "swallow.9", "swallow.10", "swallow.11", "swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16"],
+	["swallow.17", "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "digest.1", "digest.2"],
+	["digest.3", "digest.4", "digest.5", "digest.6", "digest.7", "digest.8", "digest.9", "blank.1", "blank.2"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "default"	: "idle",
+	"croak.3"	: "idle",
+	"eat.3"		: "idle",
+	"eat.14"	: "eat.12",
+	"spit.1"	: "swallow.9",
+	"spit.2"	: "swallow.8",
+	"spit.3"	: "swallow.7",
+	"spit.4"	: "swallow.6",
+	"spit.5"	: "swallow.5",
+	"spit.6"	: "swallow.4",
+	"spit.7"	: "swallow.3",
+	"spit.8"	: "swallow.2",
+	"spit.9"	: "swallow.1",
+	"spit.10"	: "chew.4",
+	"spit.11"	: "chew.1",
+	"spit.12"	: "eat.13",
+	"spit.13"	: "eat.12",
+	"spit.14"	: "eat.11",
+	"spit.15"	: "eat.10",
+	"spit.16"	: "eat.9",
+	"spit.17"	: "eat.8"
+	}
+}
