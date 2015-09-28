@@ -1,0 +1,29 @@
+{
+  "objectName" : "alamiaposter",
+  "tags" : ["vore", "lamia", "pretty"],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 300,
+  "description" : "Inspired by artwork by the legendary Karbo.",
+  "shortdescription" : "Lamia Poster",
+  "apexDescription" : "Well I would hate to dissapoint this lady, but you don't always get what you want.",
+  "avianDescription" : "The Avians would stay far away from one of those.",
+  "floranDescription" : "Floran want sssily sssnake girl in Florans ssstomach.",
+  "glitchDescription" : "Query. Could input be considered plagerism.",
+  "humanDescription" : "Wait. What?",
+  "hylotlDescription" : "I am filled with a curious feeling to oblidge that creature.",
+
+  "inventoryIcon" : "lamiapostericon.png",
+  "orientations" : [
+    {
+      "image" : "lamiaposter.png:<color>",
+      "imagePosition" : [-8, -16],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

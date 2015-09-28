@@ -8,44 +8,45 @@ Asari 						- treebuddy
 Avali 						- treebuddy
 Avian 						- treebuddy
 Avian blue 					- treebuddy
-Avian orange 				- treebuddy
+Avian orange 					- treebuddy
 Bunny 						- treebuddy
 Catlike 					- treebuddy
 Chica 						- treebuddy
-Chocobo Anthro 				- treebuddy
-Chocobo Feral 				- treebuddy
-Chubby Avian 				- Jeschke
+Chocobo Anthro 					- treebuddy
+Chocobo Feral 					- treebuddy
+Chubby Avian 					- Jeschke
 Dragon 						- treebuddy
-Dragon Black 				- Vinderex
-Dragon Blue 				- Vinderex
-Dragon Brown 				- Vinderex
-Dragon Green 				- Vinderex
+Dragon Black 					- Vinderex
+Dragon Blue 					- Vinderex
+Dragon Brown 					- Vinderex
+Dragon Green 					- Vinderex
 Dragon Red 					- Vinderex
-Dragon Yellow 				- Vinderex
-Female Nude 				- treebuddy
+Dragon Yellow 					- Vinderex
+Female Nude 					- treebuddy
 Floran 						- treebuddy
 Foxgirl 					- treebuddy
 Freddy 						- treebuddy
+Frog						- Sheights
 Gardetrap 					- rez
 Gardevoir 					- treebuddy
-Giant Lucaria 				- treebuddy
+Giant Lucaria 					- treebuddy
 Glitch 						- treebuddy
-Glitch Alt Del 				- treebuddy
+Glitch Alt Del 					- treebuddy
 Goodra						- treebuddy
 Greninja 					- treebuddy
-Greninja Male 				- treebuddy
+Greninja Male 					- treebuddy
 Guilmon 					- rez
 Harpy 						- treebuddy
 Hylotl 						- treebuddy
 Kangaroo 					- treebuddy
-Link Female 				- treebuddy
+Link Female 					- treebuddy
 Lizard 						- treebuddy
 Lucario 					- rez
 Maid Pale 					- treebuddy
 Maid Tan 					- treebuddy
-Mana Lizards				- Sheights
+Mana Lizards					- Sheights
 Meloetta 					- treebuddy
-Meloetta Human 				- treebuddy
+Meloetta Human 					- treebuddy
 Mewtwo 						- Rez
 Midna 						- treebuddy
 Miku 						- treebuddy
@@ -55,13 +56,15 @@ Naga tail					- pootisman24
 Ninetales 					- bobbidys
 Quarian 					- treebuddy
 Renamon 					- treebuddy
+Rheyya						- treebuddy
+Sergal						- treebuddy
 Serperior 					- bobbidys
 Shantae 					- treebuddy
 Shark 						- treebuddy
 Starfire 					- treebuddy
 Succubus 					- pootisman24
-Tallcreature 				- treebuddy
-Tallcreature Black 			- treebuddy
+Tallcreature 					- treebuddy
+Tallcreature Black 				- treebuddy
 Tally 						- treebuddy
 Veemon 						- rez
 Wolf 						- treebuddy
@@ -69,16 +72,25 @@ Wolfgirl 					- treebuddy
 Wolfsit 					- treebuddy
 Wolfy 						- treebuddy
 Xenomorph 					- treebuddy
+Yoko						- treebuddy
 Yoshi 						- Sheights
 Zoroark 					- bobbidys
 Scrafy						- rez
 Dom Bunny					- treebuddy
-Lamina (All parts)			- treebuddy
+Lamina (All parts)				- treebuddy
 Miss Fox					- treebuddy
 Miss Wolf					- treebuddy
 Ruto						- treebuddy + cakemanisreal
-Wii Fit Trainer(s)			- treebuddy + cakemanisreal
+Wii Fit Trainer(s)				- treebuddy + cakemanisreal
 Zelda						- treebuddy + cakemanisreal
-Zero Suit Samus				- treebuddy + cakemanisreal
+Zero Suit Samus					- treebuddy + cakemanisreal
 Glaze						- Glaze
 Linko						- treebuddy + linko
+
+NPC Predators:
+
+Avali						- Fenix
+Fox						- Treebuddy
+Lamia						- Treebuddy
+Slime						- Sheights
+Wolf						- Treebuddy

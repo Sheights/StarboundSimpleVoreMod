@@ -1,0 +1,28 @@
+{
+  "name": "greenslime",
+  "priority": 11,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+    "vore": 4,
+	"slime": 4
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "level": 3,
+      "type": "greenslime",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

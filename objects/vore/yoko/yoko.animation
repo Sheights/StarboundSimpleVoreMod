@@ -1,0 +1,159 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "waiting",
+	    "states"  :  {
+		  "idle1"  :  {
+		    "frames"  :  8,
+			"cycle"  :  1.3,
+			"mode"  :  "loop"
+		  },
+		  "idle2"  :  {
+		    "frames"  :  5,
+			"cycle"  :  1.3,
+			"mode"  :  "loop"
+		  },
+		  "release"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.3,
+			"mode"  :  "end"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  8,
+			"cycle"  :  1.1,
+			"mode"  :  "transition",
+			"transition"  :  "fullbig"
+		  },
+		  "fullbig" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.3,
+		    "mode"  :  "loop"
+		  },
+		  "waiting" :  {
+		    "frames"  :  1,
+		    "cycle"  :  1.3,
+		    "mode" : "loop"
+		  },
+		  "blink" :  {
+		    "frames"  :  1,
+		    "cycle"  :  1.3,
+		    "mode" : "transition",
+			"transition" : "idle" 
+		  },
+		  "bigtosmall" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.8,
+		    "mode" : "transition",
+			"transition" : "fullsmall" 
+		  },
+		  "fullsmall" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.3,
+		    "mode" : "loop"
+		  },
+		  "smalltomicro" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.8,
+		    "mode" : "transition",
+			"transition" : "fullmicro" 
+		  },
+		  "fullmicro" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.3,
+		    "mode" : "loop"
+		  },
+		  "microtonone" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.8,
+		    "mode" : "transition",
+			"transition" : "burp" 
+		  },
+		  "burp" :  {
+		    "frames"  :  3,
+		    "cycle"  :  1,
+		    "mode" : "end"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+	        "idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+	        "release"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:release.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "fullbig"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullbig.<frame>"
+		      }
+		    },
+	        "waiting"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:waiting.<frame>"
+		      }
+		    },
+	        "blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+	        "bigtosmall"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:bigtosmall.<frame>"
+		      }
+		    },
+	        "fullsmall"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullsmall.<frame>"
+		      }
+		    },
+	        "smalltomicro"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:smalltomicro.<frame>"
+		      }
+		    },
+	        "fullmicro"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullmicro.<frame>"
+		      }
+		    },
+	        "microtonone"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:microtonone.<frame>"
+		      }
+		    },
+	        "burp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:burp.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}
