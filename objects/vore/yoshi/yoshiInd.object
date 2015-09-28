@@ -28,7 +28,7 @@
   "inventoryIcon"  :  "iconInd.png",
   "orientations" : [
     {
-	  "image" : "yoshiGre.png:idle1.<frame>",
+	  "image" : "yoshiInd.png:idle1.<frame>",
 	  "imagePosition" : [-18, -8],
 	  "direction" : "left",
 	  "flipImages" : true,
@@ -39,7 +39,7 @@
 	  "animationPosition" : [-18, -8]
 	},
 	{
-	  "image" : "yoshiGre.png:idle1.<frame>",
+	  "image" : "yoshiInd.png:idle1.<frame>",
 	  "imagePosition" : [-14, -8],
 	  "direction" : "right",
 	  "sitPosition" : [0, 22],

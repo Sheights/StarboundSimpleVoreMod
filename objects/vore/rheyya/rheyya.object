@@ -1,0 +1,66 @@
+{
+  "objectName"  :  "vorerheyya",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "A nice warm place to spend the night~ [CV]",
+  "shortdescription"  :  "Rheyya",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "rheyyaicon.png",
+  "orientations" : [
+    {
+	  "image" : "rheyya.png:waiting.<frame>",
+	  "imagePosition" : [-31, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-31, -16]
+	},
+    {
+	  "image" : "rheyya.png:waiting.<frame>",
+	  "imagePosition" : [-9, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-9, -16]
+	}
+  ],
+  
+  "animation"  :  "rheyya.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.wav" ],
+	  "lay" : [ "/sfx/objects/eggLay.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "rheyya.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/rheyya/rheyya.lua" ],
+  "scriptDelta" : 3
+}

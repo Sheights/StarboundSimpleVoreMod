@@ -1,0 +1,14 @@
+{
+  "itemName" : "blacklamia",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A wonderful tail made for slithering about.",
+  "shortdescription" : "Black Lamia Tail",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png"
+}
