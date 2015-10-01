@@ -38,17 +38,23 @@ function init()
 end
 
 function feed()
-	local people = world.entityQuery( mcontroller.position(), 10, {
-		includedTypes = {"npc"},
+
+	local coast = world.entityQuery( mcontroller.position(), 16, {
+		includedTypes = {"npc", "player"},
+		boundMode = "CollisionArea"
+	})
+	
+	local people = world.entityQuery( mcontroller.position(), 7, {
+		includedTypes = {"npc", "player"},
 		boundMode = "CollisionArea"
 	})
 	
 	local personalspace = world.entityQuery( mcontroller.position(), 1, {
-		includedTypes = {"npc"},
+		includedTypes = {"npc", "player"},
 		boundMode = "CollisionArea"
 	})
 	
-	if #people == 2 and #personalspace == 1 then
+	if #coast == 2 and #people == 2 and #personalspace == 1 then
 		
 		if people[1] == entity.id() then
 			victim = people[2]
@@ -61,17 +67,16 @@ function feed()
 			return
 		end
 		
-		world.spawnProjectile( "npcvoreprojectile" , world.entityPosition( victim ), entity.id(), { 0, 0 }, false )
+		world.spawnProjectile( "npcvoreprojectile" , world.entityPosition( victim ))
 		gain()
 		fed = true
-		
 		feedHook()
 	end
 end
 
 function digest()
 	
-	if stopWatch > 4500 then
+	if stopWatch > 5000 then
 		fed = false
 		stopWatch = 0
 		lose()
@@ -127,7 +132,7 @@ function update(dt)
 	tempUpdate = update
 	oldUpdate(dt)
 	
-	if not fed and math.random(1000) == 1 then
+	if not fed and math.random(850) == 1 then
 		feed()
 	elseif fed then
 		stopWatch = stopWatch + 1

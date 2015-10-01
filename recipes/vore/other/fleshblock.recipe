@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "alienmeat", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "fleshblock",
+    "count" : 5
+  },
+  "groups" : [ "plain", "all", "blocks" ]
+}

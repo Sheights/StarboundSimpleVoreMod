@@ -1,6 +1,8 @@
 {
   "input" : [
-    { "item" : "money", "count" : 300 }
+    { "item" : "glassmaterial", "count" : 5 },
+	{ "item" : "paper", "count" : 5 },
+	{ "item" : "wire", "count" : 2 }
   ],
   "output" : {
     "item" : "alamiaposter",

@@ -1,11 +1,19 @@
 function init()
---	pred = nil
---	world.sendEntityMessage("been eaten")
+--	people = world.entityQuery( mcontroller.position(), 7, {
+--			includedTypes = {"player", "npc"},
+--			boundMode = "CollisionArea"
 	
+--	if #people ~= 2 then
+--		break
+--	elseif people[1] == entity.id() then
+--		pred = people[2]
+--	else
+--		pred = people[1]
+--	end
 end
 
 function update(dt)
---  mcontroller.position = position of the pred
+--  mcontroller.setposition( world.entityPosition(pred))
 end
 
 function uninit()

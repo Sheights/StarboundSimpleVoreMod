@@ -1,0 +1,365 @@
+[
+	{ "op" : "add",
+      "path" : "/foxNormalCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "foxnormalchest"},
+		  {"weight" : 0.5, "item" : "foxnormalbellychest"},
+          {"weight" : 1.0, "item" : "foxnormalhead"},
+		  {"weight" : 1.0, "item" : "foxnormallegs"},
+		  {"weight" : 0.5, "item" : "foxnormalbellylegs"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxToxicCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "foxtoxicchest"},
+		  {"weight" : 0.5, "item" : "foxtoxicchestbelly"},
+		  {"weight" : 1.0, "item" : "foxtoxichead"},
+		  {"weight" : 1.0, "item" : "foxtoxiclegs"},
+		  {"weight" : 0.5, "item" : "foxtoxiclegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxVolCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "foxvolchest"},
+		  {"weight" : 0.5, "item" : "foxvolchestbelly"},
+		  {"weight" : 1.0, "item" : "foxvolhead"},
+		  {"weight" : 1.0, "item" : "foxvollegs"},
+		  {"weight" : 0.5, "item" : "foxvollegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxWinterCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "foxwinterchest"},
+		  {"weight" : 0.5, "item" : "foxwinterchestbelly"},
+		  {"weight" : 1.0, "item" : "foxwinterhead"},
+		  {"weight" : 1.0, "item" : "foxwinterlegs"},
+		  {"weight" : 0.5, "item" : "foxwinterlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/lamiaCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "blacklamia"},
+		  {"weight" : 0.5, "item" : "blacklamiabelly"},
+		  {"weight" : 1.0, "item" : "bluelamia"},
+		  {"weight" : 0.5, "item" : "bluelamiabelly"},
+		  {"weight" : 1.0, "item" : "greenlamia"},
+		  {"weight" : 0.5, "item" : "greenlamiabelly"},
+		  {"weight" : 1.0, "item" : "pinklamia"},
+		  {"weight" : 0.5, "item" : "pinklamiabelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/slimeGreenCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "slimegreenchest"},
+		  {"weight" : 1.0, "item" : "slimegreenhead"},
+		  {"weight" : 1.0, "item" : "slimegreenlegs"},
+		  {"weight" : 0.5, "item" : "slimegreenlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/slimeIceCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "slimeicechest"},
+		  {"weight" : 1.0, "item" : "slimeicehead"},
+		  {"weight" : 1.0, "item" : "slimeicelegs"},
+		  {"weight" : 0.5, "item" : "slimeicelegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfDesertCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "wolfdesertchest"},
+		  {"weight" : 0.5, "item" : "wolfdesertchestbelly"},
+          {"weight" : 1.0, "item" : "wolfdeserthead"},
+		  {"weight" : 1.0, "item" : "wolfdesertlegs"},
+		  {"weight" : 0.5, "item" : "wolfdesertlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfNormalCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "wolfnormalchest"},
+		  {"weight" : 0.5, "item" : "wolfnormalchestbelly"},
+		  {"weight" : 1.0, "item" : "wolfnormalhead"},
+		  {"weight" : 1.0, "item" : "wolfnormallegs"},
+		  {"weight" : 0.5, "item" : "wolfnormallegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfPoisonCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "wolfpoisonchest"},
+		  {"weight" : 0.5, "item" : "wolfpoisonchestbelly"},
+		  {"weight" : 1.0, "item" : "wolfpoisonhead"},
+		  {"weight" : 1.0, "item" : "wolfpoisonlegs"},
+		  {"weight" : 0.5, "item" : "wolfpoisonlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfSeaCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 1.0, "item" : "wolfseachest"},
+		  {"weight" : 0.5, "item" : "wolfseachestbelly"},
+		  {"weight" : 1.0, "item" : "wolfseahead"},
+		  {"weight" : 1.0, "item" : "wolfsealegs"},
+		  {"weight" : 0.5, "item" : "wolfsealegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxNormalGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "foxNormalCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxToxicGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "foxToxicCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxVolGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "foxVolCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/foxWinterGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "foxWinterCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/lamiaGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "lamiaCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/slimeGreenGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "slimeGreenCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/slimeIceGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "slimeIceCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfDesertGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "wolfDesertCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfNormalGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "wolfNormalCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfPoisonGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "wolfPoisonCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/wolfSeaGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "wolfSeaCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    }
+]
