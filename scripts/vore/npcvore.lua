@@ -76,7 +76,7 @@ end
 
 function digest()
 	
-	if stopWatch > 5000 then
+	if stopWatch > 5200 then
 		fed = false
 		stopWatch = 0
 		lose()
