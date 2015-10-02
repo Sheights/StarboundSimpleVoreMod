@@ -3,7 +3,7 @@
   "rarity" : "Common",
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
-    "config" : "/interface/windowconfig/crafting.config",
+    "config" : "/interface/windowconfig/bellyBound.config",
     "filter" : [ "bellyBoundStore" ]
   },
   
