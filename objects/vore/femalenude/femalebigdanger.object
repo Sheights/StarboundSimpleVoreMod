@@ -63,7 +63,7 @@
 	}
   },
   "animationParts" : {
-      "pred" : "femalewaitingdanger.png"
+      "pred" : "femalewaiting.png"
   },
   "animationPosition" : [-16, 0],
   

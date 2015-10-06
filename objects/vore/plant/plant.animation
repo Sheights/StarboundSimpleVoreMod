@@ -33,6 +33,11 @@
 		    "frames"  :  12,
 			"cycle"  :  1.5,
 			"mode"  :  "end"
+		  },
+		  "fulltonone"  :  {
+		    "frames"  :  15,
+			"cycle"  :  2.3,
+			"mode"  :  "end"
 		  }
 	    }
 	  }
@@ -75,6 +80,11 @@
 		      "properties"  :  {
 		        "image"  :  "<partImage>:release.<frame>"
 		      }
+			},
+			"fulltonone"  :  {
+			  "properties"  :  {
+			    "image"  :  "<partImage>:fulltonone.<frame>"
+			  }
 			}
 		  }
 	    }
