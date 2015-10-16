@@ -58,6 +58,7 @@ Miku 						- treebuddy
 Miranda 					- treebuddy
 Miss Fox					- treebuddy
 Miss Wolf					- treebuddy
+Muffet						- Glaze
 Naga 						- pootisman24
 Naga tail					- pootisman24
 Ninetales 					- bobbidys
@@ -76,6 +77,7 @@ Succubus 					- pootisman24
 Tallcreature 					- treebuddy
 Tallcreature Black 				- treebuddy
 Tally 						- treebuddy
+Toriel						- Glaze
 Veemon 						- rez
 Wii Fit Trainer(s)				- treebuddy + cakemanisreal
 Wolf 						- treebuddy
@@ -92,7 +94,9 @@ Zoroark 					- bobbidys
 NPC Predators:
 
 Avali						- Fenix
-Fox						- Treebuddy
+Dragon						- Treebuddy
+Fox							- Treebuddy
+Harpy						- Treebuddy + Sheights
 Lamia						- Treebuddy
-Slime						- Sheights
+Slime						- ArgobargSoup
 Wolf						- Treebuddy

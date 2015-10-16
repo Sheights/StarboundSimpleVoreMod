@@ -1,0 +1,137 @@
+{
+  "type" : "classicharpy",
+  "baseType" : "villager",
+  
+  "scriptConfig" : {
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/grumble.config:tagCriteria",
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"My nest is completely unacceceptable.",
+								"How could I raise anyone in this place?"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I'm not looking for a mate.",
+							"What? I thought you and I were...",
+							"I left flock life long ago.",
+							"I'm a very teritorial bird."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Would my claws change your mind?",
+						"You are really starting to rustle my feathers.",
+						"Is this anyway to treat a lady?",
+						"My children never behaved this way."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Time to take flight again.",
+						"Good riddence!",
+						"I'll send for any feathers I left behind.",
+						"You won't have me to depend on anymore."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"I'm sorry, I didn't bring you anything.",
+						"You don't need me, I'm not your mother... Yet.",
+						"Welcome home my little chick."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"I've always had a hawk eye.",
+						"I think you could use a treat!",
+						"I found you a present!",
+						"Oh no, you don't have to give me anything!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"*Screeeeeeech*!",
+					"I'm no chicken. But time to fly."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Someone should help them!",
+						"Agressors!",
+						"I'm not a raptor. Those people need help!"
+			]
+		  }
+		},
+        "encourage" : "/dialog/flee.config:encourage",
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Yes!",
+					"I'm so proud!",
+					"It's like they don't need me anymore."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hey sweetie.",
+			"If I molt, I apologise.",
+			"Make sure you're back by dark.",
+			"Would you help me brush my feathers?",
+			"How would you like to meet me in my place?",
+			"How about you give mommy a hug?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/endo/harpy/classic/charpy.lua"],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "harpyclassichead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "harpyclassicchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "harpyclassiclegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

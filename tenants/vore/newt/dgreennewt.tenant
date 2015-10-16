@@ -1,0 +1,27 @@
+{
+  "name": "dgreennewt",
+  "priority": 10,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+	"swamp": 6,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "hylotl",
+      "type": "dgreennewt",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "greenNewtGift"
+  }
+}

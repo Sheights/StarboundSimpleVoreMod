@@ -1,0 +1,150 @@
+{
+  "type" : "dvolfox",
+  "baseType" : "villager",
+  
+  "scriptConfig" : {
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Well that wont do for me.",
+							"Awww but i liked that thing.",
+							"I can't live in those condition."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Oh noooo , not the house!",
+							"I dont think that hole was there before.",
+							"I'm aint eating prey in the cold y'a know."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Guess you find better",
+							"Another pred in my territory?",
+							"I can only fit me and my belly in that bed."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Dont make me use force.",
+						"I dont want to hurt.",
+						"Next time I'l show you my tooths."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"You'v done it now!",
+						"I was hungry anyway.",
+						"No turning back now."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Sweet place you've got here.",
+						"May i crash in for a moment?",
+						"A pred paradis!"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here i am",
+						"Surprised you stayed undigested long enough to earn this",
+						"Here's a little gift my sweet heart.",
+						"Thats for beying so kind."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Im' in truble over here!",
+					"Come to me my hero!",
+					"They are after me sweete!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Oh no there gonna steal my prey!",
+						"Any one can help them?",
+						"I don't want dead food."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Take that!",
+					"You wanna see my inside ,then I'l show u.",
+					"You just got one trip in."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Finaly safe to eat.",
+					"Where are they? I didnt get the chance to eat one.",
+					"It was about to get funny."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "So sweet of u to come around.",
+			"Come closer I'l show u a nice place.",
+			"See you later in my room Ou< *wink*"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/fox/volcano/vfox.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "foxvolhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "foxvolchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "foxvollegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

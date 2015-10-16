@@ -1,0 +1,149 @@
+{
+  "type" : "ddesertwolf",
+  "baseType" : "villager",
+  
+  "scriptConfig" : {
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Darn that was my favorite thing!",
+							"Hey dont touch that!",
+							"*pfff* And you call this a home."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"That made me lose my hunger.",
+							"How did you manage to do that?",
+							"This won't do at all!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Only one pred around here and that's me!",
+							"Two can play at this game.",
+							"I thought you loved my company?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"That's makeing me hungry!",
+						"Careful, I can bite.",
+						"You don't want to do that again!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"You've done it now!",
+						"I was hungry anyway.",
+						"No turning back now."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Hi there, I'm here for the feast.",
+						"Looks nice and warm like my stomach.",
+						"Coudn't ask for a better home."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"That's what they had on them when they came for dinner.",
+						"Here's my gift for ya, sorry if it's slightly melted.",
+						"Look at what I stol... found."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"They are after my booty!",
+					"Hey I'm the pred here!",
+					"Save me and I'll give you a free night."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Look at them running!",
+						"I think you'd better hurry!",
+						"Should I join the hunt?"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"You'll make me so big!",
+					"I was getting skinny anyways.",
+					"I'll swallow you up!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Peace at last.",
+					"Now I can digest in peace and quiet~",
+					"Now where was I?"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "I may want a taste of you later.",
+			"Be careful with that nice butt around here, don't want it to end up adding to anyone's but my own~.",
+			"Don't hesitate to ask me to a dinner date~ *wink*"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/wolf/desert/dwolf.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "wolfdeserthead", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "wolfdesertchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "wolfdesertlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

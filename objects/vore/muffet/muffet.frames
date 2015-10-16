@@ -1,0 +1,21 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [37, 40],
+	"dimensions"  :  [8, 9],
+	"names"  :  [
+	  ["idle1.1", "idle2.1", "idle2.2", "idle2.3", "idle2.4", "idle2.5", "idle2.6", "idle2.7"],
+	  ["idle2.8", "idle2.9", "idle2.10", "idle2.11", "idle2.12", "idle2.13", "idle2.14", "idle2.15"],
+	  ["idle2.16", "idle2.17", "idle2.18", "idle2.19", "idle2.20", "idle2.21", "idle2.22", "idle2.23"],
+	  ["idle2.24", "idle2.25", "idle2.26", "idle2.27", "idle2.28", "blink1.1", "blink1.2", "blink1.3"],
+	  ["blink2.1", "blink2.2", "blink2.3", "blink2.4", "blink2.5", "blink2.6", "blink2.7", "swallow.1"],
+	  ["swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "fullbig.1", "fullbig.2"],
+	  ["fullbig.3", "fullbig.4", "bigtosmall.1", "bigtosmall.2", "bigtosmall.3", "fullsmall.1", "fullsmall.2", "smalltomicro.1"],
+	  ["smalltomicro.2", "smalltomicro.3", "fullmicro.1", "fullmicro.2", "microtonone.1", "microtonone.2", "microtonone.3", "microtonone.4"],
+	  ["release.1", "release.2", "release.3", "release.4", "blank.1", "blank.2", "blank.3", "blank.4"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "idle1.default"  :  "idle1.1"
+	}
+}

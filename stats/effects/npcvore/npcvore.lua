@@ -7,22 +7,26 @@ require "/scripts/actions/status.lua"
 require "/scripts/actions/notification.lua"
 
 function init()
-	people = world.entityQuery( mcontroller.position(), 7, {
-			includedTypes = {"player", "npc"},
-			boundMode = "CollisionArea"
-	})
-	
-	if people[1] == entity.id() then
-		pred = people[2]
+
+	if world.entityExists(effect.duration()) then
+		pred = effect.duration()
+		effect.modifyDuration(90 - effect.duration())
 	else
-		pred = people[1]
-	end
+		people = world.entityQuery( mcontroller.position(), 2, {
+			withoutEntityId = entity.id(),
+			includedTypes = {"player", "npc"},
+			boundMode = "CollisionArea",
+		})
+		pred = people[1]	
+	end	
 end
 
 function update(dt)
-	mcontroller.setPosition( world.entityPosition(pred))
+	if pred ~= nil then
+		mcontroller.setPosition( world.entityPosition(pred))
+	end
 end
 
 function uninit()
---	world.sendEntityMessage("letgo")
+
 end

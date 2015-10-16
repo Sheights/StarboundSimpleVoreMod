@@ -1,9 +1,30 @@
 oldInit = init
 oldUpdate = update
 
-stopWatch 	= 0
+---------------------------------------------------------------------------------------
+--#####################################################################################
+--CONFIG SECTION
+
+-- Player Chance is a percent chance that the player will be vored compared to the standard base chance
+-- Keep the value anywhere between 0 and 1
+-- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
+-- This can also be done in the individual .lua files.
+playerChance = 0.5
+
+-- NPC Chance is a percent chance that an NPC will be vored when the feed function is called.
+-- Keep the value anywhere between 0 and 1
+-- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
+-- This can also be done in the individual .lua files.
+npcChance = 1
+
+--#####################################################################################
+---------------------------------------------------------------------------------------
+duration 	= 90
+stopWatch	= 0
 
 fed 		= false
+isDigest	= false
+isPlayer	= false
 
 head		= nil
 chest		= nil
@@ -17,49 +38,42 @@ fullback	= nil
 
 victim		= nil
 
+voreeffect = "npcvore"
+projectile	= "npcvoreprojectile"
+dprojectile	= "npcdvoreprojectile"
+
 function init()
 	oldInit()
 	
 	initHook()
---	local person = personalityType()		if we want to use a special fed personality
-	
---	message.setHandler("eaten", function(_, _, params)
---		fed = true
---		entity.setItemSlot( "chest", "wolfcostumebelly")
---		setPersonality("fed")
---	end)
-	
---	message.setHandler("letgo", function(_, _, params)
---		fed = false
---		victim = nil
---		entity.setItemSlot( "chest", "wolfcostumebelly")
---		setPersonality("person")
---	end)
 end
 
 function feed()
-
-	local coast = world.entityQuery( mcontroller.position(), 16, {
-		includedTypes = {"npc", "player"},
-		boundMode = "CollisionArea"
-	})
 	
 	local people = world.entityQuery( mcontroller.position(), 7, {
+		withoutEntityId = entity.id(),
 		includedTypes = {"npc", "player"},
 		boundMode = "CollisionArea"
 	})
 	
-	local personalspace = world.entityQuery( mcontroller.position(), 1, {
+	local eggcheck = world.entityQuery( mcontroller.position(), 7, {
+		withoutEntityId = entity.id(),
+		includedTypes = {"npc", "player", "projectile"},
+		boundMode = "CollisionArea"
+	})
+	
+	local personalspace = world.entityQuery( mcontroller.position(), 2, {
+		withoutEntityId = entity.id(),
 		includedTypes = {"npc", "player"},
 		boundMode = "CollisionArea"
 	})
 	
-	if #coast == 2 and #people == 2 and #personalspace == 1 then
+	if #people == 1 and #personalspace == 0 and #eggcheck == 1 then
 		
-		if people[1] == entity.id() then
-			victim = people[2]
-		else
-			victim = people[1]
+		victim = people[1]
+		
+		if world.isNpc( victim ) == false then
+			isPlayer = true
 		end
 		
 		local collisionBlocks = world.collisionBlocksAlongLine(mcontroller.position(), world.entityPosition( victim ), {"Null", "Block", "Dynamic"}, 1)
@@ -67,20 +81,36 @@ function feed()
 			return
 		end
 		
-		world.spawnProjectile( "npcvoreprojectile" , world.entityPosition( victim ))
-		gain()
-		fed = true
-		feedHook()
+		if ( isPlayer and math.random() < playerChance ) or ( isPlayer == false and math.random() < npcChance ) then
+			
+			local mergeOptions = {
+				statusEffects = {
+				{
+					effect = voreeffect,
+					duration = entity.id()
+			}}}
+			
+			if isDigest then
+				world.spawnProjectile( dprojectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
+			else
+				world.spawnProjectile( projectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
+			end
+			gain()
+			fed = true
+			feedHook()
+			
+		else
+			isPlayer = false
+		end
 	end
 end
 
 function digest()
-	
-	if stopWatch > 5200 then
+
+	if stopWatch >= duration then
 		fed = false
 		stopWatch = 0
 		lose()
-		
 		digestHook()
 	end
 	
@@ -132,10 +162,10 @@ function update(dt)
 	tempUpdate = update
 	oldUpdate(dt)
 	
-	if not fed and math.random(850) == 1 then
+	if not fed and math.random(900) == 1 then
 		feed()
 	elseif fed then
-		stopWatch = stopWatch + 1
+		stopWatch = stopWatch + dt
 		digest()
 	end
 	
