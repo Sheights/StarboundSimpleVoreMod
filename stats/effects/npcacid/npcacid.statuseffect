@@ -1,0 +1,14 @@
+{
+  "name" : "npcacid",
+  "effectConfig" : {
+    "digestTime" : 90
+  },
+  "defaultDuration" : 90,
+
+  "scripts" : [
+    "npcacid.lua"
+  ],
+
+  "label" : "Being Digested",
+  "icon" : "/stats/stomachacid/stomachacid.png"
+}

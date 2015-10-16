@@ -1,0 +1,105 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "off",
+	    "states"  :  {
+	      "idle"  :  {
+		    "frames"  :  1
+		  },
+		  "blink"  :  {
+		    "frames"  :  6,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "open"  :  {
+		    "frames"  :  6,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "blink"
+		  },
+		  "startup"  :  {
+		    "frames"  :  8,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "shutdown"  :  {
+		    "frames"  :  8,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "off"
+		  },
+		  "off" :  {
+		    "frames"  :  1
+		  },
+		  "turn" :  {
+		    "frames"  :  15,
+		    "cycle"  :  1.0,
+			"mode"  :  "end"
+		  },
+		  "turnback" :  {
+		    "frames"  :  15,
+		    "cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle.<frame>"
+		      }
+		    },
+			"blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+			"open"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:open.<frame>"
+		      }
+		    },
+			"startup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:startup.<frame>"
+		      }
+		    },
+			"shutdown"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:shutdown.<frame>"
+		      }
+		    },
+	        "off"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:off.<frame>"
+		      }
+		    },
+	        "turn"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:turn.<frame>"
+		      }
+		    },
+		    "turnback"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:turnback.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

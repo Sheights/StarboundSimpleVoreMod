@@ -1,5 +1,40 @@
 [
 	{ "op" : "add",
+      "path" : "/dragonGoodraCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "dragongoodrachest"},
+		  {"weight" : 1.0, "item" : "dragongoodrahead"},
+		  {"weight" : 1.0, "item" : "dragongoodralegs"},
+		  {"weight" : 0.3, "item" : "dragongoodralegsfull"},
+		  {"weight" : 0.6, "item" : "dragongoodralegsmid"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/dragonGreenCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "dragongreenchest"},
+		  {"weight" : 1.0, "item" : "dragongreenhead"},
+		  {"weight" : 1.0, "item" : "dragongreenlegs"},
+		  {"weight" : 0.3, "item" : "dragongreenlegsfull"},
+		  {"weight" : 0.6, "item" : "dragongreenlegsmid"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
       "path" : "/foxNormalCostume",
       "value" : [
       [1, {
@@ -84,6 +119,91 @@
 		  {"weight" : 0.5, "item" : "greenlamiabelly"},
 		  {"weight" : 1.0, "item" : "pinklamia"},
 		  {"weight" : 0.5, "item" : "pinklamiabelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtBlackCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "newtblackchest"},
+		  {"weight" : 1.0, "item" : "newtblackhead"},
+		  {"weight" : 1.0, "item" : "newtblacklegs"},
+		  {"weight" : 0.5, "item" : "newtblacklegsfull"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtBlueCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "newtbluechest"},
+		  {"weight" : 1.0, "item" : "newtbluehead"},
+		  {"weight" : 1.0, "item" : "newtbluelegs"},
+		  {"weight" : 0.5, "item" : "newtbluelegsfull"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtGreenCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "newtgreenchest"},
+		  {"weight" : 1.0, "item" : "newtgreenhead"},
+		  {"weight" : 1.0, "item" : "newtgreenlegs"},
+		  {"weight" : 0.5, "item" : "newtgreenlegsfull"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtPurpleCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "newtpurplechest"},
+		  {"weight" : 1.0, "item" : "newtpurplehead"},
+		  {"weight" : 1.0, "item" : "newtpurplelegs"},
+		  {"weight" : 0.5, "item" : "newtpurplelegsfull"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtRedCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "newtredchest"},
+		  {"weight" : 1.0, "item" : "newtredhead"},
+		  {"weight" : 1.0, "item" : "newtredlegs"},
+		  {"weight" : 0.5, "item" : "newtredlegsfull"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -199,6 +319,36 @@
     },
 	
 	{ "op" : "add",
+      "path" : "/dragonGoodraGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "dragongoodraCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/dragonGreenGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "dragonGreenCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
       "path" : "/foxNormalGift",
       "value" : [
       [1, {
@@ -265,6 +415,81 @@
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
 		  {"weight" : 0.1, "pool" : "lamiaCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtBlackGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "newtBlackCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtBlueGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "newtBlueCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtGreenGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "newtGreenCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtPurpleGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "newtPurpleCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/newtRedGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "newtRedCostume"}
         ],
         "poolRounds" : [
           [1, 1]

@@ -1,0 +1,21 @@
+{
+	"projectileName" : "objectvoreprojectile",
+	"bounces" : -1,
+	"timeToLive" : 0.01,
+	"speed" : 0,
+	"damageKindImage" : "icon.png",
+	"frames" : "npcvore.png",
+	"frameNumber" : 6,
+	"animationCycle" : 0.7,
+	"power" : 0,
+	"piercing" : true,
+	"damageKind" : "default",
+	"damageType" : "ignoresdef",
+	"flippable" : true,
+	"universalDamage" : true,
+	"statusEffects" : [
+	  {"effect" : "intents", "duration" : 60},
+	  {"effect" : "paralysis", "duration" : 60},
+	  {"effect" : "nofalldamage", "duration" : 60}
+	]
+}

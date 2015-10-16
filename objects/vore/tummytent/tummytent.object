@@ -20,7 +20,7 @@
   "sitPosition" : [-8, 7],
   "sitOrientation" : "lay",
   "sitAngle" : 90,
-  "sitCoverImage" : "/objects/generic/tent1/tent1lit.png",
+  "sitCoverImage" : "/objects/vore/tummytent/tent1lit.png",
   "sitEmote" : "sleep",
   "sitStatusEffects" : [
     "regeneration1",

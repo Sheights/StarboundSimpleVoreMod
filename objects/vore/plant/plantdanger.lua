@@ -16,7 +16,7 @@ end
 function update(dt)
   -- Animations that happens while the predator is empty (hungry).
   if world.loungeableOccupied(entity.id()) == false then
-	if digestState == 4 then
+	if digestState == 2 then
 	  entity.setAnimationState("bodyState", "idle1")
 	  eatingTimer = 0
 	  animLock = true
@@ -37,7 +37,7 @@ function update(dt)
 		  eatingTimer = 0
 		  releaseLock = true
 		  entity.setAnimationState("bodyState", "release")
-		  entity.playSound("lay")
+		  entity.playSound("release")
 		end
 	  end
 	-- Randomises different animations, like idle2, blink and waiting.
@@ -51,7 +51,7 @@ function update(dt)
 	  entity.setAnimationState("bodyState", "idle3")
 	end
 	  
-	if idleTimer >= 40 or releaseTimer >= 40 then
+	if idleTimer >= 40 or releaseTimer >= 30 then
 	  animLock = false
 	end 
 	  
@@ -73,9 +73,21 @@ function update(dt)
 	  
   else
     -- Animations that happens while the predator is full (digesting).
+
+	-- Math to find player percent health
+	preyCurrentHealth = world.entityHealth(prey)[1] * 100
+	preyMaxHealth = world.entityHealth(prey)[2]
+	preyPercentHealth = math.floor(preyCurrentHealth / preyMaxHealth)
 	
 	soundLock = false
-	entity.setAnimationState("bodyState", "full")
+	-- Changes player state based on their current percent health
+	if preyPercentHealth <= 100 and digestState == 0 then
+	  entity.setAnimationState("bodyState", "full")
+	  digestState = digestState + 1
+	elseif preyPercentHealth <= 3 and digestState == 1 then
+	  entity.setAnimationState("bodyState", "fulltonone")
+	  digestState = digestState + 1
+	end
   end
 end
   

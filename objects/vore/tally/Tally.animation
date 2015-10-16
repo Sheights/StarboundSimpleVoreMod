@@ -18,7 +18,7 @@
 			"mode"  :  "end"
 		  },
 		  "blink"  :  {
-		    "frames"  :  7
+		    "frames"  :  1
 		  },
 		  "egglay"  :  {
 		    "frames"  :  3,

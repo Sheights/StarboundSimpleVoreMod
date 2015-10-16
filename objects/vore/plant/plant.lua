@@ -24,7 +24,7 @@ function update(dt)
 		  eatingTimer = 0
 		  releaseLock = true
 		  entity.setAnimationState("bodyState", "release")
-		  entity.playSound("lay")
+		  entity.playSound("release")
 		end
 	  end
 	-- Randomises different animations, like idle2, blink and waiting.
@@ -38,7 +38,7 @@ function update(dt)
 	  entity.setAnimationState("bodyState", "idle3")
 	end
 	  
-	if idleTimer >= 40 or releaseTimer >= 40 then
+	if idleTimer >= 40 or releaseTimer >= 30 then
 	  animLock = false
 	end
 	  

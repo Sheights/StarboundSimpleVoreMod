@@ -1,0 +1,12 @@
+{
+  "name" : "dragonvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "dragonvore.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/wellfed.png"
+}

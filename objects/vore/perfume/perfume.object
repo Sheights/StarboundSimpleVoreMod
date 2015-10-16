@@ -1,0 +1,32 @@
+{
+  "objectName" : "aperfumebottle",
+  "printable" : false,
+  "tags" : ["pretty","vore"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 200,
+  "description" : "An odd perfume that gives you a warm pink feeling.",
+  "shortdescription" : "Ode de Endo",
+
+  "apexDescription" : "Some horrible Apex mixture.",
+  "avianDescription" : "Much of the mixture is congealed. Reminiscent of egg yoke.",
+  "floranDescription" : "Deliciousss red goo.",
+  "glitchDescription" : "Scanning. Unknown mixture.",
+  "humanDescription" : "Probably best to leave this well alone.",
+  "hylotlDescription" : "I... Uh seem to have lost my train of thought. Perhaps I should try some.",
+
+  "inventoryIcon" : "perfumeicon.png",
+  "orientations" : [
+    {
+      "image" : "perfume.png",
+
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

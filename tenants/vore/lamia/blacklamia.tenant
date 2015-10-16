@@ -1,11 +1,12 @@
 {
   "name": "blacklamia",
-  "priority": 10,
+  "priority": 2,
 
   "tagCriteria": {
     "light": 1,
     "door": 1,
-    "vore": 4
+	"floran": 6,
+    "vore": 1
   },
 
   "tenants": [

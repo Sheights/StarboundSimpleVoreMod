@@ -15,6 +15,7 @@ Chica 						- treebuddy
 Chocobo Anthro 					- treebuddy
 Chocobo Feral 					- treebuddy
 Chubby Avian 					- Jeschke
+Dom Bunny					- treebuddy
 Dragon 						- treebuddy
 Dragon Black 					- Vinderex
 Dragon Blue 					- Vinderex
@@ -32,14 +33,18 @@ Gardevoir 					- treebuddy
 Giant Lucaria 					- treebuddy
 Glitch 						- treebuddy
 Glitch Alt Del 					- treebuddy
+Glaze						- Glaze
 Goodra						- treebuddy
+Goodra Animated					- Glaze
 Greninja 					- treebuddy
 Greninja Male 					- treebuddy
 Guilmon 					- rez
 Harpy 						- treebuddy
 Hylotl 						- treebuddy
 Kangaroo 					- treebuddy
+Lamina (All parts)				- treebuddy
 Link Female 					- treebuddy
+Linko						- treebuddy + linko
 Lizard 						- treebuddy
 Lucario 					- rez
 Maid Pale 					- treebuddy
@@ -51,12 +56,18 @@ Mewtwo 						- Rez
 Midna 						- treebuddy
 Miku 						- treebuddy
 Miranda 					- treebuddy
+Miss Fox					- treebuddy
+Miss Wolf					- treebuddy
+Muffet						- Glaze
 Naga 						- pootisman24
 Naga tail					- pootisman24
 Ninetales 					- bobbidys
+Plant						- Glaze
 Quarian 					- treebuddy
 Renamon 					- treebuddy
 Rheyya						- treebuddy
+Ruto						- treebuddy + cakemanisreal
+Scrafy						- rez
 Sergal						- treebuddy
 Serperior 					- bobbidys
 Shantae 					- treebuddy
@@ -66,7 +77,9 @@ Succubus 					- pootisman24
 Tallcreature 					- treebuddy
 Tallcreature Black 				- treebuddy
 Tally 						- treebuddy
+Toriel						- Glaze
 Veemon 						- rez
+Wii Fit Trainer(s)				- treebuddy + cakemanisreal
 Wolf 						- treebuddy
 Wolfgirl 					- treebuddy
 Wolfsit 					- treebuddy
@@ -74,23 +87,16 @@ Wolfy 						- treebuddy
 Xenomorph 					- treebuddy
 Yoko						- treebuddy
 Yoshi 						- Sheights
-Zoroark 					- bobbidys
-Scrafy						- rez
-Dom Bunny					- treebuddy
-Lamina (All parts)				- treebuddy
-Miss Fox					- treebuddy
-Miss Wolf					- treebuddy
-Ruto						- treebuddy + cakemanisreal
-Wii Fit Trainer(s)				- treebuddy + cakemanisreal
 Zelda						- treebuddy + cakemanisreal
 Zero Suit Samus					- treebuddy + cakemanisreal
-Glaze						- Glaze
-Linko						- treebuddy + linko
+Zoroark 					- bobbidys
 
 NPC Predators:
 
 Avali						- Fenix
-Fox						- Treebuddy
+Dragon						- Treebuddy
+Fox							- Treebuddy
+Harpy						- Treebuddy + Sheights
 Lamia						- Treebuddy
-Slime						- Sheights
+Slime						- ArgobargSoup
 Wolf						- Treebuddy

@@ -1,1 +1,1 @@
-[	{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"bellyBoundStore"}},	{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"fleshblock"}}]
+[	{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"bellyBoundStore"}},	{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"smallBellyBoundStore"}},	{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"fleshblock"}}]

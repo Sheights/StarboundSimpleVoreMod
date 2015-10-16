@@ -1,0 +1,34 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [44, 49],
+	"dimensions"  :  [4, 4],
+	"names"  :  [
+	  ["idle1.1", "idle2.1", "idle2.2", "eat.1"],
+	  ["eat.2", "eat.3", "eat.4", "eat.5"],
+	  ["eat.6", "eat.7", "eat.8", "eat.9"],
+	  ["fed.1", "fed.2", "fed.3", "fed.4"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "idle1.default"	: "idle1.1",
+	"idle1.0"		: "idle1.1",
+	"idle2.3"		: "idle1.1",
+	"fed.5"			: "eat.9",
+	"open.1"		: "eat.1",
+	"open.2"		: "eat.2",
+	"open.3"		: "eat.3",
+	"close.1"		: "eat.3",
+	"close.2"		: "eat.2",
+	"close.3"		: "eat.1",
+	"spitup.1"		: "eat.8",
+	"spitup.2"		: "eat.7",
+	"spitup.3"		: "eat.6",
+	"spitup.4"		: "eat.5",
+	"spitup.5"		: "eat.4",
+	"spitup.6"		: "eat.3",
+	"spitup.7"		: "eat.2",
+	"spitup.8"		: "eat.1",
+	"idle3.1"		: "eat.9"
+	}
+}

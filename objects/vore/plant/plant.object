@@ -29,32 +29,32 @@
   "orientations" : [
     {
 	  "image" : "plant.png:idle1.<frame>",
-	  "imagePosition" : [-15, -16],
+	  "imagePosition" : [-14, -16],
 	  "direction" : "left",
 	  "flipImages" : true,
 	  "sitPosition" : [-40, 22],	  
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
       "detectArea" : [ [2, 0], [8, 5] ],
-	  "animationPosition" : [-15, -16]
+	  "animationPosition" : [-14, -16]
 	},
     {
 	  "image" : "plant.png:idle1.<frame>",
-	  "imagePosition" : [-17, -16],
+	  "imagePosition" : [-10, -16],
 	  "direction" : "right",
 	  "sitPosition" : [0, 22],
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
-      "detectArea" : [ [-8, 0], [-2, 5] ]
-	  ,"animationPosition" : [-17, -16]
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-10, -16]
 	}
   ],
   
   "animation"  :  "plant.animation",
   "animationCustom" : {
     "sounds" : {
-	  "swallow" : [ "/sfx/objects/gulp.wav" ],
-	  "lay" : [ "/sfx/objects/eggLay.wav" ]
+	  "swallow" : [ "/sfx/objects/plantgulp.wav" ],
+	  "release" : [ "/sfx/objects/plantrelease.wav" ]
 	}
   },
   "animationParts"  :  {

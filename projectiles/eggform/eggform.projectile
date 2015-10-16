@@ -1,0 +1,10 @@
+{
+	"projectileName" : "eggformshell",
+	"bounces" : -1,
+	"timeToLive" : 60.0,
+	"speed" : 0,
+	"frames" : "egg.png",
+	"frameNumber" : 1,
+	"power" : 0,
+	"flippable" : true
+}
