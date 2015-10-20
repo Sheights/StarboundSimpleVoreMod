@@ -212,8 +212,7 @@ function update(dt)
 	tempUpdate = update
 	oldUpdate(dt)
 	
---	if #victim < capacity and math.random(750) == 1 then
-	if #victim < capacity then
+	if #victim < capacity and math.random(750) == 1 then
 		feed()
 	end
 	
