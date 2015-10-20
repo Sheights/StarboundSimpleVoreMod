@@ -31,9 +31,9 @@ function updateHook()
 
 	if math.random(900) == 1 and playerTimer < duration then
 	
-		if occupency == 1 then
+		if #victim == 1 then
 			entity.say( smallLines[math.random(#smallLines)])
-		elseif occupency == 2 then
+		elseif #victim == 2 then
 			entity.say( medLines[math.random(#medLines)])
 		else
 			entity.say( largeLines[math.random(#largeLines)])

@@ -15,9 +15,9 @@ playerChance = 0.5
 ---------------------------------------------------------------------------------------
 duration 	= 120
 playerTimer = 120
+talkTimer	= 3
 stopWatch	= { 0, 0, 0 }
 
-occupency	= 0
 capacity	= 3
 
 i 			= 0
@@ -49,6 +49,8 @@ dprojectile	= "npcdvoreprojectile"
 function init()
 	oldInit()
 	
+	entity.setInteractive(true)
+	
 	initHook()
 end
 
@@ -73,17 +75,20 @@ function feed()
 	})
 	
 	
-	if #people == occupency + 1 and #eggcheck == occupency + 1 and #personalspace == occupency then
+	if #people == #victim + 1 and #eggcheck == #victim + 1 and #personalspace == #victim then
+		
+		i = 1
+		temp = 1
 		
 --		First Victim
 		if #victim == 0 then
-			victim[1] = people[1]
+			victim[1] = world.entityName(people[temp])
 --		Second and third Victims
-		else
+		else			
 			for i=1, #people do
 				j = 1
 				while (j <= #victim) do	
-					if people[i] == victim[j] then
+					if world.entityName(people[i]) == victim[j] then
 						break
 					end
 					j = j+1
@@ -92,14 +97,16 @@ function feed()
 					temp = i
 				end
 			end
-			victim[occupency+1] = people[temp]
+			victim[#victim+1] = world.entityName(people[temp])
 		end
 		
-		if world.isNpc( victim[occupency+1] ) == false then
+		
+		
+		if world.isNpc( people[temp] ) == false then
 			isPlayer = true
 		end
-		
-		local collisionBlocks = world.collisionBlocksAlongLine(mcontroller.position(), world.entityPosition( victim[occupency+1] ), {"Null", "Block", "Dynamic"}, 1)
+				
+		local collisionBlocks = world.collisionBlocksAlongLine(mcontroller.position(), world.entityPosition( people[temp] ), {"Null", "Block", "Dynamic"}, 1)
 		if #collisionBlocks ~= 0 then
 			return
 		end
@@ -114,38 +121,42 @@ function feed()
 			}}}
 			
 			if isDigest then
-				world.spawnProjectile( dprojectile , world.entityPosition( victim[occupency+1] ), entity.id(), {0, 0}, false, mergeOptions)
+				world.spawnProjectile( dprojectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
 			else
-				world.spawnProjectile( projectile , world.entityPosition( victim[occupency+1] ), entity.id(), {0, 0}, false, mergeOptions)
+				world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
 			end
-			occupency = occupency + 1
 			redress()
-			
 			feedHook()
+			
+			if #victim == 3 then
+				entity.setInteractive(false)
+			end
 			
 			if isPlayer then
 				playerTimer = 0
 			end
 			
 		else
-			victim [occupency + 1] = nil
+			victim[#victim] = nil
 		end
-		isPlayer = false	
 	end
+	isPlayer = false
 end
 
 function digest()
 
 	if stopWatch[1] >= duration then
-		occupency = occupency - 1
-		redress()
 		stopWatch[1] = stopWatch[2]
 		stopWatch[2] = stopWatch[3]
-		stopWatch[3] = nil
+		stopWatch[3] = 0
 		
 		victim [1] = victim [2]
 		victim [2] = victim [3]
 		victim [3] = nil
+		
+		entity.setInteractive(true)
+		redress()
+
 		digestHook()
 	end
 	
@@ -153,7 +164,7 @@ end
 
 function redress()
 
-	if occupency == 0 then
+	if #victim == 0 then
 		if head then
 			entity.setItemSlot( "head", head )
 		end	
@@ -166,7 +177,7 @@ function redress()
 		if back then
 			entity.setItemSlot( "back", back )
 		end
-	elseif occupency == 1 or occupency == 2 then
+	elseif #victim == 1 or #victim == 2 then
 		if midhead then
 			entity.setItemSlot( "head", midhead )
 		end
@@ -201,15 +212,15 @@ function update(dt)
 	tempUpdate = update
 	oldUpdate(dt)
 	
-	if occupency < capacity and math.random(750) == 1 then
+--	if #victim < capacity and math.random(750) == 1 then
+	if #victim < capacity then
 		feed()
 	end
 	
-	if occupency > 0 then
+	if #victim > 0 then
 		i = 1
-		while stopWatch[i] do
+		for i=1, #victim do
 			stopWatch[i] = stopWatch[i] + dt
-			i = i + 1
 		end
 		if playerTimer <= duration then
 			playerTimer = playerTimer + dt
@@ -217,9 +228,24 @@ function update(dt)
 		digest()
 	end
 	
+	if talkTimer < 3 then
+		talkTimer = talkTimer + dt
+	end
+	
 	updateHook()
 	
 	update = tempUpdate
+end
+
+function onInteraction(args)
+
+	if talkTimer < 3 then
+		feed()
+	else
+		talkTimer = 0
+	end
+	
+	interactHook()
 end
 
 function initHook()
@@ -239,5 +265,9 @@ function dressHook()
 end
 
 function updateHook()
+
+end
+
+function interactHook()
 
 end

@@ -1,4 +1,5 @@
 oldInit = init
+--oldInteract = interact
 oldUpdate = update
 
 ---------------------------------------------------------------------------------------
@@ -21,6 +22,7 @@ npcChance = 1
 ---------------------------------------------------------------------------------------
 duration 	= 90
 stopWatch	= 0
+talkTimer	= 3
 
 fed 		= false
 isDigest	= false
@@ -44,6 +46,8 @@ dprojectile	= "npcdvoreprojectile"
 
 function init()
 	oldInit()
+	
+	entity.setInteractive(true)
 	
 	initHook()
 end
@@ -95,10 +99,13 @@ function feed()
 			else
 				world.spawnProjectile( projectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
 			end
-			gain()
-			fed = true
-			feedHook()
 			
+			fed = true
+			
+			entity.setInteractive(false)
+			gain()
+			
+			feedHook()
 		else
 			isPlayer = false
 		end
@@ -107,10 +114,14 @@ end
 
 function digest()
 
-	if stopWatch >= duration then
+	if stopWatch >= duration then		
 		fed = false
+		
 		stopWatch = 0
+		
+		entity.setInteractive(true)
 		lose()
+		
 		digestHook()
 	end
 	
@@ -169,9 +180,30 @@ function update(dt)
 		digest()
 	end
 	
+	if talkTimer < 3 then
+		talkTimer = talkTimer + dt
+	end
+	
 	updateHook()
 	
 	update = tempUpdate
+end
+
+function interact(args)
+
+	world.logInfo("Interacted")
+
+	if talkTimer < 3 then
+		world.logInfo("Feeding")
+		feed()
+	else
+		world.logInfo("Timer Reset")
+		talkTimer = 0
+	end	
+--	oldInteract(args)
+	interactHook()
+	
+	return
 end
 
 function initHook()
@@ -195,5 +227,9 @@ function loseHook()
 end
 
 function updateHook()
+
+end
+
+function interactHook()
 
 end
