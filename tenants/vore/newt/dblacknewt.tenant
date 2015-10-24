@@ -22,6 +22,6 @@
 
   "rent": {
     "periodRange": [900.0, 1800.0],
-    "pool": "blackNewtGift"
+    "pool": "newtBlackGift"
   }
 }

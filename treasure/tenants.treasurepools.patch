@@ -1,5 +1,22 @@
 [
 	{ "op" : "add",
+      "path" : "/catBlackCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "catblackchest"},
+		  {"weight" : 1.0, "item" : "catblackhead"},
+		  {"weight" : 1.0, "item" : "catblacklegs"},
+		  {"weight" : 0.5, "item" : "catblackchestbelly"},
+		  {"weight" : 0.5, "item" : "catblacklegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
       "path" : "/dragonGoodraCostume",
       "value" : [
       [1, {
@@ -98,6 +115,23 @@
 		  {"weight" : 1.0, "item" : "foxwinterhead"},
 		  {"weight" : 1.0, "item" : "foxwinterlegs"},
 		  {"weight" : 0.5, "item" : "foxwinterlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/harpyNest",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "nestleft"},
+		  {"weight" : 1.0, "item" : "nestmiddle"},
+		  {"weight" : 1.0, "item" : "nestright"},
+		  {"weight" : 0.1, "item" : "nestperch"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -319,6 +353,21 @@
     },
 	
 	{ "op" : "add",
+      "path" : "/catBlackGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "catBlackCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
       "path" : "/dragonGoodraGift",
       "value" : [
       [1, {
@@ -400,6 +449,21 @@
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
 		  {"weight" : 0.1, "pool" : "foxWinterCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	
+	{ "op" : "add",
+      "path" : "/harpyGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "harpyNest"}
         ],
         "poolRounds" : [
           [1, 1]
