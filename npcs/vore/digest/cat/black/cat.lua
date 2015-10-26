@@ -5,8 +5,8 @@ isDigest = true
 chest = "catblackchest"
 legs = "catblacklegs"
 
-fullchest = "catblackbellychest"
-fulllegs = "catblackbellylegs"
+fullchest = "catblackchestbelly"
+fulllegs = "catblacklegsbelly"
 playerLines = {		"Surprise! Hope you enjoy learning about the digestive system of felines~<3",
 					"Such a scrumptious thing you are~",
 					"Ooooo~ Gonna love to add ya to my body~",
