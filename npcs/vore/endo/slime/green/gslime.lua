@@ -2,7 +2,7 @@ require "/scripts/vore/npcvore.lua"
 
 legs = "slimegreenlegs"
 
-fulllegs = "slimegreenlegsbelly"
+fulllegs = "slimegreenlegsbelly1"
 
 playerLines = {	"I'm so happy you decided to join me <3",
 				"Can I borrow a little of you? I lost some of me when I went for a walk yesterday.",
@@ -26,6 +26,12 @@ function updateHook()
 
 	if isPlayer and math.random(900) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
+	end
+	
+	if fed then
+		if stopWatch >= 45 then
+			entity.setItemSlot( "legs", "slimegreenlegsbelly" )
+		end
 	end
 
 end
