@@ -94,9 +94,11 @@ Zoroark 					- bobbidys
 NPC Predators:
 
 Avali						- Fenix
+Catlike						- Treebuddy
 Dragon						- Treebuddy
 Fox							- Treebuddy
 Harpy						- Treebuddy + Sheights
 Lamia						- Treebuddy
+Newt						- Sheights
 Slime						- ArgobargSoup
 Wolf						- Treebuddy

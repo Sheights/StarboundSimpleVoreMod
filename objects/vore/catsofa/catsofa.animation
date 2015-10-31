@@ -1,0 +1,100 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "tail"  :  {
+		    "frames"  :  9,
+			"cycle"  :  0.9,
+			"mode"  :  "transition",
+			"transition" : "idle"
+		  },
+		  "struggle"  :  {
+		    "frames"  :  8,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "rub" :  {
+		    "frames"  :  9,
+		    "cycle"  :  0.9,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "push" :  {
+		    "frames"  :  6,
+		    "cycle"  :  0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "pat" :  {
+		    "frames"  :  7,
+		    "cycle"  :  0.7,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "lick" :  {
+		    "frames"  :  20,
+		    "cycle"  :  2,
+		    "mode" : "transition",
+			"transition" : "idle" 
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle.<frame>"
+		      }
+		    },
+	        "tail"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tail.<frame>"
+		      }
+		    },
+	        "struggle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:struggle.<frame>"
+		      }
+		    },
+	        "rub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:rub.<frame>"
+		      }
+		    },
+	        "push"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:push.<frame>"
+		      }
+		    },
+	        "pat"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:pat.<frame>"
+		      }
+		    },
+	        "lick"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lick.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

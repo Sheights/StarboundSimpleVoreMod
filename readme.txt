@@ -104,7 +104,8 @@ Contents:
 ---------------------------------------------------------------------------------------------------------------------------------------------
 |Cat		| Black					| 1 Door, 1 Light, 1(D)Vore										|										|
 ---------------------------------------------------------------------------------------------------------------------------------------------
-|Dragon		| Green, Goodra			| Green: 1 Door, 8 Glitchcastle, 1 Light, 4 Valuable, 1(D)Vore	| Can hold 3 prey at once				|
+|Dragon		| Crystal ,Green, 		| Crystal: 1 Door, 1 Light, 24 Crystalline, 1(D)Vore				| Can hold 3 prey at once				|
+|			| Goodra				| Green: 1 Door, 8 Glitchcastle, 1 Light, 4 Valuable, 1(D)Vore	|										|
 |			|						| Goodra: 1 Door, 1 Light, 24 Slime, 1(D)Vore					|										|
 ---------------------------------------------------------------------------------------------------------------------------------------------
 |Fox		| Standard, Toxic,		| 1 Door, 1 Light, 1(D)Vore										|										|

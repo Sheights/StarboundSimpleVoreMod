@@ -1,0 +1,27 @@
+{
+  "name": "crystaldragon",
+  "priority": 10,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+	"crystalline": 24,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "hylotl",
+      "type": "crystaldragon",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "dragonCrystalGift"
+  }
+}

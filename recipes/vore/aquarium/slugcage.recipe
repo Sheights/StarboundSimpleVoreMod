@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 1000 }
+  ],
+  "output" : {
+    "item" : "aslugcage",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "objects", "all", "other" ]
+}
