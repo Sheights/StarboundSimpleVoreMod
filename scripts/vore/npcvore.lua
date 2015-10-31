@@ -189,22 +189,22 @@ function update(dt)
 	update = tempUpdate
 end
 
-function interact(args)
+--function interact(args)
 
-	world.logInfo("Interacted")
+--	world.logInfo("Interacted")
 
-	if talkTimer < 3 then
-		world.logInfo("Feeding")
-		feed()
-	else
-		world.logInfo("Timer Reset")
-		talkTimer = 0
-	end	
+--	if talkTimer < 3 then
+--		world.logInfo("Feeding")
+--		feed()
+--	else
+--		world.logInfo("Timer Reset")
+--		talkTimer = 0
+--	end	
 --	oldInteract(args)
-	interactHook()
+--	interactHook()
 	
-	return
-end
+--	return
+--end
 
 function initHook()
 

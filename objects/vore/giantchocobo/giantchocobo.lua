@@ -1,14 +1,14 @@
+oldInteraction = onInteraction
+
 animLock = 0
 
-timer = 0
-timerEat = 0
-timerIdle = 0
-timerSpit = 0
 
 fed = false
 
 function init()
 
+	world.logInfo("This is running")
+	
 end
 
 function update(dt)
@@ -16,5 +16,7 @@ function update(dt)
 end
 
 function onInteraction(args)
+
+	world.logInfo("This is running")
 
 end

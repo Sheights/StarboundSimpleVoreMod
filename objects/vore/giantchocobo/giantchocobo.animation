@@ -10,7 +10,8 @@
 		  "idle2"  :  {
 		    "frames"  :  3,
 			"cycle"  :  1.2,
-			"mode"  :  "end"
+			"mode"  :  "transition",
+			"transition" : "idle1"
 		  },
 		  "idle3"  :  {
 		    "frames"  :  1

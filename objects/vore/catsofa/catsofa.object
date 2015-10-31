@@ -1,0 +1,52 @@
+{
+  "objectName" : "catsofa",
+  "rarity" : "Legendary",
+  "description" : "An indulged catperson makes a great seat.",
+  "shortdescription" : "Cat Sofa",
+  "race" : "cat",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Fur is rather soft.",
+  "avianDescription" : "Well if she has already eaten, I guess it's safe to go near it.",
+  "floranDescription" : "Floran whill have what cat isss having.",
+  "glitchDescription" : "Concern. Will sitting on that creature hurt either of them?",
+  "humanDescrtiption" : "Oh, dear. Kitty got fat.",
+  "hylotlDescription" : "The state people keep their pets is deplorable.",
+  "novakidDescription" : "Well now that does look right comfy.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "sit",
+  "sitAngle" : 0,
+  
+  "inventoryIcon" : "catsofaicon.png",
+  "orientations" : [
+    {
+	  "image" : "catsofa.png:default",
+	  "imagePosition" : [-16, -8],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-5, 18],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "catsofa.png:default",
+	  "imagePosition" : [-16, -8],
+	  "direction" : "right",	  
+	  "sitPosition" : [25, 18],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  "animation"  :  "catsofa.animation",
+  "animationParts"  :  {
+    "body"  :  "catsofa.png"
+  },
+  "animationPosition" : [-16, -8],
+ 
+  "scripts" : [ "/objects/vore/catsofa/catsofa.lua" ],
+  "scriptDelta" : 3
+}

@@ -8,7 +8,25 @@
 		  {"weight" : 1.0, "item" : "catblackhead"},
 		  {"weight" : 1.0, "item" : "catblacklegs"},
 		  {"weight" : 0.5, "item" : "catblackchestbelly"},
-		  {"weight" : 0.5, "item" : "catblacklegsbelly"}
+		  {"weight" : 0.5, "item" : "catblacklegsbelly"},
+		  {"weight" : 0.5, "item" : "catsofa"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/dragonCrystalCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "dragoncrystalchest"},
+		  {"weight" : 1.0, "item" : "dragoncrystalhead"},
+		  {"weight" : 1.0, "item" : "dragoncrystallegs"},
+		  {"weight" : 0.3, "item" : "dragoncrystallegsfull"},
+		  {"weight" : 0.6, "item" : "dragoncrystallegsmid"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -369,6 +387,20 @@
       ]
     },
 	
+	{ "op" : "add",
+      "path" : "/dragonCrystalGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "dragonCrystalCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
 	{ "op" : "add",
       "path" : "/dragonGoodraGift",
       "value" : [
