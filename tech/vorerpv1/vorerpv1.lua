@@ -41,7 +41,8 @@ function update(args)
 	
 	if #people == 1 then
 		self.active = true
-		self.host = people[1]		
+		self.host = people[1]
+		status.addPersistentEffect("fallimmunity", "nofalldamage")
 		tech.setParentDirectives("?multiply=00000000")
 	end
 	
@@ -75,6 +76,7 @@ function deactivate()
   self.cooldown = 0
   self.host = nil
   self.timer = 0
+  status.clearPersistentEffects("fallimmunity")
   tech.setParentDirectives()
 
 end
