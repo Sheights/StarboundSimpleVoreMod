@@ -1,0 +1,16 @@
+{
+  "id" : "vorerpv1.gearup",
+  "prerequisites" : [],
+  "requiredShipLevel" : 1,
+  "title" : "^green; Something Eating You?",
+  "text" : "Yeah it was a bad joke, but guess what? No one else is making this kind of stuff for you.",
+  "completionText" : "Go check your S.A.I.L. and remember to bring a tech drive.",
+  "completionConditions" : [
+    { "type" : "gather", "item" : "vorechipv1-chip", "count" : 1, "consume" : true }
+  ],
+  "moneyRange" : [0, 0],
+  "rewards" : [ ],
+  "enableTech" : [
+    "vorerpv1"
+  ]
+}
