@@ -39,7 +39,7 @@
 		    "frames"  :  1,
 		    "cycle"  :  1.3,
 		    "mode" : "transition",
-			"transition" : "idle" 
+			"transition" : "idle1" 
 		  },
 		  "bigtosmall" :  {
 		    "frames"  :  3,
