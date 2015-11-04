@@ -1,0 +1,27 @@
+{
+  "name": "nakedhuman",
+  "priority": 5,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+	"human": 6,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "type": "nakedhuman",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}
