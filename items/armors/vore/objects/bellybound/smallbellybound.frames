@@ -1,0 +1,51 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [14, 26],
+	"dimensions"  :  [6, 5],
+	"names"  :  [
+	  ["startup.1", "startup.2", "startup.3", "startup.4", "startup.5", "startup.6"],
+	  ["startup.7", "startup.8", "blink.1", "blink.2", "blink.3", "blink.4"],
+	  ["blink.5", "blink.6", "idle.1", "turn.1", "turn.2", "turn.3"],
+	  ["turn.4", "turn.5", "turn.6", "turn.7", "turn.8", "turn.9"],
+	  ["turn.10", "turn.11", "turn.12", "turn.13", "turn.14", "turn.15"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+	
+	"idle.default"	: "idle.1",
+	"off.1"			: "startup.1",
+	
+	"shutdown.1"	: "startup.8",
+	"shutdown.2"	: "startup.7",
+	"shutdown.3"	: "startup.6",
+	"shutdown.4"	: "startup.5",
+	"shutdown.5"	: "startup.4",
+	"shutdown.6"	: "startup.3",
+	"shutdown.7"	: "startup.2",
+	"shutdown.8"	: "startup.1",
+	
+	"open.1"		: "blink.6",
+	"open.2"		: "blink.5",
+	"open.3"		: "blink.4",
+	"open.4"		: "blink.3",
+	"open.5"		: "blink.2",
+	"open.6"		: "blink.1",
+	
+	"turnback.1"	: "turn.15",
+	"turnback.2"	: "turn.14",
+	"turnback.3"	: "turn.13",
+	"turnback.4"	: "turn.12",
+	"turnback.5"	: "turn.11",
+	"turnback.6"	: "turn.10",
+	"turnback.7"	: "turn.9",
+	"turnback.8"	: "turn.8",
+	"turnback.9"	: "turn.7",
+	"turnback.10"	: "turn.6",
+	"turnback.11"	: "turn.5",
+	"turnback.12"	: "turn.4",
+	"turnback.13"	: "turn.3",
+	"turnback.14"	: "turn.2",
+	"turnback.15"	: "turn.1"
+	}
+}

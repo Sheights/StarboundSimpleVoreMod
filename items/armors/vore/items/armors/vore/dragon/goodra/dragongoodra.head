@@ -1,0 +1,15 @@
+{
+  "itemName" : "dragongoodrahead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "This very friendly Dragon-type Pokémon will hug its beloved Trainer, leaving that Trainer covered in sticky slime.",
+  "shortdescription" : "Goodra Mask",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png"
+}

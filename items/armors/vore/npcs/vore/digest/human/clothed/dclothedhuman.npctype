@@ -1,0 +1,34 @@
+{
+  "type" : "dclothedhuman",
+  "baseType" : "villager",
+  
+ 
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/human/clothed/human.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "humanheadblonde", "parameters" : { "colorIndex" : 0 } },
+			  { "name" : "humanheadbrunette", "parameters" : { "colorIndex" : 0 } },
+			  { "name" : "humanheadgreen", "parameters" : { "colorIndex" : 0 } },
+			  { "name" : "humanheadred", "parameters" : { "colorIndex" : 0 } }
+			  
+            ],
+			"chest" : [
+              { "name" : "humanchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "humanclothedlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

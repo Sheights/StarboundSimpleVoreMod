@@ -1,0 +1,44 @@
+{
+  "objectName" : "nestperch",
+  "rarity" : "Legendary",
+  "description" : "Mother must watch over her chicks.",
+  "shortdescription" : "Harpy Nest - Perch",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Where the matron overlooks her offspring.",
+  "avianDescription" : "One day I shall take that position.",
+  "floranDescription" : "Floran will lay trap here for big chicken",
+  "glitchDescription" : "Observation. A high place to overview the young.",
+  "humanDescrtiption" : "That would give the mother a good look over the nest.",
+  "hylotlDescription" : "Hylotl parents rarely watch over their young so adeptly.",
+  "novakidDescription" : "Ain't no one gonna sneak up on these youngins.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : true,
+  "sitOrientation" : "sit",
+  "sitAngle" : 0,
+  
+  "inventoryIcon" : "egg.png",
+  "orientations" : [
+    {
+	  "image" : "nestperch.png",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [20, 33],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "nestperch.png",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [-10, 33],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ]
+}

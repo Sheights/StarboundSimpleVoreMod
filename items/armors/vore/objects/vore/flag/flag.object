@@ -1,0 +1,32 @@
+{
+  "objectName" : "avoreflag",
+  "printable" : false,
+  "tags" : ["vore"],
+  "rarity" : "Legendary",
+  "description" : "A Poster advertising a vore mod for Minecraft. Must be an ancient earth relic by now.",
+  "shortdescription" : "Devourcraft Poster",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 100,
+
+  "apexDescription" : "I can't tell if this is a Photo or a picture.",
+  "avianDescription" : "This image puts some sort of primal fear in me...",
+  "floranDescription" : "Floran teeth Ssssharper.",
+  "glitchDescription" : "Observation. An image of an open mouth with sharp fangs...",
+  "humanDescription" : "I remember playing that when I was in college.",
+  "hylotlDescription" : "Human's are so horribly open with their display of fetishes.",
+  
+  "inventoryIcon" : "postericon.png",
+  "orientations" : [
+    {
+      "image" : "flag.png:<color>",
+
+      "imagePosition" : [-15, -16],
+      "frames" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "objectName"  :  "voremisswolfdigest",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "Watch your step, she looks hungry. [Digestion]",
+  "shortdescription"  :  "Miss Wolf",
+
+  "apexDescription" : "Her stomach is growling.",
+  "avianDescription" : "This girl is making me nervous.",
+  "floranDescription" : "Wolf not eat Floran, Floran eat wolf!",
+  "glitchDescription" : "Alert. This female looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, miss, are you hungry?  Want some steak? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "misswolficon.png",
+  "orientations" : [
+    {
+	  "image" : "misswolf.png:waiting.<frame>",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	},
+    {
+	  "image" : "misswolf.png:waiting.<frame>",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	}
+  ],
+  
+  "animation"  :  "misswolf.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.wav" ],
+	  "lay" : [ "/sfx/objects/eggLay.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "misswolf.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/misswolf/misswolfdanger.lua" ],
+  "scriptDelta" : 3
+}

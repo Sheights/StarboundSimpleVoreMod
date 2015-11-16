@@ -18,6 +18,22 @@
       ]
     },
 	{ "op" : "add",
+      "path" : "/catfishCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "catfishchest"},
+		  {"weight" : 1.0, "item" : "catfishhead"},
+		  {"weight" : 1.0, "item" : "catfishlegs"},
+		  {"weight" : 0.5, "item" : "catfishlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
       "path" : "/dragonCrystalCostume",
       "value" : [
       [1, {
@@ -263,7 +279,38 @@
       }]
       ]
     },
-	
+	{ "op" : "add",
+      "path" : "/orcaCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "orcachest"},
+		  {"weight" : 1.0, "item" : "orcahead"},
+		  {"weight" : 1.0, "item" : "orcalegs"},
+		  {"weight" : 0.5, "item" : "orcalegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/sharkWhiteCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "sharkwhitechest"},
+		  {"weight" : 1.0, "item" : "sharkwhitehead"},
+		  {"weight" : 1.0, "item" : "sharkwhitelegs"},
+		  {"weight" : 0.5, "item" : "sharkwhitelegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
 	{ "op" : "add",
       "path" : "/slimeGreenCostume",
       "value" : [
@@ -386,7 +433,20 @@
       }]
       ]
     },
-	
+	{ "op" : "add",
+      "path" : "/catfishGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "catfishCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
 	{ "op" : "add",
       "path" : "/dragonCrystalGift",
       "value" : [
@@ -595,7 +655,34 @@
       }]
       ]
     },
-	
+	{ "op" : "add",
+      "path" : "/orcaGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "orcaCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/sharkWhiteGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "sharkWhiteCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
 	{ "op" : "add",
       "path" : "/slimeGreenGift",
       "value" : [

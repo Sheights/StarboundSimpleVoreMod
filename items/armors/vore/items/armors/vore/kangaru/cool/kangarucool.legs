@@ -1,0 +1,14 @@
+{
+  "itemName" : "kangarucoollegs",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Cool Clothes",
+  "shortdescription" : "Kangaru Cool Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png"
+}
