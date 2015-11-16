@@ -1,0 +1,101 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle1",
+	    "states"  :  {
+	      "idle1"  :  {
+		    "frames"  :  1
+		  },
+		  "idle2"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition" : "idle1"
+		  },
+		  "idle3"  :  {
+		    "frames"  :  1
+		  },
+		  "eat"  :  {
+		    "frames"  :  9,
+			"cycle"  :  1.0,
+			"mode"  :  "end"
+		  },
+		  "open"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.2,
+			"mode"  :  "end"
+		  },
+		  "close"  :  {
+		    "frames"  :  3,
+			"cycle"  :  1.2,
+			"mode"  :  "end"
+		  },
+		  "spitup" :  {
+		    "frames"  :  8,
+		    "cycle"  :  1.1,
+		    "mode"  :  "end"
+		  },
+		  "fed" :  {
+		    "frames"  :  5,
+		    "cycle"  :  1.0,
+		    "mode"  :  "end"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+			"idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+			"idle3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle3.<frame>"
+		      }
+		    },
+			"eat"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:eat.<frame>"
+		      }
+		    },
+			"open"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:open.<frame>"
+		      }
+		    },
+	        "close"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:close.<frame>"
+		      }
+		    },
+			"spitup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:spitup.<frame>"
+		      }
+		    },
+		    "fed"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

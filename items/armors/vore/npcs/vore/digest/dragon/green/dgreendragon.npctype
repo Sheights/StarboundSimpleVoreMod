@@ -1,0 +1,150 @@
+{
+  "type" : "dgreendragon",
+  "baseType" : "villager",
+  
+  "scriptConfig" : {
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"My environment is unsuitible.",
+							"My old cave had many more things.",
+							"My collection is missing something."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"A cave in?",
+							"All I wanted was a roof over my head.",
+							"But, now my friends can escape! Please fix it."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"It's already cramped enough in here.",
+							"I don't want a roomate. Unless you would like to move in me.",
+							"At the end of the day, there will be one of us living here. It would be best to save your new friend the embarassment."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"It's not wise to make me angry.",
+						"Only one thing will be empty shortly. My belly or my room.",
+						"Maybe I'll take a few of you as a souvenier when I leave."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Making enemies with a dragon is a very poor mistake.",
+						"Back to the cave.",
+						"I liked you guys too much. I'll spare you this time."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"You summoned me?",
+						"Room service?",
+						"A dragon's time is valuable. Maybe you wish to be of more value to me?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"A sample of my treasure.",
+						"Please accept some coin. I think someone dropped some more in my gut.",
+						"I don't normally pay for food. Or pay my food.",
+						"You best spend it quickly. You never know how long you will remain not my food."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Defend me servants!",
+					"I forgot my best claws. Can someone else take this one?",
+					"This is why I like my caves high on mountain tops."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"They have a greater place. Save them.",
+						"If they fall you will take their place!",
+						"Food is always best when it realizes it's food."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Yes! This entertains me!",
+					"Defend your dragon!",
+					"My enemies are your enemies if you don't want me as an enemy."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Tranquility returns.",
+					"That's enough excitment for one day.",
+					"It was about to get funny."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Your lair is impressive.",
+			"Do you not feel scared being this close to me?",
+			"Your other guests look like they would be quite filling."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/dragon/green/gdragon.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "dragongreenhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "dragongreenchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "dragongreenlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

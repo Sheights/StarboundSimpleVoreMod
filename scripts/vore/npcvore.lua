@@ -185,6 +185,7 @@ function update(dt)
 	end
 	
 	updateHook()
+	updateHook(dt)
 	
 	update = tempUpdate
 end
@@ -227,6 +228,10 @@ function loseHook()
 end
 
 function updateHook()
+
+end
+
+function updateHook(dt)
 
 end
 

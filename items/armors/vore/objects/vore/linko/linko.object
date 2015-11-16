@@ -1,0 +1,104 @@
+{
+  "objectName"  :  "vorelinko",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "[TODO] Description",
+  "shortdescription"  :  "[CV] Linko",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "linkoicon.png",
+  "orientations" : [
+    {
+	  "image" : "linko.png:waiting.<frame>",
+	  "imagePosition" : [-16, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-16, -16]
+	},
+    {
+	  "image" : "linko.png:waiting.<frame>",
+	  "imagePosition" : [-8, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-8, -16]
+	}
+  ],
+  
+  "animation"  :  "linko.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.wav" ],
+	  "lay" : [ "/sfx/objects/eggLay.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "linko.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/linko/linko.lua" ],
+  "scriptDelta" : 3,
+  
+  "chatOptions" : [
+	"Mm, nice and squirmy..! <3",
+	"Got me nice n' hard, down there~",
+	"Gotta admit, kinda jealous of you~",
+	"So nice and full~!",
+	"Mrrf, keep squirming down there.",
+	"God, yes..! Keep on squirming in there <3",
+	"Feelin' soooo close.. >////<",
+	"Didn't know my balls could get even bigger! ^///^",
+	"I hope you like my cum, there's plenty to go around!"
+  ],
+  "gulpLines" : [
+	"Aaaah, s-so good..!",
+	"*Moans~* <3",
+	"Don't get too feisty in there <3",
+	"Mrrf, enjoy down there! ^///^"
+  ],
+  "chatIdleFull" : [
+	"Sorry, a little full.. As you could tell.",
+	"Mm, can't take you.. But maybe you could rub the balls~?",
+	"Hey, I'm just a fox, you know. Not that much room down there!"
+  ],
+  "chatIdleEmpty" : [
+	"You just gonna let this acheing length go to waste?",
+	"Care to dive in, dear?",
+	"You should meet someone. My balls.",
+	"Come down my cock! Fun time, garunteed~!",
+	"Why don't you slip down for a while?"
+  ],
+  "rubLines" : [
+	"Oof, that's the spot.. <3",
+	"You're gonna make me cum like this..!",
+	"You mind suckin' while you're down there?",
+	"If you're gonna rub it, does that mean you want the load?",
+	"At least I've got someone to use this package on~ Mrrf <3",
+	"Keep rubbin', or you're going in too~"
+  ]
+}

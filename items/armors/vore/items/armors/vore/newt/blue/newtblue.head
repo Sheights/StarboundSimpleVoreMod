@@ -1,0 +1,15 @@
+{
+  "itemName" : "newtbluehead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "The eyes allows you to see in 3 extra wavelengths! It's a shame your normal eyes don't so you can't use it.",
+  "shortdescription" : "Newt Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

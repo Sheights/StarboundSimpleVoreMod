@@ -1,0 +1,15 @@
+{
+  "itemName" : "catfishhead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "It's like Pokemon. Catfish actually do use an electric current to stun their prey before devouring them whole.",
+  "shortdescription" : "Catfish Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

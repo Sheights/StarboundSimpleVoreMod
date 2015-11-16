@@ -1,0 +1,14 @@
+{
+  "itemName" : "wolfdesertlegsbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Made from the highest quality of synthetic sandy fur.",
+  "shortdescription" : "Wolf Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png"
+}

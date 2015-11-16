@@ -1,0 +1,27 @@
+{
+  "name": "dorca",
+  "priority": 10,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+	"sea": 24,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "hylotl",
+      "type": "dorca",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "orcaGift"
+  }
+}

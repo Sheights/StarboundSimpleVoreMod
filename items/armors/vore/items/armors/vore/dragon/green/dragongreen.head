@@ -1,0 +1,15 @@
+{
+  "itemName" : "dragongreenhead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "An amazing recreation of a draconic visage.",
+  "shortdescription" : "Green Dragon Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png"
+}
