@@ -1,5 +1,5 @@
 oldInit = init
---oldInteract = interact
+oldInteract = interact
 oldUpdate = update
 
 ---------------------------------------------------------------------------------------
@@ -22,11 +22,13 @@ npcChance = 1
 ---------------------------------------------------------------------------------------
 duration 	= 90
 stopWatch	= 0
-talkTimer	= 3
+talkTimer	= 1
+temp		= 0
 
 fed 		= false
 isDigest	= false
 isPlayer	= false
+request		= false
 
 head		= nil
 chest		= nil
@@ -45,11 +47,13 @@ projectile	= "npcvoreprojectile"
 dprojectile	= "npcdvoreprojectile"
 
 function init()
+
 	oldInit()
 	
 	entity.setInteractive(true)
 	
 	initHook()
+	
 end
 
 function feed()
@@ -85,24 +89,29 @@ function feed()
 			return
 		end
 		
-		if ( isPlayer and math.random() < playerChance ) or ( isPlayer == false and math.random() < npcChance ) then
+		if ( isPlayer and ( math.random() < playerChance or request ) ) or ( isPlayer == false and math.random() < npcChance ) then
+			
+			temp = entity.id()
+			
+			if request then
+				temp = temp + 20000
+			end
+			
+			if isDigest then
+				temp = temp + 10000
+			end
 			
 			local mergeOptions = {
 				statusEffects = {
 				{
 					effect = voreeffect,
-					duration = entity.id()
+					duration = temp
 			}}}
 			
-			if isDigest then
-				world.spawnProjectile( dprojectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
-			else
-				world.spawnProjectile( projectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
-			end
+			world.spawnProjectile( projectile , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
 			
 			fed = true
-			
-			entity.setInteractive(false)
+		
 			gain()
 			
 			feedHook()
@@ -110,18 +119,23 @@ function feed()
 			isPlayer = false
 		end
 	end
+	
+	if fed == false then
+		request = false
+	end
+	
 end
 
 function digest()
 
 	if stopWatch >= duration then		
 		fed = false
+		request = false
 		
 		stopWatch = 0
-		
-		entity.setInteractive(true)
+
 		lose()
-		
+
 		digestHook()
 	end
 	
@@ -170,42 +184,52 @@ function lose()
 end
 
 function update(dt)
-	tempUpdate = update
+
+	tempupdate = update
+	tempinteract = interact
 	oldUpdate(dt)
-	
+
 	if not fed and math.random(900) == 1 then
 		feed()
 	elseif fed then
 		stopWatch = stopWatch + dt
 		digest()
 	end
-	
-	if talkTimer < 3 then
+
+	if not fed and talkTimer < 1 then
 		talkTimer = talkTimer + dt
 	end
-	
+
 	updateHook()
 	updateHook(dt)
-	
-	update = tempUpdate
+
+	update = tempupdate
+	interact = tempinteract
 end
 
---function interact(args)
-
---	world.logInfo("Interacted")
-
---	if talkTimer < 3 then
---		world.logInfo("Feeding")
---		feed()
---	else
---		world.logInfo("Timer Reset")
---		talkTimer = 0
---	end	
---	oldInteract(args)
---	interactHook()
+function interact(args)
 	
---	return
---end
+	if talkTimer < 1 then
+	
+		if stopWatch >= 1 and request then
+			world.spawnProjectile( "cleanser" , world.entityPosition( victim ), entity.id(), {0, 0}, true )
+			stopWatch = duration
+			digest()
+		else
+			request = true
+			feed()
+		end
+		
+	else
+		talkTimer = 0
+	end
+
+	interactHook()
+	oldInteract(args)
+
+	return nil
+
+end
 
 function initHook()
 

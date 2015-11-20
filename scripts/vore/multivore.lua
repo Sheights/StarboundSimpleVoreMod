@@ -1,4 +1,5 @@
 oldInit = init
+oldInteract = interact
 oldUpdate = update
 
 ---------------------------------------------------------------------------------------
@@ -9,13 +10,13 @@ oldUpdate = update
 -- Keep the value anywhere between 0 and 1
 -- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
 -- This can also be done in the individual .lua files.
-playerChance = 0.5
+playerChance = 1
 
 --#####################################################################################
 ---------------------------------------------------------------------------------------
 duration 	= 120
 playerTimer = 120
-talkTimer	= 3
+talkTimer	= 1
 stopWatch	= { 0, 0, 0 }
 
 capacity	= 3
@@ -25,6 +26,7 @@ j			= 0
 
 isDigest	= false
 isPlayer	= false
+requested	= false
 
 head		= nil
 chest		= nil
@@ -41,8 +43,10 @@ fullchest	= nil
 fulllegs	= nil
 fullback	= nil
 
+request		= { false, false, false }
 victim		= { nil, nil, nil }
 
+voreeffect = "dragonvore"
 projectile	= "npcvoreprojectile"
 dprojectile	= "npcdvoreprojectile"
 
@@ -111,28 +115,33 @@ function feed()
 			return
 		end
 		
-		if ( isPlayer and math.random() <= playerChance ) or isPlayer == false then
+		if ( isPlayer and math.random() <= playerChance ) or isPlayer == false or requested then
 		
+			tem = entity.id()
+			
+			if requested then
+				tem = tem + 20000
+			end
+			
+			if isDigest then
+				tem = tem + 10000
+			end
+			
 			local mergeOptions = {
 				statusEffects = {
 				{
-						effect = "dragonvore",
-						duration = entity.id()
+					effect = voreeffect,
+					duration = tem
 			}}}
 			
-			if isDigest then
-				world.spawnProjectile( dprojectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
-			else
-				world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
-			end
+			world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
+			
+			request[#victim] = true
+			
 			redress()
 			feedHook()
 			
-			if #victim == 3 then
-				entity.setInteractive(false)
-			end
-			
-			if isPlayer then
+			if isPlayer and requested == false then
 				playerTimer = 0
 			end
 			
@@ -141,11 +150,13 @@ function feed()
 		end
 	end
 	isPlayer = false
+	requested = false
 end
 
 function digest()
 
-	if stopWatch[1] >= duration then
+	if stopWatch[1] >= duration and request[1] == false then
+		
 		stopWatch[1] = stopWatch[2]
 		stopWatch[2] = stopWatch[3]
 		stopWatch[3] = 0
@@ -154,7 +165,36 @@ function digest()
 		victim [2] = victim [3]
 		victim [3] = nil
 		
-		entity.setInteractive(true)
+		request [1] = request [2]
+		request [2] = request [3]
+		request [3] = false
+		redress()
+
+		digestHook()
+	end
+	
+	if stopWatch[2] >= duration and request[2] == false then
+		
+		stopWatch[2] = stopWatch[3]
+		stopWatch[3] = 0
+				
+		victim [2] = victim [3]
+		victim [3] = nil
+		
+		request [2] = request [3]
+		request [3] = false
+		
+		redress()
+
+		digestHook()
+	end
+	
+	if stopWatch[3] >= duration and request[3] == false then
+		
+		stopWatch[3] = 0
+		victim [3] = nil
+		request [3] = false
+		
 		redress()
 
 		digestHook()
@@ -209,7 +249,8 @@ function redress()
 end
 
 function update(dt)
-	tempUpdate = update
+	tempupdate = update
+	tempinteract = interact
 	oldUpdate(dt)
 	
 	if #victim < capacity and math.random(750) == 1 then
@@ -227,24 +268,62 @@ function update(dt)
 		digest()
 	end
 	
-	if talkTimer < 3 then
+	if talkTimer < 1 then
 		talkTimer = talkTimer + dt
 	end
 	
 	updateHook()
 	
-	update = tempUpdate
+	update = tempupdate
+	interact = tempinteract
 end
 
-function onInteraction(args)
-
-	if talkTimer < 3 then
-		feed()
+function interact(args)
+	if talkTimer < 1 then
+	
+		if isVictim( world.entityName( args.sourceId ) ) then
+			world.spawnProjectile( "cleanser" , world.entityPosition( entity.id() ), entity.id(), {0, 0}, true )
+			stopWatch[1] = 0
+			stopWatch[2] = 0
+			stopWatch[3] = 0
+			victim[1] = nil
+			victim[2] = nil
+			victim[3] = nil
+			redress()
+		else
+			requested = true
+			feed()
+		end
+		
+		talkTimer = 1
+		
 	else
 		talkTimer = 0
 	end
-	
+
 	interactHook()
+	oldInteract(args)
+
+	return nil
+
+end
+
+function isVictim( name )
+
+	local personalspace = world.entityQuery( mcontroller.position(), 2, {
+		withoutEntityId = entity.id(),
+		includedTypes = {"npc", "player"},
+		boundMode = "CollisionArea"
+	})
+	
+	for i=1, #personalspace do
+		if world.entityName( personalspace[i] ) == name then
+			return true
+		end
+	end
+	
+	return false
+	
 end
 
 function initHook()

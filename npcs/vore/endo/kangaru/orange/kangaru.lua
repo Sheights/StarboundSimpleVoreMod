@@ -1,8 +1,5 @@
 require "/scripts/vore/npcvore.lua"
 
-
-isDigest = true
-
 legs = "kangaruorangelegs"
 
 fulllegs = "kangaruorangelegsbelly"

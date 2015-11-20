@@ -1,16 +1,17 @@
 {
-	"projectileName" : "dragonvoreprojectile",
+	"projectileName" : "cleanser",
 	"bounces" : -1,
-	"timeToLive" : 0.01,
+	"timeToLive" : 1.0,
 	"speed" : 0,
 	"damageKindImage" : "icon.png",
 	"frames" : "npcvore.png",
 	"frameNumber" : 6,
-	"animationCycle" : 0.7,
+	"animationCycle" : 1.0,
 	"power" : 0,
 	"piercing" : true,
 	"damageKind" : "default",
 	"damageType" : "ignoresdef",
 	"flippable" : true,
-	"universalDamage" : true
+	"universalDamage" : true,
+	"statusEffects" : [ {"effect" : "cleanser", "duration" : 1} ]
 }
