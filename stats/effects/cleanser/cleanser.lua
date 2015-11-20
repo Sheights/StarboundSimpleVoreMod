@@ -1,4 +1,4 @@
 function init()
-	status.clearAllPersistentEffects()
+	status.clearPersistentEffects("requestvore")
 	status.clearEphemeralEffects()
 end

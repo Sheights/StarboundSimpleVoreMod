@@ -44,7 +44,6 @@ victim		= nil
 
 voreeffect = "npcvore"
 projectile	= "npcvoreprojectile"
-dprojectile	= "npcdvoreprojectile"
 
 function init()
 
@@ -193,7 +192,9 @@ function update(dt)
 		feed()
 	elseif fed then
 		stopWatch = stopWatch + dt
-		digest()
+		if request == false then
+			digest()
+		end
 	end
 
 	if not fed and talkTimer < 1 then

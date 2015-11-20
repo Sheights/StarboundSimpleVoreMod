@@ -1,7 +1,7 @@
 {
 	"projectileName" : "cleanser",
 	"bounces" : -1,
-	"timeToLive" : 1.0,
+	"timeToLive" : 0.3,
 	"speed" : 0,
 	"damageKindImage" : "icon.png",
 	"frames" : "npcvore.png",

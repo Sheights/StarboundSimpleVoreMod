@@ -10,7 +10,7 @@ oldUpdate = update
 -- Keep the value anywhere between 0 and 1
 -- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
 -- This can also be done in the individual .lua files.
-playerChance = 1
+playerChance = 0.5
 
 --#####################################################################################
 ---------------------------------------------------------------------------------------
@@ -121,6 +121,7 @@ function feed()
 			
 			if requested then
 				tem = tem + 20000
+				request[#victim] = true
 			end
 			
 			if isDigest then
@@ -135,9 +136,7 @@ function feed()
 			}}}
 			
 			world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
-			
-			request[#victim] = true
-			
+	
 			redress()
 			feedHook()
 			
@@ -171,9 +170,7 @@ function digest()
 		redress()
 
 		digestHook()
-	end
-	
-	if stopWatch[2] >= duration and request[2] == false then
+	elseif stopWatch[2] >= duration and request[2] == false then
 		
 		stopWatch[2] = stopWatch[3]
 		stopWatch[3] = 0
@@ -187,9 +184,7 @@ function digest()
 		redress()
 
 		digestHook()
-	end
-	
-	if stopWatch[3] >= duration and request[3] == false then
+	elseif stopWatch[3] >= duration and request[3] == false then
 		
 		stopWatch[3] = 0
 		victim [3] = nil
@@ -279,10 +274,17 @@ function update(dt)
 end
 
 function interact(args)
+	
 	if talkTimer < 1 then
 	
 		if isVictim( world.entityName( args.sourceId ) ) then
+		
 			world.spawnProjectile( "cleanser" , world.entityPosition( entity.id() ), entity.id(), {0, 0}, true )
+			
+			playerTimer = 120
+			request[1] = false
+			request[2] = false
+			request[3] = false
 			stopWatch[1] = 0
 			stopWatch[2] = 0
 			stopWatch[3] = 0

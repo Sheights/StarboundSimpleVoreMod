@@ -65,7 +65,7 @@ end
 function uninit()
 
 	if request then
-		status.clearAllPersistentEffects()
+		status.clearPersistentEffects("requestvore")
 		status.removeEphemeralEffect("intents")
 		status.removeEphemeralEffect("nofalldamage")
 		status.removeEphemeralEffect("npcacid")
