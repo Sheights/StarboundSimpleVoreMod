@@ -1,0 +1,12 @@
+{
+  "name" : "cleanser",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "cleanser.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/wellfed.png"
+}
