@@ -2,7 +2,7 @@
   "name": "dcatcv",
   "priority": 1,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
 	"cvore": 1,

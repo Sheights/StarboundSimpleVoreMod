@@ -2,7 +2,7 @@
   "name": "dnakedhuman",
   "priority": 5,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
 	"human": 6,

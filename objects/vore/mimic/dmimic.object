@@ -1,6 +1,6 @@
 {
   "objectName" : "admimic",
-  "tags" : ["hoard","storage","valuable", "dvore"],
+  "colonyTags" : ["hoard","storage","valuable", "dvore"],
   "rarity" : "Legendary",
   "objectType" : "container",
   "tooltipKind" : "container",

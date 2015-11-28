@@ -56,7 +56,7 @@ function init()
 end
 
 function feed()
-	
+
 	local people = world.entityQuery( mcontroller.position(), 7, {
 		withoutEntityId = entity.id(),
 		includedTypes = {"npc", "player"},
@@ -190,14 +190,14 @@ function update(dt)
 
 	if not fed and math.random(900) == 1 then
 		feed()
-	elseif fed then
+	elseif fed then	
 		stopWatch = stopWatch + dt
 		if request == false then
 			digest()
 		end
 	end
 
-	if not fed and talkTimer < 1 then
+	if talkTimer < 1 then
 		talkTimer = talkTimer + dt
 	end
 
@@ -212,7 +212,7 @@ function interact(args)
 	
 	if talkTimer < 1 then
 	
-		if stopWatch >= 1 and request then
+		if stopWatch >= 1 and fed then
 			world.spawnProjectile( "cleanser" , world.entityPosition( victim ), entity.id(), {0, 0}, true )
 			stopWatch = duration
 			digest()

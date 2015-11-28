@@ -2,7 +2,7 @@
   "name": "pinklamia",
   "priority": 2,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
 	"floran": 6,

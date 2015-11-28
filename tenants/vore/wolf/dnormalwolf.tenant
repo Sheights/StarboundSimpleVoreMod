@@ -2,7 +2,7 @@
   "name": "dnormalwolf",
   "priority": 1,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "dvore": 1

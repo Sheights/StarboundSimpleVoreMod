@@ -2,7 +2,7 @@
   "name": "volfox",
   "priority": 1,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "vore": 1
