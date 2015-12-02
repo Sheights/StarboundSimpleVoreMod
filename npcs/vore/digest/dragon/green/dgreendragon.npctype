@@ -2,7 +2,11 @@
   "type" : "dgreendragon",
   "baseType" : "villager",
   
-  "scriptConfig" : {
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

@@ -1,0 +1,12 @@
+{
+  "kind" : "swallow",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/vore/swallow/swallow1.ogg" ], [ "/sfx/vore/swallow/swallow2.ogg" ], [ "/sfx/vore/swallow/swallow3.ogg" ], [ "/sfx/vore/swallow/swallow4.ogg" ], [ "/sfx/vore/swallow/swallow5.ogg" ], [ "/sfx/vore/swallow/swallow6.ogg" ], [ "/sfx/vore/swallow/swallow7.ogg" ]
+      ]
+    }
+  }
+}

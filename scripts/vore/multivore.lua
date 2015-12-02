@@ -137,6 +137,7 @@ function feed()
 			
 			world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
 	
+			world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
 			redress()
 			feedHook()
 			
@@ -248,7 +249,7 @@ function update(dt)
 	tempinteract = interact
 	oldUpdate(dt)
 	
-	if #victim < capacity and math.random(750) == 1 then
+	if #victim < capacity and math.random(400) == 1 then
 		feed()
 	end
 	
@@ -260,6 +261,11 @@ function update(dt)
 		if playerTimer <= duration then
 			playerTimer = playerTimer + dt
 		end
+		
+		if math.random(500) == 1 then
+			world.spawnProjectile( "digestprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+		end
+		
 		digest()
 	end
 	

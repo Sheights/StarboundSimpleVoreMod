@@ -2,7 +2,11 @@
   "type" : "dorca",
   "baseType" : "villager",
   
-  "scriptConfig" : {
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -120,7 +124,7 @@
     }
   },
   "disableWornArmor" : false,
-  "scriptDelta" : 10,
+  "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
 				"/npcs/vore/digest/aqua/orca/orca.lua" 

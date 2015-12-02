@@ -42,7 +42,7 @@ fullback	= nil
 
 victim		= nil
 
-voreeffect = "npcvore"
+voreeffect	= "npcvore"
 projectile	= "npcvoreprojectile"
 
 function init()
@@ -127,7 +127,7 @@ end
 
 function digest()
 
-	if stopWatch >= duration then		
+	if stopWatch >= duration then
 		fed = false
 		request = false
 		
@@ -158,6 +158,7 @@ function gain()
 		entity.setItemSlot( "back", fullback )
 	end
 	
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
 	gainHook()
 end
 
@@ -188,10 +189,15 @@ function update(dt)
 	tempinteract = interact
 	oldUpdate(dt)
 
-	if not fed and math.random(900) == 1 then
+	if not fed and math.random(400) == 1 then
 		feed()
 	elseif fed then	
 		stopWatch = stopWatch + dt
+		
+		if math.random(500) == 1 then
+			world.spawnProjectile( "digestprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+		end
+		
 		if request == false then
 			digest()
 		end

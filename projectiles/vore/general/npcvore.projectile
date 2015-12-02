@@ -1,5 +1,6 @@
 {
 	"projectileName" : "npcvoreprojectile",
+	"bounces" : -1,
 	"frames" : "npcvore.png",
 	"frameNumber" : 6,
 	"animationCycle" : 1,

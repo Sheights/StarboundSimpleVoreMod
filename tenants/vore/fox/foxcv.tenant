@@ -1,6 +1,6 @@
 {
   "name": "foxcv",
-  "priority": 1,
+  "priority": 2,
 
   "colonyTagCriteria": {
     "light": 1,

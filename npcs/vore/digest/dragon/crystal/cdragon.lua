@@ -31,7 +31,7 @@ largeLines = {	"Now this is more like it!",
 			
 function updateHook()
 
-	if math.random(900) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
+	if math.random(300) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
 	
 		if #victim == 1 then
 			entity.say( smallLines[math.random(#smallLines)])
