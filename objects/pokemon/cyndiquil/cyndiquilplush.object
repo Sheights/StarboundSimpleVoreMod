@@ -1,0 +1,26 @@
+{
+  "objectName" : "cyndiquilplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#005: The Fire Mouse Pokemon",
+  "shortdescription" : "Cyndiquil Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It has a timid nature. If it is startled, the flames on its back burn more vigorously.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "cyndiquil.png:<color>",
+      "imagePosition" : [-7, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "objectName" : "torchicplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#255: The Chick Pokemon",
+  "shortdescription" : "Torchic Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It has a flame sac inside its belly that perpetually burns. It feels warm if hugged.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "torchic.png:<color>",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

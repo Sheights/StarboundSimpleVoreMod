@@ -18,6 +18,23 @@ playerChance = 0.5
 -- This can also be done in the individual .lua files.
 npcChance = 1
 
+-- Audio will activate, Guess what, the audio portion of the mod. This will turn off audio for all preds.
+-- For individual preds, you can overide this value to suit your needs.
+-- This line can either be "true" or "false"
+audio = true
+
+-- Enabling Preds on Ships will allow your predators to devour players on your ship. We do this by removing
+-- the player invincibility on ships. There is no easy way to communicate between pred and status effect
+-- so I can't open and close this window selectively, without fail, and without breaking it. Enabling Preds
+-- on ships will remove your invincibility on your ship only. This will probably remove it for every server
+-- you go to forever. I could easily fix this but the solution could be used for a great amount of griefing
+-- so I won't be including it in the mod. The only consequences I can think of are you will take a small
+-- amount of fall damage on your ship if you jump far enought, and beaming to your ship won't make fire/acid
+-- go away like normal. If you don't want this, it is disabled by default, if you do want this, you have read
+-- all this and realize the risk. If you join a server with this option enabled, just don't put preds on your
+-- ship. You must also remove them from your ship before joining a server with this configuration. You need
+-- to enable this on both this script and multivore.lua script, should you want this to apply to that group.
+predsOnShips = false
 --#####################################################################################
 ---------------------------------------------------------------------------------------
 duration 	= 90
@@ -48,8 +65,11 @@ projectile	= "npcvoreprojectile"
 function init()
 
 	oldInit()
-	
 	entity.setInteractive(true)
+
+	if predsOnShips then
+		world.setProperty("invinciblePlayers", false)
+	end
 	
 	initHook()
 	
@@ -111,8 +131,7 @@ function feed()
 			
 			fed = true
 		
-			gain()
-			
+			gain()			
 			feedHook()
 		else
 			isPlayer = false
@@ -158,7 +177,10 @@ function gain()
 		entity.setItemSlot( "back", fullback )
 	end
 	
-	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+	if audio then
+		world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+	end
+	
 	gainHook()
 end
 
@@ -184,7 +206,7 @@ function lose()
 end
 
 function update(dt)
-
+	
 	tempupdate = update
 	tempinteract = interact
 	oldUpdate(dt)
@@ -194,7 +216,7 @@ function update(dt)
 	elseif fed then	
 		stopWatch = stopWatch + dt
 		
-		if math.random(500) == 1 then
+		if math.random(500) == 1 and audio then
 			world.spawnProjectile( "digestprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
 		end
 		
@@ -219,9 +241,11 @@ function interact(args)
 	if talkTimer < 1 then
 	
 		if stopWatch >= 1 and fed then
+
 			world.spawnProjectile( "cleanser" , world.entityPosition( victim ), entity.id(), {0, 0}, true )
 			stopWatch = duration
 			digest()
+			
 		else
 			request = true
 			feed()

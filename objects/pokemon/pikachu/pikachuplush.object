@@ -1,0 +1,26 @@
+{
+  "objectName" : "pikachuplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#025: The Mouse Pokemon",
+  "shortdescription" : "Pikachu Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "pikachu.png:<color>",
+      "imagePosition" : [-12, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

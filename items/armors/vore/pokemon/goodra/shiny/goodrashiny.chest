@@ -1,0 +1,23 @@
+{
+  "itemName" : "goodrashinychest",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Goodras arms are always covered in slime. If it gives you a hug I'm sure it washes off.",
+  "shortdescription" : "Goodra Chest",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chestm.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chestf.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  }
+}

@@ -106,7 +106,7 @@
       "name" : "male",
       "image" : "/interface/title/male.png",
       "characterImage" : "/interface/title/humanmale.png",
-      "hair" : [ "male1" ], //  "hair2cut" "hair9cut"
+      "hair" : [ "malehair0" ], //  "hair2cut" "hair9cut"
       "shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
       "pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
       "facialHairGroup" : "",
@@ -118,7 +118,7 @@
       "name" : "female",
       "image" : "/interface/title/female.png",
       "characterImage" : "/interface/title/humanfemale.png",
-      "hair" : [ "fem1" ], //  "hair2cut" "hair9cut"
+      "hair" : [ "femhair0" ], //  "hair2cut" "hair9cut"
       "shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
       "pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
       "facialHairGroup" : "",

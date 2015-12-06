@@ -1,0 +1,151 @@
+{
+  "type" : "goodra",
+  "baseType" : "villager",
+  
+  "npcname" : "Goodra",
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Goodra.",
+							"Dra?",
+							"Goo! Goodra?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Goo, dra.",
+							"Dra?",
+							"Goodra Goo."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Goodra. Goodra?",
+							"Dra?",
+							"Goo! Goodra?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Goodra!",
+						"Dra!",
+						"Dra dra goodra!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Goodra.",
+						"Dra...",
+						"Goo..."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Goo?",
+						"Goodra?",
+						"Goodra!"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Goodra~",
+						"Goo~",
+						"Goodra!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Goodraaa!",
+					"D-Dra?",
+					"Gooo!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"G-Goo!",
+						"Goodra!",
+						"Draaa!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Goo! Dra! Goo! Dra!",
+					"Goo! Goo! Goo!",
+					"Dra! Dra! Dra!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Goodra~",
+					"Goo~",
+					"Goodra!"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+					"Goo.",
+					"Goodra.",
+					"Goodra!"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/endo/pokemon/goodra/goodra.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "chest" : [
+              { "name" : "goodranormalchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "goodranormallegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

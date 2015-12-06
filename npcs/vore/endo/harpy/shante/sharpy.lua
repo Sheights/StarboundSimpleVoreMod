@@ -11,6 +11,8 @@ projectile = "npcharpyvoreprojectile"
 
 duration = 60
 
+audio = false
+
 playerLines = {	"It's been a while since I felt like this!",
 				"I can't wait for you to meet your new brothers and sisters!",
 				"I'll keep you safe.",

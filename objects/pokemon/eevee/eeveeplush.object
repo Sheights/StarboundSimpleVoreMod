@@ -1,0 +1,26 @@
+{
+  "objectName" : "eeveeplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#113: The Evolution Pokemon",
+  "shortdescription" : "Eevee Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "A rare Pokémon that adapts to harsh environments by taking on different evolutionary forms.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "eevee.png:<color>",
+      "imagePosition" : [-12, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}
