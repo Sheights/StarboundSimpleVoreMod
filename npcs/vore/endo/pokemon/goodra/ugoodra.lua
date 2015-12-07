@@ -16,20 +16,29 @@ voreeffect = "dragonUB"
 
 audio = false
 
-smallLines = {	"Goodra Goodra! *It's the best hug!*",
-				"Dra! *Mmm!*"
+smallLines = {	"I can't wait to hug you when you're out!",
+				"Just listen to my heartbeat and relax!",
+				"If you think it's sticky now, just wait!",
+				"It's a bit odd not having arms for a while but I'll help you through it.",
+				"Gooo~"
 			}
 			
-medLines = {	"Goo, Dra *So cute!*",
-				"Dra! Dra! *Hug! Hug!*",
-				"Goodra! *I love you!*"
+medLines = {	"So cute!",
+				"Hug! Hug!",
+				"I love you!",
+				"Oooh! You'll be sibblings!",
+				"I hope you play nice both now and after!",
+				"You make me feel amazing. Thank you!",
+				"Gooodraaaaa"
 			}
 
-largeLines = {	"Gooo! *Heavy!*",
-				"Goodra Dra Goo. *You're squishing my insides.*",
+largeLines = {	"Heavy!",
+				"You're squishing my insides. I can't breathe",
 				"Draaa!",
-				"Dra Goo Goodra *This was a bad idea.*",
-				"Goodra... *Be gentle...*"
+				"This was a bad idea.",
+				"Be gentle to your mom...",
+				"It's the least a mother can do...",
+				"Triplets may have been too much."
 			}
 			
 function initHook()

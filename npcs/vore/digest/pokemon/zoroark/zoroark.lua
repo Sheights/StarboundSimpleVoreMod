@@ -30,7 +30,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Thank you so much for the time. I hope we can be together again.")
+		entity.say("Mmmm. I feel stronger already. Let's do this again soon!")
 	end
 	
 	isPlayer = false
@@ -39,7 +39,7 @@ end
 
 function updateHook()
 
-	if isPlayer and math.random(300) == 1 then
+	if isPlayer and math.random(700) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

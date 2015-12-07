@@ -1,6 +1,6 @@
 {
   "name": "zoroark",
-  "priority": 10,
+  "priority": 8,
 
   "colonyTagCriteria": {
     "light": 1,

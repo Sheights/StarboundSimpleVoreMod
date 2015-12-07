@@ -31,7 +31,7 @@ end
 
 function updateHook()
 
-	if isPlayer and math.random(300) == 1 then
+	if isPlayer and math.random(700) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

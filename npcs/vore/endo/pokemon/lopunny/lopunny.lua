@@ -4,12 +4,14 @@ legs = "lopunnynormallegs"
 
 fulllegs = "lopunnynormallegsbelly"
 
-playerLines = {	"I'm so happy you decided to join me <3",
-				"Can I borrow a little of you? I lost some of me when I went for a walk yesterday.",
-				"There is no way we could be closer. Well, there is one way~",
-				"How are you doing in there? I can feel you're scared. Aww don't be. I'll keep you safe.",
-				"Relax and be one with me~",
-				"I-I couldn't be happier! Thank you."
+playerLines = {	"Ah, look what I caught!",
+				"Do I want to give a nickname to the caught meal?",
+				"Lopunny used Swallow! It's super effective <3",
+				"Sweeter than peacha!",
+				"Bunny bellies best bellies~!",
+				"I guess i'm a trainer now?",
+				"Does this make you my pokenom?",
+				"Move around in there some more please."
 }
 
 function initHook()
@@ -28,7 +30,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Thank you so much for the time. I hope we can be together again.")
+		entity.say("I may be releasing you but I'll always look forward to catching you again <3")
 	end
 	
 	isPlayer = false
@@ -37,7 +39,7 @@ end
 
 function updateHook()
 
-	if isPlayer and math.random(300) == 1 then
+	if isPlayer and math.random(700) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

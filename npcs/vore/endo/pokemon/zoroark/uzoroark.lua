@@ -8,12 +8,14 @@ voreeffect = "harpyvore"
 
 audio = false
 
-playerLines = {	"I'm so happy you decided to join me <3",
-				"Can I borrow a little of you? I lost some of me when I went for a walk yesterday.",
-				"There is no way we could be closer. Well, there is one way~",
-				"How are you doing in there? I can feel you're scared. Aww don't be. I'll keep you safe.",
-				"Relax and be one with me~",
-				"I-I couldn't be happier! Thank you."
+duration = 60
+
+playerLines = {	"I'm really starting to enjoy this!",
+				"This feels so nice<3",
+				"I'm very pleased you could share this with me~",
+				"I want you... to stay inside me~",
+				"Yes... Rub around in there some more. It's so wonderful!",
+				"When you get out... Can you call me 'Mom'?"
 }
 
 function initHook()
@@ -31,8 +33,10 @@ end
 
 function loseHook()
 	
-	if isPlayer then
-		entity.say("Thank you so much for the time. I hope we can be together again.")
+	if isPlayer and stopWatch > 60 then
+		entity.say("T-That was amazing. I could get used to this. Thanks, uh, my little pup.")
+	elseif isPlayer then
+		entity.say("Aww, you have to leave already? Well finish your priorities and get back here. I'm not done with you yet.")
 	end
 	
 	isPlayer = false
@@ -41,7 +45,7 @@ end
 
 function updateHook()
 
-	if isPlayer and math.random(300) == 1 then
+	if isPlayer and math.random(700) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

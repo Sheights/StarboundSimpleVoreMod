@@ -1,10 +1,11 @@
 {
   "name": "lucario",
-  "priority": 10,
+  "priority": 9,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
+	"aviantemple": 12,
 	"poke":	1,
     "vore": 1
   },

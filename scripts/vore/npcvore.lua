@@ -149,11 +149,11 @@ function digest()
 	if stopWatch >= duration then
 		fed = false
 		request = false
-		
-		stopWatch = 0
 
 		lose()
-
+		
+		stopWatch = 0
+		
 		digestHook()
 	end
 	
@@ -214,8 +214,7 @@ function update(dt)
 	if not fed and math.random(400) == 1 then
 		feed()
 	elseif fed then	
-		stopWatch = stopWatch + dt
-		
+	
 		if math.random(500) == 1 and audio then
 			world.spawnProjectile( "digestprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
 		end
@@ -223,6 +222,8 @@ function update(dt)
 		if request == false then
 			digest()
 		end
+		
+		stopWatch = stopWatch + dt
 	end
 
 	if talkTimer < 1 then

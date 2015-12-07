@@ -2,50 +2,54 @@
   "type" : "dzoroark",
   "baseType" : "villager",
   
+  "npcname" : "Zoroark",
+  
   "scriptConfig" : { 
 	"questGenerator" : {
-      "pools" : [],
+      "pools" : ["normal"],
       "enableParticipation" : true
     },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
-          "tagCriteria" : "/dialog/grumble.config:tagCriteria",
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+								"That isn't a trick. Something is missing.",
+								"Is this some kind of illusion? Are you trying to fool me?"
+			  ]
+			}
+		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-								"I-I don't like not having a solid container. What if I melt?",
-								"Why did you do this to my house?"
+								"I need a good place to hide. How am I going to do that with this hole?",
+								"This won't pass for my lair."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"I'm not sure I mix well with others.",
-							"This is where I go to be alone. Please I don't want a room mate",
-							"I need some time to myself every now and again. I won't do with a roomie.",
-							"I don't like it when people move in. Well unless they want to move IN"
+							"I'm not comfortable with another.",
+							"You don't want someone else in here. They might go missing.",
+							"This space is only big enough for me. I'm also big enough for you."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						"Please don't make me leave.",
-						"Maybe if we became one you would see what it feels like.",
-						"I am very sensitive about my environment. Can you please fix it?",
-						"If you don't fix my room, maybe I'll be your room. Don't worry, you won't be in there long."
+						"I'm very unsatisfied with my den. Fix it please.",
+						"That's not nice of you."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"I thought we could be friends.",
-						"It was nice while it lasted.",
-						"I'll see you next time.",
-						"I think it's time for me to move on."
+						"See if you can find me now!",
+						"One final trick. A disappearing act!"
 			  ]
 			}
           }
@@ -54,19 +58,17 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-						"Yes, did you need something?",
-						"I'm here. Now what?",
-						"If you and I were one, you would already be home!"
+						"Did you need *hehehe* my assitance?",
+						"I've got some time. What did you want?",
+						"Do you have something for me?"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-						"H-Here. Please accept this.",
-						"I found this floting inside me. You may have it.",
-						"Don't worry if it has a bit of me on it. It will wash right off.",
-						"You should really join in me. Then we would share my money!"
+						"A little something for you. Use it well.",
+						"Someone left this lying around. You may have it."
 			  ]
 			}
           }
@@ -76,27 +78,34 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"Please leave me alone!",
-					"No! You may not have any of me! Go away."
+					"I must escape!",
+					"Quick! Look behind you!"
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-						"Oh my, someone help them!",
-						"I don't think they will last long. Please someone help!",
-						"If you don't save them, how can we all be one?"
+						"Save those poor people.",
+						"I'll be over here if you want to hide."
 			]
 		  }
 		},
-        "encourage" : "/dialog/flee.config:encourage",
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"You can do this!",
+					"Use your mighty power!",
+					"Fight well!"
+			]
+		  }
+        },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"T-Thank you.",
-					"I wish I always had you around.",
-					"Sweet and strong!"
+					"Finally a little rest.",
+					"Now that it's over. I hope you wern't expecting a reward.",
+					"Safety is the greatest illusion."
 			]
 		  }
         }
@@ -104,15 +113,12 @@
       "converse" : {
         "default" : {
           "default" : [
-            "Why, hello there?",
-			"How are you doing?",
-			"I met the most wonderful Hylotl the other day. We are doing fine now.",
-			"I met an interesting Avian the other day. If you see anymore feathers in us, could you please pick them out?",
-			"It's not like having two sticks down there it's more like a big squishy ball.",
-			"I wash right off. No need to be a stranger!",
-			"One day we will have to get more intimate, you and I~",
-			"No one likes joining me at first, but soon enought they are happy, because I'm happy.",
-			"If you join me, we will never be alone again~"
+            "Such a nice person, to want to talk to me.",
+			"Hello",
+			"Would you care to join me a bit later?",
+			"Zoroark",
+			"What's with that look?",
+			"I could use a good rubdown right now."
           ]
         }
       }
