@@ -27,7 +27,7 @@
     {
       "dualImage" : "smallbellybound.png:idle.<frame>",
       "imagePosition" : [0, 0],
-      "spaceScan" : 1,
+      "spaceScan" : 0,
       "anchors" : [ "bottom" ],
       "collision" : "platform",
       "detectArea" : [ [2, 0], [8, 5] ]

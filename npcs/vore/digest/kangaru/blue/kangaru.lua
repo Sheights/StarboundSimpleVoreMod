@@ -1,6 +1,5 @@
 require "/scripts/vore/npcvore.lua"
 
-
 isDigest = true
 
 legs = "kangarubluelegs"

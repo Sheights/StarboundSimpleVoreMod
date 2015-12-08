@@ -12,10 +12,5 @@
 	"damageKind" : "default",
 	"damageType" : "ignoresdef",
 	"flippable" : true,
-	"universalDamage" : true,
-	"statusEffects" : [
-	  {"effect" : "intents", "duration" : 90},
-	  {"effect" : "paralysis", "duration" : 90},
-	  {"effect" : "nofalldamage", "duration" : 90}
-	]
+	"universalDamage" : true
 }
