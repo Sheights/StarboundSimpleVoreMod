@@ -1,0 +1,13 @@
+{
+  "name" : "paralysis",
+  "blockingStat" : "stunImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 0.75,
+
+  "scripts" : [
+    "paralysis.lua"
+  ],
+
+  "label" : "Paralyzed"
+}

@@ -30,12 +30,13 @@ function loseHook()
 	burpLock = true
 	digested = false
 	isPlayer = false
+	world.spawnProjectile( "burpprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
 	
 end
 
 function updateHook(dt)
 	dt = dt or 0.25
-	if isPlayer and math.random(450) == 1 then
+	if isPlayer and math.random(700) == 1 then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 	

@@ -1,6 +1,6 @@
 {
   "objectName" : "acondombox",
-  "tags" : ["cvore", "odd"],
+  "colonyTags" : ["cvore", "odd"],
   "printable"  :  false,
   "rarity" : "Legendary",
   "category" : "decorative",

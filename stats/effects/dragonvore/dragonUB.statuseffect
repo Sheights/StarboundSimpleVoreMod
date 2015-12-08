@@ -1,0 +1,12 @@
+{
+  "name" : "dragonUB",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "dragonUB.lua"
+  ],
+
+  "label" : "Motherly Bonding",
+  "icon" : "/interface/statuses/egg.png"
+}

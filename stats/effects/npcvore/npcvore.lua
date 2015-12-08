@@ -70,7 +70,7 @@ function uninit()
 		status.removeEphemeralEffect("nofalldamage")
 		status.removeEphemeralEffect("npcacid")
 		status.removeEphemeralEffect("paralysis")
-		effect.modifyDuration(-effect.duration())
+		effect.expire()
 	end
 	
 end

@@ -2,7 +2,7 @@
   "name": "dblackspider",
   "priority": 10,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
 	"spooky": 24,

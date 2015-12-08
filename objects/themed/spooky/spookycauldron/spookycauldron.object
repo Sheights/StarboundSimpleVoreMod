@@ -1,6 +1,6 @@
 {
   "objectName" : "spookycauldron",
-  "tags" : ["spooky","vore"],
+  "colonyTags" : ["spooky", "vore"],
   "printable" : false,
   "rarity" : "Common",
   "category" : "decorative",
@@ -122,6 +122,6 @@
     }
   ],
 
-  "soundEffect" : "/sfx/objects/spookycauldron.wav"
+  "soundEffect" : "/sfx/objects/spookycauldron.ogg"
 
 }

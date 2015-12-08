@@ -1,0 +1,28 @@
+{
+  "name": "lopunny",
+  "priority": 9,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"nature": 12,
+	"poke":	1,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "lopunny",
+      "type": "lopunny",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

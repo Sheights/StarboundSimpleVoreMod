@@ -1,7 +1,7 @@
 {
   "objectName" : "adperfumebottle",
   "printable" : false,
-  "tags" : ["pretty","dvore"],
+  "colonyTags" : ["pretty","dvore"],
   "rarity" : "Legendary",
   "category" : "decorative",
   "price" : 200,

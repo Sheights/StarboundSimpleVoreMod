@@ -1,0 +1,12 @@
+{
+  "kind" : "digest",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+		[ "/sfx/vore/digest/digest1.ogg" ], [ "/sfx/vore/digest/digest2.ogg" ], [ "/sfx/vore/digest/digest3.ogg" ], [ "/sfx/vore/digest/digest4.ogg" ], [ "/sfx/vore/digest/digest5.ogg" ], [ "/sfx/vore/digest/digest6.ogg" ], [ "/sfx/vore/digest/digest7.ogg" ], [ "/sfx/vore/digest/digest8.ogg" ]
+      ]
+    }
+  }
+}

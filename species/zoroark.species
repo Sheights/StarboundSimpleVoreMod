@@ -1,0 +1,229 @@
+{
+  "kind" : "zoroark",
+  "playerSpecies" : false,
+  "nameGen" : [ "/species/zoroarknamegen.config:names", "/species/zoroarknamegen.config:names" ],
+  "ouchNoises" : [ "/sfx/humanoid/lucariohurt_male1.wav", "/sfx/humanoid/lucariohurt_female1.wav" ],
+  "gruntNoises" : [ [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ], [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ] ],
+  "charGenTextLabels" : [ "SKIN COLOR", "HAIR STYLE", "SHIRT", "PANTS", "EYE COLOR", "HAIR COLOR", "SHIRT COLOR", "PANTS COLOR", "ZOROARK", "PERSONALITY" ],
+  "defaultBlueprints" : {
+    "tier1" : [
+      { "item" : "humantier1hammer" },
+      { "item" : "humantier1shortsword" },
+      { "item" : "humantier1broadsword" },
+      { "item" : "humantier1spear" },
+      { "item" : "humantier1axe" },
+      { "item" : "humantier1dagger" },
+      { "item" : "humantier1head" },
+      { "item" : "humantier1chest" },
+      { "item" : "humantier1pants" },
+	  { "item" : "trainerssword" },
+	  { "item" : "nightsend" },
+	  { "item" : "materiablade" },
+	  { "item" : "dangift" },
+	  { "item" : "aurasphere" },
+	  { "item" : "aurasphere2" },
+	  { "item" : "aurasphere3" },
+	  { "item" : "aurasphere4" },
+	  { "item" : "auraseeker" },
+	  { "item" : "backpack" },
+	  { "item" : "travelpack" },
+	  { "item" : "droplight" },
+	  { "item" : "generatedshield", "count" : 1, "data" : { "definition" : "shieldonshield", "level" : 1 } },
+	  { "item" : "nogearL" },
+	  { "item" : "nohatL" },
+	  { "item" : "nopantsL" },
+	  { "item" : "undies" },
+	  { "item" : "undiesEBS" },
+	  { "item" : "commandersleeves" },
+	  { "item" : "commandersuit" },
+	  { "item" : "commandersuitEBS" },
+	  { "item" : "ricepudding" },
+	  { "item" : "ricecake" },
+	  { "item" : "chestoberryseed" },
+	  { "item" : "pechaberryseed" },
+	  { "item" : "type-cb" },
+      { "item" : "burger" },
+      { "item" : "vegetablesoup" },
+      { "item" : "bread" },
+      { "item" : "sweetcorn" },
+      { "item" : "candyapple" },
+      { "item" : "icecream" },
+	  { "item" : "pechajuice" },
+	  { "item" : "pechajuice2" },
+	  { "item" : "chestojuice" },
+	  { "item" : "chestojuice2" },
+      { "item" : "flaghuman" },
+
+      { "item" : "humantier2hammer" },
+      { "item" : "humantier2shortsword" },
+      { "item" : "humantier2broadsword" },
+      { "item" : "humantier2spear" },
+      { "item" : "humantier2axe" },
+      { "item" : "humantier2dagger" },
+      { "item" : "humantier2head" },
+      { "item" : "humantier2chest" },
+      { "item" : "humantier2pants" },
+	  { "item" : "spawnerlucario" },
+      { "item" : "spawnerhuman" },
+
+      { "item" : "humantier3head" },
+      { "item" : "humantier3chest" },
+      { "item" : "humantier3pants" },
+      { "item" : "humantier3hammer" },
+      { "item" : "humantier3shortsword" },
+      { "item" : "humantier3broadsword" },
+      { "item" : "humantier3spear" },
+      { "item" : "humantier3axe" },
+      { "item" : "humantier3dagger" },
+	  { "item" : "lsu" },
+
+      { "item" : "humantier4head" },
+      { "item" : "humantier4chest" },
+      { "item" : "humantier4pants" },
+      { "item" : "humantier4hammer" },
+      { "item" : "humantier4shortsword" },
+      { "item" : "humantier4broadsword" },
+      { "item" : "humantier4spear" },
+      { "item" : "humantier4axe" },
+      { "item" : "humantier4dagger" },
+
+      { "item" : "humantier5head" },
+      { "item" : "humantier5chest" },
+      { "item" : "humantier5pants" },
+      { "item" : "humantier5hammer" },
+      { "item" : "humantier5shortsword" },
+      { "item" : "humantier5broadsword" },
+      { "item" : "humantier5spear" },
+      { "item" : "humantier5axe" },
+      { "item" : "humantier5dagger" },
+
+      { "item" : "humantier6head" },
+      { "item" : "humantier6chest" },
+      { "item" : "humantier6pants" },
+      { "item" : "humantier6hammer" },
+      { "item" : "humantier6shortsword" },
+      { "item" : "humantier6broadsword" },
+      { "item" : "humantier6spear" },
+      { "item" : "humantier6axe" },
+      { "item" : "humantier6dagger" },
+
+      { "item" : "humantier7head" },
+      { "item" : "humantier7chest" },
+      { "item" : "humantier7pants" },
+      { "item" : "humantier7hammer" },
+      { "item" : "humantier7shortsword" },
+      { "item" : "humantier7broadsword" },
+      { "item" : "humantier7spear" },
+      { "item" : "humantier7axe" },
+      { "item" : "humantier7dagger" },
+
+      { "item" : "humantier8head" },
+      { "item" : "humantier8chest" },
+      { "item" : "humantier8pants" },
+      { "item" : "humantier8hammer" },
+      { "item" : "humantier8shortsword" },
+      { "item" : "humantier8broadsword" },
+      { "item" : "humantier8spear" },
+      { "item" : "humantier8axe" },
+      { "item" : "humantier8dagger" },
+
+      { "item" : "humantier9head" },
+      { "item" : "humantier9chest" },
+      { "item" : "humantier9pants" },
+      { "item" : "humantier9hammer" },
+      { "item" : "humantier9shortsword" },
+      { "item" : "humantier9broadsword" },
+      { "item" : "humantier9spear" },
+      { "item" : "humantier9axe" },
+      { "item" : "humantier9dagger" },
+
+      { "item" : "humantier10head" },
+      { "item" : "humantier10chest" },
+      { "item" : "humantier10pants" },
+      { "item" : "humantier10hammer" },
+      { "item" : "humantier10shortsword" },
+      { "item" : "humantier10broadsword" },
+      { "item" : "humantier10spear" },
+      { "item" : "humantier10axe" },
+      { "item" : "humantier10dagger" }
+    ]
+  },
+  "altOptionAsUndyColor" : true,
+  "headOptionAsHairColor" : true,
+  "genders" : [
+    {
+      "name" : "male",
+      "image" : "/interface/title/malelu.png",
+      "characterImage" : "/interface/title/lumale.png",
+	  "hairGroup" : "malehair",
+      "hair" : [ "malehair0" ],
+      "shirt" : [ "nogearL", "apexcommanderjacket", "apexnavyjacket", "apexofficerjacket", "apexspecialistjacket" ],
+      "pants" : [ "nopantsL", "apexcommanderpants", "apexnavypants", "apexofficerpants", "apexspecialistpants" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    },
+    {
+      "name" : "female",
+      "image" : "/interface/title/femalelu.png",
+      "characterImage" : "/interface/title/lufem.png",
+	  "hairGroup" : "femhair",
+      "hair" : [ "femhair0" ],
+      "shirt" : [ "nogearL", "apexcommanderjacket", "apexnavyjacket", "apexofficerjacket", "apexspecialistjacket" ],
+      "pants" : [ "nopantsL", "apexcommanderpants", "apexnavypants", "apexofficerpants", "apexspecialistpants" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    }
+  ],
+  "bodyColor" : [
+    { "73bdf6" : "73bdf6", "4a9cee" : "4a9cee", "104a7b" : "104a7b", "838383" : "838383", "5a5a5a" : "5a5a5a", "393939" : "393939", "e6e69c" : "e6e69c", "d6d683" : "d6d683", "caca75" : "caca75", "b9b965" : "b9b965", "e56f6f" : "e56f6f", "de4141" : "de4141" }, //default
+    { "73bdf6" : "e7ef7b", "4a9cee" : "ada529", "104a7b" : "736b21", "838383" : "638ca5", "5a5a5a" : "527384", "393939" : "394a5a", "e6e69c" : "7bb5ce", "d6d683" : "67a3bc", "caca75" : "5895b0", "b9b965" : "45839e" }, //shiny
+	{ "73bdf6" : "dadada", "4a9cee" : "b4b4b4", "104a7b" : "818181", "e6e69c" : "dadada", "d6d683" : "b4b4b4", "caca75" : "a1a1a1", "b9b965" : "818181" }, //brawl
+	{ "73bdf6" : "2897e9", "4a9cee" : "157dca", "104a7b" : "0669b2" }, //blue
+	{ "73bdf6" : "d01022", "4a9cee" : "9f0816", "104a7b" : "6c000a" }, //red
+	{ "73bdf6" : "fcbdd2", "4a9cee" : "f59fbc", "104a7b" : "eb8aab" }, //pink
+	{ "73bdf6" : "fbb988", "4a9cee" : "f6a162", "104a7b" : "e98e4a" }, //orange
+	{ "73bdf6" : "e5e55d", "4a9cee" : "c3c34d", "104a7b" : "a6a633" }, //yellow
+	{ "73bdf6" : "b09fca", "4a9cee" : "9681b6", "104a7b" : "816ba2" }, //purple
+	{ "73bdf6" : "abd46e", "4a9cee" : "94bd57", "104a7b" : "7ba340" }, //green
+	{ "73bdf6" : "dadada", "4a9cee" : "b4b4b4", "104a7b" : "818181" }, //white
+	{ "73bdf6" : "4b4b4b", "4a9cee" : "212121", "104a7b" : "000000" } //black
+  ],
+  "undyColor" : [ //eyecolor
+  { "e56f6f" : "e56f6f", "de4141" : "de4141" }, //defaultRed
+  { "e56f6f" : "de528c", "de4141" : "a53963" }, //Shiny
+  { "e56f6f" : "fcb5cd", "de4141" : "f59fbc" }, //pink
+  { "e56f6f" : "fc8aca", "de4141" : "ea6b48" }, //orange
+  { "e56f6f" : "e9e785", "de4141" : "d5d364" }, //yellow
+  { "e56f6f" : "afdffe", "de4141" : "8dcff4" }, //blue
+  { "e56f6f" : "9fdf98", "de4141" : "79c471" }, //green
+  { "e56f6f" : "b4a3cd", "de4141" : "9681b6" }, //purple
+  { "e56f6f" : "c1c1c1", "de4141" : "9a9a9a" }, //grey
+  { "e56f6f" : "737373", "de4141" : "3e3e3e" } //black
+  ],
+  "hairColor" : [
+   { "d9c189" : "525252", "a38d59" : "363636", "735e3a" : "161616" },
+    { "d9c189" : "50422f", "a38d59" : "36261e", "735e3a" : "170f0d" },
+    { "d9c189" : "7f5a39", "a38d59" : "5b3523", "735e3a" : "3b1f15" },
+    { "d9c189" : "a6671d", "a38d59" : "915622", "735e3a" : "743e1d" },
+    { "d9c189" : "e6e756", "a38d59" : "c7ac3f", "735e3a" : "a9882f" },
+    { "d9c189" : "f2eba3", "a38d59" : "dcd28c", "735e3a" : "c2b677" },
+    { "d9c189" : "7d3c1c", "a38d59" : "4d240b", "735e3a" : "2d1606" },
+    { "d9c189" : "ad2716", "a38d59" : "8f1f1b", "735e3a" : "731a1a" },
+    { "d9c189" : "b8b8b8", "a38d59" : "828282", "735e3a" : "555555" },
+    { "d9c189" : "eaeaea", "a38d59" : "b8b8b8", "735e3a" : "828282" },
+    { "d9c189" : "6f6d85", "a38d59" : "525269", "735e3a" : "3e4352" },
+    { "d9c189" : "cd72d9", "a38d59" : "ac4da6", "735e3a" : "913b86" },
+    { "d9c189" : "425879", "a38d59" : "343965", "735e3a" : "242247" },
+    { "d9c189" : "5d8bc7", "a38d59" : "4d55b0", "735e3a" : "2e2a73" },
+    { "d9c189" : "653b7f", "a38d59" : "562e6a", "735e3a" : "3f1d4b" },
+    { "d9c189" : "7f3b6d", "a38d59" : "6a2e53", "735e3a" : "4b1d30" },
+    { "d9c189" : "efa838", "a38d59" : "be6d1d", "735e3a" : "834012" },
+    { "d9c189" : "4ece61", "a38d59" : "34ae47", "735e3a" : "228a38" },
+    { "d9c189" : "3b7f44", "a38d59" : "2e6a38", "735e3a" : "1d4b28" },
+    { "d9c189" : "74726f", "a38d59" : "53504d", "735e3a" : "2a251e" }
+  ]
+}

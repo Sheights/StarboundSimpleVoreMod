@@ -6,7 +6,11 @@
 	"gender" : "female"
   },
   
-  "scriptConfig" : {
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

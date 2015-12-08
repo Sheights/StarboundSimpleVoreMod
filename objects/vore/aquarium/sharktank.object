@@ -1,7 +1,7 @@
 {
   "objectName" : "asharktank",
   "printable" : false,
-  "tags" : ["dvore","sea","pretty"],
+  "colonyTags" : ["dvore","sea","pretty"],
   "rarity" : "Legendary",
   "category" : "decorative",
   "price" : 1000,

@@ -1,16 +1,13 @@
 {
 	"projectileName" : "dragonvoreprojectile",
 	"bounces" : -1,
-	"timeToLive" : 0.01,
-	"speed" : 0,
-	"damageKindImage" : "icon.png",
 	"frames" : "npcvore.png",
 	"frameNumber" : 6,
-	"animationCycle" : 0.7,
-	"power" : 0,
-	"piercing" : true,
-	"damageKind" : "default",
-	"damageType" : "ignoresdef",
+	"animationCycle" : 1,
+	"speed" : 0,
+	"animationLoops" : false,
 	"flippable" : true,
-	"universalDamage" : true
+	"power" : 0,
+	"damageTeam" : { "type" : "indiscriminate" },
+	"damageKind" : "default"
 }

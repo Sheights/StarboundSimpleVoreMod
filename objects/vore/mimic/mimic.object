@@ -1,6 +1,6 @@
 {
   "objectName" : "amimic",
-  "tags" : ["hoard","storage","valuable", "vore"],
+  "colonyTags" : ["hoard","storage","valuable", "vore"],
   "rarity" : "Legendary",
   "objectType" : "container",
   "tooltipKind" : "container",

@@ -51,24 +51,6 @@
       ]
     },
 	{ "op" : "add",
-      "path" : "/dragonGoodraCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "dragongoodrachest"},
-		  {"weight" : 1.0, "item" : "dragongoodrahead"},
-		  {"weight" : 1.0, "item" : "dragongoodralegs"},
-		  {"weight" : 0.3, "item" : "dragongoodralegsfull"},
-		  {"weight" : 0.6, "item" : "dragongoodralegsmid"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	
-	{ "op" : "add",
       "path" : "/dragonGreenCostume",
       "value" : [
       [1, {
@@ -460,22 +442,7 @@
         ]
       }]
       ]
-    },
-	{ "op" : "add",
-      "path" : "/dragonGoodraGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "dragongoodraCostume"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	
+    },	
 	{ "op" : "add",
       "path" : "/dragonGreenGift",
       "value" : [
