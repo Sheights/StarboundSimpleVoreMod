@@ -1,6 +1,6 @@
 {
   "name": "diceslime",
-  "priority": 2,
+  "priority": 8,
 
   "colonyTagCriteria": {
     "light": 1,

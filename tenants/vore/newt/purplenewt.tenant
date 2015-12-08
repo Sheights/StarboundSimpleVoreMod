@@ -1,11 +1,11 @@
 {
   "name": "purplenewt",
-  "priority": 10,
+  "priority": 8,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"swamp": 6,
+	"swamp": 8,
     "vore": 1
   },
 
