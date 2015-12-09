@@ -66,7 +66,7 @@ function uninit()
 		effect.modifyDuration(-effect.duration())
 	
 		if stopWatch >= 60 then
-			world.spawnProjectile( "eggformshell" , world.entityPosition( entity.id() ))
+			world.spawnProjectile( "eggformshell" , vec2.add( world.entityPosition( entity.id() ), {0,-0.5}) )
 			status.addEphemeralEffect("intents", 60.0)
 			status.addEphemeralEffect("nofalldamage", 60.0)
 			status.addEphemeralEffect("paralysis", 60.0)

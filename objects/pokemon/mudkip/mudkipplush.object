@@ -1,0 +1,26 @@
+{
+  "objectName" : "mudkipplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#258: The Mud Fish Pokemon",
+  "shortdescription" : "Mudkip Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "Its large tail fin propels it through water with powerful acceleration. It is strong in spite of its size.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "mudkip.png:<color>",
+      "imagePosition" : [-9, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

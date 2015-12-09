@@ -1,16 +1,26 @@
 {
   "id" : "vorerpv1.gearup",
-  "prerequisites" : [],
-  "requiredShipLevel" : 1,
   "title" : "^green; Something Eating You?",
   "text" : "Yeah it was a bad joke, but guess what? No one else is making this kind of stuff for you.",
+  "prerequisites" : [],
   "completionText" : "Go check your S.A.I.L. and remember to bring a tech drive.",
-  "completionConditions" : [
-    { "type" : "gather", "item" : "vorechipv1-chip", "count" : 1, "consume" : true }
-  ],
-  "moneyRange" : [0, 0],
+  "speaker" : "player", 
   "rewards" : [ ],
-  "enableTech" : [
-    "vorerpv1"
-  ]
+  "moneyRange" : [0, 0],
+  "requiredShipLevel" : 1,
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "enableTech" : [
+	  "vorerpv1"
+	],
+	"gatherRequirements" : {
+      "items" : {
+        "vorechipv1-chip" : {
+          "count" : 1,
+          "consume" : true
+        }
+      }
+    }
+  }
 }

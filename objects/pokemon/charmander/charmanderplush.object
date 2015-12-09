@@ -1,0 +1,26 @@
+{
+  "objectName" : "charmanderplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "#005: The Lizard Pokemon",
+  "shortdescription" : "Charmander Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "The flame on its tail indicates Charmander's life force. If it's healthy, the flame burns brightly.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "charmander.png:<color>",
+      "imagePosition" : [-9, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

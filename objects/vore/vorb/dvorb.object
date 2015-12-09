@@ -1,6 +1,6 @@
 {
   "objectName" : "advorb",
-  "tags" : ["dvore", "odd"],
+  "colonyTags" : ["dvore", "odd"],
   "printable"  :  false,
   "rarity" : "Legendary",
   "category" : "decorative",

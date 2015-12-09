@@ -1,8 +1,8 @@
 {
   "name": "catcv",
-  "priority": 1,
+  "priority": 3,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "cvore": 1,

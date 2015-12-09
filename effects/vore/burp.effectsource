@@ -1,0 +1,12 @@
+{
+  "kind" : "burp",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/vore/burp/burp1.ogg" ], [ "/sfx/vore/burp/burp2.ogg" ], [ "/sfx/vore/burp/burp3.ogg" ], [ "/sfx/vore/burp/burp4.ogg" ], [ "/sfx/vore/burp/burp5.ogg" ] 
+      ]
+    }
+  }
+}

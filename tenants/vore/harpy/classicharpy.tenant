@@ -1,8 +1,8 @@
 {
   "name": "classicharpy",
-  "priority": 10,
+  "priority": 8,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
 	"avian": 6,

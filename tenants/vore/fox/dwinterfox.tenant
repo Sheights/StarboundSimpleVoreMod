@@ -1,8 +1,8 @@
 {
   "name": "dwinterfox",
-  "priority": 1,
+  "priority": 2,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "dvore": 1

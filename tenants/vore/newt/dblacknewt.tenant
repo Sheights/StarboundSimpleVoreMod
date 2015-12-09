@@ -1,11 +1,11 @@
 {
   "name": "dblacknewt",
-  "priority": 10,
+  "priority": 8,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"swamp": 6,
+	"swamp": 8,
     "dvore": 1
   },
 

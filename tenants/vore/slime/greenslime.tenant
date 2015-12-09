@@ -1,8 +1,8 @@
 {
   "name": "greenslime",
-  "priority": 2,
+  "priority": 8,
 
-  "tagCriteria": {
+  "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "vore": 1,
