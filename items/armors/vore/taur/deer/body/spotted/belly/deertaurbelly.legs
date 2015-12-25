@@ -1,0 +1,14 @@
+{
+  "itemName" : "deertaurspottedlegsbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "With skipping... grace.",
+  "shortdescription" : "Deertaur Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pant.png",
+  "femaleFrames" : "pant.png"
+}

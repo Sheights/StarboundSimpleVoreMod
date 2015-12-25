@@ -1,12 +1,12 @@
 {
   "name": "dgreendragon",
-  "priority": 10,
+  "priority": 13,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"glitchcastle": 8,
-	"valuable": 4,
+	"glitchcastle": 16,
+	"valuable": 8,
     "dvore": 1
   },
 

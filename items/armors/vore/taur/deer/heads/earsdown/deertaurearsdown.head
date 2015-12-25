@@ -1,0 +1,15 @@
+{
+  "itemName" : "deertaurdownhead",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Oh do not run too fast for I will but bespeak thy grave and die.",
+  "shortdescription" : "Deertaur adornment",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png"
+}

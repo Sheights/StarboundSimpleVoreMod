@@ -1,12 +1,12 @@
 {
   "name": "diceslime",
-  "priority": 8,
+  "priority": 12,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
     "dvore": 1,
-	"ice": 6
+	"ice": 12
   },
 
   "tenants": [

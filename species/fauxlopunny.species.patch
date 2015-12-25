@@ -1,0 +1,42 @@
+[
+{
+"op":"add",  "path":"/charGenTextLabels",
+"value" : [ "FUR","EARS","SHIRT","PANTS","EYES","FLUFF","SHIRT COLOR","PANTS COLOR","LOPUNNY","PERSONALITY" ]
+},
+{
+"op":"add",  "path":"/altOptionAsHairColor", 
+"value" : true
+},
+{
+"op":"add",  "path":"/hairColorAsBodySubColor", 
+"value" : true
+},
+{
+"op":"add",  "path":"/genders/0/shirt",
+"value" : [ "apexcommanderjacket", "apexnavyjacket", "apexofficerjacket", "apexspecialistjacket", "emptychest" ]
+},
+{
+"op":"add",  "path":"/genders/0/pants",
+"value" : [ "apexcommanderpants", "apexnavypants", "apexofficerpants", "apexspecialistpants", "emptylegs" ]
+},
+{
+"op":"add",  "path":"/genders/1/shirt",
+"value" : [ "apexcommanderjacket", "apexnavyjacket", "apexofficerjacket", "apexspecialistjacket", "emptychest" ]
+},
+{
+"op":"add",  "path":"/genders/1/pants",
+"value" : [ "apexcommanderpants", "apexnavypants", "apexofficerpants", "apexspecialistpants", "emptylegs" ]
+},
+{
+"op":"replace",  "path":"/undyColor", 
+"value" : [{"8DCFF4":"8DCFF4","F59FBC":"8DCFF4"},{"8DCFF4":"F59FBC","F59FBC":"F59FBC"},{"8DCFF4":"f0e7d8","F59FBC":"f0e7d8"},{"8DCFF4":"dac29e","F59FBC":"dac29e"},{"8DCFF4":"d3cac1","F59FBC":"d3cac1"},{"8DCFF4":"927a63","F59FBC":"927a63"},{"8DCFF4":"fbe2d0","F59FBC":"fbe2d0"},{"8DCFF4":"f5b88a","F59FBC":"f5b88a"},{"8DCFF4":"feeceb","F59FBC":"feeceb"},{"8DCFF4":"fccfce","F59FBC":"fccfce"},{"8DCFF4":"dd0000","F59FBC":"dd0000"},{"8DCFF4":"aa0000","F59FBC":"aa0000"},{"8DCFF4":"bbe8fa","F59FBC":"bbe8fa"},{"8DCFF4":"55c6f2","F59FBC":"55c6f2"},{"8DCFF4":"e1f2fc","F59FBC":"e1f2fc"},{"8DCFF4":"b3dff8","F59FBC":"b3dff8"},{"8DCFF4":"e3ddec","F59FBC":"e3ddec"},{"8DCFF4":"baabce","F59FBC":"baabce"},{"8DCFF4":"f9f9f9","F59FBC":"f9f9f9"},{"8DCFF4":"efefef","F59FBC":"efefef"},{"8DCFF4":"dddddd","F59FBC":"dddddd"},{"8DCFF4":"aaaaaa","F59FBC":"aaaaaa"},{"8DCFF4":"c8c8c8","F59FBC":"c8c8c8"},{"8DCFF4":"757575","F59FBC":"757575"}]
+},
+{
+"op":"replace",  "path":"/hairColor",
+"value" : [{"efdea5":"efdea5","c5a57b":"c5a57b","b09067":"b09067","634a42":"634a42"},{"efdea5":"f0e7d8","c5a57b":"dac29e","b09067":"d1b386","634a42":"7f6845"},{"efdea5":"d3cac1","c5a57b":"927a63","b09067":"77593c","634a42":"3a230d"},{"efdea5":"fbe2d0","c5a57b":"f5b88a","b09067":"f3a66e","634a42":"985e33"},{"efdea5":"feeceb","c5a57b":"fccfce","b09067":"fcc3c1","634a42":"9f7473"},{"efdea5":"F2809C","c5a57b":"D16E87","b09067":"B25E74","634a42":"934E60"},{"efdea5":"bbe8fa","c5a57b":"55c6f2","b09067":"2bb8ef","634a42":"006d96"},{"efdea5":"e1f2fc","c5a57b":"b3dff8","b09067":"a0d7f6","634a42":"5a849b"},{"efdea5":"e3ddec","c5a57b":"baabce","b09067":"a996c2","634a42":"605274"},{"efdea5":"f9f9f9","c5a57b":"efefef","b09067":"ebebeb","634a42":"939393"},{"efdea5":"dddddd","c5a57b":"aaaaaa","b09067":"959595","634a42":"515151"},{"efdea5":"c8c8c8","c5a57b":"757575","b09067":"535353","634a42":"1e1e1e"}]
+},
+{
+"op":"replace","path":"/defaultBlueprints/tier1",
+"value" : [{"item":"itemfinder"},{"item":"taclight"},{"item":"backpackL"},{"item":"reconpack"},{"item":"icepunch"},{"item":"emptychest"},{"item":"nohat"},{"item":"emptylegs"},{"item":"type-c"},{"item":"oranjuice"},{"item":"oranjuice2"},{"item":"spawnerlopunny"},{"item":"lopunit"},{"item":"apexcommanderjacket"},{"item":"apexcommanderpants"},{"item":"apexnavyjacket"},{"item":"apexnavypants"},{"item":"apexofficerjacket"},{"item":"apexofficerpants"},{"item":"apexspecialistjacket"},{"item":"apexspecialistpants"},{"item":"humantier1hammer"},{"item":"humantier1shortsword"},{"item":"humantier1broadsword"},{"item":"humantier1spear"},{"item":"humantier1axe"},{"item":"humantier1dagger"},{"item":"humantier1head"},{"item":"humantier1chest"},{"item":"humantier1pants"},{"item":"humanstoragelocker"},{"item":"flaghuman"},{"item":"humantier2hammer"},{"item":"humantier2shortsword"},{"item":"humantier2broadsword"},{"item":"humantier2spear"},{"item":"humantier2axe"},{"item":"humantier2dagger"},{"item":"humantier3head"},{"item":"humantier3chest"},{"item":"humantier3pants"},{"item":"humantier3hammer"},{"item":"humantier3shortsword"},{"item":"humantier3broadsword"},{"item":"humantier3spear"},{"item":"humantier3axe"},{"item":"humantier3dagger"},{"item":"humantier4hammer"},{"item":"humantier4shortsword"},{"item":"humantier4broadsword"},{"item":"humantier4spear"},{"item":"humantier4axe"},{"item":"humantier4dagger"},{"item":"humantier5ahead"},{"item":"humantier5achest"},{"item":"humantier5apants"},{"item":"humantier5dagger"},{"item":"humantier5mhead"},{"item":"humantier5mchest"},{"item":"humantier5mpants"},{"item":"humantier5shead"},{"item":"humantier5schest"},{"item":"humantier5spants"},{"item":"humantier8hammer"},{"item":"humantier8shortsword"},{"item":"humantier8broadsword"},{"item":"humantier8spear"},{"item":"humantier8axe"},{"item":"humantier8dagger"},{"item":"humantier6dagger"},{"item":"humantier10hammer"},{"item":"humantier10shortsword"},{"item":"humantier10broadsword"},{"item":"humantier10spear"},{"item":"humantier10axe"},{"item":"humantier10dagger"}]
+}
+]

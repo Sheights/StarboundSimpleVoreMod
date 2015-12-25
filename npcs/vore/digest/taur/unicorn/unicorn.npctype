@@ -1,0 +1,158 @@
+{
+  "type" : "dunicorn",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Something is not right here...",
+							"I'm not sure I agree to these changes.",
+							"A change of scenery? Not now if you wouldn't mind."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I think you've missed a spot.",
+							"I'm a bit tired of the 'wide open plains'.",
+							"Is this zoned for another window?"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I thought this was a private stable.",
+							"Why would I want another centaur living with me? They smell like horse.",
+							"What are you trying to say?. Are you evicting me?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"Have you fixed it yet?",
+							"I've already started packing. You should do something soon",
+							"*clop* *clop*. Two for no."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"Here I go again, on my own.",
+							"I was kind of missing the openess. This will be good for me."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"Hey there two-legs.",
+							"Hop on by later. I have plans for you."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"Here you may have this. I found it in my bag. Not a saddle bag. Who said anything about saddle bags?",
+							"Want a carrot?",
+							"Worth its price.",
+							"Here. I got you this."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"I need to get away from here.",
+							"Quickly I gallop!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"Hop to it, they're in trouble!",
+							"You need to help them!",
+							"There's still monsters here..."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Do you need a noble steed?",
+							"Run them out!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"Has the danger gone?",
+							"Too close."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Hey there. Why are you smirking?",
+						"Need a ride?",
+						"I may be living here but don't think you can tame me.",
+						"We could go around just spouting horse puns, but I'm really sick of it.",
+						"Hey there neighbor? No, not that neigh.",
+						"*clop*"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/taur/unicorn/unicorn.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "unicornhead1", "parameters" : { "colorIndex" : 0 } },
+			  { "name" : "unicornhead2", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "cupidschest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "dress1chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "fairychest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wedding1chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wedding2chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wildfunguschest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+            ],
+            "legs" : [
+              { "name" : "unicornlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

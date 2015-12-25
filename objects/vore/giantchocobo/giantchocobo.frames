@@ -12,6 +12,9 @@
 	
   "aliases"  :  {
     "idle1.default"	: "idle1.1",
+	"default.0"		: "idle1.1",
+	"default.1"		: "open.2",
+	"default.2"		: "open.3",
 	"idle1.0"		: "idle1.1",
 	"idle2.3"		: "idle1.1",
 	"fed.5"			: "eat.9",
@@ -29,6 +32,7 @@
 	"spitup.6"		: "eat.3",
 	"spitup.7"		: "eat.2",
 	"spitup.8"		: "eat.1",
-	"idle3.1"		: "eat.9"
+	"idle3.1"		: "eat.9",
+	"fullOpen.1"	: "eat.3"
 	}
 }

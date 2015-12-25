@@ -1,18 +1,18 @@
 {
-  "name": "baseavali",
-  "priority": 5,
+  "name": "baseavali1",
+  "priority": 12,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"avali": 6,
+	"avali": 12,
     "vore": 1
   },
 
   "tenants": [
     {
       "spawn": "npc",
-      "species": "avali",
+      "species": "fauxavali",
       "type": "baseavali",
       "overrides": {
         "damageTeamType" : "friendly"

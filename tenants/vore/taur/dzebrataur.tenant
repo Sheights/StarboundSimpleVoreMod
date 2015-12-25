@@ -1,0 +1,27 @@
+{
+  "name": "dzebrataur",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"misc": 12,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "type": "dzebrataur",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "zebrataurGift"
+  }
+}
