@@ -1,0 +1,162 @@
+{
+  "type" : "dsharkgrey",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+								"You want to put that back?",
+								"Didn't your mom ever tell you it's impolite to steal?",
+								"Pretty brave to stick that meat out to take my stuff.",
+								"That's a good way to lose a hand; taking things from me."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"Do you think that's funny?",
+								"You want everyone to watch? I'm fine with that. They might not be."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Oh, another? Yeah I'm sure this will go over real well for both of us.",
+							"What's the matter? Not happy with just me?",
+							"I don't share. You could ask my brother, or wait, you can't.",
+							"The other fish have the rest of the sea. This part is mine."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Da dun, Da dun.",
+						"Not so bright, are you?"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"I'll see you later, chum",
+						"Watch your back. You can watch mine as well.",
+						"Seen enough of me, have you?",
+						"When I get done with you, I will be back for my teeth."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Make this quick. What do you want?",
+						"Good you're here. I think I dropped a tooth.",
+						"Familiar waters.",
+						"Back to the Sharktank.",
+						"Now I get to be a lazy fish."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Don't let the door hit you on your way out.",
+						"Think this will cover it?",
+						"Can I get an extension on the next rent?",
+						"Bottom feeder.",
+						"You might find some teeth marks on these. What?",
+						"If you find a tooth, consider that a bonus."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"No escape!",
+					"I'm sunk!",
+					"To the shore!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Chum's in the water.",
+						"Are you just going to stand there?"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"This puts me in the mood!",
+					"Something smells good.",
+					"Let me see some red out there!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"My skin can breathe easy again.",
+					"That's it?",
+					"It's not even a little bit red.",
+					"Nice job out there shark-bait."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "So many fish in the sea, and I got you<3",
+			"Hey there, want to go for a swim?",
+			"What's going on, meat?",
+			"You like what you see? I like what I see.",
+			"I could eat a nautilus.",
+			"Heya snack, what’re you up to?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/digest/shark/sharkgrey.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "sharkgreyhead", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+            ],
+			"chest" : [
+              { "name" : "sharkgreychest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "sharkgreylegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

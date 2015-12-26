@@ -1,6 +1,6 @@
 {
   "name": "desertwolf",
-  "priority": 2,
+  "priority": 11,
 
   "colonyTagCriteria": {
     "light": 1,

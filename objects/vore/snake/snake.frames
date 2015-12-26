@@ -1,0 +1,22 @@
+{
+  "frameGrid" : {
+    "size" : [77, 77],
+    "dimensions" : [7, 5],
+    "names" : [
+		[ "idle1.1", "idle1.2", "idle2.1", "idle2.2", "coil1.1", "coil1.2", "coil1.3" ],
+		[ "coil2.1", "coil2.2", "coil2.3", "swallow.1", "swallow.2", "swallow.3", "swallow.4" ],
+		[ "swallow.5", "swallow.6", "swallow.7", "swallow.8", "fed1.1", "fed1.2", "fed1.3" ],
+		[ "fed2.1", "fed2.2", "fed2.3", "fed3.1", "fed3.2", "fed3.3", "fed4.1" ],
+		[ "fed4.2", "fed4.3", "release.1", "release.2", "release.3", "blank", "blank" ]
+    ]
+  },
+	"aliases"  :  {
+    "default"  : "idle1.1",
+	"coil1.4"	: "coil1.2",
+	"coil2.4"	: "coil2.2",
+	"fed1.4"	: "fed1.2",
+	"fed2.4"	: "fed2.2",
+	"fed3.4"	: "fed3.2",
+	"fed4.4"	: "fed4.2"
+	}
+}

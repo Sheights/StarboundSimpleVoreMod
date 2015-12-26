@@ -1,0 +1,14 @@
+{
+  "itemName" : "sharkgreylegsbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Sleek leggings that allow ultimate control in water.",
+  "shortdescription" : "Shark Flippers",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png"
+}

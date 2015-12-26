@@ -23,13 +23,16 @@
   "orientations" : [
     {
 	  "image" : "giantchocobo.png:idle1.<frame>",
-	  "imagePosition" : [0, 0],
+	  "imagePosition" : [-16, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ]
 	},
 	{
 	  "image" : "giantchocobo.png:idle1.<frame>",
-	  "imagePosition" : [0, 0],
+	  "imagePosition" : [-16, -16],
+	  "direction" : "right",
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ]
 	}
@@ -37,16 +40,20 @@
   
   "animation"  :  "giantchocobo.animation",
   "animationCustom" : {
-    "sounds" : {
-	  "swallow" : [ "/sfx/objects/gulp.wav" ],
-	  "spit" : [ "/sfx/objects/eggLay.wav" ]
+    "sounds" : {	  
+	  "close" : [ "/sfx/objects/chocobo_open.wav" ],
+	  "eat" : [ "/sfx/objects/chocobo_close.wav" ],
+	  "open" : [ "/sfx/objects/fat_chocobo_kwerk.wav" ],
+	  "swallow" : [ "/sfx/objects/gulp.wav" ]
 	}
   },
   "animationParts"  :  {
     "body"  :  "giantchocobo.png"
   },
+  "animationPosition" : [-16, -16],
  
   "scripts" : [ "/objects/vore/giantchocobo/giantchocobo.lua" ],
+  "containerCallback": "onInteraction",
   "scriptDelta" : 3,
   
   "slotCount" : 64,

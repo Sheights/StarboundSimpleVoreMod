@@ -1,0 +1,63 @@
+{
+  "objectName"  :  "voretartii",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "The loving playful dragon made by the loving playful artist, Nummy Nomz",
+  "shortdescription"  :  "Tartii",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "tartiiicon.png",
+  "orientations" : [
+    {
+	  "image" : "tartii.png:idlecp",
+	  "imagePosition" : [-48, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-48, 30],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-48, 0]
+	},
+    {
+	  "image" : "tartii.png:idlecp",
+	  "imagePosition" : [-48, 0],
+	  "direction" : "right",
+	  "sitPosition" : [-48, 30],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-48, 0]
+	}
+  ],
+  
+  "animation"  :  "tartii.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.wav" ],
+	  "spit" : [ "/sfx/objects/eggLay.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "tartii.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/tartii/tartii.lua" ],
+  "scriptDelta" : 3
+}

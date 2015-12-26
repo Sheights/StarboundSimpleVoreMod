@@ -1,0 +1,127 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle1",
+	    "states"  :  {
+	      "idle1"  :  {
+		    "frames"  :  2,
+			"cycle"  :  0.8,
+			"mode"  :  "loop"
+		  },
+		  "idle2"  :  {
+		    "frames"  :  2,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle1"
+		  },
+		  "coil1"  :  {
+		    "frames"  :  4,
+			"cycle"  :  1.0,
+			"mode"  :  "loop"
+		  },
+		  "coil2"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.6,
+			"mode"  :  "loop"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  8,
+			"cycle"  :  3,
+			"mode"  :  "transition",
+			"transition"  :  "fed1"
+		  },
+		  "fed1"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "loop"
+		  },
+		  "fed2"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "loop"
+		  },
+		  "fed3"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "loop"
+		  },
+		  "fed4"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "loop"
+		  },
+		  "release"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle1"
+	      }
+		}
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+			"idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+			"coil1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:coil1.<frame>"
+		      }
+		    },
+			"coil2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:coil2.<frame>"
+		      }
+		    },
+			"swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "fed1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed1.<frame>"
+		      }
+		    },
+			"fed2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed2.<frame>"
+		      }
+		    },
+			"fed3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed3.<frame>"
+		      }
+		    },
+			"fed4"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fed4.<frame>"
+		      }
+		    },
+		    "release"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:release.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

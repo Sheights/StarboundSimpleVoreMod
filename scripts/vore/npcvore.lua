@@ -178,7 +178,7 @@ function gain()
 	end
 	
 	if audio then
-		world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+		world.spawnProjectile( "swallowprojectile" , mcontroller.position() , entity.id(), {0, 0}, false )
 	end
 	
 	gainHook()
@@ -216,7 +216,7 @@ function update(dt)
 	elseif fed then	
 	
 		if math.random(500) == 1 and audio then
-			world.spawnProjectile( "digestprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false )
+			world.spawnProjectile( "digestprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 		end
 		
 		if request == false then
@@ -243,7 +243,7 @@ function interact(args)
 	
 		if stopWatch >= 1 and fed then
 
-			world.spawnProjectile( "cleanser" , world.entityPosition( victim ), entity.id(), {0, 0}, true )
+			world.spawnProjectile( "cleanser" , mcontroller.position(), entity.id(), {0, 0}, true )
 			stopWatch = duration
 			digest()
 			

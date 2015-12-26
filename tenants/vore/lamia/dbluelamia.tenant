@@ -1,11 +1,11 @@
 {
   "name": "dbluelamia",
-  "priority": 5,
+  "priority": 12,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"floran": 6,
+	"floran": 12,
     "dvore": 1
   },
 

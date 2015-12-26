@@ -1,0 +1,42 @@
+{
+  "itemName" : "sharktanhead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Beautifully hydrodynamic. With the exception of that bright hair flowing behind it.",
+  "shortdescription" : "Shark Mask",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png",
+  
+  "colorOptions" : [
+    /* NEON */
+	{ "dd00ff" : "dd00ff", "b700d3" : "b700d3", "a300bb" : "a300bb", "8d00a2" : "8d00a2" },
+	/* BLACK */
+    { "dd00ff" : "838383", "b700d3" : "555555", "a300bb" : "383838", "8d00a2" : "151515" },
+    /* GREY */
+    { "dd00ff" : "b5b5b5", "b700d3" : "808080", "a300bb" : "555555", "8d00a2" : "303030" },
+    /* WHITE */
+    { "dd00ff" : "e6e6e6", "b700d3" : "b6b6b6", "a300bb" : "7b7b7b", "8d00a2" : "373737" },
+    /* RED */
+    { "dd00ff" : "f4988c", "b700d3" : "d93a3a", "a300bb" : "932625", "8d00a2" : "601119" },
+    /* ORANGE */
+    { "dd00ff" : "ffd495", "b700d3" : "ea9931", "a300bb" : "af4e00", "8d00a2" : "6e2900" },
+    /* YELLOW */
+    { "dd00ff" : "ffffa7", "b700d3" : "e2c344", "a300bb" : "a46e06", "8d00a2" : "642f00" },
+    /* GREEN */
+    { "dd00ff" : "b2e89d", "b700d3" : "51bd3b", "a300bb" : "247824", "8d00a2" : "144216" },
+    /* BLUE */
+    { "dd00ff" : "96cbe7", "b700d3" : "5588d4", "a300bb" : "344495", "8d00a2" : "1a1c51" },
+    /* PURPLE */
+    { "dd00ff" : "d29ce7", "b700d3" : "a451c4", "a300bb" : "6a2284", "8d00a2" : "320c40" },
+    /* PINK */
+    { "dd00ff" : "eab3db", "b700d3" : "d35eae", "a300bb" : "97276d", "8d00a2" : "59163f" },
+    /* BROWN */
+    { "dd00ff" : "ccae7c", "b700d3" : "a47844", "a300bb" : "754c23", "8d00a2" : "472b13" }
+  ]
+}

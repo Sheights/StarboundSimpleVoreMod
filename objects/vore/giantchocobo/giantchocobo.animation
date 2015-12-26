@@ -9,37 +9,45 @@
 		  },
 		  "idle2"  :  {
 		    "frames"  :  3,
-			"cycle"  :  1.2,
+			"cycle"  :  0.6,
 			"mode"  :  "transition",
 			"transition" : "idle1"
 		  },
 		  "idle3"  :  {
 		    "frames"  :  1
 		  },
+		  "fullOpen"  :  {
+		    "frames"  :  1
+		  },
 		  "eat"  :  {
 		    "frames"  :  9,
 			"cycle"  :  1.0,
-			"mode"  :  "end"
+			"mode"  :  "transition",
+			"transition"  :  "idle3"
 		  },
 		  "open"  :  {
 		    "frames"  :  3,
-			"cycle"  :  1.2,
-			"mode"  :  "end"
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "fullOpen"
 		  },
 		  "close"  :  {
 		    "frames"  :  3,
-			"cycle"  :  1.2,
-			"mode"  :  "end"
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition" : "idle1"
 		  },
 		  "spitup" :  {
 		    "frames"  :  8,
 		    "cycle"  :  1.1,
-		    "mode"  :  "end"
+			"mode"  :  "transition",
+		    "transition"  :  "idle1"
 		  },
 		  "fed" :  {
 		    "frames"  :  5,
 		    "cycle"  :  1.0,
-		    "mode"  :  "end"
+			"mode"  :  "transition",
+		    "transition"  :  "idle3"
 		  }
 	    }
 	  }
@@ -66,6 +74,11 @@
 			"idle3"  :  {
 		      "properties"  :  {
 		        "image"  :  "<partImage>:idle3.<frame>"
+		      }
+		    },
+			"fullOpen"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullOpen.<frame>"
 		      }
 		    },
 			"eat"  :  {

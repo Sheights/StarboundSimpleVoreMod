@@ -1,0 +1,12 @@
+{
+  "name" : "objectvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "objectvore.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/vicon.png"
+}

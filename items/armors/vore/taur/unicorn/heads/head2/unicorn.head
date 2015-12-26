@@ -1,0 +1,15 @@
+{
+  "itemName" : "unicornhead2",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "The proud horn that rests ontop of the magestic unicorn. Wait, this is plastic.",
+  "shortdescription" : "Unicorn Horn",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

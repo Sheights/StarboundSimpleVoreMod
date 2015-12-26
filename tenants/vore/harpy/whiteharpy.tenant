@@ -1,11 +1,11 @@
 {
   "name": "whiteharpy",
-  "priority": 8,
+  "priority": 12,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"avian": 6,
+	"avian": 12,
     "vore": 1
   },
 

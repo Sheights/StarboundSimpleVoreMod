@@ -1,0 +1,6 @@
+[
+{
+"op" : "replace", "path" : "/names",
+"value" : [{"mode":"alts"},[{"mode":"serie"},[{"mode":"alts"},"Amar","Anem","Art","Ast","Azal","Begon","Bell","Berg","Cab","Cal","Camell","Car","Cel","Cham","Chrys","Clov","Colum","Croc","Daff","Dahl","Delph","End","Fen","Frees","Gerber","Ging","Gladiol","Heath","Hibis","Holl","Iris","Jasm","Kal","Lav","Lil","Lot","Marig","Marr","Pars","Primr","Rhod","Ros","Spin","Tans","This","Tom","Tul","Turn","Viol","Zinn"],[{"mode":"alts"},"ac","ais","and","ange","ard","aud","ault","ay","eau","eg","el","ent","er","et","ic","ick","ier","in","ois","oy","on","ot","ou","out","ouf","oui"]]]
+}
+]

@@ -1,0 +1,64 @@
+{
+  "objectName"  :  "adgiantchocobo",
+  "tags" : ["vore"],
+  "rarity"  :  "Legendary",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  
+  "catagory"  :  "storage",
+  "price"  :  1500,
+  "description"  :  "The Greedy Chocobo will take more of you then you want to give.",
+  "shortdescription"  :  "Greedy Chocobo",
+  "printable"  :  false,
+
+  "apexDescription" : "Possibly the result of genetic engineering?",
+  "avianDescription" : "I wonder if it could fly if it was a bit smaller.",
+  "floranDescription" : "Feast for daysss!",
+  "glitchDescription" : "Jokingly: How much does a ton of feathers weigh?",
+  "humanDescrtiption" : "I think I've seen this before somewhere.",
+  "hylotlDescription" : "Well as long as it doesn't get saliva on me- I mean my items!",
+  "novakidDescription" : "We learned on the trails that one has to carry their own weight.",
+  
+  "inventoryIcon"  :  "giantchocoboicon.png",
+  "orientations" : [
+    {
+	  "image" : "giantchocobo.png:idle1.<frame>",
+	  "imagePosition" : [-16, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "giantchocobo.png:idle1.<frame>",
+	  "imagePosition" : [-16, -16],
+	  "direction" : "right",
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  
+  "animation"  :  "giantchocobo.animation",
+  "animationCustom" : {
+    "sounds" : {	  
+	  "close" : [ "/sfx/objects/chocobo_open.wav" ],
+	  "eat" : [ "/sfx/objects/chocobo_close.wav" ],
+	  "open" : [ "/sfx/objects/fat_chocobo_kwerk.wav" ],
+	  "swallow" : [ "/sfx/objects/gulp.wav" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "giantchocobo.png"
+  },
+  "animationPosition" : [-16, -16],
+ 
+  "scripts" : [ "/objects/vore/giantchocobo/dgiantchocobo.lua" ],
+  "containerCallback": "onInteraction",
+  "scriptDelta" : 3,
+  
+  "slotCount" : 64,
+  "uiConfig" : "/interface/chests/chest%slots%.config",
+  
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600
+}
