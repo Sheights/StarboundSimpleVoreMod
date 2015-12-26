@@ -13,44 +13,45 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"Something is not right here...",
-							"I'm not sure I agree to these changes.",
-							"A change of scenery? Not now if you wouldn't mind."
+							"Y’all put that back before I Lasso you.",
+							"Put that back ye varmint!",
+							"Rustlers ain’ welcome here!"
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-							"I think you've missed a spot.",
+							"This ranch dun need some repairs!",
 							"I'm a bit tired of the 'wide open plains'.",
-							"Is this zoned for another window?"
+							"Looks like a tornada been through here!"
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"I thought this was a private stable.",
+							"This town ain’t big enough for two of us!",
 							"Why would I want another centaur living with me? They smell like horse.",
-							"What are you trying to say?. Are you evicting me?"
+							"I’m a lone-ranger slim…"
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-							"Have you fixed it yet?",
-							"I've already started packing. You should do something soon",
-							"*clop* *clop*. Two for no."
+							"I swear there’s ‘bout ta be a showdown in here!",
+							"Y’all bout to see a stampede here partner…",
+							"Don’ cross me here gringo."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-							"Here I go again, on my own.",
-							"I was kind of missing the openess. This will be good for me."
+							"Las’ time I trus’ city-folk.",
+							"I was better off on the ranch.",
+							"Damn idjut!"
 			  ]
 			}
           }
@@ -59,18 +60,16 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-							"Hey there two-legs.",
-							"Hop on by later. I have plans for you."
+							"Hooome on the Range.",
+							"Ain’ much, but it’s mine."
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-							"Here you may have this. I found it in my bag. Not a saddle bag. Who said anything about saddle bags?",
-							"Want a carrot?",
-							"Worth its price.",
-							"Here. I got you this."
+							"Here’s ya rent slim",
+							"Y’all gotta me makin’ more than a Gold mine of us tenants…"
 			  ]
 			}
           }
@@ -80,33 +79,34 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-							"I need to get away from here.",
-							"Quickly I gallop!"
+							"I need some doggone help over here!",
+							"Help, Cattle Rustlers!",
+							"Indians!!",
+							"Conblasted sumbitch!"
+							
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-							"Hop to it, they're in trouble!",
-							"You need to help them!",
-							"There's still monsters here..."
+							"Give ‘em a hand partner!",
+							"They need a gunslinger, now!"
 			]
 		  }
 		},
         "encourage" : {
 		  "default" : {
 			"default" : [
-							"Do you need a noble steed?",
-							"Run them out!"
+							"Show ‘em who’s the fastest gun here!"
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-							"Has the danger gone?",
-							"Too close."
+							"Is the raid over yet…?",
+							"Them raiders gone yet?"
 			]
 		  }
         }
@@ -114,11 +114,11 @@
       "converse" : {
         "default" : {
           "default" : [
-						"Hey there. Why are you smirking?",
-						"Need a ride?",
-						"I may be living here but don't think you can tame me.",
-						"We could go around just spouting horse puns, but I'm really sick of it.",
-						"Hey there neighbor? No, not that neigh.",
+						"Howdy partner!",
+						"Fine day on the Range!",
+						"Welcome to my Homestead.",
+						"Well, if it ain’ the town mayor!",
+						"Y’all know if there’s a Saloon in this town?",
 						"*clop*"
           ]
         }
@@ -136,12 +136,16 @@
     "override" : [
       [0, [
           {
+			"head" : [
+              { "name" : "cowboyhead", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "emptyhead", "parameters" : { "colorIndex" : 0 } }
+            ],
 			"chest" : [
-              { "name" : "sweatervestchest", "parameters" : { "colorIndex" : [1, 3, 4, 5, 6, 7, 8, 9] } },
-              { "name" : "conceptchest", "parameters" : { "colorIndex" : [1, 3, 4, 5, 6, 7, 8, 9] } },
-              { "name" : "coolchest", "parameters" : { "colorIndex" : [1, 3, 4, 5, 6, 7, 8, 9] } },
-              { "name" : "workoutchest", "parameters" : { "colorIndex" : [1, 3, 4, 5, 6, 7, 8, 9] } },
-			  { "name" : "nochest" }
+              { "name" : "novakidfancychest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] } },
+              { "name" : "novakidjacket", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] } },
+              { "name" : "novakidsuspenders", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] } },
+              { "name" : "novakidwaistcoat", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] } },
+			  { "name" : "cowboychest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] } }
             ],
             "legs" : [
               { "name" : "centaurwhitelegs", "parameters" : { "colorIndex" : 0 } }

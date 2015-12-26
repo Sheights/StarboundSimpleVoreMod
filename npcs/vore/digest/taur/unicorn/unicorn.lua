@@ -1,15 +1,14 @@
 require "/scripts/vore/npcvore.lua"
 
-playerLines = {	"The best way to travel cross country!",
-				"Yes, this is what I meant by ride. I'm not wearing a saddle if you didn't notice.",
-				"Its easier than you being riding on top.",
-				"Don't worry, my back is sturdy enough.",
-				"Better than most of the things I eat!",
-				"It takes a lot of energy to run as much as I do!"
+playerLines = {	"You’re about to become one with nature sweetie. Quite the honour.",
+				"Elves taste better, but you’ll do.",
+				"You’ll help the plants grow, and importantly, me~",
+				"Time to give back to nature.",
+				"I won't be hopping, skipping, or jumping anytime soon."
 }
 
-legs = unicornlegs
-fulllegs = unicornlegsbelly
+legs = "unicornlegs"
+fulllegs = "unicornlegsbelly"
 
 isDigest = true
 

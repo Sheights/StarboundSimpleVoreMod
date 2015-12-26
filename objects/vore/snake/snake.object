@@ -31,7 +31,7 @@
 	  "imagePosition" : [-40, 0],
 	  "direction" : "left",
 	  "flipImages" : true,
-	  "sitPosition" : [0, 8],	  
+	  "sitPosition" : [-35, 16],	  
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
 	  "animationPosition" : [-40, 0]
@@ -40,7 +40,7 @@
 	  "image" : "snake.png:default",
 	  "imagePosition" : [-25, 0],
 	  "direction" : "right",
-	  "sitPosition" : [0, 8],
+	  "sitPosition" : [-35, 16],
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
 	  "animationPosition" : [-25, 0]

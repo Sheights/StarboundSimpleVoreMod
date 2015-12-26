@@ -1,15 +1,15 @@
 require "/scripts/vore/npcvore.lua"
 
-playerLines = {	"The best way to travel cross country!",
-				"Yes, this is what I meant by ride. I'm not wearing a saddle if you didn't notice.",
-				"Its easier than you being riding on top.",
-				"Don't worry, my back is sturdy enough.",
-				"Better than most of the things I eat!",
-				"It takes a lot of energy to run as much as I do!"
+playerLines = {	"Soon, you'll be a spirit too!",
+				"It's always lovely when I don't need to hunt.",
+				"The spirits have gifted you to me, surely!",
+				"Now you will help fuel a great hunter!",
+				"Welcome to my personal tribe!",
+				"Another successful hunt!"
 }
 
-legs = zebrataurlegs
-fulllegs = zebrataurlegsbelly
+legs = "zebrataurlegs"
+fulllegs = "zebrataurlegsbelly"
 
 function loseHook()
 	

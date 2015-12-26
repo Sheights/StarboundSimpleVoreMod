@@ -4,19 +4,15 @@ legs = "sharkgreylegs"
 
 fulllegs = "sharkgreylegsbelly"
 
-playerLines = {	"...You tasty...",
-				"...So full...",
-				"...Squirm more...",
-				"...I... Love you...",
-				"...I'm happy...",
-				"...Yum..."
+playerLines = {	"Mmm you’re fishfood now~",
+				"Sorry meat, you needed a bigger boat...",
+				"This is how Jaws was meant to end.",
+				"I'll be picking you out of my teeth tonight.",
+				"How do you like seafood?",
+				"If you find anything interesting in there, bring it back would you?"
 }
 
 function loseHook()
-	
-	if isPlayer then
-		entity.say("...Come back...")
-	end
 	
 	isPlayer = false
 	

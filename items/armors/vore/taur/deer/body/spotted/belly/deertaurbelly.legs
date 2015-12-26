@@ -9,6 +9,6 @@
   "shortdescription" : "Deertaur Pants",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "pant.png",
-  "femaleFrames" : "pant.png"
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png"
 }

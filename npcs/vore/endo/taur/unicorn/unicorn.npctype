@@ -13,44 +13,41 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"Something is not right here...",
-							"I'm not sure I agree to these changes.",
-							"A change of scenery? Not now if you wouldn't mind."
+							"Those who steal from the forest, often become lost in its depths.",
+							"Return to nature, that which you have taken.",
+							"Do not steal, when nature already gifts so much."
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-							"I think you've missed a spot.",
-							"I'm a bit tired of the 'wide open plains'.",
-							"Is this zoned for another window?"
+							"This tree needs some new bark dear landlord.",
+							"I believe there are a few broken branches dear..."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"I thought this was a private stable.",
-							"Why would I want another centaur living with me? They smell like horse.",
-							"What are you trying to say?. Are you evicting me?"
+							"There’s a reason it’s at ONE with the forest...",
+							"Roots need their room..."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-							"Have you fixed it yet?",
-							"I've already started packing. You should do something soon",
-							"*clop* *clop*. Two for no."
+							"You’re about to incur the wrath of Gaia...",
+							"You mess with forces beyond your ken..."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-							"Here I go again, on my own.",
-							"I was kind of missing the openess. This will be good for me."
+							"You have lost the blessings child.",
+							"And I put a curse upon you also!"
 			  ]
 			}
           }
@@ -59,18 +56,18 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-							"Hey there two-legs.",
-							"Hop on by later. I have plans for you."
+							"Back to my sanctuary.",
+							"Always a pleasure to be in my sacred glade.",
+							"You needed the presence of a sage dear?"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-							"Here you may have this. I found it in my bag. Not a saddle bag. Who said anything about saddle bags?",
-							"Want a carrot?",
-							"Worth its price.",
-							"Here. I got you this."
+							"Partake in nature’s bounty.",
+							"Enjoy the rewards of Gaia.",
+							"Gaia rewards those who care for her forest."
 			  ]
 			}
           }
@@ -80,33 +77,33 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-							"I need to get away from here.",
-							"Quickly I gallop!"
+							"Gaia protect me!",
+							"Help, Barbarians!",
+							"Raiders to the forest!"
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-							"Hop to it, they're in trouble!",
-							"You need to help them!",
-							"There's still monsters here..."
+							"Another of Gaia’s Children needs your help!",
+							"The Earth Mother wills you to protect them!"
 			]
 		  }
 		},
         "encourage" : {
 		  "default" : {
 			"default" : [
-							"Do you need a noble steed?",
-							"Run them out!"
+							"The blessings of Gaia compel you!",
+							"Blessing of nature will protect you!"
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-							"Has the danger gone?",
-							"Too close."
+							"Has peace returned to the Glade?",
+							"Have the sacrilegious been defeated?"
 			]
 		  }
         }
@@ -114,12 +111,10 @@
       "converse" : {
         "default" : {
           "default" : [
-						"Hey there. Why are you smirking?",
-						"Need a ride?",
-						"I may be living here but don't think you can tame me.",
-						"We could go around just spouting horse puns, but I'm really sick of it.",
-						"Hey there neighbor? No, not that neigh.",
-						"*clop*"
+						"Blessings of Gaia be upon you.",
+						"What brings you to the glades today child?",
+						"What do you seek child?",
+						"Tis a joyous day in nature child."
           ]
         }
       }

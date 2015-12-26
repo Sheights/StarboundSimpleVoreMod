@@ -159,7 +159,7 @@ function feed()
 			world.spawnProjectile( projectile , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false, mergeOptions)
 	
 			if audio then
-				world.spawnProjectile( "swallowprojectile" , world.entityPosition( people[temp] ), entity.id(), {0, 0}, false )
+				world.spawnProjectile( "swallowprojectile" , entity.position(), entity.id(), {0, 0}, false )
 			end
 
 			redress()
@@ -287,7 +287,7 @@ function update(dt)
 		end
 		
 		if math.random(500) == 1 and audio then
-			world.spawnProjectile( "digestprojectile" , world.entityPosition( entity.id() ), entity.id(), {0, 0}, false )
+			world.spawnProjectile( "digestprojectile" , entity.position(), entity.id(), {0, 0}, false )
 		end
 		
 		digest()
