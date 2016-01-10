@@ -1,0 +1,28 @@
+{
+  "name": "pred_dezzy",
+  "priority": 14,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "nature": 12,
+	"tier4": 12,
+	"vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "floran",
+      "type": "pred_dezzy",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "dezzyGift"
+  }
+}

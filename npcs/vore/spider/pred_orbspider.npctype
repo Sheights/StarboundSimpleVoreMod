@@ -1,0 +1,150 @@
+{
+  "type" : "pred_orbspider",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+								"Don't touch that.",
+								"That's mine you fool.",
+								"My web is on this so it's mine."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"I detect a hole in my web.",
+								"Rain can get in there."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"My legs take to much space for another one.",
+							"You know what spiders do to their mates right?",
+							"My web, my room."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Patch my room, if you would be so kind.",
+						"Do you need some time in my web to change your mind."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Mind my web.",
+						"There's no reason for me to remain."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"A twitch on my web?",
+						"Can I help you?",
+						"Hello there sweet."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"I found this stuck on my web.",
+						"The last one wasn't as lucky as you."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Everyone for themselves.",
+					"I need a place to hide!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Save them!",
+						"Those fools need to be saved!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Fangs out.",
+					"Take them alive if you can.",
+					"Use your venom."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"I must weave anew.",
+					"...6, 7, yep. All here.",
+					"Some peace finally"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "You seem like a good catch.",
+			"Watch out you don't trip my web.",
+			"Care to walk on silken threads?",
+			"Eight legs, six eyes, and one cute companion.",
+			"I can keep more than one eye on you.",
+			"Come closer, I don't bite."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/spider/orbspider.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "spiderorbhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "spiderchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "spiderorblegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

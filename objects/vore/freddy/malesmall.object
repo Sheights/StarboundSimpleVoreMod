@@ -55,7 +55,7 @@
   "animation" : "maleanimation.animation",
   "animationCustom" : {
     "sounds" : {
-	  "swallow" : [ "/sfx/humanoid/drink.wav" ],
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
 	  "belly1" : [ "/sfx/objects/belly1.wav" ],
 	  "belly2" : [ "/sfx/objects/belly2.wav" ],
 	  "belly3" : [ "/sfx/objects/belly3.wav" ]

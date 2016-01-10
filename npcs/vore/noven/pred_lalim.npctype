@@ -1,0 +1,216 @@
+{
+  "type" : "pred_lalim",
+  "baseType" : "villager",
+
+  "npcname" : "Lalim",
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I can't live here, things are missing.",
+							"Theres not much here...",
+							"Come on, just need a few more pieces to this puzzle.",
+							"Can you add the remaining items?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Put that back where it belongs.",
+							"Can you fix that?",
+							"You seem to have broken my house. Fix it, please.",
+							"I'm all for the open air, but I need some place to rest my head."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I need my space.",
+							"Theres not enough room here.",
+							"Afraid you can't do that.",
+							"Are they a meal for me?",
+							"The rooms only big enough for one. I'm taking that spot, sorry."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"You're not going to like it when I fight back.",
+						"This will get ugly, fast. Stop it.",
+						"I have very sharp, very pointy teeth and claws. You'll get blood everywhere.",
+						"You're not going to make it through this safely.",
+						"I'm warning you, you're not going to come out of this unscathed."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"You're getting on my last nerve.",
+						"This is your final warning before I take a large chunk out of you.",
+						"I'm Usually calm and collected, but you're about to be dead.",
+						"This wont end well for you.",
+						"Do you have a death wish?"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"What a lovely home this is. Thank you!",
+						"Mind if I call this my own?",
+						"The bigger the space, the more i can hide and sneak. heheh",
+						"Thanks for making me a place to stay!",
+						"You wanna get eaten that badly? My pleasure."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"This was from someone else. They don't need it anymore.",
+						"I found this in some kid's closet one night.",
+						"Can you believe what you can find under some kid's bed?",
+						"I keep a stash of things in my shadow from the houses I eat at.",
+						"You can have this. The other guy won't be needing it where he's at now.",
+						"Hey your neighbor next door? Said this was yours.",
+						"I found this in my teeth after eating that old lady. You keep it."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+						"Get them away from me!",
+						"Back away!",
+						"No! Get off!",
+						"This is Not good!",
+						"Lend me a hand please!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Someone get rid of that thing!",
+						"Its not going to leave on its own! Help them!",
+						"Stop that thing!",
+						"Its causing havok! Stop it!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"You'll make a lovely meal.",
+						"In the shadow you go!",
+						"I'll save you for later.",
+						"When I get done with you, I'll stuff you full of tasty treats for me to savor!",
+						"This is making me hungry!",
+						"get back here so I can snack on you!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+						"Coast is clear.",
+						"Finally, peace and quiet.",
+						"Now I can relax and enjoy my dinner.",
+						"I was getting all twisted up from the suspence!",
+						"Thanks, its good to have some quiet again."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Wanna take a tour through my personal star system?",
+						"Good hearing from you.",
+						"Lets see... you in my tail... that big bird in my gut... Maybe that big fox...",
+						"Theres even room in my tail for you!",
+						"I want you to fill my stomach.",
+						"When I want to be alone, or when I want to sneak on you, I dive into shadows. Literally.",
+						"Are you flexible? I can bend over backwards!",
+						"Care to join me?",
+						"I don't mind carrying you around for a while.",
+						"Don't fall asleep in there. Not that I'm complaining.",
+						"Move around when you get in there. I love the shapes the bulges make.",
+						"I don't really feel the cold.",
+						"Come here for a second.",
+						"Sorry, But thats not the kind of thing I allow.",
+						"Are you for breakfast today?",
+						"You're fun.",
+						"I like the chatty ones.",
+						"*stomach rumbles* Haven't eaten in a while.",
+						"Mind giving me something to eat? Maybe you?",
+						"I'd like to have Devout around. Such a fun person to have.",
+						"That newt looks tasty. And filling.",
+						"I wonder how the catfish tastes.",
+						"You will make a fine bulge.",
+						"You have such a sweet taste, you know.",
+						"Hmm...",
+						"Need some peace, please.",
+						"I have to focus.",
+						"I really need to focus on something right now.",
+						"Hmm? You wanted something from me?",
+						"Anything I can help you with?",
+						"Such a tasty little one, aren't you?",
+						"You won't be seeing your buddy any time soon.",
+						"Is there anyone you're not going to miss?",
+						"Any friends of yours around?",
+						"I want to take you to my shadow and eat you where no one can see.",
+						"Oh, something I can savor!",
+						"Get over here, let me eat you!",
+						"You'll digest nice and slowly when I get you.",
+						"Don't worry, I don't bite.",
+						"You're safe with me, don't worry.",
+						"Care to be a part of me?",
+						"I can see just how eager you are."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/noven/lalim.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "lalimhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "lalimchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "lalimlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

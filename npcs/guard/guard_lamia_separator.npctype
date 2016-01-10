@@ -1,0 +1,35 @@
+{
+  "type" : "guard_lamia_separator",
+  "baseType" : "friendlyguard",
+
+  "items" : {
+    "override" : [
+      [5, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[6, [
+          {
+            "head" : [ { "name" : "humantier6shead" } ],
+            "chest" : [ { "name" : "humantier6schest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ] 
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "objectName" : "aadbadge",
+  "printable" : false,
+  "colonyTags" : ["dvore"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for a 'digest' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Digest Vore Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "inventoryIcon" : "dicon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:D",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

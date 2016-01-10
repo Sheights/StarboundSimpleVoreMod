@@ -1,0 +1,34 @@
+{
+  "objectName" : "aapbadge",
+  "printable" : false,
+  "colonyTags" : ["prey"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for a 'prey' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Prey Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "apexDescription" : "A what?",
+  "avianDescription" : "I should probably give those poor souls a home.",
+  "floranDescription" : "Floran needsss many of thessse.",
+  "glitchDescription" : "Perplexity. I am more than a bit curious.",
+  "humanDescription" : "I have several questions.",
+  "hylotlDescription" : "H-how does one be summoned by one of these?",
+  "novakidDescription" : "My very own cattle ranch, but without the cattle!",
+
+  "inventoryIcon" : "picon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:P",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

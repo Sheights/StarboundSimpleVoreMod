@@ -1,0 +1,27 @@
+{
+  "name": "pred_dkineptic2",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "glitchcastle": 6,
+	"dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "fauxkineptic",
+      "type": "pred_dkineptic",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "kinepticGift"
+  }
+}

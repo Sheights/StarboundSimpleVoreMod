@@ -1,0 +1,27 @@
+{
+  "name": "pred_kangaru",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"apex": 6,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "fauxkangaru",
+      "type": "pred_kangaru",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "kangaruGift"
+  }
+}

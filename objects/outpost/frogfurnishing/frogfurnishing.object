@@ -1,0 +1,90 @@
+{
+  "objectName" : "frogfurnishing",
+  "colonyTags" : ["outpost","commerce"],
+  "rarity" : "Common",
+  "description" : "Finest Furnishings!",
+  "shortdescription" : "Frögg Furnishing",
+  "race" : "generic",
+  "printable" : false,
+
+  "lightColor" : [190, 170, 150],
+
+  "apexDescription" : "It's one of those frog merchants. This one's peddling furniture. ",
+  "avianDescription" : "Who is this curious merchant? His furnishings are fabulous.",
+  "floranDescription" : "Floran ssslightly ssscared by sssilent frog.",
+  "glitchDescription" : "This frog has some comfortable looking wares.",
+  "humanDescription" : "This strange amphibian peddles some rather nice furniture.",
+  "hylotlDescription" : "This creature has an impressive collection of furniture.",
+  "novakidDescription" : "Don't see many frog merchants round these parts!",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "frogfurnishingleft.png:<color>.<frame>", "fullbright" : true }, { "image" : "frogfurnishingleftlit.png:<color>.<frame>" } ],
+      "direction" : "left",
+      
+      "lightPosition" : [-4, 7],
+
+      "imagePosition" : [-64, 0],
+      "frames" : 32,
+      "animationCycle" : 4.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "frogfurnishingright.png:<color>.<frame>", "fullbright" : true }, { "image" : "frogfurnishingrightlit.png:<color>.<frame>" } ],
+      "direction" : "right",
+      
+      "lightPosition" : [0, 2],
+
+      "imagePosition" : [-64, 0],
+      "frames" : 32,
+      "animationCycle" : 4.2,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "soundEffect" : "/sfx/objects/hubbub.ogg",
+
+  "scripts" : [ "frogfurnishing.lua" ],
+  "scriptDelta" : 0,
+
+  "interactData" : {
+    "config" : "/interface/windowconfig/craftingfurniturestore.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "  FRӦGG FURNISHING",
+        "subtitle" : "  Themed furniture",
+        "icon" : {
+          "file" : "/interface/crafting/frogfurnishing.png"
+        }
+      }
+    },
+    "filter" : []
+  },
+
+  "rotationTime" : 86400, // time of feature set availability in seconds
+  "storeInventory" : {
+    "deeds" : [
+      "colonydeed",
+	  "compactdeed"
+    ],
+    "furniture" : [
+      "lamppost1", "lamppost3", "lamppost2", "outdoorbench", "outdoorchair", "outdoorfountain", "outdoorstool"
+    ],
+    "featured" : [
+      [ "earthmodel", "jupitermodel", "liftoffseat", "marsmodel", "mercurymodel", "neptunemodel", "plutomodel", "satellite", "saturnmodel", "spaceshuttlebed", "sunmodel", "uranusmodel", "venusmodel" ],
+      [ "cabinbunkbed", "cabinchair", "cabinlamp", "cabinornament", "cabinstooltable", "cabinstove", "cabintable" ],
+      [ "applebasket", "baguettebox", "kitchencabinet1", "kitchencabinet2", "kitchenstovetop", "kitchenceilingcabinet1", "kitchenceilingcabinet2", "kitchenshelf", "kitchentable" ],
+      [ "gothicbed", "gothicbookcase", "gothicchair", "gothiccouch", "gothicdoor", "gothiclight" ],
+      [ "hulagirl", "islandcabinet", "islandchair", "islandhammock", "islandlamp", "islandtable" ],
+      [ "retroscifibed", "retroscificabinet", "retroscifichair", "retroscifidresser", "retroscifilight", "retroscifitable", "retroscifitv" ],
+      [ "saloondoor", "saloonseat", "saloontable", "salooncabinet", "saloonlight", "saloonpiano", "saloonspittoon" ],
+      [ "coralmirror", "seabed", "seachair", "sealamp", "seaweedpot" ],
+      [ "spookybed", "spookycandles", "spookycauldron", "spookyclock", "spookypumpkinhead", "spookytombchair" ],
+      [ "steampunkarmchair", "steampunkbed", "steampunkdesk", "steampunkglobe", "steampunklamp", "steampunkshelf" ]
+    ]
+  }
+}

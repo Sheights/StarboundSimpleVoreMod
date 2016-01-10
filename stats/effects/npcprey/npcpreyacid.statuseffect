@@ -1,0 +1,12 @@
+{
+  "name" : "npcpreyacid",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npcpreyacid.lua"
+  ],
+
+  "label" : "Being Digested",
+  "icon" : "/stats/stomachacid/stomachacid.png"
+}

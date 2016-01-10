@@ -1,0 +1,12 @@
+{
+  "kind" : "yoshiswallow",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/vore/yoshi/yoshiswallow.wav" ]
+      ]
+    }
+  }
+}

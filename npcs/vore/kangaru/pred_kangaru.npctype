@@ -1,0 +1,160 @@
+{
+  "type" : "pred_kangaru",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Something is not right here...",
+							"I'm not sure I agree to these changes."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I think you've missed a spot.",
+							"It's hard to enjoy my meal with a hole in my house."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Does this mean, you don't want me around anymore?",
+							"There's only room for one roo, and that's me!",
+							"What are you trying to say?. Are you evicting me?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"Unless you want to disappear for a long time, you shouldn't make me upset.",
+							"Please change your ways, or else I'll leave.",
+							"I've dealt with worse, but this is ridiculous."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"I hope you don't treat all tenants like me...",
+							"Time to bounce out of here!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"Good day.",
+							"Hop on by later. I have plans for you.",
+							"Do you you want to rest into a roo?",
+							"Don't worry, its safe to ride in my belly"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"I've found this in my pouch.",
+							"I think my prey left a little gift for you <3",
+							"They were delicious. I mean, you can have this.",
+							"I'm sorry, I didn't bring you anything."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"We're under attack!",
+							"I'm in danger, help me!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"Hop to it, they're in trouble!",
+							"I'll handle things here. Go help the others!",
+							"There's still monsters here..."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Help has arrived!",
+							"Make sure to show them a one way trip into your belly",
+							"You're lucky that I didn't get to eat you!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"If there's anyone wounded, I'll gladly 'take' care of you.",
+							"That was close."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Good day.",
+						"Hop on by later. I have plans for you.",
+						"Do you you want to rest into a roo?",
+						"Don't worry, its safe to ride in my belly"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/kangaru/kangaru.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "kangaruhead1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead2", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead3", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead4", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead5", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead6", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead7", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead8", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "kangaruhead9", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+			"chest" : [
+              { "name" : "kangaruchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "kangarulegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

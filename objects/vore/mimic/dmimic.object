@@ -1,6 +1,6 @@
 {
   "objectName" : "admimic",
-  "colonyTags" : ["hoard","storage","valuable", "dvore"],
+  "colonyTags" : ["hoard","storage","valuable", "vore", "cvore", "dvore", "prey"],
   "rarity" : "Legendary",
   "objectType" : "container",
   "tooltipKind" : "container",
@@ -28,8 +28,8 @@
     }
   ],
 
-  "openSounds" : [ "/sfx/objects/chest_large_open.wav" ],
-  "closeSounds" : [ "/sfx/objects/chest_large_close.wav" ],
+  "openSounds" : [ "/sfx/objects/chest_large_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/chest_large_close.ogg" ],
   "slotCount" : 24,
   "uiConfig" : "/interface/chests/chest%slots%.config",
   "frameCooldown" : 5,

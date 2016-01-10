@@ -1,0 +1,42 @@
+{
+  "itemName" : "kangaruhead9",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : " ",
+  "shortdescription" : "Kangaru Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png",
+  
+  "colorOptions" : [
+  /* ORANGE - GREY - BLACK */
+  { "ffca8a" : "FFB434", "e0975c" : "E29D12", "a85636" : "A36B0B", "6f2919" : "674202", "b5e61d" : "823B3B", "8fb814" : "601F1F", "556d0c" : "3F0B0B", "dc1f00" : "d4d4d4", "be1b00" : "b3b3b3", "951500" : "929292", "d9c189" : "929292", "a38d59" : "717171", "735e3a" : "4e4e4e" },
+  /* BLACK - WHITE - GREY */
+  { "ffca8a" : "717171", "e0975c" : "4e4e4e", "a85636" : "2e2e2e", "6f2919" : "151515", "b5e61d" : "424146", "8fb814" : "1F1E25", "556d0c" : "14121E", "dc1f00" : "f7f7f7", "be1b00" : "d4d4d4", "951500" : "b3b3b3", "d9c189" : "d4d4d4", "a38d59" : "b3b3b3", "735e3a" : "929292" },
+  /* PINK - WHITE - TAN */
+  { "ffca8a" : "FFAEAE", "e0975c" : "FF7777", "a85636" : "F83A3A", "6f2919" : "D71A1A", "b5e61d" : "C18989", "8fb814" : "A35D5D", "556d0c" : "823B3B", "dc1f00" : "f7f7f7", "be1b00" : "d4d4d4", "951500" : "b3b3b3", "d9c189" : "eed1c1", "a38d59" : "d4b7a7", "735e3a" : "b59888" },
+  /* RED - YELLOW - PURPLE */
+  { "ffca8a" : "E21212", "e0975c" : "A50909", "a85636" : "690101", "6f2919" : "2E0303", "b5e61d" : "601F1F", "8fb814" : "3F0B0B", "556d0c" : "210303", "dc1f00" : "FFF834", "be1b00" : "DED115", "951500" : "A3940B", "d9c189" : "C655A1", "a38d59" : "A5358B", "735e3a" : "7A1C6D" },
+  /* GREEN - WHITE - RED */
+  { "ffca8a" : "85FF34", "e0975c" : "6CDE15", "a85636" : "23A509", "6f2919" : "356702", "b5e61d" : "6A823B", "8fb814" : "4B601F", "556d0c" : "2E3F0B", "dc1f00" : "f7f7f7", "be1b00" : "d4d4d4", "951500" : "b3b3b3", "d9c189" : "FF7777", "a38d59" : "F83A3A", "735e3a" : "D71A1A" },
+  /* TEAL - GREEN - YELLOW */
+  { "ffca8a" : "34FFAA", "e0975c" : "15DE8A", "a85636" : "0BA35E", "6f2919" : "02673D", "b5e61d" : "3B5982", "8fb814" : "1F3B60", "556d0c" : "0B213F", "dc1f00" : "85FF34", "be1b00" : "6CDE15", "951500" : "23A509", "d9c189" : "FFF834", "a38d59" : "DED115", "735e3a" : "A3940B" },
+  /* BLUE - BLUE - YELLOW */
+  { "ffca8a" : "44B3EA", "e0975c" : "2492C9", "a85636" : "136993", "6f2919" : "05405E", "b5e61d" : "3B5982", "8fb814" : "1F3B60", "556d0c" : "0B213F", "dc1f00" : "B3E4FC", "be1b00" : "7CCCF4", "951500" : "44B3EA", "d9c189" : "DED115", "a38d59" : "A3940B", "735e3a" : "675A02" },
+  /* YELLOW - WHITE - BROWN */
+  { "ffca8a" : "FFFF72", "e0975c" : "FFF834", "a85636" : "DED115", "6f2919" : "A3940B", "b5e61d" : "A35D5D", "8fb814" : "823B3B", "556d0c" : "601F1F", "dc1f00" : "f7f7f7", "be1b00" : "d4d4d4", "951500" : "b3b3b3", "d9c189" : "967969", "a38d59" : "674a3a", "735e3a" : "4a2d1d" },
+  /* BLACK - BLUE - YELLOW */
+  { "ffca8a" : "717171", "e0975c" : "4e4e4e", "a85636" : "2e2e2e", "6f2919" : "151515", "b5e61d" : "424146", "8fb814" : "1F1E25", "556d0c" : "14121E", "dc1f00" : "44B3EA", "be1b00" : "2492C9", "951500" : "136993", "d9c189" : "FFF370", "a38d59" : "FFD930", "735e3a" : "E2A712" },
+  /* YELLOW - YELLOW - BROWN*/
+  { "ffca8a" : "FFF834", "e0975c" : "DED115", "a85636" : "A3940B", "6f2919" : "675A02", "b5e61d" : "823B3B", "8fb814" : "601F1F", "556d0c" : "3F0B0B", "dc1f00" : "FDFFAA", "be1b00" : "FFF370", "951500" : "FFD930", "d9c189" : "E2A712", "a38d59" : "A56A09", "735e3a" : "693701" },
+  /* PURPLE - PURPLE - YELLOW */
+  { "ffca8a" : "A5358B", "e0975c" : "7A1C6D", "a85636" : "4F094C", "6f2919" : "230326", "b5e61d" : "59203C", "8fb814" : "3B0B23", "556d0c" : "1F0311", "dc1f00" : "DAB6ED", "be1b00" : "B185DB", "951500" : "8055C6", "d9c189" : "FFD930", "a38d59" : "E2A712", "735e3a" : "A56A09" },
+  /* TAN - WHITE - TEAL */
+  { "ffca8a" : "eed1c1", "e0975c" : "d4b7a7", "a85636" : "b59888", "6f2919" : "967969", "b5e61d" : "b59888", "8fb814" : "866959", "556d0c" : "583b2b", "dc1f00" : "f7f7f7", "be1b00" : "d4d4d4", "951500" : "b3b3b3", "d9c189" : "15DE8A", "a38d59" : "0BA35E", "735e3a" : "02673D" }
+  ]
+}

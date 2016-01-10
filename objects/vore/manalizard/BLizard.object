@@ -55,7 +55,7 @@
   "animation" : "secret.animation",
   "animationCustom" : {
     "sounds" : {
-	  "swallow" : [ "/sfx/humanoid/drink.wav" ],
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
 	  "spit" : [ "/sfx/objects/eggLay.wav" ],
 	  "belly1" : [ "/sfx/objects/belly1.wav" ],
 	  "belly2" : [ "/sfx/objects/belly2.wav" ],

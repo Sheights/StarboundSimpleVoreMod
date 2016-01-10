@@ -1,0 +1,174 @@
+{
+  "kind" : "fauxkineptic",
+  "playerSpecies" : false,
+  "nameGen" : [ "/species/fauxkinepticmalenamegen.config:names", "/species/fauxkinepticfemalenamegen.config:names" ],
+  "ouchNoises" : [ "/sfx/humanoid/kineptichurt.wav", "/sfx/humanoid/kineptichurt.wav" ],
+  "gruntNoises" : [ ["/sfx/silent.wav"],["/sfx/silent.wav"] ],
+  "charGenTextLabels" : [ "PATCH COLOR", "CHEEKS", "ARMWEAR", "OUTFIT", "FUR COLOR", "BINDI COLOR", "ARMWEAR COLOR", "OUTFIT COLOR", "KINEPTIC", "PERSONALITY" ],
+  "skull" : "/humanoid/any/dead.png",
+  "defaultBlueprints" : {
+    "tier1" : [
+      { "item" : "humantier1hammer" },
+      { "item" : "humantier1shortsword" },
+      { "item" : "humantier1broadsword" },
+      { "item" : "humantier1spear" },
+      { "item" : "humantier1axe" },
+      { "item" : "humantier1dagger" },
+      { "item" : "humantier1head" },
+      { "item" : "humantier1chest" },
+      { "item" : "humantier1pants" },
+      { "item" : "conceptchest" },
+      { "item" : "conceptlegs" },
+      { "item" : "coolchest" },
+      { "item" : "coollegs" },
+      { "item" : "sweatervestchest" },
+      { "item" : "sweatervestlegs" },
+      { "item" : "workoutchest" },
+      { "item" : "workoutlegs" },
+
+      { "item" : "humanstoragelocker" },
+      
+      { "item" : "flaghuman" },
+      
+      // { "item" : "humantier2head" },
+      // { "item" : "humantier2chest" },
+      // { "item" : "humantier2pants" },
+      { "item" : "humantier2hammer" },
+      { "item" : "humantier2shortsword" },
+      { "item" : "humantier2broadsword" },
+      { "item" : "humantier2spear" },
+      { "item" : "humantier2axe" },
+      { "item" : "humantier2dagger" },
+      
+      { "item" : "humantier3head" },
+      { "item" : "humantier3chest" },
+      { "item" : "humantier3pants" },
+      { "item" : "humantier3hammer" },
+      { "item" : "humantier3shortsword" },
+      { "item" : "humantier3broadsword" },
+      { "item" : "humantier3spear" },
+      { "item" : "humantier3axe" },
+      { "item" : "humantier3dagger" },
+      
+      // { "item" : "humantier4head" },
+      // { "item" : "humantier4chest" },
+      // { "item" : "humantier4pants" },
+      { "item" : "humantier4hammer" },
+      { "item" : "humantier4shortsword" },
+      { "item" : "humantier4broadsword" },
+      { "item" : "humantier4spear" },
+      { "item" : "humantier4axe" },
+      { "item" : "humantier4dagger" },
+
+      { "item" : "humantier5ahead" },
+      { "item" : "humantier5achest" },
+      { "item" : "humantier5apants" },
+      { "item" : "humantier5dagger" },
+
+      { "item" : "humantier5mhead" },
+      { "item" : "humantier5mchest" },
+      { "item" : "humantier5mpants" },
+
+      { "item" : "humantier5shead" },
+      { "item" : "humantier5schest" },
+      { "item" : "humantier5spants" },
+      { "item" : "humantier8hammer" },
+      { "item" : "humantier8shortsword" },
+      { "item" : "humantier8broadsword" },
+      { "item" : "humantier8spear" },
+      { "item" : "humantier8axe" },
+      { "item" : "humantier8dagger" },
+
+      // { "item" : "humantier6ahead" },
+      // { "item" : "humantier6achest" },
+      // { "item" : "humantier6apants" },
+      { "item" : "humantier6dagger" },
+
+      // { "item" : "humantier6mhead" },
+      // { "item" : "humantier6mchest" },
+      // { "item" : "humantier6mpants" },
+
+      // { "item" : "humantier6shead" },
+      // { "item" : "humantier6schest" },
+      // { "item" : "humantier6spants" },
+      { "item" : "humantier10hammer" },
+      { "item" : "humantier10shortsword" },
+      { "item" : "humantier10broadsword" },
+      { "item" : "humantier10spear" },
+      { "item" : "humantier10axe" },
+      { "item" : "humantier10dagger" }
+    ]
+  },
+  
+  "altOptionAsUndyColor" : true,
+  "headOptionAsHairColor" : true,
+  "altOptionAsHairColor" : true,
+  "hairColorAsBodySubColor" : true,
+  
+  "genders" : [
+    {
+      "name" : "male",
+      "image" : "/interface/title/male.png",
+      "characterImage" : "/interface/title/kinepticmale.png",
+      "hair" : [ "1" ],
+      "shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
+      "pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    },
+    {
+      "name" : "female",
+      "image" : "/interface/title/female.png",
+      "characterImage" : "/interface/title/kinepticfemale.png",
+	  "hair" : [ "1" ],
+      "shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
+      "pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    }
+  ],
+  "bodyColor" : [
+// 	{ "FFCA8A" : "xxxxxx", "E0975C" : "xxxxxx", "A85636" : "xxxxxx", "6F2919" : "xxxxxx" }, // Template
+
+	{ "FFCA8A" : "F1F2F2", "E0975C" : "D3D4D4", "A85636" : "AEAFAF", "6F2919" : "8A8B8B" }, //Snow
+	{ "FFCA8A" : "A7A8A8", "E0975C" : "8D8E8E", "A85636" : "6E6F6F", "6F2919" : "495050" }, //Ash
+	{ "FFCA8A" : "DAF1FF", "E0975C" : "BFCEE9", "A85636" : "A1A7BB", "6F2919" : "838595" }, //Ice
+	{ "FFCA8A" : "94A7BD", "E0975C" : "7C89A0", "A85636" : "535869", "6F2919" : "494B59" }, //Slate
+	{ "FFCA8A" : "FCF4D1", "E0975C" : "EBDEB8", "A85636" : "BBB89D", "6F2919" : "95957F" }, //Dust 	
+	{ "FFCA8A" : "C9B086", "E0975C" : "AB9D71", "A85636" : "817C5D", "6F2919" : "5B5B44" }, //Sand 
+	{ "FFCA8A" : "D3B574", "E0975C" : "BC8F4F", "A85636" : "9B5F32", "6F2919" : "844E27" } //Orange
+  ],
+  "undyColor" : [
+//  { "787878" : "xxxxxx", "4E4E4E" : "xxxxxx", "3C3C3C" : "xxxxxx", "212121" : "xxxxxx" }, // Template
+	
+	{ "787878" : "F2F2F2", "4E4E4E" : "D4D4D4", "3C3C3C" : "AFAFAF", "212121" : "8B8B8B" }, //Snow
+	{ "787878" : "A8A8A8", "4E4E4E" : "8E8E8E", "3C3C3C" : "6F6F6F", "212121" : "505050" }, //Ash
+  	{ "787878" : "5C5C5C", "4E4E4E" : "4F4F4F", "3C3C3C" : "3D3D3D", "212121" : "2C2C2C" }, //Pumice
+	{ "787878" : "DAF1FF", "4E4E4E" : "BFCEE9", "3C3C3C" : "A1A7BB", "212121" : "838595" }, //Ice
+	{ "787878" : "94A7BD", "4E4E4E" : "7C89A0", "3C3C3C" : "535869", "212121" : "494B59" }, //Slate
+  	{ "787878" : "435365", "4E4E4E" : "384356", "3C3C3C" : "30333E", "212121" : "23252D" }, //Stone
+	{ "787878" : "FCF4D1", "4E4E4E" : "EBDEB8", "3C3C3C" : "BBB89D", "212121" : "95957F" }, //Dust 	
+	{ "787878" : "CAB086", "4E4E4E" : "AC9D71", "3C3C3C" : "827C5D", "212121" : "5C5B44" }, //Sand 
+	{ "787878" : "88765A", "4E4E4E" : "73694C", "3C3C3C" : "57533E", "212121" : "3E3D2D" }, //Dirt
+	{ "787878" : "9A5F55", "4E4E4E" : "893E3A", "3C3C3C" : "71252D", "212121" : "601C25" }, //Burgundy
+	{ "787878" : "D3B574", "4E4E4E" : "BC8F4F", "3C3C3C" : "9B5F32", "212121" : "844E27" }, //Orange
+	{ "787878" : "3D7A91", "4E4E4E" : "2B5768", "3C3C3C" : "1C3944", "212121" : "172D35" }, //Teal
+	{ "787878" : "BBACBF", "4E4E4E" : "98879E", "3C3C3C" : "6D6077", "212121" : "52485E" } //Lavender	
+  ],
+  "hairColor" : [
+//   { "67FFA2" : "xxxxxx", "1AD589" : "xxxxxx", "1B8D78" : "xxxxxx", "1C3B42" : "xxxxxx" }, // Template
+
+	{ "67FFA2" : "F92F00", "1AD589" : "D51D23", "1B8D78" : "8D1424", "1C3B42" : "421C29" }, //Blood
+    { "67FFA2" : "F9A701", "1AD589" : "D57B1B", "1B8D78" : "8D6118", "1C3B42" : "42281D" }, //Flame
+    { "67FFA2" : "FFEC69", "1AD589" : "D5A31A", "1B8D78" : "996921", "1C3B42" : "42331A" }, //Honey
+	{ "67FFA2" : "92F901", "1AD589" : "A5D51C", "1B8D78" : "738D13", "1C3B42" : "40421B" }, //Acid
+    { "67FFA2" : "67FFA0", "1AD589" : "1AD587", "1B8D78" : "1B8D76", "1C3B42" : "1C3B40" }, //Aqua 
+    { "67FFA2" : "68E0FE", "1AD589" : "1CB4D4", "1B8D78" : "17688C", "1C3B42" : "1C2F41" }, //Sky
+    { "67FFA2" : "C82FFE", "1AD589" : "8D1DD4", "1B8D78" : "48148E", "1C3B42" : "2E1C41" }, //Violet
+	{ "67FFA2" : "FF67F1", "1AD589" : "D51A9D", "1B8D78" : "8D1B51", "1C3B42" : "421C21" } //Candy
+  ]
+}

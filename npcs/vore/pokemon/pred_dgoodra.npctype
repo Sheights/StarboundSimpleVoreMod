@@ -1,0 +1,158 @@
+{
+  "type" : "pred_dgoodra",
+  "baseType" : "villager",
+  
+  "npcname" : "Goodra",
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Something feels wrong here.",
+							"But, I really liked that. Put it back!",
+							"That one was my favorite. Can I have it back?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Wha? Why did that happen?",
+							"Is it cold in here, or is it just me?",
+							"I like the stars at night, and the rain, but I would like to have a roof over my head sometimes.",
+							"If you need some glue, slime works just as well!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"More friends? I mean I want them but not this close.",
+							"I thought you liked me for me...",
+							"Oh thank you, but could you put that elsewhere?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"If you want more hugs, you'll have to be nicer to me.",
+						"It just doesn't feel as warm and friendly as it did before.",
+						"I'm only smiling because I'm thinking of hugs. I'm really kind of sad."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Goodbye!",
+						"I'll see you again one day, but I need to leave.",
+						"I enjoyed our time together, but it's time for me to say goodbye."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Here I am!",
+						"There you are!",
+						"Hi! Hi!"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"I got you this gift for being so nice to me <3",
+						"Would you like a hug instead?",
+						"I think you dropped this the last time I hugged you.",
+						"It might be a little sticky."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Goodraaa!",
+					"D-Dra?",
+					"Gooo!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"G-Goo!",
+						"Goodra!",
+						"Draaa!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Goo! Dra! Goo! Dra!",
+					"Goo! Goo! Goo!",
+					"Dra! Dra! Dra!",
+					"You can do it!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Can I come out now?",
+					"Is everyone okay?",
+					"Ooh, That was a too worrying for me."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+					"My horns are really strong.",
+					"Hello, nice person!",
+					"Hehehe! You found me!",
+					"I want to have a long conversation about slime!",
+					"Aww. Look at you!",
+					"I love the rain, except it washes away my slime.",
+					"I really love hugs and I really love you and I really love hugging you!"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/pokemon/dgoodra.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "chest" : [
+              { "name" : "goodranormalchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "goodranormallegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

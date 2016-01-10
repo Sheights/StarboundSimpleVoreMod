@@ -1,0 +1,17 @@
+{
+	"projectileName" : "healprojectile",
+	"bounces" : -1,
+	"frames" : "invisibleprojectile.png",
+	"frameNumber" : 1,
+	"animationCycle" : 1,
+	"speed" : 0,
+	"animationLoops" : false,
+	"flippable" : true,
+	"power" : 0,
+	"damageTeam" : { "type" : "indiscriminate" },
+	"damageKind" : "default",
+	
+	"statusEffects" : [
+    "npcheal"
+	]
+}

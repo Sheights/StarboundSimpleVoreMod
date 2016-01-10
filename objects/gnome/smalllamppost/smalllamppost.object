@@ -1,0 +1,48 @@
+{
+  "objectName" : "gnomesmalllamppost",
+  "colonyTags" : ["gnome"],
+  "rarity" : "Common",
+  "category" : "furniture",
+  "price" : 80, 
+
+  "description" : "A tiny lamppost. Try not to kick it over.",
+  "shortdescription" : "Tiny Lamppost",
+  "race" : "generic",
+
+  "fullbright" : true,
+  "lightColor" : [150, 150, 150],
+
+  "apexDescription" : "A tiny lamppost.",
+  "avianDescription" : "What a tiny lamppost.",
+  "floranDescription" : "Sssmall light on ssstick.",
+  "glitchDescription" : "Observant. A tiny lamppost.",
+  "humanDescription" : "A little lamppost.",
+  "hylotlDescription" : "So small and adorable.",
+  "novakidDescription" : "A small lamppost. What's it good for?",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "smalllamppost.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "smalllamppost.animation",
+  "animationParts" : {
+    "bg" : "smalllamppost.png",
+    "fg" : "smalllamppostlit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+  
+  "interactive" : false,
+
+  "inboundNodes" : [ [0, 0] ]
+}

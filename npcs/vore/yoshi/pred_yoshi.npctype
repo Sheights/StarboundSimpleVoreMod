@@ -1,0 +1,143 @@
+{
+  "type" : "pred_yoshi",
+  "baseType" : "villager",
+  
+   "npcname" : "Yoshi",
+   "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+				"*angry* Yoshi!",
+				"Hrnmmm"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+				"*angry* Yoshi!",
+				"Hrnmmm",
+				"Wahhh!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+				"Yoshi?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+				"*angry* Yoshi!",
+				"Hrnmmm"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+				"*angry* Yoshi!",
+				"*sad* Yoshi...",
+				"Hrnmmm"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+				"Yoshi!",
+				"Yoshi.",
+				"Yoshi?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+				"*happy* Yoshi!",
+				"Wooaah~"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+			  "Wahhh!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+			  "Yoshi!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+			  "Yoshi!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+			  "Yoshi?",
+			  "Wooaah~"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+			"Yoshi!",
+			"Yoshi.",
+			"Yoshi?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/yoshi/yoshi.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "yoshihead1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ] } }
+            ],
+			"chest" : [
+              { "name" : "yoshichest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ] } }
+            ],
+            "legs" : [
+              { "name" : "yoshilegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

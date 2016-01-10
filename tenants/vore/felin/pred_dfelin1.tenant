@@ -1,0 +1,27 @@
+{
+  "name": "pred_dfelin1",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "felin": 6,
+	"dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "fauxfelin",
+      "type": "pred_dfelin",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "felinGift"
+  }
+}
