@@ -9,8 +9,8 @@
   "shortdescription" : "Kineptic Breast",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "pantsm.png",
-  "femaleFrames" : "pantsf.png",
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
   
   "colorOptions" : [
   /* STONE - ORANGE */
