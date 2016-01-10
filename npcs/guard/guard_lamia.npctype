@@ -1,0 +1,140 @@
+{
+  "type" : "guard_lamia",
+  "baseType" : "guard",
+
+  "damageTeamType" : "friendly",
+
+  "scriptConfig" : {
+    "attackerLimit" : 8,
+    "attackerLimitCooldown" : 3,
+
+    "idleTimeRange" : [1, 2],
+
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/grumble.config:tagCriteria",
+          "enclosedArea" : "/dialog/grumble.config:enclosedArea",
+          "otherDeed" : "/dialog/grumble.config:otherDeed",
+          "severe" : "/dialog/grumble.config:severe",
+          "final" : "/dialog/grumble.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/arrivedhome.config:beacon",
+          "rent" : "/dialog/arrivedhome.config:rent"
+        }
+      },
+      "hail" : {
+        "default" : {
+          "default" : [
+            "Good to see you!"
+          ]
+        },
+        "avian" : {
+          "default" : [
+            "I aim to protect this land in the name of Kluex!",
+            "This isn't such a bad job... No Stargazers here, at least.",
+            "Hello, friend! May Kluex keep you safe through me.",
+            "Kluex bless you!"
+          ]
+        },
+        "apex" : {
+          "default" : [
+            "Greetings. Back from adventuring?",
+            "Have you gathered intel on your ventures?",
+            "The area is secure, so worry not.",
+            "Don't worry, I have this location under control."
+          ]
+        },
+        "floran" : {
+          "default" : [
+            "Floran wantsss to get into fight...",
+            "Floran ready to keep area sssafe!",
+            "Floran isss dressed for battle!",
+            "Do not worry, Floran will ssstab intrudersss."
+          ]
+        },
+        "glitch" : {
+          "default" : [
+            "Subservient. I live to protect.",
+            "Proud. I have experience guarding things. Like you.",
+            "Observant. I need to keep the area safe from hostile activity.",
+            "Questioning. When do you think I could take a break?"
+          ]
+        },
+        "human" : {
+          "default" : [
+            "I wasn't slacking off, I swear!",
+            "Man, look at me, being all guard-y and not sleeping on the job.",
+            "I have to keep the area clear of hostile forces. Easy stuff.",
+            "I love being employed as a guard. Gives me lots of thinking time."
+          ]
+        },
+        "hylotl" : {
+          "default" : [
+            "There is an elegance in living to protect others, don't you think?",
+            "Greetings! May you live calmly whilst I'm here to protect you.",
+            "Stay peaceful, for I'm here to keep the area safe.",
+            "Hey! If you get the chance, you should watch as I elegantly defeat hostile forces."
+          ]
+        }
+      }
+    }
+  },
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "humantier1head" } ],
+            "chest" : [ { "name" : "humantier1chest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [2, [
+          {
+            "head" : [ { "name" : "humantier2head" } ],
+            "chest" : [ { "name" : "humantier2chest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [3, [
+          {
+            "head" : [ { "name" : "humantier3head" } ],
+            "chest" : [ { "name" : "humantier3chest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [4, [
+          {
+            "head" : [ { "name" : "humantier4head" } ],
+            "chest" : [ { "name" : "humantier4chest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ] 
+  }
+}

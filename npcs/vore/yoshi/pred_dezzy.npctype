@@ -1,0 +1,135 @@
+{
+  "type" : "pred_dezzy",
+  "baseType" : "villager",
+  
+   "npcname" : "Dezzy",
+   "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+				"I would like for you to return that furniture back."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+				"Unless you want to stay in my belly for good, you should probably fix the hole you've made."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+				"I guess you've found a better tenant to stay with you."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+				"Unless you want me to disappear, you should change up the place or I'm going to leave."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+				"Goodbye..."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+				"Hello there, how can I help you?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+				"Thank you for letting me stay here. I got this for you.",
+				"The last person that stayed in my belly left this with me.",
+				"Yoshi."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+			  "I'm in need of assistance!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+			  "Go help out the others, they're in danger."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+			  "Help has arrived!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+			  "Yoshi Yoshi! <3"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+			"If you're need of a warm place to rest at, I'll always make room for you ^.=.~",
+			"I hope your travels through space will be a pleasant and fun one.",
+			"Yoshi?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/yoshi/dezzy.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "dezzyyoshihead11", "parameters" : { "colorIndex" : 8 } },
+			  { "name" : "dezzyyoshihead21", "parameters" : { "colorIndex" : 8 } }
+            ],
+			"chest" : [
+              { "name" : "dezzyyoshichest", "parameters" : { "colorIndex" : 8 } }
+            ],
+            "legs" : [
+              { "name" : "dezzyyoshilegs", "parameters" : { "colorIndex" : 8  } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

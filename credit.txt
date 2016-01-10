@@ -7,56 +7,58 @@ Apex 						- treebuddy
 Asari 						- treebuddy
 Avali 						- treebuddy
 Avian 						- treebuddy
-Avian blue 					- treebuddy
-Avian orange 					- treebuddy
 Bunny 						- treebuddy
+Bunyip						- Rossmallo
 Catlike 					- treebuddy
 Chica 						- treebuddy
-Chocobo Anthro 					- treebuddy
-Chocobo Feral 					- treebuddy
-Chubby Avian 					- Jeschke
+Chocobo Anthro 				- treebuddy
+Chocobo Feral 				- treebuddy
+Chubby Avian 				- Jeschke
 Dom Bunny					- treebuddy
 Dragon 						- treebuddy
-Dragon Black 					- Vinderex
-Dragon Blue 					- Vinderex
-Dragon Brown 					- Vinderex
-Dragon Green 					- Vinderex
+Dragon Black 				- Vinderex
+Dragon Blue 				- Vinderex
+Dragon Brown 				- Vinderex
+Dragon Green 				- Vinderex
 Dragon Red 					- Vinderex
-Dragon Yellow 					- Vinderex
-Female Nude 					- treebuddy
+Dragon Yellow 				- Vinderex
+Female Nude 				- treebuddy
 Floran 						- treebuddy
 Foxgirl 					- treebuddy
 Freddy 						- treebuddy
-Frog						- Sheights
+Frog						- based on the Frog enemy from 'Fromage' - Sheights
 Gardetrap 					- rez
 Gardevoir 					- treebuddy
-Giant Lucaria 					- treebuddy
+Giant Lucaria 				- treebuddy
 Glitch 						- treebuddy
-Glitch Alt Del 					- treebuddy
+Glitch Alt Del 				- treebuddy
 Glaze						- Glaze
+Gnaw						- Rossmallo
 Goodra						- treebuddy
-Goodra Animated					- Glaze
+Goodra Animated				- Glaze
 Greninja 					- treebuddy
-Greninja Male 					- treebuddy
+Greninja Male 				- treebuddy
 Guilmon 					- rez
 Harpy 						- treebuddy
 Hylotl 						- treebuddy
 Kangaroo 					- treebuddy
-Lamina (All parts)				- treebuddy
-Link Female 					- treebuddy
-Linko						- treebuddy + linko
+Lamina (All parts)			- treebuddy
+Link Female 				- treebuddy
+Linko						- based on Linko's OC, Linko - treebuddy + linko
 Lizard 						- treebuddy
 Lucario 					- rez
 Maid Pale 					- treebuddy
 Maid Tan 					- treebuddy
-Mana Lizards					- Sheights
+Mavis						- treebuddy
+Mana Lizards				- Sheights
 Meloetta 					- treebuddy
-Meloetta Human 					- treebuddy
+Meloetta Human 				- treebuddy
 Mewtwo 						- Rez
 Midna 						- treebuddy
 Miku 						- treebuddy
 Miranda 					- treebuddy
 Miss Fox					- treebuddy
+Miss Glitch					- treebuddy
 Miss Wolf					- treebuddy
 Muffet						- Glaze
 Naga 						- pootisman24
@@ -66,39 +68,66 @@ Plant						- Glaze
 Quarian 					- treebuddy
 Renamon 					- treebuddy
 Rheyya						- treebuddy
+Ruby Snoot					- based on Ruby Snoot's OC, Ruby Snoot - treebuddy
 Ruto						- treebuddy + cakemanisreal
 Scrafy						- rez
 Sergal						- treebuddy
 Serperior 					- bobbidys
 Shantae 					- treebuddy
 Shark 						- treebuddy
+Snake						- based on the Snake enemy from 'Fromage' - Sheights
 Starfire 					- treebuddy
 Succubus 					- pootisman24
-Tallcreature 					- treebuddy
-Tallcreature Black 				- treebuddy
+Tallcreature 				- treebuddy
+Tallcreature Black 			- treebuddy
 Tally 						- treebuddy
+Tartii						- based on Nummy Nomz OC, Tartii - treebuddy (thanks Nummy Nomz <3)
 Toriel						- Glaze
 Veemon 						- rez
-Wii Fit Trainer(s)				- treebuddy + cakemanisreal
+Wii Fit Trainer(s)			- treebuddy + cakemanisreal
 Wolf 						- treebuddy
 Wolfgirl 					- treebuddy
 Wolfsit 					- treebuddy
 Wolfy 						- treebuddy
 Xenomorph 					- treebuddy
-Yoko						- treebuddy
+Yoko						- based on Ardith Prime's OC, Yoko - treebuddy
 Yoshi 						- Sheights
 Zelda						- treebuddy + cakemanisreal
-Zero Suit Samus					- treebuddy + cakemanisreal
+Zero Suit Samus				- treebuddy + cakemanisreal
 Zoroark 					- bobbidys
 
 NPC Predators:
 
-Avali						- Fenix
-Catlike						- Treebuddy
+Avali						- based on Avali Triage mod - Sheights
+Cat							- Treebuddy
+Catfish						- based on character by Very/Becdecorbin. http://verylascivious.tumblr.com/
+Centaur						- Treebuddy
+De'vout						- Bruyaglovae
+Deertaur					- Treebuddy
+Dezzy						- based on Dezzykitsune OC, Dezzy Yoshi - Treebuddy
 Dragon						- Treebuddy
+Felin						- based on Felin mod - Sheights
 Fox							- Treebuddy
+Goodra						- Sheights
 Harpy						- Treebuddy + Sheights
+Human						- Paradox
+Kangaru						- based on Kangaru mod - Sheights
+Kineptic					- based on Kineptic mod - Sheights
+Kirhos						- based on Kirhos mod - Sheights
+Lalim						- Bruyaglovae
 Lamia						- Treebuddy
+Lopunny						- based on Lopunny mod - Treebuddy
+Lucario						- based on Lucario mod - Treebuddy
+Mantizi						- based on Mantizi mod - Sheights
 Newt						- Sheights
+Orca						- Sheights
+Orcana						- based on Orcana mod - Sheights
+Reindeer					- Treebuddy
 Slime						- ArgobargSoup
+Shark						- Sheights
+Shark(Anthro)				- Treebuddy
+Spider GirlWolf				- Sheights
 Wolf						- Treebuddy
+Unicorn						- Treebuddy
+Zoroark						- Treebuddy
+Yoshi						- Treebuddy

@@ -1,0 +1,42 @@
+{
+  "itemName" : "felinhead7",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : " ",
+  "shortdescription" : "Felin Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png",
+  
+  "colorOptions" : [
+  /* WHITE - WHITE - BLUE */
+  { "FFCA8A" : "FFFFFF", "E0975C" : "D7D5DB", "A85636" : "8E8E9B", "6F2919" : "6D6D6D", "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D", "F7E7B2" : "B5C2FA", "D9C189" : "758BF8", "A38D59" : "4A5BA5", "735E3A" : "272665" },
+  /* PINK - PINK - GREEN */
+  { "FFCA8A" : "EEBFEA", "E0975C" : "DE8DDD", "A85636" : "C060BB", "6F2919" : "9A4B9C", "F32200" : "EEBFEA", "DC1F00" : "DE8DDD", "BE1B00" : "C060BB", "951500" : "9A4B9C", "F7E7B2" : "FF00FF", "D9C189" : "4ECE61", "A38D59" : "34AE47", "735E3A" : "228A38" },
+  /* TEAL - TEAL - ORANGE*/
+  { "FFCA8A" : "7FDADD", "E0975C" : "61AEBF", "A85636" : "4E7A90", "6F2919" : "3F566E", "F32200" : "7FDADD", "DC1F00" : "61AEBF", "BE1B00" : "4E7A90", "951500" : "3F566E", "F7E7B2" : "FFC149", "D9C189" : "FFA500", "A38D59" : "C67B00", "735E3A" : "845200" },
+  /* RED - RED - BLACK */
+  { "FFCA8A" : "F0608B", "E0975C" : "CD5061", "A85636" : "95484C", "6F2919" : "6A3836", "F32200" : "F0608B", "DC1F00" : "CD5061", "BE1B00" : "95484C", "951500" : "6A3836", "F7E7B2" : "FF00FF", "D9C189" : "6F6D85", "A38D59" : "525269", "735E3A" : "3E4352" },
+  /* ORANGE - ORANGE - PURPLE */
+  { "FFCA8A" : "FFC149", "E0975C" : "FFA500", "A85636" : "C67B00", "6F2919" : "845200", "F32200" : "FFC149", "DC1F00" : "FFA500", "BE1B00" : "C67B00", "951500" : "845200", "F7E7B2" : "E2B2FF", "D9C189" : "B374D4", "A38D59" : "7C4992", "735E3A" : "4B2655" },
+  /* YELLOW - YELLOW - MAGENTA */
+  { "FFCA8A" : "F3EFA3", "E0975C" : "E3D965", "A85636" : "BAA94A", "6F2919" : "98832D", "F32200" : "F3EFA3", "DC1F00" : "E3D965", "BE1B00" : "BAA94A", "951500" : "98832D", "F7E7B2" : "FF00FF", "D9C189" : "7F3B6D", "A38D59" : "6A2E53", "735E3A" : "4B1D30" },
+  /* BROWN - BROWN - BLONDE */
+  { "FFCA8A" : "998779", "E0975C" : "836752", "A85636" : "625244", "6F2919" : "4E3B2E", "F32200" : "998779", "DC1F00" : "836752", "BE1B00" : "625244", "951500" : "4E3B2E", "F7E7B2" : "F3EFA3", "D9C189" : "E3D965", "A38D59" : "BAA94A", "735E3A" : "98832D" },
+  /* BLACK - WHITE - WHITE */
+  { "FFCA8A" : "737275", "E0975C" : "595760", "A85636" : "3F3E43", "6F2919" : "212123", "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D", "F7E7B2" : "FFFFFF", "D9C189" : "D7D5DB", "A38D59" : "8E8E9B", "735E3A" : "6D6D6D" },
+  /* PURPLE - WHITE - DARK PURPLE */
+  { "FFCA8A" : "D18BD5", "E0975C" : "A766BC", "A85636" : "814797", "6F2919" : "693367", "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D", "F7E7B2" : "FF00FF", "D9C189" : "653B7F", "A38D59" : "562E6A", "735E3A" : "3F1D4B" },
+  /* GREY - GREEN - GREEN */
+  { "FFCA8A" : "9E9E9E", "E0975C" : "696969", "A85636" : "434343", "6F2919" : "191919", "F32200" : "DBF4B8", "DC1F00" : "A4D66B", "BE1B00" : "6F9E47", "951500" : "426D26", "F7E7B2" : "DBF4B8", "D9C189" : "A4D66B", "A38D59" : "6F9E47", "735E3A" : "426D26" },
+  /* DARK PURPLE - WHITE - BLACK */
+  { "FFCA8A" : "D18BD5", "E0975C" : "A766BC", "A85636" : "814797", "6F2919" : "693367", "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D", "F7E7B2" : "FF00FF", "D9C189" : "525252", "A38D59" : "363636", "735E3A" : "161616" },
+  /* NAKED - WHITE - BROWN */
+  { "FFCA8A" : "FFCA8A", "E0975C" : "E0975C", "A85636" : "A85636", "6F2919" : "6F2919", "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D", "F7E7B2" : "FF00FF", "D9C189" : "50422F", "A38D59" : "36261E", "735E3A" : "170F0D" }
+  ]
+}

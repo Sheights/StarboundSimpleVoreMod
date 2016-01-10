@@ -8,8 +8,9 @@ Contents:
 		A. The Bellybound Store
 		B. Placable Pred Objects
 		C. Furniture
-		D. NPCs
-		E. RP Tool
+		D. NPC Predators
+		E. NPC Prey
+		F. RP Tool
 	3. Contribution
 	4. Ending
 	
@@ -70,104 +71,78 @@ Contents:
 	the purple border, or 'legendary' rarity. All of these
 	objects do not specially interact with the player, but do
 	carry a special 'tag' for the tenant system (See the next
-	section for more information.) All furniture has the a
-	'vore' tag associated with it.
+	section for more information.) All furniture has every
+	vore tag associated with it. So you can pick up that ugly
+	badge after you spawn your tenant.
 	
------------------------------------------------------------------------------------------
-| Item					| Cost			|Tags											|
------------------------------------------------------------------------------------------
-| Box of Condoms		| 100 pixels	| odd, cvore									|
-| Consume: by Sheights	| 100 pixels	| pretty, dvore									|
-| Devourcraft Poster	| 100 pixels	| vore											|
-| Dragon Sleeping Bag	| 150 pixels	| vore											|
-| Emerald Vorb			| 2000 pixels	| dvore											|
-| Fed Mimic				| 1000 pixels	| hoard, storage, valuable, dvore				|
-| Lamia Poster			| special		| lamia, pretty, vore							|
-| Mimic					| 1000 pixels	| hoard, storage, valuable, vore				|
-| Ode de Endo			| 100 pixels	| pretty, vore									|
-| Shark Tank			| 1000 pixels	| pretty, sea, dvore							|
-| Slug Cage				| 1000 pixels	| pretty, sea, vore								|
-| Spit Roast			| 600 pixels	| floran, floranvillage, cooking, light, vore	|
-| Spooky Cauldron*		| 130 pixels	| spooky, vore									|
-| Throne of Squish		| 95 pixels		| vore											|
-| Tummy Tent			| 65 pixels		| explorer, human, vore							|
-| Vorb					| 2000 pixels	| vore											|
------------------------------------------------------------------------------------------
-*Already available in the game. Just added the vore tag to it.
+-----------------------------------------
+| Item					| Cost			|
+-----------------------------------------
+| Badges				| 200 pixels	|
+| Box of Condoms		| 100 pixels	|
+| Consume: by Sheights	| 100 pixels	|
+| Devourcraft Poster	| 100 pixels	|
+| Dragon Sleeping Bag	| 150 pixels	|
+| Emerald Vorb			| 2000 pixels	|
+| Fed Mimic				| 1000 pixels	|
+| Lamia Poster			| special		|
+| Mimic					| 1000 pixels	|
+| Ode de Endo			| 100 pixels	|
+| Shark Tank			| 1000 pixels	|
+| Slug Cage				| 1000 pixels	|
+| Spit Roast			| 600 pixels	|
+| Spooky Cauldron*		| 130 pixels	|
+| Throne of Squish		| 95 pixels		|
+| Tummy Tent			| 65 pixels		|
+| Vorb					| 2000 pixels	|
+-----------------------------------------
+*Already available in the game. Just added the vore tags to it.
 	
 	*********************************************************
 	D. NPCs
 	*********************************************************
 	
-	The USSV mod also offers a unique form of content in NPCs
+	For a complete list of tenants and required tags, check 
+	'npcpredchart.png' in the root of this mod.
+	For an indepth view of the base tenant system. Please
+	read http://starbounder.org/Tenant
+	
+	The USSV mod offers a unique form of content in NPCs
 	and tenants. Each of our special tenants has the
 	unique ability to seemingly consume the player and other
-	NPCs around them. To summon one of these NPCs you need
-	to build them a room. The room must be a closed
-	environment including background. It must also contain at
-	least the required tags in tiles. Each item at least one
-	tag associated with it. Every tile it takes up in game
-	counts as one tile torwards the requirements. NPCs
-	summoned with the 'vore' tag will not harm the player
-	while NPCs summoned with the 'dvore' tag will digest
-	their prey. Refer to the table below for all available
-	tenants and their required tags. The '(D)Vore' tag means
-	either a 'vore' tag, or a 'dvore' tag can be used. All of
-	this can be explained in more detail if you research the
-	colony/tenant system.
-
----------------------------------------------------------------------------------------------------------------------------------------------
-|	Pred	| Colors and Alt Forms	| Required Tags													| Extra Features						|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Aqua		| Catfish, Orca,		| Catfish: 24 Swamp, 1 Door, 1 Light, 1(D)Vore					| Will burp up the victim after eating	|
-|			| Shark					| Orca and Shark: 24 Sea, 1 Door, 1 Light, 1(D)Vore				| Will burp up bones if the subject dies|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Avali		| Standard				| 6 Avali, 1 Door, 1 Light, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Cat		| Black,				| 1 Door, 1 Light, 1(D)Vore										|										|
-|			| CV					| 1 Door, 1 Light, 1 CVore, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Dragon		| Crystal,				| 1 Door, 1 Light, 24 Crystalline, 1(D)Vore						| Can hold 3 prey at once				|
-|			| Green					| 1 Door, 8 Glitchcastle, 1 Light, 4 Valuable, 1(D)Vore			|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Fox		| Standard, Toxic,		| 1 Door, 1 Light, 1(D)Vore										|										|
-|			| Volcano, Winter,		|																|										|
-|			| CV					| 1 Door, 1 Light, 1 CVore, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Harpy		| Black, Blue, Brown,	| 6 Avian, 1 Door, 1 Light, 1 Vore								| Unbirths and then lays 				|
-|			| Classic, Nel, Shante,	|																| prey as an egg						|
-|			| White					|																|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Human		| Clothed, Naked		| 1 Door, 6 Human, 1 Light, 1 (D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Kangaru	| Blue, Brown, Orange	| 24 Human, 1 Door, 1 Light, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Lamia		| Black, Blue, Green,	| 1 Door, 6 Floran, 1 Light, 1(D)Vore							|										|
-|			| Pink					|																|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Newt		| Black, Blue, Green,	| 1 Door, 1 Light, 6 Swamp, 1(D)Vore							| Animated Swallowing					|
-|			| Purple, Red			|																|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Pokemon	| Goodra,				| 1 Door, 1 Light, 1 Poke, 24 Slime, 1(D)Vore					| Oral vore/Unbirth versions			|
-|			| Lopunny,				| 1 Door, 1 Light, 12 Nature, 1 Poke, 1(D)Vore					| Has a 1 in 100 chance to spawn as a 	|
-|			| Lucario,				| 1 Door, 1 Light, 12 Aviantemple, 1 Poke, 1(D)Vore				| shiny pallet swap						|
-|			| Zoroark				| 1 Door, 1 Light, 1 Poke, 1(D)Vore								| Goodra can hold 3 prey at once		|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Slime Girl	| Green,				| 1 Door, 1 Light, 6 Slime, 1(D)Vore							| Multiple stages						|
-|			| Ice					| 1 Door, 6 Ice, 1 Light, 1(D)Vore								|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Spider Girl| Black, Orb Weaver,	| 1 Door, 1 Light, 12 Spooky, 1(D)Vore							| Features coming soon!					|
-|			| Quelaag				| 1 Door, 24 Evil, 1 Light, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-|Wolf		| Desert, Standard,		| 1 Door, 1 Light, 1(D)Vore										|										|
-|			| Poison, Sea,			|																|										|
-|			| CV					| 1 Door, 1 Light, 1 CVore, 1(D)Vore							|										|
----------------------------------------------------------------------------------------------------------------------------------------------
-
-	Required Mods to access NPCs:
-	Avali: Avali Triage
-	Lucario: Lucario Race
-	Lopunny: Lopunny Race and Lopunny Improvements
+	NPCs around them. 
+	
+	Spawning: To summon one of these NPCs you need to build
+	them a room. The room must be an enclosed environment
+	including background. Fill the room with the furniture
+	required to summon the particular tenant. Try to match the
+	requirements without going too far over the required tags,
+	you can add more furniture later. After your house is
+	filled with furniture, purchase and place the badge(s) for
+	the type of action you want your NPC to perform.
+	
+		For oral vore, place down a V badge.
+		For fatal oral vore, place down a D badge.
+		For unbirth, place down a V badge. (Will be changed later)
+		For cock vore, place down a C badge and a V badge.
+		For fatal cock vore, place down a C badge and a D badge.
+		The P badge is for the prey system mentioned down below.
+		
+	Now that your house is full of furniture and has the
+	appropriate spawning badge, place down a 'Colony Deed' or
+	a 'Compact Deed'. You may buy both of these at either
+	Bellybound or Frogg Furninshings. If everything is done
+	correctly, your tenant will appear. At this point you may
+	put down any other piece of furniture from Bellybound and
+	pick up the badge. You may also wish to add more furniture
+	to the home. Make sure you arn't removing any required tags
+	what would reduce the total less than the required amount.
+	
+	Features: NPCs will attempt to eat the player and other NPCs
+	periodically. When eaten you will be incitated for 90-120
+	seconds depending on the type of predator. While eaten you
+	can not move. NPCs will go about their day with you as
+	their unwilling companion.
 	
 	You may also interact with our NPCs by pressing 'e' twice
 	quickly. This will allow you to "request" to be eaten.
@@ -203,7 +178,32 @@ Contents:
 	sanctuary.
 	
 	*********************************************************
-	E. RP Tool
+	F. NPC prey.
+	*********************************************************
+	
+	Prey are avaiable in a similar fashion to NPC predators.
+	To summon a prey you use the P badge instead of other
+	badges. Use a P and a D badge to spawn an NPC you will
+	digest. Prey spaw with a random personality or "profile".
+	A prey's profile will evolve the more times you eat them.
+	Some prey may enjoy being eaten, some may fear it, and
+	even some may dislike it at first but grow to love it.
+	
+	When a prey is spawned double press 'e' to eat them.
+	You won't get a belly, so improvise. While eaten prey
+	will most likely grovel for their lives(or thank you).
+	If you spawn a digest prey, they may try to trade their
+	money for their life. Release a prey after they attempt
+	bribe you and they will pay you.
+	
+	There are 6 kinds of prey and 3 profiles right now. One
+	for each race minus Novakids. A prey tenant can be
+	summoned with just a door, light, and a badge, but if you
+	also include 6 of the respective racial tag, you can
+	control which race spawns.
+	
+	*********************************************************
+	F. RP Tool
 	*********************************************************
 	
 	Avaiable at the bellybound store is a "Vore Tech Chip".

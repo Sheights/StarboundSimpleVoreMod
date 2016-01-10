@@ -1,0 +1,8 @@
+{
+  "type" : "prey",
+  "baseType" : "villager",
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/scripts/vore/npcprey.lua" 
+  ]
+}

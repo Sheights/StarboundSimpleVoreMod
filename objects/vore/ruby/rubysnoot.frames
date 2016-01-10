@@ -1,0 +1,58 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [136, 96],
+	"dimensions"  :  [21, 14],
+	"names"  :  [
+	  [ "breath.1", "breath.2", "breath.3", "breath.4", "breath.5", "breath.6", "burp.1", "burp.2", "burp.3", "burp.4", "burp.5", "burp.6", "burp.7", "burp.8", "burp.9", "burp.10", "burp.11", "burp.12", "burp.13", "burp.14", "burp.15" ],
+	  [ "burp.16", "burp.17", "burp.18", "burp.19", "burp.20", "burp.21", "burp.22", "burp.23", "burp.24", "lay.1", "lay.2", "lay.3", "lay.4", "lay.5", "lay.6", "lay.7", "lay.8", "lay.9", "lay.10", "lay.11", "lay.12" ],
+	  [ "lay.13", "lay.14", "lay.15", "lay.16", "lay.17", "lay.18", "lay.19", "lay.20", "lay.21", "lay.22", "lay.23", "lay.24", "lay.25", "lay.26", "lay.27", "lay.28", "lay.29", "lay.30", "lick.1", "lick.2", "lick.3" ],
+	  [ "lick.4", "lick.5", "lick.6", "lick.7", "lick.8", "lick.9", "lick.10", "lick.11", "lick.12", "lick.13", "lick.14", "lexhaust.1", "lexhaust.2", "lexhaust.3", "lexhaust.4", "lexhaust.5", "lexhaust.6", "lexhaust.7", "lexhaust.8", "lexhaust.9", "lexhaust.10" ],
+	  [ "lexhaust.11", "lstruggle.1", "lstruggle.2", "lstruggle.3", "lstruggle.4", "lstruggle.5", "lstruggle.6", "lstruggle.7", "lstruggle.8", "lstruggle.9", "lstruggle.10", "lstruggle.11", "lstruggle.12", "lstruggle.13", "lstruggle.14", "lstruggle.15", "lstruggle.16", "lstruggle.17", "lstruggle.18", "lstruggle.19", "blank" ],
+	  [ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "exhaust.1", "exhaust.2", "exhaust.3", "exhaust.4", "exhaust.5", "exhaust.6", "exhaust.7", "exhaust.8" ],
+	  [ "exhaust.9", "exhaust.10", "exhaust.11", "exhaust.12", "exhaust.13", "exhaust.14", "exhaust.15", "exhaust.16", "regurg.1", "regurg.2", "regurg.3", "regurg.4", "regurg.5", "regurg.6", "regurg.7", "regurg.8", "regurg.9", "regurg.10", "regurg.11", "regurg.12", "regurg.13" ],
+	  [ "regurg.14", "regurg.15", "regurg.16", "regurg.17", "regurg.18", "regurg.19", "regurg.20", "regurg.21", "regurg.22", "regurg.23", "rub.1", "rub.2", "rub.3", "rub.4", "rub.5", "rub.6", "rub.7", "rub.8", "rub.9", "rub.10", "rub.11" ],
+	  [ "rub.12", "rub.13", "rub.14", "rub.15", "rub.16", "rub.17", "rub.18", "rub.19", "rub.20", "rub.21", "rub.22", "rub.23", "rub.24", "rub.25", "rub.26", "rub.27", "rub.28", "rub.29", "rub.30", "rub.31", "rub.32" ],
+	  [ "rub.33", "rub.34", "rub.35", "rub.36", "rub.37", "struggle.1", "struggle.2", "struggle.3", "struggle.4", "struggle.5", "struggle.6", "struggle.7", "struggle.8", "struggle.9", "struggle.10", "struggle.11", "struggle.12", "struggle.13", "struggle.14", "struggle.15", "struggle.16" ],
+	  [ "struggle.17", "struggle.18", "struggle.19", "struggle.20", "struggle.21", "struggle.22", "struggle.23", "struggle.24", "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "swallow.11", "swallow.12", "swallow.13" ],
+	  [ "swallow.14", "swallow.15", "swallow.16", "swallow.17", "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "swallow.24", "swallow.25", "swallow.26", "swallow.27", "swallow.28", "swallow.29", "swallow.30", "swallow.31", "swallow.32", "swallow.33", "swallow.34" ],
+	  [ "swallow.35", "swallow.36", "swallow.37", "swallow.38", "swallow.39", "swallow.40", "swallow.41", "swallow.42", "swallow.43", "swallow.44", "swallow.45", "swallow.46", "swallow.47", "swallow.48", "swallow.49", "swallow.50", "swallow.51", "swallow.52", "swallow.53", "swallow.54", "swallow.55" ],
+	  [ "swallow.56", "swallow.57", "swallow.58", "swallow.59", "swallow.60", "swallow.61", "swallow.62", "yawn.1", "yawn.2", "yawn.3", "yawn.4", "yawn.5", "yawn.6", "yawn.7", "yawn.8", "yawn.9", "yawn.10", "yawn.11", "yawn.12", "yawn.13", "yawn.14" ]
+    ]	  
+  },
+	
+  "aliases"  :  {
+	"empty"	:	"regurg.23",
+	"up.1"		:	"lay.30",
+	"up.2"		:	"lay.29",
+	"up.3"		:	"lay.28",
+	"up.4"		:	"lay.27",
+	"up.5"		:	"lay.26",
+	"up.6"		:	"lay.25",
+	"up.7"		:	"lay.24",
+	"up.8"		:	"lay.23",
+	"up.9"		:	"lay.22",
+	"up.10"		:	"lay.21",
+	"up.11"		:	"lay.20",
+	"up.12"		:	"lay.19",
+	"up.13"		:	"lay.18",
+	"up.14"		:	"lay.17",
+	"up.15"		:	"lay.16",
+	"up.16"		:	"lay.15",
+	"up.17"		:	"lay.14",
+	"up.18"		:	"lay.13",
+	"up.19"		:	"lay.12",
+	"up.20"		:	"lay.11",
+	"up.21"		:	"lay.10",
+	"up.22"		:	"lay.9",
+	"up.23"		:	"lay.8",
+	"up.24"		:	"lay.7",
+	"up.25"		:	"lay.6",
+	"up.26"		:	"lay.5",
+	"up.27"		:	"lay.4",
+	"up.28"		:	"lay.3",
+	"up.29"		:	"lay.2",
+	"up.30"		:	"lay.1",
+	"full"		:	"swallow.62",
+	"laying"	:	"lay.30"
+	}
+}

@@ -1,0 +1,153 @@
+{
+  "type" : "pred_dunicorn",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Those who steal from the forest, often become lost in its depths.",
+							"Return to nature, that which you have taken.",
+							"Do not steal, when nature already gifts so much."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"This tree needs some new bark dear landlord.",
+							"I believe there are a few broken branches dear..."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"There’s a reason it’s at ONE with the forest...",
+							"Roots need their room..."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"You’re about to incur the wrath of Gaia...",
+							"You mess with forces beyond your ken..."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"You have lost the blessings child.",
+							"And I put a curse upon you also!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"Back to my sanctuary.",
+							"Always a pleasure to be in my sacred glade.",
+							"You needed the presence of a sage dear?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"Partake in nature’s bounty.",
+							"Enjoy the rewards of Gaia.",
+							"Gaia rewards those who care for her forest."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"Gaia protect me!",
+							"Help, Barbarians!",
+							"Raiders to the forest!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"Another of Gaia’s Children needs your help!",
+							"The Earth Mother wills you to protect them!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"The blessings of Gaia compel you!",
+							"Blessing of nature will protect you!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"Has peace returned to the Glade?",
+							"Have the sacrilegious been defeated?"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Blessings of Gaia be upon you.",
+						"What brings you to the glades today child?",
+						"What do you seek child?",
+						"Tis a joyous day in nature child."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/taur/dunicorn.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "unicornhead1", "parameters" : { "colorIndex" : 0 } },
+			  { "name" : "unicornhead2", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "cupidschest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "dress1chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "fairychest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wedding1chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wedding2chest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } },
+			  { "name" : "wildfunguschest", "parameters" : { "colorIndex" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+            ],
+            "legs" : [
+              { "name" : "unicornlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

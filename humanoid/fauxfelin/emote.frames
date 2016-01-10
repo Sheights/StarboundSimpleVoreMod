@@ -1,0 +1,23 @@
+{
+	"frameGrid" : {
+		"size" : [43, 43],
+		"dimensions" : [7, 7],
+		"names" : [
+			[ "blabber.1", "blabber.2", null, "shout.1", "shout.2", null, null ],
+			[ "happy.1", "happy.2", null, null, null, null, "idle.1" ],
+			[ "sad.1", "sad.2", "sad.3", "sad.4", "sad.5", null, null ],
+			[ "neutral.1", "neutral.2", null, "laugh.1", "laugh.2", null, null ],
+			[ "annoyed.1", "annoyed.2", null, null, null, null, null ],
+			[ "oh.1", "oh.2", null, "oooh.1", "oooh.2", "oooh.3", null ],
+			[ "blink.1", "blink.2", null, "wink.1", "wink.2", "wink.3", "wink.4" ]
+		]
+	},
+	"aliases" : {
+		"eat.1" : "shout.1",
+		"eat.2" : "shout.2",
+		"blink.3" : "idle.1",
+		"wink.5" : "idle.1",
+		"sleep.1" : "blink.2",
+		"sleep.2" : "blink.2"
+	}
+}

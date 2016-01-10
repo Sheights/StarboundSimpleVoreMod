@@ -1,0 +1,26 @@
+{
+  "objectName" : "aacbadge",
+  "printable" : false,
+  "colonyTags" : ["cvore"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for a 'cock vore' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Cock Vore Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "inventoryIcon" : "cicon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:C",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

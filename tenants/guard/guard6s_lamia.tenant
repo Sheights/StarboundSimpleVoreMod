@@ -1,0 +1,30 @@
+{
+  "name": "guard6s_lamia",
+  "priority": 18,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "floran": 8,
+    "combat": 8,
+	"vore": 1,
+    "tier10": 12
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "level": 6,
+      "type": "guard_lamia_separator",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

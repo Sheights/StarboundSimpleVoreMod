@@ -1,0 +1,12 @@
+{
+  "name" : "npcheal",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npcheal.lua"
+  ],
+
+  "label" : "So Filling!",
+  "icon" : "/interface/stats/healthregen.png"
+}

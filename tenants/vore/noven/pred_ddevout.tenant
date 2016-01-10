@@ -1,0 +1,27 @@
+{
+  "name": "pred_ddevout",
+  "priority": 13,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "science": 24,
+	"dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "pred_ddevout",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

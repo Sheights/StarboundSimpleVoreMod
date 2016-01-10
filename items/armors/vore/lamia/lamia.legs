@@ -1,0 +1,41 @@
+{
+  "itemName" : "lamialegs",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A wonderful tail made for slithering about.",
+  "shortdescription" : "Lamia Tail",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ffa6c2" : "ffa6c2", "ff79a5" : "ff79a5", "c76192" : "c76192", "9c4781" : "9c4781", "6d2337" : "6d2337", "d93798" : "d93798" },
+	/* BLACK */
+	{ "ffa6c2" : "999999", "ff79a5" : "838383", "c76192" : "707070", "9c4781" : "5c5c5c", "6d2337" : "474747", "d93798" : "000000" },
+	/* GREY */
+	{ "ffa6c2" : "cccccc", "ff79a5" : "b5b5b5", "c76192" : "838383", "9c4781" : "707070", "6d2337" : "5c5c5c", "d93798" : "474747" },
+	/* WHITE */
+	{ "ffa6c2" : "e0e0e0", "ff79a5" : "cccccc", "c76192" : "b5b5b5", "9c4781" : "838383", "6d2337" : "707070", "d93798" : "ffffff" },
+	/* RED */
+	{ "ffa6c2" : "e88787", "ff79a5" : "e26565", "c76192" : "d93a3a", "9c4781" : "ce2727", "6d2337" : "ab2121", "d93798" : "ff0000" },
+	/* ORANGE */
+	{ "ffa6c2" : "f1bf7e", "ff79a5" : "eead59", "c76192" : "ea9931", "9c4781" : "de8817", "6d2337" : "b97113", "d93798" : "ff8000" },
+	/* YELLOW */
+	{ "ffa6c2" : "eedd95", "ff79a5" : "e9d172", "c76192" : "e2c344", "9c4781" : "deba2b", "6d2337" : "c2a11e", "d93798" : "ffff00" },
+	/* GREEN */
+	{ "ffa6c2" : "83d373", "ff79a5" : "68c954", "c76192" : "51bd3b", "9c4781" : "439b31", "6d2337" : "357c27", "d93798" : "00ff00" },
+	/* BLUE */
+	{ "ffa6c2" : "9dbae7", "ff79a5" : "7ca4de", "c76192" : "5588d4", "9c4781" : "3b76ce", "6d2337" : "2d63b4", "d93798" : "0000ff" },
+	/* PURPLE */
+	{ "ffa6c2" : "c795db", "ff79a5" : "b776d0", "c76192" : "a451c4", "9c4781" : "943eb6", "6d2337" : "7c3498", "d93798" : "8000ff" },
+	/* PINK */
+	{ "ffa6c2" : "e59fcf", "ff79a5" : "dc7fbe", "c76192" : "d35fae", "9c4781" : "ca3f9e", "6d2337" : "b03088", "d93798" : "ff00ff" },
+	/* BROWN */
+	{ "ffa6c2" : "c39d6f", "ff79a5" : "b78a52", "c76192" : "a47844", "9c4781" : "816036", "6d2337" : "654a2a", "d93798" : "48351e" }
+]
+}

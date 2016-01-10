@@ -10,7 +10,7 @@ oldUpdate = update
 -- Keep the value anywhere between 0 and 1
 -- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
 -- This can also be done in the individual .lua files.
-playerChance = 0.5
+playerChance = 1
 
 -- NPC Chance is a percent chance that an NPC will be vored when the feed function is called.
 -- Keep the value anywhere between 0 and 1
@@ -61,6 +61,10 @@ victim		= nil
 
 voreeffect	= "npcvore"
 projectile	= "npcvoreprojectile"
+
+digestsound		= "digestprojectile"
+swallowsound 	= "swallowprojectile"
+
 
 function init()
 
@@ -178,7 +182,7 @@ function gain()
 	end
 	
 	if audio then
-		world.spawnProjectile( "swallowprojectile" , mcontroller.position() , entity.id(), {0, 0}, false )
+		world.spawnProjectile( swallowsound , mcontroller.position() , entity.id(), {0, 0}, false )
 	end
 	
 	gainHook()
@@ -216,7 +220,7 @@ function update(dt)
 	elseif fed then	
 	
 		if math.random(500) == 1 and audio then
-			world.spawnProjectile( "digestprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+			world.spawnProjectile( digestsound , mcontroller.position(), entity.id(), {0, 0}, false )
 		end
 		
 		if request == false then

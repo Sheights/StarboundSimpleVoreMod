@@ -1,0 +1,186 @@
+{
+	"kind" : "fauxfelin",
+	"playerRace" : false,
+	"nameGen" : [ "/species/fauxfelinnamegen.config:male", "/species/fauxfelinnamegen.config:female" ],
+	"ouchNoises" : [ "/sfx/felin/felinhurt1.ogg", "/sfx/felin/felinhurt2.ogg" ],
+	"gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],
+	"charGenTextLabels" : [ "FUR COLOR", "HAIR STYLE", "SHIRT", "PANTS", "BELLY COLOR", "HAIR COLOR", "SHIRT COLOR", "PANTS COLOR", "FELIN", "ATTITUDE" ],
+	"skull" : "/humanoid/any/dead.png",
+	"defaultBlueprints" : {
+    "tier1" : [
+      { "item" : "humantier1hammer" },
+      { "item" : "humantier1shortsword" },
+      { "item" : "humantier1broadsword" },
+      { "item" : "humantier1spear" },
+      { "item" : "humantier1axe" },
+      { "item" : "humantier1dagger" },
+      { "item" : "humantier1head" },
+      { "item" : "humantier1chest" },
+      { "item" : "humantier1pants" },
+      { "item" : "conceptchest" },
+      { "item" : "conceptlegs" },
+      { "item" : "coolchest" },
+      { "item" : "coollegs" },
+      { "item" : "sweatervestchest" },
+      { "item" : "sweatervestlegs" },
+      { "item" : "workoutchest" },
+      { "item" : "workoutlegs" },
+
+      { "item" : "humanstoragelocker" },
+      
+      { "item" : "flaghuman" },
+      
+      // { "item" : "humantier2head" },
+      // { "item" : "humantier2chest" },
+      // { "item" : "humantier2pants" },
+      { "item" : "humantier2hammer" },
+      { "item" : "humantier2shortsword" },
+      { "item" : "humantier2broadsword" },
+      { "item" : "humantier2spear" },
+      { "item" : "humantier2axe" },
+      { "item" : "humantier2dagger" },
+      
+      { "item" : "humantier3head" },
+      { "item" : "humantier3chest" },
+      { "item" : "humantier3pants" },
+      { "item" : "humantier3hammer" },
+      { "item" : "humantier3shortsword" },
+      { "item" : "humantier3broadsword" },
+      { "item" : "humantier3spear" },
+      { "item" : "humantier3axe" },
+      { "item" : "humantier3dagger" },
+      
+      // { "item" : "humantier4head" },
+      // { "item" : "humantier4chest" },
+      // { "item" : "humantier4pants" },
+      { "item" : "humantier4hammer" },
+      { "item" : "humantier4shortsword" },
+      { "item" : "humantier4broadsword" },
+      { "item" : "humantier4spear" },
+      { "item" : "humantier4axe" },
+      { "item" : "humantier4dagger" },
+
+      { "item" : "humantier5ahead" },
+      { "item" : "humantier5achest" },
+      { "item" : "humantier5apants" },
+      { "item" : "humantier5dagger" },
+
+      { "item" : "humantier5mhead" },
+      { "item" : "humantier5mchest" },
+      { "item" : "humantier5mpants" },
+
+      { "item" : "humantier5shead" },
+      { "item" : "humantier5schest" },
+      { "item" : "humantier5spants" },
+      { "item" : "humantier8hammer" },
+      { "item" : "humantier8shortsword" },
+      { "item" : "humantier8broadsword" },
+      { "item" : "humantier8spear" },
+      { "item" : "humantier8axe" },
+      { "item" : "humantier8dagger" },
+
+      // { "item" : "humantier6ahead" },
+      // { "item" : "humantier6achest" },
+      // { "item" : "humantier6apants" },
+      { "item" : "humantier6dagger" },
+
+      // { "item" : "humantier6mhead" },
+      // { "item" : "humantier6mchest" },
+      // { "item" : "humantier6mpants" },
+
+      // { "item" : "humantier6shead" },
+      // { "item" : "humantier6schest" },
+      // { "item" : "humantier6spants" },
+      { "item" : "humantier10hammer" },
+      { "item" : "humantier10shortsword" },
+      { "item" : "humantier10broadsword" },
+      { "item" : "humantier10spear" },
+      { "item" : "humantier10axe" },
+      { "item" : "humantier10dagger" }
+    ]
+	},
+	"altOptionAsUndyColor" : true,
+	"headOptionAsHairColor" : true,
+	"genders" : [
+		{
+			"name" : "male",
+			"image" : "/interface/title/felinkanjim.png",
+			"characterImage" : "/interface/title/felinmale.png",
+			"hair" : [ "male1" ],
+			"shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
+			"pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
+			"facialHairGroup" : "",
+			"facialHair" : [],
+			"facialMaskGroup" : "",
+			"facialMask" : []
+		},
+		{
+			"name" : "female",
+			"image" : "/interface/title/felinkanjif.png",
+			"characterImage" : "/interface/title/felinfemale.png",
+			"hair" : [ "fem1" ],
+			"shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
+			"pants" : [ "workoutlegs", "coollegs", "conceptlegs", "sweatervestlegs" ],
+			"facialHairGroup" : "",
+			"facialHair" : [],
+			"facialMaskGroup" : "",
+			"facialMask" : []
+		}
+	],
+	"bodyColor" : [
+		{ "FFCA8A" : "FFCA8A", "E0975C" : "E0975C", "A85636" : "A85636", "6F2919" : "6F2919" }, //defur
+		{ "FFCA8A" : "F3C873", "E0975C" : "DB9C38", "A85636" : "B17628", "6F2919" : "89561F" }	//mustard
+	],
+	"undyColor" : [
+		{ "F32200" : "FFC149", "DC1F00" : "FFA500", "BE1B00" : "C67B00", "951500" : "845200" }, //orange
+		{ "F32200" : "FFFFFF", "DC1F00" : "D7D5DB", "BE1B00" : "8E8E9B", "951500" : "6D6D6D" }, //white
+		{ "F32200" : "DBF4B8", "DC1F00" : "A4D66B", "BE1B00" : "6F9E47", "951500" : "426D26" }, //defur
+		{ "F32200" : "E2B2FF", "DC1F00" : "B374D4", "BE1B00" : "7C4992", "951500" : "4B2655" }, //purple
+		{ "F32200" : "9E9E9E", "DC1F00" : "696969", "BE1B00" : "434343", "951500" : "191919" }, //gray
+		{ "F32200" : "F0608B", "DC1F00" : "CD5061", "BE1B00" : "95484C", "951500" : "6A3836" }, //red
+		{ "F32200" : "7FDADD", "DC1F00" : "61AEBF", "BE1B00" : "4E7A90", "951500" : "3F566E" }, //cyan
+		{ "F32200" : "F3EFA3", "DC1F00" : "E3D965", "BE1B00" : "BAA94A", "951500" : "98832D" }, //yellow
+		{ "F32200" : "998779", "DC1F00" : "836752", "BE1B00" : "625244", "951500" : "4E3B2E" }, //brown
+		{ "F32200" : "737275", "DC1F00" : "595760", "BE1B00" : "3F3E43", "951500" : "212123" }, //dark
+		{ "F32200" : "EEBFEA", "DC1F00" : "DE8DDD", "BE1B00" : "C060BB", "951500" : "9A4B9C" }, //purple
+		{ "F32200" : "D18BD5", "DC1F00" : "A766BC", "BE1B00" : "814797", "951500" : "693367" }, //darkpurple
+		{ "F32200" : "F3C873", "DC1F00" : "DB9C38", "BE1B00" : "B17628", "951500" : "89561F" }	//mustard
+	],
+	"hairColor" : [
+		{ "F7E7B2" : "FFC149", "D9C189" : "FFA500", "A38D59" : "C67B00", "735E3A" : "845200" }, //orange
+		{ "F7E7B2" : "FFFFFF", "D9C189" : "D7D5DB", "A38D59" : "8E8E9B", "735E3A" : "6D6D6D" }, //white
+		{ "F7E7B2" : "CD7575", "D9C189" : "9C3131", "A38D59" : "732929", "735E3A" : "411818" }, //chel redbrown
+		{ "F7E7B2" : "E2B2FF", "D9C189" : "B374D4", "A38D59" : "7C4992", "735E3A" : "4B2655" }, //purple
+		{ "F7E7B2" : "9E9E9E", "D9C189" : "696969", "A38D59" : "434343", "735E3A" : "191919" }, //gray
+		{ "F7E7B2" : "F0608B", "D9C189" : "CD5061", "A38D59" : "95484C", "735E3A" : "6A3836" }, //red
+		{ "F7E7B2" : "7FDADD", "D9C189" : "61AEBF", "A38D59" : "4E7A90", "735E3A" : "3F566E" }, //cyan
+		{ "F7E7B2" : "F3EFA3", "D9C189" : "E3D965", "A38D59" : "BAA94A", "735E3A" : "98832D" }, //yellow
+		{ "F7E7B2" : "998779", "D9C189" : "836752", "A38D59" : "625244", "735E3A" : "4E3B2E" }, //brown
+		{ "F7E7B2" : "737275", "D9C189" : "595760", "A38D59" : "3F3E43", "735E3A" : "212123" }, //dark
+		{ "F7E7B2" : "EEBFEA", "D9C189" : "DE8DDD", "A38D59" : "C060BB", "735E3A" : "9A4B9C" }, //purple
+		{ "F7E7B2" : "D18BD5", "D9C189" : "A766BC", "A38D59" : "814797", "735E3A" : "693367" }, //darkpurple
+		{ "F7E7B2" : "F3C873", "D9C189" : "DB9C38", "A38D59" : "B17628", "735E3A" : "89561F" }, //mustard
+		{ "F7E7B2" : "DBF4B8", "D9C189" : "A4D66B", "A38D59" : "6F9E47", "735E3A" : "426D26" }, //yellowgreen
+		{ "F7E7B2" : "B8F4BB", "D9C189" : "72DD7E", "A38D59" : "4AA559", "735E3A" : "266535" }, //limegreen
+		{ "F7E7B2" : "F1EABB", "D9C189" : "D8D077", "A38D59" : "A09E4E", "735E3A" : "5F6229" }, //yellow
+		{ "F7E7B2" : "B8F4D9", "D9C189" : "72DDB3", "A38D59" : "4AA586", "735E3A" : "266554" }, //aqua
+		{ "F7E7B2" : "B5C2FA", "D9C189" : "758BF8", "A38D59" : "4A5BA5", "735E3A" : "272665" }, //blue
+		{ "F7E7B2" : "FF00FF", "D9C189" : "525252", "A38D59" : "363636", "735E3A" : "161616" }, //black
+		{ "F7E7B2" : "FF00FF", "D9C189" : "50422F", "A38D59" : "36261E", "735E3A" : "170F0D" }, //brown
+		{ "F7E7B2" : "FF00FF", "D9C189" : "7F5A39", "A38D59" : "5B3523", "735E3A" : "3B1F15" }, //lightbrown
+		{ "F7E7B2" : "FF00FF", "D9C189" : "A6671D", "A38D59" : "915622", "735E3A" : "743E1D" }, //blond
+		{ "F7E7B2" : "FF00FF", "D9C189" : "E6E756", "A38D59" : "C7AC3F", "735E3A" : "A9882F" }, //yellow
+		{ "F7E7B2" : "FF00FF", "D9C189" : "F2EBA3", "A38D59" : "DCD28C", "735E3A" : "C2B677" }, //peroxide
+		{ "F7E7B2" : "FF00FF", "D9C189" : "7D3C1C", "A38D59" : "4D240B", "735E3A" : "2D1606" }, //hazel
+		{ "F7E7B2" : "FF00FF", "D9C189" : "AD2716", "A38D59" : "8F1F1B", "735E3A" : "731A1A" }, //red
+		{ "F7E7B2" : "FF00FF", "D9C189" : "6F6D85", "A38D59" : "525269", "735E3A" : "3E4352" }, //steel
+		{ "F7E7B2" : "FF00FF", "D9C189" : "CD72D9", "A38D59" : "AC4DA6", "735E3A" : "913B86" }, //pink
+		{ "F7E7B2" : "FF00FF", "D9C189" : "425879", "A38D59" : "343965", "735E3A" : "242247" }, //blue
+		{ "F7E7B2" : "FF00FF", "D9C189" : "5D8BC7", "A38D59" : "4D55B0", "735E3A" : "2E2A73" }, //cyan
+		{ "F7E7B2" : "FF00FF", "D9C189" : "653B7F", "A38D59" : "562E6A", "735E3A" : "3F1D4B" }, //wisteria
+		{ "F7E7B2" : "FF00FF", "D9C189" : "7F3B6D", "A38D59" : "6A2E53", "735E3A" : "4B1D30" }, //magenta
+		{ "F7E7B2" : "FF00FF", "D9C189" : "EFA838", "A38D59" : "BE6D1D", "735E3A" : "834012" }, //lblond
+		{ "F7E7B2" : "FF00FF", "D9C189" : "4ECE61", "A38D59" : "34AE47", "735E3A" : "228A38" }, //lime
+		{ "F7E7B2" : "FF00FF", "D9C189" : "3B7F44", "A38D59" : "2E6A38", "735E3A" : "1D4B28" }	//green
+	]
+}

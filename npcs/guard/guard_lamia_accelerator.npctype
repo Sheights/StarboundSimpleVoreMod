@@ -1,0 +1,35 @@
+{
+  "type" : "guard_lamia_accelerator",
+  "baseType" : "friendlyguard",
+
+  "items" : {
+    "override" : [
+      [5, [
+          {
+            "head" : [ { "name" : "humantier5ahead" } ],
+            "chest" : [ { "name" : "humantier5achest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[6, [
+          {
+            "head" : [ { "name" : "humantier6ahead" } ],
+            "chest" : [ { "name" : "humantier6achest" } ],
+            "legs" : [ { "name" : "lamialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ] 
+  }
+}

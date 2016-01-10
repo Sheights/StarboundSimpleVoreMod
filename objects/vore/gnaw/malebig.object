@@ -1,0 +1,109 @@
+{
+  "objectName" : "voregnawbig",
+  "rarity" : "common",
+  "description" : "A spiritual creature able to heal wounds. Also comfortable on the inside.",
+  "shortdescription" : "Gnaw - Big",
+  "race" : "gnaw",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Is this what Florans call a dog?",
+  "avianDescription" : "...Pretty adorable as far as plant creatures go.",
+  "floranDescription" : "Does...Does Floran know you, plantbuddy?",
+  "glitchDescription" : "Species Match confirmed - Skroggle. Statement. Seems far less dangerous than records may suggest.",
+  "humanDescription" : "...Why does this look like a Venus Fly Trap on steroids?",
+  "hylotlDescription" : "What a strange little creature...it seems oddly endearing, though...",
+  "novakidDescription" : "Well well, seems some plants do have feelin's after all.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "image" : "gnaw.png:waiting",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "gnaw.png:waiting",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo.lua" ],
+  
+  "animation" : "spoanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "gnaw.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "bellySize" : "big",
+  
+  "chatOptions" : [
+    "Gnaw like silly food person!",
+	"B-bluhh, Gnaw eat too much...",
+	"This easier than hunting. Why Gnaw not do this before?",
+	"Gnaw not used to foodpeople asking to get in...Gnaw like, though!",
+	"You mind if Gnaw plant some Seedlings in zoomy ship? ...No? Aw.",
+	"Keep doing that, it feel good.",
+	"Hahahaheeey, no rub there, Gnaw ticklish!",
+	"You need do this more often. Gnaw be here when you want~",
+	"*Belches loudly*"
+  ],
+  "gulpLines" : [
+    "Gnaw eat you!",
+	"Omnomnomnomnom.",
+	"Mind Gnaw's teeth."
+  ],
+  "chatIdleFull" : [
+    "Myeeeeh. Wait turn.",
+	"Gnaw belly full, go wait.",
+	"Gnaw want fit you in, but Gnaw belly can't. Gnaw sorry..."
+  ],
+  "chatIdleEmpty" : [
+    "...Yummytimes?",
+	"Gnaw hungry. Feed Gnaw? Please?",
+	"*stares at intently*",
+	"*tries to reach out to lick at you*",
+	"Two asks. One: Can Gnaw has foodbowl? Two: Can foodperson sit in it?",
+	"*Jaw tendrils on shoulders snap at you as you pass*",
+	"Gnaw itchy on inside. Help scratch?"
+  ],
+  "rubLines" : [
+    "*pants obediently*",
+	"Gnaw...Like...*paws at the air*",
+	"More...More rubs...",
+	"Gnaw needed this...*urp*",
+	"Gnaw like it more if you use both hands.",
+	"*Jaw tendrils on shoulders droop in relaxation*"
+  ]
+}

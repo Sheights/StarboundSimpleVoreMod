@@ -143,6 +143,7 @@ function feed()
 			if requested then
 				tem = tem + 20000
 				request[#victim] = true
+				forceFeed()
 			end
 			
 			if isDigest then
@@ -179,47 +180,26 @@ end
 
 function digest()
 
-	if stopWatch[1] >= duration and request[1] == false then
-		
-		stopWatch[1] = stopWatch[2]
-		stopWatch[2] = stopWatch[3]
-		stopWatch[3] = 0
-		
-		victim [1] = victim [2]
-		victim [2] = victim [3]
-		victim [3] = nil
-		
-		request [1] = request [2]
-		request [2] = request [3]
-		request [3] = false
+	for i=1, #stopWatch do
+		if stopWatch[i] >= duration and request[i] == false then
+			
+			for j = i, capacity do
+			
+				if stopWatch[j+1] == capacity then
+					stopWatch[j] = 0
+					victim[j] = nil
+					request[j] = false
+				else
+					stopWatch[j] = stopWatch[j+1]
+					victim[j] = victim[j+1]
+					request[j] = request[j+1]
+				end				
+			end
 		redress()
-
 		digestHook()
-	elseif stopWatch[2] >= duration and request[2] == false then
-		
-		stopWatch[2] = stopWatch[3]
-		stopWatch[3] = 0
-				
-		victim [2] = victim [3]
-		victim [3] = nil
-		
-		request [2] = request [3]
-		request [3] = false
-		
-		redress()
-
-		digestHook()
-	elseif stopWatch[3] >= duration and request[3] == false then
-		
-		stopWatch[3] = 0
-		victim [3] = nil
-		request [3] = false
-		
-		redress()
-
-		digestHook()
+		do return end
+		end
 	end
-	
 end
 
 function redress()
@@ -298,6 +278,7 @@ function update(dt)
 	end
 	
 	updateHook()
+	updateHook(dt)
 	
 	update = tempupdate
 	interact = tempinteract
@@ -312,16 +293,16 @@ function interact(args)
 			world.spawnProjectile( "cleanser" , world.entityPosition( entity.id() ), entity.id(), {0, 0}, true )
 			
 			playerTimer = 120
-			request[1] = false
-			request[2] = false
-			request[3] = false
-			stopWatch[1] = 0
-			stopWatch[2] = 0
-			stopWatch[3] = 0
-			victim[1] = nil
-			victim[2] = nil
-			victim[3] = nil
+			
+			for i=1, capacity do
+				request[i] = false
+				stopWatch[i] = 0
+				victim[i] = nil
+			end
+			
 			redress()
+			
+			forceExit()
 		else
 			requested = true
 			feed()
@@ -366,6 +347,14 @@ function feedHook()
 
 end
 
+function forceExit()
+
+end
+
+function forceFeed()
+
+end
+
 function digestHook()
 
 end
@@ -375,6 +364,10 @@ function dressHook()
 end
 
 function updateHook()
+
+end
+
+function updateHook(dt)
 
 end
 

@@ -1,0 +1,28 @@
+{
+  "name": "pred_dticeslime",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "dvore": 1,
+	"ice": 12
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "level": 3,
+      "type": "pred_dticeslime",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "slimeIceGift"
+  }
+}

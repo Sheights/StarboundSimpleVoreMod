@@ -1,0 +1,10 @@
+{
+	"projectileName" : "yoshiredegg",
+	"bounces" : -1,
+	"timeToLive" : 60.0,
+	"speed" : 0,
+	"frames" : "yoshieggs.png:red",
+	"frameNumber" : 4,
+	"power" : 0,
+	"flippable" : true
+}

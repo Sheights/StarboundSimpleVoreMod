@@ -1,8 +1,3 @@
--- world.loungeableOccupied(entity.id())
--- entity.setAnimationState("bodyState", "waiting")
--- entity.animationState("bodyState")
--- entity.playSound("lay")
-
 animState = "blank"
 
 function init()
@@ -17,7 +12,7 @@ function update(dt)
 	
 		if animState == "idlecp" then
 			entity.setAnimationState("bodyState", "swallow")
-			--play swallow sound
+			entity.playSound("swallow")
 		elseif animState == "fullcp" and math.random(500) == 1 then
 			entity.setAnimationState("bodyState", "fidle1")
 		elseif animState == "fullcp" and math.random(500) == 1 then

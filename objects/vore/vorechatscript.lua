@@ -11,6 +11,7 @@ function init(virtual)
   chatOptions = entity.configParameter("chatOptions", {})
   gulpLines = entity.configParameter("gulpLines", {})
   rubLines = entity.configParameter("rubLines", {})
+  initHook()
 end
 
 function update(args)
@@ -55,6 +56,7 @@ function update(args)
 	  end
     end
   end
+  updateHook()
 end
 
 function onInteraction(args)
@@ -82,3 +84,6 @@ function onInteraction(args)
     end
   end
 end
+
+function initHook() end
+function updateHook() end

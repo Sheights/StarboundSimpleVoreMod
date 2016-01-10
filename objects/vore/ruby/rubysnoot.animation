@@ -1,0 +1,194 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "empty",
+	    "states"  :  {
+		  "empty"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "laying"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "full"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "breath"  :  {
+		    "frames"  :  6,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "empty"
+		  },
+		  "exhaust"  :  {
+		    "frames"  :  16,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "empty"
+		  },
+		  "yawn"  :  {
+		    "frames"  :  14,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "empty"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  62,
+			"cycle"  :  5.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "rub"  :  {
+		    "frames"  :  37,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "struggle"  :  {
+		    "frames"  :  24,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "burp"  :  {
+		    "frames"  :  24,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "lay"  :  {
+		    "frames"  :  30,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "laying"
+		  },
+		  "lick"  :  {
+		    "frames"  :  14,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "laying"
+		  },
+		  "lexhaust"  :  {
+		    "frames"  :  11,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "laying"
+		  },
+		  "lstruggle"  :  {
+		    "frames"  :  19,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "laying"
+		  },
+		  "up"  :  {
+		    "frames"  :  30,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "regurg"  :  {
+		    "frames"  :  23,
+			"cycle"  :  3.5,
+			"mode"  :  "transition",
+			"transition"  :  "empty"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "empty"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:empty"
+		      }
+		    },
+			"laying"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:laying"
+		      }
+		    },
+			"full"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full"
+		      }
+		    },
+	        "breath"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:breath.<frame>"
+		      }
+		    },
+			"burp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:burp.<frame>"
+		      }
+		    },
+			"lay"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lay.<frame>"
+		      }
+		    },
+			"up"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:up.<frame>"
+		      }
+		    },
+			"lick"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lick.<frame>"
+		      }
+		    },
+			"lexhaust"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lexhaust.<frame>"
+		      }
+		    },
+			"lstruggle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lstruggle.<frame>"
+		      }
+		    },
+			"exhaust"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:exhaust.<frame>"
+		      }
+		    },
+			"regurg"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:regurg.<frame>"
+		      }
+		    },
+			"rub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:rub.<frame>"
+		      }
+		    },
+			"struggle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:struggle.<frame>"
+		      }
+		    },
+			"swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+			"yawn"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:yawn.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

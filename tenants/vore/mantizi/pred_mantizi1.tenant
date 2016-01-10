@@ -1,0 +1,27 @@
+{
+  "name": "pred_mantizi1",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "mantizi": 6,
+	"vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "fauxmantizi",
+      "type": "pred_mantizi",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "mantiziGift"
+  }
+}

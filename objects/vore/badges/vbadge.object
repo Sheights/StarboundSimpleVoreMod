@@ -1,0 +1,26 @@
+{
+  "objectName" : "aavbadge",
+  "printable" : false,
+  "colonyTags" : ["vore"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for a 'vore' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Vore Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "inventoryIcon" : "vicon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:V",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

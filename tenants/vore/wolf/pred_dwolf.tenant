@@ -1,0 +1,26 @@
+{
+  "name": "pred_dwolf",
+  "priority": 11,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "glitch",
+      "type": "pred_dwolf",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "wolfGift"
+  }
+}

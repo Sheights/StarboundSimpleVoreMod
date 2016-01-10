@@ -1,0 +1,50 @@
+{
+  "itemName" : "newtchestbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "I think I opened one of these up during a biology class. I think I'll avoid razors while wearing this.",
+  "shortdescription" : "Newt Chest",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ff4d4d" : "ff4d4d", "ff0000" : "ff0000", "c90d00" : "c90d00", "951500" : "951500" },
+	/* BLACK */
+	{ "ff4d4d" : "838383", "ff0000" : "555555", "c90d00" : "383838", "951500" : "151515" },
+	/* GREY */
+	{ "ff4d4d" : "b5b5b5", "ff0000" : "808080", "c90d00" : "555555", "951500" : "303030" },
+	/* WHITE */
+	{ "ff4d4d" : "e6e6e6", "ff0000" : "b6b6b6", "c90d00" : "7b7b7b", "951500" : "373737" },
+	/* RED */
+	{ "ff4d4d" : "f4988c", "ff0000" : "d93a3a", "c90d00" : "932625", "951500" : "601119" },
+	/* ORANGE */
+	{ "ff4d4d" : "ffd495", "ff0000" : "ea9931", "c90d00" : "af4e00", "951500" : "6e2900" },
+	/* YELLOW */
+	{ "ff4d4d" : "ffffa7", "ff0000" : "e2c344", "c90d00" : "a46e06", "951500" : "642f00" },
+	/* GREEN */
+	{ "ff4d4d" : "b2e89d", "ff0000" : "51bd3b", "c90d00" : "247824", "951500" : "144216" },
+	/* BLUE */
+	{ "ff4d4d" : "96cbe7", "ff0000" : "5588d4", "c90d00" : "344495", "951500" : "1a1c51" },
+	/* PURPLE */
+	{ "ff4d4d" : "d29ce7", "ff0000" : "a451c4", "c90d00" : "6a2284", "951500" : "320c40" },
+	/* PINK */
+	{ "ff4d4d" : "eab3db", "ff0000" : "d35eae", "c90d00" : "97276d", "951500" : "59163f" },
+	/* BROWN */
+	{ "ff4d4d" : "ccae7c", "ff0000" : "a47844", "c90d00" : "754c23", "951500" : "472b13" }
+]
+}

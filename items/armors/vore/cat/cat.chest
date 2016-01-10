@@ -1,0 +1,50 @@
+{
+  "itemName" : "catchest",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "An impressive form made for quick movements. It won't actually make you quicker but it's a nice thought.",
+  "shortdescription" : "Cat Shirt",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chestm.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chestf.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "003b6e" : "003b6e", "003563" : "003563", "002a50" : "002a50", "001e37" : "001e37" },
+	/* BLACK */
+	{ "003b6e" : "838383", "003563" : "555555", "002a50" : "383838", "001e37" : "151515" },
+	/* GREY */
+	{ "003b6e" : "b5b5b5", "003563" : "808080", "002a50" : "555555", "001e37" : "303030" },
+	/* WHITE */
+	{ "003b6e" : "e6e6e6", "003563" : "b6b6b6", "002a50" : "7b7b7b", "001e37" : "373737" },
+	/* RED */
+	{ "003b6e" : "f4988c", "003563" : "d93a3a", "002a50" : "932625", "001e37" : "601119" },
+	/* ORANGE */
+	{ "003b6e" : "ffd495", "003563" : "ea9931", "002a50" : "af4e00", "001e37" : "6e2900" },
+	/* YELLOW */
+	{ "003b6e" : "ffffa7", "003563" : "e2c344", "002a50" : "a46e06", "001e37" : "642f00" },
+	/* GREEN */
+	{ "003b6e" : "b2e89d", "003563" : "51bd3b", "002a50" : "247824", "001e37" : "144216" },
+	/* BLUE */
+	{ "003b6e" : "96cbe7", "003563" : "5588d4", "002a50" : "344495", "001e37" : "1a1c51" },
+	/* PURPLE */
+	{ "003b6e" : "d29ce7", "003563" : "a451c4", "002a50" : "6a2284", "001e37" : "320c40" },
+	/* PINK */
+	{ "003b6e" : "eab3db", "003563" : "d35eae", "002a50" : "97276d", "001e37" : "59163f" },
+	/* BROWN */
+	{ "003b6e" : "ccae7c", "003563" : "a47844", "002a50" : "754c23", "001e37" : "472b13" }
+]
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "yoshipink",
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "yoshipink.lua"
+  ],
+
+  "label" : "Yoshi is happy!",
+  "icon" : "/interface/statuses/egg.png"
+}

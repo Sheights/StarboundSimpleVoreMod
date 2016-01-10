@@ -1,0 +1,27 @@
+{
+  "name": "pred_clothedhuman",
+  "priority": 12,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"human": 12,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "type": "pred_clothedhuman",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}
