@@ -1,0 +1,41 @@
+{
+  "itemName" : "sergallegs",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Leggings to make you look like a sergal.",
+  "shortdescription" : "Sergal Leggings",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ff00ff" : "ff00ff", "ff0000" : "ff0000", "d90000" : "d90000", "b30000" : "b30000" },
+	/* BLACK */
+	{ "ff00ff" : "838383", "ff0000" : "555555", "d90000" : "383838", "b30000" : "151515" },
+	/* GREY */
+	{ "ff00ff" : "b5b5b5", "ff0000" : "808080", "d90000" : "555555", "b30000" : "303030" },
+	/* WHITE */
+	{ "ff00ff" : "e6e6e6", "ff0000" : "b6b6b6", "d90000" : "7b7b7b", "b30000" : "373737" },
+	/* RED */
+	{ "ff00ff" : "f4988c", "ff0000" : "d93a3a", "d90000" : "932625", "b30000" : "601119" },
+	/* ORANGE */
+	{ "ff00ff" : "ffd495", "ff0000" : "ea9931", "d90000" : "af4e00", "b30000" : "6e2900" },
+	/* YELLOW */
+	{ "ff00ff" : "ffffa7", "ff0000" : "e2c344", "d90000" : "a46e06", "b30000" : "642f00" },
+	/* GREEN */
+	{ "ff00ff" : "b2e89d", "ff0000" : "51bd3b", "d90000" : "247824", "b30000" : "144216" },
+	/* BLUE */
+	{ "ff00ff" : "96cbe7", "ff0000" : "5588d4", "d90000" : "344495", "b30000" : "1a1c51" },
+	/* PURPLE */
+	{ "ff00ff" : "d29ce7", "ff0000" : "a451c4", "d90000" : "6a2284", "b30000" : "320c40" },
+	/* PINK */
+	{ "ff00ff" : "eab3db", "ff0000" : "d35eae", "d90000" : "97276d", "b30000" : "59163f" },
+	/* BROWN */
+	{ "ff00ff" : "ccae7c", "ff0000" : "a47844", "d90000" : "754c23", "b30000" : "472b13" }
+]
+}

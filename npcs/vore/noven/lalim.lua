@@ -185,7 +185,7 @@ end
 
 function digestHook()
 
-	if #victim > 1 then
+	if #victim > 0 then
 		entity.setItemSlot( "legs", "lalimlegsbelly" .. #victim )
 	else
 		entity.setItemSlot( "legs", "lalimlegs" )

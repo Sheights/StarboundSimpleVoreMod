@@ -1,0 +1,51 @@
+{
+  "objectName" : "novenworkcrystal",
+  "colonyTags" : ["noven","science","light"],
+  "rarity" : "Rare",
+  "category" : "light",
+  "price" : 120,
+
+  "description" : "A simple-looking object used by the Noven to create complex things from raw energy. It shimmers in the light.",
+  "shortdescription" : "Weaving Crystal",
+  "race" : "avian",
+  
+  "statusEffects" : [ ],
+
+  "lightColor" : [204, 153, 255],
+
+  "inventoryIcon" : "novenworkcrystalicon.png",
+  "orientations" : [
+    {
+      "image" : "novenworkcrystal.png:<frame>",
+      "imagePosition" : [0, 0],
+      
+      "direction" : "left",
+      "flipImages" : true,
+      "animationPosition" : [0, 0],
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "novenworkcrystal.png:<frame>",
+      "imagePosition" : [0, 0],
+      
+      "direction" : "right",
+      "animationPosition" : [0, 0],
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "novenworkcrystal.animation",
+  "animationParts" : {
+    "bg" : "novenworkcrystal.png",
+    "fg" : "novenworkcrystal.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inboundNodes" : [ [0, 0] ]
+}

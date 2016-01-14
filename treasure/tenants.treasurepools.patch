@@ -194,8 +194,8 @@
       [1, {
         "pool" : [
           {"weight" : 1.0, "item" : "foxchest"},
-          {"weight" : 1.0, "item" : "foxnhead"},
-		  {"weight" : 1.0, "item" : "foxnlegs"},
+          {"weight" : 1.0, "item" : "foxhead"},
+		  {"weight" : 1.0, "item" : "foxlegs"},
 		  {"weight" : 0.5, "item" : "foxchestbelly"},
 		  {"weight" : 0.5, "item" : "foxlegsbelly"}
         ],
@@ -211,8 +211,8 @@
       [1, {
         "pool" : [
           {"weight" : 1.0, "item" : "foxchest"},
-          {"weight" : 1.0, "item" : "foxnhead"},
-		  {"weight" : 1.0, "item" : "foxnlegs"},
+          {"weight" : 1.0, "item" : "foxhead"},
+		  {"weight" : 1.0, "item" : "foxlegs"},
 		  {"weight" : 0.5, "item" : "foxchestballs"},
 		  {"weight" : 0.5, "item" : "foxlegsballs"}
         ],
@@ -442,6 +442,22 @@
 		  {"weight" : 1.0, "item" : "reindeerhead2"},
 		  {"weight" : 1.0, "item" : "reindeerchest"},
 		  {"weight" : 0.5, "item" : "reindeerlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/sergalCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "sergalchest"},
+          {"weight" : 1.0, "item" : "sergalhead"},
+		  {"weight" : 1.0, "item" : "sergallegs"},
+		  {"weight" : 0.5, "item" : "sergallegsbelly"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -953,6 +969,20 @@
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
 		  {"weight" : 0.1, "pool" : "reindeerCostume"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/sergalGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "sergalCostume"}
         ],
         "poolRounds" : [
           [1, 1]

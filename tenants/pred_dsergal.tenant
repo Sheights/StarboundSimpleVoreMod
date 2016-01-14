@@ -1,0 +1,27 @@
+{
+	"name": "pred_dsergal",
+	"priority": 12,
+
+	"colonyTagCriteria": {
+		"light": 1,
+		"door": 1,
+		"hylotlvillage": 6,
+		"dvore": 1
+	},
+
+	"tenants": [
+		{
+			"spawn": "npc",
+			"species": "dummy",
+			"type": "pred_dsergal",
+			"overrides": {
+				"damageTeamType" : "friendly"
+			 }
+		 }
+	 ],
+
+	"rent": {
+		"periodRange": [900.0, 1800.0],
+		"pool": "sergalGift"
+	}
+}

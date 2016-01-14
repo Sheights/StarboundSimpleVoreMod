@@ -1,0 +1,43 @@
+{
+  "objectName" : "novenchair",
+  "colonyTags" : ["noven","science"],
+  "rarity" : "rare",
+  "category" : "furniture",
+  "price" : 95,
+  "description" : "A large chair floating in the air. The crystals seem to be powering it.",
+  "shortdescription" : "Energy Chair",
+  "race" : "noven",
+
+  "inventoryIcon" : "novenchairicon.png",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  
+  "orientations" : [
+    {
+      "image" : "novenchair.png:<frame>",
+      "imagePosition" : [-8, 0],
+      "flipImages" : true,
+      "direction" : "left",
+      "frames" : 4,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "sitPosition" : [0, 20]
+    },
+    {
+      "image" : "novenchair.png:<frame>",
+      "imagePosition" : [-8, 0],
+      "direction" : "right",
+      "frames" : 4,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "sitPosition" : [6, 20]
+    }
+  ],
+  
+  "animationPosition" : [-8, 0]
+}

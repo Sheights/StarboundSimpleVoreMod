@@ -1,0 +1,25 @@
+{
+  "objectName" : "novencrystalrack",
+  "colonyTags" : ["noven","science","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A collection of multi-colored crystals. They give off an odd buzz when approached. They seem dormant, at the moment.",
+  "shortdescription" : "Crystal Rack",
+  "race" : "noven",
+
+  "inventoryIcon" : "novencrystalrackicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "novencrystalrack.png:<frame>",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 4,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

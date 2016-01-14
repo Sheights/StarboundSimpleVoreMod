@@ -1,0 +1,41 @@
+{
+  "objectName" : "afromograph",
+  "printable" : false,
+  "colonyTags" : ["cvore","dvore","vore","pvore","musical"],
+  "rarity" : "Legendary",
+
+  "category" : "decorative",
+  "price" : 1500,
+
+  "description" : "You can save your game here! I think.",
+  "shortdescription" : "Phonograph",
+  "race" : "human",
+
+  "inventoryIcon" : "fromographicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "fromograph.png:off",
+      "imagePosition" : [-8, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "scripts" : [
+    "/objects/vore/fromograph/fromograph.lua"
+  ],
+  "scriptDelta" : 3,
+  
+  "animation" : "/objects/vore/fromograph/fromograph.animation",
+
+  "animationParts" : {
+    "fromograph" : "fromograph.png"
+  },
+  "animationPosition" : [-8, 0],
+  
+  
+
+  "sounds" : [ "/sfx/objects/fromographloop.wav" ]
+}
