@@ -1,5 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
+isDigest = true
+
 function initHook()
 
 	index = entity.getItemSlot("legs").parameters.colorIndex

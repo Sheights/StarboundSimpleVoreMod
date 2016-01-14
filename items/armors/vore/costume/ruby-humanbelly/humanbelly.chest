@@ -1,0 +1,48 @@
+{
+  "itemName" : "humanchestbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Not all lamia use the larger second stomach.",
+  "shortdescription" : "Human Belly",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ff00ff" : "ff00ff", "ffc181" : "ffc181", "d39c6c" : "d39c6c", "c7815b" : "c7815b" },
+	/* BLACK */
+	{ "ff00ff" : "ab8c77", "ffc181" : "86644a", "d39c6c" : "684431", "c7815b" : "40271d" },
+	/* GREY */
+	{ "ff00ff" : "c5ad98", "ffc181" : "a47a59", "d39c6c" : "865d40", "c7815b" : "66412e" },
+	/* WHITE */
+	{ "ff00ff" : "e1b98d", "ffc181" : "c88959", "d39c6c" : "9e6a4d", "c7815b" : "784930" },
+	/* RED */
+	{ "ff00ff" : "c9b181", "ffc181" : "ac8348", "d39c6c" : "87633f", "c7815b" : "694c31" },
+	/* ORANGE */
+	{ "ff00ff" : "e8cebc", "ffc181" : "cfa97d", "d39c6c" : "ae774b", "c7815b" : "804e34" },
+	/* YELLOW */
+	{ "ff00ff" : "f4e0ba", "ffc181" : "e9b768", "d39c6c" : "c18f54", "c7815b" : "a2683d" },
+	/* GREEN */
+	{ "ff00ff" : "ffe9d3", "ffc181" : "ffc181", "d39c6c" : "d39c6c", "c7815b" : "b97551" },
+	/* BLUE */
+	{ "ff00ff" : "fbe1d4", "ffc181" : "f6baa2", "d39c6c" : "cc9582", "c7815b" : "ac7261" },
+	/* PURPLE */
+	{ "ff00ff" : "fff7ec", "ffc181" : "f9d3a9", "d39c6c" : "d3a57c", "c7815b" : "b37c5d" },
+	/* PINK */
+	{ "ff00ff" : "fff6f6", "ffc181" : "f7d5d3", "d39c6c" : "d1aaa1", "c7815b" : "a27f70" }
+]
+}

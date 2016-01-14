@@ -247,7 +247,7 @@ end
 function digestHook()
 
 	entity.say( #victim )
-	if #victim > 1 then
+	if #victim > 0 then
 		entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 	else
 		entity.setItemSlot( "legs", "novenlegs" )
@@ -270,15 +270,10 @@ function updateHook(dt)
 	if animFlag then
 
 		dt = dt or 0.01
-		if animTimer < 3.0 then
+		if animTimer < 5.0 then
 			entity.setItemSlot( "head", "novenhead2" )
-		elseif animTimer < 4.0 then
+		else
 			entity.setItemSlot( "head", "novenhead1" )
-			entity.setItemSlot( "chest", "novenchestbelly1" )
-		elseif animTimer < 5.0 then
-			entity.setItemSlot( "chest", "novenchestbelly2" )
-		elseif animTimer < 6.0 then
-			entity.setItemSlot( "chest", "novenchest" )
 			if #victim > 0 then
 				entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 			else

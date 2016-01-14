@@ -10,7 +10,7 @@ oldUpdate = update
 -- Keep the value anywhere between 0 and 1
 -- 0% = 0, 50% = 0.5 or 1/2, 100% chance = 1.0
 -- This can also be done in the individual .lua files.
-playerChance = 1
+playerChance = 0.5
 
 -- NPC Chance is a percent chance that an NPC will be vored when the feed function is called.
 -- Keep the value anywhere between 0 and 1

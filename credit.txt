@@ -8,7 +8,7 @@ Asari 						- treebuddy
 Avali 						- treebuddy
 Avian 						- treebuddy
 Bunny 						- treebuddy
-Bunyip						- Rossmallo
+Bunyip						- Rossmallo who may be found at http://www.furaffinity.net/user/rossmallo/
 Catlike 					- treebuddy
 Chica 						- treebuddy
 Chocobo Anthro 				- treebuddy
@@ -29,11 +29,12 @@ Freddy 						- treebuddy
 Frog						- based on the Frog enemy from 'Fromage' - Sheights
 Gardetrap 					- rez
 Gardevoir 					- treebuddy
+Gardevoir Animated			- drpolice
 Giant Lucaria 				- treebuddy
 Glitch 						- treebuddy
 Glitch Alt Del 				- treebuddy
 Glaze						- Glaze
-Gnaw						- Rossmallo
+Gnaw						- Rossmallo who may be found at http://www.furaffinity.net/user/rossmallo/
 Goodra						- treebuddy
 Goodra Animated				- Glaze
 Greninja 					- treebuddy
@@ -102,7 +103,7 @@ Avali						- based on Avali Triage mod - Sheights
 Cat							- Treebuddy
 Catfish						- based on character by Very/Becdecorbin. http://verylascivious.tumblr.com/
 Centaur						- Treebuddy
-De'vout						- Bruyaglovae
+De'vout						- Bruyaglovae who may be found at http://www.furaffinity.net/user/bruyaglovae/
 Deertaur					- Treebuddy
 Dezzy						- based on Dezzykitsune OC, Dezzy Yoshi - Treebuddy
 Dragon						- Treebuddy
@@ -114,7 +115,7 @@ Human						- Paradox
 Kangaru						- based on Kangaru mod - Sheights
 Kineptic					- based on Kineptic mod - Sheights
 Kirhos						- based on Kirhos mod - Sheights
-Lalim						- Bruyaglovae
+Lalim						- Bruyaglovae who may be found at http://www.furaffinity.net/user/bruyaglovae/
 Lamia						- Treebuddy
 Lopunny						- based on Lopunny mod - Treebuddy
 Lucario						- based on Lucario mod - Treebuddy
@@ -123,6 +124,7 @@ Newt						- Sheights
 Orca						- Sheights
 Orcana						- based on Orcana mod - Sheights
 Reindeer					- Treebuddy
+Sergal						- amadeusreworp
 Slime						- ArgobargSoup
 Shark						- Sheights
 Shark(Anthro)				- Treebuddy
