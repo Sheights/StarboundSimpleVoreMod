@@ -1,0 +1,152 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "full"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "digest"  :  {
+		    "frames"  :  36,
+			"cycle"  :  2.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "gurgle"  :  {
+		    "frames"  :  19,
+			"cycle"  :  1.9,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "fullsnort"  :  {
+		    "frames"  :  10,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "squirm"  :  {
+		    "frames"  :  30,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "fullts"  :  {
+		    "frames"  :  17,
+			"cycle"  :  1.7,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "indigestion"  :  {
+		    "frames"  :  37,
+			"cycle"  :  3.7,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "regurgitate"  :  {
+		    "frames"  :  47,
+			"cycle"  :  4.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "snort"  :  {
+		    "frames"  :  10,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  32,
+			"cycle"  :  2.4,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "tailswing"  :  {
+		    "frames"  :  17,
+			"cycle"  :  1.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "full"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full"
+		      }
+		    },
+	        "digest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest.<frame>"
+		      }
+		    },
+			"gurgle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:gurgle.<frame>"
+		      }
+		    },
+			"fullsnort"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullsnort.<frame>"
+		      }
+		    },
+			"squirm"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:squirm.<frame>"
+		      }
+		    },
+			"fullts"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullts.<frame>"
+		      }
+		    },
+	        "indigestion"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:indigestion.<frame>"
+		      }
+		    },
+			"regurgitate"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:regurgitate.<frame>"
+		      }
+		    },
+	        "snort"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:snort.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "tailswing"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tailswing.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

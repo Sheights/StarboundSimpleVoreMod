@@ -1,0 +1,28 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [144, 96],
+	"dimensions"  :  [16, 16],
+	"names"  :  [
+	  [ "idle", "digest.1", "digest.2", "digest.3", "digest.4", "digest.5", "digest.6", "digest.7", "digest.8", "digest.9", "digest.10", "digest.11", "digest.12", "digest.13", "digest.14", "digest.15" ],
+	  [ "digest.16", "digest.17", "digest.18", "digest.19", "digest.20", "digest.21", "digest.22", "digest.23", "digest.24", "digest.25", "digest.26", "digest.27", "digest.28", "digest.29", "digest.30", "digest.31" ],
+	  [ "digest.32", "digest.33", "digest.34", "digest.35", "digest.36", "gurgle.1", "gurgle.2", "gurgle.3", "gurgle.4", "gurgle.5", "gurgle.6", "gurgle.7", "gurgle.8", "gurgle.9", "gurgle.10", "gurgle.11" ],
+	  [ "gurgle.12", "gurgle.13", "gurgle.14", "gurgle.15", "gurgle.16", "gurgle.17", "gurgle.18", "gurgle.19", "fullsnort.1", "fullsnort.2", "fullsnort.3", "fullsnort.4", "fullsnort.5", "fullsnort.6", "fullsnort.7", "fullsnort.8" ],
+	  [ "fullsnort.9", "fullsnort.10", "squirm.1", "squirm.2", "squirm.3", "squirm.4", "squirm.5", "squirm.6", "squirm.7", "squirm.8", "squirm.9", "squirm.10", "squirm.11", "squirm.12", "squirm.13", "squirm.14" ],
+	  [ "squirm.15", "squirm.16", "squirm.17", "squirm.18", "squirm.19", "squirm.20", "squirm.21", "squirm.22", "squirm.23", "squirm.24", "squirm.25", "squirm.26", "squirm.27", "squirm.28", "squirm.29", "squirm.30" ],
+	  [ "fullts.1", "fullts.2", "fullts.3", "fullts.4", "fullts.5", "fullts.6", "fullts.7", "fullts.8", "fullts.9", "fullts.10", "fullts.11", "fullts.12", "fullts.13", "fullts.14", "fullts.15", "fullts.16" ],
+	  [ "fullts.17", "indigestion.1", "indigestion.2", "indigestion.3", "indigestion.4", "indigestion.5", "indigestion.6", "indigestion.7", "indigestion.8", "indigestion.9", "indigestion.10", "indigestion.11", "indigestion.12", "indigestion.13", "indigestion.14", "indigestion.15" ],
+	  [ "indigestion.16", "indigestion.17", "indigestion.18", "indigestion.19", "indigestion.20", "indigestion.21", "indigestion.22", "indigestion.23", "indigestion.24", "indigestion.25", "indigestion.26", "indigestion.27", "indigestion.28", "indigestion.29", "indigestion.30", "indigestion.31" ],
+	  [ "indigestion.32", "indigestion.33", "indigestion.34", "indigestion.35", "indigestion.36", "indigestion.37", "regurgitate.1", "regurgitate.2", "regurgitate.3", "regurgitate.4", "regurgitate.5", "regurgitate.6", "regurgitate.7", "regurgitate.8", "regurgitate.9", "regurgitate.10" ],
+	  [ "regurgitate.11", "regurgitate.12", "regurgitate.13", "regurgitate.14", "regurgitate.15", "regurgitate.16", "regurgitate.17", "regurgitate.18", "regurgitate.19", "regurgitate.20", "regurgitate.21", "regurgitate.22", "regurgitate.23", "regurgitate.24", "regurgitate.25", "regurgitate.26" ],
+	  [ "regurgitate.27", "regurgitate.28", "regurgitate.29", "regurgitate.30", "regurgitate.31", "regurgitate.32", "regurgitate.33", "regurgitate.34", "regurgitate.35", "regurgitate.36", "regurgitate.37", "regurgitate.38", "regurgitate.39", "regurgitate.40", "regurgitate.41", "regurgitate.42" ],
+	  [ "regurgitate.43", "regurgitate.44", "regurgitate.45", "regurgitate.46", "regurgitate.47", "snort.1", "snort.2", "snort.3", "snort.4", "snort.5", "snort.6", "snort.7", "snort.8", "snort.9", "snort.10", "swallow.1" ],
+	  [ "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "swallow.11", "swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16", "swallow.17" ],
+	  [ "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "swallow.24", "swallow.25", "swallow.26", "swallow.27", "swallow.28", "swallow.29", "swallow.30", "swallow.31", "swallow.32", "tailswing.1" ],
+	  [ "tailswing.2", "tailswing.3", "tailswing.4", "tailswing.5", "tailswing.6", "tailswing.7", "tailswing.8", "tailswing.9", "tailswing.10", "tailswing.11", "tailswing.12", "tailswing.13", "tailswing.14", "tailswing.15", "tailswing.16", "tailswing.17" ]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "full"  :  "swallow.32"
+  }
+}

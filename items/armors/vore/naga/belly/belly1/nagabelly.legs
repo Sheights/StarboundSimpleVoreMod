@@ -1,0 +1,41 @@
+{
+  "itemName" : "nagalegsbelly1",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A wonderful tail made for slithering about.",
+  "shortdescription" : "Naga Tail",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ed4444" : "ed4444", "f12f2f" : "f12f2f", "bf1b1b" : "bf1b1b", "a60404" : "a60404", "730404" : "730404", "640202" : "640202" },
+	/* BLACK */
+	{ "ed4444" : "999999", "f12f2f" : "838383", "bf1b1b" : "707070", "a60404" : "5c5c5c", "730404" : "474747", "640202" : "333333" },
+	/* GREY */
+	{ "ed4444" : "cccccc", "f12f2f" : "b5b5b5", "bf1b1b" : "838383", "a60404" : "707070", "730404" : "5c5c5c", "640202" : "474747" },
+	/* WHITE */
+	{ "ed4444" : "e0e0e0", "f12f2f" : "cccccc", "bf1b1b" : "b5b5b5", "a60404" : "838383", "730404" : "707070", "640202" : "5c5c5c" },
+	/* RED */
+	{ "ed4444" : "e88787", "f12f2f" : "e26565", "bf1b1b" : "d93a3a", "a60404" : "ce2727", "730404" : "ab2121", "640202" : "891a1a" },
+	/* ORANGE */
+	{ "ed4444" : "f1bf7e", "f12f2f" : "eead59", "bf1b1b" : "ea9931", "a60404" : "de8817", "730404" : "b97113", "640202" : "945a10" },
+	/* YELLOW */
+	{ "ed4444" : "eedd95", "f12f2f" : "e9d172", "bf1b1b" : "e2c344", "a60404" : "deba2b", "730404" : "c2a11e", "640202" : "9f8419" },
+	/* GREEN */
+	{ "ed4444" : "83d373", "f12f2f" : "68c954", "bf1b1b" : "51bd3b", "a60404" : "439b31", "730404" : "357c27", "640202" : "285d1d" },
+	/* BLUE */
+	{ "ed4444" : "9dbae7", "f12f2f" : "7ca4de", "bf1b1b" : "5588d4", "a60404" : "3b76ce", "730404" : "2d63b4", "640202" : "255193" },
+	/* PURPLE */
+	{ "ed4444" : "c795db", "f12f2f" : "b776d0", "bf1b1b" : "a451c4", "a60404" : "943eb6", "730404" : "7c3498", "640202" : "632a7a" },
+	/* PINK */
+	{ "ed4444" : "e59fcf", "f12f2f" : "dc7fbe", "bf1b1b" : "d35fae", "a60404" : "ca3f9e", "730404" : "b03088", "640202" : "90276f" },
+	/* BROWN */
+	{ "ed4444" : "c39d6f", "f12f2f" : "b78a52", "bf1b1b" : "a47844", "a60404" : "816036", "730404" : "654a2a", "640202" : "48351e" }
+]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "prey_kineptic",
+  "priority": 16,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "kineptic": 6,
+	"prey": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "kineptic",
+      "type": "prey",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}
