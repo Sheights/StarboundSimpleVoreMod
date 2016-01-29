@@ -1,0 +1,29 @@
+{
+  "objectName" : "pokeball",
+  "colonyTags" : ["poke","pretty","science"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 50,
+  "printable" : false,
+
+  "description" : "A pokeball with the technology removed, rendering it nothing more than a decorative object",
+  "shortdescription" : "Pokeball",
+  "race" : "hylotl",
+
+  "defaultDescription" : "I won't be catching them all with this",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "pokeball.png:<color>",
+      
+	  "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+	  
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

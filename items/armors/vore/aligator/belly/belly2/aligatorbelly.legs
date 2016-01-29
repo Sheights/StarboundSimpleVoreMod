@@ -1,0 +1,41 @@
+{
+  "itemName" : "aligatorlegsbelly2",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : " ",
+  "shortdescription" : "Aligator Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "b2e89d" : "b2e89d", "51bd3b" : "51bd3b", "247824" : "247824", "144216" : "144216" },
+	/* BLACK */
+	{ "b2e89d" : "838383", "51bd3b" : "555555", "247824" : "383838", "144216" : "151515" },
+	/* GREY */
+	{ "b2e89d" : "b5b5b5", "51bd3b" : "808080", "247824" : "555555", "144216" : "303030" },
+	/* WHITE */
+	{ "b2e89d" : "e6e6e6", "51bd3b" : "b6b6b6", "247824" : "7b7b7b", "144216" : "373737" },
+	/* RED */
+	{ "b2e89d" : "f4988c", "51bd3b" : "d93a3a", "247824" : "932625", "144216" : "601119" },
+	/* ORANGE */
+	{ "b2e89d" : "ffd495", "51bd3b" : "ea9931", "247824" : "af4e00", "144216" : "6e2900" },
+	/* YELLOW */
+	{ "b2e89d" : "ffffa7", "51bd3b" : "e2c344", "247824" : "a46e06", "144216" : "642f00" },
+	/* GREEN */
+	{ "b2e89d" : "b2e89d", "51bd3b" : "51bd3b", "247824" : "247824", "144216" : "144216" },
+	/* BLUE */
+	{ "b2e89d" : "96cbe7", "51bd3b" : "5588d4", "247824" : "344495", "144216" : "1a1c51" },
+	/* PURPLE */
+	{ "b2e89d" : "d29ce7", "51bd3b" : "a451c4", "247824" : "6a2284", "144216" : "320c40" },
+	/* PINK */
+	{ "b2e89d" : "eab3db", "51bd3b" : "d35eae", "247824" : "97276d", "144216" : "59163f" },
+	/* BROWN */
+	{ "b2e89d" : "ccae7c", "51bd3b" : "a47844", "247824" : "754c23", "144216" : "472b13" }
+]
+}

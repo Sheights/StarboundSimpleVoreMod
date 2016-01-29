@@ -1,7 +1,10 @@
 function init()
 
   self.active = false
+  self.audio = false
   self.cooldown = 0
+  self.digest = false
+  self.heal = false
   self.host = nil
   self.inputSpecial = false
   self.specialLast = false
@@ -25,7 +28,29 @@ function input(args)
   end
   
   self.specialLast = args.moves["special"] == 1
-
+  
+  if args.moves["up"] and self.active then
+  
+	return "toggleheal"
+	
+  end
+  
+  if args.moves["right"] and self.active then
+  
+	if self.audio then
+	  self.audio = false
+    else
+	  self.audio = true
+	end
+	
+  end
+  
+  if args.moves["down"] and self.active then
+  
+	return "toggledigest"
+	
+  end
+	
   return nil
 end
 
@@ -48,8 +73,45 @@ function update(args)
 	
 	self.cooldown = 0
 	
+  elseif args.actions["toggledigest"] and self.active and self.cooldown >= 0.5 then
+  
+    if self.heal then
+	  status.clearPersistentEffects("voreheal")
+	  self.heal = false
+	end
+	
+	if self.digest then
+	  status.clearPersistentEffects("voredigest")
+	  self.digest = false
+	else
+	  status.addPersistentEffect("voredigest", "npcacid")
+	  self.digest = true
+	end
+	
+	self.cooldown = 0
+	
+  elseif args.actions["toggleheal"] and self.active and self.cooldown >= 0.5 then
+  
+    if self.digest then
+	  status.clearPersistentEffects("voredigest")
+	  self.heal = false
+	end
+	
+	if self.heal then
+	  status.clearPersistentEffects("voreheal")
+	  self.heal = false
+	else
+	  status.addPersistentEffect("voreheal", "voreheal")
+	  self.heal = true
+	end
+  
+	self.cooldown = 0
+	
   elseif args.actions["deactive"] and self.active and self.cooldown >= 0.5 then
+  
 	deactivate()
+	self.cooldown = 0
+	
   end
 
   if self.active then
@@ -59,6 +121,9 @@ function update(args)
 		  deactivate()
 		end
 	else
+		if self.audio and math.random(600) == 1 then
+		  world.spawnProjectile( "digestprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+		end
 	  mcontroller.setPosition( world.entityPosition( self.host ) )
 	  self.timer = 0
 	end
@@ -77,6 +142,8 @@ function deactivate()
   self.host = nil
   self.timer = 0
   status.clearPersistentEffects("fallimmunity")
+  status.clearPersistentEffects("voredigest")
+  status.clearPersistentEffects("voreheal")
   tech.setParentDirectives()
 
 end

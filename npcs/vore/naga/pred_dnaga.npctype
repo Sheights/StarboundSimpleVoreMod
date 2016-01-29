@@ -1,0 +1,162 @@
+{
+  "type" : "pred_dnaga",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+								"...Put back...",
+								"...Don't do that...",
+								"...Not good enough...",
+								"...Need more..."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"...Too windy...",
+								"...Too chilly...",
+								"...The heat is getting out...",
+								"...Needs fixing..."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"...Too crowded...",
+							"...Tresspassers...",
+							"...Begone..."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"...I needed that...",
+						"...Stop breaking things...",
+						"...Don't do that...",
+						"...Causing trouble..."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"...Don't destroy a snake's home...",
+						"...I'll be leaving if soon... fix it...",
+						"...fix it... Now..."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"...Home sweet home...",
+						"...Maybe something tasty is waiting for me...",
+						"...A good time to rest off the last meal..."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"...Why should I pay you... I should eat you...",
+						"...Enjoy it while you can...",
+						"...Perhaps you'll pay me for...'rent'..."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"...Tresspassers...",
+					"...Attackers...",
+					"...Invaders...",
+					"...Know your place..."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"...They are being attacked...",
+						"...You... Help them...",
+						"Invaders... attacking others..."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"...End it...",
+					"...put it to an end...",
+					"...Make them pay..."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"...The stress... Nearly lost my lunch...",
+					"...Do you know what snakes do... when stressed?...",
+					"...Finally... I can rest..."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "...Why are you still outside? ...Not for long...",
+            "...Prey shouldn't walk in a snake's line of sight...",
+            "...Your friend... you'll see them soon...",
+            "...You're food... Stop stalling...",
+            "...I let you wander... get nice and fat...",
+            "...May your soul feed the great Quetzalcoatl... As your body mine...",
+            "... You keep saying 'don't eat me' and 'I'm not food'.... but... we both know thats a lie..."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/naga/dnaga.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "nagahead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "chest" : [
+              { "name" : "nagachest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "nagalegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}
