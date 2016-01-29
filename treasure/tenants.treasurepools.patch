@@ -1,5 +1,22 @@
 [
 	{ "op" : "add",
+      "path" : "/aligatorCostume",
+      "value" : [
+      [1, {
+        "pool" : [
+          {"weight" : 1.0, "item" : "aligatorchest"},
+		  {"weight" : 1.0, "item" : "aligatorhead"},
+		  {"weight" : 1.0, "item" : "aligatorlegs"},
+		  {"weight" : 0.5, "item" : "aligatorlegsbelly"},
+		  {"weight" : 0.5, "item" : "aligatorlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
       "path" : "/avaliCostume",
       "value" : [
       [1, {
@@ -647,6 +664,20 @@
         "pool" : [
 		  {"weight" : 1.0, "item" : "zebrataurlegs"},
 		  {"weight" : 0.5, "item" : "zebrataurlegsbelly"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/aligatorGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "pool" : "aligatorCostume"}
         ],
         "poolRounds" : [
           [1, 1]
