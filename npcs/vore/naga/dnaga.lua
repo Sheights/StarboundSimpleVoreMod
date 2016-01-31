@@ -115,17 +115,17 @@ function initHook()
 					colorIndex = index
 	}}
 	legsbelly2 = {
-		name = "nagalegsbelly1",
+		name = "nagalegsbelly2",
 		parameters = {
 					colorIndex = index
 	}}
 	legsbelly3 = {
-		name = "nagalegsbelly1",
+		name = "nagalegsbelly3",
 		parameters = {
 					colorIndex = index
 	}}
 	legsbelly4 = {
-		name = "nagalegsbelly1",
+		name = "nagalegsbelly4",
 		parameters = {
 					colorIndex = index
 	}}
