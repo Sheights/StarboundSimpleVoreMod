@@ -1,0 +1,42 @@
+{
+  "itemName" : "inklingwig",
+  "price" : 0,
+  "inventoryIcon" : "icon.png",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "I can't tell. Are you a kid or a squid?",
+  "shortdescription" : "Inkling Wig",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
+  "mask" : "mask.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "96cbe7" : "96cbe7", "5588d4" : "5588d4", "344495" : "344495", "1a1c51" : "1a1c51" },
+	/* BLACK */
+	{ "96cbe7" : "838383", "5588d4" : "555555", "344495" : "383838", "1a1c51" : "151515" },
+	/* GREY */
+	{ "96cbe7" : "b5b5b5", "5588d4" : "808080", "344495" : "555555", "1a1c51" : "303030" },
+	/* WHITE */
+	{ "96cbe7" : "e6e6e6", "5588d4" : "b6b6b6", "344495" : "7b7b7b", "1a1c51" : "373737" },
+	/* RED */
+	{ "96cbe7" : "f4988c", "5588d4" : "d93a3a", "344495" : "932625", "1a1c51" : "601119" },
+	/* ORANGE */
+	{ "96cbe7" : "ffd495", "5588d4" : "ea9931", "344495" : "af4e00", "1a1c51" : "6e2900" },
+	/* YELLOW */
+	{ "96cbe7" : "ffffa7", "5588d4" : "e2c344", "344495" : "a46e06", "1a1c51" : "642f00" },
+	/* GREEN */
+	{ "96cbe7" : "b2e89d", "5588d4" : "51bd3b", "344495" : "247824", "1a1c51" : "144216" },
+	/* BLUE */
+	{ "96cbe7" : "96cbe7", "5588d4" : "5588d4", "344495" : "344495", "1a1c51" : "1a1c51" },
+	/* PURPLE */
+	{ "96cbe7" : "d29ce7", "5588d4" : "a451c4", "344495" : "6a2284", "1a1c51" : "320c40" },
+	/* PINK */
+	{ "96cbe7" : "eab3db", "5588d4" : "d35eae", "344495" : "97276d", "1a1c51" : "59163f" },
+	/* BROWN */
+	{ "96cbe7" : "ccae7c", "5588d4" : "a47844", "344495" : "754c23", "1a1c51" : "472b13" }
+]
+}
