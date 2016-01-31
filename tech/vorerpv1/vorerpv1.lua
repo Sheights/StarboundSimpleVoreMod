@@ -94,7 +94,7 @@ function update(args)
   
     if self.digest then
 	  status.clearPersistentEffects("voredigest")
-	  self.heal = false
+	  self.digest = false
 	end
 	
 	if self.heal then

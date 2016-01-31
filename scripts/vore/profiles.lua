@@ -24,12 +24,12 @@ profiles[3]["idle"] 		= {}
 profiles[3]["interact"]		= {}
 profiles[3]["release"] 		= {}
 
-profiles[4] = {}					-- Wants to be eaten. Written by MisterSnaivi
-profiles[4]["consumed"] 	= {}
-profiles[4]["death"] 		= {}
-profiles[4]["idle"] 		= {}
-profiles[4]["interact"]		= {}
-profiles[4]["release"] 		= {}
+--profiles[4] = {}					-- Wants to be eaten. Written by MisterSnaivi
+--profiles[4]["consumed"] 	= {}
+--profiles[4]["death"] 		= {}
+--profiles[4]["idle"] 		= {}
+--profiles[4]["interact"]		= {}
+--profiles[4]["release"] 		= {}
 
 profiles[1]["bribe"][1]		= {	"Please, let me out? I'll give you whatever you want.",
 								"You want pixels? I got pixels...",
@@ -317,71 +317,71 @@ profiles[3]["release"][3]	= {	"Thank you so much... For uh releasing me I mean."
 
 --##########################################################################################################
 
-profiles[4]["death"][1]		= { "Was fun while it lasted...",
-								"Thank... you....",
-								"The best way to go...."
-}
-profiles[4]["idle"][1]		= {	"It's pretty cozy in here.",
-								"It's so comfortable!",
-								"This feels awesome."
-}
-profiles[4]["interact"][1]	= {	"Hey! Hungry?",
-								"Say, was that your stomach growling?",
-								"You know, I'm feeling very tasty today."
-}
-profiles[4]["release"][1]	= {	"Aw, already?",
-								"Aw, I was having so much fun!",
-								"That was fun, I hope we can do it again sometime!",
-								"Aw, your warm belly was so comfortable."
-}
-profiles[4]["consumed"][2]	= { "Yay, more eating!",
-								"It's good to be in here again!",
-								"This is fun!"
-}
-profiles[4]["death"][2]		= { "Guess I'll just take a nap...",
-								"Thank you...",
-								"Zzzz...."
-}
-profiles[4]["idle"][2]		= {	"Do you like it when I struggle? Hehe~",
-								"*Wiggles*",
-								"You're as comfortable as always!"
-}
-profiles[4]["interact"][2]	= {	--"Hey <player name>! Want to have some fun again?",
-								"I'm pretty delicious! Interested?",
-								"I want to visit your stomach again!",
-								"Can I jump into your belly?"
-}
-profiles[4]["release"][2]	= {	"Aw, I wanted to stay a little longer.",
-								"Can we have more fun later?",
-								"I can't wait to go back!",
-								"Aw, it was so warm and comfortable."
-}
-profiles[4]["consumed"][3]	= { "Thank you!",
-								"Yay!",
-								"Hehe, you like this, don't you?",
-								"I'm happy to be your meal!",
-								"I taste good, don't I? You're welcome!"
-}
-profiles[4]["death"][3]		= { "Thank.. you...",
-								"I am glad to satisfy you...",
-								"Good night...",
-								"Zzz...."
-}
-profiles[4]["idle"][3]		= {	"*Rubs belly walls*",
-								"It's so warm~",
-								"Can I spend the night here?",
-								"*Wiggles*",
-								"You're so tight and comfortable...",
-								"Hehe~"
-}
-profiles[4]["interact"][3]	= {	"*Rubs belly* Can we have some fun?",
-								"*Yawns* Hey, can I take a nap in your belly?",
-								"Hey <player name>! Let's have some fun again!",
-								"Do you miss my taste?"
-}
-profiles[4]["release"][3]	= {	"Aw, I was enjoying it.",
-								"Can't wait to be eaten again!",
-								"I'll keep myself tasty for the next time you're hungry!",
-								"Can I stay longer next time?",
-								"Aw..."
-}
+--profiles[4]["death"][1]		= { "Was fun while it lasted...",
+--								"Thank... you....",
+--								"The best way to go...."
+--}
+--profiles[4]["idle"][1]		= {	"It's pretty cozy in here.",
+--								"It's so comfortable!",
+--								"This feels awesome."
+--}
+--profiles[4]["interact"][1]	= {	"Hey! Hungry?",
+--								"Say, was that your stomach growling?",
+--								"You know, I'm feeling very tasty today."
+--}
+--profiles[4]["release"][1]	= {	"Aw, already?",
+--								"Aw, I was having so much fun!",
+--								"That was fun, I hope we can do it again sometime!",
+--								"Aw, your warm belly was so comfortable."
+--}
+--profiles[4]["consumed"][2]	= { "Yay, more eating!",
+--								"It's good to be in here again!",
+--								"This is fun!"
+--}
+--profiles[4]["death"][2]		= { "Guess I'll just take a nap...",
+--								"Thank you...",
+--								"Zzzz...."
+--}
+--profiles[4]["idle"][2]		= {	"Do you like it when I struggle? Hehe~",
+--								"*Wiggles*",
+--								"You're as comfortable as always!"
+--}
+--profiles[4]["interact"][2]	= {	--"Hey <player name>! Want to have some fun again?",
+--								"I'm pretty delicious! Interested?",
+--								"I want to visit your stomach again!",
+--								"Can I jump into your belly?"
+--}
+--profiles[4]["release"][2]	= {	"Aw, I wanted to stay a little longer.",
+--								"Can we have more fun later?",
+--								"I can't wait to go back!",
+--								"Aw, it was so warm and comfortable."
+--}
+--profiles[4]["consumed"][3]	= { "Thank you!",
+--								"Yay!",
+--								"Hehe, you like this, don't you?",
+--								"I'm happy to be your meal!",
+--								"I taste good, don't I? You're welcome!"
+--}
+--profiles[4]["death"][3]		= { "Thank.. you...",
+--								"I am glad to satisfy you...",
+--								"Good night...",
+--								"Zzz...."
+--}
+--profiles[4]["idle"][3]		= {	"*Rubs belly walls*",
+--								"It's so warm~",
+--								"Can I spend the night here?",
+--								"*Wiggles*",
+--								"You're so tight and comfortable...",
+--								"Hehe~"
+--}
+--profiles[4]["interact"][3]	= {	"*Rubs belly* Can we have some fun?",
+--								"*Yawns* Hey, can I take a nap in your belly?",
+--								"Hey <player name>! Let's have some fun again!",
+--								"Do you miss my taste?"
+--}
+--profiles[4]["release"][3]	= {	"Aw, I was enjoying it.",
+--								"Can't wait to be eaten again!",
+--								"I'll keep myself tasty for the next time you're hungry!",
+--								"Can I stay longer next time?",
+--								"Aw..."
+--}

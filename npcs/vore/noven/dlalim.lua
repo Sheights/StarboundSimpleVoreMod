@@ -1,6 +1,8 @@
 require "/scripts/vore/multivore.lua"
 
+animFlag = false
 isDigest = true
+animTimer = 0
 
 playerLines = {}
 
@@ -195,17 +197,44 @@ function digestHook()
 	
 end
 
+
 function feedHook()
 
 	entity.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
-	entity.setItemSlot( "legs", "lalimlegsbelly" .. #victim )
+	
+	if animFlag == true then
+		animTimer = 0
+	else
+		animFlag = true
+	end
 	
 end
 
 function updateHook(dt)
+	
+	if animFlag then
+
+		dt = dt or 0.01
+		if animTimer < 0.7 then
+			entity.setItemSlot( "chest", "lalimchestbelly" )
+		else
+			entity.setItemSlot( "chest", "lalimchest" )
+			if #victim > 0 then
+				entity.setItemSlot( "legs", "lalimlegsbelly" .. #victim )
+			else
+				entity.setItemSlot( "legs", "lalimlegs" )
+			end
+			animFlag = false
+			animTimer = 0
+		end
+		
+		animTimer = animTimer + dt
+	end
+	
 	if math.random(500) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
 		entity.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
 	end
+	
 end
 
 function forceExit()
