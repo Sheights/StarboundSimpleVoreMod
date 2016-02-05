@@ -4,6 +4,7 @@ oldDie = die
 oldInit = init
 oldInteract = interact
 oldUpdate = update
+oldPreserved = tenant.preservedStorage
 
 ---------------------------------------------------------------------------------------
 --#####################################################################################
@@ -28,6 +29,15 @@ predator	= nil
 
 voreeffect	= "npcprey"
 projectile	= "npcpreprojectile"
+
+function tenant.preservedStorage()
+	local newtable = {
+		names = storage.names,
+		freq = storage.freq
+	}
+
+	return util.mergeTable(newtable, oldPreserved() or {})
+end
 
 function init()
 
@@ -56,7 +66,7 @@ function die()
 	world.logInfo("ping1")
 	world.spawnProjectile( "cleanser" , mcontroller.position(), entity.id(), {0, 0}, true )
 	if eaten then
-		entity.say( myProfile["death"][familiarity][ math.random( #myProfile["release"][familiarity] ) ] )
+		entity.say( myProfile["death"][familiarity][ math.random( #myProfile["death"][familiarity] ) ] )
 		if math.random() > 0.8 then
 			world.spawnItem( "money", world.entityPosition(entity.id()), math.random(200) + 100 )
 		end
@@ -67,7 +77,7 @@ function die()
 end
 
 function interact(args)
-	
+
 	interactHook()
 	
 	if talkTimer < 1 then
@@ -164,6 +174,8 @@ end
 function familiarize( name )
 
 	temp = storage.names
+
+
 	
 	for i=0, #temp do
 		if temp[i] == name then
