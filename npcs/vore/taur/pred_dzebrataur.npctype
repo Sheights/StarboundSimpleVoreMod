@@ -13,9 +13,9 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"The spirits say you be stealin’ from me, I sugges’ you stop.",
+							"The spirits say you be stealin' from me, I sugges' you stop.",
 							"Do not steal from a tribe willing to share.",
-							"Put that back or you be a joinin’ the spirits!"
+							"Put that back or you be a joinin' the spirits!"
 			  ]
 			}
 		  },
@@ -23,7 +23,7 @@
 			"default" : {
 			  "default" : [
 							"Dark forces have been damaging my home!",
-							"The spirits are displeased with the walls of dis’ dwelling.",
+							"The spirits are displeased with the walls of dis' dwelling.",
 							"My home is not keeping out de creatures of the plains."
 			  ]
 			}
@@ -41,7 +41,7 @@
 			  "default" : [
 							"The spirits be getting angry child!",
 							"I be putting some bad Juju on you!",
-							"I’m going to be sharpening my spears colonial..."
+							"I'm going to be sharpening my spears colonial..."
 			  ]
 			}
 		  },
@@ -49,7 +49,7 @@
 			"default" : {
 			  "default" : [
 							"Watch the hills for the warmarch.",
-							"You’ll be hearing drums.",
+							"You'll be hearing drums.",
 							"May the spirits curse you...",
 							"We will come for you, like the Zulus for the British!"
 			  ]

@@ -4,7 +4,7 @@ legs = "sharkgreylegs"
 
 fulllegs = "sharkgreylegsbelly"
 
-playerLines = {	"Mmm you’re fishfood now~",
+playerLines = {	"Mmm you're fishfood now~",
 				"Sorry meat, you needed a bigger boat...",
 				"This is how Jaws was meant to end.",
 				"I'll be picking you out of my teeth tonight.",
