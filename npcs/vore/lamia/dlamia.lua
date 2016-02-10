@@ -17,6 +17,24 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digestive system o
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
+function initHook()
+
+	index = entity.getItemSlot("legs").parameters.colorIndex
+	
+	legs = {
+		name = "lamialegs",
+		parameters = {
+					colorIndex = index
+	}}
+	
+	fulllegs = {
+		name = "lamialegsbelly",
+		parameters = {
+					colorIndex = index
+	}}
+
+end
+
 function feedHook()
 
 end
