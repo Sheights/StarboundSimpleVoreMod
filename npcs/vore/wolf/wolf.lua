@@ -1,4 +1,4 @@
-require "/scripts/vore/npcvore.lua"
+require "/scripts/vore/multivore.lua"
 
 playerLines = {		"Surprise! Hope you enjoy learning about the digest system of wolves~<3",
 					"Such a scrumptious thing you are~",
@@ -12,30 +12,34 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digest system of w
 					"Hunters always win, and in this case, they win a tasty meal~"
 }
 
+function digestHook()
+
+	if #victim > 0 then
+		entity.setItemSlot( "legs", "wolfnewlegsbelly" .. #victim )
+	else
+		entity.setItemSlot( "legs", "wolfnewlegs" )
+	end
+	
+end
+
 function initHook()
 
 	index = entity.getItemSlot("legs").parameters.colorIndex
 	
-	chest = {
-		name = "wolfchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
-		name = "wolfchestbelly",
-		parameters = {
-					colorIndex = index
-	}}
-	
 	legs = {
-		name = "wolflegs",
+		name = "wolfnewlegs",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	fulllegs = {
-		name = "wolflegsbelly",
+	fulllegs1 = {
+		name = "wolfnewlegsbelly1",
+		parameters = {
+					colorIndex = index
+	}}
+	
+	fulllegs2 = {
+		name = "wolfnewlegsbelly2",
 		parameters = {
 					colorIndex = index
 	}}
@@ -44,21 +48,17 @@ end
 
 function feedHook()
 
-end
-
-function loseHook()
-
-	if isPlayer then
-		entity.say("Welcome to my personal pack of belly fat~<3")
+	if #victim == 1 then
+		entity.setItemSlot( "legs", fulllegs1 )
+	else
+		entity.setItemSlot( "legs", fulllegs2 )
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
+	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

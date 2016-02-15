@@ -13,9 +13,9 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"Y’all put that back before I Lasso you.",
+							"Y'all put that back before I Lasso you.",
 							"Put that back ye varmint!",
-							"Rustlers ain’ welcome here!"
+							"Rustlers ain' welcome here!"
 			  ]
 			}
 		  },
@@ -31,25 +31,25 @@
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"This town ain’t big enough for two of us!",
+							"This town ain't big enough for two of us!",
 							"Why would I want another centaur living with me? They smell like horse.",
-							"I’m a lone-ranger slim…"
+							"I'm a lone-ranger slim…"
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-							"I swear there’s ‘bout ta be a showdown in here!",
-							"Y’all bout to see a stampede here partner…",
-							"Don’ cross me here gringo."
+							"I swear there's ‘bout ta be a showdown in here!",
+							"Y'all bout to see a stampede here partner…",
+							"Don' cross me here gringo."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-							"Las’ time I trus’ city-folk.",
+							"Las' time I trus' city-folk.",
 							"I was better off on the ranch.",
 							"Damn idjut!"
 			  ]
@@ -61,15 +61,15 @@
 			"default" : {
 			  "default" : [
 							"Hooome on the Range.",
-							"Ain’ much, but it’s mine."
+							"Ain' much, but it's mine."
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-							"Here’s ya rent slim",
-							"Y’all gotta me makin’ more than a Gold mine of us tenants…"
+							"Here's ya rent slim",
+							"Y'all gotta me makin' more than a Gold mine of us tenants…"
 			  ]
 			}
           }
@@ -98,7 +98,7 @@
         "encourage" : {
 		  "default" : {
 			"default" : [
-							"Show ‘em who’s the fastest gun here!"
+							"Show ‘em who's the fastest gun here!"
 			]
 		  }
         },
@@ -117,8 +117,8 @@
 						"Howdy partner!",
 						"Fine day on the Range!",
 						"Welcome to my Homestead.",
-						"Well, if it ain’ the town mayor!",
-						"Y’all know if there’s a Saloon in this town?",
+						"Well, if it ain' the town mayor!",
+						"Y'all know if there's a Saloon in this town?",
 						"*clop*"
           ]
         }

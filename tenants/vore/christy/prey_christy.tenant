@@ -1,0 +1,29 @@
+{
+  "name": "prey_christy",
+  "priority": 18,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"avian": 8,
+	"nature": 8,
+	"science": 8,
+    "prey": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "prey_christy",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

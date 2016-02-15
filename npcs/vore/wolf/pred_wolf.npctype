@@ -139,14 +139,13 @@
       [0, [
           {
             "head" : [
-			  { "name" : "wolfheadalt", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "wolfhead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+			  { "name" : "wolfnewhead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
             ],
             "chest" : [
-              { "name" : "wolfchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+              { "name" : "wolfnewchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
             ],
             "legs" : [
-              { "name" : "wolflegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
+              { "name" : "wolfnewlegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] } }
             ]
           }
         ] ]

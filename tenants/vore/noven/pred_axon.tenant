@@ -1,0 +1,28 @@
+{
+  "name": "pred_axon",
+  "priority": 13,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"cell": 12,
+    "sea": 12,
+	"vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "pred_axon",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

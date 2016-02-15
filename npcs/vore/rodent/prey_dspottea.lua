@@ -1,0 +1,307 @@
+require "/scripts/vore/dnpcprey.lua"
+
+function init()
+
+	oldInit()
+	
+	if storage.names == nil then
+		storage.names = {}
+		storage.freq = {}
+	end
+	
+	myProfile				= {}					
+	myProfile["bribe"]		= {}
+	myProfile["consumed"]	= {}
+	myProfile["death"] 		= {}
+	myProfile["idle"] 		= {}
+	myProfile["interact"]	= {}
+	myProfile["release"]	= {}
+	
+	myProfile["bribe"][1]		= {	"Here, have adventure scout supplies instead.",
+									"I've got something that's better, here you go.",
+									"Oh, yes it's my role to provide for good adventurers like you.",
+									"Adventure Scout dropping supplies!",
+									"Oh gosh, if you need it for adventure I'll give whatever I can.",
+									"\"Your Money or your wife!\" Heh... wait.. you're not joking..? Oh, b-blimey, here, take it!",
+									"Nono, there's no need for that if you have a need for this.",
+									"But I just stashed all the pickups on the planet! Oh, if you put it that way...",
+									"Take a look around, I left enough pickups on the planets surface for... Okay okay, no need for that!",
+									"....Not, in fact, the worst demand I've had today....",
+									"Nono, I have to do an Adventure! Please, take this instead.",
+									"I'm more useful on the outside, see?",
+									"Cup of tea for your travels, yes? Huh, I kinda ran out... Will this do instead?",
+									"I'm sure some desperate stranded Adventurer low on supplies won't miss this...",
+									"Uh, I didn't throw that at you, I was just.. uh...",
+									"Just another normal supply drop for an adventure scout, not a bribe. Honest!",
+									"Oh look, this somehow fell out of my paws and fell in your direction. I'll be over... elsewhere..."
+	}
+	myProfile["consumed"][1]	= {	"Wait, wha-?",
+									"No, wait!",
+									"Mrfffle!",
+									"Squeaaaak!",
+									"Mfff!",
+									"Not the ears!",
+									"Don't taste there! O#O",
+									"This is uncivilised!",
+									"O#O",
+									"@#@",
+									"Mweep!",
+									"Eep!",
+									"Ack!"
+	}
+	myProfile["death"][1] 		= {	"Squeak!",
+									"Aieeee!",
+									"I failed!",
+									"x.x"
+	}
+	myProfile["idle"][1] 		= {	"Mrfff",
+									"So warm... hard to think...",
+									"Like... like a massage...",
+									"Mustn't fall asleep...",
+									"Mff.. H-help!",
+									"Squeaaaak~",
+									"Hard... to resist...",
+									"Wh..why...?",
+									"P-please.... l-let me go...",
+									"*Sloshes*",
+									"*Weakly squirms*",
+									"Just.. natural...",
+									"Can't... resist...",
+									"A-ahhhh...",
+									"I'm begging you.. l..let me.."
+	}
+	myProfile["interact"][1]	= {	"Nice weather we're having, eh?",
+									"Oh gosh, where did you get that wonderful equipment?",
+									"I hope you're enjoying the supply drops us Adventure Scouts leave for you!",
+									"Just a heads up, the big containers with bombs and gas weren't us Adventure Scouts...",
+									"Careful out there, I saw entire towns full of dangerous Roofection! or.. maybe just Kangaru.",
+									"Gosh, those kangaru... hnnn... I mean... silly smelly roos.",
+									"Good Day!",
+									"We should share some tea later.",
+									"I love Lady Grey, what tea do you like?",
+									"Did you find any carrots out there?",
+									"You know, I always wondered what'd happen if the restoration shrine broke. I mean... I Swore I saw another me...",
+									"I'd love to join you, but the Adventure Guild has me busy leaving supplies, sorry!",
+									"Oh goodness, please made sure you only send gentle Avalii my way, fluffy raptors are too adorable to say no to...",
+									"Darn those Avalii, so nice and adorable it makes a rodent swoon right into their feather-fluff talons...",
+									"I'm glad most Avalii keep their rodent-hunting instincts in check.",
+									"Being pounced by one of those Avalii isn't so bad. Just go limp and enjoy it as best as you can...",
+									"Novakin sure are great Adventurers!",
+									"I use to think springhares ate plants, not the other way around. Then I met the Florians.",
+									"I need to get the Avalii and Decoction Raptors together some day, they'd get along well!",
+									"Well gosh this place is lovely now, isn't it!",
+									"Hello again!",
+									"Oh, hey it's you again. You didn't see an adorable fluffy revving engine-dragon, did you?",
+									"Careful of those newts, their tummies are harder then you think to escape from!",
+									"Careful of the Naga out there, they know how to get into your heart as you get into their tummies~",
+									"Met a giant snake, gave the best massage ever. I think it went to kiss afterwards... hard to remember...",
+									"If you ever need tips on fighting tough enemies, I... uh... I have cups of tea..."
+	}
+	myProfile["release"][1] 	= {	"*Gasp!*",
+									"@_@",
+									"Huff... Huff... Huff..",
+									"*Pants*",
+									"I-I'm alive!",
+									"T-thank you!",
+									"Squeaaaak!",
+									"Freedom!",
+									"Why did you even..?"
+	}	
+	myProfile["bribe"][2]		= {	"W-Wouldn't this be nicer?",
+									"I'll have more like this when I resupply, h-honest!",
+									"I know, I know, lunch or money time...",
+									"You need m-more? I'll hop to it now, I swear!",
+									"You don't need to do that, what I have is yours!",
+									"And to think, I always wanted to supply the good guys.",
+									"Please, just don't take my carrots!",
+									"At least you want less then that Avalii wanted once....",
+									"Oh gosh, how can I say no to that... proposition...",
+									"Here have this little gift, I can get more if, you know, I'm on the outside...",
+									"I'm a good Adventure Scout, see! Here, take this!",
+									"Hey! Listen! Hey! I.. uh.. have something for you!",
+									"Better this then me...",
+									"Here, catch this while I hop in the other direction...",
+									"Oh look, it's an obvious distraction!",
+									"I know, I know, it's not a cup of Lady Grey... but it's got to count for something, right? ..Right?"
+	}
+	myProfile["consumed"][2]	= {	"Help m-!",
+									"Squeaaaak!",
+									"Oh no...",
+									"Please, no!",
+									"Not again!",
+									"This becoming a habit!",
+									"Not the ears!",
+									"Don't taste there! O#O",
+									"Ah! O#O!",
+									"Oh g-gosh! @#@;;",
+									"Mind the teeth!",
+									"Again?!",
+									"Well, that didn't work...",
+									"O#O",
+									"@#@",
+									"Mweep!",
+									"Eep!",
+									"Ack!"
+	}
+	myProfile["death"][2] 		= {	"Help m-!",
+									"Oh n-",
+									"Why?",
+									"Squeaak!"
+	}
+	myProfile["idle"][2] 		= {	"Mffff...",
+									"So w-warm...",
+									"Hard to think...",
+									"Like... like a massage...",
+									"Mustn't fall asleep...",
+									"Squeaaaak~",
+									"Hard... to resist...",
+									"Can't... resist...",
+									"So..so soft...",
+									"Seems... familiar...",
+									"Could... could be worse...",
+									"So slick...",
+									"P... please...",
+									"*Pants weakly*",
+									"*Sloshes*",
+									"You don't..."
+	}
+	myProfile["interact"][2]	= {	"Oh gosh you're back!",
+									"Did you find any carrots out there?",
+									"I'd love to join you, but the Adventure Guild has me busy leaving supplies, sorry!",
+									"Eesh, those slimes! Always \"Merge with me!\"... still.. it is soft inside... hm...",
+									"Oh goodness, please made sure you only send gentle Avalii my way, fluffy raptors are too adorable to say no to...",
+									"Being pounced by one of those Avalii isn't so bad. Just go limp and enjoy it as best as you can...",
+									"Come back for more tea leaves?",
+									"It's not easy being a rodent...",
+									"It's nice to just talk sometimes.",
+									"Want to stop and look at the stars a while?",
+									"I think I saw a giant snake around here once...",
+									"Oh, hello... I'm glad I can be restored right now.",
+									"Just because my tummy is exposed, dosn't make it a target!",
+									"Enjoying full body massages isn't why I became an Adventure Scout, don't let anyone say otherwise!"
+	}
+	myProfile["release"][2] 	= {	"*Gasp!*",
+									"@_@",
+									"Huff... Huff... Huff..",
+									"*Pants*",
+									"I-I'm alive!",
+									"T-thank you!",
+									"Squeaaaak!",
+									"I'm so damp!",
+									"It's... all over me...",
+									"I never... get use...",
+									"Freedom!",
+									"T... thanks...",
+									"H... Hello again...",
+									"Please.. no nibbling.. too sensitive..."
+	}
+	
+	myProfile["bribe"][3]		= {	"I'll find more, I promise!",
+									"P-please, take this instead...",
+									"This is all I have right now, h-honest!",
+									"Please... I'll find you some more!",
+									"Here, here! I'll go get some more!",
+									"See? I told you I could get more!",
+									"Because I'm a n-nice springhare, I h-have a little gift for you. PleaseDontEatMe",
+									"OhGoshOhGoshOhGosh TakeThisInstead.",
+									"Behold, a snackrifice! PleaseWorkPleaseWorkPleaseWork....",
+									"Of all the times to not have a teleporte-here, t-take this!",
+									"Please, accept this gift instead. Please...",
+									"Supplies! Please... Please take the supplies..."
+	}
+	myProfile["consumed"][3]	= {	"Oh gosh! O#O;",
+									"Again?!",
+									"Not th-! O#O!",
+									"Not so rough!",
+									"I-I'm yours?",
+									"Ahhh",
+									"Bad taste!",
+									"Don't lick there! O#O",
+									"B-bon apatite...",
+									"Here we go again...",
+									"O#O",
+									"@#@",
+									"^#^;",
+									"Mweep!",
+									"Eep!",
+									"Be gentle!",
+									"Ack!",
+									"O-okay~"
+	}
+	myProfile["death"][3] 		= {	"I trusted you!",
+									"No!",
+									"Why?",
+									"Squeaaak!"
+	}
+	myProfile["idle"][3] 		= {	"So w-warm...",
+									"Like a massage...",
+									"So soft...",
+									"*Blushes*",
+									"Oh g-gosh...",
+									"*Pants weakly*",
+									"*Sloshes*",
+									"*Squirms weakly*",
+									"*Sprawls*",
+									"P... please...",
+									"A-aaa....",
+									"I... I cant...",
+									"*Sighs weakly*",
+									"*Groans*",
+									"Mine... is yours...",
+									"Ahh....",
+									"Y... Yes...",
+									"T... too adorable...."
+	}
+	myProfile["interact"][3]	= {	"Oh gosh, you're back!",
+									"Please go easy..",
+									"Hello again.",
+									"You just wanted to talk, r-right?",
+									"Oh gosh...",
+									"You're just here to rest, r-right?",
+									"Be gentle?",
+									"D-dont bite too hard...",
+									"H-hello..",
+									"Not the Ears! Ah! Hrnnn! ...mmm... *sighs weakly*",
+									"At.. at least you like my taste...",
+									"It's nice to be appreciated I guess, even if as food...",
+									"H-hi...",
+									"J..just treat me gently?",
+									"There's no point in trying to escape now...",
+									"I think I'm getting a bit too use to your tummy around me...",
+									"How much of you is made from me now, anyway?",
+									"Is it better if I just relax into your care and let it happen...?",
+									"At  least you're nicer about it then most Florians...",
+									"Do you enjoy rodents a lot? Because it feels like you do.",
+									"I swear you enjoy me too much.",
+									"H... here we go again...",
+									"So what is it about me that's so tasty anyway?",
+									"You're not going to taste me there again, r-right..?",
+									"I can't offer you a tea party any more without knowing how it'll end.",
+									"At least you're a cute critter to end up inside >#>;;",
+									"D.. do I belong to you now then...?",
+									"I swear there are days I feel like I'm a nothing but mobile food supply...",
+									"I feel like I'm little more then a portable buffet sometimes...",
+									"I know I know, it's Tea the all-you-can-eat springhare. Hi.",
+									"From Adventure Scout... to dinner... what a life..."
+	}
+	myProfile["release"][3] 	= {	"*Pants*",
+									"T... thank you... again....",
+									"One day you'll not spit...",
+									"Can.. Can I clean up now?",
+									"Is.. this tenderising me?",
+									"Can... can you clean me up?",
+									"My dry cleaners loves you...",
+									"Slip... and Slide...",
+									"Better then the wild beasties...",
+									"Always an experience~",
+									"Do you have to taste every time? @#@",
+									"Now I need a cold shower...",
+									"@#@;;",
+									"At least you're gentle about releasing.",
+									"I think I left something inside~",
+									"I'll leave supplies in there next time!"
+	}
+	
+	initHook()
+	
+end

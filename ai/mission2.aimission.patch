@@ -1,0 +1,16 @@
+[
+	{ "op" : "add",
+		"path" : "/speciesText/rodent",
+		"value" : {
+			"buttonText" : "Mysterious Invitation",
+			"repeatButtonText" : "Rechallenge Dreadwing",
+			"selectSpeech" : [
+				{
+					"animation" : "talk",
+					"text" : "I have received a message. It is an invitation for adventurers and a set of coordinates. No other information. I suggest investigation.",
+					"speedModifier" : 1.0
+				}
+			]
+		}
+	}
+]

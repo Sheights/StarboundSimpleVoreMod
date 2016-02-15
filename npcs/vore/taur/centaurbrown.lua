@@ -10,7 +10,7 @@ playerLines = {	"The best way to travel cross country!",
 				"Try not to go to my flanks…",
 				"Cityslickers, slick on the throat, slick in the stomach.",
 				"Compliments to yer breeder!",
-				"Now that’s some prime grub!"
+				"Now that's some prime grub!"
 }
 
 function loseHook()

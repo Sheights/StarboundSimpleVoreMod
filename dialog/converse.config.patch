@@ -1,0 +1,303 @@
+[  
+  {  
+    "op":"add",
+    "path":"/converse/rodent",
+    "value":{  
+      "default":[  
+        "Hello.",
+        "Hi. I'm <selfname>. Who're you?",
+        "Like it around?",
+        "You came this far to visit our settlement?",
+        "*hums to self*"
+      ],
+      "apex":[  
+        "Hello, almost-as-fluffy one!",
+		"I could do with your know-how on Adventures!",
+		"Oh, you broke away from the MiniKnog to adventure, too?",
+		"A free Apex? Now that's something you don't see every day!",
+		"Don't you try experementing on me!",
+		"I heard you people use rodents in the lab. I hope as assistants...",
+		"You're an ethical scientist, right? ...Right?",
+		"You're not bugged, are you?"
+      ],
+      "avian":[  
+        "So many soft featers!",
+		"Those wings must give wonderful hugs ;3;",
+		"May I stroke your feathers?",
+		"You're a free Avian? Well gosh that's fantastic!",
+		"Adventure Birb! Hehe, so sorry, couldn't resist!",
+		"So soft.. so smooth.. so feathery..  @#@"
+      ],
+      "floran":[  
+        "Ohh, nice vines!",
+		"Apparantly the Guild aren't sure if you're a monster or not. You seem nice to me, though!",
+		"Try not to break anything, dear!",
+		"Uh.. no skinning the rodent now, yes?",
+		"Goooood Florian, no bitey.",
+		"You should join my Adventure Party. We need a beserker!",
+		"Well gosh, I've heard so much about you Florans. Be gentle?",
+		"Hello, flower friend!",
+		"When they said \"Eat your Greens\" I don't think they ever imagined Florans.",
+		"Well, I'm always one for going green! <3",
+		"Do you fellows make good tea? ",
+		"Oh goodness, I need to teach you the ways of a tea party!",
+		"Care for some green tea?"
+      ],
+      "human":[  
+        "Don't step on me!",
+		"Do you possibly have a carrot?",
+		"Do you possibly have a piece of cheese?",
+		"Sorry about your homeworld. I guess Adventurers can't fix everything.",
+		"You guys like adventuring too, right? ",
+		"Mind if I make a mousehole in your ship?",
+		"O-okay, you can pet me, but remember I'm not your pet!"
+      ],
+      "hylotl":[  
+        "Something around here smells.. uh... nevermind.",
+		"Ohhh, nice fashion sense!",
+		"How do you avoid snagging with that outfit?",
+		"An Adventurer Hylotl? i know you're in it for the stories. We all love the stories~!",
+		"Any Adventuring stories to tell? ",
+		"Got any adventure tips for me? I'd love to hear them! ",
+		"So many wonderful colours you have! ",
+		"I heard you ride large aquatic mounts into battle. That must be a sight!",
+		"I'm  so sorry about what happened to your home world."
+      ],
+      "avali":[  
+        "Oh my gosh, so much featherfluff! @#@",
+		"Oh goodness, you're so adorable! C...can I hug you?",
+		"Those markings are wonderful!",
+		"So much feather... so much fluff.. @#@",
+		"Featherfluff space raptors... always a delight!",
+		"Can you stay a while? I've got food and water! You eat carrots and cheese, right?",
+		"A nice feathery fluffy Avali Adventurer? I feel faint!",
+		"Oh gosh, I just want to nuzzle so much~",
+		"Are your four ears as sensative as my two?",
+		"Why are rodents always so helpless when Raptors are around?",
+		"Is it bad I woudn't mind being pounced on that much...?"
+      ],
+	  "felin":[  
+        "Well gosh, you make my instincts tingle!",
+		"Hello kitty!",
+		"Thats quite an elegant style you have!",
+		"Please don't take my cheese! Joking, joking!",
+		"I'd trust you to join this rodents adventure party! <3",
+		"I have some string somewhere!",
+		"S-squeak~!"
+      ],
+	  "rodent":[  
+        "Another rodent, wonderful! What news do you bring?",
+		"Oh gosh, it's so nice to meet a fellow rodent out here!",
+		"Oh, you simply must stay a while, it's so nice to meet another rodent!",
+		"Care for a spot of tea?",
+		"Welcome! Us rodents gotta stick together!",
+		"Squeaaak~ ^__^",
+		"Squeaky! ^_^",
+		"Oh, hello there! Nice to see you!",
+		"Fancy meeting a fellow Rodent here, hee!",
+		"Got any news? I haven't heard much from other Rodents of late~",
+		"Your an Adventurer! That's fantastic!",
+		"Will you make sure everything is safe around here? I think can trust an Adventurer like you!"
+      ],
+	  "kineptic":[  
+        "Well gosh, you make my instincts tingle!",
+		"Hello kitty!",
+		"Thats quite an elegant style you have!",
+		"Please don't take my cheese! Joking, joking!",
+		"I'd trust you to join this rodents adventure party! <3",
+		"I have some string somewhere!",
+		"S-squeak~!"
+      ],
+	  "vulpes":[  
+        "Greeting to Rodent:",
+		"Hello, little Rodent~",
+		"Well, arn't your just a cute little rodent!",
+		"Part of me wants to pounce you, part of me wants to snug you!",
+		"Can you give me a little squeak? It makes me instincts happy.",
+		"May I brush my claws through your fur?",
+		"Those ears look perfect to nibble on~",
+		"You sure do smell nice.",
+		"A little rodent nibble is fine, right?",
+		"Nice to see an Adventurer!",
+		"See anything intresting on your adventures?",
+		"I hope you don't see me as a monster to be defeated! Hehe!",
+		"Come closer, it's safe!"
+      ],
+      "glitch":[  
+        "Ohhh, I love your style!",
+		"Where ever did you get that wonderful outfit?",
+		"Skin hard to tap, heart soft to hug?",
+		"I like someone who states their intent before talking ^_^",
+		"Well arn't you just some brilliant bolts!"
+      ]
+    }
+  },
+  {  
+    "op":"add",
+    "path":"/converse/apex/rodent",
+    "value":[  
+      "Please don't infest this place",
+		"Don't cause trouble, Adventurers always cause trouble...",
+		"Be civil, last three Adventurers got caught by the MiniKnog.",
+		"Oh great, rodents in the woodwork again.",
+		"I have a facinating study needing a lab rodent like you...",
+		"Care to be a lab rat?",
+		"Psst, tell us about those adventures later, it's safer then...",
+		"Keep your Adventure reports factual, please."
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/floran/rodent",
+    "value":[  
+      "Adventuressss alwassss welcome in Floran townsss! Not alwaysss good reasssonsss",
+		"Careful! Floran eat Adventurersss",
+		"Smell nice; can pet?",
+		"Good pelt. Yesss. Make good wall mount.",
+		"Ssso sssoft!",
+		"Mussst pet little rodent!",
+		"You wear pelt well! Floran envy!",
+		"Adventurerssss be careful here, rodent!",
+		"Don't accept offer to ssse kitchin. Bad offer for rodent!",
+		"Smellsss delicious. Rodent not food <3",
+		"Too cute to eat!",
+		"Can Floran keep you?",
+		"Floran give best plant hugs! Will even hug with vines!"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/human/rodent",
+    "value":[  
+      "Seems like rodents go wherever we do, huh?",
+		"You look like quite a nice little squeaker!",
+		"You would make such an adorable pet! Uh.. Not that I meant...",
+		"Can I pet you? You look so soft!",
+		"Rodents of unusual size, for sure!",
+		"Not even Earths destruction can get rid of Humans and Rodents!",
+		"You wern't hiding on my ship, eating my grain, were you? Joking, joking!",
+		"Adventurers, huh? Sounds a bit like that DnD I use to play!",
+		"You know, most games I played didn't have rodents as good guys. You're safe though, right?",
+		"I'd say you're vermin, but hey Earth got tentacle'd so who am I to say?",
+		"Just behind the ears, right? See, I remember just how to pet you fluffs~"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/glitch/rodent",
+    "value":[  
+      "Warning. Don't be adventerious here.",
+		"Greeting. Hello, rodent.",
+		"Curious. Are you here to defeat monsters?",
+		"Greeting. You appear at home here.",
+		"Apology. We have no bounty on monsters at this time.",
+		"Warning. Do not make mouse holes here.",
+		"Curious. How did your fur become so soft?",
+		"Statement. We have our own Adventurers. They are away adventuring."
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/hylotl/rodent",
+    "value":[  
+      "Ready for an adventure? How exiting!",
+	  "Intresting style choice for your tail!",
+	  "Your fur is well groomed, it must take longer then out soft skin!",
+	  "Well, you certainly put some effort into your clothing style.",
+	  "You simply must tell me what stories you have!",
+	  "So many Adventurers have stories, please tell me some for my book!",
+  	  "I saw a rodent in our waters once. Their fur seemed to act very differently! As did the rodent!",
+	  "How do you keep your whiskers so stright? It's facinating!",
+	  "When you're done adventuring do tell me, I know this wonderful Kimono trader!",
+	  "It's a shame Adventurers don't have as much style in their wear. \"Utilitarian\" they call it."
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/avian/rodent",
+    "value":[  
+      "You're so fluffy!",
+		"Why do you burrow, when you can fly?",
+		"Can I touch your fur?",
+		"You're so soft!",
+		"Do rodents have any hope with Kluex?",
+		"Do you have a great burrower? Is it as powerful as Kluex?"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/avali/rodent",
+    "value":[  
+      "You're so fluffy!",
+		"You smell rather nice!",
+		"*Lick* Taste as adorable  as you look~!",
+		"Can I hold you little Rodent. It feels natural.",
+		"Adventurers are like Hunters, so feel welcome!",
+		"Wanna watch my pack hunt? You might learn something!",
+		"Wanna swap survival notes?",
+		"Careful, Adventurer. All kinds of beasts on this planet.",
+		"I'd tell you not to make a nest on our soft furnishings, but it's kind of cute to watch~",
+		"Don't nibble the fabric, it's high tech!",
+		"You only have two large ears? That's a shame.",
+		"That fur looks nice, may I preen it a little?",
+		"You adventure without a pack? That seems a bit risky!",
+		"Where's the rest of your hunting pack?",
+		"You don't mind if I softly nibble a while? It's just instincts.",
+		"Your ears look like they need Avali style ear grooming~",
+		"Why do I have the urge to pounce you? Must be the rodent hunting instinct...",
+		"Careful, some Avali like rodents a bit too much.",
+		"Careful, some Avali enjoy rodents a bit too much.",
+		"Come, relax, stay a while. Your scent attacts more Avali guests!",
+		"Mind if I pratice some hunting techniques on you?"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/felin/rodent",
+    "value":[  
+      "Hello, little Rodent~",
+		"Well, arn't your just a cute little rodent!",
+		"Part of me wants to pounce you, part of me wants to snug you!",
+		"Can you give me a little squeak? It makes me insticnts happy.",
+		"May I brush my claws through your fur?",
+		"Those ears look perfect to nibble on~",
+		"You sure do smell nice.",
+		"A little rodent nibble is fine, right?",
+		"Nice to see an Adventurer!",
+		"See anything intresting on your adventures?",
+		"I hope you don't see me as a monster! Hehe!",
+		"Come closer, it's safe!"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/kineptic/rodent",
+    "value":[  
+      "Hello, little Rodent~",
+		"Well, arn't your just a cute little rodent!",
+		"Part of me wants to pounce you, part of me wants to snug you!",
+		"Can you give me a little squeak? It makes me instincts happy.",
+		"May I brush my claws through your fur?",
+		"Those ears look perfect to nibble on~",
+		"You sure do smell nice.",
+		"A little rodent nibble is fine, right?",
+		"Nice to see an Adventurer!",
+		"See anything intresting on your adventures?",
+		"I hope you don't see me as a monster to be defeated! Hehe!",
+		"Come closer, it's safe!"
+    ]
+  },
+  {  
+    "op":"add",
+    "path":"/converse/human/rodent",
+    "value":[  
+      "Well gosh, you make my instincts tingle!",
+		"Hello foxie!",
+		"Thats quite an elegant colour you have!",
+		"I'd trust you to join this rodents adventure party! <3",
+		"S-squeak~!",
+		"Oh gosh, what a fluffy tail you have!",
+		"Fox fluff is always wonderful~!"
+    ]
+  }
+]

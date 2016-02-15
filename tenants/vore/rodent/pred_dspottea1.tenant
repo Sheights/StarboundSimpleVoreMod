@@ -1,0 +1,27 @@
+{
+  "name": "pred_dspottea1",
+  "priority": 18,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "explorer": 6,
+	"dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "rodent",
+      "type": "pred_dspottea",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

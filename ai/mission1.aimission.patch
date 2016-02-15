@@ -1,0 +1,16 @@
+[
+	{ "op" : "add",
+		"path" : "/speciesText/rodent",
+		"value" : {
+			"buttonText" : "Erchius Mining Facility",
+			"repeatButtonText" : "Repeat Erchius Mining Facility",
+			"selectSpeech" : [
+				{
+					"animation" : "talk",
+					"text" : "I have received a distress signal. The source has been identified as the Erchius Mining Facility, a lunar outpost. Erchius Ore is used to build and repair FTL drives. I suggest investigation. I recommend you craft steel equipment before setting out.",
+					"speedModifier" : 1.0
+				}
+			]
+		}
+	}
+]

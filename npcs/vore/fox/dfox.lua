@@ -1,4 +1,6 @@
-require "/scripts/vore/npcvore.lua"
+require "/scripts/vore/multivore.lua"
+
+capacity = 2
 
 isDigest = true
 
@@ -13,30 +15,34 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digestive system o
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
+function digestHook()
+
+	if #victim > 0 then
+		entity.setItemSlot( "legs", "foxnewlegsbelly" .. #victim )
+	else
+		entity.setItemSlot( "legs", "foxnewlegs" )
+	end
+	
+end
+
 function initHook()
 
 	index = entity.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
-		name = "foxlegs",
+		name = "foxnewlegs",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	fulllegs = {
-		name = "foxlegsbelly",
+	fulllegs1 = {
+		name = "foxnewlegsbelly1",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	chest = {
-		name = "foxchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
-		name = "foxchestbelly",
+	fulllegs2 = {
+		name = "foxnewlegsbelly2",
 		parameters = {
 					colorIndex = index
 	}}
@@ -45,21 +51,17 @@ end
 
 function feedHook()
 
-end
-
-function loseHook()
-
-	if isPlayer then
-		entity.say("Thank you so much for feeding me. You'll enjoy being fox fat~")
+	if #victim == 1 then
+		entity.setItemSlot( "legs", fulllegs1 )
+	else
+		entity.setItemSlot( "legs", fulllegs2 )
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
+	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

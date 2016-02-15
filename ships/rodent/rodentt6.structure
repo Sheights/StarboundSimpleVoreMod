@@ -1,0 +1,23 @@
+{
+  "config" : {
+    "shipUpgrades" : {
+      "capabilities" : ["teleport", "planetTravel", "systemTravel"],
+      "maxFuel" : 1000
+    }
+  },
+
+  "backgroundOverlays" : [
+    {
+      "image" : "rodentT6.png",
+      "position" : [55, 34],
+      "fullbright" : true
+    },
+    {
+      "image" : "rodentT6lit.png",
+      "position" : [55, 34]
+    }
+  ],
+
+  "blockKey" : "blockKey.config:blockKey",
+  "blockImage" : "rodentT6blocks.png"
+}

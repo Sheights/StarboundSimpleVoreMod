@@ -127,7 +127,7 @@ function interact(args)
 				end
 				eaten = true
 			else
-				entity.say("I do not want to be eaten")
+				entity.say("I do not want to be eaten♪")
 			end
 			talkTimer = 1
 		end

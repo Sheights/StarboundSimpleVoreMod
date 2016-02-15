@@ -1,0 +1,9 @@
+{
+  "name" : "genet",
+  "category" : "petgenet",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "genet.png"
+  }
+}

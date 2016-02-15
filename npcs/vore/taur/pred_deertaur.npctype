@@ -30,7 +30,7 @@
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"There’s a reason it’s at ONE with the forest...",
+							"There's a reason it's at ONE with the forest...",
 							"Roots need their room..."
 			  ]
 			}
@@ -38,7 +38,7 @@
           "severe" : {
 			"default" : {
 			  "default" : [
-							"You’re about to incur the wrath of Gaia...",
+							"You're about to incur the wrath of Gaia...",
 							"You mess with forces beyond your ken..."
 			  ]
 			}
@@ -65,7 +65,7 @@
           "rent" : {
 			"default" : {
 			  "default" : [
-							"Partake in nature’s bounty.",
+							"Partake in nature's bounty.",
 							"Enjoy the rewards of Gaia.",
 							"Gaia rewards those who care for her forest."
 			  ]
@@ -86,7 +86,7 @@
         "helpthem" : {
 		  "default" : {
 			"default" : [
-							"Another of Gaia’s Children needs your help!",
+							"Another of Gaia's Children needs your help!",
 							"The Earth Mother wills you to protect them!"
 			]
 		  }

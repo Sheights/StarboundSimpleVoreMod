@@ -1,0 +1,29 @@
+[
+	{ "op" : "add",
+		"path" : "/speciesText/rodent",
+		"value" : {
+			"buttonText" : "Repair Ship's FTL drive",
+			"selectSpeech" : [
+				{
+					"animation" : "talk",
+					"text" : "If we can get hold of ^orange;20 Erchius crystals ^white;from somewhere^green;, I can repair the FTL drive. ^white;No signs of Erchius crystals have been detected on any of the planets in this system. ^green;Suggest investigating the ^orange;gate^green;",
+					"speedModifier" : 1.0
+				}
+			],
+			"successSpeech" : [
+				{
+					"animation" : "unique",
+					"text" : "The ship's FTL drive has been repaired. ^green;You can now jump to other star systems.",
+					"speedModifier" : 1.0
+				}
+			],
+			"failSpeech" : [
+				{
+					"animation" : "refuse",
+					"text" : "Unable to comply. ^green;Insufficient material.",
+					"speedModifier" : 1.0
+				}
+			]
+		}
+	}
+]

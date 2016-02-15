@@ -1,0 +1,176 @@
+{
+  "type" : "pred_daxon",
+  "baseType" : "villager",
+
+  "npcname" : "Axon",
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"You need to fix this.",
+							"you need to get the right furniture.",
+							"This is not what I need.",
+							"This is unacceptable."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"This is not right. I can't accept this.",
+							"You wrecked it. Fix it.",
+							"Watch where you're aiming that machine. Fix it.",
+							"This is not an acceptable room condition." 
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I do not share with others. Give them their own room.",
+							"make them their own room. Do not put them here.",
+							"One room, One tenant. Move them.",
+							"This room is mine. Make another."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"You dilly dally. Im not waiting forever.",
+						"You cannot possibly think this is appropriate.",
+						"Set your priorities or I will leave.",
+						"I do not accept this mess you have made. Fix it, now." 
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Fine then. Bye.",
+						"Of course you took too long. Bye.",
+						"Bye.",
+						"I'm tired of waiting.",
+						"Obviously you have other priorities. Bye."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"I could use a pool in here if you wouldn't mind.",
+						"I'm here, need anyone gone?",
+						"What is it you need?",
+						"I'm rather busy, could this wait?",
+						"Anything you need?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Heres what I owe. Someone 'dropped it'." ,
+						"This is the remnants of the last tenant. Here.",
+						"I found this while walking around.",
+						"Could you take care of this for me? I don't want to be found with it.",
+						"It didnt sit well for me, so you can have it. No, there was nothing with it."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Get rid of this attacker!",
+					"I don't have the means to defend myself!",
+					"Get them away!",
+					"I can't shake them!" ,
+					"You call this place Secure?!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"They are being attacked!",
+						"After the attackers!",
+						"Their in danger!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"After them! Kill them!",
+					"Save some for the rest of us.",
+					"Guards at work! Keep it up!",
+					"Kill the beast!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"I could have handled it if I had a weapon.",
+					"Good work.",
+					"Needed to be done.",
+					"You may need to up the security."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Why, hello there.",
+			"You need me for something?",
+			"Don't mistep, Im not obligated to let you out if you fall in.",
+			"You willing to be my next big meal?",
+			"Theres a lot you could give me. the nutrients of your body, perhaps.",
+			"You're food, right? Right.",
+			"Care to be on the menu next?",
+			"To those who go in, rarely come back out.",
+			"Having a good day? I know I am. So much tasty things to choose from!",
+			"I can see this being a great place to have my lunch."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/noven/daxon.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "axonhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "axonchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "axonlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

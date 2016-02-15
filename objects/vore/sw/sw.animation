@@ -1,0 +1,256 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "standing",
+	    "states"  :  {
+		  "standing"  :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "standtoidle"  :  {
+		    "frames"  :  2,
+			"cycle"  :  0.2,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "idle"  :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "hiss"  :  {
+		    "frames"  :  11,
+			"cycle"  :  0.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "idletostand" :  {
+		    "frames"  :  2,
+			"cycle"  : 0.2,
+		    "mode"  :  "transition",
+			"transition"  :  "standing"
+		  },
+		  "eat" :  {
+		    "frames"  :  7,
+			"cycle"  : 1.0,
+		    "mode"  :  "transition",
+			"transition"  :  "wag"
+		  },
+		  "wag" :  {
+		    "frames"  :  12,
+			"cycle"  : 0.8,
+		    "mode"  :  "transition",
+			"transition"  :  "tongue"
+		  },
+		  "tongue" :  {
+		    "frames"  :  1,
+			"cycle"  : 0.2,
+		    "mode"  :  "transition",
+			"transition"  :  "midle"
+		  },
+		  "midle" :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "msd" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "midle"
+		  },
+		  "msu" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "midle"
+		  },
+		  "gulp" :  {
+		    "frames"  :  11,
+			"cycle"  : 2.0,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "stomachidle" :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "sdr" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "sul" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "sur" :  {
+		    "frames"  :  5,
+			"cycle"  : 1,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "sdl" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "sr" :  {
+		    "frames"  :  3,
+			"cycle"  : 0.6,
+		    "mode"  :  "transition",
+			"transition"  :  "stomachidle"
+		  },
+		  "transfer" :  {
+		    "frames"  :  12,
+			"cycle"  : 2.4,
+		    "mode"  :  "transition",
+			"transition"  :  "digest"
+		  },
+		  "digest" :  {
+		    "frames"  :  17,
+			"cycle"  : 34,
+		    "mode"  :  "transition",
+			"transition"  :  "sidle"
+		  },
+		  "sidle" :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "wake"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.6,
+			"mode"  :  "transition",
+			"transition"  :  "standing"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "standing"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:standing"
+		      }
+		    },
+	        "standtoidle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:standtoidle.<frame>"
+		      }
+		    },
+			"idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "hiss"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:hiss.<frame>"
+		      }
+		    },
+	        "idletostand"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idletostand.<frame>"
+		      }
+		    },
+	        "eat"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:eat.<frame>"
+		      }
+		    },
+	        "wag"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:wag.<frame>"
+		      }
+			},
+			"tongue"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tongue"
+		      }
+		    },
+			"midle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:midle"
+		      }
+		    },
+			"msd"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:msd.<frame>"
+		      }
+		    },
+			"msu"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:msu.<frame>"
+		      }
+		    },
+			"gulp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:gulp.<frame>"
+		      }
+		    },
+			"stomachidle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:stomachidle"
+		      }
+		    },
+			"sdr"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sdr.<frame>"
+		      }
+		    },
+			"sul"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sul.<frame>"
+		      }
+		    },
+			"sur"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sur.<frame>"
+		      }
+		    },
+			"sdl"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sdl.<frame>"
+		      }
+		    },
+			"sr"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sr.<frame>"
+		      }
+		    },
+			"transfer"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:transfer.<frame>"
+		      }
+		    },
+			"digest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest.<frame>"
+		      }
+		    },
+			"sidle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sidle"
+		      }
+		    },
+			"wake"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:wake.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

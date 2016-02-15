@@ -1,0 +1,221 @@
+{
+  "type" : "pred_dchristy",
+  "baseType" : "villager",
+
+  "npcname" : "Christy Kitsune",
+  
+  "identity" : {
+	"gender" : "female"
+  },
+
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"There are things missing, I can't stay here..",
+							"Where is everything...?",
+							"You need to add the rest of the things I need.",
+							"Will you put what I need here?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Hey, You better fix that.",
+							"Stop breaking things! It's not yours!",
+							"My house! WWhy are you putting holes in it? Fix it please!.",
+							"I'm fine with windows, but atleast put glass in the holes!."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"There's only room for me.",
+							"Please don't have someone else here.",
+							"Don't do that. It's cramped.",
+							"Are they food for me?",
+							"The room is mine, only space for me. No one else, Thanks."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"You better stop upsetting me, I don't want to get mad.",
+						"Stop it! Right NOW!.",
+						"I am a goddess kitsune, I will hurt you, I will make you suffer.",
+						"You're not going to be alive much longer. I will use my magic to hurt you severely.",
+						"I'm warning you, You better behave or I kill you."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"This is your last warning, Stop or die.",
+						"This is your final warning. Or I'm going to stab you with my claws.",
+						"I'm usually pretty nice, but you're upsetting me and you're going to be dead.",
+						"Why? Why are you upsetting me? Stop it!",
+						"DO YOU WANT ME TO KILL YOU?!?"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Is this my house? Well thank you, I'm glad to be here!",
+						"Thanks for giving me a place to stay.",
+						"A nice big house is always great, I'm fine with small houses though.",
+						"I guess this is my place~ I'm going to eat all the delicious prey here.",
+						"You want to get eaten so much? Well.. I'll digest you after of course~."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here's the rent for the house today.",
+						"I traded this for my house rent.",
+						"You can't believe the things I find in peoples houses for sale,",
+						"Here's some items.. from well, previous meals i've.. \"Aquired\" *urp*.",
+						"You can have this now, The person i ate wont be needing it after i'm done..",
+						"Hey your neighbor said that they found this. It's yours.",
+						"I got some money from selling a few of my old things, Here's the rent."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Go away! Get back from me!",
+					"Fuck off!",
+					"No! Stop it! I don't like it!",
+					"I need some help here!",
+					"Please help me out!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Someone! Get rid of that asshole!",
+						"Its not going to kill itself! Go kill it!",
+						"Stop them!",
+						"Its causing a mess! Get it away!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"I'm going to eat you!.",
+					"You're going to be digested inside me!",
+					"I'll be back for you later.",
+					"I'm going to kick your damn ass! Get back here!",
+					"This bores me, i don't really like fighting..",
+					"Why are you fighting me? You can't beat a goddess!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Well.. that was annoying.",
+					"Great, now i can go back to bed...",
+					"Time to chill out again and play games.",
+					"I was getting wrorried it would'nt turn out well.",
+					"Thank You, I'm glad it's quiet now."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hi! I'm Christy, nice to meet you.",
+			"Glad to know you are alright!.",
+			"Are you my predator for the night? I like nice bulgy tummies.",
+			"Oh? You want to be eaten that badly?!",
+			"I want you to fill my stomach and become a part of me.",
+			"I like to hang out with friends and do fun things like cuddle.",
+			"I bet you don't have as many tails as me~ I have eight and they are all fluffy!",
+			"Care to join me?",
+			"I don't mind holding you in me for a while, I suppose..",
+			"Are you falling asleep? It's probably warm and dark in there.. No that i mind making you part of me..",
+			"Move around when you get in there. I love it when you make my tummy stretch and bulge as you struggle.",
+			"I'm really fluffy, so I never get too cold..",
+			"Hey? Can you come here for a minute?",
+			"Hey? please don't do that..",
+			"Oooh, walking breakfast!",
+			"You're a lot of fun.",
+			"I like the ones who shout while inside.",
+			"*stomach rumbles* I gues.. I'm hungry.",
+			"Are there any bellies around for me to be in?",
+			"Can you find me a predator to swallow me up?.",
+			"I love being eaten. It's the best thing.",
+			"Warm.. tight.. squeezing bellies are.. mm so good..",
+			"You'll make the best belly on me!.",
+			"I love strong, sexy predators, Dragons are always good too.",
+			"Hmm...",
+			"Stop bothering me for now please.",
+			"I have a headache, not now.",
+			"I am a bit busy right now, maybe later.",
+			"Do you want something? Is there bellies around??",
+			"You need some help?",
+			"You're delicious I bet!",
+			"You won't be seeing your friend for a good long while.. *urp* sorry.",
+			"Someone you won't mind making dissapear?",
+			"Are there any other predators around? I want to say hello.",
+			"I am going to make you submit.",
+			"Oh, you're mine~",
+			"Come here.. I want to eat you",
+			"You'll digest in my hot pit of a stomach when I get you.",
+			"I won't bite.. well.. unless you want me to.",
+			"You're safe there, with me. Don't worry about it.",
+			"Come be a part of me~ I'll look good with you on my body.",
+			"You're as eager as I can be when I want to be eaten!"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/christy/dchristy.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "christyhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "christychest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "christylegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

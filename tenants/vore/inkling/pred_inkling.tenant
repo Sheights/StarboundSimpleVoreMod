@@ -1,0 +1,29 @@
+{
+  "name": "pred_inkling",
+  "priority": 14,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "vore": 1,
+	"colourful": 12,
+	"sea": 6
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "level": 3,
+      "type": "pred_inkling",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

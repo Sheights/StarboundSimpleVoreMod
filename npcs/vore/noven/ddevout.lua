@@ -3,6 +3,8 @@ require "/scripts/vore/multivore.lua"
 animFlag = false
 isDigest = true
 
+stopWatch	= { 0, 0, 0, 0 }
+
 animTimer = 0
 capacity = 4
 

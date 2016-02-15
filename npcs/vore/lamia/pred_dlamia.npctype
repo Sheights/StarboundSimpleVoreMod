@@ -15,7 +15,7 @@
 			"default" : {
 			  "default" : [
 								"There's a hole in my house, Fix it before you see the hole in my throat!",
-								"If you don’t fix the gap in my house you'll fix the gap in my stomach!"
+								"If you don't fix the gap in my house you'll fix the gap in my stomach!"
 			  ]
 			}
 		  },
@@ -55,7 +55,7 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-						"Did you bring anything tasty with you, or is that just you I’m smelling?",
+						"Did you bring anything tasty with you, or is that just you I'm smelling?",
 						"Now you've seen inside my home, would you like to see inside me?",
 						"Welcome to my home, now let me welcome you to my \"private quarters\""
 			  ]
@@ -77,7 +77,7 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"Hey who’s meant to be the predator around here!?",
+					"Hey who's meant to be the predator around here!?",
 					"I'm not on the menu!"
 			]
 		  }

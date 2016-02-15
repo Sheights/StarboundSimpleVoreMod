@@ -1,0 +1,398 @@
+{
+  "panels" : [
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/black.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 500,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/1notext.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 0.5,
+          "zoom" : 2,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 5.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 6.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/1.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 1,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 3,
+          "zoom" : 2,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 5.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 6.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/2.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 5.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 6.5,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 9.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 10.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/3.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 9.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 10.5,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 14,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 15,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/3flameflicker.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 9.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 10.5,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 11.5,
+          "zoom" : 2,
+          "alpha" : 0
+        },
+        {
+          "timecode" : 12.5,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 13.5,
+          "zoom" : 2,
+          "alpha" : 0
+        },
+        {
+          "timecode" : 14,
+          "zoom" : 2,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 15,
+          "zoom" : 2,
+          "alpha" : 0
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/4.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 14,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 15,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 17.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 21.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/4notext.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 17.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 18,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 18.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 21.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/4text2.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 18.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 19.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 20.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 21.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/4flameflicker.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 14,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 15,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 16,
+          "alpha" : 0,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 17,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 18,
+          "alpha" : 0,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 19.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 20.5,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/rodent/5.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 20.5,
+          "zoom" : 2,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 21.5,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 24,
+          "alpha" : 1,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 25,
+          "alpha" : 0,
+          "zoom" : 2
+        },
+        {
+          "timecode" : 27,
+          "alpha" : 0,
+          "zoom" : 2
+        }
+      ]
+    }
+  ],
+  "audio" : [
+    {
+      "timecode" : 0,
+      "resource" : "/sfx/cinematics/rodent_frame1ambient.ogg"
+    },
+    {
+      "timecode" : 0.1,
+      "resource" : "/sfx/cinematics/rodent_hunt_intro.ogg"
+    },
+    {
+      "timecode" : 2.2,
+      "resource" : "/sfx/cinematics/rodent_frame1.ogg"
+    },
+    {
+      "timecode" : 5.69,
+      "resource" : "/sfx/cinematics/rodent_frame2ambient.ogg"
+    },
+    {
+      "timecode" : 6.8,
+      "resource" : "/sfx/cinematics/rodent_frame2.ogg"
+    },
+    {
+      "timecode" : 9.2,
+      "resource" : "/sfx/cinematics/rodent_frame3ambient.ogg"
+    },
+    {
+      "timecode" : 10.8,
+      "resource" : "/sfx/cinematics/rodent_frame3.ogg"
+    },
+    {
+      "timecode" : 14.8,
+      "resource" : "/sfx/cinematics/rodent_frame4ambient.ogg"
+    },
+    {
+      "timecode" : 14.8,
+      "resource" : "/sfx/cinematics/rodent_frame4.ogg"
+    },
+    {
+      "timecode" : 21.8,
+      "resource" : "/sfx/cinematics/rodent_frame5.ogg"
+    }
+  ]
+}

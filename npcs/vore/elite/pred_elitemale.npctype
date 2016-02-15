@@ -1,0 +1,188 @@
+{
+  "type" : "pred_elitemale",
+  "baseType" : "villager",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Put that back! It's my property now.",
+							"I feel the same way now as when my squadmates would take good weapons from me and give me crappy ones.",
+							"Put. It. Back.",
+							"What are you doing, trying to trigger me to say rare dialogue?",
+							"I own what I say I own, and I own that. Put that back down.",
+							"If I can own you, I certainly can own that. Put it back."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I am not allowing a breach in my wall! What if a sniper was outside? I command you to patch it up, now.",
+							"Why is there a hole in my living room?",
+							"A home isn't a home unless there are no holes in the wall.",
+							"You're letting in a draft. Patch up that hole."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"None other may live in the dwelling of a Sangheili!",
+							"If you bring a Brute here then we're going to have another Great Schism on our hands.",
+							"You aren't trying to get me to bunk with another pred, are you?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"I shall return to my kin if you do not heed my demands." ,
+							"You should be treating me better than this!",
+							"I am your superior! You should be serving my every whim! My treatment is a disgrace!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"I have had quite enough of this distasteful lack of hospitality. I am returning to Sanghelios."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"What is it? Something mundane, I'd assume."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"I should get to live here for free, but I'll play along and pay you these silly Pixels."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"Where is an Energy Sword when you need one?",
+							"Look at me closely, beast, for I am calamity!",
+							"I see one!",
+							"No one dare attacks a pred!",
+							"You don't scare me!",
+							"If you're not the Flood, then I'm not impressed.",
+							"I've seen Grunts more intimidating than you!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"You expect me to help? Do I look like a Grunt to you?",
+							"Wort, Wort, Wort!",
+							"Kill it before it kills us!",
+							"Why let them die this way if I could eat them instead?"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Engage!",
+							"You fight like the Demon!",
+							"Puncture their flanks!",
+							"Run for your miserable lives, vermin!",
+							"Win the fight so I can eat you myself afterwards!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							" Augh! Must you kill them all?!",
+							"Their blood falls on bare rock and nourishes nothing!",
+							"HA! They were even weaker than you are.",
+							"We need to find more worthy foes!",
+							"Now that's a deed to remember!",
+							"Good, the enemy is dealt with. Now get back here so I can eat you; I'm hungry."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Stop looking at me like that. I'm NOT going to kiss you. I may do something else with my mouth, though...",
+						"I'm tired from all the fighting. I'm a retired warrior.",
+						"It's about time I kicked back and relaxed somewhere cozy.",
+						"So many planets out there. But there's only one Sanghelios.",
+						"This place seems like as good of a home-away-from-home as any. Lots of food, at least.",
+						"If you want me to give you a kiss, then you'll have to be prepared to get poked by my teeth.",
+						"Are you staring at me for a particular reason?",
+						"You're staring at my breasts, aren't you? Are you wanting to add yourself to them?",
+						"If you stare at my breasts any more, I'm going to ensure your nutrients make them bigger.",
+						"Is there something stuck in my teeth from the last time I ate someone? Want to try and get it out?",
+						"What? Do you want me to say 'Wort Wort Wort'?",
+						"My eyes are orange. Now stop staring!",
+						"If anyone gets in my way, I'll eat them. Are YOU in my way?",
+						"When I was with the Covenant, they called me an \"Elite.\" That should give you an idea of my abilities.",
+						"I'm a Sangheili, and I'm a pred. I may as well be unstoppable.",
+						"My kind are renowned warriors. But not all have the natural gift of being a pred.",
+						"When my squadmates found out I had the gift of being a pred, they got quite the scare.",
+						"I still remember my first time eating a human during the Human-Covenant war...",
+						"I was almost made to eat a Heretic, once. One of my own kind. I refused, of course.",
+						"Eating a Brute during the Great Schism was... difficult.",
+						"If you keep staring at me like that, I might not be able to restrain myself anymore.~",
+						"If the Covenant worshipped preds instead of Halos, maybe they would still be around.",
+						"You think I'm sexy, don't you?",
+						"Not many people have ever gotten to see a Sangheili without their armor on...",
+						"The Covenant's biggest mistake was not eating humans instead of killing them.",
+						"I wish I could have met the Arbiter... so handsome!"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/elite/elitemale.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "elitehead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "elitechest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "elitelegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}
