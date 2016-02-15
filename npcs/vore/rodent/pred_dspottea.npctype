@@ -1,0 +1,243 @@
+{
+  "type" : "pred_dspottea",
+  "baseType" : "villager",
+  
+  "identity" : {
+	"gender" : "female"
+  },
+  
+  "npcname" : "Spot Tea",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Wait, wasn't something here before",
+							"Hey, I need that!",
+							"Oh gosh I had it perfect! ;3;",
+							"Are.. are you redecorating?",
+							"This is worse then the layout change on Twit On My Face! D:",
+							"Can you put something nice there? Maybe carrot cake?",
+							"Awwr, I was going to use that!",
+							"Something's different here... ",
+							"I swear I don't have OCD, but I liked that there...",
+							"I.. I know it's not mine.. but... can  I have it back?",
+							"Wait, did that have my clothes in it when you took it? o3o!",
+							"My stuff was in there!",
+							"Can I have something that matches me rodenty nature please?",
+							"This dosn't seem too much of an adventuring style...",
+							"This is looking better for an apex then a rodent!"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Well who's the burrowing animal now, eh?",
+							"This isn't what I meant when I said I wanted to live in a burrow...",
+							"Dig a tunnel, quick before the hyena come?",
+							"Well this is a bit breezy now...",
+							"That... that looks like it might leak a bit....",
+							"This isn't exactly civilised...",
+							"I don't have enough wallpaper to cover that crack...",
+							"Will you close that up afterwards?",
+							"Uh, there's a little.. just there...",
+							"I really don't want it to get cold in here, mind closing that hole?",
+							"It looks like an earthquake in here!",
+							"Did I dig too much in here?",
+							"I like the skylight but.. uh.. can we not? >_>;"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Well this is unladylike, I can't share a bed!",
+							"If I wanted to share my home I'd not be aromantic!",
+							"Burrows are meant to single rodents!",
+							"But I only have a tea set for one rodent...",
+							"Not all rodents do well put together...",
+							"I'm no pack rat!",
+							"I don't want one for all and none for me!",
+							"Too many rodents in the burrow!",
+							"Not too keen on a relationshi, thanks...",
+							"There's only room for the one of us..."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Needs more carrot cake...",
+						"Needs more cheese...",
+						"Needs more hot tea...",
+						"I'm not picky but...",
+						"This dosn't really feel that homely to me...",
+						"I dunno, I'm not feeling that comfy here...",
+						"Got anything more Mahogany coloured?",
+						"Not quite my style I'm afraid...",
+						"I think someone else might like this more?",
+						"This furniture is getting me a bit on edge..."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"I'm sorry, I just can't...",
+						"It's very nice of you, but I had a better offer.",
+						"I'm sure you'll find someone else...",
+						"This place just wasnt for me.",
+						"This place was made for someone else...",
+						"This ain't no burrow of mine!",
+						"Sorry, I've had enough.",
+						"I heard there were oppertunities elsewhere, so.. uh.. bye!",
+						"It's not you, it's me.",
+						"Maybe one day, but not today..."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"You called?",
+						"I feel like a maid, wait, I'm not a maid right?",
+						"Yes, my dear?",
+						"I arrive like a good rodent!",
+						"Squeak squeak squeak?",
+						"Squeaaak?",
+						"'Allo!",
+						"Mmm?",
+						"Yesyesyes?",
+						"You needed me?",
+						"I heard a ding?",
+						"Fwoosh!",
+						"something up?",
+						"Need something?",
+						"Need anything?",
+						"Whatever it was, I swear it wasnt me!",
+						"Did I do something wrong?",
+						"Y...yes? ",
+						"Can I help you?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Got to pay my way!",
+						"This are way better rates then the Restoration Shrine!",
+						"This place is worth it's size in carrots!",
+						"This place is worth it's size in cheese!",
+						"I hope this helps you on your adventures!",
+						"From one Adventurer to another~"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Geddit away from me!",
+					"SQUEAAAK! O_O",
+					"Oh no oh no oh no squeaaaaak!",
+					"This is why I stopped adventuring! D:!",
+					"It's got giant claws!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Did you see that? Help them!",
+						"Somebody call the poliiice!",
+						"Guards Guards!",
+						"Squeak! o3o",
+						"Eep!",
+						"someone help them!",
+						"Oh g-gosh! ",
+						"Oh no, the poor person!",
+						"Get to cover!",
+						"Hit the dirt!",
+						"Get down!",
+						"Run for it!",
+						"Oi you, leggit!",
+						"Can't we all have a cup of tea instead?",
+						"Can't we talk about this?!",
+						"Stoppit! ;3;",
+						"Get backup!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Go get 'em!",
+					"Oh gosh, you can do it!",
+					"Whack them with a big stick!",
+					"You can do it!",
+					"I believe in you!",
+					"I know you can do it, guard person thingy!",
+					"Get 'em and I'll get you supplies!",
+					"They need backup!",
+					"Go get them tiger!",
+					"You're our only hope!",
+					"My hero! <3",
+					"You're a true hero! <3",
+					"What an Adventurer! <3",
+					"Give 'em what for!",
+					"Protect the rodents!",
+					"Adventurer in the house!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Running and hiding wins the day!",
+					"Thanks for the assist!",
+					"Did you see the fangs on that?!",
+					"Oh gosh, thank you so much!"
+			]
+		  }
+        }
+	  },
+      "converse" : "/dialog/converse.config:converse"
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/rodent/pred_dspottea.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "spotteahead" }
+            ],
+            "chest" : [
+              { "name" : "spotteachest" }
+            ],
+            "legs" : [
+              { "name" : "spottealegspred" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

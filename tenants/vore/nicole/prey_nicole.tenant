@@ -1,0 +1,38 @@
+{
+  "name": "prey_nicole",
+  "priority": 18,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"commerce": 6,
+	"electronic": 6,
+	"glitch": 6,
+	"glitchvillage": 6,
+    "hylotl": 12,
+	"hylotloceancity": 6,
+	"hylotlvillage": 6,
+	"knowledge": 6,
+	"nature": 6,
+	"outpost": 6,
+	"pretty": 6,
+	"storage": 12,
+	"prey": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "prey_nicole",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

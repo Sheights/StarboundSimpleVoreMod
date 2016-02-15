@@ -1,0 +1,74 @@
+{
+  "objectName"  :  "voresw",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "Anthro Snake with a hunger for lost explorers. [DIGESTION]",
+  "shortdescription"  :  "Snake Wildlife",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "savor",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "swicon.png",
+  "orientations" : [
+    {
+	  "image" : "sw.png:standing",
+	  "imagePosition" : [-14, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-14, -16]
+	},
+    {
+	  "image" : "sw.png:standing",
+	  "imagePosition" : [-10, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-10, -16]
+	}
+  ],
+  
+  "animation"  :  "sw.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "gulp" : [ "/sfx/objects/sw/gulp.ogg" ],
+	  "hiss" : [ "/sfx/objects/sw/hiss.ogg" ],
+	  "krrr" : [ "/sfx/objects/sw/krrr.ogg" ],
+	  "mouthstruggle1" : [ "/sfx/objects/sw/mouthstruggle1.ogg" ],
+	  "mouthstruggle2" : [ "/sfx/objects/sw/mouthstruggle2.ogg" ],
+	  "nom" : [ "/sfx/objects/sw/nom.ogg" ],
+	  "stomachstruggle1" : [ "/sfx/objects/sw/stomachstruggle1.ogg" ],
+	  "stomachstruggle2" : [ "/sfx/objects/sw/stomachstruggle2.ogg" ],
+	  "stomachstruggle3" : [ "/sfx/objects/sw/stomachstruggle3.ogg" ],
+	  "stomachtransfer" : [ "/sfx/objects/sw/stomachtransfer.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "sw.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/sw/sw.lua" ],
+  "scriptDelta" : 3
+}

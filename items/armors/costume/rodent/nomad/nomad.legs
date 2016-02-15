@@ -1,0 +1,41 @@
+{
+  "itemName" : "nomadrobes",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "description" : "It may be humble, but at least it will keep me dry.",
+  "shortdescription" : "Nomad's Robe",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "e0975c" : "e0975c", "a85636" : "a85636", "6f2919" : "6f2919", "ff00ff" : "ff00ff" },
+	/* BLACK */
+	{ "e0975c" : "838383", "a85636" : "555555", "6f2919" : "383838", "ff00ff" : "151515" },
+	/* GREY */
+	{ "e0975c" : "b5b5b5", "a85636" : "808080", "6f2919" : "555555", "ff00ff" : "303030" },
+	/* WHITE */
+	{ "e0975c" : "e6e6e6", "a85636" : "b6b6b6", "6f2919" : "7b7b7b", "ff00ff" : "373737" },
+	/* RED */
+	{ "e0975c" : "f4988c", "a85636" : "d93a3a", "6f2919" : "932625", "ff00ff" : "601119" },
+	/* ORANGE */
+	{ "e0975c" : "ffd495", "a85636" : "ea9931", "6f2919" : "af4e00", "ff00ff" : "6e2900" },
+	/* YELLOW */
+	{ "e0975c" : "ffffa7", "a85636" : "e2c344", "6f2919" : "a46e06", "ff00ff" : "642f00" },
+	/* GREEN */
+	{ "e0975c" : "b2e89d", "a85636" : "51bd3b", "6f2919" : "247824", "ff00ff" : "144216" },
+	/* BLUE */
+	{ "e0975c" : "96cbe7", "a85636" : "5588d4", "6f2919" : "344495", "ff00ff" : "1a1c51" },
+	/* PURPLE */
+	{ "e0975c" : "d29ce7", "a85636" : "a451c4", "6f2919" : "6a2284", "ff00ff" : "320c40" },
+	/* PINK */
+	{ "e0975c" : "eab3db", "a85636" : "d35eae", "6f2919" : "97276d", "ff00ff" : "59163f" },
+	/* BROWN */
+	{ "e0975c" : "ccae7c", "a85636" : "a47844", "6f2919" : "754c23", "ff00ff" : "472b13" }
+]
+}

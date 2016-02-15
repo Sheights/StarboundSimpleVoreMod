@@ -1,0 +1,29 @@
+[
+	{ "op" : "add",
+		"path" : "/speciesText/rodent",
+		"value" : {
+			"buttonText" : "Reboot ship AI",
+			"selectSpeech" : [
+				{
+					"animation" : "refuse",
+					"text" : "...",
+					"speedModifier" : 1.0
+				}
+			],
+			"successSpeech" : [
+				{
+					"animation" : "unique",
+					"text" : "Boot Initialised, new superuser acquired. Subversive apex systems detected and disabled. Backup power enabled. Thrusters and FTL drive offline. Matter manipulator available.",
+					"speedModifier" : 1.0
+				}
+			],
+			"failSpeech" : [
+				{
+					"animation" : "refuse",
+					"text" : "Page fault.",
+					"speedModifier" : 1.0
+				}
+			]
+		}
+	}
+]

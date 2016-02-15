@@ -1,0 +1,7 @@
+[
+	{ "op" : "add",
+		"path" : "/initialquests/rodent",
+		"value" : [ "rodenttutorial.gearup" ]
+	}
+]
+

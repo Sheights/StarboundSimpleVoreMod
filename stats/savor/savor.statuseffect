@@ -1,0 +1,14 @@
+{
+  "name" : "savor",
+  "effectConfig" : {
+    "digestTime" : 100
+  },
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "savor.lua"
+  ],
+
+  "label" : "Being Digested",
+  "icon" : "/stats/savor/savor.png"
+}

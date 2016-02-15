@@ -1,0 +1,162 @@
+{
+  "type" : "pred_inkling",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Something isn't right around here.",
+							"This is getting kinda stale.",
+							"What's going on here?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I like it fresh, but that air's a bit too fresh.",
+							"How did that hole get there?",
+							"I didn't make that hole!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"This is a one-squidkid home, here.",
+							"Hey! No! My place!",
+							"They're a kid, I'm a squid, there's not enough room here for two of us."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"You gotta be squidding me.",
+						"Hello? Problem! Needs fixing!",
+						"This stinks."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"This isn't fun anymore. I'm out!",
+						"Looks like this party's over.",
+						"Game over!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"What's up?",
+						"What do ya need?",
+						"Need something? Quick, I'm late for a match."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Won this from my last turf war.",
+						"Thanks for letting me hang out here.",
+						"Here you go.  Stay fresh!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Bad guys inkoming!",
+					"Someone stop them before I get splatted!",
+					"Help!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Somebody help!",
+						"Look out!",
+						"Oh splat!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Booyah!",
+					"Ink 'em up!",
+					"Splat 'em!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Whoo! Safe!",
+					"Woomy!",
+					"Phew, almost ran outta ink there."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "When do you think the next Splatfest will start?",
+			"This place needs a bit more color.",
+			"Need something painted? Or, well, inked?",
+			"The Squid Sisters are the best!",
+			"Have you ever heard of the Chirpy Chips? Or ABXY?",
+			"We should set up a turf war around here.",
+			"Wanna help me train for my next match?",
+			"I might be part squid, but I got a warm belly if ya want it~"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/inkling/inkling.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+			  { "name" : "inklingwig", "parameters" : { "colorIndex" : [ 0, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "chest" : [
+              { "name" : "inklingchest", "parameters" : { "colorIndex" : [ 0, 4, 5, 6, 7, 8, 9, 10, 11] } }
+            ],
+            "legs" : [
+              { "name" : "inklinglegs", "parameters" : { "colorIndex" : [ 0, 4, 5, 6, 7, 8, 9, 10, 11] } }
+            ],
+			"back" : [
+			  { "name" : "inklingback", "parameters" : { "colorIndex" : [ 0, 4, 5, 6, 7, 8, 9, 10, 11] } }
+			]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "pred_christy",
+  "priority": 13,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"avian": 8,
+	"nature": 8,
+	"science": 8,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "pred_christy",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

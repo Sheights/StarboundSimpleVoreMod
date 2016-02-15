@@ -1,0 +1,6 @@
+[
+	{ "op" : "add",
+		"path" : "/initialcodex/rodent",
+		"value" : [ "controls", "rodentprologue", "rodentorigins", "rodentdirective" ]
+	}
+]
