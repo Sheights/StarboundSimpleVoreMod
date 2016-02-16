@@ -15,9 +15,9 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digest system of w
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "wolfnewlegsbelly" .. #victim )
+		entity.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", "wolfnewlegs" )
+		entity.setItemSlot( "legs", legs )
 	end
 	
 end

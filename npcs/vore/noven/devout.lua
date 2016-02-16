@@ -274,8 +274,13 @@ function updateHook(dt)
 		dt = dt or 0.01
 		if animTimer < 5.0 then
 			entity.setItemSlot( "head", "novenhead2" )
-		else
+		elseif animTimer < 6.0 then
 			entity.setItemSlot( "head", "novenhead1" )
+			entity.setItemSlot( "chest", "novenchestbelly1" )
+		elseif animTimer < 7.0 then
+			entity.setItemSlot( "chest", "novenchestbelly2" )
+		else
+			entity.setItemSlot( "chest", "novenchest" )
 			if #victim > 0 then
 				entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 			else
