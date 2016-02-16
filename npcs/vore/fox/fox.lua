@@ -16,9 +16,9 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digestive system o
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "foxnewlegsbelly" .. #victim )
+		entity.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", "foxnewlegs" )
+		entity.setItemSlot( "legs", legs )
 	end
 	
 end
