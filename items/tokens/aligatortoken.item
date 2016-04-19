@@ -1,0 +1,8 @@
+{
+  "itemName" : "aligatortoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Aligator.png",
+  "description" : "A token that can be exchanged for an aligator costume",
+  "shortdescription" : "Aligator Token"
+}

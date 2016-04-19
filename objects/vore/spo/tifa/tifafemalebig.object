@@ -1,0 +1,109 @@
+{
+  "objectName" : "voretifabig",
+  "rarity" : "common",
+  "description" : "A nice warm place to spend the night~",
+  "shortdescription" : "Tifa Lockhart- Big",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This human female seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this girl seems... intriguing...",
+  "floranDescription" : "...Floran like human, but why?",
+  "glitchDescription" : "Wonder.  There is something about this female...",
+  "humanDescrtiption" : "Whatever it is you want miss, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/tifa/femalefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "All settled in there~?",
+	"This is one way to level up~",
+	"You feel amazing in there~",
+	"I can feel my Limit meter filling~",
+	"This will certainly do~.",
+	"Stop fighting. That's MY job~",
+	"Heh, let's hope I can battle like this...",
+	"Let's see Aerith top this~",
+	"Cloud has to notice me now..."
+	
+  ],
+  "gulpLines" : [
+    "In you go~",
+	"That's it... Come on in~",
+	"Good choice~",
+	"Happy landings~"
+  ],
+  "chatIdleFull" : [
+    "Sorry... Can't hold any more~",
+	"This is as much as I can take...",
+	"Sorry, but this is one limit I can't break~"
+  ],
+  "chatIdleEmpty" : [
+    "You're no Cloud, but you'll do~",
+	"Care to help a fighter out~?",
+	"Come on into my 7th Heaven~",
+	"I'm the best inn you could ask for~",
+	"Want to help me test the 'devour' Materia?",
+	"AVALANCHE has a very specific use for you~",
+	"Even warmer in here than in Casa del Sol~",
+	"Here's a dungeon for you to explore~"
+  ],
+  "rubLines" : [
+    "You're pretty good at this, mind doing it for longer?",
+    "Ooohh! Thanks for the massage ~",
+    "Now i'm getting a massage from both sides.",
+    "I love a good belly rub ~"
+  ]
+}

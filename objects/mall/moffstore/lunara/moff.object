@@ -1,0 +1,69 @@
+{
+  "objectName" : "lunaramoff",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "  MOFF STORE",
+        "subtitle" : "  Fresh silk, from fresh adventurers!",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "pokeball"} },
+	  { "item" : { "name" : "charmanderplush"} },
+	  { "item" : { "name" : "pikachuplush"} },
+	  { "item" : { "name" : "eeveeplush"} },
+	  { "item" : { "name" : "cyndiquilplush"} },
+	  { "item" : { "name" : "mareepplush"} },
+	  { "item" : { "name" : "torchicplush"} },
+	  { "item" : { "name" : "mudkipplush"} },
+	  { "item" : { "name" : "aronplush"} },
+	  { "item" : { "name" : "bunearyplush"} },
+	  { "item" : { "name" : "rioluplush"} },
+	  { "item" : { "name" : "shayminplush"} },
+	  { "item" : { "name" : "zoruaplush"} },
+	  { "item" : { "name" : "goomyplush"} },
+	  { "item" : { "name" : "lesserdoglegs"} },
+	  { "item" : { "name" : "lesserdogchest"} },
+	  { "item" : { "name" : "lesserdoghead"} },
+	  { "item" : { "name" : "lesserdoghighhead"} },
+	  { "item" : { "name" : "toungescarf"} },
+	  { "item" : { "name" : "toungescarfback"} }
+    ]
+  },
+  "printable" : false,
+  "description" : "Very Fluffy. Makes silk from anything she can fit into her mouth.",
+  "shortdescription" : "^orange;Lunara Moth^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "I can wear clothes, or if I'm not careful, be clothes.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "moff.png:idle.1",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "animation"  :  "moff.animation",
+  "animationParts"  :  {
+    "body"  :  "moff.png"
+  },
+  
+  "scripts" : [ "/objects/mall/moffstore/lunara/moff.lua" ],
+  "scriptDelta" : 300,
+  "npcToy" : {}
+}

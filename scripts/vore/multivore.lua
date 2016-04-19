@@ -1,3 +1,5 @@
+require "/scripts/vore/exclusions.lua"
+
 oldInit = init
 oldInteract = interact
 oldUpdate = update
@@ -127,12 +129,19 @@ function feed()
 		
 		
 		
-		if world.isNpc( people[temp] ) == false then
+		if world.isNpc( people[temp] ) then
+			for k = 1, #exclusionList do
+				if world.entityName(people[temp]) == exclusionList[k] then
+					return
+				end
+			end
+		else
 			isPlayer = true
 		end
 				
 		local collisionBlocks = world.collisionBlocksAlongLine(mcontroller.position(), world.entityPosition( people[temp] ), {"Null", "Block", "Dynamic"}, 1)
 		if #collisionBlocks ~= 0 then
+			isPlayer = false
 			return
 		end
 		

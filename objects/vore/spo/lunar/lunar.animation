@@ -1,0 +1,86 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "blink"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.3,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "idlefull"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "blinkfull"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.3,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  5,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "regurg" :  {
+		    "frames"  :  5,
+		    "cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+			"blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink"
+		      }
+		    },
+			"idlefull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idlefull"
+		      }
+		    },
+			"blinkfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blinkfull"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+			"regurg"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:regurg.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

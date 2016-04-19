@@ -1,0 +1,26 @@
+{
+  "objectName" : "salineplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "#492: The Gratitude Pokemon",
+  "shortdescription" : "Saline Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It's able to swallow things multiple times it's own size. It digests prey into a sweet smelling nectar, although very loving and caring.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "shaymin.png:saline",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

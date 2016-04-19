@@ -1,0 +1,178 @@
+{
+  "type" : "prey_katojana",
+  "baseType" : "villager",
+
+  "npcname" : "Katojana",
+  
+  "identity" : {
+	"gender" : "female"
+  },
+
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I liked it better before.",
+							"This room looks really bad.",
+							"I don’t know how much longer I will be staying in this situation.",
+							"Please put that back. I need that."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I would love some privacy!",
+							"Do you like to peek through holes?",
+							"This place is a mess and broken.",
+							"It’s really windy in my room.",
+							"I can see the outside. And not through a window."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I’d like to have some privacy.",
+							"I don’t like to share my room.",
+							"I want my own room."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"If you don’t fix my room, I’ll leave.",
+						"Get my room fixed or I’m out!",
+						"To my room. NOW. Or I’ll leave!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Such a shame.",
+						"Call me again when you fixed this mess.",
+						"This environment is nothing I can live with."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"I… uhm… am a bit low on Pixels. Can you ask another time please?",
+						"Can you wait with the rent for a bit longer please?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here’s your rent.",
+						"I always pay up."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Eep! Help!",
+					"Please help me!",
+					"Help! Help!",
+					"Ouch! Ouch! Ouch! I need help!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Go save them!",
+						"I think someone is in a bit of trouble!",
+						"I don’t think they will survive much longer!",
+						"Get to them!",
+						"Please save them."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Do you think you can handle it?",
+					"Don’t die.",
+					"These weaklings don’t stand a chance!",
+					"Small fries!",
+					"You could get eaten..."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"You did it.",
+					"Well done.",
+					"Do you want a medal or something?",
+					"About time.",
+					"Not bad.",
+					"I expected more."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hey I like your clothes.",
+			"Would you like me to feed you to a predator?",
+			"I am not food. Stop saying that.",
+			"What would you feel like, inside of me?",
+			"Would you like to visit a cat stomach?",
+			"I’m quite hungry.",
+			"This place is nice. I like to live here.",
+			"Do you know where the bathroom is?",
+			"Someday I will be the Number 1 predator around here.",
+			"I like plants. Especially those that eat people.",
+			"I love to watch people getting eaten.",
+			"Do you want to offer your body for my enjoyment?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/katojana/prey_katojana.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "katojanahead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "katojanachest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "katojanalegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

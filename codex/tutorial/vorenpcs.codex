@@ -1,0 +1,45 @@
+{
+  "id" : "vorenpcs",
+  "title" : "Vore Tenants",
+  "contentPages" : [
+
+"Using Bellybound you can spawn in NPCs and tenants that can eat players and other NPCs, NPCs you can eat, as well as a few guards to protect your settlement.
+First of all these require a room to stay in. This means, two walls, a roof, floor, door and background blocks.
+Each room must also contain atleast one light and one door.",
+
+"To get a spesific npc, you place down certant items with a specific 'Tag', that matches the one found in the requirement list.
+This list is found in the root folder of your SSVM folder, the folder you placed inside of Starbound, in a file named \" npcchart.png \" For a quick reference, go buy an 'NPC Encyclopdedia' at BellyBound.
+To find the furniture matching a tag, you can use the website https://starbounditems.herokuapp.com/tags , also located on the wiki on Github.",
+
+"Each piece of furniture contributes to the requirements equal to how many blocks it takes up in game. For instance, Goodra requires 24 slime. We mean 24 blocks worth of slime furniture. Not, make the room made of 24 slime blocks. Not, the room needs 24 pieces of furniture.
+(Holding Shift while using the mining tool) the furniture covers,
+so a sofa covering 4x2 blocks counts as 8 blocks towards the requirement.",
+
+"To get a predator that does the kind of Vore you'd like, you place down a badge in the room. The different badges are as following:
+
+Oral vore: V badge.
+Fatal oral vore: D badge.
+Unbirth: U badge.
+Cock vore: C badge and V badge.
+Fatal cock vore: C badge and D badge.
+Prey NPCs: P badge.
+Prey NPCs you digest: P badge and D badge",
+
+"After making the room with the furniture and the badge you want, you place down a 'Colony Deed' or 'Compact Deed' bought from Frogg Furnishings or your local Bellybound Store.
+Simply activate the deed with the 'e' key and your predator should spawn in. If not, break the deed, replace it and try again.",
+
+"The NPCs will randomly try to consume you and other NPCs that are next to them.
+You can request to be consumed, request being released, or even releasing other prey by double tapping 'e' on the predator.
+Note that to turn into an Egg from UB, unbirth, predators you have to stay in them for the full duration, and fatal predators will digest you at a normal rate.",
+ 
+"You can also summon in NPC prey just like with predators, using badges and furniture.
+They spawn with a random personality that changes over time based on your how many times you eat them. Some might hate being eaten, while others may grow to like it.
+Press 'e' twice to eat them. You will not grow a belly from this so you'll have to improvise.
+Some might try to bribe you, this is shown in orange text. Release them after will reward you with some pixels.",
+
+"Keeping a NPC around might make them gift you items, including tokens. These tokens can be exchanged for exclusive rewards in the Foodhall Arcade",
+
+"You can configure a few options in the script files, which is explained more thoroughly in the README file, found in the root folder.
+Do also note that the tenants will not be able to eat you on player ships unless configured in the Script files of the mod. More information can be found on the github Wiki or in the README file included with the mod."
+  ]
+}

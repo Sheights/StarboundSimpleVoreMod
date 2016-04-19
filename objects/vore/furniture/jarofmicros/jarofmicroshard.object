@@ -1,0 +1,44 @@
+{
+  "objectName" : "ajarofmicroshard",
+  "printable" : false,
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 888,
+
+  "description" : "A jar containing a large amount of tiny little people. Yum! Now with a satisfying crunch!",
+  "shortdescription" : "Jar of Micros",
+  
+  "generalDescription" : "They're like jelly beans, one for every flavor! There's Avian, Human, Floran, and ... Eugggh! Apex.",
+
+  "inventoryIcon" : "jarofmicrosicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "jarofmicros.png:<color>.<frame>",
+      "imagePosition" : [-8, 0],
+      "frames" : 3,
+      "animationCycle" : 1.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  
+  "animationCustom" : {
+	"sounds" : {	  
+	  "effect" : [ "/sfx/humanoid/eat3.ogg" ],
+	  "scream" : [ "/sfx/gun/gnome_throw1.ogg" ]
+    }
+  },
+  
+  "animation"  :  "jar.animation",
+  "animationParts"  :  {
+    "body"  :  "jarofmicros.png"
+  },
+  
+  "animationPosition" : [-8, 0],
+ 
+  "scripts" : [ "/objects/vore/furniture/jarofmicros/jar.lua" ],
+  "scriptDelta" : 10
+}

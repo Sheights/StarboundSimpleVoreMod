@@ -1,0 +1,384 @@
+{
+  "id" : "vorenpcsencyclo",
+  "title" : "Vore NPC Encyclopedia",
+  "contentPages" : [
+
+"Table of Contents:
+Predators: Page 2
+Prey: Page 25
+Misc: Page 30",
+
+"Predators
+
+Name: Alanaster
+Types: Oral, Digest
+Requirements -
+bioluminescence : 12,
+slime : 12
+
+Name: Aligator
+Types: Oral, Digest
+Requirements -
+swamp : 24",
+
+"Name: Ampharos
+Types: Oral, Digest, Unbirth
+Requirements -
+electronic : 12,
+nature : 12,
+poke : 1
+
+Name: Anthro Deer
+Types: Oral, Digest
+Requirements -
+nature : 18",
+
+"Name: Avali
+Types: Oral, Digest
+Requirements -
+outpost : 6,
+OR
+avali : 6
+
+Name: Axon
+Types: Oral, Digest
+Requirements -
+Cell : 12,
+sea : 12",
+
+"Name: Cat
+Types: Oral, Digest, Cock, Fatal Cock
+Requirements - none
+
+Name: Catfish
+Types: Oral, Digest
+Requirements -
+swamp : 24
+
+Name: Centaur
+Types: Oral, Digest
+Requirements -
+glitchvillage : 18,
+nature : 8",
+
+"Name: Christy Kitsune
+Types: Oral, Digest
+Requirements -
+avian : 6,
+nature : 6,
+science : 6
+
+Name: Crystal Dragon
+Types: Oral, Digest
+Requirements -
+crystalline : 24",
+
+"Name: Dallenson
+Types: Oral, Digest
+Requirements -
+electronic : 24,
+tier10 : 12
+
+Name: Deertaur
+Types: Oral, Digest
+Requirements -
+nature : 18
+
+Name: Devout
+Types: Oral, Digest
+Requirements -
+science : 24",
+
+"Name: Dezzy
+Types: Oral
+Requirements -
+nature : 12,
+tier4 : 12
+
+Name: Dragon
+Types: Oral, Digest
+Requirements -
+glitchcastle : 16,
+valuable : 8",
+
+"Name: Elite
+Types: Oral, Digest
+Requirements -
+alien : 12
+
+Name: Felin
+Types: Oral, Digest
+Requirements -
+human : 6,
+OR
+felin : 6
+
+Name: Fox
+Types: Oral, Digest, Cock, Fatal Cock
+Requirements - none",
+
+"Name: Goodra
+Types: Oral, Digest, Unbirth
+Requirements -
+slime : 24,
+poke : 1
+
+Name: Ice Slime Girl
+Types: Oral, Digest
+Requirements -
+ice : 12
+
+Name: Harpy
+Types: Unbirth
+Requirements -
+avian :12",
+
+"Name: Human
+Types: Oral, Digest, Unbirth
+Requirements -
+human : 12
+
+Name: Inkling
+Types: Oral, Digest
+Requirements -
+colorful : 12,
+sea : 6
+
+Name: Lalim
+Types: Oral, Digest
+Requirements -
+science : 24",
+
+"Name: Lopunny
+Types: Oral, Digest, Unbirth
+Requirements -
+nature : 12,
+poke : 1
+
+Name: Lucario
+Types: Oral, Digest, Unbirth
+Requirements -
+aviantemple : 12,
+poke : 1",
+
+"Name: Kangaru
+Types: Oral, Digest
+Requirements -
+apex : 6
+
+Name: Kineptic
+Types: Oral, Digest
+Requirements -
+glitchcastle : 6,
+OR
+kineptic : 6",
+
+"Name: Kirhos
+Types: Oral, Digest
+Requirements -
+tier8 : 6
+
+Name: Lamia
+Types: Oral, Digest
+Requirements -
+floran : 6",
+
+"Name: Lynn
+Types: Unbirth
+Requirements -
+apex : 6,
+floran : 6,
+human : 6
+
+Name: Mantizi
+Types: Oral, Digest
+Requirements -
+glitchcastle : 6,
+OR
+mantizi : 6",
+
+"Name: Naga
+Types: Oral, Digest
+Requirements -
+sandstone : 24
+
+Name: Newt
+Types: Oral, Digest
+Requirements -
+swamp : 6",
+
+"Name: Nin the Folf
+Types: Digest
+Requirements -
+colorful : 4,
+cooking : 4,
+storage : 6
+
+Name: Orca
+Types: Oral, Digest
+Requirements -
+sea : 24",
+
+"Name: Orcana
+Types: Oral, Digest
+Requirements -
+sea : 6
+
+Name: Princess Ruto
+Types: Oral
+Requirements -
+ocean : 10
+
+Name: Quelaag
+Types: Oral, Digest
+Requirements -
+evil : 24",
+
+"Name: Reindeer
+Types: Oral, Digest
+Requirements -
+christmas : 18
+
+Name: Sergal
+Types: Oral, Digest
+Requirements -
+hylotlvillage : 6
+
+Name: Shark
+Types: Oral, Digest
+Requirements -
+sea : 24",
+
+"Name: Shark Girl
+Types: Oral, Digest
+Requirements -
+island : 12
+
+Name: Slime Girl
+Types: Oral, Digest
+Requirements -
+slime : 12
+
+Name: Spider Girl
+Types: Oral, Digest
+Requirements -
+spooky : 24",
+
+"Name: Spot Tea
+Types: Oral, Digest
+Requirements -
+explorer : 6,
+OR
+traveller : 1
+
+Name: Treebuddy
+Types: Oral, Digest
+Requirements -
+1 Cookie Jar",
+
+"Name: Unicorn
+Types: Oral, Digest
+Requirements -
+nature : 18,
+pretty : 12,
+
+Name: Victor
+Types: Digest
+Requirements -
+1 Bunny Altar
+
+Name: Viper
+Types: Oral, Digest
+Requirements -
+alien : 12",
+
+"Name: Wolf
+Types: Oral, Digest, Cock, Fatal Cock
+Requirements - none
+
+Name: Yoshi
+Types: Oral
+Requirements -
+floran : 24
+
+Name: Zebrataur
+Types: Oral, Digest
+Requirements -
+misc : 12",
+
+"Name: Zoroark
+Types: Oral, Digest, Unbirth
+Requirements -
+poke : 1",
+
+"Prey
+
+Name: Christy Kitsune
+Types: Oral, Digest
+Requirements -
+avian : 6,
+nature : 6,
+science : 6
+
+Name: Dallenson
+Types: Oral, Digest
+Requirements -
+electronic : 24,
+tier10 : 12",
+
+"Name: Katojana
+Types: Oral, Digest
+Requirements -
+steampunk : 24
+
+Name: Nicole
+Types: Oral
+Requirements -
+1 Glitch Bookcase
+1 Hylotl Arcade Machine
+1 Hylotl Water Feature
+1 Outpost Desk",
+
+"Name: Rich
+Types: Oral
+Requirements -
+1 Zorua Plush
+
+Random Prey
+Types: Oral, Digest
+Requirements - none
+
+Racial Prey
+Types: Oral, Digest
+Requirements -
+racial : 6",
+
+"Name: Shin
+Types: Oral, Digest
+Requirements -
+colorful : 24
+
+Name: Spot Tea
+Types: Oral, Digest
+Requirements -
+explorer : 6,
+OR
+traveller : 1",
+
+"Name: Yaupon Mouse
+Types: Oral, Digest
+Requirements -
+explorer : 6,
+OR
+traveller : 1",
+
+"Misc
+
+Name: Lamia Guard
+Requirements -
+combat : 8,
+floran : 8,
+tierX : 12"
+
+  ]
+}

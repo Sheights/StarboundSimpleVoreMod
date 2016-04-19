@@ -1,0 +1,87 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  15,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "full1"
+		  },
+		  "full1" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.2,
+		    "mode"  :  "loop"
+		  },
+		  "digest1" :  {
+		    "frames"  :  7,
+		    "cycle"  :  2.1,
+		    "mode" : "transition",
+			"transition" : "full2"
+		  },
+		  "full2"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "digest2" :  {
+		    "frames"  :  11,
+		    "cycle"  :  3.3,
+		    "mode" : "transition",
+			"transition" : "idle"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "full1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full1.<frame>"
+		      }
+		    },
+			"full2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full2"
+		      }
+		    },
+	        "digest1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest1.<frame>"
+		      }
+		    },
+			"digest2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest2.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

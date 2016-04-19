@@ -3,7 +3,7 @@
   "price" : 35,
   "inventoryIcon" : "icons.png:pants",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Rare",
   "description" : "Inkling body costume.  Stay fresh!  And full!",
   "shortdescription" : "Inkling Body - Belly",
   "tooltipKind" : "armor",

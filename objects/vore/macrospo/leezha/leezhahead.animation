@@ -1,0 +1,119 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "default",
+	    "states"  :  {
+		  "default"  :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "blink"  :  {
+		    "frames"  :  5,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "default"
+		  },
+		   "fullblink"  :  {
+		    "frames"  :  5,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "rub"  :  {
+		    "frames"  :  11,
+			"cycle"  :  2.2,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "smile"  :  {
+		    "frames"  :  5,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "default"
+		  },
+		  "struggle"  :  {
+		    "frames"  :  22,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  10,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "totail"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "default"
+		  },
+		  "full"  :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "default"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:default"
+		      }
+		    },
+	        "blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+			"fullblink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullblink.<frame>"
+		      }
+		    },
+	        "rub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:rub.<frame>"
+		      }
+		    },
+	        "smile"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:smile.<frame>"
+		      }
+		    },
+	        "struggle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:struggle.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+			},
+			"totail"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:totail.<frame>"
+		      }
+		    },
+			"full"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

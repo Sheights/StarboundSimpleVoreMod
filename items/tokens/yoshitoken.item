@@ -1,0 +1,8 @@
+{
+  "itemName" : "yoshitoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Yoshi.png",
+  "description" : "A token that can be exchanged for a Yoshi costume",
+  "shortdescription" : "Yoshi Token"
+}

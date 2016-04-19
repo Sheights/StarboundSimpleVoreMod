@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "harpytoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "voretoken",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

@@ -8,7 +8,7 @@ Contents:
 
 	2. Accessing Content
 
-		A. The Bellybound Store
+		A. The Foodhall
 	
 		B. Placable Pred Objects
 
@@ -49,29 +49,19 @@ Contents:
 2. Accessing Content
 *************************************************************
 
-	A. The Bellybound Store
+	A. The Foodhall Vore Mall
 
 	*********************************************************
 
 	
 	All content in this mod is accessable one way or another
+	through our main form of distribution, the Foodhall Vore
+	Mall. You may access the mall the same way you access
+	the Outpost, via the ancient gate.
 
-	through our main form of distribution, the Bellybound
-	Store. The store may be crafted by the player by pressing
-
-	'c' to open up the player crafting menu and then
-
-	selecting one of the two varients.
-
-	
-	The first is our original Bellybound store. It is quite
-	bulky and large. The store is animated and has lines
-
-	depending on the player's proximity. The second varient
-	is the small holographic store.
- The holographic store
-	takes up almost an imcomparable amount of space and has
-	access to all the freatures the primary store has.
+	For your convience you may purchase a holographic
+	Bellybound store at the mall to have remote access to
+	some more common items.
 
 	
 	*********************************************************
@@ -104,60 +94,16 @@ Contents:
 	*********************************************************
 
 	
-	Bellybound also sells vore-themed furniture indicated by
+	Foodhall also sells vore-themed furniture indicated by
 
 	the purple border, or 'legendary' rarity. All of these
 	objects do not specially interact with the player, but do
 
-	carry a special 'tag' for the tenant system (See the next
+	carry a special 'tag' for the tenant system 
+	All furniture has every vore tag associated with it. So
+	you can pick up that ugly badge after you spawn your
+	tenant.
 
-	section for more information.) All furniture has every
-	vore tag associated with it. So you can pick up that ugly
-	badge after you spawn your tenant.
-
-	
------------------------------------------
-| Item					| Cost			|
------------------------------------------
-| 
-Badges				| 200 pixels	|
-| 
-Box of Condoms		| 100 pixels	|
-| 
-Consume: by Sheights	| 100 pixels	|
-| 
-Devourcraft Poster	| 100 pixels	|
-| 
-Dragon Sleeping Bag	| 150 pixels	|
-| 
-Emerald Vorb			| 2000 pixels	|
-| 
-Fed Mimic				| 1000 pixels	|
-| 
-Lamia Poster			| special		|
-| 
-Mimic					| 1000 pixels	|
-| 
-Ode de Endo			| 100 pixels	|
-| 
-Shark Tank			| 1000 pixels	|
-| 
-Slug Cage				| 1000 pixels	|
-| 
-Spit Roast			| 600 pixels	|
-| 
-Spooky Cauldron*		| 130 pixels	|
-| 
-Throne of Squish		| 95 pixels		|
-| 
-Tummy Tent			| 65 pixels		|
-| 
-Vorb					| 2000 pixels	|
-
------------------------------------------
-*Already available in the game. Just added the vore tags to it.
-
-	
 	*********************************************************
 	D. NPCs
 	*********************************************************
@@ -313,14 +259,19 @@ Vorb					| 2000 pixels	|
 	
 	Avaiable at the bellybound store is a "Vore Tech Chip".
 	Buying it will enable a tech you may select at your
-
 	ship's AI center. This tech is centered around the prey
 	for role playing. Place your cursor over your potential
 	player pred and press F. You will turn invisible and
-
 	follow the subject. Press F again to return. There are
 	no bellies or sounds currently. You may improvise with
 	assets found in the mod or make your own. Check the
-
 	contributions section for more help on the matter.
 	(I havn't written it yet but whatever.)
+	
+	The RP Tool V2 functions simularly only it's for use
+	by the predator. The predator needs to first buy a
+	Prey enabler for their planet or ship and turn it on.
+	You may buy the prey enabler at the Foodhall.
+	While you are on a planet with an active prey enabler
+	hover your cursor over your prey and press F to ingest
+	them.

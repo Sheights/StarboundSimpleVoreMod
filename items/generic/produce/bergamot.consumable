@@ -1,0 +1,19 @@
+{
+  "itemName" : "bergamot",
+  "rarity" : "Common",
+  "price" : 20,
+  "inventoryIcon" : "bergamot.png",
+  "description" : "It's a Bergamot. It's like an orange, but its seeds can be made into an oil for tea.",
+  "shortdescription" : "Bergamot",
+  "handPosition" : [0, 4],
+  "effects" : [ [
+    {
+        "effect" : "foodheal25",
+        "duration" : 60
+    },
+    {
+        "effect" : "wellfed",
+        "duration" : 60
+    }
+  ] ]
+}

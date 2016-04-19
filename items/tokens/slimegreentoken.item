@@ -1,0 +1,8 @@
+{
+  "itemName" : "slimegreentoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Slime.png",
+  "description" : "A token that can be exchanged for a slime costume",
+  "shortdescription" : "Slime Token"
+}

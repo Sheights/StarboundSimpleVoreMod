@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "kangarutoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "kangaruhead2",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

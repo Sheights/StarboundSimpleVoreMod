@@ -2,12 +2,12 @@ require "/scripts/vore/npcvore.lua"
 
 isDigest = true
 
-playerLines = {		"Surprise! Hope you enjoy learning about the reproductive system of felines~<3",
-					"Such a scrumptious thing you are~",
-					"Ooooo~ Gonna love to make the most of you",
-					"*purrs* Mmm hope I can find more like you, so good",
-					"Gonna be a shame to let ya out, just love a full sac~ *kneads you about*",
-					"You'll be making my furcoat even more gorgeous soon~",
+playerLines = {		"Surprise! I hope you enjoy learning about the reproductive system of felines. <3",
+					"Such a great feeling thing you are~",
+					"Ooooo~ Gonna love to make the most out of you~",
+					"*Purrs* Mmm, hope I can find more like you, so good~",
+					"Gonna be a shame to spurt you out, I just love having a full sac. *Kneads you about*",
+					"You'll look good splattered over my walls.",
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
@@ -48,7 +48,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("Ooooh, that felt wonderful. Do come back *purrrrrrr*")
+		entity.say("Ooooh, that felt wonderful. Do come back! *Purrrrrrr*")
 	end
 
 	isPlayer = false

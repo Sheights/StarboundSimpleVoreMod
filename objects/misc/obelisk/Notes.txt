@@ -1,0 +1,1 @@
+Hi, quick thing about this one - In frame five, the pixels at the "gaps" at the side are meant to be transparent. It works in PNG, but in the preview gif they look opaque. 

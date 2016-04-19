@@ -1,0 +1,675 @@
+{ "margin":0,
+ "name":"vore",
+ "properties":
+    {
+
+    },
+ "spacing":0,
+ "tilecount":47,
+ "tileheight":96,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"\"This machine will exchange your hard earned tokens into costumes and other goods!\"",
+         "\/\/name":"tokenexchanger",
+         "\/\/shortdescription":"orange;Costume Prize Machine^white;",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"tokenexchanger",
+         "tilesetDirection":"right"
+        },
+     "1":
+        {
+         "\/\/description":"#304: The Iron Armor Pokemon",
+         "\/\/name":"aronplush",
+         "\/\/shortdescription":"Aron Plushie",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"aronplush",
+         "tilesetDirection":"right"
+        },
+     "10":
+        {
+         "\/\/description":"It's a sleeping bag. I think. We'll both know in the morning.",
+         "\/\/name":"adragonbag",
+         "\/\/shortdescription":"Dragon Sleeping Bag",
+         "imagePositionX":"-24",
+         "imagePositionY":"0",
+         "object":"adragonbag",
+         "tilesetDirection":"right"
+        },
+     "11":
+        {
+         "\/\/description":"Signifies this space for a 'cock vore' tenant. You can remove it and replace it with any vore object when you are done.",
+         "\/\/name":"aacbadge",
+         "\/\/shortdescription":"Cock Vore Badge",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"aacbadge",
+         "tilesetDirection":"right"
+        },
+     "12":
+        {
+         "\/\/description":"Signifies this space for a 'digest' tenant. You can remove it and replace it with any vore object when you are done.",
+         "\/\/name":"aadbadge",
+         "\/\/shortdescription":"Digest Vore Badge",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"aadbadge",
+         "tilesetDirection":"right"
+        },
+     "13":
+        {
+         "\/\/description":"An odd perfume that gives you an enrgizing stingy feeling.",
+         "\/\/name":"adperfumebottle",
+         "\/\/shortdescription":"Consume: by Sheights",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"adperfumebottle",
+         "tilesetDirection":"right"
+        },
+     "14":
+        {
+         "\/\/description":"If you look inside this gem, it's said you can see your future!",
+         "\/\/name":"advorb",
+         "\/\/shortdescription":"Emerald Vorb",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"advorb",
+         "tilesetDirection":"right"
+        },
+     "15":
+        {
+         "\/\/description":"A Poster advertising a vore mod for Minecraft. Must be an ancient earth relic by now.",
+         "\/\/name":"avoreflag",
+         "\/\/shortdescription":"Devourcraft Poster",
+         "imagePositionX":"-15",
+         "imagePositionY":"-16",
+         "object":"avoreflag",
+         "tilesetDirection":"right"
+        },
+     "16":
+        {
+         "\/\/description":"You can save your game here! I think.",
+         "\/\/name":"afromograph",
+         "\/\/shortdescription":"Phonograph",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"afromograph",
+         "tilesetDirection":"right"
+        },
+     "17":
+        {
+         "\/\/description":"A treasure che- wait a moment.",
+         "\/\/name":"amimic",
+         "\/\/shortdescription":"Mimic",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"amimic",
+         "tilesetDirection":"right"
+        },
+     "18":
+        {
+         "\/\/description":"Signifies this space for a 'prey' tenant. You can remove it and replace it with any vore object when you are done.",
+         "\/\/name":"aapbadge",
+         "\/\/shortdescription":"Prey Badge",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"aapbadge",
+         "tilesetDirection":"right"
+        },
+     "19":
+        {
+         "\/\/description":"An odd perfume that gives you a warm pink feeling.",
+         "\/\/name":"aperfumebottle",
+         "\/\/shortdescription":"Ode de Endo",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"aperfumebottle",
+         "tilesetDirection":"right"
+        },
+     "2":
+        {
+         "\/\/description":"#005: The Lizard Pokemon",
+         "\/\/name":"charmanderplush",
+         "\/\/shortdescription":"Charmander Plushie",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"charmanderplush",
+         "tilesetDirection":"right"
+        },
+     "20":
+        {
+         "\/\/description":"A glass cage filled with cute familiar slugs.",
+         "\/\/name":"aslugcage",
+         "\/\/shortdescription":"Slug Cage",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"aslugcage",
+         "tilesetDirection":"right"
+        },
+     "21":
+        {
+         "\/\/description":"Oooh, what's for dinner? Is it me?",
+         "\/\/name":"aspitroast",
+         "\/\/shortdescription":"Spit Roast",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"aspitroast",
+         "tilesetDirection":"right"
+        },
+     "22":
+        {
+         "\/\/description":"No matter your taste in furniture, this furniture will find taste in you.",
+         "\/\/name":"asquishthrone",
+         "\/\/shortdescription":"Throne of Squish",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"asquishthrone",
+         "tilesetDirection":"right"
+        },
+     "23":
+        {
+         "\/\/description":"Vore Badge",
+         "\/\/name":"aavbadge",
+         "\/\/shortdescription":"Signifies this space for a 'vore' tenant. You can remove it and replace it with any vore object when you are done.",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"aavbadge",
+         "tilesetDirection":"right"
+        },
+     "24":
+        {
+         "\/\/description":"An odd gem that makes you want to fill that empty feeling inside.",
+         "\/\/name":"avorb",
+         "\/\/shortdescription":"Vorb",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"avorb",
+         "tilesetDirection":"right"
+        },
+     "25":
+        {
+         "\/\/description":"A wonderful display for a very squishy tongue",
+         "\/\/name":"greninjadummy",
+         "\/\/shortdescription":"Greninja Display",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"greninjadummy",
+         "tilesetDirection":"right"
+        },
+     "26":
+        {
+         "\/\/description":"A wonderful display for an overstimulated dog warrior.",
+         "\/\/name":"lesserdummy",
+         "\/\/shortdescription":"Lesser Dog Display",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"lesserdummy",
+         "tilesetDirection":"right"
+        },
+     "27":
+        {
+         "\/\/description":"Your one stop shop for all your predatory needs!",
+         "\/\/name":"bellyBoundStore",
+         "\/\/shortdescription":"BellyBound Store",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"bellyBoundStore",
+         "tilesetDirection":"right"
+        },
+     "28":
+        {
+         "\/\/description":"Adorable little lizard from the land of mana",
+         "\/\/name":"voremlllizard",
+         "\/\/shortdescription":"Lizardon",
+         "imagePositionX":"-8",
+         "imagePositionY":"-8",
+         "object":"voremlllizard",
+         "tilesetDirection":"right"
+        },
+     "29":
+        {
+         "\/\/description":"A display of 3 blueprints in frames.",
+         "\/\/name":"columndisplay",
+         "\/\/shortdescription":"Column Blueprint Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"-20",
+         "object":"columndisplay",
+         "tilesetDirection":"right"
+        },
+     "3":
+        {
+         "\/\/description":"#155: The Fire Mouse Pokemon",
+         "\/\/name":"cyndiquilplush",
+         "\/\/shortdescription":"Cyndiquil Plushie",
+         "imagePositionX":"-7",
+         "imagePositionY":"0",
+         "object":"cyndiquilplush",
+         "tilesetDirection":"right"
+        },
+     "30":
+        {
+         "\/\/description":"A counter where you can buy blue prints from Spot Tea and Yaupon, or whoever got there first~",
+         "\/\/name":"blueprintcounter",
+         "\/\/shortdescription":"^orange;Blueprint Counter^white;",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"blueprintcounter",
+         "tilesetDirection":"right"
+        },
+     "31":
+        {
+         "\/\/description":"A display of 3 blueprints on a rack.",
+         "\/\/name":"rackdisplay",
+         "\/\/shortdescription":"Column Blueprint Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"-20",
+         "object":"rackdisplay",
+         "tilesetDirection":"right"
+        },
+     "32":
+        {
+         "\/\/description":"A display of a sticky slimy blueprint",
+         "\/\/name":"slimedisplay",
+         "\/\/shortdescription":"Slime Blueprint Display",
+         "imagePositionX":"-16",
+         "imagePositionY":"-12",
+         "object":"slimedisplay",
+         "tilesetDirection":"right"
+        },
+     "33":
+        {
+         "\/\/description":"The Do It Yourself Sign. Two delectable rodents work here, some times.",
+         "\/\/name":"curtainsign",
+         "\/\/shortdescription":"DiY Sign",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"curtainsign",
+         "tilesetDirection":"right"
+        },
+     "34":
+        {
+         "\/\/description":"A wonderful display ... of a carrot.",
+         "\/\/name":"carrotdisplay",
+         "\/\/shortdescription":"Carrot Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"carrotdisplay",
+         "tilesetDirection":"right"
+        },
+     "35":
+        {
+         "\/\/description":"A wonderful display crystal materials",
+         "\/\/name":"crystaldisplay",
+         "\/\/shortdescription":"Crystal Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"crystaldisplay",
+         "tilesetDirection":"right"
+        },
+     "36":
+        {
+         "\/\/description":"A wonderful display DNA materials",
+         "\/\/name":"dnadisplay",
+         "\/\/shortdescription":"DNA Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"dnadisplay",
+         "tilesetDirection":"right"
+        },
+     "37":
+        {
+         "\/\/description":"A wonderful display crystal materials",
+         "\/\/name":"sharddisplay",
+         "\/\/shortdescription":"Shard Display",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"sharddisplay",
+         "tilesetDirection":"right"
+        },
+     "38":
+        {
+         "\/\/description":"Not a Mimic",
+         "\/\/name":"treasuretess",
+         "\/\/shortdescription":"^orange;Treasure Tess^white;",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"treasuretess",
+         "tilesetDirection":"right"
+        },
+     "39":
+        {
+         "\/\/description":"Signifies this space for an 'unbirth' tenant. You can remove it and replace it with any vore object when you are done.",
+         "\/\/name":"aaubadge",
+         "\/\/shortdescription":"Unbirth Badge",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"aaubadge",
+         "tilesetDirection":"right"
+        },
+     "4":
+        {
+         "\/\/description":"#113: The Evolution Pokemon",
+         "\/\/name":"eeveeplush",
+         "\/\/shortdescription":"Eevee Plushie",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"eeveeplush",
+         "tilesetDirection":"right"
+        },
+     "40":
+        {
+         "\/\/description":"Very Fluffy. Makes silk from anything she can fit into her mouth.",
+         "\/\/name":"lunaramoff",
+         "\/\/shortdescription":"^orange;Lunara Moth^white;",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"lunaramoff",
+         "tilesetDirection":"right"
+        },
+     "41":
+        {
+         "\/\/description":"Hastily scribbled on salvaged wood",
+         "\/\/name":"moffsign",
+         "\/\/shortdescription":"Moff Store Sign",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"moffsign",
+         "tilesetDirection":"right"
+        },
+     "42":
+        {
+         "\/\/description":"He doesn't look too pleased behing here, but work is work.",
+         "\/\/name":"adriancounter",
+         "\/\/shortdescription":"^orange;Adrian^white;",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"adriancounter",
+         "tilesetDirection":"right"
+        },
+     "43":
+        {
+         "\/\/description":"Ew",
+         "\/\/name":"pomerchant",
+         "\/\/shortdescription":"^orange;Po Merchant^white;",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"pomerchant",
+         "tilesetDirection":"right"
+        },
+     "44":
+        {
+         "\/\/description":"I'm not sure what would be warmer, sleeping in this bed or sleeping in a hibani?",
+         "\/\/name":"hibanihaybed",
+         "\/\/shortdescription":"Hibani Hay Bed",
+         "imagePositionX":"-16",
+         "imagePositionY":"0",
+         "object":"hibanihaybed",
+         "tilesetDirection":"right"
+        },
+     "45":
+        {
+         "\/\/description":"A jar containing a large amount of tiny little people. Yum!",
+         "\/\/name":"ajarofmicrossoft",
+         "\/\/shortdescription":"Jar of Micros",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"ajarofmicrossoft",
+         "tilesetDirection":"right"
+        },
+     "46":
+        {
+         "\/\/description":"A big, huggable orange stripped kitty. Isn't she adorable?",
+         "\/\/name":"katojanaplush",
+         "\/\/shortdescription":"Katojana Giant Plush",
+         "imagePositionX":"-25",
+         "imagePositionY":"0",
+         "object":"katojanaplush",
+         "tilesetDirection":"right"
+        },
+     "5":
+        {
+         "\/\/description":"#258: The Mud Fish Pokemon",
+         "\/\/name":"mudkipplush",
+         "\/\/shortdescription":"Mudkip Plushie",
+         "imagePositionX":"-9",
+         "imagePositionY":"0",
+         "object":"mudkipplush",
+         "tilesetDirection":"right"
+        },
+     "6":
+        {
+         "\/\/description":"#025: The Mouse Pokemon",
+         "\/\/name":"pikachuplush",
+         "\/\/shortdescription":"Pikachu Plushie",
+         "imagePositionX":"-12",
+         "imagePositionY":"0",
+         "object":"pikachuplush",
+         "tilesetDirection":"right"
+        },
+     "7":
+        {
+         "\/\/description":"A pokeball with the technology removed, rendering it nothing more than a decorative object",
+         "\/\/name":"pokeball",
+         "\/\/shortdescription":"Pokeball",
+         "imagePositionX":"-1",
+         "imagePositionY":"-1",
+         "object":"pokeball",
+         "tilesetDirection":"right"
+        },
+     "8":
+        {
+         "\/\/description":"#255: The Chick Pokemon",
+         "\/\/name":"torchicplush",
+         "\/\/shortdescription":"Torchic Plushie",
+         "imagePositionX":"-8",
+         "imagePositionY":"0",
+         "object":"torchicplush",
+         "tilesetDirection":"right"
+        },
+     "9":
+        {
+         "\/\/description":"#570: The Tricky Fox Pokemon",
+         "\/\/name":"zoruaplush",
+         "\/\/shortdescription":"Zorua Plushie",
+         "imagePositionX":"-10",
+         "imagePositionY":"0",
+         "object":"zoruaplush",
+         "tilesetDirection":"right"
+        }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/machine.png"
+        },
+     "1":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/aron.png"
+        },
+     "10":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/bag.png"
+        },
+     "11":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/cbadge.png"
+        },
+     "12":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dbadge.png"
+        },
+     "13":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dperfume.png"
+        },
+     "14":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dvorb.png"
+        },
+     "15":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/flag.png"
+        },
+     "16":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/fromograph.png"
+        },
+     "17":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mimic.png"
+        },
+     "18":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pbadge.png"
+        },
+     "19":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/perfume.png"
+        },
+     "2":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/charmander.png"
+        },
+     "20":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/slugcage.png"
+        },
+     "21":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/spitroast.png"
+        },
+     "22":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/squishthrone.png"
+        },
+     "23":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/vbadge.png"
+        },
+     "24":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/vorb.png"
+        },
+     "25":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/greninja.png"
+        },
+     "26":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/lesser.png"
+        },
+     "27":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/bellybound.png"
+        },
+     "28":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/LLizard.png"
+        },
+     "29":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/column.png"
+        },
+     "3":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/cyndiquil.png"
+        },
+     "30":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/counter.png"
+        },
+     "31":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/rack.png"
+        },
+     "32":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/slime.png"
+        },
+     "33":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/diysign.png"
+        },
+     "34":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/carrotdisplay.png"
+        },
+     "35":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/crystaldisplay.png"
+        },
+     "36":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dnadisplay.png"
+        },
+     "37":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/sharddisplay.png"
+        },
+     "38":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/tess.png"
+        },
+     "39":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/ubadge.png"
+        },
+     "4":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/eevee.png"
+        },
+     "40":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mofff.png"
+        },
+     "41":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/sign.png"
+        },
+     "42":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/adrian.png"
+        },
+     "43":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/po.png"
+        },
+     "44":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/haybed.png"
+        },
+     "45":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/jar.png"
+        },
+     "46":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/kato.png"
+        },
+     "5":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mudkip.png"
+        },
+     "6":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pikachu.png"
+        },
+     "7":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pokeball.png"
+        },
+     "8":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/torchic.png"
+        },
+     "9":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/zorua.png"
+        }
+    },
+ "tilewidth":120
+}

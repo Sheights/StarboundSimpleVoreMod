@@ -32,7 +32,7 @@ end
 
 function updateHook()
 
-	if isPlayer and math.random(800) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
+	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
 		entity.say( playerLines[math.random(#playerLines)])
 	end
 

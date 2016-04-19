@@ -1,0 +1,27 @@
+{
+  "name": "pred_dtreebuddy",
+  "priority": 15,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"treebuddy": 1,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "glitch",
+      "type": "pred_dtreebuddy",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "wolfGift"
+  }
+}

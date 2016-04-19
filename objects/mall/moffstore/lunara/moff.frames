@@ -1,0 +1,22 @@
+{
+
+  "frameGrid" : {
+    "size" : [48, 96],
+    "dimensions" : [5, 2],
+    "names" : [
+      [ "idle.1", "idle.2", "idle.3", "blink.1", "blink.2" ],
+	  [ "gurgle.1", "gurgle.2", "gurgle.3", "gurgle.4", "gurgle.5" ]
+    ]
+  },
+  "aliases"  :  {
+    "idle.4"  	:	"idle.3",
+	"idle.5"	:	"idle.3",
+	"idle.6"	:	"idle.2",
+	"idle.7"	:	"idle.1",
+	"blink.3"	:	"blink.1",
+	"gurgle.6"	:	"gurgle.4",
+	"gurgle.7"	:	"gurgle.3",
+	"gurgle.8"	:	"gurgle.2",
+	"gurgle.9"	:	"gurgle.1"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+		    "mode"  :  "end"
+		  },
+		  "digest1"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.6,
+			"mode"  :  "transition",
+			"transition"  :  "full2"
+		  },
+		   "digest2"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.6,
+			"mode"  :  "transition",
+			"transition"  :  "full3"
+		  },
+		  "digest3"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "full1" :  {
+		    "frames"  :  4,
+			"cycle"  : 0.8,
+		    "mode"  :  "loop"
+		  },
+		  "full2" :  {
+		    "frames"  :  4,
+			"cycle"  : 0.8,
+		    "mode"  :  "loop"
+		  },
+		  "full3" :  {
+		    "frames"  :  4,
+			"cycle"  : 0.8,
+		    "mode"  :  "loop"
+		  },
+		  "idle1" :  {
+		    "frames"  :  13,
+			"cycle"  : 2.6,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "idle2" :  {
+		    "frames"  :  9,
+			"cycle"  : 1.8,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "swallow" :  {
+		    "frames"  :  8,
+			"cycle"  : 1.6,
+		    "mode"  :  "transition",
+			"transition"  :  "full1"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "digest1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest1.<frame>"
+		      }
+		    },
+			"digest2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest2.<frame>"
+		      }
+		    },
+	        "digest3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest3.<frame>"
+		      }
+		    },
+	        "full1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full1.<frame>"
+		      }
+		    },
+	        "full2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full2.<frame>"
+		      }
+		    },
+	        "full3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full3.<frame>"
+		      }
+			},
+			"idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+			"idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+			"swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

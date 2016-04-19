@@ -1,0 +1,119 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  37,
+			"cycle"  :  5.5,
+			"mode"  :  "transition",
+			"transition"  :  "full1"
+		  },
+		  "full1" :  {
+		    "frames"  :  5,
+		    "cycle"  :  1.5,
+		    "mode"  :  "loop"
+		  },
+		  "full2" :  {
+		    "frames"  :  9,
+		    "cycle"  :  2.7,
+		    "mode"  :  "loop"
+		  },
+		  "full3" :  {
+		    "frames"  :  11,
+		    "cycle"  :  3.3,
+		    "mode"  :  "loop"
+		  },
+		  "digest1" :  {
+		    "frames"  :  10,
+		    "cycle"  :  2.0,
+		    "mode" : "transition",
+			"transition" : "full2"
+		  },
+		  "digest2" :  {
+		    "frames"  :  4,
+		    "cycle"  :  0.8,
+		    "mode" : "transition",
+			"transition" : "full3"
+		  },
+		  "digest3" :  {
+		    "frames"  :  13,
+		    "cycle"  :  2.6,
+		    "mode" : "transition",
+			"transition" : "spit"
+		  },
+		  "spit" :  {
+		    "frames"  :  33,
+		    "cycle"  :  2.4,
+		    "mode" : "transition",
+			"transition" : "idle"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "full1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full1.<frame>"
+		      }
+		    },
+			"full2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full2.<frame>"
+		      }
+		    },
+			"full3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full3.<frame>"
+		      }
+		    },
+			"digest1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest1.<frame>"
+		      }
+		    },
+			"digest2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest2.<frame>"
+		      }
+		    },
+			"digest3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest3.<frame>"
+		      }
+		    },
+	        "spit"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:spit.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

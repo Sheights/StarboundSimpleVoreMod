@@ -1,0 +1,113 @@
+{
+  "objectName"  :  "voresergaldigest",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "Man I've seen these everwhere and have no idea what they are supposed to be. Looks good though.[Digestion]",
+  "shortdescription"  :  "Sergal",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "sergaldangericon.png",
+  "orientations" : [
+    {
+	  "image" : "sergal.png:waiting.<frame>",
+	  "imagePosition" : [-31, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-31, -16]
+	},
+    {
+	  "image" : "sergal.png:waiting.<frame>",
+	  "imagePosition" : [-9, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-9, -16]
+	}
+  ],
+  
+  "animation"  :  "sergal.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "lay" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "sergal.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/sergal/sergaldanger.lua" ],
+  "scriptDelta" : 3,
+"chatOptions" : [
+	"Mm, nice and squirmy..! <3",
+	"Gah, keep on digesting snack~",
+	"Such a yummy treat~",
+	"So nice and full~!",
+	"Mrrf, keep squirming down there.",
+	"Gonna be sergal fat soon~",
+	"You are, by far, one of the most tasty meals I've ever had. OF course, that's what I said to my last meal too~",
+	"Ah, quit your wiggling and just digest already.",
+	"Mmm, you feel all soft and squishy.",
+	"I hope you go straight to my hips~",
+	"Don't worry.. You'll be part of something better soon.",
+	"You're gonna make such snuggly pudge~"
+  ],
+  "gulpLines" : [
+	"Aaaah, s-so good..!",
+	"A moment on my lips, a lifetime on my ass.",
+	"*slurping, gulping, then a loud belch noise*",
+	"Don't get too feisty in there~",
+	"Thanks for the meal!",
+	"Mmmm, such a tasty snack~",
+	"I just swallowed you and I already can't wait to see how many sizes you add to my breasts~"
+  ],
+  "chatIdleFull" : [
+	"Mmm, come back in a bit.",
+	"Mm, give it a rub.. I'll digest faster~",
+	"Say, are you open later? I might have some... room in my schedule.",
+	"Come here and rub my belly, or I'll make you rub it, from the inside!",
+	"You look like you value your life, come feel how squirmy my belly is."
+  ],
+  "chatIdleEmpty" : [
+	"Mmmm, you look absolutely divine *smacks lips*",
+	"Care to dive in?",
+	"Why not add that sexy body to mine?",
+	"You should meet my best friend, my stomach.",
+	"I think you know just as much as I do that you want inside me~",
+	"Keep waving that ass around me and you'll end up padding mine.",
+	"Why don't you slip down my throat, you'll never have to worry again~"
+  ],
+  "rubLines" : [
+	"Oof, that's the spot.. <3",
+	"You're making me horny with this lovely massage~",
+	"Can you feel your friend slowly digesting inside of me?",
+	"Keep it up, it's good for digestion...",
+	"At least I've got someone to use this package on~ Mrrf <3",
+	"That's it Keep rubbing. I love when prey knows there place~"
+  ]
+}

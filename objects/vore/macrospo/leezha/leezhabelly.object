@@ -1,0 +1,33 @@
+{
+  "objectName"  :  "voreleezhabelly",
+  "printable"  :  false,
+  "rarity"  :  "Rare",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "The belly of a wonderfully large Serperior",
+  "shortdescription"  :  "Lee-Zha Belly",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "footstepSound" : "/sfx/blocks/footstep_mud.ogg",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "leezhabelly.png:default",
+
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "solid"
+
+    }
+  ]
+}

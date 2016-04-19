@@ -3,7 +3,7 @@
   "price" : 75,
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Rare",
   "description" : "A set of squid kid arms.",
   "shortdescription" : "Inkling Arms",
   "tooltipKind" : "armor",

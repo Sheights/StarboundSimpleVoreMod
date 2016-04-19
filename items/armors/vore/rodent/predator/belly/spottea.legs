@@ -9,6 +9,6 @@
   "shortdescription" : "Spot Tea Pants",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "pants.png",
-  "femaleFrames" : "pants.png"
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png"
 }

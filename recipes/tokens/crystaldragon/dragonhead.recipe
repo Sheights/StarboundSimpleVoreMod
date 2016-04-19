@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "dragontoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "crystaldragonhead",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

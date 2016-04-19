@@ -1,0 +1,24 @@
+{
+
+  "frameGrid" : {
+    "size" : [32, 39],
+    "dimensions" : [10, 9],
+    "names" : [
+      [ "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10" ],
+	  [ "swallow.11", "swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16", "swallow.17", "swallow.18", "swallow.19", "swallow.20" ],
+	  [ "swallow.21", "swallow.22", "swallow.23", "swallow.24", "swallow.25", "swallow.26", "swallow.27", "swallow.28", "swallow.29", "swallow.30" ],
+	  [ "swallow.31", "swallow.32", "swallow.33", "swallow.34", "swallow.35", "digest.1", "digest.2", "digest.3", "digest.4", "digest.5" ],
+	  [ "digest.6", "digest.7", "digest.8", "digest.9", "digest.10", "digest.11", "digest.12", "digest.13", "digest.14", "digest.15" ],
+	  [ "digest.16", "digest.17", "digest.18", "digest.19", "spit.1", "spit.2", "spit.3", "spit.4", "spit.5", "spit.6" ],
+	  [ "spit.7", "spit.8", "spit.9", "spit.10", "spit.11", "spit.12", "spit.13", "spit.14", "spit.15", "spit.16" ],
+	  [ "spit.17", "spit.18", "spit.19", "spit.20", "spit.21", "spit.22", "spit.23", "spit.24", "spit.25", "spit.26" ],
+	  [ "spit.27", "spit.28", "spit.29", "blank", "blank", "blank", "blank", "blank", "blank", "idle" ]
+    ]
+  },
+  "aliases"  :  {
+    "full.1"  :  "swallow.33",
+	"full.2"  :  "swallow.34",
+	"full.3"  :  "swallow.35",
+	"full.4"  :  "swallow.34"
+  }
+}

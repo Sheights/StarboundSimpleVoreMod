@@ -1,0 +1,12 @@
+{
+  "type" : "mall_prey",
+  "baseType" : "villager",
+  
+  "damageTeamType" : "friendly",
+  "scriptConfig" : {
+	"damageTeamType" : "friendly"
+  },
+  "scripts" : [ "/npcs/bmain.lua",
+				"/scripts/vore/npcprey.lua" 
+  ]
+}

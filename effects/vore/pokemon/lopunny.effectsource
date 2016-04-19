@@ -1,0 +1,12 @@
+{
+  "kind" : "lopunnyemitter",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/pokemon/lopunny.ogg" ]
+      ]
+    }
+  }
+}

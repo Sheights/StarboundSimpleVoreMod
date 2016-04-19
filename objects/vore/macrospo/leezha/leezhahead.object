@@ -1,0 +1,60 @@
+{
+  "objectName"  :  "voreleezhahead",
+  "printable"  :  false,
+  "rarity"  :  "Rare",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "The head of a wonderfully large Serperior",
+  "shortdescription"  :  "Lee-Zha Head",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+	"intents",
+	"nude"
+  ],
+  
+  "inventoryIcon"  :  "tempicon.png",
+  "orientations" : [
+    {
+	  "image" : "leezhahead.png:default",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-76, 34],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [0, 0]
+	},
+    {
+	  "image" : "leezhahead.png:default",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "sitPosition" : [-16, 34],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [0, 0]
+	}
+  ],
+  "animation"  :  "leezhahead.animation",
+  "animationCustom" : {
+    "sounds" : {
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "leezhahead.png"
+  },
+  
+  "scripts" : [ "/objects/vore/macrospo/leezha/leezhahead.lua" ],
+  "scriptDelta" : 3
+}

@@ -1,3 +1,5 @@
+require "/scripts/vore/exclusions.lua"
+
 oldInit = init
 oldInteract = interact
 oldUpdate = update
@@ -103,12 +105,19 @@ function feed()
 		
 		victim = people[1]
 		
-		if world.isNpc( victim ) == false then
+		if world.isNpc( victim ) then
+			for i = 1, #exclusionList do
+				if world.entityName(victim) == exclusionList[i] then
+					return
+				end
+			end
+		else
 			isPlayer = true
 		end
 		
 		local collisionBlocks = world.collisionBlocksAlongLine(mcontroller.position(), world.entityPosition( victim ), {"Null", "Block", "Dynamic"}, 1)
 		if #collisionBlocks ~= 0 then
+			isPlayer = false
 			return
 		end
 		
@@ -153,7 +162,8 @@ function digest()
 	if stopWatch >= duration then
 		fed = false
 		request = false
-
+		isPlayer = false
+		
 		lose()
 		
 		stopWatch = 0
@@ -215,11 +225,12 @@ function update(dt)
 	tempinteract = interact
 	oldUpdate(dt)
 
+	requestLeave = false
 	if not fed and math.random(400) == 1 then
 		feed()
 	elseif fed then	
 	
-		if math.random(500) == 1 and audio then
+		if math.random(350) == 1 and audio then
 			world.spawnProjectile( digestsound , mcontroller.position(), entity.id(), {0, 0}, false )
 		end
 		

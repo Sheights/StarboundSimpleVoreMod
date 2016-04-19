@@ -2,8 +2,8 @@
   "kind" : "fauxkangaru",
   "playerSpecies" : false,
   "nameGen" : [ "/species/fauxkangarunamegen.config:names", "/species/fauxkangarunamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/humanoid/fauxkangaruhurt_1.wav", "/sfx/humanoid/fauxkangaruhurt_2.wav", "/sfx/humanoid/fauxkangaruhurt_3.wav" ],
-  "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.wav", "/sfx/humanoid/humangrunt2.wav" ], [ "/sfx/humanoid/humangrunt1.wav", "/sfx/humanoid/humangrunt2.wav" ] ],
+  "ouchNoises" : [ "/sfx/humanoid/fauxkangaruhurt_1.ogg", "/sfx/humanoid/fauxkangaruhurt_2.ogg", "/sfx/humanoid/fauxkangaruhurt_3.ogg" ],
+  "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],
   "charGenTextLabels" : [ "FUR COLOR", "HAIR STYLE", "SHIRT", "PANTS", "BELLY COLOR", "HAIR COLOR", "SHIRT COLOR", "PANTS COLOR", "KANGARU", "PERSONALITY" ],
   "skull" : "/humanoid/fauxkangaru/dead.png",
   "defaultBlueprints" : {

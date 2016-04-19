@@ -116,7 +116,7 @@ function interact(args)
 				if isDigest then
 					local mergeOptions = {
 						statusEffects = {{
-							effect = "npcpreyacid",
+							effect = "savor",
 							duration = 1000
 					}}}
 
@@ -127,7 +127,7 @@ function interact(args)
 				end
 				eaten = true
 			else
-				entity.say("I do not want to be eaten♪")
+				entity.say("I do not want to be eaten.")
 			end
 			talkTimer = 1
 		end
@@ -156,9 +156,9 @@ function update(dt)
 		talkTimer = talkTimer + dt
 	end
 	
-	if eaten and math.random(500) == 1 then
+	if eaten and math.random(700) == 1 then
 		if isDigest and math.random() < 0.02 * familiarity then
-			entity.say( myProfile["bribe"][familiarity][ math.random( #myProfile["bribe"][familiarity] ) ] )
+			entity.say( "^orange;" .. myProfile["bribe"][familiarity][ math.random( #myProfile["bribe"][familiarity] ) ] )
 			bribe = true
 		else
 			entity.say( myProfile["idle"][familiarity][ math.random( #myProfile["idle"][familiarity] ) ] )

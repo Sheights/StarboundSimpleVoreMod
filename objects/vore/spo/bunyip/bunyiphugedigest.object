@@ -1,0 +1,68 @@
+{
+  "objectName" : "vorebunyiphugedigest",
+  "rarity" : "Uncommon",
+  "description" : "A spiritual creature able to heal wounds. Also comfortable on the inside.",
+  "shortdescription" : "Hungry Bunyip - Huge",
+  "race" : "bunyip",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Feeling a little uncomfortable around this creature...",
+  "avianDescription" : "I can smell fish, but I get a feeling I should stay back...",
+  "floranDescription" : "Floran know hunter when Floran see one...",
+  "glitchDescription" : "Analytic: Subject seems to match up with mythical folklore. Conclusion: Dangerous.",
+  "humanDescrtiption" : "...Isn't this one of those vicious creatures from Australian myth...?",
+  "hylotlDescription" : "I smell fish on its breath. Back. Away. Slowly.",
+  "novakidDescription" : "Really not liking the way this lady's starin' at me...",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "savor",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "image" : "bunyiphuge.png:idle",
+	  "imagePosition" : [-9, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "bunyiphuge.png:idle",
+	  "imagePosition" : [-9, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/bunyip/bunyiphugedigest.lua" ],
+  
+  "animation" : "bunyiphuge.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "bunyiphuge.png"
+  },
+  "animationPosition" : [-9, 0]
+}

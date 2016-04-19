@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "axontoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "axoncostumelegsbelly5",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

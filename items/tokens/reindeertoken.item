@@ -1,0 +1,8 @@
+{
+  "itemName" : "reindeertoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Deer.png",
+  "description" : "A token that can be exchanged for a reindeer costume",
+  "shortdescription" : "Reindeer Token"
+}

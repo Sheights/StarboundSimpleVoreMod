@@ -1,0 +1,26 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "hibanihome1"
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "hibanihome1",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "hibanihome1.json"
+      ]
+    }
+  }
+]

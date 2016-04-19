@@ -1,0 +1,50 @@
+{
+  "objectName" : "wildcamelliaseed",
+  "colonyTags" : ["nature"],
+  "rarity" : "Common",
+  "category" : "farmable",
+  "description" : "Some seeds of a Camellia, Sinensis, a plant used for many different kinds of tea.",
+  "shortdescription" : "Camellia, Sinensis Seed",
+  "objectType" : "farmable",
+  "printable" : false,
+  "price" : 30, 
+  "hasObjectItem" : false,
+
+  "generalDescription" : "The most delicious of all fruit. Along with freedom, owning a banana farm is every Apex's dream.",
+
+  "inventoryIcon" : "camelliaseedicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "camellia.png:<color>.<stage>.<alt>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaces" : [ [2, 0], [1, 0], [0, 0], [2, 1], [1, 1], [0, 1], [2, 2], [1, 2], [0, 2] ],
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "stages" : [
+    {
+      "duration" : [200, 220]
+    },
+    {
+      "duration" : [200, 220]
+    },
+    {
+      "alts" : 3,
+      "duration" : [400, 440]
+    },
+    {
+      "alts" : 3,
+      "harvestPool" : "camelliaHarvest"
+    }
+  ],
+  
+  "breakDropOptions" : [
+    [ [ "camelliaseed", 1, { } ] ]
+  ],
+  "maxImmersion" : 0.084
+}

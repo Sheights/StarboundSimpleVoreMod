@@ -1,5 +1,6 @@
 {
   "name" : "npcacid",
+  "blockingStat" : "digestionImmunity",
   "effectConfig" : {
     "digestTime" : 90
   },

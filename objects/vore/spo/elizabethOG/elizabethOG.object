@@ -1,0 +1,94 @@
+{
+  "objectName"  :  "voreelizabethOG",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "A nice warm place to spend the night.",
+  "shortdescription"  :  "ElizabethOG",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "elizabethOG.png:waiting.<frame>",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [0, 0]
+	},
+    {
+	  "image" : "elizabethOG.png:waiting.<frame>",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [0, 0]
+	}
+  ],
+  
+  "animation"  :  "elizabethOG.animation",
+  "animationCustom" : {
+    "sounds": {
+      "swallow": [ "/sfx/objects/gulp.wav" ],
+      "lay": [ "/sfx/objects/eggLay.wav" ],
+      //fix the repeats before using belly bop by removing the null
+      //fix animation before implementing rift
+      "bellybop": [ "/sfx/objects/bellybopnull.wav" ],
+      "rift": [ "/sfx/objects/rift.wav" ]
+    }
+  },
+  "animationParts"  :  {
+    "body"  :  "elizabethOG.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/elizabethOG/elizabethOG.lua" ],
+  "scriptDelta": 3,
+      
+  "chatOptions": [
+    "You feel that?",
+    "OH! press that again~",
+    "People normally pay for this",
+    "*BURAAAP*, oh how unlady like~",
+    "Oh I feel lovely, how are you?",
+    "Stay as long as you like, I have all the time in the multiverse~",
+    "Don't touc- ooo keep touching that~"
+ 
+  ],
+  "gulpLines": [
+    "mmm, tastes like candy",
+    "Delicious!",
+    "Watch the lipstick.",
+    "Sweet.",
+    "Welcome to my birdcage"
+  ],
+  "chatIdleEmpty": [
+    "We have Vacancies",
+    "Hey sugar, you look sweet.",
+    "Don't make a lady wait",
+    "would you kindly come inside"
+  ]
+}

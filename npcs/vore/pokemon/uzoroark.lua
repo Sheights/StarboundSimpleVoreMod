@@ -31,6 +31,14 @@ function initHook()
 	
 end
 
+function interactHook()
+
+	if math.random(4) == 1 then
+		world.spawnProjectile( "zoroarkprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+	end
+	
+end
+
 function loseHook()
 	
 	if isPlayer and stopWatch > 60 then

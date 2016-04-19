@@ -1,5 +1,6 @@
 {
   "name" : "dragonacid",
+  "blockingStat" : "digestionImmunity",
   "effectConfig" : {
     "digestTime" : 120
   },

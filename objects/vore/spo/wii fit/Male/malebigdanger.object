@@ -1,0 +1,102 @@
+{
+  "objectName" : "wiimbigdigest",
+  "rarity" : "common",
+  "description" : "Watch your step, she looks hungry.",
+  "shortdescription" : "Hungry Wii Fit Trainer - Big",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Her stomach is growling.",
+  "avianDescription" : "This guy is making me nervous.",
+  "floranDescription" : "Human not eat Floran, Floran eat human!",
+  "glitchDescription" : "Alert. This male looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, mister, are you hungry?  Want some ...? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/wii fit/male/malefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "maleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "malewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "I'll train you well inside of my belly~",
+	"My belly is the perfect place to get fit~",
+	"Heh,go ahead and do some yoga inside of my belly~",
+	"I love having trainees in my belly~ <3"
+  ],
+  "gulpLines" : [
+    "Thanks for the excerise snack~",
+	"You are the perfect size and weight for my belly~",
+	"Let's hope you don't tear my outfit...",
+	"Let's get you fit inside of me~"
+  ],
+  "chatIdleFull" : [
+    "Mmm, come back in a bit, sugar~",
+	"What's that you say? I don't hear anybody.",
+	"Say, are you open later? I might have some... room in my schedule~"
+  ],
+  "chatIdleEmpty" : [
+    "I make a great trainer for various prey...",
+	"I wonder how you actually taste like~",
+	"I'll help you get fit...inside of me~"
+  ],
+  "rubLines" : [
+    "Not often i get a rub fron the outside.",
+    "Nothing like a post-meal belly-rub.",
+    "Keep it up, it's good for digestion...",
+    "Better be good at this, or i'll have seconds.",
+    "Maybe later you can give me a rub from the inside instead.",
+    "Well aren't you nice, helping me digest your friend.",
+    "Can you feel your friend slowly digesting inside of me?",
+    "Not sure if you want to be next, or pleading for your life."
+  ]
+}

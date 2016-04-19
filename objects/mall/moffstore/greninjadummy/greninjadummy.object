@@ -1,0 +1,24 @@
+{
+  "objectName" : "greninjadummy",
+  "colonyTags" : ["poke","commerce","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 90,
+  "description" : "A wonderful display for a very squishy tongue",
+  "shortdescription" : "Greninja Display",
+  "race" : "dummy",
+
+  "inventoryIcon" : "dummyicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "greninja.png:<color>",
+      "imagePosition" : [-12, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

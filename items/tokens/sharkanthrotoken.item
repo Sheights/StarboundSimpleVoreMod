@@ -1,0 +1,8 @@
+{
+  "itemName" : "anthrosharktoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Shark.png",
+  "description" : "A token that can be exchanged for an anthroshark costume",
+  "shortdescription" : "Anthro Shark Token"
+}

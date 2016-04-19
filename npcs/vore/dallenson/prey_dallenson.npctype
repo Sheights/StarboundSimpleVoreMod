@@ -1,0 +1,146 @@
+{
+  "type" : "prey_dallenson",
+  "baseType" : "villager",
+  
+  "npcname" : "Dallenson",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Hey, I was using that! Now put it back!",
+							"Just because you built my house doesn't mean you get to tear it down!",
+							"Now you're just being a jerk, put my furniture back or I'm outta here."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"You're going to let bugs, cold and possibly monsters if you don't fix that hole in the wall.",
+							"If you intend to make a window then atleast put some glass in there."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I would prefer it if I had my own personal room. Or atleast a personal belly."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"You still haven't fixed my house and you know how impatient I get over something like this.",
+							"You're just being a complete jerk now and you know it. Fix my house, NOW!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"Done! You're not going to fix my house so I'm out of here.",
+							"Maybe I'll just take my chances against the Lupus clans if I can't have a nice home."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"Hello! Want to talk about something with me?",
+							"Did you need me for something? Besides eating me perhaps."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"I didn't need this anyway so why not let you have it since you provided home and food for me?",
+							"Here's a cut of my earnings for giving me a home away from my war-torn clans."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"I'm only a good fighter in video games, save me right now!",
+							"I didn't do anything to you, leave me alone!",
+							"I'm done fighting! Go away!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"That ain't my business. You're the one with the weapons so you deal with it!",
+							"Nope! Not dealing with that!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Yes! The calvary has arrived!",
+							"Finally, someone more competent than me!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"What's it take not to get attacked around here? Sheesh!",
+							"I just want to get away from all the fighting for once..."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Hello! What's the galaxy like?",
+						"Wanna talk about or play some games?",
+						"It's so peaceful here. It's perfect."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/dallenson/prey_dallenson.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+			  { "name" : "dallensonhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "chest" : [
+              { "name" : "dallensonchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "dallensonlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "anthrosharktoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "sharkgreyhead",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

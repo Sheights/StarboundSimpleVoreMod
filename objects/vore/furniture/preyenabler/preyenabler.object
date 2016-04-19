@@ -1,0 +1,45 @@
+{
+  "objectName" : "apreyenabler",
+  "colonyTags" : ["electronic","wired"],
+  "rarity" : "Legendary",
+
+  "category" : "wire",
+  "price" : 500,
+  "description" : "This machine will enable use of the RP Tool V2 for the planet or ship it's activated on.",
+  "shortdescription" : "Prey Enabler Console",
+
+  "apexDescription" : "I wonder what this switch does...",
+  "avianDescription" : "Does something happen if I pull the lever?",
+  "floranDescription" : "A sssingle lever.",
+  "glitchDescription" : "Curious. A lever. ",
+  "humanDescription" : "A big red lever. What could possibly go wrong?",
+  "hylotlDescription" : "Look before you leap.",
+  "novakidDescription" : "A terminal with a big red lever. Should I pull it?",
+
+  "inventoryIcon" : "preyenablericon.png",
+  "orientations" : [
+    {
+      "dualImage" : "preyenabler.png:<color>.off",
+      "imagePosition" : [-16, 0],
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "scripts" : [
+	"/objects/vore/furniture/preyenabler/preyenabler.lua"
+  ],
+  "scriptDelta" : 100,
+
+  "animation" : "/objects/wired/switch/switchtoggle3.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/apexconsole2switch.ogg" ],
+      "off" : [ "/sfx/objects/apexconsole2switch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "switch" : "preyenabler.png"
+  },
+  "animationPosition" : [-16, 0]
+}

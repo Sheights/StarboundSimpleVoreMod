@@ -1,0 +1,93 @@
+{
+  "objectName" : "vorelamiatailmicro",
+  "rarity" : "common",
+  "description" : "A tiny warm place to spend the night~",
+  "shortdescription" : "Lamia Tail - Micro",
+  "race" : "apex",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This lamia seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this girl seems... intriguing...",
+  "floranDescription" : "...Floran like lamia, but why?",
+  "glitchDescription" : "Wonder.  There is something about this female...",
+  "humanDescrtiption" : "Whatever it is you want miss, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/lamiatail/femalefullmicro.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+	"*Grrrrl*",
+	"*Gurgle*",
+	"*Groan*",
+	"*Churn*",
+	"*Slosh*"
+  ],
+  "gulpLines" : [
+
+  ],
+  "chatIdleFull" : [
+	"*Grrrrl*",
+	"*Gurgle*",
+	"*Groan*",
+	"*Churn*",
+	"*Slosh*"
+  ],
+  "chatIdleEmpty" : [
+
+  ],
+  "rubLines" : [
+
+  ]
+}

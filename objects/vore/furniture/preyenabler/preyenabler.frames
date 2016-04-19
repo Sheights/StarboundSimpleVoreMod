@@ -1,0 +1,20 @@
+{
+  "frameGrid" : {
+    "size" : [32, 32],
+    "dimensions" : [4, 1],
+    "names" : [
+      [ "off", "turning1", "turning2", "on" ]
+    ]
+  },
+
+  "aliases" : {
+    "default.off" : "off",
+    "default.on" : "on",
+    "turningOn.1" : "turning1",
+    "turningOn.2" : "turning2",
+    "turningOn.3" : "on",
+    "turningOff.1" : "turning2",
+    "turningOff.2" : "turning1",
+    "turningOff.3" : "off"
+  }
+}

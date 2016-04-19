@@ -1,0 +1,112 @@
+{
+  "objectName" : "voretharjabigdigest",
+  "rarity" : "common",
+  "description" : "She'll do anything to keep you together... forever.",
+  "shortdescription" : "Hungry Tharja - Big",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Her stomach is growling.  Very loudly.",
+  "avianDescription" : "This girl is making me nervous.",
+  "floranDescription" : "Human not eat Floran, Floran eat human!",
+  "glitchDescription" : "Alert. This female looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, miss, are you hungry?  Wanna go for a burger? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/tharja/femalefullbigdanger.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaitingdanger.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaitingdanger.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaitingdanger.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "You're never getting out, you know~",
+	"Now we'll be united... permanently~",
+	"My most devious spell yet~",
+	"Enjoy becoming one with the best body in Plegia~?",
+	"Scream for me~",
+	"Just give up... No hope for you~",
+	"Relax... This is your fate~",
+	"Just like I foresaw~",
+	"Go ahead... Struggle~"
+  ],
+  "gulpLines" : [
+    "Your time has come~",
+	"Perfect~",
+	"That's it... come to me~",
+	"Welcome to my darkness~"
+  ],
+  "chatIdleFull" : [
+    "Let me just finish my appetizer~",
+	"Oh, don't worry, I'll get to you~.",
+	"Your time will come soon~"
+  ],
+  "chatIdleEmpty" : [
+    "You know you can't resist me~",
+	"I see your fate... and it's with me~",
+	"I have a new hex, just for you~",
+	"I can smell your fear... Delectable~",
+	"Time for your final quest~",
+	"Hold still and let me take you~",
+	"You'll belong to me until the end of time~",
+	"Can you feel how closely our fates are tied~?"
+  ],
+  "rubLines" : [
+    "Not often i get a rub fron the outside.",
+    "Nothing like a post-meal belly-rub.",
+    "Keep it up, it's good for digestion...",
+    "Better be good at this, or i'll have seconds.",
+    "Maybe later you can give me a rub from the inside instead.",
+    "Well aren't you nice, helping me digest your friend.",
+    "Can you feel your friend slowly digesting inside of me?",
+    "Not sure if you want to be next, or pleading for your life."
+  ]
+}

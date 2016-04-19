@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "inklingtoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "inklingback",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

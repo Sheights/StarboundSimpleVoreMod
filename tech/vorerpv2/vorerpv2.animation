@@ -1,0 +1,5 @@
+{
+  "sounds" : {
+    "failure" : [ "/sfx/interface/energy_out1.ogg" ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "foxtoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "foxhead",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

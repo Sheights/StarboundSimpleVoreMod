@@ -1,0 +1,65 @@
+{
+  "objectName"  :  "voresnake",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "A familiar snake who smells slightly of cheese.",
+  "shortdescription"  :  "Snake",
+
+  "apexDescription" : "This is just a test",
+  "avianDescription" : "This is just a test",
+  "floranDescription" : "This is just a test",
+  "glitchDescription" : "This is just a test",
+  "humanDescrtiption" : "This is just a test",
+  "hylotlDescription" : "This is just a test",
+  "novakidDescription" : "This is just a test",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "snakeicon.png",
+  "orientations" : [
+    {
+	  "image" : "snake.png:default",
+	  "imagePosition" : [-40, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-35, 16],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-40, 0]
+	},
+	{
+	  "image" : "snake.png:default",
+	  "imagePosition" : [-25, 0],
+	  "direction" : "right",
+	  "sitPosition" : [-35, 16],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-25, 0]
+	}
+  ],
+  
+  "animation"  :  "snake.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "coil" : [ "/sfx/objects/coil.ogg" ],
+	  "digest" : [ "/sfx/objects/digest.ogg" ],
+	  "eat" : [ "/sfx/objects/eat.ogg" ],
+	  "swallow" : [ "/sfx/objects/swallow.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "snake.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/snake/snake.lua" ],
+  "scriptDelta" : 3
+}

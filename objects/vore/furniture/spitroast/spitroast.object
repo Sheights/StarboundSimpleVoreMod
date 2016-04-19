@@ -1,0 +1,98 @@
+{
+  "objectName" : "aspitroast",
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey", "floran", "floranvillage", "cooking", "light"],
+  "rarity" : "Legendary",
+  "description" : "Oooh, what's for dinner? Is it me?",
+  "shortdescription" : "Spit Roast",
+  "subtitle" : "Primitive cooking.",
+  "race" : "floran",
+  "category" : "decorative",
+  "price" : 600,
+  "printable" : false,
+  
+  "maximumLiquidLevel" : 0.2,
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  
+  "sitEmote" : "sad",
+  "sitStatusEffects" : [
+    "nude"
+  ],
+  
+  "apexDescription" : "A stove. Raw meat hangs from bones blackened by flame.",
+  "avianDescription" : "The stove itself appears to be made of bone.",
+  "floranDescription" : "Floran cook food, enjoy ssweet juicess.",
+  "glitchDescription" : "Cautious. This stove doesn't look entirely safe. Scanning for salmonella...",
+  "humanDescription" : "God only knows what has been cooked here.",
+  "hylotlDescription" : "I would rather not be food cooked in this.",
+  
+  "lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.3,
+  "flickerMinIntensity" : 0.85,
+  "flickerMaxIntensity" : 0.9,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+
+  "particleEmitter" : {
+    "emissionRate" : 1.0,
+    "emissionVariance" : 0.5,
+
+    "particle" : {
+      "type" : "ember",
+      "size" : 1.0,
+      "color" : [255, 100, 0, 255],
+      "light" : [150, 50, 50],
+      "fade" : 0.9,
+      "initialVelocity" : [0.0, 5.0],
+      "finalVelocity" : [0.0, -50.0],
+      "approach" : [0, 20],
+      "timeToLive" : 0.6,
+      "layer" : "middle"
+    },
+
+    "particleVariance" : {
+      "initialVelocity" : [1.5, 2.0]
+    }
+  },
+  
+  "sitCoverImage" : "/objects/vore/furniture/spitroast/spitroastcover.png",
+  
+  "inventoryIcon" : "spitroasticon.png",
+  "orientations" : [
+    {
+      "imageLayers" : [ { "image" : "spitroast.png:<color>.<frame>", "fullbright" : true }, { "image" : "spitroast.png:<color>.<frame>" } ],
+      "direction" : "left",
+      "flipImages" : true,
+      "imagePosition" : [-16, 0],
+	  "frames" : 4,
+      "animationCycle" : 0.5,
+	  
+	  "sitPosition" : [3, 15],
+	  "sitAngle" : 270,
+	  
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "imageLayers" : [ { "image" : "spitroast.png:<color>.<frame>", "fullbright" : true }, { "image" : "spitroast.png:<color>.<frame>" } ],
+      "direction" : "right",
+      "imagePosition" : [-16, 0],
+	  "frames" : 4,
+      "animationCycle" : 0.5,
+	  
+	  "sitPosition" : [11, 15],
+	  "sitAngle" : 270,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  
+  "soundEffect" : "/sfx/objects/campfire.ogg",
+
+  "statusEffects" : [ ]
+}

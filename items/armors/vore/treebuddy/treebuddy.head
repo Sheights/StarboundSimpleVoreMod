@@ -9,7 +9,7 @@
   "shortdescription" : "Treebuddy Mask",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "head.png",
-  "femaleFrames" : "head.png",
+  "maleFrames" : "headm.png",
+  "femaleFrames" : "headf.png",
   "mask" : "mask.png"
 }

@@ -1,0 +1,35 @@
+{
+
+  "frameGrid" : {
+    "size" : [72, 48],
+    "dimensions" : [16, 7],
+    "names" : [
+      [ "TY", "TYTblink", "TYYblink", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ],
+	  [ "NinIdle.1", "NinIdle.2", "NinIdle.4", "NinLick.1", "NinLick.2", "NinLick.3", "NinFlick.1", "NinFlick.2", "NinFlick.3", "NinFlick.4", "blank", "blank", "blank", "blank", "blank", "blank" ],
+	  [ "AvaliIdle.1", "AvaliIdle.2", "AvaliIdle.3", "AvaliT.1", "AvaliT.2", "AvaliT.3", "AvaliT.4", "AvaliY.1", "AvaliY.2", "AvaliY.3", "blank", "blank", "blank", "blank", "blank", "blank" ],
+	  [ "ClydeIdle", "ClydeBlink", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ],
+	  [ "SkylerIdle", "SkylerRub.1", "SkylerRub.2", "SkylerRub.3", "SkylerRub.4", "SkylerRub.5", "SkylerRub.6", "SkylerRub.7", "SkylerRub.8", "SkylerRub.9", "SkylerRub.10", "SkylerRub.11", "SkylerRub.12", "SkylerRub.13", "SkylerRub.14", "SkylerRub.15" ],
+	  [ "DevoutIdle.1", "DevoutIdle.2", "DevoutIdle.3", "DevoutSmug.1", "DevoutSmug.2", "DevoutSmug.3", "DevoutThump.1", "DevoutThump.2", "DevoutThump.3", "DevoutHelp.1", "DevoutHelp.2", "DevoutHelp.3", "blank", "blank", "blank", "blank" ],
+	  [ "AutumnT.1", "AutumnT.2", "AutumnY.1", "AutumnY.2", "AutumnFull.1", "AutumnFull.2", "AutumnFull.3", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ]
+    ]
+  },
+  "aliases"  :  {
+    "NinIdle.3"  	:	"NinIdle.1",
+	"DevoutIdle.4"	:	"DevoutIdle.3",
+	"DevoutIdle.5"	:	"DevoutIdle.3",
+	"DevoutIdle.6"	:	"DevoutIdle.2",
+	"DevoutIdle.7"	:	"DevoutIdle.1",
+	"DevoutSmug.4"	:	"DevoutSmug.3",
+	"DevoutSmug.5"	:	"DevoutSmug.3",
+	"DevoutSmug.6"	:	"DevoutSmug.2",
+	"DevoutSmug.7"	:	"DevoutSmug.1",
+	"DevoutThump.4"	:	"DevoutThump.3",
+	"DevoutThump.5"	:	"DevoutThump.3",
+	"DevoutThump.6"	:	"DevoutThump.2",
+	"DevoutThump.7"	:	"DevoutThump.1",
+	"DevoutHelp.4"	:	"DevoutHelp.3",
+	"DevoutHelp.5"	:	"DevoutHelp.3",
+	"DevoutHelp.6"	:	"DevoutHelp.2",
+	"DevoutHelp.7"	:	"DevoutHelp.1"
+  }
+}

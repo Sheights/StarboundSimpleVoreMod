@@ -1,0 +1,8 @@
+{
+  "itemName" : "unicorntoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Unicorn.png",
+  "description" : "A token that can be exchanged for a unicorn costume",
+  "shortdescription" : "Unicorn Token"
+}

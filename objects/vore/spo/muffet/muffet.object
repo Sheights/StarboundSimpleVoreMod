@@ -1,0 +1,83 @@
+{
+  "objectName"  :  "voremuffet",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "[TODO] Description",
+  "shortdescription"  :  "Muffet",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "muffeticon.png",
+  "orientations" : [
+    {
+	  "image" : "muffet.png:idle1.<frame>",
+	  "imagePosition" : [-16, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-16, -16]
+	},
+    {
+	  "image" : "muffet.png:idle1.<frame>",
+	  "imagePosition" : [-8, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-8, -16]
+	}
+  ],
+  
+  "animation"  :  "muffet.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "lay" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "muffet.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/muffet/muffet.lua" ],
+  "scriptDelta" : 3,
+  
+  "chatOptions" : [
+	"I spent so long baking my prey that I forgot how good this feels!",
+	"You should consider being a regular ingrediant!",
+	"If I had you as an ingrediant my sales would go through the roof!",
+	"Suprise, the new recipe was YOU!"
+  ],
+  "gulpLines" : [
+	"Simply delightful!",
+	"Delicious!",
+	"Marvelous!"
+  ],
+  "chatIdleEmpty" : [
+	"Hello dear",
+	"Would you like to help me test a new recipe?",
+	"Could you come here a moment dear?"
+  ]
+}

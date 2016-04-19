@@ -1,0 +1,26 @@
+{
+  "objectName" : "rioluplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "#447: The Emanation Pokemon",
+  "shortdescription" : "Riolu Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It uses the shape of auras, which change according to emotion, to communicate with others.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "riolu.png:<color>",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

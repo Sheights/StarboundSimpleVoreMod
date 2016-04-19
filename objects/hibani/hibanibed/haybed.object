@@ -1,0 +1,40 @@
+{
+  "objectName" : "hibanihaybed",
+  "colonyTags" : ["hibani"],
+  "rarity" : "Common",
+  "description" : "Anything with a thread count less than 300 is hay... Somehow this manages 800 and still is hay.",
+  "shortdescription" : "Hibani Hay Bed",
+  "race" : "hibani",
+  "category" : "furniture",
+  "price" : 125,
+
+  "gerneralDescription" : "I'm not sure what would be warmer, sleeping in this bed or sleeping in a hibani?",
+
+  "objectType" : "loungeable",
+  "sitFlipDirection" : true,
+  "sitPosition" : [-8, 10],
+  "sitOrientation" : "lay",
+  "sitAngle" : 90,
+  "sitCoverImage" : "/objects/hibani/hibanibed/haybedcover.png",
+  "sitEmote" : "sleep",
+  "sitStatusEffects" : [
+    "regeneration1",
+    "nude"
+  ],
+  "sitEffectEmitters" : [ "sleepbubbles" ],
+
+  "inventoryIcon" : "haybedicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "haybed.png:<color>",
+
+      "imagePosition" : [-16, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

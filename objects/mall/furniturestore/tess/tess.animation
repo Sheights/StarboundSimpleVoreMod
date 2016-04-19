@@ -1,0 +1,249 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "blink"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.4,
+			"mode"  :  "transition",
+			"transition" : "idle"
+		  },
+		  "blinkfull"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.4,
+			"mode"  :  "transition",
+			"transition" : "full"
+		  },
+		  "maruup"  :  {
+		    "frames"  :  10,
+			"cycle"  :  0.9,
+			"mode"  :  "transition",
+			"transition"  :  "maru"
+		  },
+		  "down"  :  {
+		    "frames"  :  15,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "closed"
+		  },
+		  "downfull"  :  {
+		    "frames"  :  15,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "closed"
+		  },
+		  "marudown"  :  {
+		    "frames"  :  10,
+			"cycle"  :  0.7,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "rub"  :  {
+		    "frames"  :  13,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "teaup"  :  {
+		    "frames"  :  7,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "tea"
+	      },
+		  "up"  :  {
+		    "frames"  :  15,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "upfull"  :  {
+		    "frames"  :  15,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "tail"  :  {
+		    "frames"  :  14,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "tailfull"  :  {
+		    "frames"  :  14,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "teadown"  :  {
+		    "frames"  :  7,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition"  :  "maru"
+		  },
+		  "smile"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "smilefull"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "closed"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "tea"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "full"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "peek"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "maru"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  }
+		}
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink.<frame>"
+		      }
+		    },
+	        "blinkfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blinkfull.<frame>"
+		      }
+		    },
+			"maruup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:maruup.<frame>"
+		      }
+		    },
+			"down"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:down.<frame>"
+		      }
+		    },
+			"downfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:downfull.<frame>"
+		      }
+		    },
+			"marudown"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:marudown.<frame>"
+		      }
+		    },
+			"rub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:rub.<frame>"
+		      }
+		    },
+			"teaup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:teaup.<frame>"
+		      }
+		    },
+			"up"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:up.<frame>"
+		      }
+		    },
+			"upfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:upfull.<frame>"
+		      }
+		    },
+			"tail"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tail.<frame>"
+		      }
+		    },
+			"tailfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tailfull.<frame>"
+		      }
+		    },
+			"teadown"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:teadown.<frame>"
+		      }
+		    },
+			"smile"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:smile"
+		      }
+		    },
+			"smilefull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:smilefull"
+		      }
+		    },
+			"closed"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:closed"
+		      }
+		    },
+			"tea"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tea"
+		      }
+		    },
+			"full"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full"
+		      }
+		    },
+			"peek"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:peek"
+		      }
+		    },
+			"maru"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:maru"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

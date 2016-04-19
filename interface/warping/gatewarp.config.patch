@@ -1,0 +1,12 @@
+[
+	{
+		"op" : "add",
+		"path" : "/destinations/-",
+		"value" : {
+				"name" : "Food Hall",
+				"planetName" : "Foodhall Vore Mall",
+				"warpAction" : "InstanceWorld:foodhall",
+				"icon" : "outpost"
+		}
+	}
+]

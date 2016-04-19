@@ -1,0 +1,24 @@
+{
+  "objectName" : "lesserdummy",
+  "colonyTags" : ["poke","commerce","pretty"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 90,
+  "description" : "A wonderful display for an overstimulated dog warrior.",
+  "shortdescription" : "Lesser Dog Display",
+  "race" : "dummy",
+
+  "inventoryIcon" : "dummyicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "lesser.png:<color>",
+      "imagePosition" : [-12, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

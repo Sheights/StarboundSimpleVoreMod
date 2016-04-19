@@ -1,0 +1,8 @@
+{
+  "itemName" : "lamiatoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Lamia.png",
+  "description" : "A token that can be exchanged for a lamia tail",
+  "shortdescription" : "Lamia Token"
+}

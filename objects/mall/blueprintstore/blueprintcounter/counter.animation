@@ -1,0 +1,235 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "TY",
+	    "states"  :  {
+		  "TY"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "TYTblink"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.2,
+			"mode"  :  "transition",
+			"transition" : "TY"
+		  },
+		  "TYYblink"  :  {
+		    "frames"  :  1,
+			"cycle"  :  0.2,
+			"mode"  :  "transition",
+			"transition"  :  "TY"
+		  },
+		  "NinIdle" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.2,
+		    "mode"  :  "loop"
+		  },
+		  "NinLick" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.9,
+		    "mode"  :  "transition",
+			"transition"  :  "NinIdle"
+		  },
+		  "NinFlick" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.2,
+		    "mode"  :  "transition",
+			"transition"  :  "NinIdle"
+		  },
+		  "AvaliIdle" :  {
+		    "frames"  :  3,
+		    "cycle"  :  1.2,
+		    "mode"  :  "loop"
+		  },
+		  "AvaliT" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.6,
+		    "mode"  :  "transition",
+			"transition"  :  "AvaliIdle"
+		  },
+		  "AvaliY" :  {
+		    "frames"  :  3,
+		    "cycle"  :  1.2,
+		    "mode"  :  "transition",
+			"transition"  :  "AvaliIdle"
+		  },
+		  "ClydeIdle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "ClydeBlink" :  {
+		    "frames"  :  1,
+		    "cycle"  :  0.2,
+		    "mode"  :  "transition",
+			"transition"  :  "ClydeIdle"
+		  },
+		  "SkylerIdle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "SkylerRub" :  {
+		    "frames"  :  15,
+		    "cycle"  :  1.2,
+		    "mode"  :  "transition",
+			"transition"  :  "SkylerRub"
+		  },
+		  "DevoutIdle" :  {
+		    "frames"  :  7,
+		    "cycle"  :  2.7,
+		    "mode"  :  "loop"
+		  },
+		  "DevoutSmug" :  {
+		    "frames"  :  7,
+		    "cycle"  :  2.7,
+			"mode"  :  "transition",
+			"transition"  :  "DevoutIdle"
+		  },
+		  "DevoutThump" :  {
+		    "frames"  :  7,
+		    "cycle"  :  2.7,
+			"mode"  :  "transition",
+			"transition"  :  "DevoutIdle"
+		  },
+		  "DevoutHelp" :  {
+		    "frames"  :  7,
+		    "cycle"  :  2.7,
+			"mode"  :  "transition",
+			"transition"  :  "DevoutIdle"
+		  },
+		  "AutumnT" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.5,
+		    "mode"  :  "loop"
+		  },
+		  "AutumnY" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.5,
+		    "mode"  :  "loop"
+		  },
+		  "AutumnFull" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.75,
+		    "mode"  :  "loop"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "TY"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:TY"
+		      }
+		    },
+	        "TYTblink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:TYTblink"
+		      }
+		    },
+	        "TYYblink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:TYYblink"
+		      }
+		    },
+	        "NinIdle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:NinIdle.<frame>"
+		      }
+		    },
+	        "NinLick"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:NinLick.<frame>"
+		      }
+		    },
+			"NinFlick"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:NinFlick.<frame>"
+		      }
+		    },
+	        "AvaliIdle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AvaliIdle.<frame>"
+		      }
+		    },
+			"AvaliY"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AvaliY.<frame>"
+		      }
+		    },
+			"AvaliT"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AvaliT.<frame>"
+		      }
+		    },
+			"ClydeIdle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:ClydeIdle"
+		      }
+		    },
+			"ClydeBlink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:ClydeBlink"
+		      }
+		    },
+			"SkylerIdle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:SkylerIdle"
+		      }
+		    },
+			"SkylerRub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:SkylerRub.<frame>"
+		      }
+		    },
+			"DevoutIdle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:DevoutIdle.<frame>"
+		      }
+		    },
+			"DevoutSmug"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:DevoutSmug.<frame>"
+		      }
+		    },
+			"DevoutThump"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:DevoutThump.<frame>"
+		      }
+		    },
+			"DevoutHelp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:DevoutHelp.<frame>"
+		      }
+		    },
+			"AutumnT"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AutumnT.<frame>"
+		      }
+		    },
+			"AutumnY"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AutumnY.<frame>"
+		      }
+		    },
+			"AutumnFull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:AutumnFull.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

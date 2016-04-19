@@ -1,0 +1,17 @@
+{
+  "itemName" : "peptobismol",
+  "price" : 200,
+  "rarity" : "Common",
+  "inventoryIcon" : "pepto.png",
+  "description" : "Protect your body from nasty digestion effects.",
+  "shortdescription" : "Anti-Digestion Medicine",
+  "handPosition" : [8, 0],
+  "effects" : [ [
+    "digestionImmunity"
+  ] ],
+  "blockingEffects" : [
+    "digestionImmunity"
+  ],
+  "emote" : "",
+  "emitters" : [ "drinking" ]
+}

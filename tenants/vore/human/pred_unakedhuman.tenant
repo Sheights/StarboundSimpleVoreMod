@@ -6,7 +6,7 @@
     "light": 1,
     "door": 1,
 	"human": 12,
-    "vore": 1
+    "uvore": 1
   },
 
   "tenants": [

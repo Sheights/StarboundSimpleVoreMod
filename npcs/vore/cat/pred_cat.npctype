@@ -13,42 +13,42 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"Well that wont do for me.",
-							"Awww but i liked that thing.",
-							"I can't live in those condition."
+							"Well that won't do for me.",
+							"Awww, but I liked that thing.",
+							"I can't live in those conditions."
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-								"no no no it wont do",
-								"my little palace is broken"
+								"No, no, no, it won't do!",
+								"My little palace is broken."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"there is not egnout place for two cat around here",
-							"every thing is mine not yours",
-							"go away stranger its my playground"
+							"There is not enough space for two cats around here.",
+							"Everything is mine, not yours.",
+							"Go away stranger, it's my playground."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						" ya need to fix it now ",
-						"lisent to your cat dammit "
+						"You need to fix it now!",
+						"Listen to your cat dammit!"
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"no more playing around",
-						"this cat is out of the bag"
+						"No more playing around.",
+						"This cat is out of the bag."
 			  ]
 			}
           }
@@ -57,17 +57,17 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-						"my new home",
-						"so much tasty people around",
-						"Hiya there party cat is here"
+						"My new home.",
+						"So many tasty people around!",
+						"Hiya there, party cat is here!"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-						"seems that another one didnt make it true *^w^*",
-						"thats for u tasty slave"
+						"Seems that another one didn't make it true~ *^w^*",
+						"That's for you tasty slave."
 			  ]
 			}
           }
@@ -77,34 +77,34 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"help your master ",
-					"they are after mah tail"
+					"Help your master!",
+					"They are after mah tail!"
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-						"save my food ",
-						"go play with those bad men"
+						"Save my food!",
+						"Go play with those bad men."
 			]
 		  }
 		},
         "encourage" : {
 		  "default" : {
 			"default" : [
-					"i'l let you pet me later",
-					"rescue there butt",
-					"justice be done"
+					"I'll let you pet me later.",
+					"Rescue their butts!",
+					"Justice be done!"
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"finaly some tranquility",
-					"praise my savior",
-					"thankia"
+					"Finally some tranquility.",
+					"Praise my savior.",
+					"Thank you."
 			]
 		  }
         }
@@ -112,12 +112,12 @@
       "converse" : {
         "default" : {
           "default" : [
-            "do you have some catnip <_< ",
-			"well hello there my sweet",
-			"lets play cat and mouse",
-			"you look just puurrrrfect",
-			"*stomach growl *",
-			"*puuurrrrr*"
+            "Do you have some catnip? <_< ",
+			"Well hello there my sweet~",
+			"Lets play cat and mouse.",
+			"You look just puurrrrfect!",
+			"*Stomach growl*",
+			"*Puuurrrrr*"
           ]
         }
       }

@@ -5,7 +5,21 @@
     "loops" : false,
     "start" : {
       "sounds" : [
-        [ "/sfx/vore/swallow/swallow1.ogg" ], [ "/sfx/vore/swallow/swallow2.ogg" ], [ "/sfx/vore/swallow/swallow3.ogg" ], [ "/sfx/vore/swallow/swallow4.ogg" ], [ "/sfx/vore/swallow/swallow5.ogg" ], [ "/sfx/vore/swallow/swallow6.ogg" ], [ "/sfx/vore/swallow/swallow7.ogg" ]
+        [ "/sfx/vore/swallow/swallow (1).ogg" ],
+		[ "/sfx/vore/swallow/swallow (2).ogg" ],
+		[ "/sfx/vore/swallow/swallow (3).ogg" ],
+		[ "/sfx/vore/swallow/swallow (4).ogg" ],
+		[ "/sfx/vore/swallow/swallow (5).ogg" ],
+		[ "/sfx/vore/swallow/swallow (6).ogg" ],
+		[ "/sfx/vore/swallow/swallow (7).ogg" ],
+		[ "/sfx/vore/swallow/swallow (8).ogg" ],
+		[ "/sfx/vore/swallow/swallow (9).ogg" ],
+		[ "/sfx/vore/swallow/swallow (10).ogg" ],
+		[ "/sfx/vore/swallow/swallow (11).ogg" ],
+		[ "/sfx/vore/swallow/swallow (12).ogg" ],
+		[ "/sfx/vore/swallow/swallow (13).ogg" ],
+		[ "/sfx/vore/swallow/swallow (14).ogg" ],
+		[ "/sfx/vore/swallow/swallow (15).ogg" ]
       ]
     }
   }

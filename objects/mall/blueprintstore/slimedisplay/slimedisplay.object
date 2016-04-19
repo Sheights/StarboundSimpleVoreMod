@@ -1,0 +1,27 @@
+{
+  "objectName" : "slimedisplay",
+  "colonyTags" : ["commerce","rodent"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 70,
+
+  "description" : "A display of a sticky slimy blueprint",
+  "shortdescription" : "Slime Blueprint Display",
+  "race" : "rodent",
+
+  "generalDescription" : "I don't think I can fiddle with the lock in its current state.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "image" : "display.png:<color>",
+      "imagePosition" : [-16, -12],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

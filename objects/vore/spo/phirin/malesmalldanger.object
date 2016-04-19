@@ -1,0 +1,106 @@
+{
+  "objectName" : "vorephirinsmalldigest",
+  "rarity" : "common",
+  "description" : "A spiritual creature able to reduce its prey to magic runestones.",
+  "shortdescription" : "Hungry Phirin - Small",
+  "race" : "phirin",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This creature seems to exude an air of dominant confidence...I don't think I should give him a chance to act on it.",
+  "avianDescription" : "Okay...I'm really not a fan of a fish that bites back.",
+  "floranDescription" : "Sharkylizard keeps glaring at me...",
+  "glitchDescription" : "Species Match confirmed - Phirin. Concern. Shark and lizard physiology in the same place is probably not a good thing.",
+  "humanDescrtiption" : "...Because sharks weren't dangerous enough. \"Oh, let's get some lizard in there too, it'll be great!\"",
+  "hylotlDescription" : "Okay. No. No no no. I know what sharks do to fish. I know where this is going.",
+  "novakidDescription" : "Whoa, buddy, that's a look that could burn a hole in the ship. Chill out.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "image" : "phirin.png:waiting",
+	  "imagePosition" : [-20, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "phirin.png:waiting",
+	  "imagePosition" : [-20, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/spo.lua" ],
+  
+  "animation" : "spoanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "phirin.png"
+  },
+  "animationPosition" : [-20, 0],
+  
+  "bellySize" : "small",
+  
+  "chatOptions" : [
+    "Well, there goes my athletic figure...Still, worth it.",
+	"*yawn* Rrrf...So full...",
+	"So...You got any other friends with as bad a survival instinct as you?",
+	"Kind of unsure how your species survive when this is what you do for your jollies." ,
+	"*Glances around* This whole thing better not be a trick to make me an easy target.",
+	"So, uh...Hope you don't mind if I flood this place a little when you're gone. Not enough water in here.",
+	"You're making this so easy for me, I'm actually feeling myself getting worse at prey-stalking."
+  ],
+  "gulpLines" : [
+    "Just couldn't resist, could you?",
+	"Wh- ...Okay, skipping the hunting part, then.",
+	"Oof...Well, that makes things easier."
+  ],
+  "chatIdleFull" : [
+    "...Well, if you're THAT desperate, give me a minuite or two.",
+	"*sniggers* Wow, you ALL want to be hanging off my gut, huh? Come back in a few.",
+	"Trust me, I want you in here, but I can't. Come back in a little bit."
+  ],
+  "chatIdleEmpty" : [
+    "You pacing around me's really building up my appetite...",
+	"Not a lot of places for you to hide here. You sure having me here is wiiise?~",
+	"Keep walking around and doing your space stuff. You'll get tired...I'll be waiting.",
+	"Stay near me and you'll see what happens when you deprive me of all other prey...",
+	"*stretches while stomach growls*",
+	"*hums Jaws theme off key while staring at you* ...Am I doing it right?"
+  ],
+  "rubLines" : [
+    "Hey...You in there...give me some rubs like your buddy is, if you still can.",
+	"D-dont rub too near my head...Get a bit bitey when I'm too relaxed...",
+	"AH! I KNEW YOU WERE TRYING TO MAKE ME HELPLESS AND TRICK M- ...Wait, you're just rubbing. Nevermind. Continue.",
+	"You're...Really eager to get eaten, aren't you?",
+	"*burps, tail wagging frantically*",
+	"...This usually how you treat predatory animals around here?"
+  ]
+}

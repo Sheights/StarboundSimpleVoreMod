@@ -133,7 +133,7 @@ function updateHook(dt)
 		animTimer = animTimer + dt
 	end
 	
-	if math.random(500) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
+	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
 		entity.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
 	end
 

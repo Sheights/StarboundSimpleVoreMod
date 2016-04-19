@@ -138,7 +138,7 @@
     }
   },
   "disableWornArmor" : false,
-  "scriptDelta" : 5,
+  "scriptDelta" : 3,
   
   "scripts" : [ "/npcs/bmain.lua",
 				"/npcs/vore/pokemon/ugoodra.lua" 

@@ -1,0 +1,33 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "pred" : {
+        "default" : "default",
+        "states" : {
+          "default"  :  {
+		    "frames"  :  7,
+			"cycle"  :  2.1,
+			"mode"  :  "loop"
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "pred" : {
+        "properties" : {
+          "centered" : false
+        },
+        "partStates" : {
+          "pred" : {
+            "default" :{
+              "properties" : {
+				"image" : "<partImage>:default.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

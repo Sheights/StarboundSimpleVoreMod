@@ -1,0 +1,25 @@
+{
+  "itemName" : "ladygrey",
+  "price" : 200,
+  "rarity" : "Common",
+  "inventoryIcon" : "ladygrey.png",
+  "description" : "The softness of the aroma and taste! It's not a sharp or a strong tea, it's one that soothes.",
+  "shortdescription" : "Lady grey",
+  "handPosition" : [8, 0],
+  "effects" : [ [
+    {
+        "effect" : "runboost",
+        "duration" : 60
+    },
+    {
+        "effect" : "jumpboost",
+        "duration" : 60
+    },
+    {
+        "effect" : "wellfed",
+        "duration" : 60
+    }
+  ] ],
+  "emote" : "",
+  "emitters" : [ "drinking" ]
+}

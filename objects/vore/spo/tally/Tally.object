@@ -1,0 +1,66 @@
+{
+  "objectName"  :  "voretally",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "Tall creature living in space seeking warm places to rest ,but this time it might not be her who find a warm place.",
+  "shortdescription"  :  "Tally",
+
+  "apexDescription" : "lets teste her eating habit ",
+  "avianDescription" : "she eyeing me like if i was a chicken",
+  "floranDescription" : "eat or be eaten ?",
+  "glitchDescription" : "This creature does not compute",
+  "humanDescrtiption" : "wonder if i can pet her",
+  "hylotlDescription" : "i hope she dosent like fish",
+  "novakidDescription" : "does she have follow my warm ?",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "Tallyicon.png",
+  "orientations" : [
+    {
+	  "image" : "Tally.png:idle1.<frame>",
+	  "imagePosition" : [-28, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-28, -16]
+	},
+	{
+	  "image" : "Tally.png:idle1.<frame>",
+	  "imagePosition" : [-12, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-12, -16]
+	}
+  ],
+  
+  "animation"  :  "Tally.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "lay" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "Tally.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/Tally/Tally.lua" ],
+  "scriptDelta" : 3
+}

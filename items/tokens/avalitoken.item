@@ -1,0 +1,8 @@
+{
+  "itemName" : "avalitokenb",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Avali.png",
+  "description" : "A token that can be exchanged for an avali costume",
+  "shortdescription" : "Avali Token"
+}

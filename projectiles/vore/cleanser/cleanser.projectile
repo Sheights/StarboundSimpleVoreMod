@@ -1,9 +1,9 @@
 {
 	"projectileName" : "cleanser",
-	"frames" : "npcvore.png",
-	"frameNumber" : 6,
-	"animationCycle" : 1.0,
-	"timetolive" : 0.1,
+	"frames" : "invisibleprojectile.png",
+	"frameNumber" : 1,
+	"animationCycle" : 0.5,
+	"timetolive" : 0.01,
 	"speed" : 0,
 	"animationLoops" : false,
 	"damagePoly" : [ [-12, 0], [-8, -8], [0, -12], [8, -8], [12, 0], [8, 8], [0, 12], [-8, 8] ],
@@ -12,5 +12,5 @@
 	"damageTeam" : { "type" : "indiscriminate" },
 	"damageKind" : "default",
 	"power" : 0,
-	"statusEffects" : [ {"effect" : "cleanser", "duration" : 1} ]
+	"statusEffects" : [ {"effect" : "cleanser", "duration" : 1.0} ]
 }

@@ -1,0 +1,8 @@
+{
+  "itemName" : "dragontoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Dragon.png",
+  "description" : "A token that can be exchanged for a dragon costume",
+  "shortdescription" : "Dragon Token"
+}

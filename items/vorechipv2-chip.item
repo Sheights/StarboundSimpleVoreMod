@@ -1,0 +1,8 @@
+{
+  "itemName" : "vorechipv2-chip",
+  "rarity" : "Legendary",
+  "inventoryIcon" : "/items/generic/crafting/circuitboard.png",
+  "description" : "Grants access to the vore roleplaying tool V2.",
+  "shortdescription" : "Vore Tech Chip",
+  "pickupQuestTemplates" : ["vorerpv2.gearup"]
+}

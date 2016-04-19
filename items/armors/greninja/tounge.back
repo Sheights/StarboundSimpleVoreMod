@@ -1,6 +1,6 @@
 {
   "itemName" : "toungescarfback",
-  "price" : 0,
+  "price" : 500,
   "inventoryIcon" : "icons.png:head",
   "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
   "rarity" : "Rare",

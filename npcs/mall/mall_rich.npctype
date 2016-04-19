@@ -1,0 +1,162 @@
+{
+  "type" : "mall_rich",
+  "baseType" : "prey",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+  
+  "npcname" : "Rich",
+  
+  "damageTeamType" : "friendly",
+  "scriptConfig" : { 
+	"damageTeamType" : "friendly",
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Why are you messing with my stuff?",
+							"Hey! Hands off  my junk!"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Gosh darn it ,  why is there a hole in my house!?",
+							"Patch up the hole, you're gonna let the  scary monsters in!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Ehhhh...   I don't really want to share this place.",
+							"To be honest, I'm probably not the best roomie.",
+							"Gosh, it'd just be awkward if I was someone's roommate, dontcha think?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"This place used to be nice.",
+						"Hey! Ya think you can make this place not awful?",
+						"I've been in bellies nicer than this place! Please fix it up!",
+						"You see this angry pout on my face? That's from the awful room conditions!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"I think it's time we said goodbye.",
+						"I hate to say it ,but this ain't working out.",
+						"Maybe I'll bump into ya in the future.",
+						"I was hoping it was gonna get get better, but it just ain't working out!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"You rang?",
+						"Hey there!  Ya needed something?",
+						"I'm here! Do you have a use for me?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Found this  in some sort of dark and wet cave .. at least I hope it was a cave.",
+						"This fell out while I was brushing my tail, you can have it!",
+						"I got eaten by something earlier today... long story short I made it out okay and found this inside the beast. You should probably wash your hands after touching this...",
+						"Here's your money! … you don't wanna know where I found it."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Ow ow ow!  Help me gosh darn it!",
+					"Gah! Someone get this jerk off me!",
+					"Help help help!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Hey uhh... someone should do something about that.",
+						"Hey , if you don't save that guy then we're gonna have one less distractions for the predators!",
+						"Someone that's not me should really help that poor guy out!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Yeah, go get em champ!",
+					"I'm rooting for ya big guy!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"That's one less problem in the world.",
+					"Good job , champ!"
+			]
+		  }
+        }
+	  },
+	  "converse" : {
+        "default" : {
+          "default" : [
+			"What's up?",
+			"How's it going, bud?",
+			"Those bird people are an interesting bunch, I just wish they didn't squawk so loudly though.",
+			"You ever get the feeling that people are watching you with such hungry looks in their eyes?",
+			"One time  I found this weird cave that was really dark and slimy inside! The deeper I went, I started hearing loud gurgly noises for some weird reason. What do you mean that wasn't a cave?",
+			"We should go treasure hunting together.  That way I'll have one more distraction to use in case the hungry beasts show up, haha.",
+			"I bumped into a weird floran the other day. They were giving me weird looks while licking their lips...",
+			"Truth be told , those Hylotl sorta give me the creeps.",
+			"Some people say I have the funniest grumpy face, but there's nothing funny about me being upset!"
+		  ]
+		}
+	  }
+	}
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/rich/prey_rich.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "richhead" }
+            ],
+            "chest" : [
+              { "name" : "richchest" }
+            ],
+            "legs" : [
+              { "name" : "richlegs" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

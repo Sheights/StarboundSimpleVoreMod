@@ -1,0 +1,60 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "fromographState" : {
+        "default" : "off",
+        "states" : {
+          "off" : {
+            "frames" : 1,
+			"properties" : {
+              "particleEmittersOff" : [ "music" ]
+            }
+          },
+          "on" : {
+            "frames" : 4,
+            "cycle" : 0.5,
+            "mode" : "loop",
+            "properties" : {
+              "particleEmittersOn" : [ "music" ],
+              "persistentSound" : "/sfx/objects/fromographloop.ogg",
+              "persistentSoundStopTime" : 0.5
+            }
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "fromograph" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "fromographState" : {
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>:off"
+              }
+            },
+
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>:on.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "particleEmitters" : {
+	"music" : {
+      "emissionRate" : 1,
+      "offsetRegion" : [ -0.0, 1.25, 0.0, 1.25 ],
+      "particles" : [
+        { "particle" : "music" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "objectName" : "vorebunyipsmall",
+  "rarity" : "Uncommon",
+  "description" : "A spiritual creature able to heal wounds. Also comfortable on the inside.",
+  "shortdescription" : "Bunyip - Small",
+  "race" : "bunyip",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Something about her seems inviting...",
+  "avianDescription" : "She smells vaugely of cooked fish. Strange...but inviting.",
+  "floranDescription" : "Smells like fishyfriend!",
+  "glitchDescription" : "Analytic: Subject seems to match up with mythical folklore...but this one seems less dangerous than described.",
+  "humanDescription" : "Didn't I see one of these in Australian folklore books once...?",
+  "hylotlDescription" : "Looks like some sort of fish-eater...so why am I so drawn to it?",
+  "novakidDescription" : "Seems like she's sizin' me up for some reason...",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "image" : "bunyipsmall.png:idle",
+	  "imagePosition" : [-9, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "bunyipsmall.png:idle",
+	  "imagePosition" : [-9, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/bunyip/bunyipsmall.lua" ],
+  
+  "animation" : "bunyipsmall.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "bunyipsmall.png"
+  },
+  "animationPosition" : [-9, 0]
+}

@@ -9,8 +9,8 @@
   "shortdescription" : "Avali Suit",
   "tooltipKind" : "armor",
 
-  "maleFrames" : "pants.png",
-  "femaleFrames" : "pants.png",
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png",
   
   "colorOptions" : [
   /* TEMPLATE */

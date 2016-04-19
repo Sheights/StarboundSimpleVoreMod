@@ -1,0 +1,8 @@
+{
+  "itemName" : "lynntoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Lynn.png",
+  "description" : "A token that can be exchanged for a Lynn costume",
+  "shortdescription" : "Lynn Token"
+}

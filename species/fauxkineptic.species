@@ -2,8 +2,8 @@
   "kind" : "fauxkineptic",
   "playerSpecies" : false,
   "nameGen" : [ "/species/fauxkinepticmalenamegen.config:names", "/species/fauxkinepticfemalenamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/humanoid/kineptichurt.wav", "/sfx/humanoid/kineptichurt.wav" ],
-  "gruntNoises" : [ ["/sfx/silent.wav"],["/sfx/silent.wav"] ],
+  "ouchNoises" : [ "/sfx/humanoid/kineptichurt.ogg", "/sfx/humanoid/kineptichurt.ogg" ],
+  "gruntNoises" : [ ["/sfx/silent.ogg"],["/sfx/silent.ogg"] ],
   "charGenTextLabels" : [ "PATCH COLOR", "CHEEKS", "ARMWEAR", "OUTFIT", "FUR COLOR", "BINDI COLOR", "ARMWEAR COLOR", "OUTFIT COLOR", "KINEPTIC", "PERSONALITY" ],
   "skull" : "/humanoid/any/dead.png",
   "defaultBlueprints" : {

@@ -1,0 +1,62 @@
+{
+  "objectName"  :  "voresarah",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "The Devil's Daughter's gut is surprisingly cozy...",
+  "shortdescription"  :  "Sarah Daemon",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "savor",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "sarahicon.png",
+  "orientations" : [
+    {
+	  "image" : "sarah.png:idle",
+	  "imagePosition" : [-20, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-10, 20],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-20, -16]
+	},
+    {
+	  "image" : "sarah.png:idle",
+	  "imagePosition" : [-20, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 20],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-20, -16]
+	}
+  ],
+  
+  "animation"  :  "sarah.animation",
+  "animationCustom" : {
+    "sounds" : {
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "sarah.png"
+  },
+  
+  "scripts" : [ "/objects/vore/spo/sarah/sarah.lua" ],
+  "scriptDelta" : 3
+}

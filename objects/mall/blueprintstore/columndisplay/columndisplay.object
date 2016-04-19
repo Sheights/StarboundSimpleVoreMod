@@ -1,0 +1,27 @@
+{
+  "objectName" : "columndisplay",
+  "colonyTags" : ["commerce","rodent"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 70,
+
+  "description" : "A display of 3 blueprints in frames.",
+  "shortdescription" : "Column Blueprint Display",
+  "race" : "rodent",
+
+  "generalDescription" : "It would be useful if I could get these blueprints out of the displays, but they are probably conterfeit anyway.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "image" : "display.png:<color>",
+      "imagePosition" : [-8, -20],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

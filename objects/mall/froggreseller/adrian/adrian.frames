@@ -1,0 +1,16 @@
+{
+
+  "frameGrid" : {
+    "size" : [56, 56],
+    "dimensions" : [4, 3],
+    "names" : [
+      [ "default", "anim.1", "anim.2", "anim.3" ],
+	  [ "anim.4", "anim.5", "anim.8", "anim.9" ],
+	  [ "anim.10", "anim.11", "anim.12", "blank"]
+    ]
+  },
+  "aliases"  :  {
+	"anim.6"	:	"anim.4",
+	"anim.7"	:	"anim.5"
+  }
+}

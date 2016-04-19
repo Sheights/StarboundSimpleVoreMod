@@ -5,7 +5,22 @@
     "loops" : false,
     "start" : {
       "sounds" : [
-        [ "/sfx/vore/burp/burp1.ogg" ], [ "/sfx/vore/burp/burp2.ogg" ], [ "/sfx/vore/burp/burp3.ogg" ], [ "/sfx/vore/burp/burp4.ogg" ], [ "/sfx/vore/burp/burp5.ogg" ] 
+        [ "/sfx/vore/burp/burp (1).ogg" ],
+		[ "/sfx/vore/burp/burp (2).ogg" ],
+		[ "/sfx/vore/burp/burp (3).ogg" ],
+		[ "/sfx/vore/burp/burp (4).ogg" ],
+		[ "/sfx/vore/burp/burp (5).ogg" ],
+		[ "/sfx/vore/burp/burp (6).ogg" ],
+		[ "/sfx/vore/burp/burp (7).ogg" ],
+		[ "/sfx/vore/burp/burp (8).ogg" ],
+		[ "/sfx/vore/burp/burp (9).ogg" ],
+		[ "/sfx/vore/burp/burp (10).ogg" ],
+		[ "/sfx/vore/burp/burp (11).ogg" ],
+		[ "/sfx/vore/burp/burp (12).ogg" ],
+		[ "/sfx/vore/burp/burp (13).ogg" ],
+		[ "/sfx/vore/burp/burp (14).ogg" ],
+		[ "/sfx/vore/burp/burp (15).ogg" ],
+		[ "/sfx/vore/burp/burp (16).ogg" ]
       ]
     }
   }

@@ -3,7 +3,7 @@
   "colonyTags" : ["poke","pretty"],
   "rarity" : "Rare",
   "category" : "decorative",
-  "price" : 50,
+  "price" : 200,
   "printable" : false,
 
   "description" : "#258: The Mud Fish Pokemon",
@@ -18,7 +18,7 @@
       "dualImage" : "mudkip.png:<color>",
       "imagePosition" : [-9, 0],
       
-      "spaceScan" : 0.1,
+      "spaceScan" : 0.2,
       "anchors" : [ "bottom" ]
 
     }

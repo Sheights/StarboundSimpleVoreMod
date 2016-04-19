@@ -1,0 +1,12 @@
+{
+  "kind" : "ampharosemitter",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/pokemon/ampharos.ogg" ]
+      ]
+    }
+  }
+}

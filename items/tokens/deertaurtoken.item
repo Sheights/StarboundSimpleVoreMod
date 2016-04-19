@@ -1,0 +1,8 @@
+{
+  "itemName" : "deertaurtoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Deer.png",
+  "description" : "A token that can be exchanged for a deertaur costume",
+  "shortdescription" : "Deertaur Token"
+}

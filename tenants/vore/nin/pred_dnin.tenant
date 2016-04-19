@@ -1,0 +1,29 @@
+{
+  "name": "pred_dnin",
+  "priority": 13,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"colorful": 4,
+	"cooking": 4,
+	"storage": 6,
+    "dvore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "avian",
+      "type": "pred_dnin",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

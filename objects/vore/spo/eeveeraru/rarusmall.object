@@ -1,0 +1,123 @@
+{
+  "objectName" : "vorerarusmall",
+  "rarity" : "common",
+  "description" : "A little warm place to spend the night~",
+  "shortdescription" : "Eeveeon Raru - Small",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This eeveeon seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this eeveeon seems... intriguing...",
+  "floranDescription" : "...Floran like eeveeon, but why?",
+  "glitchDescription" : "Wonder.  There is something about this eeveeon...",
+  "humanDescrtiption" : "Whatever it is you want dude, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this guy's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/eeveeraru/rarufullsmall.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "raruwaiting.png:<color>.<frame>",
+	  
+	  "imagePosition" : [-16, 0],
+	  "frames" : 6,
+      "animationCycle" : 1.5,
+	  "direction" : "left",
+	  "flipImages" : true,
+	  
+	  "sitPosition" : [0, 22],
+	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  
+	  "detectArea" : [ [-4, 0], [4, 5] ]
+	},
+	{
+	  "image" : "raruwaiting.png:<color>.<frame>",
+	  
+	  "imagePosition" : [-16, 0],
+	  "frames" : 6,
+      "animationCycle" : 1.5,
+	  "direction" : "right",
+	  
+	  "sitPosition" : [0, 22],
+	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  
+	  "detectArea" : [ [-4, 0], [4, 5] ]
+	}
+  ],
+  "animationPosition" : [-16, 0],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "raruanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+    "pred" : "raruwaiting.png"
+  },
+  "chatOptions" : [
+    "Mmmmmmmm~",
+	"Ahh...",
+	"Glad you're comfy~",
+	"Oooh, keep wriggling~",
+	"Enjoying yourself in there? I know I am~",
+	"So full~",
+	"Mmm, wonderful~",
+	"<3 <3 <3",
+	"Heh, maybe I should charge rent.",
+	"Stay as long as you want~",
+	"This feels so great I might have to keep you inside forever~",
+	"I be fulla happy people~"
+  ],
+  "gulpLines" : [
+    "In you go~",
+	"Best bed in the galaxy~",
+	"Enjoy your stay~",
+	"Weclome to Casa de Me~",
+	"Mmmmm...",
+	"Down the gullet, into bed~",	
+	"Delicious~",
+	"*Gluck*"
+  ],
+  "chatIdleFull" : [
+    "Sorry, no vacancies~",
+	"Come back later~",
+	"Sorry, one person per... room~"
+  ],
+  "chatIdleEmpty" : [
+    "Come on in~",
+	"Need a place to rest?",
+	"I'm very comfy~",
+	"First come, first serve~",
+	"We have vacancies~",
+	"I've got some room to rent over here~",
+	"Are you as tasty as you look?",
+	"Up for some fun?",
+	"I've got a warm belly to escape the colds of space~",
+	"Hey spacer, I got a space for you right in here~",
+	"Why build a house when you could move into me?"
+  ]
+}

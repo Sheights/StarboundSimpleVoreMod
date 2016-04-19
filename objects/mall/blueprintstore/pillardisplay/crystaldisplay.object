@@ -1,0 +1,24 @@
+{
+  "objectName" : "crystaldisplay",
+  "colonyTags" : ["commerce","pretty","crystal"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 90,
+  "description" : "A wonderful display crystal materials",
+  "shortdescription" : "Crystal Display",
+  "race" : "dummy",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "crystaldisplay.png:<color>",
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}
