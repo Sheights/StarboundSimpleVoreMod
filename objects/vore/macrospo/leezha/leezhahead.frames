@@ -1,0 +1,16 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [80, 80],
+	"dimensions"  :  [9, 8],
+	"names"  :  [
+		[ "default", "blink.1", "blink.2", "blink.3", "blink.4", "blink.5", "fullblink.1", "fullblink.2", "fullblink.3" ],
+		[ "fullblink.4", "fullblink.5", "rub.1", "rub.2", "rub.3", "rub.4", "rub.5", "rub.6", "rub.7" ],
+		[ "rub.8", "rub.9", "rub.10", "rub.11", "smile.1", "smile.2", "smile.3", "smile.4", "smile.5" ],
+		[ "struggle.1", "struggle.2", "struggle.3", "struggle.4", "struggle.5", "struggle.6", "struggle.7", "struggle.8", "struggle.9" ],
+		[ "struggle.10", "struggle.11", "struggle.12", "struggle.13", "struggle.14", "struggle.15", "struggle.16", "struggle.17", "struggle.18" ],
+		[ "struggle.19", "struggle.20", "struggle.21", "struggle.22", "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5" ],
+		[ "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "totail.1", "totail.2", "totail.3", "totail.4" ],
+		[ "totail.5", "totail.6", "totail.7", "totail.8", "totail.9", "totail.10", "totail.11", "full", "blank" ]
+	]
+  }
+}

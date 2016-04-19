@@ -1,0 +1,9 @@
+{
+  "itemName" : "vorerpv2H",
+  "rarity" : "Legendary",
+  "inventoryIcon" : "/tech/vicon.png",
+  "description" : "Hold your cursor over your prey and press F to eat them. Assuming a Prey Enabler is active on the current ship or planet. This will heal your prey as well!",
+  "shortdescription" : "Vore RP V2: Healing",
+
+  "techModule" : "vorerpv2H"
+}

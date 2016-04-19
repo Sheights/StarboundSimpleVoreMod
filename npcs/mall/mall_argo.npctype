@@ -1,0 +1,151 @@
+{
+  "type" : "mall_argo",
+  "baseType" : "villager",
+  
+  "npcname" : "Lynn",
+  "damageTeamType" : "friendly",
+  "scriptConfig" : { 
+    "damageTeamType" : "friendly",
+	"dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"...",
+							"... :(",
+							"..!"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							">_>",
+							":(",
+							"..!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"=_=",
+							":O",
+							":<"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						">:(",
+						">:o",
+						">^<"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"x-x",
+						"-_-",
+						":c"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"?",
+						"!",
+						":3c"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"!",
+						"^pink;<3",
+						"^3^",
+						"^pink;<3 <3"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"!!!",
+					"D:",
+					">o<"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						":O",
+						"!!!",
+						"8O"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"!",
+					"OvO",
+					":D"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"..?",
+					"-v-",
+					":|"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "^pink;<3",
+			":D",
+			"^3^~^pink;<3",
+			":3",
+			"*hugs*"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "argonpchead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "chest" : [
+              { "name" : "argonpcchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "argonpcpants", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -2,8 +2,8 @@
   "kind" : "zoroark",
   "playerSpecies" : false,
   "nameGen" : [ "/species/zoroarknamegen.config:names", "/species/zoroarknamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/humanoid/lucariohurt_male1.wav", "/sfx/humanoid/lucariohurt_female1.wav" ],
-  "gruntNoises" : [ [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ], [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ] ],
+  "ouchNoises" : [ "/sfx/humanoid/lucariohurt_male1.ogg", "/sfx/humanoid/lucariohurt_female1.ogg" ],
+  "gruntNoises" : [ [ "/sfx/humanoid/aviangrunt1.ogg", "/sfx/humanoid/aviangrunt2.ogg" ], [ "/sfx/humanoid/aviangrunt1.ogg", "/sfx/humanoid/aviangrunt2.ogg" ] ],
   "charGenTextLabels" : [ "SKIN COLOR", "HAIR STYLE", "SHIRT", "PANTS", "EYE COLOR", "HAIR COLOR", "SHIRT COLOR", "PANTS COLOR", "ZOROARK", "PERSONALITY" ],
   "defaultBlueprints" : {
     "tier1" : [

@@ -1,0 +1,27 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [80, 56],
+	"dimensions"  :  [14, 14],
+	"names"  :  [
+		[ "digest.1", "digest.2", "digest.3", "digest.4", "digest.5", "digest.6", "digest.7", "digest.8", "digest.9", "digest.10", "digest.11", "digest.12", "rubs.1", "rubs.2" ],
+		[ "rubs.3", "rubs.4", "rubs.5", "rubs.6", "rubs.7", "rubs.8", "rubs.9", "rubs.10", "rubs.11", "rubs.12", "rubs.13", "rubs.14", "rubs.15", "rubs.16" ],
+		[ "rubs.17", "blink.1", "blink.2", "blink.3", "fullsmile.1", "fullsmile.2", "fullsmile.3", "fullsmile.4", "fullsmile.5", "fullsmile.6", "fullsmile.7", "fullsmile.8", "fullsmile.9", "fullsmile.10" ],
+		[ "fullsmile.11", "fullsmile.12", "fullsmile.13", "fullsmile.14", "fullsmile.15", "fullsmile.16", "fullsmile.17", "fullsmile.18", "fullsmile.19", "fullsmile.20", "fullsmile.21", "struggle.1", "struggle.2", "struggle.3" ],
+		[ "struggle.4", "struggle.5", "struggle.6", "struggle.7", "struggle.8", "struggle.9", "struggle.10", "struggle.11", "struggle.12", "struggle.13", "struggle.14", "struggle.15", "struggle.16", "struggle.17" ],
+		[ "struggle.18", "struggle.19", "reg.1", "reg.2", "reg.3", "reg.4", "reg.5", "reg.6", "reg.7", "reg.8", "reg.9", "reg.10", "reg.11", "reg.12" ],
+		[ "reg.13", "reg.14", "reg.15", "reg.16", "reg.17", "reg.18", "reg.19", "reg.20", "reg.21", "reg.22", "reg.23", "reg.24", "reg.25", "reg.26" ],
+		[ "reg.27", "reg.28", "reg.29", "reg.30", "reg.31", "reg.32", "reg.33", "reg.34", "reg.35", "reg.36", "smile.1", "smile.2", "smile.3", "smile.4" ],
+		[ "smile.5", "smile.6", "smile.7", "smile.8", "smile.9", "smile.10", "smile.11", "smile.12", "smile.13", "smile.14", "smile.15", "smile.16", "smile.17", "smile.18" ],
+		[ "smile.19", "smile.20", "smile.21", "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "swallow.11" ],
+		[ "swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16", "swallow.17", "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "swallow.24", "swallow.25" ],
+		[ "swallow.26", "swallow.27", "swallow.28", "swallow.29", "swallow.30", "swallow.31", "swallow.32", "swallow.33", "swallow.34", "swallow.35", "swallow.36", "uad.1", "uad.2", "uad.3" ],
+		[ "uad.4", "uad.5", "uad.6", "uad.7", "uad.8", "uad.9", "uad.10", "uad.11", "blank", "blank", "blank", "blank", "blank", "blank" ],
+		[ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ]
+	]	
+  },
+	
+  "aliases"  :  {
+	"idle"		:	"smile.1",
+	"fullidle"	:	"fullsmile.1"
+	}
+}

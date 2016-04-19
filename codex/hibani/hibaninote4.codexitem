@@ -1,0 +1,10 @@
+{
+  "codexId" : "hibanipieceofpaper4",
+  "title" : "Piece of Paper (4)",
+  "codexkind" : "codex",
+  "itemName" : "hibaniNote4",
+  "inventoryIcon" : "hibaniBook.png",
+  "rarity" : "common",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "shortdescription" : "Piece of Paper 4"
+}

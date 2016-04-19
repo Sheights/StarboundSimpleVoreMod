@@ -1,0 +1,8 @@
+{
+  "itemName" : "lucariotoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Lucario.png",
+  "description" : "A token that can be exchanged for a lucario belly",
+  "shortdescription" : "Lucario Token"
+}

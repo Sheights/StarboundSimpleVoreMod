@@ -1,0 +1,29 @@
+{
+  "objectName" : "katojanaplush",
+  "colonyTags" : ["hibani","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "A big, huggable orange stripped kitty. Isn't she adorable?",
+  "shortdescription" : "Katojana Giant Plush",
+  "race" : "hylotl",
+
+  "defaultDescription" : "A big, huggable orange stripped kitty! She is truely adorable.",
+
+  "objectType" : "loungeable",
+  "sitOrientation" : "sit",
+  "sitCoverImage" : "/objects/hibani/katojana/sitcover.png",
+  "sitPosition" : [6, 17],
+  "inventoryIcon" : "katoicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "kato.png:<color>",
+      "imagePosition" : [-25, 0],
+      
+      "spaceScan" : 0.2,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

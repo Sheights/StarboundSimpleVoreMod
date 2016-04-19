@@ -2,23 +2,23 @@ require "/scripts/vore/multivore.lua"
 
 capacity = 2
 
-playerLines = {		"Surprise! Hope you enjoy learning about the digestive system of foxes~<3",
+playerLines = {		"Surprise! I hope you enjoy learning about the digestive system of foxes. <3",
 					"Such a scrumptious thing you are~",
-					"Ooooo~ Gonna love to add ya to my body~",
-					"*purrs* Mmm hope I can find more like you, so delicious~",
-					"I hope you aren't TOO fattening~ *giggles*",
-					"Gonna be a shame to let ya out, just love a full belly~ *kneads you about*",
-					"Gosh, I bet it's hot in there with all my fur and fat heating you up~",
-					"You'll be making my furcoat even more gorgeous soon~",
+					"Ooooo~ I love having you inside my body~",
+					"*Yips* Mmm, hope I can find more like you, so delicious~",
+					"I hope you aren't making me look TOO fat. *Giggles*",
+					"Gonna be a shame to let ya out, just love a full belly. *Kneads you about*",
+					"Gosh, I bet it's hot in there with all my fur and fat heating you up.",
+					"You would make my furcoat so gorgeous~",
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", fulllegs1 )
+		entity.setItemSlot( "legs", "foxnewlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", legs )
+		entity.setItemSlot( "legs", "foxnewlegs" )
 	end
 	
 end

@@ -1,0 +1,66 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  4,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "full"
+		  },
+		  "full" :  {
+		    "frames"  :  4,
+		    "cycle"  :  1.2,
+		    "mode"  :  "loop"
+		  },
+		  "digest" :  {
+		    "frames"  :  9,
+		    "cycle"  :  2.7,
+		    "mode" : "transition",
+			"transition" : "idle"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "full"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:full.<frame>"
+		      }
+		    },
+	        "digest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

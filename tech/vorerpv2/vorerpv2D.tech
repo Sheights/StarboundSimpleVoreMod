@@ -1,0 +1,8 @@
+{
+  "name" : "vorerpv2D",
+  "type" : "head",
+
+  "scripts" : ["vorerpv2D.lua"],
+  "actions" : ["active","deactive"],
+  "animator" : "vorerpv2.animation"
+}

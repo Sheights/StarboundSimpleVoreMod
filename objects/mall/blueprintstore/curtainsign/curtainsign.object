@@ -1,0 +1,27 @@
+{
+  "objectName" : "curtainsign",
+  "colonyTags" : ["commerce","rodent"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 70,
+
+  "description" : "The Do It Yourself Sign. Two delectable rodents work here, some times.",
+  "shortdescription" : "DiY Sign",
+  "race" : "rodent",
+
+  "generalDescription" : "This sign means I can buy some blueprints, maybe grab a bite or two to eat.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "image" : "display.png:<color>",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

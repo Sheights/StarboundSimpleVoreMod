@@ -1,0 +1,11 @@
+{
+  "codexId" : "vorenpcs",
+  "title" : "Vore NPCs",
+  "codexkind" : "codex",
+  "itemName" : "vorenpcsCodex",
+  "inventoryIcon" : "bellyBoundBook.png",
+  "rarity" : "common",
+  "description" : "An overview of the tenant system.",
+  "shortdescription" : "Vore NPCs : An Overview",
+  "value" : 200
+}

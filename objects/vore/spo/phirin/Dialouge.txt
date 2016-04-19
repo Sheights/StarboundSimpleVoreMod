@@ -1,0 +1,95 @@
+Safe - 
+
+Apex: "He seems to be leering at me in a dominant way...despite how small he is."
+Avian: "This creature doesn't seem to want to sit still..."
+Floran: "Sharkyfishlizard is interesting..."
+Glitch: "Species Match confirmed - Phirin. Seems docile, if a bit dominant."
+Human:  "If there's two things sharks didn't need, it's legs and a dominant streak." 
+Hylotl: "This creature seems to have the same sort of threat as a shark, but...At the same time, not."
+Novakid: "I can't tell if he's got scales or skin. Not sure if I should check."
+
+Dangerous - 
+
+Apex: "This creature seems to exude an air of dominant confidence...I don't think I should give him a chance to act on it."
+Avian: "Okay...I'm really not a fan of a fish that bites back."
+Floran: "Sharkylizard keeps glaring at me..."
+Glitch: "Species Match confirmed - Phirin. Concern. Shark and lizard physiology in the same place is probably not a good thing." 
+Human: "...Because sharks weren't dangerous enough. "Oh, let's get some lizard in there too, it'll be great!" " 
+Hylotl: "Okay. No. No no no. I know what sharks do to fish. I know where this is going."
+Novakid: "Whoa, buddy, that's a look that could burn a hole in the ship. Chill out." 
+
+Item Description: 
+
+Safe: A strange cross between a lizard and a shark, tamed and made intelligent by strange energies. Has very strong hunter tendancies.   
+
+Dangerous: A strange cross between a lizard and a shark, made intelligent by strange energies but retaining its predatory nature. 
+
+chatoptions - Safe: 
+
+"Rrrh...You almost feel too good to let out."
+"Part of me's still confused about this willing prey thing...Most of me doesn't care."
+"*Arches back and huffs*"
+"Rrrf...Still not used to not having to chase people..."
+"Just so you know, I'm not going to repay the favour. I don't do being eaten."
+"Honestly...*urp* ...I could get used to this." 
+
+chatoptions - Dangerous: 
+"Well, there goes my athletic figure...Still, worth it."
+"*yawn* Rrrf...So full..."
+"So...You got any other friends with as bad a survival instinct as you?"
+"Kind of unsure how your species survive when this is what you do for your jollies." 
+"*Glances around* This whole thing better not be a trick to make me an easy target."
+"So, uh...Hope you don't mind if I flood this place a little when you're gone. Not enough water in here."
+"You're making this so easy for me, I'm actually feeling myself getting worse at prey-stalking." 
+
+gulpLines - safe
+"Wait, are you seriously going to just jump i-*gulp*- ...Okay then."
+"Rrrf - ...Didn't scratch you with my teeth, did I? "
+"Aaaah...Geez, you're bigger than you look..."
+
+gulpLines - Dangerous
+"Just couldn't resist, could you?"
+"Wh- ...Okay, skipping the hunting part, then."
+"Oof...Well, that makes things easier."
+
+Chatidleempty - safe: 
+"*tenses up as you walk by* ...I'm fighting every impulse not to pounce you right now."
+"Really not used to sitting in full view of everyone..."
+"*sniffs at*"
+"I am SO glad I agreed to be here...You look delicious."
+"I've gone so long without something wiggly on the inside...Don't leave me like thaaat.~"
+"*eyes scanning surroundings for food*" 
+
+Chatidleempty - Dangerous
+"You pacing around me's really building up my appetite..."
+"Not a lot of places for you to hide here. You sure having me here is wiiise?~" 
+"Keep walking around and doing your space stuff. You'll get tired...I'll be waiting."
+"Stay near me and you'll see what happens when you deprive me of all other prey..."
+"*stretches while stomach growls*"
+"*hums Jaws theme off key while staring at you* ...Am I doing it right?"
+
+Chatidlefull - Safe: 
+"Huh...? ...Oh. Um...I'm occupied."
+"Really? More people wanting in? I can't right now, sorry."
+"Look, I'm not usually this big. Come back when I look less crammed, alright?"
+
+Chatidlefull - Dangerous:
+"...Well, if you're THAT desperate, give me a minuite or two."
+"*sniggers* Wow, you ALL want to be hanging off my gut, huh? Come back in a few." 
+"Trust me, I want you in here, but I can't. Come back in a little bit."
+
+rublines - Safe: 
+"*squeaks* ...Please tell me nobody else heard that."
+"*twitch* ...l-little higher, please?"
+"*leans into your rubs, letting out a purr-like noise*" 
+"Y-you're not going to domesticate me that easily...I didn't say stop."
+"Gnaw like it more if you use both hands."
+"*gently clamps your hand in mouth when you rub, before letting go* Sorry, kinda lost it for a moment..."
+
+rublines - Dangerous
+"Hey...You in there...give me some rubs like your buddy is, if you still can." 
+"D-dont rub too near my head...Get a bit bitey when I'm too relaxed..."
+"AH! I KNEW YOU WERE TRYING TO MAKE ME HELPLESS AND TRICK M- ...Wait, you're just rubbing. Nevermind. Continue."
+"You're...Really eager to get eaten, aren't you?"
+"*burps, tail wagging frantically*"
+"...This usually how you treat predatory animals around here?"

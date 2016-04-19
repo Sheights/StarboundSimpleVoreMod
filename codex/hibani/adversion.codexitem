@@ -1,0 +1,10 @@
+{
+  "codexId" : "hibaniadversion",
+  "title" : "Adversion",
+  "codexkind" : "codex",
+  "itemName" : "hibaniAdversionCodex",
+  "inventoryIcon" : "hibaniBook.png",
+  "rarity" : "common",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "shortdescription" : "Adversion"
+}

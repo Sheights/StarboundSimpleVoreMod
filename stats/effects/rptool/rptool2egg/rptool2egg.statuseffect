@@ -1,0 +1,12 @@
+{
+  "name" : "rptool2statusegg",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "rptool2egg.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/egg.png"
+}

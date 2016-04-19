@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "deertaurtoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "deertaurspottedlegsbelly",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

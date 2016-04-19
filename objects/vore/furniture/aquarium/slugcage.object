@@ -1,0 +1,35 @@
+{
+  "objectName" : "aslugcage",
+  "printable" : false,
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey", "sea", "pretty"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 1000,
+
+  "description" : "A glass cage filled with cute familiar slugs.",
+  "shortdescription" : "Slug Cage",
+  "apexDescription" : "If you haven't guessed yet I am a huge fan of Fromage - Sheights. Also Apex is worst race.",
+  "avianDescription" : "I think it likes me!",
+  "floranDescription" : "The only sssslugs Floran likes are those in Floran's gun.",
+  "glitchDescription" : "Statment: Why keep this as a pet?",
+  "humanDescription" : "I did not know they got this big.",
+  "hylotlDescription" : "I might consider this food today, but if it gets much larger that might change.",
+
+  "inventoryIcon" : "aquariumicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "slugcage.png:<color>.<frame>",
+      "imagePosition" : [-16, 0],
+      "frames" : 4,
+      "animationCycle" : 1.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+
+    }
+  ],
+
+  "soundEffect" : "/sfx/objects/aquarium1.ogg"
+
+}

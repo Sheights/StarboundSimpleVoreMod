@@ -40,7 +40,7 @@
   },
   
   "scripts" : [ "/objects/bellybound/bellybound.lua" ],
-  "scriptDelta" : 3,
+  "scriptDelta" : 150,
   
   "chatIdle" : [
     "Starlilly: Issss not our fault if you don't come backsss again...",

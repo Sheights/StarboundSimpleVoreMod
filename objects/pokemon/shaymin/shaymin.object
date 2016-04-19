@@ -1,0 +1,26 @@
+{
+  "objectName" : "shayminplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "#492: The Gratitude Pokemon",
+  "shortdescription" : "Shaymin Plushie",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It can dissolve toxins in the air to instantly transform ruined land into a lush field of flowers.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "shaymin.png:<color>",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

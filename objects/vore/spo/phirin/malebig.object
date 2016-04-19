@@ -1,0 +1,105 @@
+{
+  "objectName" : "vorephirinbig",
+  "rarity" : "common",
+  "description" : "A strange cross between a lizard and a shark, tamed and made intelligent by strange energies. Has very strong hunter tendancies.",
+  "shortdescription" : "Phirin - Big",
+  "race" : "phirin",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "He seems to be leering at me in a dominant way...despite how small he is.",
+  "avianDescription" : "This creature doesn't seem to want to sit still...",
+  "floranDescription" : "Sharkyfishlizard is interesting...",
+  "glitchDescription" : "Species Match confirmed - Phirin. Seems docile, if a bit dominant.",
+  "humanDescription" : "If there's two things sharks didn't need, it's legs and a dominant streak.",
+  "hylotlDescription" : "This creature seems to have the same sort of threat as a shark, but...At the same time, not.",
+  "novakidDescription" : "I can't tell if he's got scales or skin. Not sure if I should check.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+	  "image" : "phirin.png:waiting",
+	  "imagePosition" : [-20, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "phirin.png:waiting",
+	  "imagePosition" : [-20, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/spo.lua" ],
+  
+  "animation" : "spoanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "phirin.png"
+  },
+  "animationPosition" : [-20, 0],
+  
+  "bellySize" : "big",
+  
+  "chatOptions" : [
+    "Rrrh...You almost feel too good to let out.",
+	"Part of me's still confused about this willing prey thing...Most of me doesn't care.",
+	"*Arches back and huffs*",
+	"Rrrf...Still not used to not having to chase people...",
+	"Just so you know, I'm not going to repay the favour. I don't do being eaten.",
+	"Honestly...*urp* ...I could get used to this."
+  ],
+  "gulpLines" : [
+    "Wait, are you seriously going to just jump i-*gulp*- ...Okay then.",
+	"Rrrf - ...Didn't scratch you with my teeth, did I? ",
+	"Aaaah...Geez, you're bigger than you look..."
+  ],
+  "chatIdleFull" : [
+    "Huh...? ...Oh. Um...I'm occupied.",
+	"Really? More people wanting in? I can't right now, sorry.",
+	"Look, I'm not usually this big. Come back when I look less crammed, alright?"
+  ],
+  "chatIdleEmpty" : [
+    "*tenses up as you walk by* ...I'm fighting every impulse not to pounce you right now.",
+	"Really not used to sitting in full view of everyone...",
+	"*sniffs at*",
+	"I am SO glad I agreed to be here...You look delicious.",
+	"I've gone so long without something wiggly on the inside...Don't leave me like thaaat.~",
+	"*eyes scanning surroundings for food*"
+  ],
+  "rubLines" : [
+    "*squeaks* ...Please tell me nobody else heard that.",
+	"*twitch* ...l-little higher, please?",
+	"*leans into your rubs, letting out a purr-like noise*",
+	"Y-you're not going to domesticate me that easily...I didn't say stop.",
+	"Gnaw like it more if you use both hands.",
+	"*gently clamps your hand in mouth when you rub, before letting go* Sorry, kinda lost it for a moment..."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "objectName" : "adriancounter",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "FROGG RESALE",
+        "subtitle" : "What you need for five times the price.",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 5.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "islandhammock"} },
+	  { "item" : { "name" : "islandcabinet"} },
+	  { "item" : { "name" : "islandlamp"} },
+	  { "item" : { "name" : "islandchair"} },
+	  { "item" : { "name" : "islandtable"} },
+	  { "item" : { "name" : "hulagirl"} },
+	  { "item" : { "name" : "seaweedpot"} },
+	  { "item" : { "name" : "seabed"} },
+	  { "item" : { "name" : "seachair"} },
+	  { "item" : { "name" : "coralmirror"} },
+	  { "item" : { "name" : "sealamp"} },
+	  { "item" : { "name" : "steampunkarmchair"} },
+	  { "item" : { "name" : "steampunkbed"} },
+	  { "item" : { "name" : "steampunkdesk"} },
+	  { "item" : { "name" : "steampunkglobe"} },
+	  { "item" : { "name" : "steampunklamp"} },
+	  { "item" : { "name" : "steampunkshelf"} },
+	  { "item" : { "name" : "spookycauldron"} },
+	  { "item" : { "name" : "spookybed"} },
+	  { "item" : { "name" : "spookypumpkinhead"} },
+	  { "item" : { "name" : "spookytombchair"} },
+	  { "item" : { "name" : "spookycandles"} },
+	  { "item" : { "name" : "spookyclock"} }
+    ]
+  },
+  "printable" : false,
+  "description" : "He doesn't look too pleased behing here, but work is work.",
+  "shortdescription" : "^orange;Adrian^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "Avaiability at the expense of expense.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "adrian.png:default",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "animation"  :  "adrian.animation",
+  "animationParts"  :  {
+    "body"  :  "adrian.png"
+  },
+  
+  "scripts" : [ "/objects/mall/froggreseller/adrian/adrian.lua" ],
+  "scriptDelta" : 300,
+  "npcToy" : {}
+}

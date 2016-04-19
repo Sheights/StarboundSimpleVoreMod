@@ -1,8 +1,8 @@
 {
   "kind" : "dummy",
   "nameGen" : [ "/species/humannamegen.config:names", "/species/humannamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.wav", "/sfx/humanoid/humanhurt_female1.wav" ],
-  "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.wav", "/sfx/humanoid/humangrunt2.wav" ], [ "/sfx/humanoid/humangrunt1.wav", "/sfx/humanoid/humangrunt2.wav" ] ],
+  "ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
+  "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],
   "charGenTextLabels" : [ "SKIN COLOR", "HAIR STYLE", "SHIRT", "PANTS", "UNDY COLOR", "HAIR COLOR", "SHIRT COLOR", "PANTS COLOR", "HUMAN", "PERSONALITY" ],
   "skull" : "/humanoid/human/dead.png",
   "defaultBlueprints" : {

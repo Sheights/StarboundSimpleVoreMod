@@ -1,0 +1,154 @@
+{
+  "type" : "pred_dampharos",
+  "baseType" : "villager",
+  
+  "npcname" : "Ampharos",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Well well well, Something appears to be missing.",
+							"Can you place the object back, please?",
+							"Hey! That was my favorite."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I'm afraid that if my home remains like this, I'll have to go...",
+							"Well well well, who is the cause of this?",
+							"This does put me in an akward solution."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"You've found another Ampharos to replace me?",
+							"Nice to meet you! Oh wait. It's not",
+							"We have plenty of spare rooms. This isn't one of them."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"I'm afraid that if my home remains like this, I'll have to go...",
+							"Well well well, who is the cause of this?",
+							"This does put me in an akward solution."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"I think I'm better off living in the wild.",
+							"I have a terrible sense of direction, but that won't stop me from wandering again.",
+							"Well it looks like it's time for me to head out again."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"I don't have anything but warm hugs to give you.",
+							"The dashing wanderer has appeared!",
+							"Can I eat my lunch first?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"I've found this in my travels. I want you to have it.",
+							"This is for you. Treat it well!",
+							"Happy birthday! ... It's not your birthday? Well have it anyway!",
+							"Don't shirk work"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"I don't think I'm strong enough to fight this creature!",
+							"This worries me greatly.",
+							"I may fall soon!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"My comrades need help!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Run away and pay!",
+							"I'm sure you've been through worse."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"It's safe to move around again, you deserve a reward for saving me.",
+							"Y-Yes. I will survive.",
+							"Well done!"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+							"I'm here if you want to relax after your adventures.",
+							"Whatever I do, I do it stylishly!",
+							"Ampharos at your service.",
+							"It's nice to meet you.",
+							"Amphy!",
+							"If you ever get lost just look for my tail!",
+							"Smiles go for miles!"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 3,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/pokemon/pred_dampharos.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "chest" : [
+              { "name" : "ampharosnormalchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "ampharosnormallegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

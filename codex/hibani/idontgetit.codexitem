@@ -1,0 +1,10 @@
+{
+  "codexId" : "hibaniidontgetit",
+  "title" : "I Don't Get it",
+  "codexkind" : "codex",
+  "itemName" : "hibaniIDontGetItCodex",
+  "inventoryIcon" : "hibaniBook.png",
+  "rarity" : "common",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "shortdescription" : "I Don't Get It"
+}

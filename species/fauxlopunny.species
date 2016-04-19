@@ -2,8 +2,8 @@
   "kind" : "fauxlopunny",
   "playerSpecies" : false,
   "nameGen" : [ "/species/fauxlopunnynamegen.config:names", "/species/fauxlopunnynamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/humanoid/fauxlopunnyhurt_male1.wav", "/sfx/humanoid/fauxlopunnyhurt_female1.wav" ],
-  "gruntNoises" : [ [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ], [ "/sfx/humanoid/aviangrunt1.wav", "/sfx/humanoid/aviangrunt2.wav" ] ],
+  "ouchNoises" : [ "/sfx/humanoid/fauxlopunnyhurt_male1.ogg", "/sfx/humanoid/fauxlopunnyhurt_female1.ogg" ],
+  "gruntNoises" : [ [ "/sfx/humanoid/aviangrunt1.ogg", "/sfx/humanoid/aviangrunt2.ogg" ], [ "/sfx/humanoid/aviangrunt1.ogg", "/sfx/humanoid/aviangrunt2.ogg" ] ],
   "charGenTextLabels" : [ "FUR", "EARS", "SHIRT", "PANTS", "FLUFF", "EAR FLUFF", "SHIRT COLOR", "PANTS COLOR", "LOPUNNY", "PERSONALITY" ],
   "defaultBlueprints" : {
     "tier1" : [

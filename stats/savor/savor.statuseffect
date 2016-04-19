@@ -1,5 +1,6 @@
 {
   "name" : "savor",
+  "blockingStat" : "digestionImmunity",
   "effectConfig" : {
     "digestTime" : 100
   },
@@ -9,6 +10,6 @@
     "savor.lua"
   ],
 
-  "label" : "Being Digested",
-  "icon" : "/stats/savor/savor.png"
+  "label" : "Being Savored",
+  "icon" : "/stats/stomachacid/stomachacid.png"
 }

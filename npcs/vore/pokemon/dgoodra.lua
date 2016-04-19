@@ -57,9 +57,17 @@ function initHook()
 	
 end
 
+function interactHook()
+
+	if math.random(4) == 1 then
+		world.spawnProjectile( "goodraprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+	end
+	
+end
+
 function updateHook()
 
-	if math.random(300) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
+	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
 	
 		if #victim == 1 then
 			entity.say( smallLines[math.random(#smallLines)])

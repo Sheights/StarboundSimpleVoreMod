@@ -1,0 +1,15 @@
+{
+
+  "frameGrid" : {
+    "size" : [32, 40],
+    "dimensions" : [8, 3],
+    "names" : [
+      [ "swallow.1", "swallow.2", "swallow.3", "swallow.4", "full.1", "full.2", "full.3", "digest.1" ],
+	  [ "digest.2", "digest.3", "digest.4", "digest.5", "digest.6", "digest.7", "digest.8", "digest.9" ],
+	  [ "idle", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ]
+    ]
+  },
+  "aliases"  :  {
+    "full.4"  :  "full.2"
+  }
+}

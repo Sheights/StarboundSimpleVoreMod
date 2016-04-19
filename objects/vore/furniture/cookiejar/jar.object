@@ -1,0 +1,25 @@
+{
+  "objectName" : "acookiejar",
+  "printable" : false,
+  "colonyTags" : ["treebuddy"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "I like cookies. Do you like cookies?",
+  "shortdescription" : "Cookie Jar",
+
+  "generalDescription" : "Who doesn't like cookies?",
+
+  "inventoryIcon" : "jaricon.png",
+  "orientations" : [
+    {
+      "image" : "jar.png",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

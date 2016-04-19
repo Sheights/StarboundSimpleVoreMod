@@ -1,0 +1,98 @@
+{
+  "objectName" : "voremewtwosmalldigest",
+  "rarity" : "common",
+  "description" : "Lets see how much XP i'm worth.",
+  "shortdescription" : "[CV]Hungry Mewtwo - Small",
+  "race" : "pokemon",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "His stomach is growling.",
+  "avianDescription" : "This pokemon is making me nervous.",
+  "floranDescription" : "Mewtwo not eat Floran, Floran eat mewtwo!",
+  "glitchDescription" : "Alert. This pokemon looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, are you hungry?  Want a burgermon? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this mewtwo's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/mewtwo/malefullsmall.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "maleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "malewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+	"Ah, quit your wiggling and just melt already.",
+	"Mmm, you feel all soft and squishy...",
+ "Can I have your ship once you're cum?",
+	"Still solid in there? I can't tell..",
+ "Not long left till you're sac padding~",
+ "Easier than battling, that's for sure",
+	"Easiest EXP I've ever earned.",
+	"I guess this makes me your trainer....for however much longer you last, anyway.", "Try not to be too fattening, my cock is big enough as it is.", "Pleading is useless. I'm not letting you out until you're liquid..",
+ "Heh, what a pitiful display of squirming.", "My shaft will be even thicker once you're gone.", "Once a powerful adventurer, soon to be a cumstain.", "Are you still there? I can't tell.", "I can't feel much a difference between you and my seed..", "If nothing else, at least your squirming is pleasureful.", "Yesssss. Struggle for me. My sac could use a good massage.", "I wonder how big my balls will be once you've melted away..", "Mrrrrrrh.", "Nnngh~ <3", "Nnh. Can't you kick any harder?", "Soon you'll be nothing but a wet stain inside your own ship.", "I should probably find a condom to release you into..", "You know, you make some delightful sloshing noises when you move.", "Bet you never thought you'd end your life pleasuring me from the inside, huh?", "You were an easy catch, you'll be an easy digestion, too.", "I'll be even sexier soon~", "Mmh, yes.." ],
+  "gulpLines" : [
+ "Gotcha! PLAYER was caught~!", "That's it, get in there where you belong~", "And now you're stuck in my Pokeballs~", "Whoops, looks like my cock was hungry~", "Thank you for your sacrifice. You'll add nicely to my girth~", "Nngh. Always tickles a little bit on the way in~", "Ah, tucked away where you belong~", "Rest in peace, cockfood~"  ],
+ "chatIdleFull" : [
+    "If you can wait for a few minutes, I'll be letting this one go shortly.", "If you see anything suspicious in my sac, stay quiet. Otherwise, I'll have to wipe your mind.", "Does the sight of a full sac attract you? There'll always be room once this one is done..", "Keep walking. Leave this one to their fate.", "What's that? Muffled sloshing noises? You must be hearing things.", "Why yes, my nuts are always this size. I can show you why if you can wait for a few minutes.", "Don't mind me, just enjoying myself. Nnngh. By myself. Move along." ],
+ "chatIdleEmpty" : [
+	"Food belongs inside me. Not walking around.",
+
+ "Care to see how my shaft got the size it is?", "Why not add that sexy body to mine?", "You're feeling very sleepy~... You want to offer yourself to my cock~..", "Ooh.. My nuts could really use a refill.", "You look like the adventurous type. Care to explore some deadly caves?", "You'd make a nice bulge in my shaft.", "Want to give my dick a kiss? It's alright, it won't bite.", "Hey spacer, I got a space for you right in here.", "I wonder what sucks harder, you around my cock, or my cock around you?", "Yes, it is as thick as your arm. It can swallow a lot more than that.", "I'd love to see you sucked, swallowed, and spat back out.", "I'd mentally command you inside me...but I have a feeling you'd do so willingly.", 	"I've heard you're quite the explorer. How good are you with tight spaces?", "You deserve to be inside me. Don't deny yourself the pleasure.", "If you willingly submit to my shaft, I'll give you the best send-off of your life.", "Every time you walk by, my cock aches all the harder.", "If I were you, I'd stop pretending and give your body up to my shaft.", "Look out! There's a purple worm attacking! You must attack it from the inside!", "Look into my eyes, let your mind go, and let yourself sink into the musky heat.." ],
+  "rubLines" : [
+    "Not often I get a rub fron the outside. Not sure it's better than just stuffing you in after them..",
+    "Nothing like a post-meal sac-rub.",
+    "Keep that up, and I'll soon be covering you in what's left of this one..",
+    "Better be good at this, or I'll have seconds.",
+ "Mmm.. Wouldn't you rather be rubbing me from the inside?",
+    "Well aren't you nice, softening up your friend for me.",
+    "Who's in there? Ah, it isn't important. They'll be Mewtwo spunk soon enough.",
+ "Nnf, that's it, break them down~..", "If you want to try sucking them out of me while rubbing like that, I won't stop you~..."
+  ]
+}

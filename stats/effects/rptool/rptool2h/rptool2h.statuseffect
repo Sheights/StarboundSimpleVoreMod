@@ -1,0 +1,12 @@
+{
+  "name" : "rptool2statush",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "rptool2h.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/vicon.png"
+}

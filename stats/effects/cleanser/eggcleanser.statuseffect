@@ -1,0 +1,12 @@
+{
+  "name" : "eggcleanser",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "eggcleanser.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/wellfed.png"
+}

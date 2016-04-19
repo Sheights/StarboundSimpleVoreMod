@@ -1,0 +1,99 @@
+{
+  "objectName": "voreElizabethOGdigest",
+  "printable": false,
+  "rarity": "Uncommon",
+  "catagory": "furniture",
+  "price": 20,
+  "description": "She looks hungry. [Digestion]",
+  "shortdescription": "ElizabethOG",
+
+  "apexDescription": "TODO",
+  "avianDescription": "TODO",
+  "floranDescription": "TODO",
+  "glitchDescription": "TODO",
+  "humanDescrtiption": "TODO",
+  "hylotlDescription": "TODO",
+  "novakidDescription": "TODO",
+
+  "objectType": "loungeable",
+  "sitFlipDirection": false,
+  "sitOrientation": "lay",
+  "sitAngle": 0,
+
+  "sitEmote" : "sad",
+  "sitStatusEffects": [
+    "stomachacid",
+    "nude",
+    "intents"
+  ],
+
+  "inventoryIcon": "femaledangericon.png",
+  "orientations": [
+    {
+      "image": "ElizabethOG.png:waiting.<frame>",
+      "imagePosition": [ 0, 0 ],
+      "direction": "left",
+      "flipImages": true,
+      "sitPosition": [-16, 15 ],
+      "spaceScan": 0.1,
+      "anchors": [ "bottom" ],
+      "detectArea": [
+        [ 2, 0 ],
+        [ 8, 5 ]
+      ],
+      "animationPosition": [ 0, 0 ]
+    },
+    {
+      "image": "ElizabethOG.png:waiting.<frame>",
+      "imagePosition": [ 0,0 ],
+      "direction": "right",
+      "sitPosition": [ -5, 15 ],
+      "spaceScan": 0.1,
+      "anchors": [ "bottom" ],
+      "detectArea": [
+        [ -8, 0 ],
+        [ -2, 5 ]
+      ],
+      "animationPosition": [ 0, 0 ]
+    }
+  ],
+
+  "animation": "ElizabethOG.animation",
+  "animationCustom": {
+    "sounds": {
+      "swallow": [ "/sfx/objects/gulp.wav" ],
+      "lay": [ "/sfx/objects/eggLay.wav" ],
+      "rift": [ "/sfx/objects/rift.wav" ]
+    }
+  },
+  "animationParts": {
+    "body": "ElizabethOG.png"
+  },
+
+  "scripts": [ "/objects/vore/spo/ElizabethOG/ElizabethOGdanger.lua" ],
+  "scriptDelta": 3,
+
+  "chatOptions": [
+    "Don't think digestion means you don't have to buy me a new corset!",
+    "You feel that?",
+    "Kicking won't help you, ooo but don't stop~",
+    "Squirming just makes this faster",
+    "*BURAAAP*, oh how unlady like",
+    "You're all mine now",
+    "Mmm stay solid, I'm not done with you~",
+    "Try to pad the sexy bits~"
+  ],
+  "gulpLines": [
+    "mmm, tastes like candy",
+    "Delicious!",
+    "Watch the lipstick",
+    "Sweet.",
+    "I can't believe that worked."
+  ],
+  "chatIdleEmpty": [
+    "This dame is vacant.",
+    "Hey sugar, you look sweet.",
+    "Don't make a lady wait",
+    "would you kindly get in my tummy"
+  ]
+}

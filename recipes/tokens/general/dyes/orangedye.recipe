@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "voretoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "orangedye",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

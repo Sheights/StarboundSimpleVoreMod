@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "kineptictoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "kinepticlegs",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

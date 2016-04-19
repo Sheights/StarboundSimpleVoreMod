@@ -1,0 +1,21 @@
+{
+
+  "frameGrid" : {
+    "size" : [40, 40],
+    "dimensions" : [13, 12],
+    "names" : [
+      [ "blink.1", "blink.2", "blink.3", "blinkfull.1", "blinkfull.2", "blinkfull.3", "maruup.1", "maruup.2", "maruup.3", "maruup.4", "maruup.5", "maruup.6", "maruup.7" ],
+	  [ "maruup.8", "maruup.9", "maruup.10", "down.1", "down.2", "down.3", "down.4", "down.5", "down.6", "down.7", "down.8", "down.9", "down.10" ],
+	  [ "down.11", "down.12", "down.13", "down.14", "down.15", "downfull.1", "downfull.2", "downfull.3", "downfull.4", "downfull.5", "downfull.6", "downfull.7", "downfull.8" ],
+	  [ "downfull.9", "downfull.10", "downfull.11", "downfull.12", "downfull.13", "downfull.14", "downfull.15", "marudown.1", "marudown.2", "marudown.3", "marudown.4", "marudown.5", "marudown.6" ],
+	  [ "marudown.7", "marudown.8", "marudown.9", "marudown.10", "rub.1", "rub.2", "rub.3", "rub.4", "rub.5", "rub.6", "rub.7", "rub.8", "rub.9" ],
+	  [ "rub.10", "rub.11", "rub.12", "rub.13", "teaup.1", "teaup.2", "teaup.3", "teaup.4", "teaup.5", "teaup.6", "teaup.7", "up.1", "up.2" ],
+	  [ "up.3", "up.4", "up.5", "up.6", "up.7", "up.8", "up.9", "up.10", "up.11", "up.12", "up.13", "up.14", "up.15" ],
+	  [ "upfull.1", "upfull.2", "upfull.3", "upfull.4", "upfull.5", "upfull.6", "upfull.7", "upfull.8", "upfull.9", "upfull.10", "upfull.11", "upfull.12", "upfull.13" ],
+	  [ "upfull.14", "upfull.15", "tail.1", "tail.2", "tail.3", "tail.4", "tail.5", "tail.6", "tail.7", "tail.8", "tail.9", "tail.10", "tail.11" ],
+	  [ "tail.12", "tail.13", "tail.14", "tailfull.1", "tailfull.2", "tailfull.3", "tailfull.4", "tailfull.5", "tailfull.6", "tailfull.7", "tailfull.8", "tailfull.9", "tailfull.10" ],
+	  [ "tailfull.11", "tailfull.12", "tailfull.13", "tailfull.14", "teadown.1", "teadown.2", "teadown.3", "teadown.4", "teadown.5", "teadown.6", "teadown.7", "closed", "tea" ],
+	  [ "full", "peek", "smilefull", "smile", "maru", "idle", "blank", "blank", "blank", "blank", "blank", "blank", "blank" ]
+    ]
+  }
+}

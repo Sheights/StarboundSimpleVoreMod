@@ -1,0 +1,26 @@
+{
+  "objectName" : "bunearyplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "#427: The Rabbit Pokemon",
+  "shortdescription" : "Buneary Plushe",
+  "race" : "hylotl",
+
+  "defaultDescription" : "When it senses danger, it perks up its ears. On cold nights, it sleeps with its head tucked into its fur.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "buneary.png:<color>",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

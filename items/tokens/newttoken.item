@@ -1,0 +1,8 @@
+{
+  "itemName" : "newttoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Newt.png",
+  "description" : "A token that can be exchanged for a newt costume",
+  "shortdescription" : "Newt Token"
+}

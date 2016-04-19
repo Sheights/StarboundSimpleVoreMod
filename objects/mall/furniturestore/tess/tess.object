@@ -1,0 +1,78 @@
+{
+  "objectName" : "treasuretess",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "  TREASURE TESS",
+        "subtitle" : "  Just throw your money on the pile and take what you want.",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "vorenpcsCodex"} },
+	  { "item" : { "name" : "vorenpcsencycloCodex"} },
+	  { "item" : { "name" : "aavbadge"} },
+	  { "item" : { "name" : "aacbadge"} },
+	  { "item" : { "name" : "aadbadge"} },
+	  { "item" : { "name" : "aaubadge"} },
+	  { "item" : { "name" : "aapbadge"} },
+	  { "item" : { "name" : "apreyenabler"} },
+	  { "item" : { "name" : "smallBellyBoundStore"} },
+	  { "item" : { "name" : "acookiejar"} },
+	  { "item" : { "name" : "adragonbag"} },
+	  { "item" : { "name" : "afromograph"} },
+	  { "item" : { "name" : "agiantchocobo"} },
+	  { "item" : { "name" : "adgiantchocobo"} },
+	  { "item" : { "name" : "ajarofmicrossoft"} },
+	  { "item" : { "name" : "ajarofmicroshard"} },
+	  { "item" : { "name" : "alamiaposter"} },
+	  { "item" : { "name" : "amimic"} },
+	  { "item" : { "name" : "admimic"} },
+	  { "item" : { "name" : "aperfumebottle"} },
+	  { "item" : { "name" : "adperfumebottle"} },
+	  { "item" : { "name" : "aslugcage"} },
+	  { "item" : { "name" : "asharktank"} },
+	  { "item" : { "name" : "aspitroast"} },
+	  { "item" : { "name" : "asquishthrone"} },
+	  { "item" : { "name" : "atummytent"} },
+	  { "item" : { "name" : "avoreflag"} },
+	  { "item" : { "name" : "avorb"} },
+	  { "item" : { "name" : "advorb"} }
+    ]
+  },
+  "printable" : false,
+  "description" : "Not a Mimic",
+  "shortdescription" : "^orange;Treasure Tess^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "I'm sure they don't need all that money...",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "tess.png:idle",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "animation"  :  "tess.animation",
+  "animationParts"  :  {
+    "body"  :  "tess.png"
+  },
+  
+  "scripts" : [ "/objects/mall/furniturestore/tess/tess.lua" ],
+  "scriptDelta" : 300,
+  "npcToy" : {}
+}

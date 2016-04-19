@@ -1,0 +1,8 @@
+{
+  "itemName" : "sergaltoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Sergal.png",
+  "description" : "A token that can be exchanged for an sergal costume",
+  "shortdescription" : "Sergal Token"
+}

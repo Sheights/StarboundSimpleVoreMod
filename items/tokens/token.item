@@ -1,0 +1,8 @@
+{
+  "itemName" : "voretoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Token.png",
+  "description" : "A token that can be exchanged for a variety of items",
+  "shortdescription" : "Token"
+}

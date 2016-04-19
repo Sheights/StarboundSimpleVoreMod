@@ -1,0 +1,31 @@
+{
+  "objectName" : "soggypile",
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey", "odd"],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "A pile of clothing, boots and other discarded items, with few feathers sticking out here and there. All of it wet and sticky and smelling of acid.",
+  "shortdescription" : "A Soggy Pile",
+
+  "apexDescription" : "This represents a considerable waste of resources.",
+  "avianDescription" : "Those feathers look half melted...",
+  "floranDescription" : "Floran not like the sssmell of this.",
+  "glitchDescription" : "Puzzled. Does this represent the local style of art?",
+  "humanDescrtiption" : "If they weren't so disgusting, I might use some of this stuff.",
+  "hylotlDescription" : "The patterns of colors are actually quite pleasing, I regret to say...",
+  "novakidDescription" : "I am certain I could design an effective machine to produce objects like these.",
+  "avaliDescription" : "Are those Avian feathers or Avali feathers?",
+
+  "inventoryIcon" : "soggypileicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "soggypile.png:<color>",
+      "imagePosition" : [0, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

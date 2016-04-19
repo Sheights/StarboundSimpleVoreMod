@@ -1,0 +1,89 @@
+{
+  "objectName" : "voremewtwomicro",
+  "rarity" : "common",
+  "description" : "A tiny warm place to spend the night~",
+  "shortdescription" : "[CV]Mewtwo - Micro",
+  "race" : "pokemon",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This Mewtwo seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this pokemon seems... intriguing...",
+  "floranDescription" : "...Floran like mewtwo, but why?",
+  "glitchDescription" : "Wonder.  There is something about this pokemon...",
+  "humanDescrtiption" : "Whatever it is you want, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this mewtwo's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/mewtwo/malefullmicro.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "malewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "maleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.wav" ],
+	  "belly2" : [ "/sfx/objects/belly2.wav" ],
+	  "belly3" : [ "/sfx/objects/belly3.wav" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "malewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+ "Mmmmmmmm~",
+	"Nnh, keep wriggling, would you~?", "Nothing like a warm cumbath to help sooth your sore muscles..", "I'm sure it feels good for you in there, it feels magnificent for me..", "Oooouh... <3~", "If you fall asleep in there, I'll have to keep you overnight.", "Stay as long as you want, hon.", "Aaah~... <3 <3", "I wish I didn't have to let you go when you're through..", "Ooh, you don't have to rub so much...but I certainly do appreciate it~.", "Relax, enjoy yourself...I know I am. <3", "You can drink as much as you'd like, I can always make more~", "Heh. You make such cute bulges..", "Whenever you'd like to come out, I'll be more than happy to release you..", "I'd keep you forever in there if I could..", "You make such a lovely swell to my sac, you know~", "Just have yourself a nice little nap in there.", "Ooh.. Hope the smell isn't too overwhelming in there~", "<3~", "Ooh, don't move so much, you're gonna make me cum..", "Feels wonderful to be full again~.."
+  ],
+  "gulpLines" : [
+  "Down you go~", "See? Just a quick slide and you're in!", "Enjoy your bath!", "Aaaah, wonderful~..", "Best nuts around, now that you're in them~", "Tucked away, right where you belong~", "Weclome to the Hotel Sac de Mewtwo!"
+  ],
+  "chatIdleFull" : [
+  "Sorry, cumbaths are private. One at a time.", "Come back later, there's always a warm bath prepared~", "Sorry, I can't take anyone else. I'm already too close to climax.", "Hey there. Like what you see? Come back later, I might have a spot open~", "Ooooh, nnnh~! That's it, that's-- Oh! Hi. Yes. We'll just be a few minutes, excuse us.", "I'm a little full right now.. You could always massage my nuts if you'd like, though."  ],
+  "chatIdleEmpty" : [
+ "I've got some room to rent over here!",
+ "Up for some fun hon?",
+ "Why build a house when you could move into me?", "Come on in~", "You're welcome to cum inside...heheh~", "Warm cumbath, free of charge~!", "Currently taking occupants!", "Who wants to get intimate with my intimates~?", "Up for some fun, hun~?", "Nice warm slide into a cum-filled sac, first come first serve!", "If you wanna let loose, I've got a nice private chamber~", "Don't bother playing the game, come spend some time inside me instead!", "You are getting very sleepy~... You want to fill my nuts out~...", "You look like the adventurous type. Care to explore my caves?", "You'd make a nice bulge in my shaft~", "Free full-body massage, courtesy of my shaft!", "You deserve a break. Get those clothes off and get inside me~", "My cock is ready for you. Are you ready for it?", "I've got a warm sac to escape the colds of space.", "Two rooms, one vacancy~"
+  ],
+  "rubLines" : [
+    "You're pretty good at this, mind doing it for longer?",
+    "Ooohh! Thanks for the massage ~",
+    "Now i'm getting a massage from both sides.", "A-ahn~!...Sorry. Between the two of you, I'm growing -quite- stimulated. <3~", 
+ "Oooh fuck, keep doing that, I'm going to have to let this one go early..", "Mmmmh, yes....~", "Mmm.. You really like my nuts that much, huh? Well, you're welcome inside whenever this one's all done~..", "Ooh, don't be afraid to get some tongue in there too, hun~.." ]
+}

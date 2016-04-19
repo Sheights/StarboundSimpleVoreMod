@@ -1,0 +1,66 @@
+{
+  "objectName"  :  "voreyokodigest",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "A geeky elf gamer, or so I'm told.[Digestion]",
+  "shortdescription"  :  "Yoko",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "yokodangericon.png",
+  "orientations" : [
+    {
+	  "image" : "yoko.png:waiting.<frame>",
+	  "imagePosition" : [-31, -16],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [-31, -16]
+	},
+    {
+	  "image" : "yoko.png:waiting.<frame>",
+	  "imagePosition" : [-9, -16],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [-9, -16]
+	}
+  ],
+  
+  "animation"  :  "yoko.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "lay" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "yoko.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/yoko/yokodanger.lua" ],
+  "scriptDelta" : 3
+}

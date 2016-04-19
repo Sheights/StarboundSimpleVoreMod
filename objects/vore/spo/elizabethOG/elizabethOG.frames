@@ -1,0 +1,26 @@
+{
+//11 lines by 10
+  "frameGrid"  :  {
+	"size"  :  [64, 48],
+    "dimensions": [ 14, 13 ],
+	"names"  :  [
+	  ["waiting.1", "idle1.1", "idle1.2", "idle1.3", "idle1.4", "idle1.5", "idle1.6", "idle1.7", "idle1.8", "blink.1", "idle2.1", "idle2.2", "idle2.3", "idle2.4"],
+    [ "idle2.5", "idle2.6", "idle2.7", "idle2.8", "idle2.9", "idle2.10", "idle2.11", "idle2.12", "idle2.13", "idle2.14", "swallow.1", "swallow.2","swallow.3","swallow.4"],
+	  [ "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "swallow.11", "fullbig.1", "fullbig.2", "fullbig.3", "fullbig.4", "fullbig.5", "fullbig.6","fullbig.7"],
+    [ "fullbig.8", "fullbig.9", "fullbig.10", "fullbig.11", "fullbig.12", "fullbig.13", "fullbig.14", "fullbig.15", "fullbig.16", "fullbig.17", "fullbig.18", "fullbig.19", "fullbig.20", "fullbig.21"],
+    [ "fullbig.22", "fullbig.23", "fullbig.24", "fullbig.25", "bigtosmall.1", "fullsmall.1", "fullsmall.2", "fullsmall.3", "fullsmall.4", "fullsmall.5", "fullsmall.6", "fullsmall.7", "fullsmall.8","fullsmall.9"],
+    ["fullsmall.10", "fullsmall.11", "fullsmall.12", "fullsmall.13", "fullsmall.14", "fullsmall.15","fullsmall.16","fullsmall.17", "smalltomicro.1", "smalltomicro.2", "fullmicro.1", "fullmicro.2", "fullmicro.3", "fullmicro.4"],
+    [ "fullmicro.5", "fullmicro.6", "fullmicro.7", "fullmicro.8", "fullmicro.9", "fullmicro.10", "fullmicro.11", "fullmicro.12", "fullmicro.13", "fullmicro.14", "fullmicro.15", "fullmicro.16", "fullmicro.17", "fullmicro.18"],
+    ["fullmicro.19", "fullmicro.20","fullmicro.21", "fullmicro.22", "fullmicro.23", "fullmicro.24", "microtonone.1", "microtonone.2", "microtonone.3", "microtonone.4", "microtonone.5", "microtonone.6", "microtonone.7", "microtonone.8"],
+	  ["microtonone.7", "burp.1", "burp.2", "burp.3", "burp.4", "burp.5", "burp.6", "burp.7", "release.1", "release.2", "release.3", "release.4", "release.5", "release.6"],
+	  ["release.7", "release.8", "release.9", "release.10", "release.11", "release.12", "release.13", "release.14", "idle3.1", "idle3.2", "idle3.3", "idle3.4", "idle3.5", "idle3.6"],
+    ["idle3.7", "idle3.8", "idle3.9", "idle3.10", "idle3.11", "idle3.12", "idle3.13", "idle3.14", "idle3.15", "idle3.16", "idle3.17", "idle3.18", "idle3.19", "idle3.20"],
+    ["idle3.21", "idle3.22", "idle3.23", "idle3.24", "idle3.25", "idle3.26", "idle3.27", "idle3.28", "idle3.29", "idle3.30", "idle3.31", "idle3.32", "idle3.33", "idle3.34"],
+    ["idle3.35", "idle3.36", "idle3.37", "idle3.38", "empty.1", "empty.2", "empty.3", "empty.4", "empty.5", "empty.6", "empty.7", "empty.8", "empty.9", "empty.10"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "waiting.default"  :  "waiting.1"
+	}
+}

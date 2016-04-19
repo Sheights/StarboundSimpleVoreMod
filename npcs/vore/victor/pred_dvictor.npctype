@@ -14,6 +14,9 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
+							"I would like that back.",
+							"Could you please give me that back?",
+							"Please, don't take away my stuff.",
 							"I don't like this.",
 							"I miss what you took away.",
 							"Stop stealing my stuff."
@@ -23,6 +26,9 @@
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
+							"Could you please cover that?",
+							"Eugh, a hole in the wall!",
+							"I don't appreciate having holes in my house.",
 							"Grrr... I hate that hole.",
 							"Now I'll have to cover for the bugs.",
 							"I dislike this."
@@ -32,23 +38,30 @@
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"Take that out, please.",
-							"I really don't like competition."
+							"I thought this place was mine, not everyone's.",
+							"Could you please take that guy away?",
+							"I don't appreciate to have my personal space invaded.",
+							"That person or me? Only one, but not both."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						"I'm really not liking this place.",
-						"Please fix this or I'll leave."
+						"I'm asking again. Fix that or I'm going to leave.",
+						"Please, fix that or I'll be forced to leave.",
+						"I think I'll leave.",
+						"This place sucks. I'm off."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"This place sucks. I'm off."
+						"I asked you, and you didn't fix it. Well then. Goodbye.",
+						"You didn't want to fix it. Goodbye.",
+						"Good bye.",
+						"You're a bad person. Goodbye."
 			  ]
 			}
           }
@@ -57,16 +70,16 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-						"Whats up?"
+						"What's up?"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-						"I want my money, please",
-						"Pay now, please.",
-						"Your money or your body. "
+						"There we go",
+						"Here's your money.",
+						"I have some pixels for you."
 			  ]
 			}
           }
@@ -86,7 +99,9 @@
 		  "default" : {
 			"default" : [
 						"That guy kind of needs some help here.",
-						"That guy makes me feel hungry."
+						"That guy makes me feel hungry.",
+						"Ooooh... a battle.",
+						"Could you help that guy there?"
 			]
 		  }
 		},
@@ -104,7 +119,8 @@
 			"default" : [
 					"I could've done it myself but didn't want to take credit.",
 					"Well done.",
-					"Battles like these make me hungry."
+					"Battles like these make me hungry.",
+					"I didnt have time to eat that guy... bah"
 			]
 		  }
         }
@@ -120,9 +136,10 @@
 			"I want to become The Guy again.",
 			"Come crawling faster",
 			"Do you have some 80's music?",
-			"« I don't wanna lose your love, toniiiiight «",
+			"I don't wanna lose your love, toniiiiight",
 			"I want a cuddle... from inside.",
-			"urp"
+			"urp",
+			"I want to draw something."
           ]
         }
       }

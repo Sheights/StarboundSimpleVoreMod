@@ -1,0 +1,155 @@
+{
+  "type" : "mall_nin",
+  "baseType" : "villager",
+  
+  "npcname" : "Nin the Folf",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+  
+  "damageTeamType" : "friendly",
+  "scriptConfig" : { 
+	"damageTeamType" : "friendly",
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Guess what happened to the last guy who touched that?",
+							"You really should put that back if you know what's good for you~",
+							"I know it's shiny, but it's not yours to take."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Look, I know I don't usually live in houses, but I'm going to have standards here...",
+							"How would you like it if I punched a hole in your ship?",
+							"Eh, don't worry about it. I'll fill the hole with your bones after you're done."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I've never been good at sharing, be it food or living spaces.",
+							"You expect me to share space with someone else? How about no."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Are you just not paying attention? This place needs to be fixed.",
+						"Perhaps you'd take my warnings more seriously if I started digesting you..."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Welp, I warned you. I'm raiding your food stores as soon as you turn your back.",
+						"Guess I'm out of here then. It's your own fault when your ship pet goes missing~"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Did I hear a dinner bell?",
+						"Does someone need a good gurgling?",
+						"I'm really shouldn't answer these calls, but I guess I have to in here.",
+						"If you're calling about buying the remains of my food, you'll have to come back later."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Hey, my last meal had this on them, and I can't seem to sell it.",
+						"Oh, I have to give you something now? Ugh, fine, I stole this eariler.",
+						"Abiding by the rules of this universe, here's your payment."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"If I could eat this, it wouldn't be a problem, but noooooo.",
+					"This is why hiring guards is important too, now get this thing away.",
+					"This is why I hesitated when I was told I couldn't bring weapons!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Aww man, I wanted to eat them...",
+						"Someone really should help them, I was going to eat them later!",
+						"At least it's not me I guess, dying here is weird."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Hey, uh, throw that on the fire when you're done with it.",
+					"Oh good, someone else is taking care of it, so I can go back to eating."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Hey uh, you gonna eat that?",
+					"Did you shoot it? Taking bullets out of food is kind of a pain...",
+					"I bet it has a few pieces I can sell off."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hey food :9",
+			"You better have brought me someone, or you're gurgling next.",
+			"Have you seen any avians around? They're my favorite of you lot :9",
+			"Eating glitch is a little weird, but hey, there's always a lot of them left to belch up and sell~",
+			"I'm not the biggest fan of seafood, but I'll still eat it :9",
+			"Mmm, I got my eyes on you~",
+			"I come here to restock my supplies, sorry to disappoint if you're here to buy.",
+			"Hey, what's that behind you :9"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+			  { "name" : "ninhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "chest" : [
+              { "name" : "ninchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "ninlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

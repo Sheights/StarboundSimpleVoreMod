@@ -1,0 +1,8 @@
+{
+  "itemName" : "centaurtoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Centaur.png",
+  "description" : "A token that can be exchanged for a centaur costume",
+  "shortdescription" : "Centaur Token"
+}

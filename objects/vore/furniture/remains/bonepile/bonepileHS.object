@@ -1,0 +1,31 @@
+{
+  "objectName" : "bonepileHS",
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey", "odd"],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "This pile contains skulls and other assorted bones. All well polished.",
+  "shortdescription" : "A Pile of Bones",
+
+  "apexDescription" : "I find this quite unsettling.",
+  "avianDescription" : "Well, at least the beak came out okay...",
+  "floranDescription" : "Floransss have thessse back home too.",
+  "glitchDescription" : "Reminiscing. This reminds me of the ossuary back home.",
+  "humanDescrtiption" : "I do not feel like becaming a part of this pile.",
+  "hylotlDescription" : "Hylotl always inter their dead.",
+  "novakidDescription" : "We do not have these. I have always found them interesting.",
+  "avaliDescription" : "I see no Avali bones. Yet.",
+
+  "inventoryIcon" : "bonepileHSicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "bonepileHS.png:<color>",
+      "imagePosition" : [0, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

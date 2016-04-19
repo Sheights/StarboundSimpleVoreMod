@@ -1,0 +1,154 @@
+{
+  "type" : "prey_shin",
+  "baseType" : "villager",
+  
+  "npcname" : "Shin Kitsune",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Hey, why'd yous take dat?! Put it back!",
+							"Heey, dat's mine! Give it back!",
+							"I liked dat! Put it back!"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Eeeek! Ish really cold in here! Fix it or let me into your tummy!",
+							"Heey, there ish a hole in here! C-could you fix it pwease?",
+							"Hey, my home's breaking! C-could yous fix dat?"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"If ish not Dally moving in with me then no one else moves in.",
+							"Nu! This ish my place and you's not kicking me out!",
+							"Yous try moving someone here and I'll throw a tantrum!"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"Why haven't you fixed my house yets?",
+							"Hey, you's not fixed this yet!",
+							"Heeey, the hole's getting bigger! Can yous fix it pwease?"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"Fine. I'll finds some other belly to move into then.",
+							"Okays... I guess its back to the nursery for me...",
+							"Not for being the littlest I's gonna accept being neglected like dat! Goodbyes!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"I take it you's called me to be food for yous?",
+							"Hai! Yous called?",
+							"Hi theres! Whatchu need me for?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"Here ish a thanks for giving me a warm tummy home.",
+							"Hai! You's been very nice to me, so I wanted to give ya this!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+							"Nuuuu! I dun like hard vore!",
+							"Eeeek! A-a little help pwease?",
+							"Meeeep! Get it away!",
+							"Get this meanie off!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+							"Eeeek! I can't fight to save them!",
+							"Dun let them get hurt!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+							"Yay! Get thems!",
+							"Go get dem! *cheers excitedly!*"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+							"Ish it safe agains?",
+							"A-are theys gone?",
+							"Mmph... Dat was close...!"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Hai there!",
+						"Umm... hai!",
+						"Wanna play wif me?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/shin/prey_shin.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+			  { "name" : "shinhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "chest" : [
+              { "name" : "shinchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "shinlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

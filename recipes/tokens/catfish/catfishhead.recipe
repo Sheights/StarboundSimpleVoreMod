@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "catfishtoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "catfishhead",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

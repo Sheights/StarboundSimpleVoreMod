@@ -1,0 +1,8 @@
+{
+  "itemName" : "axontoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Axon.png",
+  "description" : "A token that can be exchanged for an Axon costume",
+  "shortdescription" : "Axon Token"
+}

@@ -1,0 +1,48 @@
+{
+  "objectName" : "asquishthrone",
+  "printable" : false,
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey"],
+  "rarity" : "Legendary",
+  "category" : "furniture",
+  "price" : 95,
+  "description" : "No matter your taste in furniture, this furniture will find taste in you.",
+  "shortdescription" : "Throne of Squish",
+  
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescription" : "TODO",
+  "hylotlDescription" : "TODO",
+
+  "inventoryIcon" : "squishthroneicon.png",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  
+  "orientations" : [
+    {
+      "image" : "squishthrone.png:<color>",
+      "imagePosition" : [-16, 0],
+      "flipImages" : true,
+      "direction" : "left",
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "sitPosition" : [4, 24]
+    },
+    {
+      "image" : "squishthrone.png:<color>",
+      "imagePosition" : [-16, 0],
+      "direction" : "right",
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "sitPosition" : [-4, 24]
+    }
+  ]
+}

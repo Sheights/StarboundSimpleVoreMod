@@ -1,0 +1,19 @@
+{
+  "itemName" : "lemon",
+  "rarity" : "Common",
+  "price" : 20,
+  "inventoryIcon" : "lemon.png",
+  "description" : "It's a lemon.",
+  "shortdescription" : "Lemon",
+  "handPosition" : [0, 4],
+  "effects" : [ [
+    {
+        "effect" : "foodheal25",
+        "duration" : 60
+    },
+    {
+        "effect" : "wellfed",
+        "duration" : 60
+    }
+  ] ]
+}

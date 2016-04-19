@@ -1,0 +1,45 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "default",
+	    "states"  :  {
+		  "default"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "end"
+		  },
+		  "anim"  :  {
+		    "frames"  :  10,
+			"cycle"  :  1.2,
+			"mode"  :  "transition",
+			"transition" : "default"
+		  }
+		}
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "default"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:default"
+		      }
+		    },
+	        "anim"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:anim.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

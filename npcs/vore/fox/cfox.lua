@@ -1,12 +1,12 @@
 require "/scripts/vore/npcvore.lua"
 
-playerLines = {		"Surprise! Hope you enjoy learning about the reproductive system of foxes~<3",
-					"Such a scrumptious thing you are~",
-					"Ooooo~ Gonna love to make the most of you",
-					"*purrs* Mmm hope I can find more like you, so good~",
-					"Gonna be a shame to let ya out, just love a full sac~ *kneads you about*",
-					"Gosh, I bet it's hot in there with all my fur and fat heating you up~",
-					"You'll be making my furcoat even more gorgeous soon~",
+playerLines = {		"Surprise! I hope you enjoy learning about the reproductive system of foxes. <3",
+					"Such a pleasurable thing you are.",
+					"Ooooo~ Gonna love to make the most of you~",
+					"*Yips* Mmm, hope I can find more like you, feels so good~",
+					"Gonna be a shame to let ya out, just love a full sac. *Kneads you about*",
+					"Gosh, I bet it's hot in there with all my fur and fat heating you up.",
+					"You would make a beatiful puddle~",
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
@@ -47,7 +47,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("Thank you so much for indulging me. You'll enjoy being fox seed~")
+		entity.say("Thank you so much for indulging me. You'll enjoy touring my genitals~")
 	end
 
 	isPlayer = false

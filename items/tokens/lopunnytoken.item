@@ -1,0 +1,8 @@
+{
+  "itemName" : "lopunnytoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Lopunny.png",
+  "description" : "A token that can be exchanged for a lopunny belly",
+  "shortdescription" : "Lopunny Token"
+}

@@ -6,5 +6,5 @@
     "item" : "aacbadge",
     "count" : 1
   },
-  "groups" : [ "bellyBoundStore", "objects", "all", "other" ]
+  "groups" : [ "smallBellyBound" ]
 }

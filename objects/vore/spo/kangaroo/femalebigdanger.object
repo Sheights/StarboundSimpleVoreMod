@@ -1,0 +1,113 @@
+{
+  "objectName" : "vorekangaroobigdigest",
+  "rarity" : "common",
+  "description" : "You'll go down-under!",
+  "shortdescription" : "Hungry Kangaroo Female - Big",
+  "race" : "kangaroo",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "Her stomach is growling.",
+  "avianDescription" : "This kangaroo is making me nervous.",
+  "floranDescription" : "Kangaroo not eat Floran, Floran eat kangaroo!",
+  "glitchDescription" : "Alert. This female looks hungry enough to eat anything.",
+  "humanDescrtiption" : "Oh, miss, are you hungry?  Want a banana? ...What?",
+  "hylotlDescription" : "What is that disturbing noise?",
+  "novakidDescription" : "I don't like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/kangaroo/femalefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "Try not to be tooooo fattening~",
+	"Stop wiggling and just digest now~",
+	"Mmm~, you feel all soft and squishy~",
+	"Can I have your ship once you're done~?",
+	"*BUUURUURALURP* Oh, excuse me~",
+	"Still solid in there~?",
+	"Not long left till you're just padding~",
+	"Hehe~ you feel like clay already.",
+	"I'll be even sexier soon~",
+	"I be fulla melty things~"
+  ],
+  "gulpLines" : [
+    "A moment on my lips, a lifetime on my hips~",
+	"Too late now~",
+	"Thanks for the meal~",
+	"So filling~"
+  ],
+  "chatIdleFull" : [
+    "Mmm, come back in a bit, sugar~",
+	"What's that you say? I don't hear anybody.",
+	"Say, are you open later? I might have some... room in my schedule~"
+  ],
+  "chatIdleEmpty" : [
+    "Hey, I've got something stuck in my mouth, can you check it?",
+	"Why not add that sexy body to mine~?",
+	"I'm sooo hungry...",
+	"Are you as tasty as you look~?",
+	"You smell delicious~",
+	"Food belongs inside me. Not walking around.",
+	"Hey spacer, I got a space for you right in here~",
+	"Keep waving that ass around me and you'll end up padding mine."
+  ],
+  "rubLines" : [
+    "Not often i get a rub fron the outside.",
+    "Nothing like a post-meal belly-rub.",
+    "Keep it up, it's good for digestion...",
+    "Better be good at this, or i'll have seconds.",
+    "Maybe later you can give me a rub from the inside instead.",
+    "Well aren't you nice, helping me digest your friend.",
+    "Can you feel your friend slowly digesting inside of me?",
+    "Not sure if you want to be next, or pleading for your life."
+  ]
+}

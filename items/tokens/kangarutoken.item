@@ -1,0 +1,8 @@
+{
+  "itemName" : "kangarutoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Kangaru.png",
+  "description" : "A token that can be exchanged for a kangaru costume",
+  "shortdescription" : "Kangaru Token"
+}

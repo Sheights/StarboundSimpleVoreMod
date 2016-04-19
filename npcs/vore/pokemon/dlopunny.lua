@@ -29,6 +29,14 @@ function initHook()
 	
 end
 
+function interactHook()
+
+	if math.random(4) == 1 then
+		world.spawnProjectile( "lopunnyprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+	end
+	
+end
+
 function loseHook()
 	
 	if isPlayer then

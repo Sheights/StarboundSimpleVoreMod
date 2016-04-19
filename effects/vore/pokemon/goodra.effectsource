@@ -1,0 +1,12 @@
+{
+  "kind" : "goodraemitter",
+  "definition" : {
+    "duration" : 3.0,
+    "loops" : false,
+    "start" : {
+      "sounds" : [
+        [ "/sfx/pokemon/goodra.ogg" ]
+      ]
+    }
+  }
+}

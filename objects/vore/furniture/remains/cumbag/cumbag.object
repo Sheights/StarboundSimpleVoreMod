@@ -1,0 +1,31 @@
+{
+  "objectName" : "cumbag",
+  "colonyTags" : ["vore", "cvore", "dvore", "uvore", "prey", "odd"],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 100,
+  "description" : "An extra sized condom, more of a plastic bag really, filled with cum.",
+  "shortdescription" : "A Bag of Cum",
+
+  "apexDescription" : "Did I just see something in it move?",
+  "avianDescription" : "Feathers and sticky do not mix well.",
+  "floranDescription" : "Floran not ssstab the white bag. Not want sssticky mess.",
+  "glitchDescription" : "Perplexed. I do not understand the function of this.",
+  "humanDescrtiption" : "Exactly how am I supposed to feel about this?",
+  "hylotlDescription" : "This shows a deplorable taste in decoration.",
+  "novakidDescription" : "It just is. Why is it interesting?",
+  "avaliDescription" : "Getting that stuff out of my feathers would take ages.",
+
+  "inventoryIcon" : "cumbagicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "cumbag.png:<color>",
+      "imagePosition" : [0, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

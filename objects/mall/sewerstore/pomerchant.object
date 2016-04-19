@@ -1,0 +1,47 @@
+{
+  "objectName" : "pomerchant",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "PO MERCHANT",
+        "subtitle" : "Fresh remains collected from an expert.",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "bonepileHS"} },
+	  { "item" : { "name" : "cumbag"} },
+	  { "item" : { "name" : "soggypile"} }
+    ]
+  },
+  "printable" : false,
+  "description" : "Ew",
+  "shortdescription" : "^orange;Po Merchant^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "Ew",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "pomerchant.png:idle.<frame>",
+      "imagePosition" : [0, 0],
+	  "frames" : 4,
+      "animationCycle" : 1,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "npcToy" : {}
+}

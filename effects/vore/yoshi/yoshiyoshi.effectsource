@@ -5,7 +5,7 @@
     "loops" : false,
     "start" : {
       "sounds" : [
-        [ "/sfx/vore/yoshi/yoshiyoshi.wav" ]
+        [ "/sfx/vore/yoshi/yoshiyoshi.ogg" ]
       ]
     }
   }

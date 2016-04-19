@@ -1,0 +1,8 @@
+{
+  "itemName" : "mantizitoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Mantizi.png",
+  "description" : "A token that can be exchanged for a mantizi costume",
+  "shortdescription" : "Mantizi Token"
+}

@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "orcatoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "orcalegs",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

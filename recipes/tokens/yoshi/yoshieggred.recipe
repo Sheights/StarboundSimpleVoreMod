@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "yoshitoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "yoshieggred",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

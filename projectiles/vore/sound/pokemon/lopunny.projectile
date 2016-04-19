@@ -1,0 +1,16 @@
+{
+  "projectileName" : "lopunnyprojectile",
+  "bounces" : -1,
+  "frames" : "invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "timeToLive" : 3,
+  "animationLoops" : false,
+  "flippable" : true,
+  "piercing" : true,
+  "damagePoly" : [ [-12, 0], [-8, -8], [0, -12], [8, -8], [12, 0], [8, 8], [0, 12], [-8, 8] ],
+  "damageTeam" : { "type" : "indiscriminate" },
+  "damageKind" : "NoDamage",
+  "power" : 0,
+  "emitters" : [ "lopunnyemitter" ]
+}

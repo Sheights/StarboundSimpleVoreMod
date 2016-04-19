@@ -1,0 +1,8 @@
+{
+  "itemName" : "felintoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Felin.png",
+  "description" : "A token that can be exchanged for a felin costume",
+  "shortdescription" : "Felin Token"
+}

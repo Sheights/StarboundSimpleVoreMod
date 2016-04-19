@@ -1,0 +1,8 @@
+{
+  "name" : "vorerpv2Egg",
+  "type" : "head",
+
+  "scripts" : ["vorerpv2Egg.lua"],
+  "actions" : ["active","deactive"],
+  "animator" : "vorerpv2.animation"
+}

@@ -1,0 +1,26 @@
+{
+  "objectName" : "goomyplush",
+  "colonyTags" : ["poke","pretty"],
+  "rarity" : "Rare",
+  "category" : "decorative",
+  "price" : 200,
+  "printable" : false,
+
+  "description" : "#704: The Soft Tissue Pokemon",
+  "shortdescription" : "Goomy Plushe",
+  "race" : "hylotl",
+
+  "defaultDescription" : "It's covered in a slimy membrane that makes any punches or kicks slide off it harmlessly.",
+
+  "inventoryIcon" : "pokeicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "goomy.png:<color>",
+      "imagePosition" : [-8, 0],
+      
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

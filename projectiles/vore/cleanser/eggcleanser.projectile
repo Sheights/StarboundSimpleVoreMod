@@ -1,0 +1,16 @@
+{
+	"projectileName" : "eggcleanser",
+	"frames" : "invisibleprojectile.png",
+	"frameNumber" : 1,
+	"animationCycle" : 0.5,
+	"timetolive" : 0.01,
+	"speed" : 0,
+	"animationLoops" : false,
+	"damagePoly" : [ [-12, 0], [-8, -8], [0, -12], [8, -8], [12, 0], [8, 8], [0, 12], [-8, 8] ],
+	"flippable" : true,
+    "piercing" : true,
+	"damageTeam" : { "type" : "indiscriminate" },
+	"damageKind" : "default",
+	"power" : 0,
+	"statusEffects" : [ {"effect" : "eggcleanser", "duration" : 1.0} ]
+}

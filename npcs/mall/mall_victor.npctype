@@ -1,0 +1,168 @@
+{
+  "type" : "mall_victor",
+  "baseType" : "villager",
+
+  "npcname" : "Victor",
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I would like that back.",
+							"Could you please give me that back?",
+							"Please, don't take away my stuff.",
+							"I don't like this.",
+							"I miss what you took away.",
+							"Stop stealing my stuff."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Could you please cover that?",
+							"Eugh, a hole in the wall!",
+							"I don't appreciate having holes in my house.",
+							"Grrr... I hate that hole.",
+							"Now I'll have to cover for the bugs.",
+							"I dislike this."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I thought this place was mine, not everyone's.",
+							"Could you please take that guy away?",
+							"I don't appreciate to have my personal space invaded.",
+							"That person or me? Only one, but not both."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"I'm asking again. Fix that or I'm going to leave.",
+						"Please, fix that or I'll be forced to leave.",
+						"I think I'll leave.",
+						"This place sucks. I'm off."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"I asked you, and you didn't fix it. Well then. Goodbye.",
+						"You didn't want to fix it. Goodbye.",
+						"Good bye.",
+						"You're a bad person. Goodbye."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"What's up?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"There we go",
+						"Here's your money.",
+						"I have some pixels for you."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"I kind of need some help here.",
+					"Help!",
+					"Help me please?"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"That guy kind of needs some help here.",
+						"That guy makes me feel hungry.",
+						"Ooooh... a battle.",
+						"Could you help that guy there?"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"You can do it!",
+					"Beat it! I'll look from here. ",
+					"Beat it! I'll help!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"I could've done it myself but didn't want to take credit.",
+					"Well done.",
+					"Battles like these make me hungry.",
+					"I didnt have time to eat that guy... bah"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "The other day I saw a guy that looked so delicious",
+			"I love when they squirm inside.",
+			"Yeah, and that's how I started.",
+			"I like sprite games more than 3D ones.",
+			"And then I played Commander Keen 5 and it wasn't the same.",
+			"I want to become The Guy again.",
+			"Come crawling faster",
+			"Do you have some 80's music?",
+			"I don't wanna lose your love, toniiiiight",
+			"I want a cuddle... from inside.",
+			"urp",
+			"I want to draw something."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "victorhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "victorchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "victorlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

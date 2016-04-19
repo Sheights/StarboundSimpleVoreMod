@@ -1,0 +1,10 @@
+{
+  "codexId" : "hibanibadspecies",
+  "title" : "Bad Species",
+  "codexkind" : "codex",
+  "itemName" : "hibaniBadSpeciesCodex",
+  "inventoryIcon" : "hibaniBook.png",
+  "rarity" : "common",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "shortdescription" : "Bad Species"
+}

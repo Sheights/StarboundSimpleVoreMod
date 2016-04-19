@@ -1,0 +1,67 @@
+{
+  "objectName"  :  "vorerubysnoot",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "It's half car. I really don't know. BUT LISTEN TO THAT ENGINE REV.",
+  "shortdescription"  :  "Ruby Snoot",
+
+  "apexDescription" : "TODO",
+  "avianDescription" : "TODO",
+  "floranDescription" : "TODO",
+  "glitchDescription" : "TODO",
+  "humanDescrtiption" : "TODO",
+  "hylotlDescription" : "TODO",
+  "novakidDescription" : "TODO",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "rubysnooticon.png",
+  "orientations" : [
+    {
+	  "image" : "rubysnoot.png:empty",
+	  "imagePosition" : [-68, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-68, 30],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-68, 0]
+	},
+    {
+	  "image" : "rubysnoot.png:empty",
+	  "imagePosition" : [-68, 0],
+	  "direction" : "right",
+	  "sitPosition" : [-68, 30],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-68, 0]
+	}
+  ],
+  
+  "animation"  :  "rubysnoot.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ],
+	  "rev" : [ "/sfx/objects/rev.ogg" ],
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "spit" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "rubysnoot.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/ruby/rubysnoot.lua" ],
+  "scriptDelta" : 3
+}

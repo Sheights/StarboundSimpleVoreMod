@@ -1,5 +1,6 @@
 {
   "name" : "stomachacid",
+  "blockingStat" : "digestionImmunity",
   "effectConfig" : {
     "digestTime" : 60
   },

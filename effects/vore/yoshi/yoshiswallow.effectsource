@@ -5,7 +5,7 @@
     "loops" : false,
     "start" : {
       "sounds" : [
-        [ "/sfx/vore/yoshi/yoshiswallow.wav" ]
+        [ "/sfx/vore/yoshi/yoshiswallow.ogg" ]
       ]
     }
   }

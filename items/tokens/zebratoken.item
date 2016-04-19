@@ -1,0 +1,8 @@
+{
+  "itemName" : "zebratoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Zebra.png",
+  "description" : "A token that can be exchanged for a zebrataur costume",
+  "shortdescription" : "Zebra Token"
+}

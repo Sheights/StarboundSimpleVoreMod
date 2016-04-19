@@ -1,0 +1,60 @@
+{
+  "objectName" : "voretailsfur",
+  "rarity" : "uncommon",
+  "description" : "A nice warm place to spend the night~",
+  "shortdescription" : "Tails Fur",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "generalDescription" : "A two tailed fox.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "tailsfur.png:idle.<frame>",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [16, 12],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "tailsfur.png:idle.<frame>",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",
+	  "sitPosition" : [16, 12],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/tails/fur/tails.lua" ],
+  
+  "animation" : "tails.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "tailsfur.png"
+  },
+  "animationPosition" : [-16, 0]
+}

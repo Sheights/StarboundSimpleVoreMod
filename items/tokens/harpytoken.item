@@ -1,0 +1,8 @@
+{
+  "itemName" : "harpytoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Harpy.png",
+  "description" : "A token that can be exchanged for a harpy's nest",
+  "shortdescription" : "Harpy Token"
+}

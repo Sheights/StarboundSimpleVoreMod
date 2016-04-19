@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "lynntoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "argolegs",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

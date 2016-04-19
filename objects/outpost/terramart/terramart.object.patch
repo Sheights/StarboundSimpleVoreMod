@@ -1,0 +1,16 @@
+[
+	{
+		"op" : "add",
+		"path" : "/interactData/items/-",
+		"value" : {
+			 "item" : "bergamot"
+		}
+	},
+	{
+		"op" : "add",
+		"path" : "/interactData/items/-",
+		"value" : {
+			 "item" : "lemon"
+		}
+	}
+]

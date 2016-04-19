@@ -1,0 +1,108 @@
+{
+  "objectName" : "vorexenomorphsmallu",
+  "rarity" : "common",
+  "description" : "A tight warm place to spend the night~",
+  "shortdescription" : "Motherly Xenomorph Female - Small",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This xenomorph female seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this alien seems... intriguing...",
+  "floranDescription" : "...Floran like xenomorph, but why?",
+  "glitchDescription" : "Wonder.  There is something about this alien...",
+  "humanDescrtiption" : "Whatever it is you want, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this alien's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/xenomorph/femalefullsmall.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "-Mmm...several months later, and you're much more manageable~-",
+	"-Ah, my child...she stirs deep within me~-",
+	"-Oof! My rib! Be thankful I love you~-",
+	"-Haaah, this is truly the life~-",
+	"-Mmm, welcome back. You've been asleep for a long time, and I already feel your tail~-",
+	"-Hope you like being transformed into a xenomorph...This is just incredible...~",
+	"-When you come out, I hope you act like I'm your queen...you should anyway.-",
+	"-I am a queen...Carrying my unborn within my belly~-",
+	"-Do you like it in there? You should. You've been sleeping in there for almost three months~-"
+  ],
+  "gulpLines" : [
+    "Screeeech!!!...Hiiisssssss~",
+	"Hiiisssss...Purrr...Purr~",
+	"Churrr....clickclickclick!",
+	"Hiiiissssss~~"
+  ],
+  "chatIdleFull" : [
+    "Sorry, no vacancies~",
+	"Come back later~",
+	"Sorry, one person per... room~"
+  ],
+  "chatIdleEmpty" : [
+    "-My abdomen feels hot...and throbs for you to be in there...",
+	"-Huumaaaaan...Would you like to change your body?-",
+	"-My belly is so empty and cold...I want to feel it wriggling with life!-",
+	"-You look like lively offspring...follow me~-",
+	"-Humanoids don't belong outside!-",
+	"-Certainly you long for companionshiiiip?-",
+	"-I know a place that will take care of you, all day, all night~-",
+	"-This place is okay...but you should explore my loins~-"
+  ],
+  "rubLines" : [
+    "You're pretty good at this, mind doing it for longer?",
+    "Ooohh! Thanks for the massage ~",
+    "Now i'm getting a massage from both sides.",
+    "I love a good belly rub ~"
+  ]
+}

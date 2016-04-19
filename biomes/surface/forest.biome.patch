@@ -1,0 +1,22 @@
+[
+	{
+		"op" : "add",
+		"path" : "/surfacePlaceables/items/-",
+		"value" : {
+			"mode" : "floor",
+			"priority" : 1.0,
+			"variants" : 1,
+			"distribution" : "/biomes/distributions.config:surfaceCrops",
+
+			"type" : "object",
+			"objectSets" : [
+            {
+				"pool": [
+					[ 1, "wildcamelliaseed" ]
+				],
+				"parameters": { "startingStage": 4 }
+            }
+			]
+		}
+	}	
+]

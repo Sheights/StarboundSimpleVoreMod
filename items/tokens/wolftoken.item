@@ -1,0 +1,8 @@
+{
+  "itemName" : "wolftoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Wolf.png",
+  "description" : "A token that can be exchanged for a wolf costume",
+  "shortdescription" : "Wolf Token"
+}

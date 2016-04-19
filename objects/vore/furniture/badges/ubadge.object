@@ -1,0 +1,34 @@
+{
+  "objectName" : "aaubadge",
+  "printable" : false,
+  "colonyTags" : ["uvore"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for an 'unbirth' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Unbirth Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "apexDescription" : "Like. Cloning?",
+  "avianDescription" : "To return to an egg would be most liberating.",
+  "floranDescription" : "Floran not born from squishy place. Floran grown from ground.",
+  "glitchDescription" : "Does not computeth.",
+  "humanDescription" : "I have several questions.",
+  "hylotlDescription" : "I enjoy being amphibious. Would I have to give that up?",
+  "novakidDescription" : "They ain't my momma.",
+
+  "inventoryIcon" : "uicon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:U",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

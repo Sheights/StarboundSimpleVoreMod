@@ -1,0 +1,156 @@
+{
+  "type" : "prey_dtreebuddy",
+  "baseType" : "villager",
+  
+  "npcname" : "Treebuddy",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Something missing but what ?",
+							"Its odd i though there was a object there",
+							"Its no more zen"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"I know i'm a wolf bu i aint living outside ether",
+							"Thats a nice window , now it just need a glass",
+							"If it was a hole making competition your would have a 10"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"oh myh i cant lic- i mean wash myself with some one else around!",
+							"wait his taking to much place ",
+							"nuuuoooo~ its my room "
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Ya really like my stuff",
+						"Please give it back ",
+						"I need it "
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Well cya later",
+						"I'l maybe come back later "
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Didja call me ?",
+						"What ? ya find something suspicious !",
+						"Yeah yeah im here "
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here's something and thats just between me and ya ",
+						"I may have given more than i should",
+						"Its not much but its aint like i owe u something",
+						"I could pay with hugs but u cant buy things with that "
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"He's after me!",
+					"HALP MAH !"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"They seems in truble's",
+						"Oh-Myh is that blood !"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Bash him hard",
+					"Make him surfer"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Well , that was something ",
+					"Ouf! i still have my tail ",
+					"In yar face"
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "OH-Hey how yar going ",
+			"Its a nice day isnt it ? ",
+			"Do you like cookie's ? i do",
+			"Oh ya look lovely",
+			"C-can i help ya ?",
+			"I'm happy to see u"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/wolf/prey_dtreebuddy.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+			  { "name" : "treebuddyhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "chest" : [
+              { "name" : "wolfnewchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "wolfnewlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

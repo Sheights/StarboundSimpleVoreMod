@@ -1,0 +1,27 @@
+{
+  "name": "pred_ruto",
+  "priority": 14,
+
+  "colonyTagCriteria": {
+    "ocean": 10,
+    "door": 1,
+	"light": 2,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "dummy",
+      "type": "pred_ruto",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

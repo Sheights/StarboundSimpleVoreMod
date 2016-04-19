@@ -1,0 +1,32 @@
+{
+  "objectName" : "obelisk",
+  "colonyTags" : ["pretty", "bunyip"],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 300,
+  "description" : "An obelisk pulsing with energy, fit for summoning spiritual creatures, surrounded by the materials to summon a Bunyip.",
+  "shortdescription" : "Ritual Obelisk",
+  "apexDescription" : "The energy from this stone makes my hair prickle...What is this?",
+  "avianDescription" : "...I don't think I'm comfortable with rituals like this, even if it does summon powerful beings...",
+  "floranDescription" : "Free fish!",
+  "glitchDescription" : "Analytic: Obelisk appears Gielinorian in origin. There is a raw shark and some other odd trinkets at its base.",
+  "humanDescription" : "Okay...If one has to sacrifice something as scary as a shark for this...What is it going to summon...?",
+  "hylotlDescription" : "An ignoble end for such a fierce predator...What is this going to lead to?",
+  "novakidDescription" : "I'm not goin' to even pretend I know how this hoodoo-voodoo stuff works.",
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "obelisk.png:default.<frame>",
+
+      "imagePosition" : [0, 0],
+      "frames" : 8,
+      "animationCycle" : 3.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ]
+}

@@ -1,683 +1,11 @@
 [
 	{ "op" : "add",
-      "path" : "/aligatorCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "aligatorchest"},
-		  {"weight" : 1.0, "item" : "aligatorhead"},
-		  {"weight" : 1.0, "item" : "aligatorlegs"},
-		  {"weight" : 0.5, "item" : "aligatorlegsbelly"},
-		  {"weight" : 0.5, "item" : "aligatorlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/avaliCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "avalichest"},
-		  {"weight" : 1.0, "item" : "avalilegs"},
-		  {"weight" : 0.5, "item" : "avalilegsbelly"},
-		  {"weight" : 1.0, "item" : "avalihead1"},
-		  {"weight" : 1.0, "item" : "avalihead2"},
-		  {"weight" : 1.0, "item" : "avalihead3"},
-		  {"weight" : 1.0, "item" : "avalihead4"},
-		  {"weight" : 1.0, "item" : "avalihead5"},
-		  {"weight" : 1.0, "item" : "avalihead6"},
-		  {"weight" : 1.0, "item" : "avalihead7"},
-		  {"weight" : 1.0, "item" : "avalihead8"},
-		  {"weight" : 1.0, "item" : "avalihead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/catCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "catchest"},
-		  {"weight" : 1.0, "item" : "cathead"},
-		  {"weight" : 1.0, "item" : "catlegs"},
-		  {"weight" : 0.5, "item" : "catchestbelly"},
-		  {"weight" : 0.5, "item" : "catlegsbelly"},
-		  {"weight" : 0.5, "item" : "catsofa"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/catCVCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "catchest"},
-		  {"weight" : 1.0, "item" : "cathead"},
-		  {"weight" : 1.0, "item" : "catlegs"},
-		  {"weight" : 0.5, "item" : "catchestballs"},
-		  {"weight" : 0.5, "item" : "catlegsballs"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/catfishCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "catfishchest"},
-		  {"weight" : 1.0, "item" : "catfishhead"},
-		  {"weight" : 1.0, "item" : "catfishlegs"},
-		  {"weight" : 0.5, "item" : "catfishlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/centaurCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "centaurblacklegs"},
-		  {"weight" : 1.0, "item" : "centaurbrownlegs"},
-		  {"weight" : 1.0, "item" : "centaurwhitelegs"},
-		  {"weight" : 0.5, "item" : "centaurblacklegsbelly"},
-		  {"weight" : 0.5, "item" : "centaurbrownlegsbelly"},
-		  {"weight" : 0.5, "item" : "centaurwhitelegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/crystalDragonCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "dragoncrystalchest"},
-		  {"weight" : 1.0, "item" : "dragoncrystalhead"},
-		  {"weight" : 1.0, "item" : "dragoncrystallegs"},
-		  {"weight" : 0.3, "item" : "dragoncrystallegsbelly1"},
-		  {"weight" : 0.6, "item" : "dragoncrystallegsbelly2"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/deertaurCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "deertaurlegs"},
-		  {"weight" : 1.0, "item" : "deertaurspottedlegs"},
-		  {"weight" : 1.0, "item" : "deertaurchest"},
-		  {"weight" : 1.0, "item" : "deertaurdownhead"},
-		  {"weight" : 1.0, "item" : "deertauruphead"},
-		  {"weight" : 0.5, "item" : "deertaurlegsbelly"},
-		  {"weight" : 0.5, "item" : "deertaurspottedlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/dezzyCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "dezzyyoshichest"},
-		  {"weight" : 1.0, "item" : "dezzyyoshilegs"},
-		  {"weight" : 0.5, "item" : "dezzyyoshilegsbelly"},
-		  {"weight" : 1.0, "item" : "dezzyyoshihead11"},
-		  {"weight" : 1.0, "item" : "dezzyyoshihead13"},
-		  {"weight" : 1.0, "item" : "dezzyyoshihead21"},
-		  {"weight" : 1.0, "item" : "dezzyyoshihead23"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/dragonCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "dragonchest"},
-		  {"weight" : 1.0, "item" : "dragonhead"},
-		  {"weight" : 1.0, "item" : "dragonlegs"},
-		  {"weight" : 0.3, "item" : "dragonlegsbelly1"},
-		  {"weight" : 0.6, "item" : "dragonlegsbelly2"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/felinCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "felinchest"},
-		  {"weight" : 1.0, "item" : "felinlegs"},
-		  {"weight" : 0.5, "item" : "felinlegsbelly"},
-		  {"weight" : 1.0, "item" : "felinhead1"},
-		  {"weight" : 1.0, "item" : "felinhead2"},
-		  {"weight" : 1.0, "item" : "felinhead3"},
-		  {"weight" : 1.0, "item" : "felinhead4"},
-		  {"weight" : 1.0, "item" : "felinhead5"},
-		  {"weight" : 1.0, "item" : "felinhead6"},
-		  {"weight" : 1.0, "item" : "felinhead7"},
-		  {"weight" : 1.0, "item" : "felinhead8"},
-		  {"weight" : 1.0, "item" : "felinhead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/foxCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "foxchest"},
-          {"weight" : 1.0, "item" : "foxhead"},
-		  {"weight" : 1.0, "item" : "foxlegs"},
-		  {"weight" : 0.5, "item" : "foxchestbelly"},
-		  {"weight" : 0.5, "item" : "foxlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/foxCVCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "foxchest"},
-          {"weight" : 1.0, "item" : "foxhead"},
-		  {"weight" : 1.0, "item" : "foxlegs"},
-		  {"weight" : 0.5, "item" : "foxchestballs"},
-		  {"weight" : 0.5, "item" : "foxlegsballs"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/harpyNest",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "nestleft"},
-		  {"weight" : 1.0, "item" : "nestmiddle"},
-		  {"weight" : 1.0, "item" : "nestright"},
-		  {"weight" : 0.1, "item" : "nestperch"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/kangaruCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "kangaruchest"},
-		  {"weight" : 1.0, "item" : "kangarulegs"},
-		  {"weight" : 0.5, "item" : "kangarulegsbelly"},
-		  {"weight" : 1.0, "item" : "kangaruhead1"},
-		  {"weight" : 1.0, "item" : "kangaruhead2"},
-		  {"weight" : 1.0, "item" : "kangaruhead3"},
-		  {"weight" : 1.0, "item" : "kangaruhead4"},
-		  {"weight" : 1.0, "item" : "kangaruhead5"},
-		  {"weight" : 1.0, "item" : "kangaruhead6"},
-		  {"weight" : 1.0, "item" : "kangaruhead7"},
-		  {"weight" : 1.0, "item" : "kangaruhead8"},
-		  {"weight" : 1.0, "item" : "kangaruhead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/kinepticCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "kinepticchest"},
-		  {"weight" : 1.0, "item" : "kinepticlegs"},
-		  {"weight" : 0.5, "item" : "kinepticlegsbelly"},
-		  {"weight" : 1.0, "item" : "kineptichead1"},
-		  {"weight" : 1.0, "item" : "kineptichead2"},
-		  {"weight" : 1.0, "item" : "kineptichead3"},
-		  {"weight" : 1.0, "item" : "kineptichead4"},
-		  {"weight" : 1.0, "item" : "kineptichead5"},
-		  {"weight" : 1.0, "item" : "kineptichead6"},
-		  {"weight" : 1.0, "item" : "kineptichead7"},
-		  {"weight" : 1.0, "item" : "kineptichead8"},
-		  {"weight" : 1.0, "item" : "kineptichead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/kirhosCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "kirhoschest"},
-		  {"weight" : 1.0, "item" : "kirhoslegs"},
-		  {"weight" : 0.5, "item" : "kirhoslegsbelly"},
-		  {"weight" : 1.0, "item" : "kirhoshead1"},
-		  {"weight" : 1.0, "item" : "kirhoshead2"},
-		  {"weight" : 1.0, "item" : "kirhoshead3"},
-		  {"weight" : 1.0, "item" : "kirhoshead4"},
-		  {"weight" : 1.0, "item" : "kirhoshead5"},
-		  {"weight" : 1.0, "item" : "kirhoshead6"},
-		  {"weight" : 1.0, "item" : "kirhoshead7"},
-		  {"weight" : 1.0, "item" : "kirhoshead8"},
-		  {"weight" : 1.0, "item" : "kirhoshead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/lamiaCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "lamialegs"},
-		  {"weight" : 0.5, "item" : "lamialegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },	
-	{ "op" : "add",
-      "path" : "/lopunnyCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "lopunnybelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/lucarioCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "lucariobelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/mantiziCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "mantizichest"},
-		  {"weight" : 1.0, "item" : "mantizilegs"},
-		  {"weight" : 0.5, "item" : "mantizilegsbelly"},
-		  {"weight" : 1.0, "item" : "mantizihead1"},
-		  {"weight" : 1.0, "item" : "mantizihead2"},
-		  {"weight" : 1.0, "item" : "mantizihead3"},
-		  {"weight" : 1.0, "item" : "mantizihead4"},
-		  {"weight" : 1.0, "item" : "mantizihead5"},
-		  {"weight" : 1.0, "item" : "mantizihead6"},
-		  {"weight" : 1.0, "item" : "mantizihead7"},
-		  {"weight" : 1.0, "item" : "mantizihead8"},
-		  {"weight" : 1.0, "item" : "mantizihead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/newtCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "newtchest"},
-		  {"weight" : 1.0, "item" : "newthead"},
-		  {"weight" : 1.0, "item" : "newtlegs"},
-		  {"weight" : 0.5, "item" : "newtheadbelly1"},
-		  {"weight" : 0.5, "item" : "newtheadbelly2"},
-		  {"weight" : 0.5, "item" : "newtlegsbelly"} 
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/orcaCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "orcachest"},
-		  {"weight" : 1.0, "item" : "orcahead"},
-		  {"weight" : 1.0, "item" : "orcalegs"},
-		  {"weight" : 0.5, "item" : "orcalegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/orcanaCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "orcanachest"},
-		  {"weight" : 1.0, "item" : "orcanalegs"},
-		  {"weight" : 0.5, "item" : "orcanalegsbelly"},
-		  {"weight" : 1.0, "item" : "orcanahead1"},
-		  {"weight" : 1.0, "item" : "orcanahead2"},
-		  {"weight" : 1.0, "item" : "orcanahead3"},
-		  {"weight" : 1.0, "item" : "orcanahead4"},
-		  {"weight" : 1.0, "item" : "orcanahead5"},
-		  {"weight" : 1.0, "item" : "orcanahead6"},
-		  {"weight" : 1.0, "item" : "orcanahead7"},
-		  {"weight" : 1.0, "item" : "orcanahead8"},
-		  {"weight" : 1.0, "item" : "orcanahead9"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/reindeerCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "reindeerlegs"},
-		  {"weight" : 1.0, "item" : "reindeerhead1"},
-		  {"weight" : 1.0, "item" : "reindeerhead2"},
-		  {"weight" : 1.0, "item" : "reindeerchest"},
-		  {"weight" : 0.5, "item" : "reindeerlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/sergalCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "sergalchest"},
-          {"weight" : 1.0, "item" : "sergalhead"},
-		  {"weight" : 1.0, "item" : "sergallegs"},
-		  {"weight" : 0.5, "item" : "sergallegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/sharkGreyCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "sharkgreychest"},
-		  {"weight" : 1.0, "item" : "sharkgreyhead"},
-		  {"weight" : 1.0, "item" : "sharkgreylegs"},
-		  {"weight" : 0.5, "item" : "sharkgreylegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/sharkTanCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "sharktanchest"},
-		  {"weight" : 1.0, "item" : "sharktanhead"},
-		  {"weight" : 1.0, "item" : "sharktanlegs"},
-		  {"weight" : 0.5, "item" : "sharktanlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/sharkWhiteCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "sharkwhitechest"},
-		  {"weight" : 1.0, "item" : "sharkwhitehead"},
-		  {"weight" : 1.0, "item" : "sharkwhitelegs"},
-		  {"weight" : 0.5, "item" : "sharkwhitelegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/slimeGreenCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "slimegreenchest"},
-		  {"weight" : 1.0, "item" : "slimegreenhead"},
-		  {"weight" : 1.0, "item" : "slimegreenlegs"},
-		  {"weight" : 0.5, "item" : "slimegreenlegsbelly1"},
-		  {"weight" : 0.5, "item" : "slimegreenlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/slimeIceCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "slimeicechest"},
-		  {"weight" : 1.0, "item" : "slimeicehead"},
-		  {"weight" : 1.0, "item" : "slimeicelegs"},
-		  {"weight" : 0.5, "item" : "slimeicelegsbelly1"},
-		  {"weight" : 0.5, "item" : "slimeicelegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/unicornCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "unicornlegs"},
-		  {"weight" : 1.0, "item" : "unicornhead1"},
-		  {"weight" : 1.0, "item" : "unicornhead2"},
-		  {"weight" : 0.5, "item" : "unicornlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/wolfCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "wolfhead"},
-		  {"weight" : 0.5, "item" : "wolfheadalt"},
-		  {"weight" : 1.0, "item" : "wolfchest"},
-		  {"weight" : 0.5, "item" : "wolfchestbelly"},
-		  {"weight" : 1.0, "item" : "wolflegs"},
-		  {"weight" : 0.5, "item" : "wolfchestbelly"},
-		  {"weight" : 0.5, "item" : "wolflegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/wolfCVCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "wolfhead"},
-		  {"weight" : 0.5, "item" : "wolfheadalt"},
-		  {"weight" : 1.0, "item" : "wolfchest"},
-		  {"weight" : 0.5, "item" : "wolfchestbelly"},
-		  {"weight" : 1.0, "item" : "wolflegs"},
-		  {"weight" : 0.5, "item" : "wolfchestballs"},
-		  {"weight" : 0.5, "item" : "wolflegsballs"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/yoshiCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "yoshichest"},
-		  {"weight" : 1.0, "item" : "yoshilegs"},
-		  {"weight" : 0.5, "item" : "yoshilegsbelly"},
-		  {"weight" : 1.0, "item" : "yoshihead1"},
-		  {"weight" : 1.0, "item" : "yoshihead3"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/yoshiEggs",
-      "value" : [
-      [1, {
-        "pool" : [
-          {"weight" : 1.0, "item" : "yoshieggblack"},
-		  {"weight" : 1.0, "item" : "yoshieggcyan"},
-		  {"weight" : 1.0, "item" : "yoshiegggreen"},
-		  {"weight" : 1.0, "item" : "yoshieggindigo"},
-		  {"weight" : 1.0, "item" : "yoshieggorange"},
-		  {"weight" : 1.0, "item" : "yoshieggpink"},
-		  {"weight" : 1.0, "item" : "yoshieggpurple"},
-		  {"weight" : 1.0, "item" : "yoshieggred"},
-		  {"weight" : 1.0, "item" : "yoshieggwhite"},
-		  {"weight" : 1.0, "item" : "yoshieggyellow"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/zebrataurCostume",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 1.0, "item" : "zebrataurlegs"},
-		  {"weight" : 0.5, "item" : "zebrataurlegsbelly"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
       "path" : "/aligatorGift",
       "value" : [
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "aligatorCostume"}
+		  {"weight" : 0.1, "item" : "aligatortoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -691,7 +19,21 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "avaliCostume"}
+		  {"weight" : 0.1, "item" : "avalitokenb"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/axonGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "item" : "axontoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -705,7 +47,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "catCostume"}
+		  {"weight" : 0.1, "item" : "cattoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -719,7 +61,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "catfishCostume"}
+		  {"weight" : 0.1, "item" : "catfishtoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -733,21 +75,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "centaurCostume"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/crystalDragonGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "crystalDragonCostume"}
+		  {"weight" : 0.1, "item" : "centaurtoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -761,7 +89,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "deertaurCostume"}
+		  {"weight" : 0.1, "item" : "deertaurtoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -770,12 +98,12 @@
       ]
     },
 	{ "op" : "add",
-      "path" : "/dezzyGift",
+      "path" : "/deerGift",
       "value" : [
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "dezzyCostume"}
+		  {"weight" : 0.1, "item" : "deertoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -789,7 +117,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "dragonCostume"}
+		  {"weight" : 0.1, "item" : "dragontoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -803,7 +131,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "felinCostume"}
+		  {"weight" : 0.1, "item" : "felintoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -817,21 +145,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "foxCostume"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/foxCVGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "foxCVCostume"}
+		  {"weight" : 0.1, "item" : "foxtoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -845,7 +159,21 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "harpyNest"}
+		  {"weight" : 0.1, "item" : "harpytoken"}
+        ],
+        "poolRounds" : [
+          [1, 1]
+        ]
+      }]
+      ]
+    },
+	{ "op" : "add",
+      "path" : "/inklingGift",
+      "value" : [
+      [1, {
+        "pool" : [
+		  {"weight" : 0.9, "pool" : "villagerGift"},
+		  {"weight" : 0.1, "item" : "inklingtoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -859,7 +187,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "kangaruCostume"}
+		  {"weight" : 0.1, "item" : "kangarutoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -873,7 +201,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "kinepticCostume"}
+		  {"weight" : 0.1, "item" : "kineptictoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -887,7 +215,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "kirhosCostume"}
+		  {"weight" : 0.1, "item" : "kirhostoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -901,7 +229,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "lamiaCostume"}
+		  {"weight" : 0.1, "item" : "lamiatoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -915,7 +243,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.95, "pool" : "villagerGift"},
-		  {"weight" : 0.05, "pool" : "lopunnyCostume"}
+		  {"weight" : 0.05, "pool" : "lopunnytoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -929,7 +257,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.95, "pool" : "villagerGift"},
-		  {"weight" : 0.05, "pool" : "lucarioCostume"}
+		  {"weight" : 0.05, "pool" : "lucariotoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -943,7 +271,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "mantiziCostume"}
+		  {"weight" : 0.1, "item" : "mantizitoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -957,7 +285,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "newtCostume"}
+		  {"weight" : 0.1, "item" : "newttoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -971,7 +299,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "orcaCostume"}
+		  {"weight" : 0.1, "item" : "orcatoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -985,7 +313,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "orcanaCostume"}
+		  {"weight" : 0.1, "item" : "orcanatoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -999,7 +327,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "reindeerCostume"}
+		  {"weight" : 0.1, "item" : "reindeertoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1013,7 +341,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "sergalCostume"}
+		  {"weight" : 0.1, "item" : "sergaltoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1022,26 +350,12 @@
       ]
     },
 	{ "op" : "add",
-      "path" : "/sharkGreyGift",
+      "path" : "/antrhoSharkGift",
       "value" : [
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "sharkGreyCostume"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/sharkTanGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "sharkTanCostume"}
+		  {"weight" : 0.1, "item" : "anthrosharktoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1055,7 +369,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "sharkWhiteCostume"}
+		  {"weight" : 0.1, "item" : "sharktoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1069,7 +383,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "slimeGreenCostume"}
+		  {"weight" : 0.1, "item" : "slimegreentoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1083,7 +397,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "slimeIceCostume"}
+		  {"weight" : 0.1, "item" : "slimeicetoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1097,7 +411,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "unicornCostume"}
+		  {"weight" : 0.1, "item" : "unicorntoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1111,21 +425,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "wolfCostume"}
-        ],
-        "poolRounds" : [
-          [1, 1]
-        ]
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/wolfCVGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "wolfCostume"}
+		  {"weight" : 0.1, "item" : "wolftoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1139,8 +439,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.8, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "yoshiCostume"},
-		  {"weight" : 0.1, "pool" : "yoshiEggs"}
+		  {"weight" : 0.1, "item" : "yoshitoken"}
         ],
         "poolRounds" : [
           [1, 1]
@@ -1154,7 +453,7 @@
       [1, {
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "pool" : "zebrataurCostume"}
+		  {"weight" : 0.1, "item" : "zebratoken"}
         ],
         "poolRounds" : [
           [1, 1]

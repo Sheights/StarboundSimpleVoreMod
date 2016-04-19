@@ -1,0 +1,109 @@
+{
+  "objectName" : "vorefoxgirlmicro",
+  "rarity" : "common",
+  "description" : "A tiny warm place to spend the night~",
+  "shortdescription" : "Foxgirl - Micro",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This foxgirl seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this foxgirl seems... intriguing...",
+  "floranDescription" : "...Floran like foxgirl, but why?",
+  "glitchDescription" : "Wonder.  There is something about this female...",
+  "humanDescrtiption" : "Whatever it is you want miss, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this foxlady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/foxgirl/femalefullmicro.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "Mmmmmmmm~",
+	"Oooh, keep wriggling~",
+	"Enjoying yourself in there? I know I am~",
+	"Hidden away~",
+	"<3",
+	"Heh, maybe I should charge rent.",
+	"Stay as long as you want~",
+	"I feel like a mommy~",
+	"This feels so great I might have to keep you inside forever~",
+	"I be fulla happy people~"
+  ],
+  "gulpLines" : [
+    "In you go~",
+	"Best bed in the galaxy~",
+	"Enjoy your stay~",
+	"Weclome to Casa de Me~"
+  ],
+  "chatIdleFull" : [
+    "Sorry, no vacancies~",
+	"Come back later~",
+	"Sorry, one person per... room~"
+  ],
+  "chatIdleEmpty" : [
+    "Come on in~",
+	"We have vacancies~",
+	"I've got some room to rent over here~",
+	"Are you as tasty as you look~?",
+	"Up for some fun hon~?",
+	"I've got a warm belly to escape the colds of space~",
+	"Hey spacer, I got a space for you right in here~",
+	"Why build a house when you could move into me~?"
+  ],
+  "rubLines" : [
+    "You're pretty good at this, mind doing it for longer?",
+    "Ooohh! Thanks for the massage ~",
+    "Now i'm getting a massage from both sides.",
+    "I love a good belly rub ~"
+  ]
+}

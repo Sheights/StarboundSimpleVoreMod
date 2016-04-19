@@ -1,0 +1,9 @@
+{
+  "itemName" : "vorerpv2Egg",
+  "rarity" : "Legendary",
+  "inventoryIcon" : "/interface/egg.png",
+  "description" : "Hold your cursor over your prey and press F to eat them. Assuming a Prey Enabler is active on the current ship or planet. This will release your prey as an egg.",
+  "shortdescription" : "Vore RP V2: Egg",
+
+  "techModule" : "vorerpv2Egg"
+}

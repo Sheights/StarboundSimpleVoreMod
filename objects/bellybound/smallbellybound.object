@@ -4,7 +4,7 @@
   "interactAction" : "OpenCraftingInterface",
   "interactData" : {
     "config" : "/interface/windowconfig/bellyBound.config",
-    "filter" : [ "bellyBoundStore" ]
+    "filter" : [ "bellyBoundStore", "smallBellyBound" ]
   },
   
   "printable" : false,
@@ -12,7 +12,7 @@
   "shortdescription" : "Holographic BellyBound Store",
   "race" : "generic",
   "category" : "crafting",
-  "price" : 0,
+  "price" : 2000,
 
   "apexDescription" : "[TODO: ApexDescription]",
   "avianDescription" : "[TODO: AvianDescription]",

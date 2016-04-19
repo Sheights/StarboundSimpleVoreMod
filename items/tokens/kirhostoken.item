@@ -1,0 +1,8 @@
+{
+  "itemName" : "kirhostoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Kirhos.png",
+  "description" : "A token that can be exchanged for a kirhos costume",
+  "shortdescription" : "Kirhos Token"
+}

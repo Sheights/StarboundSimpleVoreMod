@@ -1,0 +1,8 @@
+{
+  "itemName" : "foxtoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Fox.png",
+  "description" : "A token that can be exchanged for an fox costume",
+  "shortdescription" : "Fox Token"
+}

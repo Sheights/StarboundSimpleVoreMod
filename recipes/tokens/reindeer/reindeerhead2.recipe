@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "reindeertoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "reindeerhead2",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

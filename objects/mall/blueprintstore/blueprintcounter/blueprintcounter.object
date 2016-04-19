@@ -1,0 +1,90 @@
+{
+  "objectName" : "blueprintcounter",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "  BLUEPRINT STORE",
+        "subtitle" : "  Hard earned blueprints, extracted from the universes dark squishy crevices.",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "alienbed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "alienchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "alienchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "aliendoor-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "alientable-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowbed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowbushlamp-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowflowerlamp-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "glowvinelamp-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "cellchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "cellchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "celldoor-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "celllamp-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "celltable-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "crystalbed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "crystalchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "crystalchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "crystallamp-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "crystaltable-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icebed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icechair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icechest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icedoor-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icemachine-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "icetable-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "rainbowbed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "rainbowchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "rainbowchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "rainbowdoor-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "rainbowtable-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "slimebed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "slimechair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "slimehide-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "swampbed-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "swampchair-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "swampchest-recipe", "parameters" : { "price" : 500 } } },
+	  { "item" : { "name" : "swampybed-recipe", "parameters" : { "price" : 500 } } }
+    ]
+  },
+  "printable" : false,
+  "description" : "A counter where you can buy blue prints from Spot Tea and Yaupon, or whoever got there first~",
+  "shortdescription" : "^orange;Blueprint Counter^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "This will save some time, not any money though.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "counter.png:TY",
+      "imagePosition" : [0, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "animation"  :  "counter.animation",
+  "animationParts"  :  {
+    "body"  :  "counter.png"
+  },
+  
+  "scripts" : [ "/objects/mall/blueprintstore/blueprintcounter/counter.lua" ],
+  "scriptDelta" : 300,
+  "npcToy" : {}
+}

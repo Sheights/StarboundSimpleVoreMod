@@ -2,7 +2,7 @@
   "itemName" : "inklingback",
   "price" : 0,
   "inventoryIcon" : "icons.png:back",
-  "rarity" : "Common",
+  "rarity" : "Rare",
   "description" : "A tank full of ink, for all your inky needs.",
   "shortdescription" : "Ink Tank",
 

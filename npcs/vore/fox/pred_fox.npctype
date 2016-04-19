@@ -13,25 +13,25 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"Well that wont do for me.",
-							"Awww but i liked that thing.",
-							"I can't live in those condition."
+							"Well that won't do for me.",
+							"Awww, but I liked that thing.",
+							"I can't live in those conditions."
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-							"Oh noooo , not the house!",
-							"I dont think that hole was there before.",
-							"I'm aint eating prey in the cold y'a know."
+							"Oh noooo, not the house!",
+							"I don't think that hole was there before.",
+							"I ain't eating prey in the cold you know."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"Guess you find better",
+							"Guess you found better.",
 							"Another pred in my territory?",
 							"I can only fit me and my belly in that bed."
 			  ]
@@ -40,16 +40,16 @@
           "severe" : {
 			"default" : {
 			  "default" : [
-						"Dont make me use force.",
-						"I dont want to hurt.",
-						"Next time I'l show you my tooths."
+						"Don't make me use force.",
+						"I dont want to hurt you.",
+						"Next time I'll show you my teeth."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"You'v done it now!",
+						"You've done it now!",
 						"I was hungry anyway.",
 						"No turning back now."
 			  ]
@@ -61,18 +61,18 @@
 			"default" : {
 			  "default" : [
 						"Sweet place you've got here.",
-						"May i crash in for a moment?",
-						"A pred paradis!"
+						"May I crash in for a moment?",
+						"A pred paradise!"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-						"Here i am",
-						"Surprised you stayed undigested long enough to earn this",
+						"Here I am!",
+						"I'm happy you stayed around long enough to earn this.",
 						"Here's a little gift my sweet heart.",
-						"Thats for beying so kind."
+						"That's for being so kind."
 			  ]
 			}
           }
@@ -82,17 +82,17 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"Im' in truble over here!",
+					"I'm in trouble over here!",
 					"Come to me my hero!",
-					"They are after me sweete!"
+					"They are after me sweetie!"
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-						"Oh no there gonna steal my prey!",
-						"Any one can help them?",
+						"Oh no they're gonna steal my prey!",
+						"Can anyone help them?",
 						"I don't want dead food."
 			]
 		  }
@@ -101,16 +101,16 @@
 		  "default" : {
 			"default" : [
 					"Take that!",
-					"You wanna see my inside ,then I'l show u.",
-					"You just got one trip in."
+					"You wanna see my insides, then I'll show you.",
+					"You just got one way trip in."
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"Finaly safe to eat.",
-					"Where are they? I didnt get the chance to eat one.",
+					"Finally it's safe to eat.",
+					"Where are they? I didn't get the chance to eat one.",
 					"It was about to get funny."
 			]
 		  }
@@ -119,9 +119,9 @@
       "converse" : {
         "default" : {
           "default" : [
-            "So sweet of u to come around.",
-			"Come closer I'l show u a nice place.",
-			"See you later in my room Ou< *wink*"
+            "So sweet of you to come around.",
+			"Come closer and I'll show you a nice place.",
+			"See you later in my room. *Wink*"
           ]
         }
       }
