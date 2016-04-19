@@ -17,8 +17,6 @@
 	"buyFactor" : 1.0,
     "sellFactor" : 0.2,
     "items" : [
-      { "item" : { "name" : "vorenpcsCodex"} },
-	  { "item" : { "name" : "vorenpcsencycloCodex"} },
 	  { "item" : { "name" : "aavbadge"} },
 	  { "item" : { "name" : "aacbadge"} },
 	  { "item" : { "name" : "aadbadge"} },
