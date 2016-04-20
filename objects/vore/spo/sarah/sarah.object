@@ -20,7 +20,7 @@
   "sitOrientation" : "lay",
   "sitAngle" : 0,
   "sitStatusEffects" : [
-    "savor",
+    "voreheal",
 	"nude",
 	"intents"
   ],
