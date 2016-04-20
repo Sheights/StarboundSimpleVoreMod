@@ -3,7 +3,9 @@
   "baseType" : "villager",
 
   "npcname" : "Victor",
-  "scriptConfig" : {
+  "damageTeamType" : "friendly",
+  "scriptConfig" : { 
+	"damageTeamType" : "friendly",
 	"questGenerator" : {
       "pools" : ["normal"],
       "enableParticipation" : true
