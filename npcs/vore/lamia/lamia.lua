@@ -12,7 +12,7 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digestive system o
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "lamialegs",
@@ -35,7 +35,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("Another meal tucked away into my coils~ *pats their tail some*")
+		npc.say("Another meal tucked away into my coils~ *pats their tail some*")
 	end
 
 	isPlayer = false
@@ -45,7 +45,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

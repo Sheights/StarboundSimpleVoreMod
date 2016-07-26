@@ -1,9 +1,16 @@
 {
   "id" : "hibanipieceofpaper3",
   "title" : "Piece of Paper (3)",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"I heard about a bipedal species, related to primates. I should investigate where they live; they look delicious and maybe it would be nice to live in their planet."
   
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

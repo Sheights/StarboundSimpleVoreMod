@@ -1,16 +1,3 @@
 [
-	{ "op" : "add",
-		"path" : "/speciesShips/rodent",
-		"value" : [
-		    "/ships/rodent/rodentt0.structure",
-			"/ships/rodent/rodentt1.structure",
-			"/ships/rodent/rodentt2.structure",
-			"/ships/rodent/rodentt3.structure",
-			"/ships/rodent/rodentt4.structure",
-			"/ships/rodent/rodentt5.structure",
-			"/ships/rodent/rodentt6.structure",
-			"/ships/rodent/rodentt7.structure",
-			"/ships/rodent/rodentt8.structure"
-		]
-	}
+{"op":"add","path":"/speciesShips/rodent","value":["/ships/rodent/rodentT0.structure","/ships/rodent/rodentT1.structure","/ships/rodent/rodentT2.structure","/ships/rodent/rodentT3.structure","/ships/rodent/rodentT4.structure","/ships/rodent/rodentT5.structure","/ships/rodent/rodentT6.structure","/ships/rodent/rodentT7.structure","/ships/rodent/rodentT8.structure"]}
 ]

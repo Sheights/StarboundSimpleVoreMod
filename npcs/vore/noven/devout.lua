@@ -248,16 +248,16 @@ end
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "novenlegs" )
+		npc.setItemSlot( "legs", "novenlegs" )
 	end
 	
 end
 
 function feedHook()
 
-	entity.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
+	npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
 	
 	if animFlag == true then
 		animTimer = 0
@@ -273,18 +273,18 @@ function updateHook(dt)
 
 		dt = dt or 0.01
 		if animTimer < 5.0 then
-			entity.setItemSlot( "head", "novenhead2" )
+			npc.setItemSlot( "head", "novenhead2" )
 		elseif animTimer < 6.0 then
-			entity.setItemSlot( "head", "novenhead1" )
-			entity.setItemSlot( "chest", "novenchestbelly1" )
+			npc.setItemSlot( "head", "novenhead1" )
+			npc.setItemSlot( "chest", "novenchestbelly1" )
 		elseif animTimer < 7.0 then
-			entity.setItemSlot( "chest", "novenchestbelly2" )
+			npc.setItemSlot( "chest", "novenchestbelly2" )
 		else
-			entity.setItemSlot( "chest", "novenchest" )
+			npc.setItemSlot( "chest", "novenchest" )
 			if #victim > 0 then
-				entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
+				npc.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 			else
-				entity.setItemSlot( "legs", "novenlegs" )
+				npc.setItemSlot( "legs", "novenlegs" )
 			end
 			animFlag = false
 			animTimer = 0
@@ -294,18 +294,18 @@ function updateHook(dt)
 	end
 	
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		entity.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
+		npc.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
 	end
 end
 
 function forceExit()
 
-	entity.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
+	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
 
 	if #victim > 1 then
-		entity.setItemSlot( "legs", "novenlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "novenlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "novenlegs" )
+		npc.setItemSlot( "legs", "novenlegs" )
 	end
 	
 end

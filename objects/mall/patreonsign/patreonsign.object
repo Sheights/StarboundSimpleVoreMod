@@ -1,0 +1,22 @@
+{
+  "objectName" : "patreonsign",
+  "colonyTags" : ["commerce","pretty","expensive","valuable","ILoveEveryoneOnethisList"],
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "printable" : false,
+  "description" : "A sign, dedicated to those who have shown me kindness in my time of need.",
+  "shortdescription" : "Patron Reward Modular Scrolling Sign Ultra Deluxe",
+
+  "inventoryIcon" : "dummyicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "patreonsign.png:<frame>",
+      "imagePosition" : [0, 0],
+	  "frames" : 159,
+      "animationCycle" : 30.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

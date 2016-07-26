@@ -21,7 +21,7 @@ playerLines = {	"Ah, so full and gravid with a child in my tummy~",
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Why hello, my daughter~")
+		npc.say("Why hello, my daughter~")
 	end
 	
 	isPlayer = false
@@ -31,6 +31,6 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 end

@@ -1,6 +1,9 @@
 {
   "id" : "hibanibadspecies",
   "title" : "Bad Species",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 "We aren't a bad species.
@@ -11,5 +14,9 @@ We won't harm anyone.
 
 We just want to blend with our host planet's life."
 
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

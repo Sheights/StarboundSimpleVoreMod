@@ -52,12 +52,12 @@ end
 
 function digestHook()
 
-	entity.say( playerLines[ "release" ][ math.random( #playerLines[ "release" ] ) ] )
+	npc.say( playerLines[ "release" ][ math.random( #playerLines[ "release" ] ) ] )
 	
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "victorlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "victorlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "victorlegs" )
+		npc.setItemSlot( "legs", "victorlegs" )
 	end
 	
 end
@@ -65,12 +65,12 @@ end
 function feedHook()
 
 	if fauxrequested then
-		entity.say( playerLines["request"][ math.random( #playerLines["request"] )] )
+		npc.say( playerLines["request"][ math.random( #playerLines["request"] )] )
 	else
-		entity.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
+		npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
 	end
 	fauxrequested = false
-	entity.setItemSlot( "legs", "victorlegsbelly" .. #victim )
+	npc.setItemSlot( "legs", "victorlegsbelly" .. #victim )
 	
 end
 
@@ -80,7 +80,7 @@ function interact(args)
 	
 		if isVictim( world.entityName( args.sourceId ) ) then
 		
-			entity.say( playerLines["plea"][ math.random( #playerLines["plea"] )] )
+			npc.say( playerLines["plea"][ math.random( #playerLines["plea"] )] )
 		
 		else
 			fauxrequested = true
@@ -103,13 +103,13 @@ end
 function updateHook(dt)
 	
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		entity.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
+		npc.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
 	end
 
 end
 
 function forceExit()
 
-	entity.setItemSlot( "legs", "victorlegs" )
+	npc.setItemSlot( "legs", "victorlegs" )
 
 end

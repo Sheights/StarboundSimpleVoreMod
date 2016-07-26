@@ -1,6 +1,12 @@
 {
 	"kind" : "fauxfelin",
-	"playerRace" : false,
+	
+	"charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
 	"nameGen" : [ "/species/fauxfelinnamegen.config:male", "/species/fauxfelinnamegen.config:female" ],
 	"ouchNoises" : [ "/sfx/felin/felinhurt1.ogg", "/sfx/felin/felinhurt2.ogg" ],
 	"gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],

@@ -40,7 +40,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("You'll be back. I know how great this feels.")
+		npc.say("You'll be back. I know how great this feels.")
 	end
 	
 	isPlayer = false
@@ -50,16 +50,16 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end
 
 function makeShiny()
 
-	entity.setItemSlot( "head", "lopunnyshinyhead" )
-	entity.setItemSlot( "chest", "lopunnyshinychest" )
-	entity.setItemSlot( "legs", "lopunnyshinylegs" )
+	npc.setItemSlot( "head", "lopunnyshinyhead" )
+	npc.setItemSlot( "chest", "lopunnyshinychest" )
+	npc.setItemSlot( "legs", "lopunnyshinylegs" )
 	legs = "lopunnyshinylegs"
 	fulllegs = "lopunnyshinylegsbelly"
 

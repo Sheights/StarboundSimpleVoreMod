@@ -1,6 +1,12 @@
 {
   "kind" : "fauxavali",
-  "playerSpecies" : false,
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "nameGen" : [ "/species/fauxavalinamegen.config:names", "/species/fauxavalinamegen.config:names" ],
   "ouchNoises" : [ "/sfx/npc/smallbiped/spidermonkey_pain2.ogg", "/sfx/npc/smallbiped/spidermonkey_pain2.ogg" ],
   "gruntNoises" : [ [ "/sfx/npc/smallbiped/spidermonkey_idle1.ogg" ], [ "/sfx/npc/smallbiped/spidermonkey_idle2.ogg" ] ],

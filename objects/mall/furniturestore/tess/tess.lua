@@ -1,83 +1,83 @@
 temp = 0
 
 function init()
-  self.buyFactor = entity.configParameter("buyFactor", root.assetJson("/merchant.config").defaultBuyFactor)
+  self.buyFactor = config.getParameter("buyFactor", root.assetJson("/merchant.config").defaultBuyFactor)
 
-  entity.setInteractive(true)
+  object.setInteractive(true)
 end
 
 function update(dt)
 
-	state = entity.animationState("bodyState")
+	state = animator.animationState("bodyState")
 
 	if state == "closed" or state == "peek" then
-		local people = world.entityQuery( entity.position(), 20, {
+		local people = world.entityQuery( object.position(), 20, {
 			includedTypes = {"player"},
 			boundMode = "CollisionArea"
 		})
 		if #people > 0 then
 			if math.random(2) == 1 then
-				entity.setAnimationState("bodyState", "up")
+				animator.setAnimationState("bodyState", "up")
 			else
-				entity.setAnimationState("bodyState", "upfull")
+				animator.setAnimationState("bodyState", "upfull")
 			end
 			do return end
 		else
 			if math.random(3) == 1 then
 				if state == "closed" then
-					entity.setAnimationState("bodyState", "peek")
+					animator.setAnimationState("bodyState", "peek")
 				else
-					entity.setAnimationState("bodyState", "closed")
+					animator.setAnimationState("bodyState", "closed")
 				end
 			end
 		end
 	elseif math.random(2) == 1 then
 		if state == "idle" then
-			local people = world.entityQuery( entity.position(), 20, {
+			local people = world.entityQuery( object.position(), 20, {
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people == 0 then
-				entity.setAnimationState("bodyState", "down")
+				animator.setAnimationState("bodyState", "down")
 				do return end
 			end
 			temp = math.random(4)
 			if temp == 1 then
-				entity.setAnimationState("bodyState", "blink")
+				animator.setAnimationState("bodyState", "blink")
 			elseif temp == 2 then
-				entity.setAnimationState("bodyState", "tail")
+				animator.setAnimationState("bodyState", "tail")
 			elseif temp == 3 then
-				entity.setAnimationState("bodyState", "maruup")
+				animator.setAnimationState("bodyState", "maruup")
 			else
-				entity.setAnimationState("bodyState", "smile")
+				animator.setAnimationState("bodyState", "smile")
 			end
 		elseif state == "full" then
-			local people = world.entityQuery( entity.position(), 20, {
+			local people = world.entityQuery( object.position(), 20, {
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people == 0 then
-				entity.setAnimationState("bodyState", "downfull")
+				animator.setAnimationState("bodyState", "downfull")
 				do return end
 			end
 			temp = math.random(4)
 			if temp == 1 then
-				entity.setAnimationState("bodyState", "blinkfull")
+				animator.setAnimationState("bodyState", "blinkfull")
 			elseif temp == 2 then
-				entity.setAnimationState("bodyState", "rub")
+				animator.setAnimationState("bodyState", "rub")
 			elseif temp == 3 then
-				entity.setAnimationState("bodyState", "tailfull")
+				animator.setAnimationState("bodyState", "tailfull")
 			else
-				entity.setAnimationState("bodyState", "smilefull")
+				animator.setAnimationState("bodyState", "smilefull")
 			end
 		elseif state == "maru" then
 			if math.random(2) == 1 then
-				entity.setAnimationState("bodyState", "marudown")
+				animator.setAnimationState("bodyState", "marudown")
 			else
-				entity.setAnimationState("bodyState", "teaup")
+				animator.setAnimationState("bodyState", "teaup")
 			end
 		elseif state == "tea" then
-			entity.setAnimationState("bodyState", "teadown")
+			animator.setAnimationState("bodyState", "teadown")
 		end
 	end
 end

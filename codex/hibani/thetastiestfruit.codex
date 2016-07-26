@@ -1,11 +1,18 @@
 {
   "id" : "hibanithetastiestfruit",
   "title" : "The Tastiest Fruit",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"There's a fruit here, it's a big one. While the skin is thick and tasteless, the interior is red and exceedingly sweet. If only it had less seeds...",
 	
 	"I don't remember trying anything like this before, but that's for better. It would ruin an otherwise exotic and delicious taste."
 
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

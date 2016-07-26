@@ -15,7 +15,7 @@ playerLines = {		"Surprise! Hope you enjoy learning about the reproductive syste
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	chest = {
 		name = "wolfchest",
@@ -50,7 +50,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("That felt great having you come out.")
+		npc.say("That felt great having you come out.")
 	end
 
 	isPlayer = false
@@ -60,7 +60,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

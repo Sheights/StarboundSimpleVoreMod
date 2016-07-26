@@ -30,9 +30,9 @@ requestLeaveLines = {	"You can come out. I won't force you to stay.",
 function digestHook()
 	
 	if request then
-		entity.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
+		npc.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
 	else
-		entity.say( releaseLines[ math.random( #releaseLines ) ] )
+		npc.say( releaseLines[ math.random( #releaseLines ) ] )
 	end
 	
 end
@@ -48,9 +48,9 @@ end
 function feedHook()
 	
 	if request == true then
-		entity.say( requestLines[ math.random( #releaseLines ) ] )
+		npc.say( requestLines[ math.random( #releaseLines ) ] )
 	else
-		entity.say( gulpLines[ math.random( #gulpLines ) ] )
+		npc.say( gulpLines[ math.random( #gulpLines ) ] )
 	end
 
 end
@@ -58,7 +58,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 and ( stopWatch < duration or request ) then
-		entity.say( bellyLines[math.random(#bellyLines)])
+		npc.say( bellyLines[math.random(#bellyLines)])
 	end
 
 end

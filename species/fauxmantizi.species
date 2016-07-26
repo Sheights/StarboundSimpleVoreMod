@@ -1,6 +1,12 @@
 {
   "kind" : "fauxmantizi",
-  "playableRace" : false,
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "nameGen" : [ "/species/fauxmantizimalenamegen.config:names", "/species/fauxmantizifemalenamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/mantizihurt_male1.ogg", "/sfx/humanoid/mantizihurt_female1.ogg" ],
   "gruntNoises" : [ [ "/sfx/humanoid/mantizigrunt1.ogg", "/sfx/humanoid/mantizigrunt2.ogg" ], [ "/sfx/humanoid/mantizigrunt1.ogg", "/sfx/humanoid/mantizigrunt2.ogg" ] ],

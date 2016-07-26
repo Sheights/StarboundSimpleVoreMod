@@ -17,7 +17,7 @@ function update(dt)
   -- Animations that happens while the predator is empty (hungry).
   if world.loungeableOccupied(entity.id()) == false then
 	if digestState == 2 then
-	  entity.setAnimationState("bodyState", "idle1")
+	  animator.setAnimationState("bodyState", "idle1")
 	  eatingTimer = 0
 	  animLock = true
 	end
@@ -27,7 +27,7 @@ function update(dt)
 	  
 	-- Resets the predator to the idle state
     if animLock == false then
-	  entity.setAnimationState("bodyState", "idle1")
+	  animator.setAnimationState("bodyState", "idle1")
 	  idleTimer = 0
       releaseLock = false
       releaseTimer = 0
@@ -36,19 +36,19 @@ function update(dt)
 		  animLock = true
 		  eatingTimer = 0
 		  releaseLock = true
-		  entity.setAnimationState("bodyState", "release")
-		  entity.playSound("release")
+		  animator.setAnimationState("bodyState", "release")
+		  animator.playSound("release")
 		end
 	  end
 	-- Randomises different animations, like idle2, blink and waiting.
 	if animLock == false and math.random(200) == 1 then
 	  animLock = true
-	  entity.setAnimationState("bodyState", "idle2")
+	  animator.setAnimationState("bodyState", "idle2")
 	end
 	  
 	if animLock == false and math.random(100) == 1 then
 	  animLock = true
-	  entity.setAnimationState("bodyState", "idle3")
+	  animator.setAnimationState("bodyState", "idle3")
 	end
 	  
 	if idleTimer >= 40 or releaseTimer >= 30 then
@@ -64,11 +64,11 @@ function update(dt)
   elseif world.loungeableOccupied(entity.id()) == true and eatingTimer <= 30 then
     -- Swallow animation
 	if soundLock == false then
-	  entity.playSound("swallow")
+	  animator.playSound("swallow")
       soundLock = true
 	end
 	  
-	entity.setAnimationState("bodyState", "swallow")
+	animator.setAnimationState("bodyState", "swallow")
 	eatingTimer = eatingTimer + 1
 	  
   else
@@ -82,10 +82,10 @@ function update(dt)
 	soundLock = false
 	-- Changes player state based on their current percent health
 	if preyPercentHealth <= 100 and digestState == 0 then
-	  entity.setAnimationState("bodyState", "full")
+	  animator.setAnimationState("bodyState", "full")
 	  digestState = digestState + 1
 	elseif preyPercentHealth <= 3 and digestState == 1 then
-	  entity.setAnimationState("bodyState", "fulltonone")
+	  animator.setAnimationState("bodyState", "fulltonone")
 	  digestState = digestState + 1
 	end
   end

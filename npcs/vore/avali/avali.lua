@@ -11,7 +11,7 @@ playerLines = {		"Guess who's the better pred? Me~<3",
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "avalilegs",
@@ -34,7 +34,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("Thank you so much for filling my tummy. Hope to get to nom ya again soon ^..^")
+		npc.say("Thank you so much for filling my tummy. Hope to get to nom ya again soon ^..^")
 	end
 
 	isPlayer = false
@@ -44,7 +44,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

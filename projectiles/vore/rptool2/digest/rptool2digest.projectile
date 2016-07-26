@@ -1,7 +1,7 @@
 {
 	"projectileName" : "rptool2projectileD",
 	"bounces" : -1,
-	"frames" : "npcvore.png",
+	"image" : "npcvore.png",
 	"frameNumber" : 6,
 	"animationCycle" : 1,
 	"speed" : 0,

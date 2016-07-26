@@ -2,16 +2,16 @@ require "/objects/vore/spo/vorechatscript.lua"
 
 function initHook()
 
-	bellySize = entity.configParameter("bellySize")
+	bellySize = config.getParameter("bellySize")
 
 end
 
 function updateHook()
 
 	if isFull then
-		entity.setAnimationState("pred", bellySize)
+		animator.setAnimationState("pred", bellySize)
 	else
-		entity.setAnimationState("pred", "waiting")
+		animator.setAnimationState("pred", "waiting")
 	end
 	
 end

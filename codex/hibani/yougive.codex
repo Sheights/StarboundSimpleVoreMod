@@ -1,6 +1,9 @@
 {
   "id" : "hibaniyougive",
   "title" : "You Give",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 "Stand up
@@ -46,5 +49,9 @@ Things I love to give too
 Stop crying
 You don't need to give up
 Smile and walk ahead!"
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

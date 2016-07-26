@@ -57,7 +57,7 @@
   "scriptDelta" : 3,
   
   "slotCount" : 64,
-  "uiConfig" : "/interface/chests/chest%slots%.config",
+  "uiConfig" : "/interface/chests/chest<slots>.config",
   
   "frameCooldown" : 5,
   "autoCloseCooldown" : 3600

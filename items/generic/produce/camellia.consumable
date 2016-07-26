@@ -2,24 +2,16 @@
   "itemName" : "tealeaf",
   "rarity" : "Common",
   "price" : 150,
+  "category" : "food",
   "inventoryIcon" : "camellia.png",
   "description" : "A common tea leaf used for making common tea.",
   "shortdescription" : "Tea Leaf",
-  "handPosition" : [0, 4],
-  "effects" : [ [
-    {
-        "effect" : "runboost25",
-        "duration" : 15
-    },
-    {
-        "effect" : "jumpboost25",
-        "duration" : 15
-    },
-    {
-        "effect" : "wellfed",
-        "duration" : 15
-    }
-  ] ],
+  "foodValue" : 5,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : ["/scripts/items/rotting.lua"],
+  "rottingMultiplier" : 1.0,
   "blockingEffects" : [
     "wellfed"
   ],

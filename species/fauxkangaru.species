@@ -1,6 +1,12 @@
 {
   "kind" : "fauxkangaru",
-  "playerSpecies" : false,
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "nameGen" : [ "/species/fauxkangarunamegen.config:names", "/species/fauxkangarunamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/fauxkangaruhurt_1.ogg", "/sfx/humanoid/fauxkangaruhurt_2.ogg", "/sfx/humanoid/fauxkangaruhurt_3.ogg" ],
   "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],

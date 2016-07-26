@@ -1,7 +1,7 @@
 {
   "projectileName" : "digestprojectile",
   "bounces" : -1,
-  "frames" : "invisibleprojectile.png",
+  "image" : "invisibleprojectile.png",
   "frameNumber" : 1,
   "speed" : 0,
   "timeToLive" : 0.5,

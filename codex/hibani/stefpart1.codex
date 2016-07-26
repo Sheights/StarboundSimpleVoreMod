@@ -1,6 +1,9 @@
 {
   "id" : "hibanistefpart1",
   "title" : "Stef, Part 1",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"Now it came to pass that her name was Stef. And she was a warrior.",
@@ -29,5 +32,9 @@
 	
 	"(the book ends all of a sudden)"
 	
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

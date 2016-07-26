@@ -11,59 +11,59 @@ end
 
 function update(dt)
 
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 
 	if world.loungeableOccupied(entity.id()) then
 	
 	if animState == "empty" then
 		-- play swallow sound
-		entity.setAnimationState("bodyState", "swallow")
-		entity.playSound("swallow")
+		animator.setAnimationState("bodyState", "swallow")
+		animator.playSound("swallow")
 	elseif animState == "full" and math.random(450) == 1 then
-		entity.setAnimationState("bodyState", "burp")
-		entity.playSound( gurgles[ math.random(3) ] )
-	elseif animState == "full" and math.random(450) == 1 then
-		-- play a gurgle
-		entity.setAnimationState("bodyState", "struggle")
-		entity.playSound( gurgles[ math.random(3) ] )
+		animator.setAnimationState("bodyState", "burp")
+		animator.playSound( gurgles[ math.random(3) ] )
 	elseif animState == "full" and math.random(450) == 1 then
 		-- play a gurgle
-		entity.setAnimationState("bodyState", "rub")
-		entity.playSound( gurgles[ math.random(3) ] )
+		animator.setAnimationState("bodyState", "struggle")
+		animator.playSound( gurgles[ math.random(3) ] )
+	elseif animState == "full" and math.random(450) == 1 then
+		-- play a gurgle
+		animator.setAnimationState("bodyState", "rub")
+		animator.playSound( gurgles[ math.random(3) ] )
 	elseif animState == "full" and math.random(600) == 1 then
-		entity.setAnimationState("bodyState", "lay")
+		animator.setAnimationState("bodyState", "lay")
 	elseif animState == "laying" and math.random(450) == 1 then
-		entity.setAnimationState("bodyState", "lick")
+		animator.setAnimationState("bodyState", "lick")
 	elseif animState == "laying" and math.random(450) == 1 then
 		-- LET THAT BABY REV
-		entity.setAnimationState("bodyState", "lexhaust")
-		entity.playSound("rev")
+		animator.setAnimationState("bodyState", "lexhaust")
+		animator.playSound("rev")
 	elseif animState == "laying" and math.random(450) == 1 then
 		-- play a gurgle
-		entity.setAnimationState("bodyState", "lstruggle")
-		entity.playSound( gurgles[ math.random(3) ] )
+		animator.setAnimationState("bodyState", "lstruggle")
+		animator.playSound( gurgles[ math.random(3) ] )
 	elseif animState == "laying" and math.random(600) == 1 then
-		entity.setAnimationState("bodyState", "up")
+		animator.setAnimationState("bodyState", "up")
 	end
 		
 	else
 		
 		if animState == "empty" and math.random(450) == 1 then
-			entity.setAnimationState("bodyState", "breath")
+			animator.setAnimationState("bodyState", "breath")
 		elseif animState == "empty" and math.random(450) == 1 then
-			entity.setAnimationState("bodyState", "yawn")
+			animator.setAnimationState("bodyState", "yawn")
 		elseif animState == "empty" and math.random(450) == 1 then
 			-- LET THAT BABY REV
-			entity.setAnimationState("bodyState", "exhaust")
-			entity.playSound("rev")
+			animator.setAnimationState("bodyState", "exhaust")
+			animator.playSound("rev")
 		end
 		
 		if animState == "laying" then
-			entity.setAnimationState("bodyState", "up")
+			animator.setAnimationState("bodyState", "up")
 		elseif animState == "full" then
 			-- play a not swallow sound
-			entity.setAnimationState("bodyState", "regurg")
-			entity.playSound("spit")
+			animator.setAnimationState("bodyState", "regurg")
+			animator.playSound("spit")
 		end
 		
 	end

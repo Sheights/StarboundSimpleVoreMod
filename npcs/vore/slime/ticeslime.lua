@@ -17,7 +17,7 @@ playerLines = {	"I'm so happy you decided to join me <3",
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Thank you so much for the time. I hope we can be together again.")
+		npc.say("Thank you so much for the time. I hope we can be together again.")
 	end
 	
 	isPlayer = false
@@ -27,12 +27,12 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 	
 	if fed then
 		if stopWatch >= 45 then
-			entity.setItemSlot( "legs", "slimeicelegsbelly" )
+			npc.setItemSlot( "legs", "slimeicelegsbelly" )
 		end
 	end
 

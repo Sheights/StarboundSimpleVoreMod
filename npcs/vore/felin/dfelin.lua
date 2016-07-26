@@ -4,7 +4,7 @@ isDigest = true
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "felinlegs",

@@ -1,6 +1,9 @@
 {
   "id" : "hibanievolution",
   "title" : "Evolution",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"Sometimes I think evolution –changes that happen randomly each time we have kids- isn't always for our benefit. Seriously? Did we use to eat that much?",
@@ -9,5 +12,9 @@
 	
 	"I curse being born in this generation."
 
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

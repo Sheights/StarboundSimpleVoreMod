@@ -36,7 +36,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Don't you feel it? We are becoming one. In more than one way!")
+		npc.say("Don't you feel it? We are becoming one. In more than one way!")
 	end
 	
 	isPlayer = false
@@ -46,16 +46,16 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end
 
 function makeShiny()
 
-	entity.setItemSlot( "head", "lucarioshinyhead" )
-	entity.setItemSlot( "chest", "lucarioshinychest" )
-	entity.setItemSlot( "legs", "lucarioshinylegs" )
+	npc.setItemSlot( "head", "lucarioshinyhead" )
+	npc.setItemSlot( "chest", "lucarioshinychest" )
+	npc.setItemSlot( "legs", "lucarioshinylegs" )
 	legs = "lucarioshinylegs"
 	fulllegs = "lucarioshinylegsbelly"
 

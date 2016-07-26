@@ -3,7 +3,7 @@
     { "item" : "money", "count" : 200 }
   ],
   "output" : {
-    "item" : "vorenpcsCodex",
+    "item" : "vorenpcs-codex",
     "count" : 1
   },
   "groups" : [ "bellyBoundStore", "objects", "all", "other" ]

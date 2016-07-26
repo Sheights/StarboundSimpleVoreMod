@@ -1,10 +1,12 @@
+require "/scripts/util.lua"
+
 Timer = {
-    key = nil,
-    delay = nil, 
-    timeCallback = nil,
-    completeCallback = nil,
-    loop = false
-  }
+  key = nil,
+  delay = nil, 
+  timeCallback = nil,
+  completeCallback = nil,
+  loop = false
+}
 
 -- Methods for creating and setting up timers:
 function Timer:new(storageKey, o)
@@ -54,7 +56,7 @@ function Timer:generateDelay(delay)
   if type(delay) == "table" then
     return delay[1] + math.random() * (delay[2] - delay[1])
   elseif type(delay) == "string" then
-    return entity.randomizeParameterRange(delay)
+    return util.randomInRange(config.getParameter(delay))
   elseif type(delay) == "function" then
     return delay()
   else

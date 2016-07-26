@@ -1,15 +1,15 @@
 function init()
 
-	entity.setInteractive(true)
+	object.setInteractive(true)
 	
 end
 
 function onInteraction(args)
 
-  if entity.animationState("fromographState") == "off" then
-    entity.setAnimationState("fromographState", "on")
+  if animator.animationState("fromographState") == "off" then
+    animator.setAnimationState("fromographState", "on")
   else
-	entity.setAnimationState("fromographState", "off")
+	animator.setAnimationState("fromographState", "off")
   end
   
 end

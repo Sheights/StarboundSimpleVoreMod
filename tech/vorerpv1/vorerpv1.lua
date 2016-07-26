@@ -56,7 +56,7 @@ end
 
 function update(args)
 
-  if args.actions["active"] and not tech.parentLounging() and self.active == false and self.cooldown >= 0.5 then
+  if args.moves["special"] == 1 and not tech.parentLounging() and self.active == false and self.cooldown >= 0.5 then
   
 	local people = world.entityQuery( tech.aimPosition(), 1, {
 		withoutEntityId = entity.id(),
@@ -73,7 +73,7 @@ function update(args)
 	
 	self.cooldown = 0
 	
-  elseif args.actions["toggledigest"] and self.active and self.cooldown >= 0.5 then
+  elseif args.moves["down"] and self.active and self.cooldown >= 0.5 then
   
     if self.heal then
 	  status.clearPersistentEffects("voreheal")
@@ -90,7 +90,7 @@ function update(args)
 	
 	self.cooldown = 0
 	
-  elseif args.actions["toggleheal"] and self.active and self.cooldown >= 0.5 then
+  elseif args.moves["up"] and self.active and self.cooldown >= 0.5 then
   
     if self.digest then
 	  status.clearPersistentEffects("voredigest")
@@ -107,7 +107,7 @@ function update(args)
   
 	self.cooldown = 0
 	
-  elseif args.actions["deactive"] and self.active and self.cooldown >= 0.5 then
+  elseif args.moves["special"] and self.active and self.cooldown >= 0.5 then
   
 	deactivate()
 	self.cooldown = 0

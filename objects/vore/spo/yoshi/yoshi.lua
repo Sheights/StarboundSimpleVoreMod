@@ -12,7 +12,7 @@ function update(dt)
 	if world.loungeableOccupied(entity.id()) == false then
 
       if animLock == 0 then
-	    entity.setAnimationState("bodyState", "idle1")
+	    animator.setAnimationState("bodyState", "idle1")
 	    blinkLock = 0
 		blinkTimer = 0
 		idleTimer = 0
@@ -22,26 +22,26 @@ function update(dt)
 		  animLock = 1
 		  eatingTimer = 0
 		  eggLock = 1
-		  entity.setAnimationState("bodyState", "egglay")
-		  entity.playSound("lay")
+		  animator.setAnimationState("bodyState", "egglay")
+		  animator.playSound("lay")
 		  
 		end
 	  end
 	  
 	  if animLock == 0 and math.random(200) == 1 then
 	    animLock = 1
-	    entity.setAnimationState("bodyState", "idle2")
+	    animator.setAnimationState("bodyState", "idle2")
 	  end
 	  
 	  if animLock == 0 and math.random(200) == 1 then
 	    animLock = 1
-		entity.setAnimationState("bodyState", "idle3")
+		animator.setAnimationState("bodyState", "idle3")
 	  end
 	  
 	  if animLock == 0 and math.random(100) == 1 then
 		animLock = 1
 		blinkLock = 1
-	    entity.setAnimationState("bodyState", "blink")
+	    animator.setAnimationState("bodyState", "blink")
 	  end
 	  
 	  if idleTimer >= 30 or eggTimer >= 9 or blinkTimer >=3 then
@@ -60,12 +60,12 @@ function update(dt)
 	  
 	elseif world.loungeableOccupied(entity.id()) == true and eatingTimer <= 20 then
 	  if eatingTimer == 8 then
-	    entity.playSound("swallow")
+	    animator.playSound("swallow")
 	  end
-	  entity.setAnimationState("bodyState", "eating")
+	  animator.setAnimationState("bodyState", "eating")
 	  eatingTimer = eatingTimer + 1
 	
 	else
-	  entity.setAnimationState("bodyState", "fed")
+	  animator.setAnimationState("bodyState", "fed")
 	end
 end

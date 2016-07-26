@@ -5,7 +5,7 @@
 
     },
  "spacing":0,
- "tilecount":47,
+ "tilecount":48,
  "tileheight":96,
  "tileproperties":
     {
@@ -429,6 +429,16 @@
          "object":"katojanaplush",
          "tilesetDirection":"right"
         },
+     "47":
+        {
+         "\/\/description":"A sign, dedicated to those who have shown me kindness in my time of need.",
+         "\/\/name":"patreonsign",
+         "\/\/shortdescription":"Patron Reward Modular Scrolling Sign Ultra Deluxe",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"patreonsign",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "\/\/description":"#258: The Mud Fish Pokemon",
@@ -484,191 +494,195 @@
     {
      "0":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/machine.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/machine.png"
         },
      "1":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/aron.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/aron.png"
         },
      "10":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/bag.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/bag.png"
         },
      "11":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/cbadge.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/cbadge.png"
         },
      "12":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dbadge.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/dbadge.png"
         },
      "13":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dperfume.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/dperfume.png"
         },
      "14":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dvorb.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/dvorb.png"
         },
      "15":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/flag.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/flag.png"
         },
      "16":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/fromograph.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/fromograph.png"
         },
      "17":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mimic.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/mimic.png"
         },
      "18":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pbadge.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/pbadge.png"
         },
      "19":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/perfume.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/perfume.png"
         },
      "2":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/charmander.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/charmander.png"
         },
      "20":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/slugcage.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/slugcage.png"
         },
      "21":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/spitroast.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/spitroast.png"
         },
      "22":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/squishthrone.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/squishthrone.png"
         },
      "23":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/vbadge.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/vbadge.png"
         },
      "24":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/vorb.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/vorb.png"
         },
      "25":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/greninja.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/greninja.png"
         },
      "26":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/lesser.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/lesser.png"
         },
      "27":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/bellybound.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/bellybound.png"
         },
      "28":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/LLizard.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/LLizard.png"
         },
      "29":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/column.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/column.png"
         },
      "3":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/cyndiquil.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/cyndiquil.png"
         },
      "30":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/counter.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/counter.png"
         },
      "31":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/rack.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/rack.png"
         },
      "32":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/slime.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/slime.png"
         },
      "33":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/diysign.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/diysign.png"
         },
      "34":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/carrotdisplay.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/carrotdisplay.png"
         },
      "35":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/crystaldisplay.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/crystaldisplay.png"
         },
      "36":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/dnadisplay.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/dnadisplay.png"
         },
      "37":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/sharddisplay.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/sharddisplay.png"
         },
      "38":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/tess.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/tess.png"
         },
      "39":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/ubadge.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/ubadge.png"
         },
      "4":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/eevee.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/eevee.png"
         },
      "40":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mofff.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/mofff.png"
         },
      "41":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/sign.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/sign.png"
         },
      "42":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/adrian.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/adrian.png"
         },
      "43":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/po.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/po.png"
         },
      "44":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/haybed.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/haybed.png"
         },
      "45":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/jar.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/jar.png"
         },
      "46":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/kato.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/kato.png"
+        },
+     "47":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/PatreonSign.png"
         },
      "5":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/mudkip.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/mudkip.png"
         },
      "6":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pikachu.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/pikachu.png"
         },
      "7":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/pokeball.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/pokeball.png"
         },
      "8":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/torchic.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/torchic.png"
         },
      "9":
         {
-         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/zorua.png"
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/zorua.png"
         }
     },
  "tilewidth":120

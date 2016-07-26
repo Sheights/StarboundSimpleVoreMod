@@ -1,6 +1,9 @@
 {
   "id" : "hibanipieceofpaper2",
   "title" : "Piece of Paper (2)",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 "- A thing in a wall
@@ -8,5 +11,9 @@
 - Summon it
 I'm not sure what this means, though."
   
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

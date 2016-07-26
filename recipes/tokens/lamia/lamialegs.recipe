@@ -3,7 +3,7 @@
     { "item" : "lamiatoken", "count" : 1 }
   ],
   "output" : {
-    "item" : "lamialegsbelly",
+    "item" : "lamialegs",
     "count" : 1
   },
   "groups" : [ "npctoken" ]

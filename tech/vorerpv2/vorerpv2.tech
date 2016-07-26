@@ -3,6 +3,14 @@
   "type" : "head",
 
   "scripts" : ["vorerpv2.lua"],
-  "actions" : ["active","deactive"],
-  "animator" : "vorerpv2.animation"
+  "animator" : "vorerpv2.animation",
+  
+  "description" : "Hold your cursor over your prey and press F to eat them. Assuming a Prey Enabler is active on the current ship or planet.",
+  "shortDescription" : "Vore RP V2",
+  "rarity" : "Legendary",
+  "icon" : "/tech/vicon.png",
+  
+  "chipCost" : 4,
+  
+  "energyCost" : 50
 }

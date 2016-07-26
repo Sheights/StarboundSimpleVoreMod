@@ -1,6 +1,9 @@
 {
   "id" : "vorenpcsencyclo",
+  "species" : "apex",
   "title" : "Vore NPC Encyclopedia",
+  "description" : "A book detialing the summoning requirements for all tenants.",
+  "icon" : "bellyBoundBook.png",
   "contentPages" : [
 
 "Table of Contents:
@@ -380,5 +383,9 @@ combat : 8,
 floran : 8,
 tierX : 12"
 
-  ]
+  ],
+  "itemConfig" : {
+    "rarity" : "common",
+    "price" : 200
+  }
 }

@@ -25,7 +25,7 @@ largeLines = {	"Now this is more like it!",
 			
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "dragonlegs",
@@ -52,11 +52,11 @@ function updateHook()
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
 	
 		if #victim == 1 then
-			entity.say( smallLines[math.random(#smallLines)])
+			npc.say( smallLines[math.random(#smallLines)])
 		elseif #victim == 2 then
-			entity.say( medLines[math.random(#medLines)])
+			npc.say( medLines[math.random(#medLines)])
 		elseif #victim == 3 then
-			entity.say( largeLines[math.random(#largeLines)])
+			npc.say( largeLines[math.random(#largeLines)])
 		end
 		
 	end

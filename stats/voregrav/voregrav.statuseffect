@@ -1,0 +1,14 @@
+{
+	"name" : "voregrav",
+	"effectConfig" : {
+		"gravityModifier" : -0.1
+	},
+	"defaultDuration" : 5,
+	
+	"scripts" : [
+		"voregrav.lua"
+	],
+	
+	"label" : "Interior Suspension"
+}
+	

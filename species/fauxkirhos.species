@@ -1,12 +1,12 @@
 {
   "kind" : "fauxkirhos",
-  "playerRace" : false,
-    "charCreationTooltip" : {
-      "title" : "Kirhos",
-      "subTitle" : "Ne",
-      "description" : "An all-female hybrid race, this rodentlike species exhausted their homeworld's natural resources. Most now live in corporate-run city-buildings called arcologies."
-    },
-
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "nameGen" : [ "/species/fauxkirhosnamegen.config:names", "/species/fauxkirhosnamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
   "gruntNoises" : [ [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ], [ "/sfx/humanoid/humangrunt1.ogg", "/sfx/humanoid/humangrunt2.ogg" ] ],

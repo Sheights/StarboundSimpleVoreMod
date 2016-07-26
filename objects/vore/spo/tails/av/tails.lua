@@ -1,7 +1,7 @@
 animState = "blank"
 
---entity.setAnimationState("bodyState", "fed4")
---entity.playSound("digest")
+--animator.setAnimationState("bodyState", "fed4")
+--animator.playSound("digest")
 
 bellySounds = {	"belly1",
 				"belly2",
@@ -33,35 +33,35 @@ bellyLines = {	"*Clenches warmly* Mrrrr.. Hope my foxy rear's comfy for you.~",
 
 function update(dt)
 		
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 		
 	if world.loungeableOccupied(entity.id()) then
 	
 		if animState == "idle" then
-			entity.setAnimationState("bodyState", "swallow")
-			entity.say( eatenLines[ math.random( #eatenLines ) ] )
-			entity.playSound("swallow")
+			animator.setAnimationState("bodyState", "swallow")
+			object.say( eatenLines[ math.random( #eatenLines ) ] )
+			animator.playSound("swallow")
 		end
 		
 		if math.random(700) == 1 then
-			entity.say( bellyLines[ math.random( #bellyLines ) ] )
-			entity.playSound( bellySounds[ math.random( #bellySounds ) ] )
+			object.say( bellyLines[ math.random( #bellyLines ) ] )
+			animator.playSound( bellySounds[ math.random( #bellySounds ) ] )
 		end
 		
 	else
 		
 		if animState == "full"  then
-			entity.setAnimationState("bodyState", "idle")
+			animator.setAnimationState("bodyState", "idle")
 		end
 		
 		if math.random(700) == 1 then
-			local people = world.entityQuery( entity.position(), 7, {
+			local people = world.entityQuery( object.position(), 7, {
 				withoutEntityId = entity.id(),
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people > 0 then
-				entity.say( idleLines[ math.random( #idleLines ) ] )
+				object.say( idleLines[ math.random( #idleLines ) ] )
 			end
 		end
 	end

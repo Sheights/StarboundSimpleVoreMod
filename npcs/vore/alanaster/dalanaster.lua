@@ -28,9 +28,9 @@ largeLines = {	"*purrs* My belly feels so full with you three in there~",
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "alanasterlegs" )
+		npc.setItemSlot( "legs", "alanasterlegs" )
 	end
 	
 end
@@ -38,11 +38,11 @@ end
 function feedHook()
 
 	if requested then
-		entity.say( "Come on in~  There's plenty of room to rest in~" )
+		npc.say( "Come on in~  There's plenty of room to rest in~" )
 	else
-		entity.say( "Down you go~" )
+		npc.say( "Down you go~" )
 	end
-	entity.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
+	npc.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
 	
 end
 
@@ -51,11 +51,11 @@ function updateHook()
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
 	
 		if #victim == 1 then
-			entity.say( smallLines[math.random(#smallLines)])
+			npc.say( smallLines[math.random(#smallLines)])
 		elseif #victim == 2 then
-			entity.say( medLines[math.random(#medLines)])
+			npc.say( medLines[math.random(#medLines)])
 		elseif #victim == 3 then
-			entity.say( largeLines[math.random(#largeLines)])
+			npc.say( largeLines[math.random(#largeLines)])
 		end
 		
 	end
@@ -64,8 +64,8 @@ end
 
 function forceExit()
 
-	entity.say( "That was sooo nice~ Please do come back again~" )
+	npc.say( "That was sooo nice~ Please do come back again~" )
 	
-	entity.setItemSlot( "legs", "alanasterlegs" )
+	npc.setItemSlot( "legs", "alanasterlegs" )
 
 end

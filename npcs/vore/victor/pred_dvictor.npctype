@@ -2,12 +2,12 @@
   "type" : "pred_dvictor",
   "baseType" : "villager",
 
+  "identity" : {
+	"gender" : "male"
+  },
   "npcname" : "Victor",
   "scriptConfig" : {
-	"questGenerator" : {
-      "pools" : ["normal"],
-      "enableParticipation" : true
-    },
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

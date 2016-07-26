@@ -4,8 +4,8 @@ victim = nil
 health = nil
 
 lock = true
---entity.setAnimationState("bodyState", "fed4")
---entity.playSound("digest")
+--animator.setAnimationState("bodyState", "fed4")
+--animator.playSound("digest")
 
 eatenLines = {	"Delicious~",
 				"Oog, never eaten someone in space before.",
@@ -32,7 +32,7 @@ end
 
 function update(dt)
 		
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 		
 	if world.loungeableOccupied(entity.id()) then
 	
@@ -41,9 +41,9 @@ function update(dt)
 		end
 		
 		if animState == "idle" and lock then
-			entity.setAnimationState("bodyState", "swallow")
+			animator.setAnimationState("bodyState", "swallow")
 			lock = false
-			entity.say( eatenLines[ math.random( #eatenLines ) ] )
+			object.say( eatenLines[ math.random( #eatenLines ) ] )
 		end
 		
 		if health == nil then
@@ -51,15 +51,15 @@ function update(dt)
 		end
 		
 		if math.random(700) == 1 then
-			entity.say( bellyLines[ math.random( #bellyLines ) ] )
+			object.say( bellyLines[ math.random( #bellyLines ) ] )
 		end
 		
 		if health < 0.8 and animState == "full1" then
-			entity.setAnimationState("bodyState", "digest1")
+			animator.setAnimationState("bodyState", "digest1")
 		elseif health < 0.5 and animState == "full2" then
-			entity.setAnimationState("bodyState", "digest2")
+			animator.setAnimationState("bodyState", "digest2")
 		elseif health < 0.2 and animState == "full3" then
-			entity.setAnimationState("bodyState", "digest3")
+			animator.setAnimationState("bodyState", "digest3")
 		end
 		
 	else
@@ -67,29 +67,29 @@ function update(dt)
 		lock = true
 		
 		if animState == "full1" or animState == "full2" or animState == "full3" then
-			entity.setAnimationState("bodyState", "idle")
+			animator.setAnimationState("bodyState", "idle")
 		end
 		
 		if animState == "midle" or animState == "stomachidle" then
-			entity.setAnimationState("bodyState", "standing")
+			animator.setAnimationState("bodyState", "standing")
 		end
 		
 		if math.random(700) == 1 then
-			local people = world.entityQuery( entity.position(), 7, {
+			local people = world.entityQuery( object.position(), 7, {
 				withoutEntityId = entity.id(),
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people > 0 then
-				entity.say( idleLines[ math.random( #idleLines ) ] )
+				object.say( idleLines[ math.random( #idleLines ) ] )
 			end
 		end
 	end
 	
 	if animState == "idle" and math.random(300) == 1 then	
-		entity.setAnimationState("bodyState", "idle1")
+		animator.setAnimationState("bodyState", "idle1")
 	elseif animState == "idle" and math.random(300) == 1 then
-		entity.setAnimationState("bodyState", "idle2")
+		animator.setAnimationState("bodyState", "idle2")
 	end
 end
 

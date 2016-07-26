@@ -1,6 +1,9 @@
 {
   "id" : "hibanileaving",
   "title" : "Leaving",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"My name is Rasmir and I'm a hibani. For anybody who doesn't know who we are, we're a species that come from a planet we call Stoborhanq, with long ears, hair, fur, big legs and good physical strength. ",
@@ -17,5 +20,9 @@
 	
 	"Still, it's nothing extremely mean for visitors. Most of us are relaxed, nice and gentle if you don't do anything against us. Be careful, of course, because it wouldn't be strange if one or two of us decided you look delicious and you became nothing more than space food. I don't know if you want to end your days and adventures inside one of us. Who knows. Maybe you would."
 
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

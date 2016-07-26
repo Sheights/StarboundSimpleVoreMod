@@ -13,19 +13,19 @@ function update(dt)
 	temp = math.random(5)
 	
 	if temp == 1 then
-		entity.setAnimationState("bodyState", "gurgle")
+		animator.setAnimationState("bodyState", "gurgle")
 	elseif temp < 5 then
-		entity.setAnimationState("bodyState", "blink")
+		animator.setAnimationState("bodyState", "blink")
 	end
 	
 	if temp < 3 then
-		local people = world.entityQuery( entity.position(), 20, {
+		local people = world.entityQuery( object.position(), 20, {
 			includedTypes = {"player"},
 			boundMode = "CollisionArea"
 		})
 		
 		if #people > 0 then
-			entity.say( talkLines[ math.random( #talkLines ) ] )
+			object.say( talkLines[ math.random( #talkLines ) ] )
 		end
 	end
 

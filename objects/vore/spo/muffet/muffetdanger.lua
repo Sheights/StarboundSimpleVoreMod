@@ -1,12 +1,10 @@
 function init()
 
-  self.detectArea = entity.configParameter("detectArea")
-  self.detectArea[1] = entity.toAbsolutePosition(self.detectArea[1])
-  self.detectArea[2] = entity.toAbsolutePosition(self.detectArea[2])
+  self.detectArea = config.getParameter("detectArea")
 
-  chatOptions = entity.configParameter("chatOptions", {})
-  gulpLines = entity.configParameter("gulpLines", {})
-  chatIdleEmpty = entity.configParameter("chatIdleEmpty", {})
+  chatOptions = config.getParameter("chatOptions", {})
+  gulpLines = config.getParameter("gulpLines", {})
+  chatIdleEmpty = config.getParameter("chatIdleEmpty", {})
   
 -- Animation related
   animLock = false
@@ -27,7 +25,7 @@ end
 
 function update(dt)
   
-  local players = world.entityQuery(self.detectArea[1], self.detectArea[2], {
+  local players = world.entityQuery( object.position(), 7, {
       includedTypes = {"player"},
       boundMode = "CollisionArea"
   })
@@ -37,7 +35,7 @@ function update(dt)
     if world.loungeableOccupied(entity.id()) == false then
     -- But only if it isnt already displaying a line.
 	  if #chatIdleEmpty > 0 then
-		entity.say(chatIdleEmpty[math.random(1, #chatIdleEmpty)])
+		object.say(chatIdleEmpty[math.random(1, #chatIdleEmpty)])
 	  end
 	end
 	ohSnap = true
@@ -48,14 +46,14 @@ function update(dt)
 -- Randomly displays the "Player inside Pred" lines
   if world.loungeableOccupied(entity.id()) and math.random(150) == 1 then
     if #chatOptions > 0 then
-      entity.say(chatOptions[math.random(1, #chatOptions)])
+      object.say(chatOptions[math.random(1, #chatOptions)])
     end
   end
   
   -- Animations that happens while the predator is empty (hungry).
   if world.loungeableOccupied(entity.id()) == false then
 	if digestState == 4 then
-	  entity.setAnimationState("bodyState", "idle1")
+	  animator.setAnimationState("bodyState", "idle1")
 	  eatingTimer = 0
 	  animLock = true
 	end
@@ -65,7 +63,7 @@ function update(dt)
 	  
 	-- Resets the predator to the idle state
     if animLock == false then
-	  entity.setAnimationState("bodyState", "idle1")
+	  animator.setAnimationState("bodyState", "idle1")
 	  idleTimer = 0
       releaseLock = false
       releaseTimer = 0
@@ -74,24 +72,24 @@ function update(dt)
 		  animLock = true
 		  eatingTimer = 0
 		  releaseLock = true
-		  entity.setAnimationState("bodyState", "release")
-		  entity.playSound("lay")
+		  animator.setAnimationState("bodyState", "release")
+		  animator.playSound("lay")
 		end
 	  end
 	-- Randomises different animations, like idle2, blink and waiting.
 	if animLock == false and math.random(100) == 1 then
 	  animLock = true
-	  entity.setAnimationState("bodyState", "idle2")
+	  animator.setAnimationState("bodyState", "idle2")
 	end
 	  
 	if animLock == false and math.random(100) == 1 then
 	  animLock = true
-	  entity.setAnimationState("bodyState", "blink1")
+	  animator.setAnimationState("bodyState", "blink1")
 	end
 	  
 	if animLock == false and math.random(100) == 1 then
 	  animLock = true
-	  entity.setAnimationState("bodyState", "blink2")
+	  animator.setAnimationState("bodyState", "blink2")
 	end
 	
 	if idleTimer >= 60 or releaseTimer >= 12 then
@@ -107,11 +105,11 @@ function update(dt)
   elseif world.loungeableOccupied(entity.id()) == true and eatingTimer <= 20 then
     -- Swallow animation
 	if soundLock == false then
-	  entity.playSound("swallow")
+	  animator.playSound("swallow")
       soundLock = true
 	end
 	  
-	entity.setAnimationState("bodyState", "swallow")
+	animator.setAnimationState("bodyState", "swallow")
 	eatingTimer = eatingTimer + 1
 	  
   else
@@ -125,16 +123,16 @@ function update(dt)
 	soundLock = false
 	-- Changes player state based on their current percent health
 	if preyPercentHealth <= 100 and digestState == 0 then
-	  entity.setAnimationState("bodyState", "fullbig")
+	  animator.setAnimationState("bodyState", "fullbig")
 	  digestState = digestState + 1
 	elseif preyPercentHealth <= 55 and digestState == 1 then
-	  entity.setAnimationState("bodyState", "bigtosmall")
+	  animator.setAnimationState("bodyState", "bigtosmall")
       digestState = digestState + 1
 	elseif preyPercentHealth <= 25 and digestState == 2 then
-	  entity.setAnimationState("bodyState", "smalltomicro")
+	  animator.setAnimationState("bodyState", "smalltomicro")
 	  digestState = digestState + 1
 	elseif preyPercentHealth <= 3 and digestState == 3 then
-	  entity.setAnimationState("bodyState", "microtonone")
+	  animator.setAnimationState("bodyState", "microtonone")
 	  digestState = digestState + 1
 	end
   end
@@ -155,7 +153,7 @@ function onInteraction(args)
   if world.loungeableOccupied(entity.id()) == false then
   -- Swallows the prey, playing the gulp sound and displaying a line. Also sets the player to be "prey".
     if #gulpLines > 0 then
-      entity.say(gulpLines[math.random(1, #gulpLines)])
+      object.say(gulpLines[math.random(1, #gulpLines)])
 	  prey = args.sourceId
     end
   end

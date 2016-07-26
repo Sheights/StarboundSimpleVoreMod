@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "tealeaf", "count" : 1 },
+	{ "item" : "bergamot", "count" : 1 },
+	{ "item" : "lemon", "count" : 1 },
+	{ "item" : "orange", "count" : 1 }
+  ],
+  "output" : { "item" : "ladygrey", "count" : 4 },
+  "groups" : [ "craftingfood", "drinks" ]
+}

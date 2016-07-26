@@ -1,10 +1,17 @@
 {
   "id" : "hibanipieceofpaper4",
   "title" : "Piece of Paper (4)",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"Please help!
 	If anybody reads this, I'm stuck here. Please, if you find this come for me. I think I'm going to die from starvation; there's no life in this planet. There's no water either. I'm consuming my reserves."
   
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

@@ -2,31 +2,31 @@ animState = ""
 property = false
 
 function init()
-	entity.setInteractive(true)
+	object.setInteractive(true)
 end
 
 function update(dt)
 	property = world.getProperty("preyEnabled")
 	
 	if property then
-		entity.setAnimationState("switchState", "on")
+		animator.setAnimationState("switchState", "on")
 	else
-		entity.setAnimationState("switchState", "off")
+		animator.setAnimationState("switchState", "off")
 	end
 end
 
 function onInteraction(args)
 
-	animState = entity.animationState("switchState")
+	animState = animator.animationState("switchState")
 	
 	if animState == "on" then
 		world.setProperty("preyEnabled", false)
-		entity.setAnimationState("switchState", "off")
-		entity.playSound("on")
+		animator.setAnimationState("switchState", "off")
+		animator.playSound("on")
 	else
 		world.setProperty("preyEnabled", true)
-		entity.setAnimationState("switchState", "on")
-		entity.playSound("off")
+		animator.setAnimationState("switchState", "on")
+		animator.playSound("off")
 	end
 	
 end

@@ -1,0 +1,23 @@
+[
+	{
+		"op" : "add",
+		"path" : "/camelliaHarvest",
+		"value" : [
+			[0, {
+				"fill" : [
+					{"item" : "camelliaseed"}
+				],
+				"pool" : [
+					{"weight" : 0.89, "item" : "tealeaf"},
+					{"weight" : 0.01, "item" : "camelliaseed"},
+					{"weight" : 0.10, "item" : "plantfibre"}
+				],
+				"poolRounds" : [
+					[0.2, 1],
+					[0.6, 2],
+					[0.2, 3]
+				]
+			} ]
+		]
+	}
+]

@@ -12,7 +12,7 @@ playerLines = {		"I'm a kid~, I'm a squid~, I'm *URP* ...rather full.",
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	chest = {
 		name = "inklingchest",
@@ -47,7 +47,7 @@ end
 function loseHook()
 
 	if isPlayer then
-		entity.say("Come back anytime you feel like a stay in a warm squidkid belly~")
+		npc.say("Come back anytime you feel like a stay in a warm squidkid belly~")
 	end
 
 	isPlayer = false
@@ -57,7 +57,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

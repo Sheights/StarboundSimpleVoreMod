@@ -4,8 +4,8 @@ victim = nil
 health = nil
 
 lock = true
---entity.setAnimationState("bodyState", "fed4")
---entity.playSound("digest")
+--animator.setAnimationState("bodyState", "fed4")
+--animator.playSound("digest")
 
 bellySounds = {	"belly1",
 				"belly2",
@@ -44,7 +44,7 @@ end
 
 function update(dt)
 		
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 		
 	if world.loungeableOccupied(entity.id()) then
 	
@@ -53,9 +53,9 @@ function update(dt)
 		end
 		
 		if animState == "idle" and lock then
-			entity.setAnimationState("bodyState", "swallow")
-			entity.say( eatenLines[ math.random( #eatenLines ) ] )
-			entity.playSound("swallow")
+			animator.setAnimationState("bodyState", "swallow")
+			object.say( eatenLines[ math.random( #eatenLines ) ] )
+			animator.playSound("swallow")
 		end
 		
 		if health == nil then
@@ -63,21 +63,21 @@ function update(dt)
 		end
 		
 		if math.random(700) == 1 then
-			entity.say( bellyLines[ math.random( #bellyLines ) ] )
+			object.say( bellyLines[ math.random( #bellyLines ) ] )
 		end
 		
 		if math.random(700) == 1 then
-			entity.playSound( bellySounds[ math.random( #bellySounds ) ] )
+			animator.playSound( bellySounds[ math.random( #bellySounds ) ] )
 		end
 		
 		if math.random(700) == 1 then
-			local people = world.entityQuery( entity.position(), 7, {
+			local people = world.entityQuery( object.position(), 7, {
 				withoutEntityId = entity.id(),
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people > 1 then
-				entity.say( chatFull[ math.random( #chatFull ) ] )
+				object.say( chatFull[ math.random( #chatFull ) ] )
 			end
 		end
 		
@@ -85,15 +85,15 @@ function update(dt)
 		
 		lock = true
 
-		entity.setAnimationState("bodyState", "idle")
+		animator.setAnimationState("bodyState", "idle")
 
 		if math.random(700) == 1 then
-			local people = world.entityQuery( entity.position(), 7, {
+			local people = world.entityQuery( object.position(), 7, {
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 			})
 			if #people > 0 then
-				entity.say( chatEmpty[ math.random( #chatEmpty ) ] )
+				object.say( chatEmpty[ math.random( #chatEmpty ) ] )
 			end
 		end
 	end
@@ -104,7 +104,7 @@ function onInteraction(args)
 	victim = args.sourceId
 	
 	if world.loungeableOccupied(entity.id()) then
-		entity.say( rubLines[ math.random( #rubLines ) ] )
+		object.say( rubLines[ math.random( #rubLines ) ] )
 	end
 	
 end

@@ -92,7 +92,7 @@ end
 
 function countObjectTags(objectId)
   local tags = {}
-  local objectTags = world.objectConfigParameter(objectId, "colonyTags", {})
+  local objectTags = world.getObjectParameter(objectId, "colonyTags", {})
   local spaces = #(world.objectSpaces(objectId))
   for _,tag in ipairs(objectTags) do
     tags[tag] = (tags[tag] or 0) + spaces
@@ -283,7 +283,10 @@ function scanHouseBoundary(start, remainingPerimeter)
       end
     end
     if not connected then
-      return nil
+      return {
+          remainingPerimeter = remainingPerimeter,
+          doors = doors
+        }
     end
 
     if vecEquals(position, start) and dirDiff(dir, startDir) <= 1 then
@@ -299,7 +302,6 @@ function scanHouseBoundary(start, remainingPerimeter)
   util.debugLog("scanHouseBoundary ran out of perimeter")
   util.debugPoly(poly, "red")
   return {
-      poly = poly,
       remainingPerimeter = remainingPerimeter,
       doors = doors
     }

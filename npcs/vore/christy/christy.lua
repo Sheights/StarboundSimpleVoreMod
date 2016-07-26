@@ -128,16 +128,16 @@ end
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "christylegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "christylegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "christylegs" )
+		npc.setItemSlot( "legs", "christylegs" )
 	end
 	
 end
 
 function feedHook()
 
-	entity.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
+	npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
 	
 	if animFlag == true then
 		animTimer = 0
@@ -153,17 +153,17 @@ function updateHook(dt)
 
 		dt = dt or 0.01
 		if animTimer < 1.0 then
-			entity.setItemSlot( "head", "christyheadbelly1" )
+			npc.setItemSlot( "head", "christyheadbelly1" )
 		elseif animTimer < 2.0 then
-			entity.setItemSlot( "head", "christyheadbelly2" )
+			npc.setItemSlot( "head", "christyheadbelly2" )
 		elseif animTimer < 3.0 then
-			entity.setItemSlot( "head", "christyheadbelly3" )
+			npc.setItemSlot( "head", "christyheadbelly3" )
 		else
-			entity.setItemSlot( "head", "christyhead" )
+			npc.setItemSlot( "head", "christyhead" )
 			if #victim > 0 then
-				entity.setItemSlot( "legs", "christylegsbelly" .. #victim )
+				npc.setItemSlot( "legs", "christylegsbelly" .. #victim )
 			else
-				entity.setItemSlot( "legs", "christylegs" )
+				npc.setItemSlot( "legs", "christylegs" )
 			end
 			animFlag = false
 			animTimer = 0
@@ -173,14 +173,14 @@ function updateHook(dt)
 	end
 	
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		entity.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
+		npc.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
 	end
 end
 
 function forceExit()
 
-	entity.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
+	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
 
-	entity.setItemSlot( "legs", "christylegs" )
+	npc.setItemSlot( "legs", "christylegs" )
 
 end

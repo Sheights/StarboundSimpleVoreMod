@@ -61,9 +61,9 @@
   "animation": "ElizabethOG.animation",
   "animationCustom": {
     "sounds": {
-      "swallow": [ "/sfx/objects/gulp.wav" ],
-      "lay": [ "/sfx/objects/eggLay.wav" ],
-      "rift": [ "/sfx/objects/rift.wav" ]
+      "swallow": [ "/sfx/objects/gulp.ogg" ],
+      "lay": [ "/sfx/objects/eggLay.ogg" ],
+      "rift": [ "/sfx/objects/rift.ogg" ]
     }
   },
   "animationParts": {

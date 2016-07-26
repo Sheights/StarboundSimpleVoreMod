@@ -3,6 +3,14 @@
   "type" : "head",
 
   "scripts" : ["vorerpv2D.lua"],
-  "actions" : ["active","deactive"],
-  "animator" : "vorerpv2.animation"
+  "animator" : "vorerpv2.animation",
+  
+  "description" : "Hold your cursor over your prey and press F to eat them. Assuming a Prey Enabler is active on the current ship or planet. This will digest your prey as well!",
+  "shortDescription" : "Vore RP V2: Digestion",
+  "rarity" : "Legendary",
+  "icon" : "/tech/vicon.png",
+  
+  "chipCost" : 4,
+  
+  "energyCost" : 50
 }

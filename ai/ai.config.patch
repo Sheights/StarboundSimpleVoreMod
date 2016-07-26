@@ -1,37 +1,3 @@
 [
-  { 
-    "op" : "add",
-    "path" : "/species/rodent",
-    "value" : {
-      "aiFrames" : "rodentai.png",
-	  "portraitFrames" : "portraits/humanportrait.png",
-      "staticFrames" : "staticluc.png",
-      "openSpeech" : {
-        "0" : [ {
-          "animation" : "unique",
-          "text" : "ERROR: ERROR: Info:'S.A.I.L.::run.innerLoop', 'Cnt#: ', 1198, 'Sum:ms:', ERROR: 'Min', 15, 'Max', 7199, 'Horse', 9899, 'Avg', 23, 'Last:::', '800b5', 'Var:avg,us: ERROR: ERROR: REBOOT REQUIRED!!!'",
-          "speedModifier" : 0.5
-        } ],
-        "1" : [ {
-          "animation" : "talk",
-          "text" : "The thrusters and FTL drive are offline. I can repair the thrusters with the ships auto repair module but I'll need ^orange;core fragments^green; from the core of the planet below.",
-          "speedModifier" : 1
-        } ],
-        "2" : [ {
-          "animation" : "talk",
-          "text" : "We've repaired the ships thrusters. Travel within this system is now available, ^green;did you investigate that gate yet? Next we need to fix the ship's FTL drive.",
-          "speedModifier" : 1
-        } ],
-        "3" : [ {
-          "animation" : "talk",
-          "text" : "The ship's FTL drive is now fully functional. The galaxy is yours to explore!",
-          "speedModifier" : 1
-        } ]
-      },
-      "techIntro" : [ {
-        "animation" : "talk",
-        "text" : "Here you can augment your body with tech cards and nano suits. ^orange;Tech cards ^green;will give you unique abilities whilst ^orange;nano suits ^green;will allow you to survive in otherwise deadly environments.",
-        "speedModifier" : 1
-      } ]
-    } }
+{"op":"copy","from":"/species/human","path":"/species/rodent"}
 ]

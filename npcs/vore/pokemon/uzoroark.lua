@@ -42,9 +42,9 @@ end
 function loseHook()
 	
 	if isPlayer and stopWatch > 60 then
-		entity.say("T-That was amazing. I could get used to this. Thanks, uh, my little pup.")
+		npc.say("T-That was amazing. I could get used to this. Thanks, uh, my little pup.")
 	elseif isPlayer then
-		entity.say("Aww, you have to leave already? Well finish your priorities and get back here. I'm not done with you yet.")
+		npc.say("Aww, you have to leave already? Well finish your priorities and get back here. I'm not done with you yet.")
 	end
 	
 	isPlayer = false
@@ -54,16 +54,16 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end
 
 function makeShiny()
 
-	entity.setItemSlot( "head", "zoroarkshinyhead" )
-	entity.setItemSlot( "chest", "zoroarkshinychest" )
-	entity.setItemSlot( "legs", "zoroarkshinylegs" )
+	npc.setItemSlot( "head", "zoroarkshinyhead" )
+	npc.setItemSlot( "chest", "zoroarkshinychest" )
+	npc.setItemSlot( "legs", "zoroarkshinylegs" )
 	legs = "zoroarkshinylegs"
 	fulllegs = "zoroarkshinylegsbelly"
 

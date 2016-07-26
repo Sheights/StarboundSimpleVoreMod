@@ -2,7 +2,7 @@ function init()
 
   script.setUpdateDelta(5)
 
-  self.digestRate = -(1.0 / effect.configParameter("digestTime", 60))
+  self.digestRate = -(1.0 / config.getParameter("digestTime", 60))
 end
 
 function update(dt)

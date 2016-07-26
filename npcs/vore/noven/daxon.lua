@@ -84,9 +84,9 @@ end
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", "axonlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "axonlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "axonlegs" )
+		npc.setItemSlot( "legs", "axonlegs" )
 	end
 	
 end
@@ -94,9 +94,9 @@ end
 function feedHook()
 
 	if requested then
-		entity.say( playerLines["request"][ math.random( #playerLines["request"] )] )
+		npc.say( playerLines["request"][ math.random( #playerLines["request"] )] )
 	else
-		entity.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
+		npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
 	end
 	
 	if animFlag == true then
@@ -113,19 +113,19 @@ function updateHook(dt)
 
 		dt = dt or 0.01
 		if animTimer < 5.0 then
-			entity.setItemSlot( "head", "axonheadbelly1" )
+			npc.setItemSlot( "head", "axonheadbelly1" )
 		elseif animTimer < 7.0 then
-			entity.setItemSlot( "head", "axonheadbelly2" )
+			npc.setItemSlot( "head", "axonheadbelly2" )
 		elseif animTimer < 9.0 then
-			entity.setItemSlot( "head", "axonheadbelly3" )
+			npc.setItemSlot( "head", "axonheadbelly3" )
 		elseif animTimer < 11.0 then
-			entity.setItemSlot( "head", "axonheadbelly4" )
+			npc.setItemSlot( "head", "axonheadbelly4" )
 		else
-			entity.setItemSlot( "head", "axonhead" )
+			npc.setItemSlot( "head", "axonhead" )
 			if #victim > 0 then
-				entity.setItemSlot( "legs", "axonlegsbelly" .. #victim )
+				npc.setItemSlot( "legs", "axonlegsbelly" .. #victim )
 			else
-				entity.setItemSlot( "legs", "axonlegs" )
+				npc.setItemSlot( "legs", "axonlegs" )
 			end
 			animFlag = false
 			animTimer = 0
@@ -135,19 +135,19 @@ function updateHook(dt)
 	end
 	
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		entity.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
+		npc.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
 	end
 
 end
 
 function forceExit()
 
-	entity.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
+	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
 
 	if #victim > 1 then
-		entity.setItemSlot( "legs", "axonlegsbelly" .. #victim )
+		npc.setItemSlot( "legs", "axonlegsbelly" .. #victim )
 	else
-		entity.setItemSlot( "legs", "axonlegs" )
+		npc.setItemSlot( "legs", "axonlegs" )
 	end
 
 end

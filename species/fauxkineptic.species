@@ -1,6 +1,12 @@
 {
   "kind" : "fauxkineptic",
-  "playerSpecies" : false,
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "nameGen" : [ "/species/fauxkinepticmalenamegen.config:names", "/species/fauxkinepticfemalenamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/kineptichurt.ogg", "/sfx/humanoid/kineptichurt.ogg" ],
   "gruntNoises" : [ ["/sfx/silent.ogg"],["/sfx/silent.ogg"] ],

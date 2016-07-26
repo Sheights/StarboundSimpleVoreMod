@@ -3,10 +3,7 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : {
-      "pools" : ["normal"],
-      "enableParticipation" : true
-    },
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -140,7 +137,7 @@
       [0, [
           {
             "head" : [
-              { "name" : "dragonhead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+              { "name" : "dragonheada", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
             ],
             "chest" : [
               { "name" : "dragonchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }

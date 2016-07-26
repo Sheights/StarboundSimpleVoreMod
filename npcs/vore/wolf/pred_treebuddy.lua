@@ -31,20 +31,20 @@ requestLeaveLines = {	"Ya want out ",
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", fulllegs1 )
+		npc.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", legs )
+		npc.setItemSlot( "legs", legs )
 	end
 	
 	if request[1] == false and request [2] == false then
-		entity.say( releaseLines[ math.random( #releaseLines ) ] )
+		npc.say( releaseLines[ math.random( #releaseLines ) ] )
 	end
 	
 end
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "wolfnewlegs",
@@ -69,15 +69,15 @@ end
 function feedHook()
 
 	if #victim == 1 then
-		entity.setItemSlot( "legs", fulllegs1 )
+		npc.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", fulllegs2 )
+		npc.setItemSlot( "legs", fulllegs2 )
 	end
 	
 	if request == true then
-		entity.say( requestLines[ math.random( #releaseLines ) ] )
+		npc.say( requestLines[ math.random( #releaseLines ) ] )
 	else
-		entity.say( gulpLines[ math.random( #gulpLines ) ] )
+		npc.say( gulpLines[ math.random( #gulpLines ) ] )
 	end
 
 end
@@ -85,11 +85,11 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		entity.say( bellyLines[math.random(#bellyLines)])
+		npc.say( bellyLines[math.random(#bellyLines)])
 	end
 
 end
 
 function forceExit()
-	entity.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
+	npc.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
 end

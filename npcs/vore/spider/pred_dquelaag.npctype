@@ -4,10 +4,7 @@
   
   "npcname" : "Chaos Witch Quelaag",
   "scriptConfig" : { 
-	"questGenerator" : {
-      "pools" : ["normal"],
-      "enableParticipation" : true
-    },
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

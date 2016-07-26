@@ -3,5 +3,14 @@
   "type" : "head",
 
   "scripts" : ["vorerpv1.lua"],
-  "actions" : ["active","deactive","toggleheal","toggledigest"]
+  
+  
+  "description" : "Hold your cursor over your predator and press F to simulate being consumed by them.",
+  "shortDescription" : "Vore RP V1",
+  "rarity" : "Legendary",
+  "icon" : "/tech/vicon.png",
+  
+  "chipCost" : 4,
+  
+  "energyCost" : 50
 }

@@ -6,19 +6,17 @@ function init()
   blinkTimer = 0
   sleepLock = 0
   
-  self.detectArea = entity.configParameter("detectArea")
-  self.detectArea[1] = entity.toAbsolutePosition(self.detectArea[1])
-  self.detectArea[2] = entity.toAbsolutePosition(self.detectArea[2])
+  self.detectArea = config.getParameter("detectArea")
   
 end
 
 function update(dt)
 	if world.loungeableOccupied(entity.id()) == false then
 
-	  local people = world.entityQuery(self.detectArea[1], self.detectArea[2], {
-        includedTypes = {"npc", "player"},
-        boundMode = "CollisionArea"
-      })
+	  local people = world.entityQuery( object.position(), 7, {
+      includedTypes = {"player"},
+      boundMode = "CollisionArea"
+  })
 	  
 	  if sleepLock == 1 and #people == 0 then
 	    do return end
@@ -27,22 +25,22 @@ function update(dt)
 	  end
 	  
       if animLock == 0 then
-	    entity.setAnimationState("pred", "idle")
+	    animator.setAnimationState("pred", "idle")
 	    blinkLock = 0
 		blinkTimer = 0
 		idleTimer = 0
 		if eatingTimer >= 10 then
-		  entity.playSound("spit")
+		  animator.playSound("spit")
 		  animLock = 1
 		  eatingTimer = 0
-		  entity.setAnimationState("pred", "pain")
+		  animator.setAnimationState("pred", "pain")
 		end
 	  end
 	  
 	  if animLock == 0 and math.random(100) == 1 then
 		animLock = 1
 		blinkLock = 1
-	    entity.setAnimationState("pred", "blink")
+	    animator.setAnimationState("pred", "blink")
 	  end
 	  
 	  if idleTimer >= 7 or blinkTimer >=3 then
@@ -52,28 +50,28 @@ function update(dt)
 	  idleTimer = idleTimer + 1
 	  
 	  if #people == 0 and math.random(1000) == 1 then
-		entity.setAnimationState("pred", "sleep")
+		animator.setAnimationState("pred", "sleep")
 		sleepLock = 1
 		animLock = 1
 	  end
 	  
 	elseif world.loungeableOccupied(entity.id()) == true and eatingTimer <= 10 then
 	  if eatingTimer == 4 then
-	    entity.playSound("swallow")
+	    animator.playSound("swallow")
 	  end
-	  entity.setAnimationState("pred", "eating")
+	  animator.setAnimationState("pred", "eating")
 	  eatingTimer = eatingTimer + 1
 	
 	elseif eatingTimer > 10 and math.random(100) == 1 then
-		entity.setAnimationState("pred", "sigh")
+		animator.setAnimationState("pred", "sigh")
 		blinkLock = 1
 		
 	elseif eatingTimer > 10 and math.random(50) == 1 then
-		entity.setAnimationState("pred", "fedblink")
+		animator.setAnimationState("pred", "fedblink")
 		blinkLock = 1
 		
 	elseif blinkTimer == 0 or blinkTimer > 10 then
-	  entity.setAnimationState("pred", "fed")
+	  animator.setAnimationState("pred", "fed")
 	  blinkLock = 0
 	  blinkTimer = 0
 	end

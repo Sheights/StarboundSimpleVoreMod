@@ -2,7 +2,7 @@
 	"projectileName" : "npcharpyvoreprojectile",
 	"speed" : 0,
 	"damageKindImage" : "icon.png",
-	"frames" : "npcvore.png",
+	"image" : "npcvore.png",
 	"frameNumber" : 6,
 	"animationCycle" : 1.0,
 	"power" : 0,

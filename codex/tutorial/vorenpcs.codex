@@ -41,5 +41,9 @@ Some might try to bribe you, this is shown in orange text. Release them after wi
 
 "You can configure a few options in the script files, which is explained more thoroughly in the README file, found in the root folder.
 Do also note that the tenants will not be able to eat you on player ships unless configured in the Script files of the mod. More information can be found on the github Wiki or in the README file included with the mod."
-  ]
+  ],
+  "itemConfig" : {
+    "rarity" : "common",
+    "price" : 200
+  }
 }

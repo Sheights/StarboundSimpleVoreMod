@@ -1,5 +1,12 @@
 {
   "kind" : "zoroark",
+  
+  "charCreationTooltip" : {
+      "title" : "NULL",
+      "subTitle" : "U",
+      "description" : "You shouldn't be reading this"
+  },
+  
   "playerSpecies" : false,
   "nameGen" : [ "/species/zoroarknamegen.config:names", "/species/zoroarknamegen.config:names" ],
   "ouchNoises" : [ "/sfx/humanoid/lucariohurt_male1.ogg", "/sfx/humanoid/lucariohurt_female1.ogg" ],

@@ -3,7 +3,7 @@
 	"bounces" : -1,
 	"timeToLive" : 60.0,
 	"speed" : 0,
-	"frames" : "yoshieggs.png:indigo",
+	"image" : "yoshieggs.png:indigo",
 	"frameNumber" : 4,
 	"power" : 0,
 	"flippable" : true

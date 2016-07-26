@@ -41,7 +41,7 @@ end
 
 function update(dt)
 		
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 		
 	if world.loungeableOccupied(entity.id()) then
 	
@@ -50,10 +50,10 @@ function update(dt)
 		end
 		
 		if animState == "idle" and lock then
-			entity.setAnimationState("bodyState", "swallow")
+			animator.setAnimationState("bodyState", "swallow")
 			lock = false
-			entity.playSound("swallow")
-			entity.say( gulpLines[ math.random( #gulpLines ) ] )
+			animator.playSound("swallow")
+			object.say( gulpLines[ math.random( #gulpLines ) ] )
 		end
 		
 		if health == nil then
@@ -61,41 +61,41 @@ function update(dt)
 		end
 		
 		if health < 0.1 and animState == "fullidle" then
-			entity.setAnimationState("bodyState", "digest")
-			entity.say( gurgleLines[ math.random( #gurgleLines ) ] )
+			animator.setAnimationState("bodyState", "digest")
+			object.say( gurgleLines[ math.random( #gurgleLines ) ] )
 		end
 		
 		if math.random(500) == 1 then
 			if animState == "fullidle" then
 				temp = math.random(4)
 				if temp == 1 then
-					entity.setAnimationState("bodyState", "rubs")
+					animator.setAnimationState("bodyState", "rubs")
 				elseif temp == 2 then
-					entity.setAnimationState("bodyState", "blink")
+					animator.setAnimationState("bodyState", "blink")
 				elseif temp == 3 then
-					entity.setAnimationState("bodyState", "fullsmile")
+					animator.setAnimationState("bodyState", "fullsmile")
 				else
-					entity.setAnimationState("bodyState", "struggle")
+					animator.setAnimationState("bodyState", "struggle")
 				end
 				temp = math.random(3)
 				if temp == 1 then
-					entity.playSound("belly1")
+					animator.playSound("belly1")
 				elseif temp == 2 then
-					entity.playSound("belly2")
+					animator.playSound("belly2")
 				else
-					entity.playSound("belly3")
+					animator.playSound("belly3")
 				end
 			end
 		elseif math.random(500) == 1 and animState ~= "idle" then
-			entity.say( bellyLines[ math.random( #bellyLines ) ] )
+			object.say( bellyLines[ math.random( #bellyLines ) ] )
 		end
 	else
 		
 		lock = true
 		
 		if animState == "fullidle" then
-			entity.setAnimationState("bodyState", "reg")
-			entity.say( releaseLines[ math.random( #releaseLines ) ] )
+			animator.setAnimationState("bodyState", "reg")
+			object.say( releaseLines[ math.random( #releaseLines ) ] )
 		end
 		
 		local players = world.entityQuery( world.entityPosition(entity.id()), 8, {
@@ -104,7 +104,7 @@ function update(dt)
 		})
 	
 		if #players > 0 and stopWatch >= 7 then
-			entity.say( idleLines[ math.random( #idleLines ) ] )
+			object.say( idleLines[ math.random( #idleLines ) ] )
 			stopWatch = 0
 		end
 			
@@ -113,9 +113,9 @@ function update(dt)
 	if math.random(500) == 1 then
 		if animState == "idle" then
 			if math.random(2) == 1 then
-				entity.setAnimationState("bodyState", "smile")
+				animator.setAnimationState("bodyState", "smile")
 			else
-				entity.setAnimationState("bodyState", "uad")
+				animator.setAnimationState("bodyState", "uad")
 			end
 		end
 	end

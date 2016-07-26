@@ -2,18 +2,17 @@
   "itemName" : "lemon",
   "rarity" : "Common",
   "price" : 20,
+  "category" : "food",
   "inventoryIcon" : "lemon.png",
   "description" : "It's a lemon.",
   "shortdescription" : "Lemon",
-  "handPosition" : [0, 4],
-  "effects" : [ [
-    {
-        "effect" : "foodheal25",
-        "duration" : 60
-    },
-    {
-        "effect" : "wellfed",
-        "duration" : 60
-    }
-  ] ]
+  "foodValue" : 5,
+  "tooltipKind" : "food",
+  "builder" : "/items/buildscripts/buildfood.lua",
+  "maxStack" : 1,
+  "itemAgingScripts" : ["/scripts/items/rotting.lua"],
+  "rottingMultiplier" : 1.0,
+  "blockingEffects" : [
+    "wellfed"
+  ]
 }

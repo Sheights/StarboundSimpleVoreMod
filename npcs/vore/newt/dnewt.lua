@@ -12,7 +12,7 @@ playerLines = {	"...You tasty...",
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	head = {
 		name = "newthead",
@@ -61,7 +61,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("...Come back...")
+		npc.say("...Come back...")
 	end
 	
 	isPlayer = false
@@ -71,16 +71,16 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 	
 	if fed then
 		if stopWatch >= 2 then
-			entity.setItemSlot( "chest", chest )
-			entity.setItemSlot( "legs", legsbelly )
+			npc.setItemSlot( "chest", chest )
+			npc.setItemSlot( "legs", legsbelly )
 		elseif	stopWatch >=1 then			
-			entity.setItemSlot( "chest", chestbelly )
-			entity.setItemSlot( "head", headbelly )
+			npc.setItemSlot( "chest", chestbelly )
+			npc.setItemSlot( "head", headbelly )
 		end
 	end
 

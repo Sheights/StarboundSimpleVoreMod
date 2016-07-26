@@ -24,34 +24,34 @@ function update(dt)
 
 		if timerSwallow > 50 then
 			if timerDigest % 13 == 0 then
-				entity.playSound("digest")
+				animator.playSound("digest")
 			end
 			
-			entity.setAnimationState("main", "digest")
+			animator.setAnimationState("main", "digest")
 			timerDigest = timerDigest + 1
 
 		elseif math.floor( preyCur / preyMax ) < 50 and timerEat > 28 then
 			if timerSwallow == 0 then
-				entity.playSound("swallow")
+				animator.playSound("swallow")
 			end
 			
-			entity.setAnimationState("main", "swallow")
+			animator.setAnimationState("main", "swallow")
 			timerSwallow = timerSwallow + 1
 
 		elseif timerEat > 28 then
 			if timerChew % 13 == 0 and timerChew > 10 then
-				entity.playSound("chew")
+				animator.playSound("chew")
 			end
 			
-			entity.setAnimationState("main", "chew")
+			animator.setAnimationState("main", "chew")
 			timerChew = timerChew + 1
 
 		else
 			if timerEat == 0 then
-				entity.playSound("eat")
+				animator.playSound("eat")
 			end
 			
-			entity.setAnimationState("main", "eat")
+			animator.setAnimationState("main", "eat")
 			timerEat = timerEat + 1
 		end
 
@@ -63,7 +63,7 @@ function update(dt)
 		end
 		
 		if timerSwallow > 50 then			
-			entity.setAnimationState("main", "spit")
+			animator.setAnimationState("main", "spit")
 			spitLock = 1
 		end
 
@@ -74,11 +74,11 @@ function update(dt)
 
 		if croakLock == 0 and spitLock == 0 and math.random(200) == 1 then
 			croakLock = 1
-			entity.setAnimationState("main", "croak")
-			entity.playSound("croak")
+			animator.setAnimationState("main", "croak")
+			animator.playSound("croak")
 
 		elseif croakLock == 0 and spitLock == 0 then
-			entity.setAnimationState("main", "idle")
+			animator.setAnimationState("main", "idle")
 		end
 
 		if croakLock == 1 or spitLock == 1 then
@@ -90,9 +90,9 @@ function update(dt)
 			timer = 0
 		elseif spitLock == 1 then		
 			if timer == 1 then
-				entity.playSound("swallow")
+				animator.playSound("swallow")
 			elseif timer == 25 then
-				entity.playSound("eat")
+				animator.playSound("eat")
 			elseif timer > 46 then
 				spitLock = 0
 				timer = 0

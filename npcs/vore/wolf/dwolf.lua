@@ -17,16 +17,16 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digest system of w
 function digestHook()
 
 	if #victim > 0 then
-		entity.setItemSlot( "legs", fulllegs1 )
+		npc.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", legs )
+		npc.setItemSlot( "legs", legs )
 	end
 	
 end
 
 function initHook()
 
-	index = entity.getItemSlot("legs").parameters.colorIndex
+	index = npc.getItemSlot("legs").parameters.colorIndex
 	
 	legs = {
 		name = "wolfnewlegs",
@@ -51,9 +51,9 @@ end
 function feedHook()
 
 	if #victim == 1 then
-		entity.setItemSlot( "legs", fulllegs1 )
+		npc.setItemSlot( "legs", fulllegs1 )
 	else
-		entity.setItemSlot( "legs", fulllegs2 )
+		npc.setItemSlot( "legs", fulllegs2 )
 	end
 
 end
@@ -61,7 +61,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

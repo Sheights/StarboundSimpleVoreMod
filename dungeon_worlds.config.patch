@@ -6,12 +6,12 @@
       "primaryDungeon" : "foodhall",
       "threatLevel" : 2,
       "gravity" : 100,
-      "worldSize" : [495, 136],
+      "worldSize" : [493, 136],
       "dungeonBaseHeight" : 136,
 	  "dungeonSurfaceHeight" : 80,
       "ambientLightLevel" : [200, 255, 200],
       "musicTrack" : "/music/buy.ogg",
-      "biome": "tentacles"
+      "biome": "forest"
     }
   }
 ]

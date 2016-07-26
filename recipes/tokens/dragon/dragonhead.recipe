@@ -3,7 +3,7 @@
     { "item" : "dragontoken", "count" : 1 }
   ],
   "output" : {
-    "item" : "dragonhead",
+    "item" : "dragonheada",
     "count" : 1
   },
   "groups" : [ "npctoken" ]

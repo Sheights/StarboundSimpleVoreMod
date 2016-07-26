@@ -11,39 +11,39 @@ end
 
 function update(dt)
 
-	animState = entity.animationState("bodyState")
+	animState = animator.animationState("bodyState")
 
 	if world.loungeableOccupied(entity.id()) then
 	
 		if animState == "idle" then
-			entity.setAnimationState("bodyState", "swallow")
-			entity.playSound("swallow")
+			animator.setAnimationState("bodyState", "swallow")
+			animator.playSound("swallow")
 		elseif animState == "full" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "fullsnort")
+			animator.setAnimationState("bodyState", "fullsnort")
 		elseif animState == "full" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "squirm")
-			entity.playSound( gurgles[ math.random(3) ] )
+			animator.setAnimationState("bodyState", "squirm")
+			animator.playSound( gurgles[ math.random(3) ] )
 		elseif animState == "full" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "fullts")
+			animator.setAnimationState("bodyState", "fullts")
 		elseif animState == "full" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "indigestion")
-			entity.playSound( gurgles[ math.random(3) ] )
+			animator.setAnimationState("bodyState", "indigestion")
+			animator.playSound( gurgles[ math.random(3) ] )
 		end
 
 	else
 	
 		if animState == "idle" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "snort")
+			animator.setAnimationState("bodyState", "snort")
 		elseif animState == "idle" and math.random(500) == 1 then
-			entity.setAnimationState("bodyState", "tailswing")
+			animator.setAnimationState("bodyState", "tailswing")
 		elseif animState == "idle" and math.random(700) == 1 then
-			entity.setAnimationState("bodyState", "gurgle")
-			entity.playSound( gurgles[ math.random(3) ] )
+			animator.setAnimationState("bodyState", "gurgle")
+			animator.playSound( gurgles[ math.random(3) ] )
 		end
 		
 		if animState == "full" then
-			entity.setAnimationState("bodyState", "regurgitate")			
-			entity.playSound("spit")
+			animator.setAnimationState("bodyState", "regurgitate")			
+			animator.playSound("spit")
 		end
 		
 	end

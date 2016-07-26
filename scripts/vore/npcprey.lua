@@ -62,11 +62,9 @@ function init()
 end
 
 function die()
-	
-	world.logInfo("ping1")
 	world.spawnProjectile( "cleanser" , mcontroller.position(), entity.id(), {0, 0}, true )
 	if eaten then
-		entity.say( myProfile["death"][familiarity][ math.random( #myProfile["death"][familiarity] ) ] )
+		npc.say( myProfile["death"][familiarity][ math.random( #myProfile["death"][familiarity] ) ] )
 		if math.random() > 0.8 then
 			world.spawnItem( "money", world.entityPosition(entity.id()), math.random(200) + 100 )
 		end
@@ -85,7 +83,7 @@ function interact(args)
 		if eaten then
 
 			world.spawnProjectile( "cleanser" , mcontroller.position(), entity.id(), {0, 0}, true )
-			entity.say( myProfile["release"][familiarity][ math.random( #myProfile["release"][familiarity] ) ] )
+			npc.say( myProfile["release"][familiarity][ math.random( #myProfile["release"][familiarity] ) ] )
 			if bribe then
 				world.spawnItem( "money", world.entityPosition(entity.id()), math.random(200) + 100 )
 				bribe = false
@@ -111,7 +109,7 @@ function interact(args)
 
 				predator = people[1]
 				familiarize( world.entityName( predator ) )
-				entity.say( myProfile["consumed"][familiarity][ math.random( #myProfile["consumed"][familiarity] ) ] )
+				npc.say( myProfile["consumed"][familiarity][ math.random( #myProfile["consumed"][familiarity] ) ] )
 				
 				if isDigest then
 					local mergeOptions = {
@@ -127,7 +125,7 @@ function interact(args)
 				end
 				eaten = true
 			else
-				entity.say("I do not want to be eaten.")
+				npc.say("I do not want to be eaten.")
 			end
 			talkTimer = 1
 		end
@@ -139,7 +137,7 @@ function interact(args)
 	recognize( world.entityName( args.sourceId ) )
 	
 	if math.random() < 0.1 + .2 * familiarity then
-		entity.say( myProfile["interact"][familiarity][ math.random( #myProfile["interact"][familiarity] ) ] )
+		npc.say( myProfile["interact"][familiarity][ math.random( #myProfile["interact"][familiarity] ) ] )
 	elseif not eaten then
 		oldInteract(args)
 	end
@@ -158,10 +156,10 @@ function update(dt)
 	
 	if eaten and math.random(700) == 1 then
 		if isDigest and math.random() < 0.02 * familiarity then
-			entity.say( "^orange;" .. myProfile["bribe"][familiarity][ math.random( #myProfile["bribe"][familiarity] ) ] )
+			npc.say( "^orange;" .. myProfile["bribe"][familiarity][ math.random( #myProfile["bribe"][familiarity] ) ] )
 			bribe = true
 		else
-			entity.say( myProfile["idle"][familiarity][ math.random( #myProfile["idle"][familiarity] ) ] )
+			npc.say( myProfile["idle"][familiarity][ math.random( #myProfile["idle"][familiarity] ) ] )
 		end
 	end
 	

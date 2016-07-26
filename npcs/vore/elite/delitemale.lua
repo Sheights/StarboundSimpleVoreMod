@@ -105,9 +105,9 @@ fulllegs = "elitelegsbelly"
 	
 function feedHook()
 	if request then
-		entity.say( playerLines["request"][math.random(#playerLines["request"])])
+		npc.say( playerLines["request"][math.random(#playerLines["request"])])
 	else
-		entity.say( playerLines["eat"][math.random(#playerLines["eat"])])
+		npc.say( playerLines["eat"][math.random(#playerLines["eat"])])
 	end
 end
 
@@ -115,9 +115,9 @@ function loseHook()
 	
 	if digested == false then
 		if stopWatch <= 91 and stopWatch >=89 then
-			entity.say( playerLines["release"][math.random(#playerLines["release"])])
+			npc.say( playerLines["release"][math.random(#playerLines["release"])])
 		else
-			entity.say( playerLines["leave"][math.random(#playerLines["leave"])])
+			npc.say( playerLines["leave"][math.random(#playerLines["leave"])])
 		end
 	else
 		digested = false
@@ -130,14 +130,14 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines["idle"][math.random(#playerLines["idle"])])
+		npc.say( playerLines["idle"][math.random(#playerLines["idle"])])
 	end
 	
 	if digested == false then
 		if fed and world.entityHealth(victim)[1] <= 5 and (stopWatch <= 85 or request) then
 			digested = true
 			if isPlayer then
-				entity.say( playerLines["die"][math.random(#playerLines["die"])])
+				npc.say( playerLines["die"][math.random(#playerLines["die"])])
 			end
 		end
 	end

@@ -38,7 +38,7 @@ end
 function loseHook()
 	
 	if isPlayer then
-		entity.say("I may be releasing you but I'll always look forward to catching you again <3")
+		npc.say("I may be releasing you but I'll always look forward to catching you again <3")
 	end
 	
 	isPlayer = false
@@ -48,16 +48,16 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end
 
 function makeShiny()
 
-	entity.setItemSlot( "head", "lopunnyshinyhead" )
-	entity.setItemSlot( "chest", "lopunnyshinychest" )
-	entity.setItemSlot( "legs", "lopunnyshinylegs" )
+	npc.setItemSlot( "head", "lopunnyshinyhead" )
+	npc.setItemSlot( "chest", "lopunnyshinychest" )
+	npc.setItemSlot( "legs", "lopunnyshinylegs" )
 	legs = "lopunnyshinylegs"
 	fulllegs = "lopunnyshinylegsbelly"
 

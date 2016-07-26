@@ -1,9 +1,0 @@
-{
-  "itemName" : "vorerpv1",
-  "rarity" : "Legendary",
-  "inventoryIcon" : "/tech/vicon.png",
-  "description" : "Hold your cursor over your predator and press F to simulate being consumed by them.",
-  "shortdescription" : "Vore RP V1",
-
-  "techModule" : "vorerpv1"
-}

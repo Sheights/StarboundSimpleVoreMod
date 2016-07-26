@@ -1,11 +1,18 @@
 {
   "id" : "hibaniidontgetit",
   "title" : "I Don't Get It",
+  "species" : "hibani",
+  "description" : "The bindings are loose and the cover is wrecked",
+  "icon" : "hibaniBook.png",
   "contentPages" : [
 
 	"I don't really get the need of so many species to pray to a higher entity, deity, god or anything like that. We are awesome, and we decide what we do; everything is just a consequence of our decisions. Why giving credit of everything to an imaginary friend?",
 	
 	"Or are we missing something?"
 
-  ]
+  ],
+    "itemConfig" : {
+    "rarity" : "common",
+    "price" : 25
+  }
 }

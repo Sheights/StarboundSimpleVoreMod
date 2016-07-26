@@ -2,9 +2,17 @@
   "type" : "mall_argo",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "female"
+  },
+  
   "npcname" : "Lynn",
   "damageTeamType" : "friendly",
-  "scriptConfig" : { 
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : false
+    },
     "damageTeamType" : "friendly",
 	"dialog" : {
       "tenant" : {
@@ -129,6 +137,9 @@
     }
   },
   "disableWornArmor" : false,
+  
+  "scriptDelta" : 5,
+  "scripts" : [ "/npcs/bmain.lua", "/npcs/mall/mall_argo.lua" ],
 
   "matchColorIndices" : true,
   "items" : {

@@ -71,7 +71,7 @@ swallowsound 	= "swallowprojectile"
 function init()
 
 	oldInit()
-	entity.setInteractive(true)
+	npc.setInteractive(true)
 
 	if predsOnShips then
 		world.setProperty("invinciblePlayers", false)
@@ -176,19 +176,19 @@ end
 function gain()
 
 	if fullhead then
-		entity.setItemSlot( "head", fullhead )
+		npc.setItemSlot( "head", fullhead )
 	end
 	
 	if fullchest then
-		entity.setItemSlot( "chest", fullchest )
+		npc.setItemSlot( "chest", fullchest )
 	end
 	
 	if fulllegs then
-		entity.setItemSlot( "legs", fulllegs )
+		npc.setItemSlot( "legs", fulllegs )
 	end
 	
 	if fullback then
-		entity.setItemSlot( "back", fullback )
+		npc.setItemSlot( "back", fullback )
 	end
 	
 	if audio then
@@ -201,19 +201,19 @@ end
 function lose()
 
 	if head then
-	entity.setItemSlot( "head", head )
+	npc.setItemSlot( "head", head )
 	end
 	
 	if chest then
-	entity.setItemSlot( "chest", chest )
+	npc.setItemSlot( "chest", chest )
 	end
 	
 	if legs then
-	entity.setItemSlot( "legs", legs )
+	npc.setItemSlot( "legs", legs )
 	end
 	
 	if back then
-	entity.setItemSlot( "back", back )
+	npc.setItemSlot( "back", back )
 	end
 	
 	loseHook()

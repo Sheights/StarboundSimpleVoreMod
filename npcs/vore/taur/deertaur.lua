@@ -10,7 +10,7 @@ playerLines = {	"You're about to become one with nature sweetie. Quite the honou
 function initHook()
 	
 	if storage.legs == null then
-		legs = entity.getItemSlot("legs").name
+		legs = npc.getItemSlot("legs").name
 		fulllegs = legs .. "belly"
 		storage.legs = legs
 	else
@@ -29,7 +29,7 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 
 end

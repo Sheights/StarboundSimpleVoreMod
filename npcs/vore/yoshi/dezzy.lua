@@ -16,14 +16,14 @@ playerLines = {	"I hope its cozy in there.",
 
 function feedHook()
 
-	entity.say("Mmmm...Yoshi <3")
+	npc.say("Mmmm...Yoshi <3")
 
 end
 
 function initHook()
 
 	if storage.mi == nil then
-		mi = entity.getItemSlot("head").name
+		mi = npc.getItemSlot("head").name
 		if mi == "dezzyyoshihead11" then
 			mi = 1
 		else
@@ -112,7 +112,7 @@ end
 function loseHook()
 
 	world.spawnProjectile( "yoshilayprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
-	entity.say("That was delightful, I hope you've enjoyed the trip <3")
+	npc.say("That was delightful, I hope you've enjoyed the trip <3")
 	
 end
 
@@ -120,21 +120,21 @@ function updateHook()
 
 	if fed then
 		if stopWatch < 0.4 then
-			entity.setItemSlot( "head", head2 )
+			npc.setItemSlot( "head", head2 )
 		elseif	stopWatch < 0.8 then			
-			entity.setItemSlot( "head", head3 )
+			npc.setItemSlot( "head", head3 )
 		elseif	stopWatch < 1.2 then			
-			entity.setItemSlot( "head", head4 )
+			npc.setItemSlot( "head", head4 )
 			if soundLock then
 				world.spawnProjectile( "yoshiswallowprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 				soundLock = false
 			end
 		elseif	stopWatch < 1.6 then
 			soundLock = true
-			entity.setItemSlot( "head", head )
-			entity.setItemSlot( "legs", legsbelly )
+			npc.setItemSlot( "head", head )
+			npc.setItemSlot( "legs", legsbelly )
 		elseif stopWatch > 59.5 then
-			entity.setItemSlot( "head", head5 )
+			npc.setItemSlot( "head", head5 )
 		end
 	end
 

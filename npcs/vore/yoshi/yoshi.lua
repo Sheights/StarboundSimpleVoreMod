@@ -11,7 +11,7 @@ swallowsound = "yoshitongueprojectile"
 function initHook()
 
 	if storage.ci == nil then
-		ci = entity.getItemSlot("legs").parameters.colorIndex
+		ci = npc.getItemSlot("legs").parameters.colorIndex
 		storage.ci = ci
 	else
 		ci = storage.ci
@@ -96,21 +96,21 @@ function updateHook()
 
 	if fed then
 		if stopWatch < 0.3 then
-			entity.setItemSlot( "head", head2 )
+			npc.setItemSlot( "head", head2 )
 		elseif	stopWatch < 0.6 then			
-			entity.setItemSlot( "head", head3 )
+			npc.setItemSlot( "head", head3 )
 		elseif	stopWatch < 0.9 then			
-			entity.setItemSlot( "head", head4 )
+			npc.setItemSlot( "head", head4 )
 			if soundLock then
 				world.spawnProjectile( "yoshiswallowprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 				soundLock = false
 			end
 		elseif	stopWatch < 1.2 then
 			soundLock = true
-			entity.setItemSlot( "head", head )
-			entity.setItemSlot( "legs", legsbelly )
+			npc.setItemSlot( "head", head )
+			npc.setItemSlot( "legs", legsbelly )
 		elseif stopWatch > 59.7 then
-			entity.setItemSlot( "head", head5 )
+			npc.setItemSlot( "head", head5 )
 		end
 	end
 

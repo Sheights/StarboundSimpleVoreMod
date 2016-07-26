@@ -1,83 +1,83 @@
 temp = 0
 bonus = 0
 
-idleLines = {	"Yaupon: Welcome to Do it Yourself. Where you can, do it yourself!",
-				"Yaupon: I can help you find anything you might need.",
-				"Yaupon: I spent a week in a slime blob trying to get some blueprints. Well worth it!",
-				"Yaupon: You would be surprised how many times treasure is gobbled up. Only one way to get it out."
+idleLines = {	"Sheights: Welcome to Do it Yourself. Where you can, do it yourself!",
+				"Sheights: I can help you find anything you might need.",
+				"Sheights: I spent a week in a slime blob trying to get some blueprints. Well worth it!",
+				"Sheights: You would be surprised how many times treasure is gobbled up. Only one way to get it out."
 }
 
 function init()
-  self.buyFactor = entity.configParameter("buyFactor", root.assetJson("/merchant.config").defaultBuyFactor)
+  self.buyFactor = config.getParameter("buyFactor", root.assetJson("/merchant.config").defaultBuyFactor)
 
-  entity.setInteractive(true)
+  object.setInteractive(true)
 end
 
 function update(dt)
 
-	state = entity.animationState("bodyState")
+	state = animator.animationState("bodyState")
 
 	temp = math.random(20)
 	
 	if temp < 4 then
 		if state == "TY" then
-			entity.setAnimationState("bodyState", "TYTblink")
+			animator.setAnimationState("bodyState", "TYTblink")
 		elseif state == "NinIdle" then
-			entity.setAnimationState("bodyState", "NinLick")
+			animator.setAnimationState("bodyState", "NinLick")
 		elseif state == "AvaliIdle" then
-			entity.setAnimationState("bodyState", "AvaliT")
+			animator.setAnimationState("bodyState", "AvaliT")
 		elseif state == "ClydeIdle" then
-			entity.setAnimationState("bodyState", "ClydeBlink")
+			animator.setAnimationState("bodyState", "ClydeBlink")
 		elseif state == "SkylerIdle" then
-			entity.setAnimationState("bodyState", "SkylerRub")
+			animator.setAnimationState("bodyState", "SkylerRub")
 		elseif state == "DevoutIdle" then
-			entity.setAnimationState("bodyState", "DevoutSmug")
+			animator.setAnimationState("bodyState", "DevoutSmug")
 		end
 	elseif temp < 7 then
 		if state == "TY" then
-			entity.setAnimationState("bodyState", "TYTblink")
+			animator.setAnimationState("bodyState", "TYTblink")
 		elseif state == "NinIdle" then
-			entity.setAnimationState("bodyState", "NinLick")
+			animator.setAnimationState("bodyState", "NinLick")
 		elseif state == "AvaliIdle" then
-			entity.setAnimationState("bodyState", "AvaliT")
+			animator.setAnimationState("bodyState", "AvaliT")
 		elseif state == "ClydeIdle" then
-			entity.setAnimationState("bodyState", "ClydeBlink")
+			animator.setAnimationState("bodyState", "ClydeBlink")
 		elseif state == "SkylerIdle" then
-			entity.setAnimationState("bodyState", "SkylerRub")
+			animator.setAnimationState("bodyState", "SkylerRub")
 		elseif state == "DevoutIdle" then
-			entity.setAnimationState("bodyState", "DevoutThump")
+			animator.setAnimationState("bodyState", "DevoutThump")
 		end
 	elseif temp < 10 then
 		if state == "TY" then
-			entity.setAnimationState("bodyState", "TYYblink")
+			animator.setAnimationState("bodyState", "TYYblink")
 		elseif state == "NinIdle" then
-			entity.setAnimationState("bodyState", "NinFlick")
+			animator.setAnimationState("bodyState", "NinFlick")
 		elseif state == "AvaliIdle" then
-			entity.setAnimationState("bodyState", "AvaliY")
+			animator.setAnimationState("bodyState", "AvaliY")
 		elseif state == "ClydeIdle" then
-			entity.setAnimationState("bodyState", "ClydeBlink")
+			animator.setAnimationState("bodyState", "ClydeBlink")
 		elseif state == "SkylerIdle" then
-			entity.setAnimationState("bodyState", "SkylerRub")
+			animator.setAnimationState("bodyState", "SkylerRub")
 		elseif state == "DevoutIdle" then
-			entity.setAnimationState("bodyState", "DevoutHelp")
+			animator.setAnimationState("bodyState", "DevoutHelp")
 		end
 	elseif temp < 13 then
 		if state == "TY" then
-			entity.setAnimationState("bodyState", "TYYblink")
+			animator.setAnimationState("bodyState", "TYYblink")
 		elseif state == "NinIdle" then
-			entity.setAnimationState("bodyState", "NinFlick")
+			animator.setAnimationState("bodyState", "NinFlick")
 		elseif state == "AvaliIdle" then
-			entity.setAnimationState("bodyState", "AvaliY")
+			animator.setAnimationState("bodyState", "AvaliY")
 		elseif state == "ClydeIdle" then
-			entity.setAnimationState("bodyState", "ClydeBlink")
+			animator.setAnimationState("bodyState", "ClydeBlink")
 		elseif state == "SkylerIdle" then
-			entity.setAnimationState("bodyState", "SkylerRub")
+			animator.setAnimationState("bodyState", "SkylerRub")
 		elseif state == "DevoutIdle" then
-			entity.setAnimationState("bodyState", "DevoutIdle")
+			animator.setAnimationState("bodyState", "DevoutIdle")
 		end
 	elseif temp + bonus > 25 then
 	
-		local people = world.entityQuery( entity.position(), 100, {
+		local people = world.entityQuery( object.position(), 100, {
 			includedTypes = {"player"},
 			boundMode = "CollisionArea"
 		})
@@ -87,16 +87,16 @@ function update(dt)
 			if temp == 7 then
 			elseif state == "NinIdle" or state == "AvaliIdle" or state == "ClydeIdle" or state == "SkylerIdle" or state == "DevoutIdle" then
 			
-			entity.setAnimationState("bodyState", "TY")
-			idleLines = {	"Yaupon: Welcome to Do it Yourself. Where you can, do it yourself!",
-							"Yaupon: I can help you find anything you might need.",
-							"Yaupon: I spent a week in a slime blob trying to get some blueprints. Well worth it!",
-							"Yaupon: You would be surprised how many times treasure is gobbled up. Only one way to get it out."
+			animator.setAnimationState("bodyState", "TY")
+			idleLines = {	"Sheights: Welcome to Do it Yourself. Where you can, do it yourself!",
+							"Sheights: I can help you find anything you might need.",
+							"Sheights: I spent a week in a slime blob trying to get some blueprints. Well worth it!",
+							"Sheights: You would be surprised how many times treasure is gobbled up. Only one way to get it out."
 			}
 			
 			else
 				if temp == 1 then
-					entity.setAnimationState("bodyState", "NinIdle")
+					animator.setAnimationState("bodyState", "NinIdle")
 					
 					idleLines = {	"The usual shopkeepers? I'm sure they're still around~",
 									"*urp* oh man, some rodents are more filling than they look.",
@@ -111,7 +111,7 @@ function update(dt)
 					}
 					
 				elseif temp == 2 then
-					entity.setAnimationState("bodyState", "AvaliIdle")
+					animator.setAnimationState("bodyState", "AvaliIdle")
 					
 					idleLines = {	"Hi hi hi!",
 									"The long eared one froze up when we got close! It was so cute~",
@@ -119,19 +119,19 @@ function update(dt)
 									"Jassari's asleep right now but I can help you with things.",
 									"Oh, you look sweet, but I just ate~",
 									"Hehehe, the round eared one is still kicking~",
-									"Yaupon: C-Can anyone lend me a hand?",
+									"Sheights: C-Can anyone lend me a hand?",
 									"Tea: MMmmmmm... S-so fluffy... -////-"
 					}
 				elseif temp == 3 then
-					entity.setAnimationState("bodyState", "ClydeIdle")
+					animator.setAnimationState("bodyState", "ClydeIdle")
 					idleLines = {	""
 					}
 				elseif temp == 4 then
-					entity.setAnimationState("bodyState", "SkylerIdle")
+					animator.setAnimationState("bodyState", "SkylerIdle")
 					idleLines = {	""
 					}
 				elseif temp == 5 then
-					entity.setAnimationState("bodyState", "DevoutIdle")
+					animator.setAnimationState("bodyState", "DevoutIdle")
 					
 					idleLines = {	"Would teach them to pay next time...",
 									"Got a new shipment in recently.",
@@ -151,17 +151,17 @@ function update(dt)
 					temp = math.random(3)
 					
 					if temp == 1 then
-						entity.setAnimationState("bodyState", "AutumnT")
+						animator.setAnimationState("bodyState", "AutumnT")
 					
 						idleLines = {	""
 						}
 					elseif temp == 2 then
-						entity.setAnimationState("bodyState", "AutumnY")
+						animator.setAnimationState("bodyState", "AutumnY")
 					
 						idleLines = {	""
 						}
 					else
-						entity.setAnimationState("bodyState", "AutumnFull")
+						animator.setAnimationState("bodyState", "AutumnFull")
 					
 						idleLines = {	"Oof, I'm stuffed...",
 										"Where's Tea? It's a secret to everybody...",
@@ -182,13 +182,13 @@ function update(dt)
 		bonus = 0
 	else
 		
-		local people = world.entityQuery( entity.position(), 20, {
+		local people = world.entityQuery( object.position(), 20, {
 			includedTypes = {"player"},
 			boundMode = "CollisionArea"
 		})
 		
 		if #people > 0 then
-			entity.say( idleLines[ math.random( #idleLines ) ] )
+			object.say( idleLines[ math.random( #idleLines ) ] )
 		end
 		
 		bonus = bonus + 1
@@ -197,7 +197,7 @@ end
 
 function onInteraction(args)
 
-	local interactData = entity.configParameter("interactData")
+	local interactData = config.getParameter("interactData")
 	
 	if state == "NinIdle" or state == "NinLick" or state == "NinFlick" then
 		interactData.items[#interactData.items + 1] = { item = "adventuregear"}

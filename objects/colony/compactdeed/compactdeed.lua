@@ -1,14 +1,16 @@
-require("/scripts/quest/participant.lua")
+require "/scripts/quest/participant.lua"
+require "/scripts/achievements.lua"
+require "/scripts/util.lua"
 
 function init()
-  self = entity.configParameter("deed")
+  self = config.getParameter("deed")
   if not self then
-    world.logInfo("Colony deed at %s is missing configuration.", entity.position())
+    sb.logInfo("Colony deed at %s is missing configuration.", object.position())
     return
   end
 
-  entity.setInteractive(self.interactive)
-  self.position = entity.toAbsolutePosition(self.position)
+  object.setInteractive(self.interactive)
+  self.position = object.toAbsolutePosition(self.position)
 
   local questParticipantOutbox = Outbox.new("questParticipantOutbox", ContactList.new("questParticipantContacts"))
   self.questParticipant = QuestParticipant.new("questParticipant", questParticipantOutbox)
@@ -76,7 +78,7 @@ function onInteraction(args)
     else
       callTenantsHome("beacon")
     end
-    entity.setAnimationState("deedState", "beacon")
+    animator.setAnimationState("deedState", "beacon")
 
   else
     scanVacantArea()
@@ -102,7 +104,7 @@ function update(dt)
   updateAnimation(dt)
 
   if storage.house then
-    util.debugPoly(storage.house.boundary)
+    util.debugPoly(storage.house.boundary, "red")
   end
 end
 
@@ -174,29 +176,29 @@ function getPredominantTags(n)
 end
 
 function updateAnimation(dt)
-  local currentState = entity.animationState("deedState")
+  local currentState = animator.animationState("deedState")
   if currentState == "beacon" or currentState == "error" then
     -- These animations end on their own
     return
   end
 
   if isVacated() then
-    entity.setAnimationState("deedState", "vacated")
+    animator.setAnimationState("deedState", "vacated")
 
   elseif isRentDue() then
-    entity.setAnimationState("deedState", "rentdue")
+    animator.setAnimationState("deedState", "rentdue")
 
   elseif isOccupied() then
     if isGrumbling() then
-      entity.setAnimationState("deedState", "grumbling")
+      animator.setAnimationState("deedState", "grumbling")
     elseif isHealing() then
-      entity.setAnimationState("deedState", "healing")
+      animator.setAnimationState("deedState", "healing")
     else
-      entity.setAnimationState("deedState", "occupied")
+      animator.setAnimationState("deedState", "occupied")
     end
 
   else
-    entity.setAnimationState("deedState", "scanning")
+    animator.setAnimationState("deedState", "scanning")
   end
 end
 
@@ -234,9 +236,9 @@ function isVacated()
   if not isOccupied() or not self.haveVacatedState or not storage.grumbles or #storage.grumbles == 0 then
     return false
   end
-  
+
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId) then
+    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId):result() then
       return false
     end
   end
@@ -257,21 +259,31 @@ end
 
 function scanDelay()
   if self.questParticipant:hasActiveQuest() then
-    return entity.randomizeParameterRange("deed.questScanFrequency")
+    return util.randomInRange(config.getParameter("deed.questScanFrequency"))
   end
-  return entity.randomizeParameterRange("deed.scanFrequency")
+  return util.randomInRange(config.getParameter("deed.scanFrequency"))
 end
 
 function randomizeRentTimer()
   local rent = getRent()
   if not rent then return nil end
-  return entity.randomizeParameterRange("deed.rentPeriodRange", rent.periodRange)
+  return util.randomInRange(config.getParameter("deed.rentPeriodRange", rent.periodRange))
 end
 
 function healthCheck()
   if anyTenantsDead() then
     self.healingTimer:start()
   end
+end
+
+function tenantEventFields()
+  if not storage.occupier then return {} end
+  local tenant = storage.occupier.tenants[1] or {}
+  return {
+      spawnType = tenant.spawn,
+      species = tenant.species,
+      type = tenant.type
+    }
 end
 
 function evictTenants()
@@ -281,25 +293,63 @@ function evictTenants()
 
   util.debugLog("Evicting tenant(s)...")
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId) then
+    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId):result() then
       local entityId = world.loadUniqueEntity(tenant.uniqueId)
 
       world.callScriptedEntity(entityId, "tenant.evictTenant")
     end
   end
+
+  local owner = config.getParameter("owner")
+  if owner then
+    recordEvent(owner, "evictTenant", tenantEventFields(), worldEventFields())
+  end
+
   if not self.haveVacatedState then
     storage.occupier = nil
     storage.grumbles = nil
   end
+
+  local tenantCount = world.getProperty("tenantCount", 1)
+  tenantCount = math.max(tenantCount - 1, 0)
+  world.setProperty("tenantCount", tenantCount)
+end
+
+function findTenant(uniqueId)
+  if not storage.occupier then return end
+  for i,tenant in ipairs(storage.occupier.tenants) do
+    if tenant.uniqueId == uniqueId then
+      return i
+    end
+  end
+end
+
+function withTenant(uniqueId, func)
+  local i = findTenant(uniqueId)
+  if i then
+    func(storage.occupier.tenants[i])
+  end
 end
 
 function backupTenantStorage(uniqueId, preservedStorage)
-  if not storage.occupier then return nil end
-  for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId == uniqueId then
-      tenant.preservedStorage = preservedStorage
-      break
-    end
+  withTenant(uniqueId, function (tenant)
+      tenant.overrides.scriptConfig = tenant.overrides.scriptConfig or {}
+      tenant.overrides.scriptConfig.initialStorage = preservedStorage
+    end)
+end
+
+function replaceTenant(currentUniqueId, newTenantInfo)
+  withTenant(currentUniqueId, function (tenant)
+      util.mergeTable(tenant, newTenantInfo)
+    end)
+end
+
+function detachTenant(uniqueId)
+  local i = findTenant(uniqueId)
+  assert(i ~= nil)
+  table.remove(storage.occupier.tenants, i)
+  if #storage.occupier.tenants == 0 then
+    object.smash(false)
   end
 end
 
@@ -307,7 +357,7 @@ function primaryTenant()
   -- Return the entityId of the first tenant
   if not storage.occupier then return nil end
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId) then
+    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId):result() then
       local entityId = world.loadUniqueEntity(tenant.uniqueId)
       return entityId
     end
@@ -320,13 +370,20 @@ function getTenants()
   return storage.occupier.tenants
 end
 
+function countMonsterTenants()
+  if not storage.occupier then return 0 end
+  return #util.filter(storage.occupier.tenants, function (tenant)
+      return tenant.spawn == "monster"
+    end)
+end
+
 function callTenantsHome(reason)
   if not isOccupied() then
     return
   end
 
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId) then
+    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId):result() then
       local entityId = world.loadUniqueEntity(tenant.uniqueId)
 
       world.callScriptedEntity(entityId, "tenant.returnHome", reason)
@@ -365,6 +422,7 @@ function chooseTenants(seed, tags)
     if type(tenant.species) == "table" then
       tenant.species = tenant.species[math.random(#tenant.species)]
     end
+    tenant.seed = sb.makeRandomSource():randu64()
   end
   storage.occupier = occupier
 
@@ -375,7 +433,17 @@ end
 
 function spawn(tenant)
   local level = tenant.level or world.getProperty("ship.level") or world.threatLevel()
-  local overrides = tenant.overrides or {}
+  tenant.overrides = tenant.overrides or {}
+  local overrides = tenant.overrides
+
+  if not overrides.damageTeamType then
+    overrides.damageTeamType = "friendly"
+  end
+  if not overrides.damageTeam then
+    overrides.damageTeam = 0
+  end
+  overrides.persistent = true
+
   local position = {self.position[1], self.position[2]}
   for i,val in ipairs(self.positionVariance) do
     if val ~= 0 then
@@ -383,13 +451,16 @@ function spawn(tenant)
     end
   end
 
-  local entity = nil
+  local entityId = nil
   if tenant.spawn == "npc" then
-    entity = world.spawnNpc(position, tenant.species, tenant.type, level, tenant.seed, overrides)
+    entityId = world.spawnNpc(position, tenant.species, tenant.type, level, tenant.seed, overrides)
     if tenant.personality then
-      world.callScriptedEntity(entity, "setPersonality", tenant.personality)
+      world.callScriptedEntity(entityId, "setPersonality", tenant.personality)
     else
-      tenant.personality = world.callScriptedEntity(entity, "personality")
+      tenant.personality = world.callScriptedEntity(entityId, "personality")
+    end
+    if not tenant.overrides.identity then
+      tenant.overrides.identity = world.callScriptedEntity(entityId, "npc.humanoidIdentity")
     end
 
   elseif tenant.spawn == "monster" then
@@ -399,22 +470,22 @@ function spawn(tenant)
     if not overrides.level then
       overrides.level = level
     end
-    entity = world.spawnMonster(tenant.type, position, overrides)
+    entityId = world.spawnMonster(tenant.type, position, overrides)
 
   else
-    world.logInfo("colonydeed can't be used to spawn entity type '" .. tenant.spawn .. "'")
+    sb.logInfo("colonydeed can't be used to spawn entity type '" .. tenant.spawn .. "'")
     return nil
   end
 
   if tenant.seed == nil then
-    tenant.seed = world.callScriptedEntity(entity, "entity.seed")
+    tenant.seed = world.callScriptedEntity(entityId, "object.seed")
   end
-  return entity
+  return entityId
 end
 
 function anyTenantsDead()
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if not tenant.uniqueId or not world.findUniqueEntity(tenant.uniqueId) then
+    if not tenant.uniqueId or not world.findUniqueEntity(tenant.uniqueId):result() then
       return true
     end
   end
@@ -422,7 +493,7 @@ function anyTenantsDead()
 end
 
 function deedUniqueId()
-  local uniqueId = world.entityUniqueId(entity.id())
+  local uniqueId = entity.uniqueId()
   if not uniqueId then
     uniqueId = sb.makeUuid()
     world.setUniqueId(entity.id(), uniqueId)
@@ -435,28 +506,47 @@ function respawnTenants()
     return
   end
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if not tenant.uniqueId or not world.findUniqueEntity(tenant.uniqueId) then
+    if not tenant.uniqueId or not world.findUniqueEntity(tenant.uniqueId):result() then
       local entityId = spawn(tenant)
       tenant.uniqueId = tenant.uniqueId or sb.makeUuid()
       world.setUniqueId(entityId, tenant.uniqueId)
 
-      world.callScriptedEntity(entityId, "setupTenant", storage.house.floorPosition, storage.house.boundary, deedUniqueId(), tenant.preservedStorage)
+      world.callScriptedEntity(entityId, "tenant.setHome", storage.house.floorPosition, storage.house.boundary, deedUniqueId())
     end
   end
 end
 
+function addTenant(tenant)
+  table.insert(storage.occupier.tenants, tenant)
+  respawnTenants()
+end
+
 function sendNewTenantNotification()
-  if entity.configParameter("owner") then
+  local owner = config.getParameter("owner")
+  if owner then
+    local tenantCount = world.getProperty("tenantCount", 0)
+    tenantCount = tenantCount + 1
+    world.setProperty("tenantCount", tenantCount)
+
+    local deedsNearby = world.objectQuery(entity.position(), self.nearbyQueryRange, {
+        name = object.name()
+      })
+
+    recordEvent(owner, "newTenant", tenantEventFields(), worldEventFields(), {
+        countOnWorld = tenantCount,
+        deedsNearby = #deedsNearby
+      })
+
     -- Send a message to the owner of the deed for any quests they're
     -- playing to handle.
-    world.sendEntityMessage(entity.configParameter("owner"), "colonyDeed.newHome", storage.occupier.tenants, storage.house.objects, storage.house.boundary)
+    world.sendEntityMessage(owner, "colonyDeed.newHome", storage.occupier.tenants, storage.house.objects, storage.house.boundary)
   end
 end
 
 function scanVacantArea()
   local house = findHouseBoundary(self.position, self.maxPerimeter)
 
-  if house.poly and world.regionLoaded(polyBoundBox(house.poly)) then
+  if house.poly and world.regionActive(polyBoundBox(house.poly)) then
     local scanResults = scanHouseContents(house.poly)
     if scanResults.otherDeed then
       util.debugLog("Colony deed is already present")
@@ -477,14 +567,14 @@ function scanVacantArea()
 
       if isOccupied() then
         respawnTenants()
-        entity.setAnimationState("particles", "newArrival")
+        animator.setAnimationState("particles", "newArrival")
         sendNewTenantNotification()
         return
       end
     end
   elseif not house.poly then
     util.debugLog("Scan failed")
-    entity.setAnimationState("deedState", "error")
+    animator.setAnimationState("deedState", "error")
   else
     util.debugLog("Parts of the house are unloaded - skipping scan")
   end
@@ -494,7 +584,7 @@ function checkHouseIntegrity()
   storage.grumbles = scanHouseIntegrity()
 
   for _,tenant in ipairs(storage.occupier.tenants) do
-    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId) then
+    if tenant.uniqueId and world.findUniqueEntity(tenant.uniqueId):result() then
       local entityId = world.loadUniqueEntity(tenant.uniqueId)
 
       world.callScriptedEntity(entityId, "tenant.setGrumbles", storage.grumbles)
@@ -515,7 +605,7 @@ end
 
 -- scanHouseIntegrity returns a list of things currently wrong with the house
 function scanHouseIntegrity()
-  if not world.regionLoaded(polyBoundBox(storage.house.boundary)) then
+  if not world.regionActive(polyBoundBox(storage.house.boundary)) then
     util.debugLog("Parts of the house are unloaded - skipping integrity check")
     return storage.grumbles
   end

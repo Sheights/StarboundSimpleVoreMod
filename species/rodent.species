@@ -1,10 +1,17 @@
 {
   "kind" : "rodent",
+  
+  "charCreationTooltip" : {
+      "title" : "Rodent",
+      "subTitle" : "U",
+      "description" : "A race of highly edible mammals. Incredibly skittish and clever, they survive the crazy universe through sheer numbers rather than avoiding hungry predators."
+  },
+  
   "nameGen" : [ "/species/rodentmalenamegen.config:names", "/species/rodentfemalenamegen.config:names" ],
   "ouchNoises" : [ "/sfx/npc/smallbiped/spidermonkey_pain2.ogg", "/sfx/npc/smallbiped/spidermonkey_pain2.ogg" ],
-  "gruntNoises" : [ [ "/sfx/npc/smallbiped/spidermonkey_idle1.ogg" ], [ "/sfx/npc/smallbiped/spidermonkey_idle2.ogg" ] ],
   "charGenTextLabels" : [ "FUR COLOR", "HAIR", "SLEEVES", "OUTFIT", "BELLY COLOR", "HAIR COLOR", "SLEEVE COLOR", "OUTFIT COLOR", "RODENT", "PERSONALITY" ],
   "skull" : "/humanoid/any/dead.png",
+  "effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=8af062FF?replace=31a6ffFF=40bf21FF",
   "defaultBlueprints" : {
     "tier1" : [
       { "item" : "humantier1hammer" },

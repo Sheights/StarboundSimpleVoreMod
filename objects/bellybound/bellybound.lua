@@ -17,22 +17,20 @@ waveTimer = 0
 
 function init(virtual)
   if not virtual then
-    self.detectArea = entity.configParameter("detectArea")
-    self.detectArea[1] = entity.toAbsolutePosition(self.detectArea[1])
-    self.detectArea[2] = entity.toAbsolutePosition(self.detectArea[2])
+    self.detectArea = config.getParameter("detectArea")
   end
 end
 
 function update(dt)
 	-- Vore Chat Handler
-	local players = world.entityQuery(self.detectArea[1], self.detectArea[2], {
+	local players = world.entityQuery(object.position(), 10, {
       includedTypes = {"player"},
       boundMode = "CollisionArea"
 	})
-	local chatIdle = entity.configParameter("chatIdle", {})
+	local chatIdle = config.getParameter("chatIdle", {})
 	
 	if #players > 0 and not ohSnap then
-	entity.say(chatIdle[math.random(1, #chatIdle)])
+	object.say(chatIdle[math.random(1, #chatIdle)])
 	  ohSnap = true
 	elseif #players == 0 and ohSnap then
 	  ohSnap = false
@@ -40,7 +38,7 @@ function update(dt)
 	
 	-- Animation Handler
     if animLock == false then
-	  entity.setAnimationState("bodyState", "idle")
+	  animator.setAnimationState("bodyState", "idle")
 	  blinkTimer = 0
 	  fadeTimer = 0
 	  greetTimer = 0
@@ -52,37 +50,37 @@ function update(dt)
 	  
 	if animLock == false and math.random(200) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "blink")
+	  animator.setAnimationState("bodyState", "blink")
 	end
 	  
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-      entity.setAnimationState("bodyState", "fade")
+      animator.setAnimationState("bodyState", "fade")
 	end
 	  
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "greet")
+	  animator.setAnimationState("bodyState", "greet")
 	end
 	
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "look")
+	  animator.setAnimationState("bodyState", "look")
 	end
 	
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "sign")
+	  animator.setAnimationState("bodyState", "sign")
 	end
 	
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "tail")
+	  animator.setAnimationState("bodyState", "tail")
 	end
 	
 	if animLock == false and math.random(400) == 1 then
 	  animLock = 1
-	  entity.setAnimationState("bodyState", "wave")
+	  animator.setAnimationState("bodyState", "wave")
 	end
 	  
 	if blinkTimer >= 50 or fadeTimer >= 50 or greetTimer >= 50 or lookTimer >= 50 or signTimer >= 50 or tailTimer >= 50 or waveTimer >= 50 then

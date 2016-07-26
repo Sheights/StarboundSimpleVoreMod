@@ -26,7 +26,7 @@ playerLines = {	"It's been a while since I felt like this!",
 function loseHook()
 	
 	if isPlayer then
-		entity.say("Resting soundly in an egg. I'll see you in a while my dear!")
+		npc.say("Resting soundly in an egg. I'll see you in a while my dear!")
 	end
 	
 	isPlayer = false
@@ -36,6 +36,6 @@ end
 function updateHook()
 
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 end

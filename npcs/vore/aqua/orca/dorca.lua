@@ -19,12 +19,12 @@ playerLines = {	"...You tasty...",
 
 function loseHook()
 	
-	entity.setItemSlot( "head", "orcaheadburp" )
+	npc.setItemSlot( "head", "orcaheadburp" )
 	
 	if digested then
 		world.spawnItem( "bone", world.entityPosition(entity.id()), 3 )
 	elseif isPlayer then
-		entity.say("...Come back...")
+		npc.say("...Come back...")
 	end
 	
 	burpLock = true
@@ -37,13 +37,13 @@ end
 
 function updateHook(dt)
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 	
 	if burpLock then
 		burpTimer = burpTimer + 3
 		if burpTimer >= 500 then
-			entity.setItemSlot( "head", "orcahead" )
+			npc.setItemSlot( "head", "orcahead" )
 			burpLock = false
 		end
 	end
@@ -52,7 +52,7 @@ function updateHook(dt)
 		if fed and world.entityHealth(victim)[1] * 100 <= 5 and stopWatch <= 85 then
 			digested = true
 			if isPlayer then
-				entity.say("...Goodbye...")
+				npc.say("...Goodbye...")
 			end
 		end
 	end

@@ -1,9 +1,0 @@
-{
-  "itemName" : "vorerpv2D",
-  "rarity" : "Legendary",
-  "inventoryIcon" : "/tech/vicon.png",
-  "description" : "Hold your cursor over your prey and press F to eat them. Assuming a Prey Enabler is active on the current ship or planet. This will digest your prey as well!",
-  "shortdescription" : "Vore RP V2: Digestion",
-
-  "techModule" : "vorerpv2D"
-}
