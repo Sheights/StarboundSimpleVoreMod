@@ -35,9 +35,9 @@ end
 
 function feedHook()
 
-	entity.setItemSlot( "head", "argonpcheadbelly1" )
-	entity.setItemSlot( "chest", "argonpcchestbelly1" )
-	entity.setItemSlot( "legs", "argonpcpantsbelly1" )
+	npc.setItemSlot( "head", "argonpcheadbelly1" )
+	npc.setItemSlot( "chest", "argonpcchestbelly1" )
+	npc.setItemSlot( "legs", "argonpcpantsbelly1" )
 
 	storage.belly = "1"
 
@@ -49,9 +49,9 @@ function loseHook()
 --		entity.say("^blue;<3")
 --	end
 	
-	entity.setItemSlot( "head", "argonpchead" )
-	entity.setItemSlot( "chest", "argonpcchest" )
-	entity.setItemSlot( "legs", "argonpcpants" )
+	npc.setItemSlot( "head", "argonpchead" )
+	npc.setItemSlot( "chest", "argonpcchest" )
+	npc.setItemSlot( "legs", "argonpcpants" )
 	
 	storage.belly = ""
 	
@@ -69,7 +69,7 @@ function interact(args)
 					world.spawnProjectile( "cleanser" , mcontroller.position(), entity.id(), {0, 0}, true )
 					stopWatch = duration
 					digest()
-					entity.say("^blue;<3")
+					npc.say("^blue;<3")
 				else
 					stopWatch = stopWatch - stageInterval
 					talkTimer = 1
@@ -101,34 +101,34 @@ function updateHook()
 	
 	if request then
 		if stopWatch > stageInterval*5 then
-			entity.setItemSlot( "head", "argonpcheadbelly5" )
-			entity.setItemSlot( "chest", "argonpcchest" )
-			entity.setItemSlot( "legs", "argonpcpants" )
+			npc.setItemSlot( "head", "argonpcheadbelly5" )
+			npc.setItemSlot( "chest", "argonpcchest" )
+			npc.setItemSlot( "legs", "argonpcpants" )
 			storage.belly = "5"
 		elseif stopWatch > stageInterval*4 then
-			entity.setItemSlot( "head", "argonpcheadbelly5" )
-			entity.setItemSlot( "chest", "argonpcchestbelly5" )
-			entity.setItemSlot( "legs", "argonpcpantsbelly5" )
+			npc.setItemSlot( "head", "argonpcheadbelly5" )
+			npc.setItemSlot( "chest", "argonpcchestbelly5" )
+			npc.setItemSlot( "legs", "argonpcpantsbelly5" )
 			storage.belly = "5"
 		elseif stopWatch > stageInterval*3 then
-			entity.setItemSlot( "head", "argonpcheadbelly4" )
-			entity.setItemSlot( "chest", "argonpcchestbelly4" )
-			entity.setItemSlot( "legs", "argonpcpantsbelly4" )
+			npc.setItemSlot( "head", "argonpcheadbelly4" )
+			npc.setItemSlot( "chest", "argonpcchestbelly4" )
+			npc.setItemSlot( "legs", "argonpcpantsbelly4" )
 			storage.belly = "4"
 		elseif stopWatch > stageInterval*2 then
-			entity.setItemSlot( "head", "argonpcheadbelly3" )
-			entity.setItemSlot( "chest", "argonpcchestbelly3" )
-			entity.setItemSlot( "legs", "argonpcpantsbelly3" )
+			npc.setItemSlot( "head", "argonpcheadbelly3" )
+			npc.setItemSlot( "chest", "argonpcchestbelly3" )
+			npc.setItemSlot( "legs", "argonpcpantsbelly3" )
 			storage.belly = "3"
 		elseif stopWatch > stageInterval then
-			entity.setItemSlot( "head", "argonpcheadbelly2" )
-			entity.setItemSlot( "chest", "argonpcchestbelly2" )
-			entity.setItemSlot( "legs", "argonpcpantsbelly2" )
+			npc.setItemSlot( "head", "argonpcheadbelly2" )
+			npc.setItemSlot( "chest", "argonpcchestbelly2" )
+			npc.setItemSlot( "legs", "argonpcpantsbelly2" )
 			storage.belly = "2"
 		elseif stopWatch <= stageInterval then
-			entity.setItemSlot( "head", "argonpcheadbelly1" )
-			entity.setItemSlot( "chest", "argonpcchestbelly1" )
-			entity.setItemSlot( "legs", "argonpcpantsbelly1" )
+			npc.setItemSlot( "head", "argonpcheadbelly1" )
+			npc.setItemSlot( "chest", "argonpcchestbelly1" )
+			npc.setItemSlot( "legs", "argonpcpantsbelly1" )
 			storage.belly = "1"
 		end
 		if stopWatch > stageInterval*5.7 then
@@ -138,23 +138,23 @@ function updateHook()
 	
 	
 	
-	if entity.isLounging() then
+	if npc.isLounging() then
 		if fed then
-			entity.setItemSlot( "head", "argonpcheadbelly" .. storage.belly .. "blink" )
+			npc.setItemSlot( "head", "argonpcheadbelly" .. storage.belly .. "blink" )
 		else
-			entity.setItemSlot( "head", "argonpcheadblink" )
+			npc.setItemSlot( "head", "argonpcheadblink" )
 		end
 	else
 		if fed then
-			entity.setItemSlot( "head", "argonpcheadbelly" .. storage.belly )
+			npc.setItemSlot( "head", "argonpcheadbelly" .. storage.belly )
 		else
-			entity.setItemSlot( "head", "argonpchead" )
+			npc.setItemSlot( "head", "argonpchead" )
 		end
 	end
 	
 	
 	
 	if isPlayer and math.random(700) == 1 then
-		entity.say( playerLines[math.random(#playerLines)])
+		npc.say( playerLines[math.random(#playerLines)])
 	end
 end

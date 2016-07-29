@@ -3,6 +3,10 @@
   "baseType" : "villager",
   
   "npcname" : "Lynn",
+  
+  "identity" : {
+	"gender" : "female"
+  },
   "scriptConfig" : { 
     "dialog" : {
       "tenant" : {

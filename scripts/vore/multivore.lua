@@ -72,7 +72,7 @@ dprojectile	= "npcdvoreprojectile"
 function init()
 
 	oldInit()
-	entity.setInteractive(true)
+	npc.setInteractive(true)
 
 	if predsOnShips then
 		world.setProperty("invinciblePlayers", false)
@@ -215,42 +215,42 @@ function redress()
 
 	if #victim == 0 then
 		if head then
-			entity.setItemSlot( "head", head )
+			npc.setItemSlot( "head", head )
 		end	
 		if chest then
-			entity.setItemSlot( "chest", chest )
+			npc.setItemSlot( "chest", chest )
 		end	
 		if legs then
-			entity.setItemSlot( "legs", legs )
+			npc.setItemSlot( "legs", legs )
 		end	
 		if back then
-			entity.setItemSlot( "back", back )
+			npc.setItemSlot( "back", back )
 		end
 	elseif #victim == 1 or #victim == 2 then
 		if midhead then
-			entity.setItemSlot( "head", midhead )
+			npc.setItemSlot( "head", midhead )
 		end
 		if midchest then
-			entity.setItemSlot( "chest", midchest )
+			npc.setItemSlot( "chest", midchest )
 		end
 		if midlegs then
-			entity.setItemSlot( "legs", midlegs )
+			npc.setItemSlot( "legs", midlegs )
 		end
 		if midback then
-			entity.setItemSlot( "back", midback )
+			npc.setItemSlot( "back", midback )
 		end
 	else
 		if fullhead then
-			entity.setItemSlot( "head", fullhead )
+			npc.setItemSlot( "head", fullhead )
 		end	
 		if fullchest then
-			entity.setItemSlot( "chest", fullchest )
+			npc.setItemSlot( "chest", fullchest )
 		end	
 		if fulllegs then
-			entity.setItemSlot( "legs", fulllegs )
+			npc.setItemSlot( "legs", fulllegs )
 		end	
 		if fullback then
-			entity.setItemSlot( "back", fullback )
+			npc.setItemSlot( "back", fullback )
 		end
 	end
 	
