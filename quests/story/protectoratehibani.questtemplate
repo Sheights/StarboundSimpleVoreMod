@@ -1,0 +1,52 @@
+{
+  "id" : "protectoratehibani",
+  "mainQuest" : true,
+  "title" : "The Protectorate",
+  "text" : "Survive graduation day.",
+  "completionText" : "The years of training paid off - you survived graduation day!",
+  "moneyRange" : [50, 50],
+  "canBeAbandoned" : false,
+  "invisible" : false,
+  "logOnly" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/tutorial/protectorate.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "player"
+    },
+    "startingMusicTime" : 11.5,
+    "startingMusicTracks" : ["/music/planetarium.ogg"],
+    "midpointMusicTime" : 48.0,
+    "midpointMusicTracks" : ["/music/arctic-battle1-loop.ogg"],
+    "midpointCinematic" : "/cinematics/intro/introstage.cinematic",
+    "midpointTeleportPosition" : [495, 823.5],
+    "endpointCinematic" : "/cinematics/intro/introcomplete.cinematic",
+    "confiscateItems" : [
+      "brokenprotectoratebroadsword",
+      "protectoratechest",
+      "protectoratepants",
+      "protectorateflowerhead",
+      "raggedprotectoratecape",
+      ["oculemonade", 1000],
+      ["chocolate", 1000],
+      "protectorateflyer",
+      ["money", 1000],
+      ["grassy", 1000],
+      ["drydirt", 1000]
+    ],
+    "skipIntroItems" : [
+      "brokenprotectoratebroadsword",
+	  "hibaniprotectoratechest",
+      "hibaniprotectoratehead"
+    ],
+
+    "descriptions" : {
+      "graduate" : "Attend your graduation ceremony",
+      "matterManipulator" : "Take the matter manipulator",
+      "escape" : "Escape the destruction"
+    },
+
+    "followUp" : "hibanibootship"
+  }
+}

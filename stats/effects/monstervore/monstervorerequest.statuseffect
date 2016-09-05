@@ -1,0 +1,12 @@
+{
+  "name" : "monstervorerequest",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "monstervorerequest.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/vicon.png"
+}

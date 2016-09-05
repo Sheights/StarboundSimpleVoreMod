@@ -1,0 +1,23 @@
+{
+  "itemName" : "hibaniwristbandchest",
+  "price" : 800,
+  "inventoryIcon" : "icons.png:chest",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "chestarmour",
+  "description" : "Sleek black leather wrist bands with silver metal studs. Metal is perfection.",
+  "shortdescription" : "Hibani Spiked Wristbands",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  }
+}

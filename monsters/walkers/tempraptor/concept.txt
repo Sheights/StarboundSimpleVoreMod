@@ -1,0 +1,41 @@
+"raptor"
+
+	A JP movie style velociraptor;
+	Bipedal, arms, claws on feet and hands, big maw dinosaur!
+
+Behaviour is environment dependant:
+
+	If not attacked
+
+		Will walk about, and likely attack anything that is food
+
+		May keep it's distance from NPC's and Players, unsure of them
+
+		May approach and lick players or NPC's (giving wet status)
+
+			-> This is a friendly gesture. NPC/Player can interact with monster to "pet" it?
+
+			<- It may do a friendly vore in this case
+
+	If attacked
+
+		If Empty
+
+			Raptor is now in attack mode, and will run left and right
+			Stops to pounce with claws forward, has a chance to "pin" targets (eat them)
+				-> Devours target
+				Depending on if they were the attacker and such
+			Quick bites anyone close on enemy team
+			Also has a big chomp move, to devour target
+
+		If Full
+			Until attacked while full, raptor will lay on prey and digest it
+			-> You can interact with the raptor (if you did not attack it) from outside, if you do
+				Belly rubs means the raptor does not digest its prey
+			-> If you were the attacker, it bites at you while full
+			
+			Raptor may be capable of running away while full
+				-> Tail swish is an attack that hurts
+				-> If attacked, it might vomit it's prey early
+
+	

@@ -1,0 +1,103 @@
+{
+  "objectName" : "voremahj",
+  "rarity" : "uncommon",
+  "description" : "A strange alien creature. Relies on a translator implant to communicate, but is friendly nonetheless.",
+  "shortdescription" : "Mahj",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This...Thing looks like a crazy bug-squirrel hybrid...",
+  "avianDescription" : "This creature is totally incomprehensible, but everything he says is translated in a speech bubble he projects...",
+  "floranDescription" : "Green like a plant, but looks weird...",
+  "glitchDescription" : "Partial Species Match confirmed - Orbiter. Seems like a young specimen of its kind.",
+  "humanDescription" : "A rather goofy looking creature with big floppy ears and bobbly antennae.",
+  "hylotlDescription" : "I have no idea what this creature is, but it is adorable...",
+  "novakidDescription" : "Whoa, there. I come from a star, and even I think this creature's bright...",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "mahj.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-16, 16],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "mahj.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [16, 16],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/mahj/mahj.lua" ],
+  
+  "animation" : "mahj.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "mahj.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "^#00ffff;Kind of glad I figured out how to ping copies of the speech bubbles in there for you to read.",
+	"^#00ffff;Please let me know if I accidentally left any of your belongings in the orb.",
+	"^#00ffff;Hey, don't get many chances to do this these days...Thanks for this.",
+	"^#00ffff;Just let me know if and when you want out...No rush, though. I'm enjoying myself.",
+	"^#00ffff;Need me to throw a few books or anything in there with you?",
+	"^#00ffff;*hums, translator interprets this as random letters*",
+	"^#00ffff;I'm not going anywhere, so stay as long as you like, okay?"
+  ],
+  "gulpLines" : [
+    "^#00ffff;Don't blink or you'll miss it.",
+	"^#00ffff;Sick bags are in there if you get tele-nausea.",
+	"^#00ffff;Keep hands and feet inside the orb at all times."
+  ],
+  "chatIdleFull" : [
+    "^#00ffff;Rrf...Sorry, buddy. Occupado.",
+	"^#00ffff;Sorry, already seeing someone. You're welcome to watch.",
+	"^#00ffff;Bit busy with someone else at the moment. Come back in a bit."
+  ],
+  "chatIdleEmpty" : [
+    "^#00ffff;So, you wanting in on this? Or, on me, as it were?",
+	"^#00ffff;Look, the orb works as a second mouth. So look, don't touch...Or do, if you want.",
+	"^#00ffff;I know the orb looks like a bullseye, but don't throw anything other than yourself at it.",
+	"^#00ffff;Looking to experience extraterrestrials in a new way, buddy?",
+	"^#00ffff;Waaaatch the oooorb.~ Waaaatch the oooorb.~ Geeeet insiiiide.~ Geeeet insiiiide.~"
+  ],
+  "rubLines" : [
+    "^#00ffff;Ah...that's...That's nice...",
+	"^#00ffff;*urp* ...You enjoying yourself there? I am.",
+	"^#00ffff;*puts his hands on top of yours as you rub, gently guiding your hands*",
+	"^#00ffff;I need to eat people more often if it gets this sort of attention...",
+	"^#00ffff;Little lower, please, feeling quite stretched today...",
+	"^#00ffff;*antennae droop and he almost nods off to sleep from the rubs*"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type" : "pred_dsaph",
+  "baseType" : "villager",
+  
+  "npcname" : "Saph",
+
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/saph/dsaph.lua"
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "saphhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "saphchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "saphnudelegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

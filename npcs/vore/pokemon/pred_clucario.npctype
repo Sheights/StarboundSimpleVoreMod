@@ -1,0 +1,146 @@
+{
+  "type" : "pred_clucario",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/grumble.config:tagCriteria",
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"There seems to be a draft.",
+								"The flow of my room is completely distracting me.",
+								"I sense a disturbance in the aura."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I need time to meditate. Please no roomates.",
+							"My thoughts need time to manifest. I don't need the extra noise.",
+							"You have a whole planet to build on. Why me do I have to bunk down with another?",
+							"The thoughts of others are distracting as such a close range. This won't do."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Will this be the norm? If so I don't have to stay.",
+						"You are testing my patience",
+						"I miss how peaceful it was.",
+						"No, no this won't do.",
+						"Lucario!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Maybe we will meet again.",
+						"Farewell trainer.",
+						"I'll see you next time.",
+						"Aura be with you."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Yes, did you need something?",
+						"I've returned. What can I help you with?",
+						"I can sense your urgency."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"A token of my grattitude.",
+						"I can only hope this stregnthens the bond between us.",
+						"I am confident in my own abilities. I don't need to rely on trinkets.",
+						"May this offering help you."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"I sense a hostile aura.",
+					"Now is not the time to fight."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"By the power of aura!",
+						"The strong must protect the weak!",
+						"I see an aura flickering in the distance"
+			]
+		  }
+		},
+        "encourage" : "/dialog/flee.config:encourage",
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Peace at last.",
+					"The danger has passed."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hello Landlord.",
+			"How are you this day.",
+			"There is a great aura within you.",
+			"With the power of aura I can sense the feelings of those around me.",
+			"With every breath I can read the aura of your feelings and motions",
+			"Anubis? No I have never heard of that Pokemon.",
+			"You wouldn't happen to have any chocolate would you?",
+			"May aura be with you.",
+			"No, I'm not much of a fighter these days."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/pokemon/clucario.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+		    "head" : [
+              { "name" : "lucarionormalhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "lucarionormalchest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "lucarionormallegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

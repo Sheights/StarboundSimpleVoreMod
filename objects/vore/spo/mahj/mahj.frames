@@ -1,0 +1,32 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [40, 40],
+	"dimensions"  :  [8, 21],
+	"names"  :  [
+		[ "idle.1", "idle.2", "idle.3", "idle.4", "idle.5", "idle.6", "idle.7", "idle.8" ],
+		[ "animation.1", "animation.2", "animation.3", "animation.4", "animation.5", "animation.6", "animation.7", "animation.8" ],
+		[ "animation.9", "animation.10", "animation.11", "animation.12", "animation.13", "animation.14", "animation.15", "animation.16" ],
+		[ "animation.17", "animation.18", "animation.19", "animation.20", "animation.21", "animation.22", "animation.23", "animation.24" ],
+		[ "animation.25", "animation.26", "animation.27", "animation.28", "animation.29", "animation.30", "animation.31", "animation.32" ],
+		[ "animation.33", "animation.34", "animation.35", "animation.36", "animation.37", "animation.38", "animation.39", "animation.40" ],
+		[ "animation.41", "animation.42", "animation.43", "animation.44", "animation.45", "animation.46", "animation.47", "animation.48" ],
+		[ "animation.49", "animation.50", "animation.51", "animation.52", "animation.53" ],
+		[ "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8" ],
+		[ "swallow.9", "swallow.10", "swallow.11", "swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16" ],
+		[ "swallow.17", "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "swallow.24" ],
+		[ "swallow.25", "swallow.26", "swallow.27", "swallow.28", "swallow.29", "swallow.30", "swallow.31", "swallow.32" ],
+		[ "swallow.33", "swallow.34", "swallow.35", "swallow.36", "swallow.37", "swallow.38", "swallow.39", "swallow.40" ],
+		[ "bellyidle1.1", "bellyidle1.2", "bellyidle1.3", "bellyidle1.4", "bellyidle1.5", "bellyidle1.6", "bellytrans1.2", "bellytrans1.2" ],
+		[ "bellyidle2.1", "bellyidle2.2", "bellyidle2.3", "bellyidle2.4", "bellyidle2.5", "bellyidle2.6", "bellytrans2.1", "bellytrans2.2" ],
+		[ "bellytrans2.3", "bellyidle3.1", "bellyidle3.2", "bellyidle3.3", "bellyidle3.4", "bellyidle3.5", "bellyidle3.6", "bellyidle3.7" ],
+		[ "bellyidle3.8", "digest.1", "digest.2", "digest.3", "digest.4", "digest.5", "digest.6", "digest.7" ],
+		[ "digest.8", "digest.9", "digest.10", "digest.11", "digest.12", "digest.13" ],
+		[ "regurgitate.1", "regurgitate.2", "regurgitate.3", "regurgitate.4", "regurgitate.5", "regurgitate.6", "regurgitate.7", "regurgitate.8" ],
+		[ "regurgitate.9", "regurgitate.10", "regurgitate.11", "regurgitate.12", "regurgitate.13", "regurgitate.14", "regurgitate.15", "regurgitate.16" ],
+		[ "regurgitate.17", "regurgitate.18", "regurgitate.19", "regurgitate.20", "regurgitate.21", "regurgitate.22", "regurgitate.23", "regurgitate.24" ]
+	]	
+  },
+	
+  "aliases"  :  {
+  }
+}

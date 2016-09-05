@@ -1,0 +1,16 @@
+{
+	"projectileName" : "monstervoreprojectile",
+	"bounces" : -1,
+	"piercing" : true,
+	"image" : "monstervore.png",
+	"frameNumber" : 6,
+	"animationCycle" : 1,
+	"speed" : 0,
+	"animationLoops" : false,
+	"flippable" : true,
+	"power" : 0,
+	"damageTeam" : { "type" : "indiscriminate" },
+	"damageKind" : "slash",  
+	"scripts" : [ "monstervoreproje.lua" ],
+	"renderLayer" : "Player+1"
+}

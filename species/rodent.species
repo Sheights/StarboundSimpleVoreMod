@@ -128,7 +128,7 @@
       "image" : "/interface/title/female.png",
       "characterImage" : "/interface/title/rodentfemale.png",
       "hair" : [ "0", "female1" ],
-      "shirt" : [ "workoutchest", "coolchest", "conceptchest", "sweatervestchest" ],
+      "shirt" : [ "" ],
 	  "pants" : [ "adventuregear", "nomadrobes" ],
       "facialHairGroup" : "",
       "facialHair" : [ ],

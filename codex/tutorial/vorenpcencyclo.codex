@@ -80,7 +80,7 @@ crystalline : 24",
 Types: Oral, Digest
 Requirements -
 electronic : 24,
-tier10 : 12
+executive : 12
 
 Name: Deertaur
 Types: Oral, Digest
@@ -179,7 +179,7 @@ kineptic : 6",
 "Name: Kirhos
 Types: Oral, Digest
 Requirements -
-tier8 : 6
+opulent : 6
 
 Name: Lamia
 Types: Oral, Digest
@@ -307,7 +307,7 @@ floran : 24
 Name: Zebrataur
 Types: Oral, Digest
 Requirements -
-misc : 12",
+fenerox : 12",
 
 "Name: Zoroark
 Types: Oral, Digest, Unbirth
@@ -327,7 +327,7 @@ Name: Dallenson
 Types: Oral, Digest
 Requirements -
 electronic : 24,
-tier10 : 12",
+executive : 12",
 
 "Name: Katojana
 Types: Oral, Digest
@@ -345,6 +345,7 @@ Requirements -
 "Name: Rich
 Types: Oral
 Requirements -
+Human : 6,
 1 Zorua Plush
 
 Random Prey
@@ -356,19 +357,19 @@ Types: Oral, Digest
 Requirements -
 racial : 6",
 
-"Name: Shin
-Types: Oral, Digest
-Requirements -
-colorful : 24
-
-Name: Spot Tea
+"Name: Sheights
 Types: Oral, Digest
 Requirements -
 explorer : 6,
 OR
-traveller : 1",
+traveller : 1
 
-"Name: Yaupon Mouse
+Name: Shin
+Types: Oral, Digest
+Requirements -
+colorful : 24",
+
+"Name: Spot Tea
 Types: Oral, Digest
 Requirements -
 explorer : 6,

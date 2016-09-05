@@ -1,0 +1,57 @@
+{
+  "objectName" : "vorecalliedigest",
+  "rarity" : "Uncommon",
+  "description" : "A cute little kobold who wants to add you to her tail.",
+  "shortdescription" : "Hungry Callie",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "generalDescription" : "40% goofball, 60% friendpudge.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "savor",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "calliedangericon.png",
+  "orientations" : [
+    {
+	  "image" : "callie.png:idle",
+	  "imagePosition" : [-17, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "callie.png:idle",
+	  "imagePosition" : [-17, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/callie/calliedigest.lua" ],
+  
+  "animation" : "callie.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ]
+	}
+  },
+  "animationParts" : {
+      "pred" : "callie.png"
+  },
+  "animationPosition" : [-17, 0]
+}

@@ -1,0 +1,201 @@
+{
+  "kind" : "hibani",
+  
+  "charCreationTooltip" : {
+      "title" : "Hibani",
+      "subTitle" : "U",
+      "description" : "Fire rabbits of legend. Strong, large, fuzzy, and hungry!"
+  },
+  
+  "nameGen" : [ "/species/hibaninamegen.config:names", "/species/hibaninamegen.config:names" ],
+  "ouchNoises" : [ "" ],
+  "charGenTextLabels" : [ "Fur Color", "Hair", "Bracelets", "Anklets", "Tail Color", "Hair Color", "Bracelet Color", "Anklet Color", "Hibani", "Personality" ],
+  "skull" : "/humanoid/any/dead.png",
+  "effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF",
+  "defaultBlueprints" : {
+    "tier1" : [
+
+// Empty Hands
+      { "item" : "flagavian" },
+
+// Anvil
+      { "item" : "hibanitier1head" },
+      { "item" : "hibanitier1chest" },
+      { "item" : "hibanitier1pants" },
+      { "item" : "aviantier2head" },
+      { "item" : "aviantier2chest" },
+      { "item" : "aviantier2pants" },
+
+      { "item" : "ironshortsword" },
+      { "item" : "ironbroadsword" },
+      { "item" : "tungstenaxe" },
+      { "item" : "tungstenhammer" },
+
+// Anvil2
+      { "item" : "aviantier3head" },
+      { "item" : "aviantier3chest" },
+      { "item" : "aviantier3pants" },
+      { "item" : "aviantier4head" },
+      { "item" : "aviantier4chest" },
+      { "item" : "aviantier4pants" },
+
+      { "item" : "titaniumdagger" },
+      { "item" : "titaniumspear" },
+      { "item" : "durasteelbroadsword" },
+      { "item" : "durasteelshortsword" },
+
+// Anvil3
+      { "item" : "aviantier5ahead" },
+      { "item" : "aviantier5achest" },
+      { "item" : "aviantier5apants" },
+      { "item" : "aviantier6ahead" },
+      { "item" : "aviantier6achest" },
+      { "item" : "aviantier6apants" },
+
+      { "item" : "aviantier5mhead" },
+      { "item" : "aviantier5mchest" },
+      { "item" : "aviantier5mpants" },
+      { "item" : "aviantier6mhead" },
+      { "item" : "aviantier6mchest" },
+      { "item" : "aviantier6mpants" },
+
+      { "item" : "aviantier5shead" },
+      { "item" : "aviantier5schest" },
+      { "item" : "aviantier5spants" },
+      { "item" : "aviantier6shead" },
+      { "item" : "aviantier6schest" },
+      { "item" : "aviantier6spants" },
+
+      { "item" : "aegisaltpistol" },
+      { "item" : "aegisaltbow" },
+      { "item" : "feroziumwand" },
+      { "item" : "feroziumstaff" },
+      { "item" : "violiumshortsword" },
+      { "item" : "violiumbroadsword" },
+
+// Furniture Table 2
+      { "item" : "avianstoragelocker" },
+      { "item" : "avianshipdoor" },
+      { "item" : "avianshiphatch" },
+
+// Spinning Wheel
+      { "item" : "avianadventurershirt" },
+      { "item" : "avianadventurerpants" },
+      { "item" : "aviancommonershirt" },
+      { "item" : "aviancommonerlegs" },
+      { "item" : "avianfancyshirt" },
+      { "item" : "avianfancyskirt" },
+      { "item" : "avianworkershirt" },
+      { "item" : "avianworkerpants" }
+    ]
+  },
+  
+  "headOptionAsHairColor" : true,
+  "altOptionAsUndyColor" : true,
+  
+  "genders" : [
+    {
+      "name" : "male",
+      "image" : "/interface/title/male.png",
+      "characterImage" : "/interface/title/hibanimale.png",
+      "hair" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ],
+      "shirt" : [ "" ],
+	  "pants" : [ "" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    },
+    {
+      "name" : "female",
+      "image" : "/interface/title/female.png",
+      "characterImage" : "/interface/title/hibanifemale.png",
+      "hair" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ],
+      "shirt" : [ "" ],
+	  "pants" : [ "" ],
+      "facialHairGroup" : "",
+      "facialHair" : [ ],
+      "facialMaskGroup" : "",
+      "facialMask" : [ ]
+    }
+  ],
+  "bodyColor" : [
+	/* CLEAR */
+	{ "ffba74" : "ffba74", "ffa820" : "ffa820", "fb9c20" : "fb9c20", "f48f20" : "f48f20", "d3821a" : "d3821a", "c1771e" : "c1771e" },
+	/* BLACK */
+	{ "ffba74" : "999999", "ffa820" : "838383", "fb9c20" : "707070", "f48f20" : "5c5c5c", "d3821a" : "474747", "c1771e" : "333333" },
+	/* GREY */
+	{ "ffba74" : "cccccc", "ffa820" : "b5b5b5", "fb9c20" : "838383", "f48f20" : "707070", "d3821a" : "5c5c5c", "c1771e" : "474747" },
+	/* WHITE */
+	{ "ffba74" : "e0e0e0", "ffa820" : "cccccc", "fb9c20" : "b5b5b5", "f48f20" : "838383", "d3821a" : "707070", "c1771e" : "5c5c5c" },
+	/* RED */
+	{ "ffba74" : "e88787", "ffa820" : "e26565", "fb9c20" : "d93a3a", "f48f20" : "ce2727", "d3821a" : "ab2121", "c1771e" : "891a1a" },
+	/* ORANGE */
+	{ "ffba74" : "f1bf7e", "ffa820" : "eead59", "fb9c20" : "ea9931", "f48f20" : "de8817", "d3821a" : "b97113", "c1771e" : "945a10" },
+	/* YELLOW */
+	{ "ffba74" : "eedd95", "ffa820" : "e9d172", "fb9c20" : "e2c344", "f48f20" : "deba2b", "d3821a" : "c2a11e", "c1771e" : "9f8419" },
+	/* GREEN */
+	{ "ffba74" : "83d373", "ffa820" : "68c954", "fb9c20" : "51bd3b", "f48f20" : "439b31", "d3821a" : "357c27", "c1771e" : "285d1d" },
+	/* BLUE */
+	{ "ffba74" : "9dbae7", "ffa820" : "7ca4de", "fb9c20" : "5588d4", "f48f20" : "3b76ce", "d3821a" : "2d63b4", "c1771e" : "255193" },
+	/* PURPLE */
+	{ "ffba74" : "c795db", "ffa820" : "b776d0", "fb9c20" : "a451c4", "f48f20" : "943eb6", "d3821a" : "7c3498", "c1771e" : "632a7a" },
+	/* PINK */
+	{ "ffba74" : "e59fcf", "ffa820" : "dc7fbe", "fb9c20" : "d35fae", "f48f20" : "ca3f9e", "d3821a" : "b03088", "c1771e" : "90276f" },
+	/* BROWN */
+	{ "ffba74" : "c39d6f", "ffa820" : "b78a52", "fb9c20" : "a47844", "f48f20" : "816036", "d3821a" : "654a2a", "c1771e" : "48351e" }
+  ],
+  "undyColor" : [
+	/* CLEAR */
+	{ "db2000" : "db2000", "c31400" : "c31400", "b21500" : "b21500", "990000" : "990000" },
+	/* BLACK */
+	{ "db2000" : "999999", "c31400" : "707070", "b21500" : "5c5c5c", "990000" : "333333" },
+	/* GREY */
+	{ "db2000" : "cccccc", "c31400" : "838383", "b21500" : "707070", "990000" : "474747" },
+	/* WHITE */
+	{ "db2000" : "e0e0e0", "c31400" : "b5b5b5", "b21500" : "838383", "990000" : "5c5c5c" },
+	/* RED */
+	{ "db2000" : "e88787", "c31400" : "d93a3a", "b21500" : "ce2727", "990000" : "891a1a" },
+	/* ORANGE */
+	{ "db2000" : "f1bf7e", "c31400" : "ea9931", "b21500" : "de8817", "990000" : "945a10" },
+	/* YELLOW */
+	{ "db2000" : "eedd95", "c31400" : "e2c344", "b21500" : "deba2b", "990000" : "9f8419" },
+	/* GREEN */
+	{ "db2000" : "83d373", "c31400" : "51bd3b", "b21500" : "439b31", "990000" : "285d1d" },
+	/* BLUE */
+	{ "db2000" : "9dbae7", "c31400" : "5588d4", "b21500" : "3b76ce", "990000" : "255193" },
+	/* PURPLE */
+	{ "db2000" : "c795db", "c31400" : "a451c4", "b21500" : "943eb6", "990000" : "632a7a" },
+	/* PINK */
+	{ "db2000" : "e59fcf", "c31400" : "d35fae", "b21500" : "ca3f9e", "990000" : "90276f" },
+	/* BROWN */
+	{ "db2000" : "c39d6f", "c31400" : "a47844", "b21500" : "816036", "990000" : "48351e" }
+      
+  ],
+  "hairColor" : [
+	/* CLEAR */
+	{ "db2000" : "db2000", "c31400" : "c31400", "990000" : "990000", "3c0000" : "3c0000" },
+	/* BLACK */
+	{ "db2000" : "999999", "c31400" : "707070", "990000" : "5c5c5c", "3c0000" : "333333" },
+	/* GREY */
+	{ "db2000" : "cccccc", "c31400" : "838383", "990000" : "707070", "3c0000" : "474747" },
+	/* WHITE */
+	{ "db2000" : "e0e0e0", "c31400" : "b5b5b5", "990000" : "838383", "3c0000" : "5c5c5c" },
+	/* RED */
+	{ "db2000" : "e88787", "c31400" : "d93a3a", "990000" : "ce2727", "3c0000" : "891a1a" },
+	/* ORANGE */
+	{ "db2000" : "f1bf7e", "c31400" : "ea9931", "990000" : "de8817", "3c0000" : "945a10" },
+	/* YELLOW */
+	{ "db2000" : "eedd95", "c31400" : "e2c344", "990000" : "deba2b", "3c0000" : "9f8419" },
+	/* GREEN */
+	{ "db2000" : "83d373", "c31400" : "51bd3b", "990000" : "439b31", "3c0000" : "285d1d" },
+	/* BLUE */
+	{ "db2000" : "9dbae7", "c31400" : "5588d4", "990000" : "3b76ce", "3c0000" : "255193" },
+	/* PURPLE */
+	{ "db2000" : "c795db", "c31400" : "a451c4", "990000" : "943eb6", "3c0000" : "632a7a" },
+	/* PINK */
+	{ "db2000" : "e59fcf", "c31400" : "d35fae", "990000" : "ca3f9e", "3c0000" : "90276f" },
+	/* BROWN */
+	{ "db2000" : "c39d6f", "c31400" : "a47844", "990000" : "816036", "3c0000" : "48351e" }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "itemName" : "lucarioballs",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A perfect get-up for the horny Lucario.",
+  "shortdescription" : "Lucario Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	{ "73bdf6" : "73bdf6", "4a9cee" : "4a9cee", "104a7b" : "104a7b", "838383" : "838383", "5a5a5a" : "5a5a5a", "393939" : "393939", "e6e69c" : "e6e69c", "d6d683" : "d6d683", "caca75" : "caca75", "b9b965" : "b9b965", "e56f6f" : "e56f6f", "de4141" : "de4141" },
+    { "73bdf6" : "e7ef7b", "4a9cee" : "ada529", "104a7b" : "736b21", "838383" : "638ca5", "5a5a5a" : "527384", "393939" : "394a5a", "e6e69c" : "7bb5ce", "d6d683" : "67a3bc", "caca75" : "5895b0", "b9b965" : "45839e" },
+	{ "73bdf6" : "dadada", "4a9cee" : "b4b4b4", "104a7b" : "818181", "e6e69c" : "dadada", "d6d683" : "b4b4b4", "caca75" : "a1a1a1", "b9b965" : "818181" },
+	{ "73bdf6" : "2897e9", "4a9cee" : "157dca", "104a7b" : "0669b2" },
+	{ "73bdf6" : "d01022", "4a9cee" : "9f0816", "104a7b" : "6c000a" },
+	{ "73bdf6" : "fcbdd2", "4a9cee" : "f59fbc", "104a7b" : "eb8aab" },
+	{ "73bdf6" : "fbb988", "4a9cee" : "f6a162", "104a7b" : "e98e4a" },
+	{ "73bdf6" : "e5e55d", "4a9cee" : "c3c34d", "104a7b" : "a6a633" },
+	{ "73bdf6" : "b09fca", "4a9cee" : "9681b6", "104a7b" : "816ba2" },
+	{ "73bdf6" : "abd46e", "4a9cee" : "94bd57", "104a7b" : "7ba340" },
+	{ "73bdf6" : "dadada", "4a9cee" : "b4b4b4", "104a7b" : "818181" },
+	{ "73bdf6" : "4b4b4b", "4a9cee" : "212121", "104a7b" : "000000" }
+  ]
+}

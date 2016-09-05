@@ -1,0 +1,30 @@
+{
+  "name": "guardpred_avaliraru2",
+  "priority": 13,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "outpost": 6,
+	"bioluminescence": 4,
+    "combat": 6,
+	"vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "fauxavali",
+      "level": 1,
+      "type": "guardpred_avaliraru",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

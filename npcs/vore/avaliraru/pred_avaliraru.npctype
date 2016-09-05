@@ -1,0 +1,138 @@
+{
+  "type" : "pred_avaliraru",
+  "baseType" : "villager",
+  
+  "npcname" : "Raru",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+  
+  "scriptConfig" : {
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"There seems to be things missing from my house."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Hey, You better fix that."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I don't mind company but I do need my privacy."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Please stop."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"This is your last warning."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+					"Thanks for giving me a place to stay.",
+					"I love this house, but you're always welcome to stay in me~"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+					"A few monsters dropped this.",
+					"I got this for you.",
+					"Thanks for letting me stay here."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"I didn't bring my weapons!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+					"Someone help! I would but I forgot my weapons!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"I don't really like fighting."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Thanks, I'm glad it's quiet now."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Hi! I'm Raru, nice to meet you.",
+			"Stop by later tonight and I might have a place for you."
+          ]
+        }
+      }
+    }
+  },
+
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/avaliraru/avaliraru.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

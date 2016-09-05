@@ -1,0 +1,9 @@
+{
+  "name" : "tempraptor",
+  "category" : "tempraptor",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "tempraptor.png"
+  }
+}

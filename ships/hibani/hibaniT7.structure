@@ -1,0 +1,24 @@
+{
+  "config" : {
+    "shipUpgrades" : {
+      "capabilities" : ["teleport", "planetTravel", "systemTravel"],
+      "maxFuel" : 1000,
+      "crewSize" : 10
+    }
+  },
+
+  "backgroundOverlays" : [
+    {
+      "image" : "hibaniT7.png",
+      "position" : [4.62, 12.38],
+      "fullbright" : true
+    },
+    {
+      "image" : "hibaniT7lit.png",
+      "position" : [4.62, 12.38]
+    }
+  ],
+
+  "blockKey" : "blockKey.config:blockKey",
+  "blockImage" : "hibaniT7blocks.png"
+}

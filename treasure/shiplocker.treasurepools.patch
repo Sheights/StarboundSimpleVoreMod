@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/hibaniStarterTreasure",
+    "value": [
+      [
+        0,
+        {
+          "fill": [
+            {
+              "pool": "starterTreasure"
+            },
+            {
+              "item": [
+                "hibaniprotectoratechest",
+                1
+              ]
+            },
+            {
+              "item": [
+                "hibaniprotectoratehead",
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  }
+]

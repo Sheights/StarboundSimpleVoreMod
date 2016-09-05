@@ -1,0 +1,40 @@
+{
+  "type" : "pred_spenzaroo",
+  "baseType" : "villager",
+  
+  "npcname" : "Spenzaroo",
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : [],
+      "enableParticipation" : false
+	},
+	"reactions" : {
+      "spontaneous" : [
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "wander"]
+      ]
+    }
+  },
+  
+  "disableWornArmor" : false,
+  "scriptDelta" : 3,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/pokemon/spenzaroo.lua" 
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "chest" : [
+              { "name" : "goodraspenzaroochest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "goodraspenzaroolegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

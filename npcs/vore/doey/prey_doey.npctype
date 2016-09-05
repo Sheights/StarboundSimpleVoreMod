@@ -1,0 +1,35 @@
+{
+  "type" : "prey_doey",
+  "baseType" : "prey",
+  
+  "npcname" : "Doey",
+  
+    "identity" : {
+	"gender" : "female"
+  },
+
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/doey/prey_doey.lua"
+  ],
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "doeyhead", "parameters" : { "colorIndex" : 0 } }
+            ],
+			"chest" : [
+              { "name" : "doeychest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "doeylegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

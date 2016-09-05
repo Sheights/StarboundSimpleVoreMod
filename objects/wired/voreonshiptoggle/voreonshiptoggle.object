@@ -1,0 +1,61 @@
+{
+  "objectName" : "voreonshiptoggle",
+  "colonyTags" : ["wired"],
+  "printable" : false,
+  "rarity" : "Common",
+  "description" : "Enables or Disables vore on ship",
+  "shortdescription" : "On Ship Vore Switch",
+  "race" : "generic",
+
+  "apexDescription" : "I'd better be careful",
+  "avianDescription" : "I'd better be careful",
+  "floranDescription" : "I'd better be careful",
+  "glitchDescription" : "I'd better be careful",
+  "humanDescription" : "I'd better be careful",
+  "hylotlDescription" : "I'd better be careful",
+  "novakidDescription" : "I'd better be careful",
+
+  "category" : "wire",
+  "price" : 1500,
+
+  "inventoryIcon" : "voreonshiptoggleicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "voreonshiptoggle.png:<color>.off",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "scripts" : [
+    "/objects/wired/voreonshiptoggle/voreonshiptoggle.lua"
+  ],
+  "scriptDelta" : 60,
+
+  "animation" : "/objects/wired/voreonshiptoggle/switchtoggle.animation",
+  "animationCustom" : {
+    "sounds" : {
+      "on" : [ "/sfx/objects/tinywallswitch.ogg" ],
+      "off" : [ "/sfx/objects/tinywallswitch.ogg" ]
+    }
+  },
+  "animationParts" : {
+    "switch" : "voreonshiptoggle.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "outputNodes" : [ [0, 0] ],
+
+  "npcToy": {
+    "ownerOnly" : true,
+    "influence" : [
+      "wallswitch"
+    ],
+    "preciseStandPositionLeft" : [-1.0, 0.0],
+    "preciseStandPositionRight" : [1.0, 0.0],
+    "defaultReactions" : {},
+    "maxNpcs" : 1
+  }
+}

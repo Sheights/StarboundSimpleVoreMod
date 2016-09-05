@@ -1,0 +1,100 @@
+{
+  "objectName" : "voremahjdigest",
+  "rarity" : "uncommon",
+  "description" : "A strange, possibly dangerous alien creature. The orb he wields seems to have absorbative properties.",
+  "shortdescription" : "Mahj [Digest]",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This creature looks like a cross between a bug and a squirrel...But that orb has a real air of dread to it...",
+  "avianDescription" : "This creature is incomprehensible, and seems to be eyeing me up in a weird way...",
+  "floranDescription" : "Big green guy...Hungry looking big green guy...",
+  "glitchDescription" : "Partial Species Match confirmed - Orbiter. Apprehensive. Unable to determine threat level.",
+  "humanDescription" : "I have no idea what this creature is, but that orb is creeping me out.",
+  "hylotlDescription" : "I've never seen a creature like this...And that orb near it is...strange.",
+  "novakidDescription" : "Kay, buddy, please stop bobbin' that orb around near me. Givin' me the heebie-jeebies.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "savor",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "maleicon.png",
+  "orientations" : [
+    {
+	  "image" : "mahj.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-16, 16],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "mahj.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [16, 16],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/mahj/mahjdigest.lua" ],
+  
+  "animation" : "mahj.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "mahj.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "^#00ffff;...So, yeah, while you're busy respawning, I think I'll make some calls on your ship communicator. Sorry for the bills.",
+	"^#00ffff;Please let me know if you change your mind about this, okay?",
+	"^#00ffff;Tell me if you want out if you get cold feet. Assuming you still have them at this point.",
+	"^#00ffff;Don't worry - My speech bubbles are totally acid resistant.",
+	"^#00ffff;Hurf...Feeling a food coma coming on...Wake me up if you want another go when you come back."
+  ],
+  "gulpLines" : [
+    "^#00ffff;Well, okay, if you wanna go out that way, I'm all too happy to oblige.",
+	"^#00ffff;Okay, is a stomach growling some sort of alien term for \"Get in here\"? ...I can work with that.",
+	"^#00ffff;Uh...Rawr, get in there? ...Yeah, I don't know how to be intimidating about this, sorry."
+  ],
+  "chatIdleFull" : [
+    "^#00ffff;Wh-...Oookay, line's forming for being eaten? ...Not that I mind, but...what?",
+	"^#00ffff;So there's big demand for being eaten by me? I think I picked the wrong profession.",
+	"^#00ffff;I'll just be a little longer if you're THAT desperate."
+  ],
+  "chatIdleEmpty" : [
+    "^#00ffff;Don't touch the orb unless you're committed to this, okay?",
+	"^#00ffff;Hey, running a bit low here. Bring a coffee with you if you plan on letting me eat you.",
+	"^#00ffff;If you're going to mock the antennae, come over here and say it.",
+	"^#00ffff;*Seems to be lightly drooling from both his mouth and orb*"
+  ],
+  "rubLines" : [
+    "^#00ffff;You're...really eager to get in here, aren't you?",
+	"^#00ffff;*Orb bumps against you* ...Gah, can't fit you inside too...",
+	"^#00ffff;You are SO next...Wait, did my translator pick that up...? Ah, hell.",
+	"^#00ffff;Hey, you in there, can you try and rub the same place your friend is?",
+	"^#00ffff;If I can drop the usual restraint, I SO cannot wait to eat you too...",
+	"^#00ffff;I hope you digest as well as you rub..."
+  ]
+}

@@ -1,5 +1,9 @@
 [
 	{"op":"add",
 	"path":"/initialquests/rodent",
+	"value":["protectorate"]},
+	
+	{"op":"add",
+	"path":"/initialquests/hibani",
 	"value":["protectorate"]}
 ]

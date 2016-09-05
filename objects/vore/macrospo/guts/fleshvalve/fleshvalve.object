@@ -1,0 +1,59 @@
+{
+  "objectName"  :  "vorefleshvalve",
+  "printable"  :  false,
+  "rarity"  :  "Rare",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "A fleshy valve, when placed inside a macro pred, can give you an escape.",
+  "shortdescription"  :  "Fleshy Valve",
+
+  "apexDescription" : "[TODO] Apex Description",
+  "avianDescription" : "[TODO] Avian Description",
+  "floranDescription" : "[TODO] Floran Description",
+  "glitchDescription" : "[TODO] Glitch Description",
+  "humanDescrtiption" : "[TODO] Human Description",
+  "hylotlDescription" : "[TODO] Hylotl Description",
+  "novakidDescription" : "[TODO] Novakid Description",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+	"intents",
+	"nude"
+  ],
+  
+  "inventoryIcon"  :  "valveicon.png",
+  "orientations" : [
+    {
+      "image" : "fleshvalve.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+      "frames" : 4,
+      "animationCycle" : 2.0,
+	  
+	  "direction" : "left",
+	  "flipImages" : true,
+	  
+	  "sitPosition" : [-24, 16],
+      "spaceScan" : 0.1,
+	  
+      "anchors" : [ "bottom" ]
+    },
+	{
+      "image" : "fleshvalve.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+	  
+      "frames" : 4,
+      "animationCycle" : 1.0,
+	  
+	  "direction" : "right",
+	  
+	  "sitPosition" : [-24, 16],
+      "spaceScan" : 0.1,
+	  
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

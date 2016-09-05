@@ -1,0 +1,57 @@
+{
+  "objectName" : "vorecallie",
+  "rarity" : "Uncommon",
+  "description" : "A cute little kobold with a big soft tail.",
+  "shortdescription" : "Callie",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "generalDescription" : "Basically a snuggly nerd.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "callieicon.png",
+  "orientations" : [
+    {
+	  "image" : "callie.png:idle",
+	  "imagePosition" : [-17, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "callie.png:idle",
+	  "imagePosition" : [-17, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/callie/callie.lua" ],
+  
+  "animation" : "callie.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ]
+	}
+  },
+  "animationParts" : {
+      "pred" : "callie.png"
+  },
+  "animationPosition" : [-17, 0]
+}

@@ -1,0 +1,52 @@
+{
+
+  "frameGrid" : {
+    "size" : [60, 33],
+    "dimensions" : [6, 9],
+    "names" : [
+      [ "idle", "swallow.1", "swallow.2", "swallow.3", "foreloop.1", "foreloop.2" ],
+	  [ "tailpush.1", "tailpush.3", "tailpush.4", "tailpush.10", "tailpush.11", "tailpush.12" ],
+	  [ "tailpush.13", "tailpush.14", "tailpush.15", "tailpush.16", "tailpush.17", "tailpush.18" ],
+	  [ "tailpush.19", "tailpush.20", "tailpush.21", "tailpush.22", "tailpush.23", "tailpush.24" ],
+	  [ "tailpush.25", "tailpush.26", "tailpush.27", "tailpush.28", "tailpush.29", "tailpush.30" ],
+	  [ "digest.1", "digest.2", "lowtran.1", "lowtran.2" ],
+	  [ "lowtran.3", "lowdigest.2", "lowdigest.3", "lowdigest.4", "lowdigest.5" ],
+	  [ "death.6", "death.7", "death.8", "death.9", "death.10" ],
+	  [ "blink", "talk.2", "cosidle.1", "cosidle.2", "costalk.2" ]
+    ]
+  },
+  "aliases"  :  {
+    "talk.1"		: "idle",
+	"costalk.1"		: "cosidle.1",
+	"foreloop.3"	: "foreloop.1",
+	"foreloop.4"	: "foreloop.2",
+	"foreloop.5"	: "foreloop.1",
+	"foreloop.6"	: "foreloop.2",
+	"foreloop.7"	: "foreloop.1",
+	"foreloop.8"	: "foreloop.2",
+	"tailpush.2"	: "tailpush.1",
+	"tailpush.5"	: "tailpush.3",
+	"tailpush.6"	: "tailpush.4",
+	"tailpush.7"	: "tailpush.3",
+	"tailpush.8"	: "tailpush.4",
+	"tailpush.9"	: "tailpush.3",
+	"tailpush.31"	: "tailpush.30",
+	"tailpush.32"	: "tailpush.30",
+	"lowdigest.1"	: "lowtran.3",
+	"lowdigest.6"	: "lowdigest.4",
+	"lowdigest.7"	: "lowdigest.3",
+	"lowdigest.8"	: "lowdigest.2",
+	"death.1"		: "lowdigest.1",
+	"death.2"		: "lowdigest.2",
+	"death.3"		: "lowdigest.3",
+	"death.4"		: "lowdigest.4",
+	"death.5"		: "lowdigest.5",
+	"breakheart.1"	: "lowtran.1",
+	"breakheart.2"	: "lowtran.2",
+	"regurgitate.1"	: "lowtran.3",
+	"regurgitate.2"	: "tailpush.21",
+	"regurgitate.3"	: "tailpush.16",
+	"regurgitate.4"	: "tailpush.3",
+	"regurgitate.5"	: "swallow.1"
+  }
+}

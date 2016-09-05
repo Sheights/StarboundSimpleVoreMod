@@ -1,0 +1,9 @@
+{
+  "name" : "smoglinz",
+  "category" : "smoglinz",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "smoglinz.png"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibaniscouterhead",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "headarmour",
+  "description" : "This device allows you to view the power levels of life forms, at the cost of reading this description expecting overused references.",
+  "shortdescription" : "Hibani Scouter",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

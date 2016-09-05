@@ -1,3 +1,4 @@
 [
-{"op":"copy","from":"/species/floran","path":"/species/rodent"}
+{"op":"copy","from":"/species/floran","path":"/species/rodent"},
+{"op":"copy","from":"/species/avian","path":"/species/hibani"}
 ]

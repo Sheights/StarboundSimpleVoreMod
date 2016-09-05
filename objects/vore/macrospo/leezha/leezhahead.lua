@@ -1,16 +1,19 @@
 animState = "blank"
 lock = true
 temp = 0
---animator.setAnimationState("bodyState", "fed4")
---animator.playSound("digest")
 
-eatLines = {
+eatLines = {	"Oh, what a unique taste.",
+				"I normally only do this for Nicole, you know.",
+				"*burp* Oh! Excuse me!"
 }
 
-idleLines = {
+idleLines = {	"Oh, someone new?",
+				"Perhaps you would like to rest with me."
 }
 
-bellyLines = {
+bellyLines = {	"Mmm... A wonderful feeling, is it not?",
+				"'Tis relaxing, yes?",
+				"Aah... To have a full stomach..."
 }
 
 function init()
@@ -26,6 +29,7 @@ function update(dt)
 		
 		if animState == "default" then
 			animator.setAnimationState("bodyState", "swallow")
+			object.say( eatLines[ math.random(#eatLines) ] )
 		end
 		
 		
@@ -49,6 +53,14 @@ function update(dt)
 			animator.setAnimationState("bodyState", "blink")
 		elseif temp == 2 and animState == "default" then
 			animator.setAnimationState("bodyState", "smile")
+		end
+	end
+	
+	if math.random(700) == 1 then
+		if world.loungeableOccupied(entity.id()) then
+			object.say( bellyLines[ math.random(#bellyLines) ] )
+		else
+			object.say( idleLines[ math.random(#idleLines) ] )
 		end
 	end
 end

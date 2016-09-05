@@ -1,0 +1,31 @@
+{ "margin":0,
+ "name":"misc",
+ "properties":
+    {
+
+    },
+ "spacing":0,
+ "tilecount":1,
+ "tileheight":16,
+ "tileproperties":
+    {
+     "0":
+        {
+         "\/\/description":"A high tech piece of equipment made for drawing.",
+         "\/\/name":"wacomtablet",
+         "\/\/shortdescription":"Wacom Tablet",
+         "imagePositionX":"-1",
+         "imagePositionY":"0",
+         "object":"wacomtablet",
+         "tilesetDirection":"right"
+        }
+    },
+ "tiles":
+    {
+     "0":
+        {
+         "image":"..\/..\/..\/..\/..\/tiled\/workspace-custom\/tablet.png"
+        }
+    },
+ "tilewidth":18
+}

@@ -31,7 +31,7 @@
 	  "imagePosition" : [0, 0],
 	  "direction" : "left",
 	  "flipImages" : true,
-	  "sitPosition" : [-76, 34],
+	  "sitPosition" : [-100, 30],
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
 	  "animationPosition" : [0, 0]
@@ -40,7 +40,7 @@
 	  "image" : "leezhahead.png:default",
 	  "imagePosition" : [0, 0],
 	  "direction" : "right",
-	  "sitPosition" : [-16, 34],
+	  "sitPosition" : [-17, 30],
 	  "spaceScan" : 0.1,
 	  "anchors" : [ "bottom" ],
 	  "animationPosition" : [0, 0]

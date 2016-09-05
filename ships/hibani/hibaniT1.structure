@@ -1,0 +1,24 @@
+{
+  "config" : {
+    "shipUpgrades" : {
+      "capabilities" : [],
+      "maxFuel" : 1000,
+      "crewSize" : 2
+    }
+  },
+
+  "backgroundOverlays" : [
+    {
+      "image" : "hibaniT1.png",
+      "position" : [7, 15],
+      "fullbright" : true
+    },
+    {
+      "image" : "hibaniT1lit.png",
+      "position" : [7, 15]
+    }
+  ],
+
+  "blockKey" : "blockKey.config:blockKey",
+  "blockImage" : "hibaniT1blocks.png"
+}

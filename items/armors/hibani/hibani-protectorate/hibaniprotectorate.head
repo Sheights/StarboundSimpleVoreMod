@@ -1,0 +1,42 @@
+{
+  "itemName" : "hibaniprotectoratehead",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "headarmour",
+  "description" : "After a refusal to wear pants, a hat was given to the Hibani to orient then into the Protectorate",
+  "shortdescription" : "Hibani Protectorate Cap",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+
+  "colorOptions" : [
+    // PROTECTORATE BLUE
+    { "ffca8a" : "7db8d6", "e0975c" : "5588ab", "a85636" : "325a81", "6f2919" : "1c3553", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // BLACK
+    { "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // GREY
+    { "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // WHITE
+    { "ffca8a" : "e6e6e6", "e0975c" : "b6b6b6", "a85636" : "7b7b7b", "6f2919" : "373737", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // RED
+    { "ffca8a" : "f4988c", "e0975c" : "d93a3a", "a85636" : "932625", "6f2919" : "601119", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // ORANGE
+    { "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // YELLOW
+    { "ffca8a" : "ffffa7", "e0975c" : "e2c344", "a85636" : "a46e06", "6f2919" : "642f00", "e2c344" : "e6e6e6", "b0810f" : "b6b6b6" },
+    // GREEN
+    { "ffca8a" : "b2e89d", "e0975c" : "51bd3b", "a85636" : "247824", "6f2919" : "144216", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // BLUE
+    { "ffca8a" : "96cbe7", "e0975c" : "5588d4", "a85636" : "344495", "6f2919" : "1a1c51", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // PURPLE
+    { "ffca8a" : "d29ce7", "e0975c" : "a451c4", "a85636" : "6a2284", "6f2919" : "320c40", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // PINK
+    { "ffca8a" : "eab3db", "e0975c" : "d35eae", "a85636" : "97276d", "6f2919" : "59163f", "e2c344" : "e2c344", "b0810f" : "b0810f" },
+    // BROWN
+    { "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13", "e2c344" : "e2c344", "b0810f" : "b0810f" }
+  ]
+}

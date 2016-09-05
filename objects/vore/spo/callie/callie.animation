@@ -1,0 +1,167 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1
+		  },
+		  "swallow"  :  {
+		    "frames"  :  3,
+			"cycle"  :  0.6,
+			"mode"  :  "transition",
+			"transition"  :  "foreloop"
+		  },
+		  "foreloop" :  {
+		    "frames"  :  8,
+		    "cycle"  :  6,
+		    "mode"  :  "transition",
+			"transition"  :  "tailpush"
+		  },
+		  "tailpush" :  {
+		    "frames"  :  32,
+		    "cycle"  :  6,
+		    "mode"  :  "transition",
+			"transition"  :  "digest"
+		  },
+		  "digest" :  {
+		    "frames"  :  2,
+		    "cycle"  :  2,
+		    "mode" : "loop"
+		  },
+		  "lowtran" :  {
+		    "frames"  :  3,
+		    "cycle"  :  0.3,
+		    "mode"  :  "transition",
+			"transition"  :  "lowdigest"
+		  },
+		  "lowdigest" :  {
+		    "frames"  :  8,
+		    "cycle"  :  1.2,
+		    "mode"  :  "loop"
+		  },
+		  "death" :  {
+		    "frames"  :  10,
+		    "cycle"  :  1.5,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "blink"  :  {
+		    "frames"  :  1
+		  },
+		  "talk" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.4,
+		    "mode"  :  "loop"
+		  },
+		  "cosidle" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.4,
+		    "mode"  :  "loop"
+		  },
+		  "costalk" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.4,
+		    "mode"  :  "loop"
+		  },
+		  "breakheart" :  {
+		    "frames"  :  2,
+		    "cycle"  :  0.3,
+		    "mode"  :  "transition",
+			"transition"  :  "regurgitate"
+		  },
+		  "regurgitate" :  {
+		    "frames"  :  5,
+		    "cycle"  :  0.75,
+		    "mode"  :  "transition",
+			"transition"  :  "idle"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+	        "foreloop"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:foreloop.<frame>"
+		      }
+		    },
+	        "tailpush"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:tailpush.<frame>"
+		      }
+		    },
+			"digest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest.<frame>"
+		      }
+		    },
+			"lowtran"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lowtran.<frame>"
+		      }
+		    },
+			"lowdigest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lowdigest.<frame>"
+		      }
+		    },
+			"death"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:death.<frame>"
+		      }
+		    },
+			"blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink"
+		      }
+		    },
+			"talk"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:talk.<frame>"
+		      }
+		    },
+			"cosidle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:cosidle.<frame>"
+		      }
+		    },
+			"costalk"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:costalk.<frame>"
+		      }
+		    },
+			"breakheart"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:breakheart.<frame>"
+		      }
+		    },
+			"regurgitate"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:regurgitate.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "muteSfx" : true,
+  "muteMusic" : true,
+  "panels" : [
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/black.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 500,
+          "alpha" : 1,
+          "position" : [480, 270]
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/1a.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 0,
+          "zoom" : 1.5,
+          "alpha" : 1,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 5.6,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 6,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/1blackbar.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 3.6,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 85]
+        },
+        {
+          "timecode" : 4.6,
+          "zoom" : 1.5,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 6,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 7,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/1b.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 4.6,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 5.6,
+          "zoom" : 1.5,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 10,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 11,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/2.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 11.5,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 13,
+          "zoom" : 1.5,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 16,
+          "zoom" : 1.5,
+          "alpha" : 1
+        },
+        {
+          "timecode" : 17,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/3.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 17.5,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 19,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 21.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 22.5,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/4.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 23,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 24.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 26.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 27.5,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/5.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 28,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 29.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 31.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 32.5,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/6.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 33,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 34.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 36.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 37.5,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    },
+    {
+      "drawables" : [
+        {
+          "image" : "/cinematics/avian/7.png"
+        }
+      ],
+      "keyframes" : [
+        {
+          "timecode" : 38,
+          "zoom" : 1.5,
+          "alpha" : 0,
+          "position" : [480, 270]
+        },
+        {
+          "timecode" : 39.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 41.5,
+          "alpha" : 1,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 42.5,
+          "alpha" : 0,
+          "zoom" : 1.5
+        },
+        {
+          "timecode" : 44,
+          "alpha" : 0,
+          "zoom" : 1.5
+        }
+      ]
+    }
+  ],
+  "audio" : [
+    {
+      "timecode" : 3,
+      "resource" : "/sfx/cinematics/avian_kluex_intro.ogg"
+    },
+    {
+      "timecode" : 0,
+      "resource" : "/sfx/cinematics/avian_frame1.ogg"
+    },
+    {
+      "timecode" : 0.1,
+      "resource" : "/sfx/cinematics/avian_frame1ambient.ogg"
+    },
+    {
+      "timecode" : 13,
+      "resource" : "/sfx/cinematics/avian_frame2.ogg"
+    },
+    {
+      "timecode" : 15.8,
+      "resource" : "/sfx/cinematics/avian_frame3ambient.ogg"
+    },
+    {
+      "timecode" : 18,
+      "resource" : "/sfx/cinematics/avian_frame3.ogg"
+    },
+    {
+      "timecode" : 20.7,
+      "resource" : "/sfx/cinematics/avian_frame4ambient.ogg"
+    },
+    {
+      "timecode" : 24,
+      "resource" : "/sfx/cinematics/avian_frame4.ogg"
+    },
+    {
+      "timecode" : 28.5,
+      "resource" : "/sfx/cinematics/avian_frame5ambient.ogg"
+    },
+    {
+      "timecode" : 29.5,
+      "resource" : "/sfx/cinematics/avian_frame5.ogg"
+    },
+    {
+      "timecode" : 34.5,
+      "resource" : "/sfx/cinematics/avian_frame6.ogg"
+    },
+    {
+      "timecode" : 39.5,
+      "resource" : "/sfx/cinematics/avian_frame7.ogg"
+    }
+  ]
+}

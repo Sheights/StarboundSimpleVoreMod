@@ -1,0 +1,35 @@
+{
+  "id" : "hibanibootship",
+  "prerequisites" : [ "protectoratehibani" ],
+  "mainQuest" : true,
+  "invisible" : false,
+  "logOnly" : true,
+  "title" : "Boot Up",
+  "text" : "The ship is damaged and you are floating alone in space. Your best bet is to boot up the ship computer and see if anything good comes of it.",
+  "completionText" : "SAIL is awake! Now you have some guidance, and some company.",
+  "moneyRange" : [50, 50],
+  "rewards" : [
+    [ ]
+  ],
+  "canBeAbandoned" : false,
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/story/bootship.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "sail"
+    },
+
+    "descriptions" : {
+      "wakeSail" : "Boot up the ship computer"
+    },
+
+    "stunTime" : 8.0,
+
+    "compassUpdate" : 0.2,
+
+    "techstationUid" : "techstation",
+    "shipUpgrade" : {
+      "shipLevel" : 1
+    }
+  }
+}

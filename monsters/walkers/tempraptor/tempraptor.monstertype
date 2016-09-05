@@ -1,0 +1,157 @@
+{
+  "type" : "tempraptor",
+  "shortdescription" : "Raptor",
+  "description" : "A bipedal lizard, apparently a fast runner and good jumper. Dangerous!",
+
+  "categories" : [ "tempraptor" ],
+  "parts" : [ "body" ],
+
+  "animation" : "tempraptor.animation",
+
+  "interactive" : true,
+
+  "dropPools" : [ { "default" : "empty", "bow" : "empty" } ],
+
+  "loungePositions" : {
+    "drivingSeat" : {
+      "part" : "foreground",
+      "partAnchor" : "body",
+      "orientation" : "sit",
+      "emote" : "happy",
+      "dance" : "warmhands"
+    }
+  },
+  
+  "baseParameters" : {
+  
+    "scripts" : [
+      "/monsters/monster.lua",
+      "/monsters/walkers/tempraptor/tempraptor.lua",
+      "/scripts/sensors.lua",
+      "/scripts/stateMachine.lua",
+      "/scripts/util.lua",
+      "/scripts/vec2.lua"
+    ],
+	
+    "behavior" : "monster",
+	
+    "renderLayer" : "Player+1",
+
+    "touchDamage" : {
+      "poly" : [ [1.5, 2], [2, 1.5],  [2, -1.5], [1.5, -2],  [-1.5, -2], [-2, -1.5],  [-2, 1.5], [-1.5, 2] ],
+      "damage" : 4,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "tarball",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+	"voreBounds" : {
+		"default" : [ [-1.5, -1], [1.5, 1] ]
+	},
+	
+	"animationSetLists" : {
+		"idle":{ 
+			"body":"idle" 
+		},
+		"movement":{ 
+			"body":"idle" 
+		},
+		"damage":{ 
+			"body":"damage" 
+		},
+		"full":{ 
+			"body":"full" 
+		},
+		"default":"idle"
+	},
+	
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [1.5, 2], [2, 1.5],  [2, -1.5], [1.5, -2],  [-1.5, -2], [-2, -1.5],  [-2, 1.5], [-1.5, 2] ],
+
+      "mass" : 1.0,
+      "walkSpeed" : 4,
+      "runSpeed" : 8,
+
+      "airFriction" : 0,
+
+      "airJumpProfile" : {
+        "jumpSpeed" : 45.0,
+        "jumpInitialPercentage" : 1.0,
+        "jumpHoldTime" : 0.0
+      }
+    },
+
+    "bodyMaterialKind" : "organic",
+
+    "knockoutTime" : 0.0,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 200
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.1
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 1.0
+        },
+        "lavaImmunity" : {
+          "baseValue" : 1.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [1, 2],
+    "feetOffset" : [0, -3],
+    "capturable" : false,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [255, 192, 64]
+  }
+}

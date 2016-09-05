@@ -1,0 +1,185 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idle",
+	    "states"  :  {
+		  "idle"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "idlefull"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "air"  :  {
+		    "frames"  :  10,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "ear"  :  {
+		    "frames"  :  8,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "call"  :  {
+		    "frames"  :  33,
+			"cycle"  :  3,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "lick"  :  {
+		    "frames"  :  21,
+			"cycle"  :  0.8,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
+		  "rub"  :  {
+		    "frames"  :  42,
+			"cycle"  :  3.5,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "struggle"  :  {
+		    "frames"  :  26,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "burp"  :  {
+		    "frames"  :  22,
+			"cycle"  :  1,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "lickfull"  :  {
+		    "frames"  :  30,
+			"cycle"  :  1.5,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "pickup"  :  {
+		    "frames"  :  35,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "chew"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  21,
+			"cycle"  :  1.5,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  },
+		  "chew"  :  {
+		    "frames"  :  6,
+			"cycle"  :  0.5,
+			"mode"  :  "transition",
+			"transition"  :  "swallow"
+		  },
+		  "regurg" :  {
+		    "frames"  : 55,
+		    "cycle"  :  2,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },		  
+		  "vicareat" :  {
+		    "frames"  : 60,
+		    "cycle"  :  3,
+			"mode"  :  "transition",
+			"transition"  :  "idlefull"
+		  }
+	    }
+	  }
+	},
+  
+    "parts"  :  {
+      "pred"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle"
+		      }
+		    },
+			"idlefull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idlefull"
+		      }
+		    },
+			"air"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:air.<frame>"
+		      }
+		    },
+			"ear"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:ear.<frame>"
+		      }
+		    },
+			"call"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:call.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+			"lick"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lick.<frame>"
+		      }
+		    },
+			"lickfull"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lickfull.<frame>"
+		      }
+		    },
+			"rub"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:rub.<frame>"
+		      }
+		    },
+			"struggle"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:struggle.<frame>"
+		      }
+		    },
+			"burp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:burp.<frame>"
+		      }
+		    },
+			"chew"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:chew.<frame>"
+		      }
+		    },
+			"pickup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:pickup.<frame>"
+		      }
+		    },
+			"regurg"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:regurg.<frame>"
+		      }
+			},
+			"vicareat"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:vicareat.<frame>"
+		    }
+			}
+		  }
+	    }
+   	  }
+    }
+  }
+}

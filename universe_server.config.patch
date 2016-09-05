@@ -1,3 +1,4 @@
 [
-{"op":"add","path":"/speciesShips/rodent","value":["/ships/rodent/rodentT0.structure","/ships/rodent/rodentT1.structure","/ships/rodent/rodentT2.structure","/ships/rodent/rodentT3.structure","/ships/rodent/rodentT4.structure","/ships/rodent/rodentT5.structure","/ships/rodent/rodentT6.structure","/ships/rodent/rodentT7.structure","/ships/rodent/rodentT8.structure"]}
+{"op":"add","path":"/speciesShips/rodent","value":["/ships/rodent/rodentT0.structure","/ships/rodent/rodentT1.structure","/ships/rodent/rodentT2.structure","/ships/rodent/rodentT3.structure","/ships/rodent/rodentT4.structure","/ships/rodent/rodentT5.structure","/ships/rodent/rodentT6.structure","/ships/rodent/rodentT7.structure","/ships/rodent/rodentT8.structure"]},
+{"op":"add","path":"/speciesShips/hibani","value":["/ships/hibani/hibaniT0.structure","/ships/hibani/hibaniT1.structure","/ships/hibani/hibaniT2.structure","/ships/hibani/hibaniT3.structure","/ships/hibani/hibaniT4.structure","/ships/hibani/hibaniT5.structure","/ships/hibani/hibaniT6.structure","/ships/hibani/hibaniT7.structure","/ships/hibani/hibaniT8.structure"]}
 ]

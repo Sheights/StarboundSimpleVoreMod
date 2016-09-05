@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibaninerdglasseshead",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "headarmour",
+  "description" : "Makes you look hip and trendry... or a total tool. My how the times have changed.",
+  "shortdescription" : "Hibani Nerd Glasses",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

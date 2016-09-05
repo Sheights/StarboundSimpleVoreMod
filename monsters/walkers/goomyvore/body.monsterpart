@@ -1,0 +1,9 @@
+{
+  "name" : "goomy",
+  "category" : "goomy",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "goomy.png"
+  }
+}

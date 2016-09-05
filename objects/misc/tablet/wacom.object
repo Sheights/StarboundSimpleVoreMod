@@ -1,0 +1,30 @@
+{
+  "objectName" : "wacomtablet",
+  "colonyTags" : ["electronics"],
+  "rarity" : "Common",
+  "price" : 1799,
+  "description" : "A high tech piece of equipment made for drawing.",
+  "shortdescription" : "Wacom Tablet",
+  "race" : "generic",
+
+  "generalDescription" : "The swaying human appears to be playing a ukulele",
+
+  "inventoryIcon" : "wacomicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "wacom.png:off.<frame>",
+      "imagePosition" : [-1, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "animation" : "/objects/misc/tablet/wacom.animation",
+  "animationParts" : {
+    "tablet" : "wacom.png"
+  },
+  "animationPosition" : [-1, 0],
+  "scripts" : [ "/objects/misc/tablet/wacom.lua" ],
+  "scriptDelta" : 10
+}

@@ -1,0 +1,206 @@
+{
+  "type" : "guardpred_avaliraru",
+  "baseType" : "guard",
+  
+  "npcname" : "Raru",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+
+  "damageTeamType" : "friendly",
+
+  "scriptConfig" : {
+    "attackerLimit" : 8,
+    "attackerLimitCooldown" : 3,
+
+    "idleTimeRange" : [1, 2],
+
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"There seems to be things missing from my house.",
+							"Something's different here."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Hey, You better fix that.",
+							"You had better put that back, or a suitable replacement."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I appreciate the thought, but I need privacy."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Please do what you're doing and then put that back."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"I'm about ready to go. Hurry it up."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+					"You called, sir?",
+					"What do you need?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+					"Thanks for letting me stay.",
+					"Always happy to pay my landlord!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Now you've done it!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+					"Here, I'll help!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Such a foolish creature!"
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Poor thing didn't stand a chance.",
+					"I hope the others stay away.",
+					"Glad that's over, but now I'm hungry."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "I do enjoy protecting this place.",
+			"Hello there! Thanks again for letting me stay here."
+          ]
+        }
+      }
+    }
+  },
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [2, [
+          {
+            "head" : [
+              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [3, [
+          {
+            "head" : [
+              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+	  [4, [
+          {
+            "head" : [
+              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+			"chest" : [
+              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ]
+  },
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/avaliraru/guardavaliraru.lua" 
+  ]
+}

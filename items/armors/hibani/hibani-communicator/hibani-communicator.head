@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibanicommunicatorhead",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "headarmour",
+  "description" : "Stay in communication with your friends with this primitive low-range technology!",
+  "shortdescription" : "Hibani Communicator",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

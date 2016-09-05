@@ -1,0 +1,15 @@
+{
+  "frameGrid" : {
+    "size" : [25, 25],
+    "dimensions" : [16, 6],
+
+    "names" : [
+      [null, "fullidle.1", null, "fullhurt.1", null, "idle.1", null, "hurt.1", "eat.1", "eat.2", "eat.3", "eat.4", "eat.5", "eat.6", "eat.7", "eat.8"],
+      [null, "fullprep.1", "fullprep.2", null, null, "prep.1", "prep.2" ],
+      [null, "fullhop.1", "fullhop.2", "fullhop.3", null, "hop.1", "hop.2", "hop.3" ],
+      [null, "fullfall.1", "fullfall.2", "fullfall.3", null, "fall.1", "fall.2", "fall.3" ],
+      [null, "fullland.1", "fullland.2", null, null, "land.1", "land.2" ],
+      [null, "fullblink.1", "fullblink.2", null, null, "blink.1", "blink.2" ]
+    ]
+  }
+}

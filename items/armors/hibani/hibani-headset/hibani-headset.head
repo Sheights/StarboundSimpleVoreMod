@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibaniheadsethead",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Common",
+  "category" : "headarmour",
+  "description" : "Roger, Roger. What's your vector, Victor?",
+  "shortdescription" : "Hibani Headset",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}
