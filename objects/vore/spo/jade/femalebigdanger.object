@@ -17,7 +17,7 @@
   "novakidDescription" : "I don't like the way this lady's eyein' me.",
   
   "objectType" : "loungeable",
-  "sitCoverImage" : "/objects/vore/jade/femalefullbig.png",
+  "sitCoverImage" : "/objects/vore/spo/jade/femalefullbig.png",
   "sitFlipDirection" : false,
   "sitOrientation" : "lay",
   "sitAngle" : 0,
@@ -50,7 +50,7 @@
 	}
   ],
   
-  "scripts" : [ "/objects/vore/vorechatscript.lua" ],
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
   
   "animation" : "femaleanimation.animation",
   "animationCustom" : {
