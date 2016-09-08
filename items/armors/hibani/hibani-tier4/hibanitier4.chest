@@ -3,7 +3,7 @@
   "price" : 800,
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Uncommon",
   "category" : "chestarmour",
   "description" : "Durasteel armbands. They do more to protect than you may believe.",
   "shortdescription" : "Hibani Durasteel Bracelets",

@@ -14,35 +14,35 @@ duration = 120
 projectile	= "dragonvoreprojectile"
 dprojectile	= "dragondvoreprojectile"
 
-smallLines = {	"It's the best hug!",
-				"Dra!",
-				"My gooy full course! How scrumptions!",
-				"Hahaha. You are getting all gooy now!",
-				"I could really go for another one of these.",
-				"It's really warm and slimy in there huh? Sounds great!"
+bellyLines = {	"Aaahhhhh you feel delightful in there~",
+				"*squeezes the gooey belly around you* <3",
+				"Keep on squirming, you'll notice when your body starts to turn into goo~",  
+				"Shame that other goodra can't do things quite the same~"
 			}
 			
-medLines = {	"You two are so cute together!",
-				"Goo!",
-				"Hug! Hug!",
-				"I love you!",
-				"Yaaaaay! Let's play!",
-				"I bet it's really sticky in there!"
+eatLines = 	{	"Down you go cutie~ <3",
+				"*gulps down lewdly~*",
+				"*swallows with a hungry murr~*"
 			}
 
-largeLines = {	"Heavy!",
-				"You're squishing my insides. I can't breathe!",
-				"Draaa!",
-				"This was a bad idea.",
-				"Be gentle...",
-				"Is there such thing as too much of a hug?",
-				"There's not even enough room for my slime.",
-				"I couldn't go for one more...",
-				"N-No, I'm still not going to let you out. Don't worry about it. I love you too much"
-			}
+requestLines = 	{	"Aw, so sweet of you <3",
+					"Have fun while in there, cutie~"
+				}
 			
 function initHook()
 	
+end
+
+function feedHook()
+	npc.say( eatLines[math.random(#eatLines)])
+end
+
+function forceExit()
+	npc.say( "There you go, come back later!" )
+end
+
+function forceFeed()
+	npc.say( requestLines[math.random(#requestLines)])
 end
 
 function interactHook()
@@ -56,15 +56,7 @@ end
 function updateHook()
 
 	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
-	
-		if #victim == 1 then
-			npc.say( smallLines[math.random(#smallLines)])
-		elseif #victim == 2 then
-			npc.say( medLines[math.random(#medLines)])
-		elseif #victim == 3 then
-			npc.say( largeLines[math.random(#largeLines)])
-		end
-		
+		npc.say( bellyLines[math.random(#bellyLines)])	
 	end
 
 end

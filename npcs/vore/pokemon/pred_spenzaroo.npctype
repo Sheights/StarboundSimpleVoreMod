@@ -13,6 +13,106 @@
         [1.0, "sit", { "timeRange" : [0.6,0.2]}],
         [1.0, "wander"]
       ]
+    },
+	"dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I don't think I can stay if you do that..."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Please fix the walls, my home isn't valid!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Ah gosh, please remove any additional deed!"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"I think I'm getting booted from your world soon..."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Sorry, the game's kicking me out :'C",
+						"*sniffle* :'C"
+			  ]
+			}
+          }
+        },
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Ah, you needed something?~",
+						"Fun times incoming? :3",
+						"You called? ...I wouldn't mind a snack, by the way~"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here's my thank gift for the sweet home you made me ^^",
+						"I really like it here, here's the rent!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Oh nu! Absorb is the only move I know! :'D",
+					"C-can you capture it and carry it outside? :'D"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"I guess that went well .w.",
+					"That just happened .w."
+			]
+		  }
+        }
+	  },
+      "breakObject" : "/dialog/converse.config:breakObject",
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "I spot a cutie! Heya!",
+			"*wiggles the tail in excitement*",
+			"*boops the nose* o3o"
+          ]
+        }
+      },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Looks like you could use a bit of goop in your life, maybe more hugs? :3",
+			"Wanna snuggle my tummy? ^w^",
+			"*hugs and pats~*"
+          ]
+        }
+      },
+      "accuse" : "/dialog/thief.config:accuse",
+      "alert" : "/dialog/thief.config:alert"
     }
   },
   

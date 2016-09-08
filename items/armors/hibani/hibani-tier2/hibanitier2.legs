@@ -6,7 +6,7 @@
   "rarity" : "Common",
   "category" : "legarmour",
   "description" : "A pair of tungsten anklets. They'll do well to deflect anything heading for your ankles. Apparently this is a bigger issue than the rest of the body.",
-  "shortdescription" : "Hibani Iron Anklets",
+  "shortdescription" : "Hibani Tungsten Anklets",
   "tooltipKind" : "armor",
 
   "maleFrames" : "pants.png",

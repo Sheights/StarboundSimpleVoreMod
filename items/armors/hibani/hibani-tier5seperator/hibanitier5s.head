@@ -3,7 +3,7 @@
   "price" : 480,
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Rare",
   "category" : "headarmour",
   "description" : "An violium circlet to guard from overhead blows. You think it wasn't protect much... and you're right.",
   "shortdescription" : "Hibani Violium Circlet",

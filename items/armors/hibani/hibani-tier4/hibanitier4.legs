@@ -3,7 +3,7 @@
   "price" : 320,
   "inventoryIcon" : "icons.png:pants",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Uncommon",
   "category" : "legarmour",
   "description" : "A pair of durasteel anklets. They'll do well to deflect anything heading for your ankles. Apparently this is a bigger issue than the rest of the body.",
   "shortdescription" : "Hibani Durasteel Anklets",

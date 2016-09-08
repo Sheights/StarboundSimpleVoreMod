@@ -1,19 +1,22 @@
 {
-  "name": "pred_saph",
-  "priority": 13,
+  "name": "pred_spenzaroo",
+  "priority": 19,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-	"human": 12,
+	"poke": 1,
+	"slime": 24,
+	"traveller": 4,
+	"electronic": 6,
     "vore": 1
   },
 
   "tenants": [
     {
       "spawn": "npc",
-      "species": "human",
-      "type": "pred_saph",
+      "species": "dummy",
+      "type": "pred_spenzaroo",
       "overrides": {
         "damageTeamType" : "friendly"
        }

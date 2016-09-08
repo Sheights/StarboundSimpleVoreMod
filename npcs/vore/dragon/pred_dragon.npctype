@@ -85,24 +85,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"They have a greater place. Save them.",
-						"If they fall you will take their place!",
-						"Food is always best when it realizes it's food."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Yes! This entertains me!",
-					"Defend your dragon!",
-					"My enemies are your enemies if you don't want me as an enemy."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [

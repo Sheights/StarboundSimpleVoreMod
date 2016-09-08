@@ -3,7 +3,7 @@
   "price" : 480,
   "inventoryIcon" : "icons.png:head",
   "maxStack" : 1,
-  "rarity" : "Common",
+  "rarity" : "Legendary",
   "category" : "headarmour",
   "description" : "Stay in communication with your friends with this primitive low-range technology!",
   "shortdescription" : "Hibani Communicator",

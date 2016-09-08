@@ -1,6 +1,6 @@
 {
   "id" : "vorenpcsencyclo",
-  "species" : "apex",
+  "species" : "other",
   "title" : "Vore NPC Encyclopedia",
   "description" : "A book detialing the summoning requirements for all tenants.",
   "icon" : "bellyBoundBook.png",
@@ -8,8 +8,8 @@
 
 "Table of Contents:
 Predators: Page 2
-Prey: Page 25
-Misc: Page 30",
+Prey: Page 27
+Misc: Page 33",
 
 "Predators
 
@@ -159,7 +159,7 @@ nature : 12,
 poke : 1
 
 Name: Lucario
-Types: Oral, Digest, Unbirth
+Types: Oral, Digest, Unbirth, Cock
 Requirements -
 aviantemple : 12,
 poke : 1",
@@ -242,17 +242,34 @@ Types: Oral, Digest
 Requirements -
 christmas : 18
 
+Name: Raru
+Types: Oral
+Requirements -
+bioluminescence : 4,
+outpost : 6,
+OR
+avali : 6",
+
+"Name: Raru Guard
+Types: Oral
+Requirements -
+bioluminescence : 4,
+combat : 6,
+outpost : 6,
+OR
+avali : 6
+
 Name: Sergal
 Types: Oral, Digest
 Requirements -
-hylotlvillage : 6
+hylotlvillage : 6",
 
-Name: Shark
+"Name: Shark
 Types: Oral, Digest
 Requirements -
-sea : 24",
+sea : 24
 
-"Name: Shark Girl
+Name: Shark Girl
 Types: Oral, Digest
 Requirements -
 island : 12
@@ -260,7 +277,15 @@ island : 12
 Name: Slime Girl
 Types: Oral, Digest
 Requirements -
-slime : 12
+slime : 12",
+
+"Name: Spenzaroo
+Types: Oral
+Requirements -
+electronic : 6,
+poke : 1,
+slime : 24,
+traveller : 1
 
 Name: Spider Girl
 Types: Oral, Digest
@@ -329,26 +354,31 @@ Requirements -
 electronic : 24,
 executive : 12",
 
-"Name: Katojana
+"Name: Doey
+Types: Oral
+Requirements -
+slime : 12
+
+Name: Katojana
 Types: Oral, Digest
 Requirements -
-steampunk : 24
+steampunk : 24",
 
-Name: Nicole
+"Name: Nicole
 Types: Oral
 Requirements -
 1 Glitch Bookcase
 1 Hylotl Arcade Machine
 1 Hylotl Water Feature
-1 Outpost Desk",
+1 Outpost Desk
 
-"Name: Rich
+Name: Rich
 Types: Oral
 Requirements -
 Human : 6,
-1 Zorua Plush
+1 Zorua Plush",
 
-Random Prey
+"Random Prey
 Types: Oral, Digest
 Requirements - none
 

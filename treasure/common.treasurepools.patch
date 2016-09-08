@@ -1,0 +1,37 @@
+[
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibaniscouterhead", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibaninerdglasseshead", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibaniheadsethead", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibanicommunicatorhead", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+	    	{"weight" : 0.0003, "item" : [ "hibaniclawchest", 1]}
+    
+  }
+]
