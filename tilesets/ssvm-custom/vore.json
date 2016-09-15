@@ -5,7 +5,7 @@
 
     },
  "spacing":0,
- "tilecount":48,
+ "tilecount":49,
  "tileheight":96,
  "tileproperties":
     {
@@ -439,6 +439,16 @@
          "object":"patreonsign",
          "tilesetDirection":"right"
         },
+     "48":
+        {
+         "\/\/description":"I worked pretty hard on this. I don't know why you're spawning it in, just go to the Foodhall.",
+         "\/\/name":"patreonFigurineStore",
+         "\/\/shortdescription":"Patreon Store",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"patreonFigurineStore",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "\/\/description":"#258: The Mud Fish Pokemon",
@@ -663,6 +673,10 @@
      "47":
         {
          "image":"..\/..\/..\/..\/tiled\/workspace-custom\/PatreonSign.png"
+        },
+     "48":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/recreationalvehicle.png"
         },
      "5":
         {

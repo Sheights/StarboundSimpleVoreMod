@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurevictor",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Huge, fluffy, ravenous rabbity thing. Fun to hug! Full of love and full of you!",
+  "shortdescription" : "Victor Figurine",
+
+  "inventoryIcon" : "figurine.png:victor",
+  "orientations" : [
+    {
+      "image" : "figurine.png:victor",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:victor",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

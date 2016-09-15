@@ -1,0 +1,65 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "default",
+	    "states"  :  {
+		  "default"  :  {
+		    "frames"  :  1
+		  },
+		  "blink"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "transition",
+			"transition" : "default"
+		  },
+		  "twitch"  :  {
+		    "frames"  :  2,
+			"cycle"  :  0.1,
+			"mode"  :  "transition",
+			"transition" : "default"
+		  },
+		  "stand"  :  {
+		    "frames"  :  1,
+			"cycle"  :  1,
+			"mode"  :  "transition",
+			"transition" : "default"
+		  }
+		}
+	  }
+	},
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "default"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:default"
+		      }
+		    },
+	        "blink"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:blink"
+		      }
+		    },
+	        "stand"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:stand"
+		      }
+		    },
+			"twitch"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:twitch.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

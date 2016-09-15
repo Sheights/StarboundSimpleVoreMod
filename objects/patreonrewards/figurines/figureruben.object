@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureruben",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "An average Eevee Scientist who joined the protectorate. Armed with many gadgest, he explores the universe to keep it safe.",
+  "shortdescription" : "Ruben Flonne Figurine",
+
+  "inventoryIcon" : "figurine.png:ruben",
+  "orientations" : [
+    {
+      "image" : "figurine.png:ruben",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:ruben",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

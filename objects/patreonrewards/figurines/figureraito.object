@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureraito",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This was my boss man for a good while after Lynn left.",
+  "shortdescription" : "Raito Figurine",
+
+  "inventoryIcon" : "figurine.png:raito",
+  "orientations" : [
+    {
+      "image" : "figurine.png:raito",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:raito",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

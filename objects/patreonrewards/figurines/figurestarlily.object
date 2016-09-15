@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurestarlily",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Unofficial mascot and creation of our old writer.",
+  "shortdescription" : "Star Lily Figurine",
+
+  "inventoryIcon" : "figurine.png:starlily",
+  "orientations" : [
+    {
+      "image" : "figurine.png:starlily",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:starlily",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

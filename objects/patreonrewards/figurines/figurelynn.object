@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurelynn",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This is actually the original founder of the mod long long ago.",
+  "shortdescription" : "Lynn Figurine",
+
+  "inventoryIcon" : "figurine.png:lynn",
+  "orientations" : [
+    {
+      "image" : "figurine.png:lynn",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:lynn",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

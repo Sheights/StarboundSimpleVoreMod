@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuresheights",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "The tiny mouse who works tirelessly to maintain this wonderful mod. Thank you all!",
+  "shortdescription" : "Sheights Figurine",
+
+  "inventoryIcon" : "figurine.png:sheights",
+  "orientations" : [
+    {
+      "image" : "figurine.png:sheights",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:sheights",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

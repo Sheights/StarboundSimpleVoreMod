@@ -1,0 +1,56 @@
+{
+  "objectName" : "patreonFigurineStore",
+  "colonyTags" : ["commerce"],
+  "rarity" : "legendary",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/merchant.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "PATREON FIGURE COLLECTION",
+        "subtitle" : "You have my sincere thanks!",
+        "icon" : {
+          "file" : "/interface/crafting/machine.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.2,
+    "items" : [
+      { "item" : { "name" : "figurelynn"} },
+	  { "item" : { "name" : "figureraito"} },
+	  { "item" : { "name" : "figureruben"} },
+	  { "item" : { "name" : "figuresheights"} },
+	  { "item" : { "name" : "figurestarlily"} },
+	  { "item" : { "name" : "figuretreebuddy"} },
+	  { "item" : { "name" : "figurevictor"} }
+    ]
+  },
+  "printable" : false,
+  "description" : "I worked pretty hard on this. I don't know why you're spawning it in, just go to the Foodhall.",
+  "shortdescription" : "^orange;Patreon Store^white;",
+  "race" : "generic",
+  "price" : 200,
+
+  "generalDescription" : "This store only sells the kindest souls as tiny figurines!",
+  "hibaniDescription" : "The shop keep looks tasty. I should see if I can't get him away for a bit.",
+
+  "inventoryIcon" : "tempicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "figurinestore.png:default",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+  "animation"  :  "figurinestore.animation",
+  "animationParts"  :  {
+    "body"  :  "figurinestore.png"
+  },
+  
+  "scripts" : [ "/objects/mall/patreonstore/patreonstore.lua" ],
+  "scriptDelta" : 300
+}

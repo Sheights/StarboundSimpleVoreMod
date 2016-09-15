@@ -1,0 +1,11 @@
+{
+
+  "frameGrid" : {
+    "size" : [80, 40],
+    "dimensions" : [3, 2],
+    "names" : [
+      [ "default", "blink", "twitch.1" ],
+	  [ "twitch.2", "stand" ]
+    ]
+  }
+}
