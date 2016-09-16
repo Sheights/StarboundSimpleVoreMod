@@ -131,6 +131,19 @@
 	"vicareat.57"		:  "swallow.18",
 	"vicareat.58"		:  "swallow.19",
 	"vicareat.59"		:  "swallow.20",
-	"vicareat.60"		:  "swallow.21"
+	"vicareat.60"		:  "swallow.21",
+	
+	"chew.7"	:	"chew.1",
+	"chew.8"	:	"chew.2",
+	"chew.9"	:	"chew.3",
+	"chew.10"	:	"chew.4",
+	"chew.11"	:	"chew.5",
+	"chew.12"	:	"chew.6",
+	"chew.13"	:	"chew.1",
+	"chew.14"	:	"chew.2",
+	"chew.15"	:	"chew.3",
+	"chew.16"	:	"chew.4",
+	"chew.17"	:	"chew.5",
+	"chew.18"	:	"chew.6"
 	}
 }

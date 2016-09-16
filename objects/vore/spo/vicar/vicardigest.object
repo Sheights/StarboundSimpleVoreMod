@@ -1,7 +1,7 @@
 {
-  "objectName" : "vorevicar",
+  "objectName" : "vorevicardigest",
   "rarity" : "uncommon",
-  "description" : "The foul beasts will dangle nectar and lure the meek into the depths.",
+  "description" : "Remain wary of the frailty of men. Their wills are weak, minds young. [DIGESTION]",
   "shortdescription" : "Vicar Amelia",
   "race" : "avian",
   "category" : "furniture",
@@ -13,12 +13,12 @@
   "sitOrientation" : "lay",
   "sitAngle" : 0,
   "sitStatusEffects" : [
-    "voreheal",
+    "stomachacid",
 	"nude",
 	"intents"
   ],
   
-  "inventoryIcon" : "femaleicon.png",
+  "inventoryIcon" : "femaledangericon.png",
   "orientations" : [
     {
 	  "image" : "vicar.png:idle",

@@ -19,7 +19,7 @@ function update(dt)
 	if world.loungeableOccupied(entity.id()) then
 	
 		if animState == "idle" then
-			animator.setAnimationState("bodyState", "vicareat")
+			animator.setAnimationState("bodyState", "pickup")
 			animator.playSound("swallow")
 		elseif animState == "idlefull" and math.random(500) == 1 then
 			animator.setAnimationState("bodyState", "rub")
