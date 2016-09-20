@@ -1,8 +1,8 @@
 {
-  "type" : "guardpred_avaliraru",
+  "type" : "guardpred_vinderex",
   "baseType" : "guard",
   
-  "npcname" : "Raru",
+  "npcname" : "Vinderex",
   
   "identity" : {
 	"gender" : "male"
@@ -23,37 +23,35 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"There seems to be things missing from my house.",
-							"Something's different here."
+							"Wait a minute..."
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-							"Hey, You better fix that.",
-							"You had better put that back, or a suitable replacement."
+							"What's the meaning of this?!"
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"I appreciate the thought, but I need privacy."
+							"Hmm? No roommates. Had too many bad exeriences in the past."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						"Please do what you're doing and then put that back."
+						"What do you think you're doing?"
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"I'm about ready to go. Hurry it up."
+						"I'm growing tired. Hurry it up."
 			  ]
 			}
           }
@@ -62,16 +60,16 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-					"You called, sir?",
-					"What do you need?"
+					"Dids't thou summon me, prey?",
+					"Ah, the morsel calls!"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-					"Thanks for letting me stay.",
-					"Always happy to pay my landlord!"
+					"A pleasure, my tasty friend.",
+					"Please accept this humble gift of mine!"
 			  ]
 			}
           }
@@ -81,30 +79,36 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"Now you've done it!"
+					"Hmph. Thy fate is sealed!",
+					"You dare invoke my wrath?"
 			]
 		  }
 		},
         "helpthem" : {
 		  "default" : {
 			"default" : [
-					"Here, I'll help!"
+					"Get back!",
+					"Not while I'm here!",
+					"Filthy paws off my prey!"
 			]
 		  }
 		},
         "encourage" : {
 		  "default" : {
 			"default" : [
-					"Such a foolish creature!"
+					"That's your best?",
+					"Whatcha gonna do? Whatcha gonna do?!",
+					"I'll make this quick. Or maybe I won't."
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"Poor thing didn't stand a chance.",
-					"I hope the others stay away.",
-					"Glad that's over, but now I'm hungry."
+					"I'd hoped you'd be a challenge. Seems I was wrong.",
+					"Let it be known that none get past me!",
+					"Heh, that made me a bit hungry.",
+					"*yawn*"
 			]
 		  }
         }
@@ -112,8 +116,9 @@
       "converse" : {
         "default" : {
           "default" : [
-            "I do enjoy protecting this place.",
-			"Hello there! Thanks again for letting me stay here."
+			"Don't be put off by the nicknames. They just mean I like you.",
+			"My favorite yummybuddy! Good to see you my friend.",
+			"Need somewhere cozy to rest?"
           ]
         }
       }
@@ -124,13 +129,13 @@
       [0, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -143,13 +148,13 @@
 	  [2, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -162,13 +167,13 @@
 	  [3, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -181,13 +186,13 @@
 	  [4, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "vinderexlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -202,6 +207,6 @@
   "scriptDelta" : 5,
 
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/avaliraru/guardavaliraru.lua" 
+				"/npcs/vore/kazdravinderex/guardvinderex.lua" 
   ]
 }

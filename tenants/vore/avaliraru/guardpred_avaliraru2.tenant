@@ -1,6 +1,6 @@
 {
   "name": "guardpred_avaliraru2",
-  "priority": 14,
+  "priority": 13,
 
   "colonyTagCriteria": {
     "light": 1,

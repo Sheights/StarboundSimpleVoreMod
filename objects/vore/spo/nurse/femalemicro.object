@@ -1,0 +1,116 @@
+{
+  "objectName" : "nursemicro",
+  "rarity" : "common",
+  "description" : "She cares for your health, even if healing involves eating you!~",
+  "shortdescription" : "Nurse - Micro",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This human female is pretty, but looks hungry…",
+  "avianDescription" : "Something about this girl seems... off…",
+  "floranDescription" : "...Floran like Human, but why?",
+  "glitchDescription" : "Wonder. There is something nice about this female...",
+  "humanDescrtiption" : "Whatever it is you want, I'm saying yes.",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/nurse/femalefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "There, there. You're safe in my belly.",
+	"This isn't too bad, is it?",
+	"Don't worry. My belly will heal you, not harm you.",
+	"Sorry if this seems weird. It's the best way to heal you, is all.",
+	"Mmmmmmmm, you taste so nice, and you get to heal. It's a win-win~",
+	"Oh, you feel so good in there. I hope you agree~",
+	"If only my belly didn't heal so quickly, I could keep you in there all day!",
+	"I should do this more often, especially if all my patients are as yummy as you!",
+	"Why not take a nap while my stomach heals you?",
+	"Maybe I should make vore a regular medical practice here.",
+	"Sorry if it's tight in there. On the bright side, I think it's working!"
+  ],
+  "gulpLines" : [
+    "*GULP* Now just sit back, and let my belly do its healing!",
+	"Ah~! If only I could use this kind of medicine more often!",
+	"You almost tore my clothes, although that wouldn't be too bad.",
+	"Glad you went down quickly, otherwise my *URP* windpipe could've been blocked!",
+	"Ohh! My throat tickles!",
+	"Who knew that *URP* healing people could be so tasty?"
+  ],
+  "chatIdleFull" : [
+    "Are you wounded? Take a seat, and I'll be with you shortly.",
+	"Hey, I'm just healing them! Don't go accusing me of anything!",
+	"Sorry, I can only heal one person at a time.",
+	"I didn't expect another patient so soon! I'm afraid you'll have to wait for a bit.",
+	"Do you want this to be you? It'll heal any wounds of yours!"
+  ],
+  "chatIdleEmpty" : [
+    "You look hurt! Please, let me heal you!",
+	"I can heal you, but first, do you trust me?",
+	"My healing methods are…   slightly unusual, but trust me, they work!",
+	"I've modified my belly to heal wounds on humans. Pretty cool, huh?",
+	"I'm low on medicine funding, so is it okay if I heal you with my tummy instead?",
+	"*gurgle* Oh, can you hear that? My belly wants food. Say, you're the only one around…",
+	"I've been working on a new healing method. Want to see it?"
+  ],
+  "rubLines" : [
+    "Oh! That's one way to help a sore belly!",
+    "Do you want to be healed this way, too?",
+    "Maybe later, I could get a rub from the inside, and you can be healed!",
+    "*URP* Ohh, I think that rub is making them hard to keep down.",
+    "Can you feel them in there?",
+    "Well aren't you nice, giving me a belly rub!",
+    "Not sure if you want me to heal you next, or keep healing them."
+  ]
+}

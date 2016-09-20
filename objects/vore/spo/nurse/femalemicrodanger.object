@@ -1,0 +1,118 @@
+{
+  "objectName" : "nursemicrodigest",
+  "rarity" : "common",
+  "description" : "She cares for your health, even if she accidentally digests you.",
+  "shortdescription" : "Hungry Nurse - Micro",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This human female is pretty, but looks hungry…",
+  "avianDescription" : "Something about this girl seems... off…",
+  "floranDescription" : "...Floran like Human, but why?",
+  "glitchDescription" : "Wonder. There is something nice about this female...",
+  "humanDescrtiption" : "Whatever it is you want, I'm saying yes.",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/nurse/femalefullbig.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "I'm so sorry! There's gotta be a way to get you out…",
+	"Ohhh…  are there any alkalis nearby?",
+	"I can't believe I forgot something this important!",
+	"If I get you out, please don't tell anyone I forgot!",
+	"Oh my gosh, this is bad, this is bad, this is bad!",
+	"You know, you don't seem that panicked about this…",
+	"Well, on the bright side, you were really tasty.",
+	"Don't worry! I think I can get you out of there! Somehow…",
+	"Y'know, this wouldn't be so bad if it were not for your life being at risk.",
+	"Are you okay in there? I think I have at least a few minutes to get you out of there!",
+	"Try not to struggle too much. You're making it harder for me to get you out.",
+	"Oh dear, this is the exact opposite of what was supposed to happen!",
+	"I don't think the tight space is helping, either."
+  ],
+  "gulpLines" : [
+    "*GULP* Now just sit back, and- wait, I forgot to setup my belly to heal you!",
+	"Ah~! If only I could use this kind of medicine more often! Wait, I forgot about the medicine part!",
+	"You almost tore my- wait, I forgot to neutralise my digestive acids!",
+	"Glad you went down quickly, otherwise- oh no! I didn't use my healing acids!",
+	"Ohh! My throat tickles! Wait, what about tingling skin? Oh no…",
+	"Who knew that *URP* healing people could be so tasty? Digestion? Don't worry. I've neutralised my- oh no! I forgot to!"
+  ],
+  "chatIdleFull" : [
+    "You! This person is in trouble! Do you know how to get them out of my belly?",
+	"Quick, we don't have much time! Find something, anything, that'll help them out of there!",
+	"Please, help me get this person out of my belly!",
+	"*Gasp* Please don't tell anyone about this!",
+	"You've got to help me! I accidentally-  well, point is, please help me regurgitate!"
+  ],
+  "chatIdleEmpty" : [
+    "You look hurt! Please, let me heal you!",
+	"I can heal you, but first, do you trust me?",
+	"My healing methods are…   slightly unusual, but trust me, they work!",
+	"I've modified my belly to heal wounds on humans. Pretty cool, huh?",
+	"I'm low on medicine funding, so is it okay if I heal you with my tummy instead?",
+	"*gurgle* Oh, can you hear that? My belly wants food. Say, you're the only one around…",
+	"I've been working on a new healing method. Want to see it?"
+  ],
+  "rubLines" : [
+    "*URP* Oh! I think that made them come up a little! Quick, keep rubbing!",
+    "I appreciate it, but I don't think now's the time for belly rubs. They're in danger!",
+    "I don't think that's helping. Please, find another way to get them out!",
+    "Ohh~! If we get them out, would you mind doing that more later?",
+    "Hey, I think that's helping a little bit.",
+    "Can you feel them? Are they still there?!",
+    "Erm…  I'm not sure that's-  *URP* Nevermind, I think that's helping a little!"
+  ]
+}

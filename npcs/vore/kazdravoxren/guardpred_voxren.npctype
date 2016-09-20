@@ -1,8 +1,8 @@
 {
-  "type" : "guardpred_avaliraru",
+  "type" : "guardpred_voxren",
   "baseType" : "guard",
   
-  "npcname" : "Raru",
+  "npcname" : "Voxren",
   
   "identity" : {
 	"gender" : "male"
@@ -23,8 +23,8 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-							"There seems to be things missing from my house.",
-							"Something's different here."
+							"You're going to go missing if my furniture doesn't show up again.",
+							"Hmm? I'm a dragon, I keep what I own."
 			  ]
 			}
 		  },
@@ -32,21 +32,21 @@
 			"default" : {
 			  "default" : [
 							"Hey, You better fix that.",
-							"You had better put that back, or a suitable replacement."
+							"You had better put that away, or I'll put you away."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"I appreciate the thought, but I need privacy."
+							"I've only got space inside me for other people."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						"Please do what you're doing and then put that back."
+						"What're you doing?"
 			  ]
 			}
 		  },
@@ -62,16 +62,18 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-					"You called, sir?",
-					"What do you need?"
+					"Something you need?",
+					"I'm here!",
+					"Don't normally come when called, but what do you need?"
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-					"Thanks for letting me stay.",
-					"Always happy to pay my landlord!"
+					"Thanks for letting me stay here.",
+					"My other house is a library.",
+					"This is no extradimensional castle, but it'll have to do."
 			  ]
 			}
           }
@@ -88,22 +90,22 @@
         "helpthem" : {
 		  "default" : {
 			"default" : [
-					"Here, I'll help!"
+					"I'll get them!"
 			]
 		  }
 		},
         "encourage" : {
 		  "default" : {
 			"default" : [
-					"Such a foolish creature!"
+					"Hah! Nothing defeats a dragon."
 			]
 		  }
         },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"Poor thing didn't stand a chance.",
-					"I hope the others stay away.",
+					"Glad that's over.",
+					"He won't be bothering us again.",
 					"Glad that's over, but now I'm hungry."
 			]
 		  }
@@ -112,8 +114,8 @@
       "converse" : {
         "default" : {
           "default" : [
-            "I do enjoy protecting this place.",
-			"Hello there! Thanks again for letting me stay here."
+            "Need a place to stay warm?",
+			"Come on by whenever, I'll keep you somewhere."
           ]
         }
       }
@@ -124,13 +126,13 @@
       [0, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -143,13 +145,13 @@
 	  [2, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -162,13 +164,13 @@
 	  [3, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -181,13 +183,13 @@
 	  [4, [
           {
             "head" : [
-              { "name" : "avaliraruhead", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenhead", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
 			"chest" : [
-              { "name" : "avaliraruchest", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenchest", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "legs" : [
-              { "name" : "avalirarulegs", "parameters" : { "colorIndex" : [ 0 ] } }
+              { "name" : "voxrenlegs", "parameters" : { "colorIndex" : [ 0 ] } }
             ],
             "primary" : [
               "npcbroadsword"
@@ -202,6 +204,6 @@
   "scriptDelta" : 5,
 
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/avaliraru/guardavaliraru.lua" 
+				"/npcs/vore/kazdravoxren/guardvoxren.lua" 
   ]
 }

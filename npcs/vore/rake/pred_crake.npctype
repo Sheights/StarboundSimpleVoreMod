@@ -1,0 +1,160 @@
+{
+  "type" : "pred_crake",
+  "baseType" : "villager",
+  
+  "npcname" : "Rake",
+  
+  "identity" : {
+	"gender" : "male"
+  },
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : false
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Well that won't do for me.",
+							"Awww, but I liked that thing.",
+							"I can't live in those conditions."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"There's a hole here, want me to patch it up, or can you?",
+							"I don't mind a breeze, but...",
+							"You're letting the air in."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Normally I don't mind people staying, but...",
+							"You sure you build this house just for me?",
+							"Do I really need a roommate?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Don't make me use force.",
+						"I dont want to hurt you.",
+						"I'm warning you."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"You've done it now!",
+						"I was hungry anyway.",
+						"No turning back now."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Compared to my burrow, this is a bit basic, but it's a lovely place to live.",
+						"Would you like somewhere warm and sticky to rest?",
+						"Something you need?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Have a little something for letting me stay here.",
+						"Happy to help fund this settlement.",
+						"Someday I'll have to show you my home.",
+						"Can either take rent or a night in my sac. Rent? Okay."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"I'm not much of a fighter!",
+					"Someone get this off of me!",
+					"You're lucky I'm unarmed!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"Someone help them!",
+						"Can anyone help them?",
+						"Get away from them!"
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"Take that!",
+					"I don't normally hurt people, but you're an exception."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Guess it's over.",
+					"Peace reigns.",
+					"Much prefer the calm."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "It's a lovely day, isn't it?",
+			"Let me know whenever you want a warm and sticky place to rest.",
+			"Drop by later tonight and I'll give you a pleasant bed, hehe."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/rake/crake.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "rakehead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "chest" : [
+              { "name" : "rakechest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "rakelegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "objectName" : "partygirlmicrodigest",
+  "rarity" : "common",
+  "description" : "Unsurprisingly, she loves to party, but it makes her VERY hungry.",
+  "shortdescription" : "Hungry Party Girl - Micro",
+  "race" : "human",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This human female is pretty, but looks hungry…",
+  "avianDescription" : "Something about this girl seems... off…",
+  "floranDescription" : "...Floran like Human, but why?",
+  "glitchDescription" : "Wonder. There is something nice about this female...",
+  "humanDescrtiption" : "Whatever it is you want, I'm saying yes.",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitCoverImage" : "/objects/vore/spo/partygirl/femalefullmicro.png",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaledangericon.png",
+  "orientations" : [
+    {
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [2, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ]
+	},
+	{
+	  "image" : "femalewaiting.png",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [2, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/vorechatscript.lua" ],
+  
+  "animation" : "femaleanimation.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ],
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ]
+	
+	}
+  },
+  "animationParts" : {
+      "pred" : "femalewaiting.png"
+  },
+  "animationPosition" : [-16, 0],
+  
+  "chatOptions" : [
+    "My belly's like a party balloon right now~",
+	"It feels great when you party inside of me~",
+	"You're the only one invited to THIS party <3",
+	"Do you think I can still dance while carrying you in there?",
+	"Party? More like part of me.",
+	"No party foods could ever compare to you~",
+	"Don't worry, I won't digest you. Well, unless you WANT to stick around for the afterparty...",
+	"My belly can be your own personal party room."
+  ],
+  "gulpLines" : [
+    "*GULP* Ahh. Tastiest party snack ever.",
+	"Since it's a party, I figured we should have some fun, by which I mean eating you up~",
+	"This is where the REAL party is at~",
+	"I forgot how good it felt to swallow such a hard partier.",
+	"If I'd known you were this tasty, I'd have eaten you at our first party~"
+  ],
+  "chatIdleFull" : [
+    "Are you here to party, or to look at my belly?",
+	"Hey, you could probably feel them partying in there if you put your hand on.",
+	"Sorry, but I am SO full right now.",
+	"Aw, did you come here to be my meal? I'm afraid you'll have to wait until the afterparty.",
+	"Heh, are you jealous of them? Don't worry, you can have a turn later <3"
+  ],
+  "chatIdleEmpty" : [
+    "Hey, you finally made it to the party. *rumble* (Jeez, I am SO hungry...)",
+	"Wanna see where the real party is? Hint: It's where the party food's going.",
+	"I got bored of waiting, so I practiced partying for a bit, but now I'm exhausted and hungry.",
+	"Oh, we're out of party snacks. Any volunteers? Well, I don't see you objecting.",
+	"Partying feels great, but it feels even better to have someone party inside me.",
+	"Did you come here to party in my house, or party in me?"
+  ],
+  "rubLines" : [
+    "Ooh~. That's a great way to relax after partying hard.",
+    "Are you trying to say you want to party in there next?",
+    "Can you feel them in there? They're partying hard, especially for food.",
+    "*URP* Ohh, I think that rub is making them hard to keep down.",
+    "Oh, I see. You want to party in there too, don't you?",
+    "Well aren't you nice, giving me a mid-party belly rub.",
+    "Not sure if you want to be next, or if you want to stay out."
+  ]
+}
