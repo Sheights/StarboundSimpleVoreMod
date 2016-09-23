@@ -1,0 +1,20 @@
+[
+  { "op" : "add",
+    "path" : "/items/hibani",
+    "value" : [
+      [0, [ {
+        "chest" : [
+		  { "name" : "hibaniclawchest", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } },
+          { "name" : "hibaniwristbandchest", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } },
+          { "name" : "hibanitier1chest", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } }
+        ],
+        "head" : [    
+          { "name" : "hibanicommunicatorhead", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } },       
+          { "name" : "hibaniheadsethead", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } },       
+          { "name" : "hibaninerdglasseshead", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } },       
+          { "name" : "hibaniscouterhead", "data" : { "colorIndex" : [1,2,3,4,5,6,7,8,9,10,11] } }   		
+		]
+      } ] ]
+    ]
+  }
+]

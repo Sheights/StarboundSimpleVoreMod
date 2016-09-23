@@ -19,6 +19,7 @@
     "items" : [
       { "item" : { "name" : "figurelynn"} },
 	  { "item" : { "name" : "figureraito"} },
+	  { "item" : { "name" : "figurerubyrose"} },
 	  { "item" : { "name" : "figureruben"} },
 	  { "item" : { "name" : "figuresheights"} },
 	  { "item" : { "name" : "figurestarlily"} },

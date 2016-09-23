@@ -1,0 +1,34 @@
+{
+  "type" : "hibanibandit",
+  "baseType" : "hostile",
+
+  "levelVariance" : [0, 30],
+
+  "dropPools" : [ "goodWeapon" ],
+  
+  "items" : {
+    "override" : [
+      [0, [ {
+        "head": [ { "name": "hibanicommunicatorhead", "data" : { "colorIndex" : [1] } } ],
+        "chest": [ { "name": "hibanitier1chest", "data" : { "colorIndex" : [1] } } ],
+        "legs": [ { "name": "hibanitier1pants", "data" : { "colorIndex" : [1] } } ],
+        "primary" : [
+          { "name": "commondagger" },
+          { "name": "commonaxe" },
+          { "name": "commonshortsword" },
+          { "name": "commonbroadsword" },
+          { "name": "commonhammer" },
+          { "name": "commonspear" },
+          { "name": "commonassaultrifle" },
+          { "name": "commonpistol" },
+          { "name": "commonmachinepistol" },
+          { "name": "commonshotgun" },
+          { "name": "commonsniperrifle" }
+        ],
+        "alt" : [
+          { "name" : "flashlight" }
+        ]
+      } ] ]
+    ]
+  }
+}

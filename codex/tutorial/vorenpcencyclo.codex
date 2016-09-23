@@ -8,8 +8,8 @@
 
 "Table of Contents:
 Predators: Page 2
-Prey: Page 27
-Misc: Page 33",
+Prey: Page 29
+Misc: Page 35",
 
 "Predators
 
@@ -259,17 +259,29 @@ outpost : 6,
 OR
 avali : 6
 
+Name: Rake
+Types: Oral, Cock
+Requirements -
+avian : 8,
+science : 8",
+
+"Name: Saph
+Types: Oral, Cock
+Requirements -
+colourful : 6,
+pretty : 6
+
 Name: Sergal
 Types: Oral, Digest
 Requirements -
-hylotlvillage : 6",
+hylotlvillage : 6
 
-"Name: Shark
+Name: Shark
 Types: Oral, Digest
 Requirements -
-sea : 24
+sea : 24",
 
-Name: Shark Girl
+"Name: Shark Girl
 Types: Oral, Digest
 Requirements -
 island : 12
@@ -299,32 +311,52 @@ explorer : 6,
 OR
 traveller : 1
 
-Name: Treebuddy
+Name: Sykes
+Types: Oral, Cock
+Requirements -
+slime : 8,
+valuable : 8",
+
+"Name: Treebuddy
 Types: Oral, Digest
 Requirements -
-1 Cookie Jar",
+1 Cookie Jar
 
-"Name: Unicorn
+Name: Unicorn
 Types: Oral, Digest
 Requirements -
 nature : 18,
-pretty : 12,
+pretty : 12",
+
+"Name: Vinderex
+Types: Oral
+Requirements -
+combat : 6,
+hoard : 8,
+valuable : 8
 
 Name: Victor
 Types: Digest
 Requirements -
-1 Bunny Altar
+1 Bunny Altar",
+
+"Name: Voxen
+Types: Oral
+Requirements -
+combat : 6,
+glitchcastle : 8,
+knowledge : 8
 
 Name: Viper
 Types: Oral, Digest
 Requirements -
-alien : 12",
+alien : 12
 
-"Name: Wolf
+Name: Wolf
 Types: Oral, Digest, Cock, Fatal Cock
-Requirements - none
+Requirements - none",
 
-Name: Yoshi
+"Name: Yoshi
 Types: Oral
 Requirements -
 floran : 24
@@ -332,9 +364,9 @@ floran : 24
 Name: Zebrataur
 Types: Oral, Digest
 Requirements -
-fenerox : 12",
+fenerox : 12
 
-"Name: Zoroark
+Name: Zoroark
 Types: Oral, Digest, Unbirth
 Requirements -
 poke : 1",

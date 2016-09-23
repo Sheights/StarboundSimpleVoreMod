@@ -14,15 +14,7 @@ playerLines = {	"That feels great. Don't stop moving, OK?",
 }
 
 function initHook()
-	
-	if storage.shiny == nil and math.random(100) == 1 then
-		storage.shiny = true
-		makeShiny()
-	elseif  storage.shiny == true then
-		makeShiny()
-	else
-		storage.shiny = false
-	end
+
 	
 end
 
@@ -58,6 +50,6 @@ function makeShiny()
 	npc.setItemSlot( "chest", "lucarioshinychest" )
 	npc.setItemSlot( "legs", "lucarioshinylegs" )
 	legs = "lucarioshinylegs"
-	fulllegs = "lucarioshinylegsbelly"
+	fulllegs = "lucarioshinylegsballs"
 
 end
