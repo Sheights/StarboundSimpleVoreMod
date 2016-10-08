@@ -1,0 +1,8 @@
+{
+  "itemName" : "feneroxtoken",
+  "price" : 500,
+  "rarity" : "Rare",
+  "inventoryIcon" : "Fenerox.png",
+  "description" : "A token that can be exchanged for a fenerox costume",
+  "shortdescription" : "Fenerox Token"
+}

@@ -1,0 +1,35 @@
+{
+  "objectName" : "figurekato",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This is a tiny trophy of a strange catlike creature with brown hair. On it's base it says: Best cat award 20XX.",
+  "shortdescription" : "Katojana Figurine",
+  
+  "generalDescription" : "This is a tiny trophy of a strange catlike creature with brown hair. On it's base it says: Best cat award 20XX.",
+  "avianDescription" : "This is a tiny trophy of a strange catlike creature with brown hair. On it's base it says: Best snack cat award.",
+  "hibaniDescription" : "This is a tiny trophy of a strange catlike creature with brown hair. On it's base it says: Best snack cat award.",
+
+  "inventoryIcon" : "figurine.png:kato",
+  "orientations" : [
+    {
+      "image" : "figurine.png:kato",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:kato",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

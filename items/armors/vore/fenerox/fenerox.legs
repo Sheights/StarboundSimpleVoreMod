@@ -1,0 +1,23 @@
+{
+  "itemName" : "feneroxlegs",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "The pants of an adorable Fenerox",
+  "shortdescription" : "Fenerox Legs",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png",
+  
+  "colorOptions" : [
+	{ "f0e1bb" : "f0e1bb", "cfbc88" : "cfbc88", "9e8555" : "9e8555", "6b583d" : "6b583d", "ffca8a" : "ccae7c", "e0975c" : "a47844", "a85636" : "754c23", "6f2919" : "472b13" },
+    { "f0e1bb" : "f0e1bb", "cfbc88" : "cfbc88", "9e8555" : "9e8555", "6b583d" : "6b583d", "ffca8a" : "838383", "e0975c" : "555555", "a85636" : "383838", "6f2919" : "151515" },
+    { "f0e1bb" : "f0e1bb", "cfbc88" : "cfbc88", "9e8555" : "9e8555", "6b583d" : "6b583d", "ffca8a" : "b5b5b5", "e0975c" : "808080", "a85636" : "555555", "6f2919" : "303030" },
+    { "f0e1bb" : "f0e1bb", "cfbc88" : "cfbc88", "9e8555" : "9e8555", "6b583d" : "6b583d", "ffca8a" : "e6e6e6", "e0975c" : "b6b6b6", "a85636" : "7b7b7b", "6f2919" : "373737" },
+    { "f0e1bb" : "e6e6e6", "cfbc88" : "b5b5b5", "9e8555" : "808080", "6b583d" : "555555", "ffca8a" : "f4988c", "e0975c" : "d93a3a", "a85636" : "932625", "6f2919" : "601119" },
+    { "f0e1bb" : "f0d7bb", "cfbc88" : "cfa688", "9e8555" : "9c6c54", "6b583d" : "69483e", "ffca8a" : "ffd495", "e0975c" : "ea9931", "a85636" : "af4e00", "6f2919" : "6e2900" }
+]
+}

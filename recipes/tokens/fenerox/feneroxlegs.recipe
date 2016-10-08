@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "feneroxtoken", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "feneroxlegs",
+    "count" : 1
+  },
+  "groups" : [ "npctoken" ]
+}

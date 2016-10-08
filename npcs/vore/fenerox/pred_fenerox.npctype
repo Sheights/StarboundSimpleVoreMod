@@ -1,0 +1,79 @@
+{
+  "type" : "pred_fenerox",
+  "baseType" : "villager",
+
+  "statusControllerSettings" : {
+    "statusProperties" : {
+      "effectDirectives" : ""
+    }
+  },
+
+  "scriptConfig" : {
+    "questGenerator" : { "pools" : [], "enableParticipation" : false },
+
+    "behaviorConfig" : {
+      "greetingChance" : 0
+    },
+
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/fenerox.config:tagCriteria",
+          "enclosedArea" : "/dialog/fenerox.config:enclosedArea",
+          "otherDeed" : "/dialog/fenerox.config:otherDeed",
+          "severe" : "/dialog/fenerox.config:severe",
+          "final" : "/dialog/fenerox.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/fenerox.config:beacon",
+          "rent" : "/dialog/fenerox.config:rent"
+        }
+      },
+
+      "flee" : {
+        "helpme" : "/dialog/fenerox.config:helpme",
+        "helpthem" : "/dialog/fenerox.config:helpthem",
+        "encourage" : "/dialog/fenerox.config:encourage",
+        "safe" : "/dialog/fenerox.config:safe"
+      },
+
+      "converse" : "/dialog/fenerox.config:converse",
+      "accuse" : "/dialog/fenerox.config:accuse",
+      "alert" : "/dialog/fenerox.config:alert",
+
+      "attack" : "/dialog/fenerox.config:attack",
+      "reattack" : "/dialog/fenerox.config:reattack",
+      "killedTarget" : "/dialog/fenerox.config:killedTarget",
+      "lostTarget" : "/dialog/fenerox.config:lostTarget",
+      "outOfSight" : "/dialog/fenerox.config:outOfSight",
+      "cheerOn" : "/dialog/fenerox.config:cheerOn",
+      "cantReach" : "/dialog/fenerox.config:cantReach"
+    }
+  },
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/fenerox/fenerox.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "feneroxhead", "parameters" : { "colorIndex" : [ 1, 2, 3, 4, 5, 6 ] } }
+            ],
+			"chest" : [
+              { "name" : "feneroxchest", "parameters" : { "colorIndex" : [ 1, 2, 3, 4, 5, 6 ] } }
+            ],
+            "back" : [
+              { "name" : "woollyback", "parameters" : { "colorIndex" : [ 1, 2, 3, 4, 5, 6 ] } }
+            ],
+            "legs" : [
+              { "name" : "feneroxlegs", "parameters" : { "colorIndex" : [ 1, 2, 3, 4, 5, 6 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

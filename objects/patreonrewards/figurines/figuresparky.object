@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuresparky",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Be careful, or this adorable Pikachu trophy may stomp you!",
+  "shortdescription" : "Sparky the Chu Figurine",
+
+  "inventoryIcon" : "figurine.png:sparky",
+  "orientations" : [
+    {
+      "image" : "figurine.png:sparky",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:sparky",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

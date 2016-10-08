@@ -18,11 +18,14 @@
     "sellFactor" : 0.2,
     "items" : [
       { "item" : { "name" : "figurelynn"} },
+	  { "item" : { "name" : "figurecharizard"} },
+	  { "item" : { "name" : "figurekato"} },
 	  { "item" : { "name" : "figureraito"} },
 	  { "item" : { "name" : "figurerubyrose"} },
 	  { "item" : { "name" : "figureruben"} },
 	  { "item" : { "name" : "figuresheights"} },
 	  { "item" : { "name" : "figurestarlily"} },
+	  { "item" : { "name" : "figuresparky"} },
 	  { "item" : { "name" : "figuretreebuddy"} },
 	  { "item" : { "name" : "figurevictor"} }
     ]

@@ -8,8 +8,8 @@
 
 "Table of Contents:
 Predators: Page 2
-Prey: Page 29
-Misc: Page 35",
+Prey: Page 30
+Misc: Page 36",
 
 "Predators
 
@@ -114,19 +114,24 @@ Types: Oral, Digest
 Requirements -
 human : 6,
 OR
-felin : 6
+felin : 6",
+
+"Name: Fenerox
+Types: Oral, Digest
+Requirements -
+fenerox : 6
 
 Name: Fox
 Types: Oral, Digest, Cock, Fatal Cock
-Requirements - none",
+Requirements - none
 
-"Name: Goodra
+Name: Goodra
 Types: Oral, Digest, Unbirth
 Requirements -
 slime : 24,
-poke : 1
+poke : 1",
 
-Name: Ice Slime Girl
+"Name: Ice Slime Girl
 Types: Oral, Digest
 Requirements -
 ice : 12
@@ -134,14 +139,14 @@ ice : 12
 Name: Harpy
 Types: Unbirth
 Requirements -
-avian :12",
+avian :12
 
-"Name: Human
+Name: Human
 Types: Oral, Digest, Unbirth
 Requirements -
-human : 12
+human : 12",
 
-Name: Inkling
+"Name: Inkling
 Types: Oral, Digest
 Requirements -
 colorful : 12,

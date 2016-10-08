@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurecharizard",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A fierce fire type Pokemon. You can call it anything but dragon.",
+  "shortdescription" : "Charizard Figurine",
+
+  "inventoryIcon" : "figurine.png:charizard",
+  "orientations" : [
+    {
+      "image" : "figurine.png:charizard",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:charizard",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}
