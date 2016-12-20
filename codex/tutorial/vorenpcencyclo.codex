@@ -8,8 +8,8 @@
 
 "Table of Contents:
 Predators: Page 2
-Prey: Page 30
-Misc: Page 36",
+Prey: Page 31
+Misc: Page 37",
 
 "Predators
 
@@ -49,11 +49,22 @@ Requirements -
 Cell : 12,
 sea : 12",
 
-"Name: Cat
-Types: Oral, Digest, Cock, Fatal Cock
-Requirements - none
+"Name: Bunyip
+Types: Oral
+Requirements -
+Ritual Obelisk
 
-Name: Catfish
+Name: Bunyip (Swampy)
+Types: Oral
+Requirements -
+swamp : 6,
+Ritual Obelisk
+
+Name: Cat
+Types: Oral, Digest, Cock, Fatal Cock
+Requirements - none",
+
+"Name: Catfish
 Types: Oral, Digest
 Requirements -
 swamp : 24

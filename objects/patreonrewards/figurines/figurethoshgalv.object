@@ -1,0 +1,39 @@
+{
+  "objectName" : "figurethoshgalv",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "It creates barriers from electrified silk that stun foes.",
+  "shortdescription" : "Thoshan Galvantula Figure",
+
+  "apexDescription" : "I wonder if those barriers can be used for offense as well as defense.",
+  "avianDescription" : "Electrified silk?  Sounds interesting for decor.",
+  "floranDescription" : "Floran approvesss of ssscary insssect.",
+  "glitchDescription" : "Confused.  How can an organic creature electrify silk? Does it operate on batteries?",
+  "humanDescription" : "I think I've seen these in old video game cartridges.",
+  "hylotlDescription" : "Has this spider trophy been damaged? It's missing half its legs.",
+  "novakidDescription" : "A cute toy of some kind of bug. Where's it from?",
+  
+  "inventoryIcon" : "figurine.png:thoshgalv",
+  "orientations" : [
+    {
+      "image" : "figurine.png:thoshgalv",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:thoshgalv",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

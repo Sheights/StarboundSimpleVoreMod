@@ -6,9 +6,11 @@
       "type" : "FloatingDungeon",
       "dungeonWorld" : "foodhall",
       "seed" : 1234,
-	  "spawningEnabled" : false,
+	  "persistent" : true,
 	  "beamUpRule" : "Anywhere",
-
+	  "spawningEnabled" : true,
+	  "disableDeathDrops" : true,
+	  
       "skyParameters" : {
         "spaceLevel" : 3000,
         "ambientLightLevel" : [ 180, 180, 180 ],

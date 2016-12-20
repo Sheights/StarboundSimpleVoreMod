@@ -19,15 +19,21 @@
     "items" : [
       { "item" : { "name" : "figurelynn"} },
 	  { "item" : { "name" : "figurecharizard"} },
+	  { "item" : { "name" : "figuregraeskar"} },
 	  { "item" : { "name" : "figurekato"} },
 	  { "item" : { "name" : "figureraito"} },
-	  { "item" : { "name" : "figurerubyrose"} },
 	  { "item" : { "name" : "figureruben"} },
+	  { "item" : { "name" : "figurerubyrose"} },
 	  { "item" : { "name" : "figuresheights"} },
-	  { "item" : { "name" : "figurestarlily"} },
+	  { "item" : { "name" : "figuresnappy"} },
+	  { "item" : { "name" : "figuresnefug"} },
 	  { "item" : { "name" : "figuresparky"} },
+	  { "item" : { "name" : "figurestarlily"} },
+	  { "item" : { "name" : "figuretricky"} },
+	  { "item" : { "name" : "figurethoshgalv"} },
 	  { "item" : { "name" : "figuretreebuddy"} },
-	  { "item" : { "name" : "figurevictor"} }
+	  { "item" : { "name" : "figurevictor"} },
+	  { "item" : { "name" : "figureyang"} }
     ]
   },
   "printable" : false,

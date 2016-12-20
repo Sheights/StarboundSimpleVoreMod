@@ -1,0 +1,145 @@
+{
+  "type" : "pred_swampbunyip",
+  "baseType" : "villager",
+
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+								"This isn't feeling much like home any more, mate...",
+								"Hey, do you think you could make this place a bit more...Me?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"...Anyone else feeling a draft in here? *AHEM*",
+								"I don't like to complain, mate, but busted walls are the line."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"Look, I don't mind having other people around, but I need my privacy.",
+							"Hey, look, I need my space. Lose the deed, please."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"Look, if you want me gone, just say it. Cut the passive-aggressive stuff, mate.",
+							"You might have summoned me, but even I have my limits. Fix this nonsense." 
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"Aaaaand done. Not putting up with you any more.",
+							"I don't have to stay here if I'm getting treated like this. I'm out."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+							"Hey, I'm here. Can I do anything for you?",
+							"Oh good, I was getting lonely. And hungry. I mean, hi!", 
+							"Can't get enough of seeing the swamp creature, huh?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+							"I hope this will be enough for you. Come back soon, alright?" 
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+						"Eek! I'm not trained for this! Help!",
+						"Crikey, I need some help here!"
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"...?!...",
+						"...Save them!..."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"...!...",
+					"...Thank you...",
+					"...Fight well..."
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+						"Phew...Glad that's over...",
+						"Hey, if you need somewhere to rest after that, I can accomodate..."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+						"Hey there, sorry about the runes everwhere, been eating a lot today...",
+						"So, why are you visiting the big scary swamp critter?",
+						"Hey, do you think I've put on a few? ...And more importantly, is that good or bad to you?",
+						"If you want to stick around, I have some space for you~."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/bunyip/swampbunyip.lua"
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "bunyipswamphead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+			"chest" : [
+              { "name" : "bunyipswampchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "bunyipswamplegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

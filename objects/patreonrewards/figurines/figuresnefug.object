@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuresnefug",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Soft as marshmallows.",
+  "shortdescription" : "Snefug Figurine",
+
+  "inventoryIcon" : "figurine.png:snefug",
+  "orientations" : [
+    {
+      "image" : "figurine.png:snefug",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:snefug",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

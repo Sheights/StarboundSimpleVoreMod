@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuregraeskar",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Smells like pumpkin pie.",
+  "shortdescription" : "Graeskar Figurine",
+
+  "inventoryIcon" : "figurine.png:graeskar",
+  "orientations" : [
+    {
+      "image" : "figurine.png:graeskar",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:graeskar",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

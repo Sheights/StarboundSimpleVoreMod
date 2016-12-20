@@ -1,0 +1,33 @@
+{
+  "objectName" : "figuretricky",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A tasty pupper. For some reason seeing it makes you want to dance.",
+  "shortdescription" : "Tricky Pup Figurine",
+
+  "defaultDescription" : "Feel that pop'n beat!",
+  
+  "inventoryIcon" : "figurine.png:tricky",
+  "orientations" : [
+    {
+      "image" : "figurine.png:tricky",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:tricky",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

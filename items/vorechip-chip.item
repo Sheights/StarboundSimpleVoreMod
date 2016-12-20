@@ -1,0 +1,8 @@
+{
+  "itemName" : "vorechip-chip",
+  "rarity" : "Legendary",
+  "inventoryIcon" : "/items/generic/crafting/processor.png",
+  "description" : "Grants access to the vore roleplaying.",
+  "shortdescription" : "Vore Tech Chip",
+  "pickupQuestTemplates" : ["voretoolquest3"]
+}

@@ -245,7 +245,6 @@ function update(dt)
 		talkTimer = talkTimer + dt
 	end
 
-	updateHook()
 	updateHook(dt)
 
 	update = tempupdate

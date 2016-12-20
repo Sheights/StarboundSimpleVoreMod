@@ -1,0 +1,27 @@
+{
+  "name": "pred_bunyip",
+  "priority": 15,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"bunyip": 1,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "hylotl",
+      "type": "pred_bunyip",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

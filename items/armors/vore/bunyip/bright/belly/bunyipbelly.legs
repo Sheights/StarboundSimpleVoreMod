@@ -1,0 +1,40 @@
+{
+  "itemName" : "bunyiplegsbelly",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A sleek Bunyip costume, with colours a far cry from thier usual muted swamp tones.",
+  "shortdescription" : "Bunyip Fat Body (Bright)",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsf.png",
+  "colorOptions" : [
+	/* CLEAR */
+	{ "70d942" : "70d942", "69d23c" : "69d23c", "5ec332" : "5ec332", "3aa909" : "3aa909", "2d9900" : "2d9900", "ff00ff" : "ff00ff" },
+	/* BLACK */
+	{ "70d942" : "999999", "69d23c" : "838383", "5ec332" : "707070", "3aa909" : "5c5c5c", "2d9900" : "474747", "ff00ff" : "333333" },
+	/* GREY */
+	{ "70d942" : "cccccc", "69d23c" : "b5b5b5", "5ec332" : "838383", "3aa909" : "707070", "2d9900" : "5c5c5c", "ff00ff" : "474747" },
+	/* WHITE */
+	{ "70d942" : "e0e0e0", "69d23c" : "cccccc", "5ec332" : "b5b5b5", "3aa909" : "838383", "2d9900" : "707070", "ff00ff" : "5c5c5c" },
+	/* RED */
+	{ "70d942" : "e88787", "69d23c" : "e26565", "5ec332" : "d93a3a", "3aa909" : "ce2727", "2d9900" : "ab2121", "ff00ff" : "891a1a" },
+	/* ORANGE */
+	{ "70d942" : "f1bf7e", "69d23c" : "eead59", "5ec332" : "ea9931", "3aa909" : "de8817", "2d9900" : "b97113", "ff00ff" : "945a10" },
+	/* YELLOW */
+	{ "70d942" : "eedd95", "69d23c" : "e9d172", "5ec332" : "e2c344", "3aa909" : "deba2b", "2d9900" : "c2a11e", "ff00ff" : "9f8419" },
+	/* GREEN */
+	{ "70d942" : "83d373", "69d23c" : "68c954", "5ec332" : "51bd3b", "3aa909" : "439b31", "2d9900" : "357c27", "ff00ff" : "285d1d" },
+	/* BLUE */
+	{ "70d942" : "9dbae7", "69d23c" : "7ca4de", "5ec332" : "5588d4", "3aa909" : "3b76ce", "2d9900" : "2d63b4", "ff00ff" : "255193" },
+	/* PURPLE */
+	{ "70d942" : "c795db", "69d23c" : "b776d0", "5ec332" : "a451c4", "3aa909" : "943eb6", "2d9900" : "7c3498", "ff00ff" : "632a7a" },
+	/* PINK */
+	{ "70d942" : "e59fcf", "69d23c" : "dc7fbe", "5ec332" : "d35fae", "3aa909" : "ca3f9e", "2d9900" : "b03088", "ff00ff" : "90276f" },
+	/* BROWN */
+	{ "70d942" : "c39d6f", "69d23c" : "b78a52", "5ec332" : "a47844", "3aa909" : "816036", "2d9900" : "654a2a", "ff00ff" : "48351e" }
+]
+}

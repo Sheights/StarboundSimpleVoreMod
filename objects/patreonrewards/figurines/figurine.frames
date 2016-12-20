@@ -2,10 +2,11 @@
 
   "frameGrid" : {
     "size" : [12, 12],
-    "dimensions" : [7, 2],
+    "dimensions" : [7, 3],
     "names" : [
-      [ "lynn", "charizard", "kato", "raito", "ruben", "rubyrose", "sheights"  ],
-	  [ "sparky", "starlily", "treebuddy", "victor" ]
+      [ "lynn", "charizard", "graeskar", "kato", "raito", "ruben", "rubyrose" ],
+	  [ "sheights", "snappy", "snefug", "sparky", "starlily", "tricky", "thoshgalv" ],
+	  [ "treebuddy", "victor", "yang" ]
     ]
   }
 }
