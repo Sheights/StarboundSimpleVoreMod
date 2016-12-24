@@ -1,6 +1,6 @@
 {
   "name": "pred_fenerox",
-  "priority": 12,
+  "priority": 14,
 
   "colonyTagCriteria": {
     "light": 1,

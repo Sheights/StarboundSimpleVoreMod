@@ -1,0 +1,36 @@
+{
+  "id" : "voretoolquest3",
+  "title" : "^orange;Something Eating You?",
+  "text" : "This ^orange;Tech Chip^white; will enable the ^green;Vore RP Tool^white; While equipped, hover over your target and press 'F'",
+  "completionText" : "Yeah it was a bad joke. Anyway, go give this to the Apex Tech Scientist.",
+  "moneyRange" : [0, 0],
+  "rewards" : [],
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/main.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "questStarted" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      },
+      "questComplete" : {
+        "portrait" : [ {"image" : "/objects/outpost/techlab/techlabscientistportrait.png"} ],
+        "title" : "Elliott"
+      }
+    },
+	"conditions" : [
+      {
+        "type" : "gatherItem",
+        "itemName" : "vorechip-chip",
+        "count" : 1,
+        "consume" : true
+      }
+    ],
+
+    // Completion actions
+    "showTech" : [
+      "vorerp"
+    ]
+  }
+}

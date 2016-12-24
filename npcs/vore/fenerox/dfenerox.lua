@@ -34,8 +34,9 @@ function loseHook()
 end
 
 function updateHook()
-{
+
 	if isPlayer and math.random(700) == 1 then
 		npc.say( playerLines[math.random(#playerLines)])
 	end
-}
+
+end

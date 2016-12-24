@@ -1,0 +1,12 @@
+{
+	"projectileName" : "rpbase",
+	"bounces" : -1,
+	"piercing" : true,
+	"image" : "rptoolparticles.png:base",
+	"frameNumber" : 1,
+	"animationCycle" : 1,
+	"speed" : 3,
+	"animationLoops" : false,
+	"flippable" : true,
+	"power" : 0
+}

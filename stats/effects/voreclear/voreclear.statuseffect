@@ -1,0 +1,11 @@
+{
+  "name" : "voreclear",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "voreclear.lua"
+  ],
+
+  "label" : "Released"
+}

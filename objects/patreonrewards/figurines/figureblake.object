@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureblake",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Neko neko ni",
+  "shortdescription" : "Blake Figurine",
+
+  "inventoryIcon" : "figurine.png:blake",
+  "orientations" : [
+    {
+      "image" : "figurine.png:blake",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:blake",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

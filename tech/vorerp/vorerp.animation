@@ -1,0 +1,12 @@
+{
+  "sounds" : {
+    "activate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "deactivate" : [ "/sfx/tech/tech_sphere_transform.ogg" ],
+    "forceDeactivate" : [ "/sfx/tech/tech_sonicsphere_charge1.ogg"],
+
+	"burp" : [ "/sfx/vore/burp/burp (1).ogg" ],
+	"swallow" : [ "/sfx/vore/swallow/swallow (1).ogg" ],
+	"switch" : [ "/sfx/objects/console_button.ogg" ],
+	"lay" : [ "/sfx/vore/yoshi/yoshilay.ogg" ]
+  }
+}

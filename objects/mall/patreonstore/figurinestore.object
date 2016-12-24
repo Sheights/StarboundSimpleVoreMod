@@ -18,6 +18,7 @@
     "sellFactor" : 0.2,
     "items" : [
       { "item" : { "name" : "figurelynn"} },
+	  { "item" : { "name" : "figureblake"} },
 	  { "item" : { "name" : "figurecharizard"} },
 	  { "item" : { "name" : "figuregraeskar"} },
 	  { "item" : { "name" : "figurekato"} },
@@ -32,6 +33,7 @@
 	  { "item" : { "name" : "figuretricky"} },
 	  { "item" : { "name" : "figurethoshgalv"} },
 	  { "item" : { "name" : "figuretreebuddy"} },
+	  { "item" : { "name" : "figurewiess"} },
 	  { "item" : { "name" : "figurevictor"} },
 	  { "item" : { "name" : "figureyang"} }
     ]

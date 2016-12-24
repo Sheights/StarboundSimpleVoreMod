@@ -1,0 +1,11 @@
+{
+  "name" : "rpvoreheal",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvoreheal.lua"
+  ],
+
+  "label" : "Swallowed"
+}

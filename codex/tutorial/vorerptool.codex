@@ -1,0 +1,30 @@
+{
+  "id" : "vorerptoolmanual",
+  "title" : "RP Tool Manual",
+  "contentPages" : [
+
+"Vore RP Tool Manual
+
+The Vore RP tool is used to simulate one player eating another in non gameplay context. Trying to eat eachother during combat will probably lead to unintended side effects.
+The RP Tool needs to be enabled with 4 tech cards available through normal gameplay. You can switch to the tech at any tech station.",
+
+"After obtaining the tech tool you need to obtain a Prey Enabler Console. This machine enables the tool to be used on a particular world/ship, as to prevent people from griefing. You can purchase the console from Treasure Tess at the Foodhall Mall. Place it down on the planet/ship you want to enable and flip the switch to the 'on' position. If you do not do this, you will hear an inactivity noise whenever you attempt to use the tool.",
+
+"With the tool enabled and equipped you may switch between different types of functions. Pressing up twice will switch between them.
+1. Base Vore - You devour your prey with no side effects to you or your prey.
+2. Digest Vore - You devour your prey and slowly their health will deplete as they are digested. Digesting prey will raise your hunger and will heal you if you aren't hungry.
+3. Healing Vore - You devour your prey and slowly restour their health.",
+
+"4. Unbirth - You devour your prey another way. No adverse side effects to you or your prey.
+5. Healing Unbirth - You devour your prey another way and slowly restore their health.
+6. Egg Unbirth - You devour your prey another way and can expel them as an egg. While they are an egg they will have to wait for 30 seconds before they are in the 'ready' state. Once in the 'ready' state they can struggle to break out of their egg.",
+
+"After devouring your victim, you can continue to change the vore type. Perhaps you eat prey normally but then wish to heal them, or change your mind about releasing them and digest them.
+Healing Unbirth and Egg Unbirth can only be selected after you devoured your prey with the Unbirth selection."
+
+  ],
+  "itemConfig" : {
+    "rarity" : "common",
+    "price" : 200
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "rpvoreub",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvoreub.lua"
+  ],
+
+  "label" : "Unbirthed"
+}

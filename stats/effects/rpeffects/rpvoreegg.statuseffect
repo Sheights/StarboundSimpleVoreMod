@@ -1,0 +1,15 @@
+{
+  "name" : "rpvoreegg",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "rpvoreegg.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "animationConfig" : "rpvoreegg.animation",
+  
+  "label" : "Unbirthed"
+}

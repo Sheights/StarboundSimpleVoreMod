@@ -1,0 +1,19 @@
+{
+  "itemName" : "vorechipkit",
+  "price" : 0,
+  "level" : 1,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "mysteriousReward",
+  "description" : "Use this to open it and obtain everything you need for the RP Tool",
+  "shortdescription" : "Vore Tech Chip Kit",
+  "twoHanded" : true,
+
+  "inventoryIcon" : "chipkiticon.png",
+  "animation" : "chipkit.animation",
+  "animationCustom" : {},
+  "scripts" : ["chipkit.lua"],
+
+  "fireTime" : 2.0,
+  "fireOffset" : [1.0, 0.0]
+}

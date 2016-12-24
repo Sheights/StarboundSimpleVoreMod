@@ -1,0 +1,18 @@
+{
+
+  "frameGrid" : {
+    "size" : [24, 24],
+    "dimensions" : [6, 1],
+    "names" : [
+      [ "base", "digest", "heal", "egg", "baseub", "healub" ]
+    ]
+  },
+  "aliases"  :  {
+    "base:0"  :  "base",
+	"digest:0"  :  "digest",
+	"heal:0"  :  "heal",
+	"egg:0"  :  "egg",
+	"baseub:0"  :  "baseub",
+	"healub:0"  :  "healub"
+  }
+}

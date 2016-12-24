@@ -1,0 +1,11 @@
+{
+  "name" : "rpvoreclear",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvoreclear.lua"
+  ],
+
+  "label" : "Released"
+}

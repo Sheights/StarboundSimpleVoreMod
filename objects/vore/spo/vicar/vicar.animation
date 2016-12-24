@@ -30,6 +30,12 @@
 			"mode"  :  "transition",
 			"transition"  :  "idle"
 		  },
+		  "digest"  :  {
+		    "frames"  :  24,
+			"cycle"  :  4,
+			"mode"  :  "transition",
+			"transition"  :  "idle"
+		  },
 		  "lick"  :  {
 		    "frames"  :  21,
 			"cycle"  :  0.8,
@@ -61,7 +67,7 @@
 			"transition"  :  "idlefull"
 		  },
 		  "pickup"  :  {
-		    "frames"  :  35,
+		    "frames"  :  34,
 			"cycle"  :  1.0,
 			"mode"  :  "transition",
 			"transition"  :  "chew"
@@ -125,6 +131,11 @@
 			"call"  :  {
 		      "properties"  :  {
 		        "image"  :  "<partImage>:call.<frame>"
+		      }
+		    },
+			"digest"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:digest.<frame>"
 		      }
 		    },
 	        "swallow"  :  {

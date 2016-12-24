@@ -1,0 +1,11 @@
+{
+  "name" : "rpvorefeed",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvorefeed.lua"
+  ],
+
+  "label" : "Digesting Someone"
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "rpvore",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvore.lua"
+  ],
+
+  "label" : "Swallowed"
+}

@@ -1,0 +1,12 @@
+{
+  "name" : "healvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "healvore.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/vicon.png"
+}

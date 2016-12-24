@@ -4,9 +4,9 @@
     "size" : [12, 12],
     "dimensions" : [7, 3],
     "names" : [
-      [ "lynn", "charizard", "graeskar", "kato", "raito", "ruben", "rubyrose" ],
-	  [ "sheights", "snappy", "snefug", "sparky", "starlily", "tricky", "thoshgalv" ],
-	  [ "treebuddy", "victor", "yang" ]
+      [ "lynn", "blake", "charizard", "graeskar", "kato", "raito", "ruben" ],
+	  [ "rubyrose", "sheights", "snappy", "snefug", "sparky", "starlily", "tricky" ],
+	  [ "thoshgalv", "treebuddy", "victor", "wiess", "yang" ]
     ]
   }
 }

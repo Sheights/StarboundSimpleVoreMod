@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurewiess",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Ice queen",
+  "shortdescription" : "Wiess Figurine",
+
+  "inventoryIcon" : "figurine.png:wiess",
+  "orientations" : [
+    {
+      "image" : "figurine.png:wiess",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:wiess",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "rpvoredigest",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "rpvoredigest.lua"
+  ],
+
+  "label" : "Digesting"
+}
