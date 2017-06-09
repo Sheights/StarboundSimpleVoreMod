@@ -6,8 +6,7 @@
       "subTitle" : "U",
       "description" : "Fire rabbits of legend. Strong, large, fuzzy, and hungry!"
   },
-  
-  "humanoidConfig" : "/species/hibanioid.config",
+
   "nameGen" : [ "/species/hibaninamegen.config:names", "/species/hibaninamegen.config:names" ],
   "ouchNoises" : [ "", "" ],
   "charGenTextLabels" : [ "Fur Color", "Hair", "Bracelets", "Anklets", "Tail Color", "Hair Color", "Bracelet Color", "Anklet Color", "Hibani", "Personality" ],

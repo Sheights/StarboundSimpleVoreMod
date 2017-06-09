@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/scriptConfig/giveSpeciesBlueprints/hibani",
+    "value": [
+      "mechbodyavian"
+    ]
+  },
+  {
+    "op": "add",
+    "path": "/scriptConfig/giveSpeciesBlueprints/rodent",
+    "value": [
+      "mechbodyavian"
+    ]
+  }
+]
