@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voreyoshiPin",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "egg", "oral", "safe", "animated" ]
+}

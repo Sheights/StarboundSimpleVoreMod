@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voremahj",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "absorb", "all", "animated", "male", "safe" ]
+}

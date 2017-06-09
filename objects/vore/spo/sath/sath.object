@@ -1,0 +1,63 @@
+{
+  "objectName"  :  "voresath",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description" : "This swamp dragon seems to be missing his tiny treasure hunter. - by Micro-Dragon",
+  "shortdescription"  :  "Sathedianus",
+
+  "apexDescription" : "A hungry-looking swamp dragon.",
+  "avianDescription" : "A swamp dragon. It looks hungry...",
+  "floranDescription" : "Big ssswamp dragon. Looksss hungry.",
+  "glitchDescription" : "Worried. Do dragons eat robots?",
+  "humanDescrtiption" : "That's a swamp dragon!",
+  "hylotlDescription" : "A mighty swamp dweller.",
+  "novakidDescription" : "That there partner looks mighty hungry.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "sathicon.png",
+  "orientations" : [
+    {
+	  "image" : "sath.png:idlecp",
+	  "imagePosition" : [-54, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-4, 20],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-54, 0]
+	},
+    {
+	  "image" : "sath.png:idlecp",
+	  "imagePosition" : [-54, 0],
+	  "direction" : "right",
+	  "sitPosition" : [-4, 20],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+	  "animationPosition" : [-54, 0]
+	}
+  ],
+  
+  "animation"  :  "sath.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "spit" : [ "/sfx/objects/eggLay.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "sath.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/sath/sath.lua" ],
+  "scriptDelta" : 3
+}

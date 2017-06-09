@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voreninetalesbig",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "animated", "female", "oral", "pokemon", "safe" ]
+}

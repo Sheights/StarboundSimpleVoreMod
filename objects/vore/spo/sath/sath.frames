@@ -1,0 +1,28 @@
+{
+  "frameGrid"  :  {
+	"size"  :  [108, 87],
+	"dimensions"  :  [18, 14],
+	"names"  :  [
+	  ["idle1.1", "idle1.2", "idle1.3", "idle1.4", "idle1.5", "idle1.6", "idle1.7", "idle1.8", "idle1.9", "idle1.10", "idle1.11", "idle2.1", "idle2.2", "idle2.3", "idle2.4", "idle2.5", "idle2.6", "idle2.7"],
+	  ["idle2.8", "idle2.9", "idle2.10", "idle2.11", "idle2.12", "idle2.13", "idle2.14", "idle2.15", "idle2.16", "idle2.17", "idle2.18", "idle2.19", "idle3.1", "idle3.2", "idle3.3", "idle3.4", "idle3.5", "idle3.6"],
+	  ["idle3.7", "idle3.8", "idle3.9", "lay.1", "lay.2", "lay.3", "lay.4", "lay.5", "lay.6", "lay.7", "lay.8", "lay.9", "sleep.1", "sleep.2", "up.1", "up.2", "up.3", "up.4"],
+	  ["up.5", "up.6", "up.7", "up.8", "up.9", "up.10", "up.11", "swallow.1", "swallow.2", "swallow.3", "swallow.4", "swallow.5", "swallow.6", "swallow.7", "swallow.8", "swallow.9", "swallow.10", "swallow.11"],
+	  ["swallow.12", "swallow.13", "swallow.14", "swallow.15", "swallow.16", "swallow.17", "swallow.18", "swallow.19", "swallow.20", "swallow.21", "swallow.22", "swallow.23", "swallow.24", "swallow.25", "swallow.26", "swallow.27", "swallow.28", "swallow.29"],
+	  ["swallow.30", "swallow.31", "swallow.32", "swallow.33", "swallow.34", "fidle1.1", "fidle1.2", "fidle1.3", "fidle1.4", "fidle1.5", "fidle1.6", "fidle1.7", "fidle1.8", "fidle1.9", "fidle1.10", "fidle1.11", "fidle2.1", "fidle2.2"],
+	  ["fidle2.3", "fidle2.4", "fidle2.5", "fidle2.6", "fidle2.7", "fidle2.8", "fidle2.9", "fidle2.10", "fidle2.11", "fidle2.12", "fidle2.13", "fidle2.14", "fidle2.15", "fidle2.16", "fidle2.17", "flay.1", "flay.2", "flay.3"],
+	  ["flay.4", "flay.5", "flay.6", "flay.7", "flay.8", "flay.9", "flay.10", "flay.11", "flay.12", "flay.13", "flay.14", "flidle1.1", "flidle1.2", "flidle1.3", "flidle1.4", "flidle1.5", "flidle1.6", "flidle1.7"],
+	  ["flidle1.8", "flidle1.9", "flidle2.1", "flidle2.2", "flidle2.3", "flidle2.4", "flidle2.5", "flidle2.6", "flidle2.7", "flidle2.8", "flidle2.9", "flidle2.10", "flidle2.11", "flidle2.12", "flidle2.13", "flidle3.1", "flidle3.2", "flidle3.3"],
+	  ["flidle3.4", "flidle3.5", "flidle3.6", "flidle3.7", "flidle3.8", "flidle3.9", "flidle3.10", "flidle3.11", "flidle3.12", "flidle3.13", "flidle3.14", "flidle3.15", "flidle3.16", "flidle3.17", "flidle3.18", "fup.1", "fup.2", "fup.3"],
+	  ["fup.4", "fup.5", "fup.6", "fup.7", "fup.8", "fup.9", "fup.10", "fup.11", "fup.12", "fup.13", "fup.14", "spit.1", "spit.2", "spit.3", "spit.4", "spit.5", "spit.6", "spit.7"],
+	  ["spit.8", "spit.9", "spit.10", "spit.11", "spit.12", "spit.13", "spit.14", "spit.15", "spit.16", "spit.17", "spit.18", "spit.19", "spit.20", "spit.21", "spit.22", "spit.23", "spit.24", "spit.25"],
+	  ["spit.26", "spit.27", "spit.28", "spit.29", "spit.30", "spit.31", "spit.32", "spit.33", "spit.34", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank"],
+	  ["blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank"]
+    ]	  
+  },
+	
+  "aliases"  :  {
+    "idlecp"  :  "idle1.1",
+	"fullcp"  :  "fidle1.1",
+	"fulllaycp"  :  "flay.14"
+	}
+}

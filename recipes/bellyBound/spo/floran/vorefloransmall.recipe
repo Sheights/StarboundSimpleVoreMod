@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "vorefloransmall",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "female", "oral", "safe", "still" ]
+}

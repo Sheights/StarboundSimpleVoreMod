@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "vorelinkodigest",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "animated", "cock", "fatal", "male" ]
+}

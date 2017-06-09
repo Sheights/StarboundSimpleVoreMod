@@ -1,7 +1,0 @@
-{
-  "input" : [
-    { "item" : "money", "count" : 1000 }
-  ],
-  "output" : { "item" : "vorechipkit", "count" : 1 },
-  "groups" : [ "bellyBoundStore", "objects", "all", "other" ]
-}

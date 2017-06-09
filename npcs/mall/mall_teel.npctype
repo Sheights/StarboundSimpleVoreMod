@@ -1,0 +1,147 @@
+{
+  "type" : "mall_teel",
+  "baseType" : "prey",
+
+  "npcname" : "Teel",
+  
+  "identity" : {
+	"gender" : "female"
+  },
+
+  "damageTeamType" : "friendly",
+  "scriptConfig" : {
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+    "damageTeamType" : "friendly",
+	"dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I thought there was more interesting stuff here.",
+							"You'll need more treasure to keep me around.",
+							"It's a little less shiny in here than before..."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Did it get colder in here?",
+							"Where's that draft coming from...",
+							"Who put a hole in my house? Only I put holes in my house."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"There's only room for one treasure hunter in this town.",
+							"This house aint' big enough for two treasure hunters.",
+							"Sath takes up enough room, thanks."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"If this isn't fixed, you can count me out.",
+						"I can't live like this!",
+						"Sath's cave is nicer than this!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Call me back when you've got the goods.",
+						"Tch, you can't even afford my services. ",
+						"C'mon Sath, we're leaving. "
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"You called~?",
+						"You have need of my treasure hunting skills?",
+						"How can I help you~?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"I hate to part with my treasure, but here.",
+						"I found this on my latest excursion! Take it!",
+						"Shhh, don't tell Sath, but this is for you.",
+						"This is between me and you, okay? "
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"S-Sath... anybody!? Help!",
+					"I did not sign up for this!!",
+					"I am too small to deal with this!!",
+					"Enemies!! They're after my treasure!!!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Thanks! No thanks to you, Sath.",
+					"Crisis averted, thank goodness...",
+					"Do you think they we're after my treasure?",
+					"My treasure is safe! Phew. "
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "I hope the loot is plentiful today.",
+			"It's a perfect day for treasure hunting!",
+			"I could use a quick nap...",
+			"I wonder where I should hunt for treasure today!",
+			"Sath, quit being lazy and lets go hunt for treasure!",
+			"I need to polish my scales at some point."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/teel/prey_teel.lua" 
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "teelhead", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+			"chest" : [
+              { "name" : "teelchest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "teellegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

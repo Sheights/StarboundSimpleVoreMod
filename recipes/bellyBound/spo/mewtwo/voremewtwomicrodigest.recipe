@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voremewtwomicrodigest",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "cock", "fatal", "male", "still" ]
+}

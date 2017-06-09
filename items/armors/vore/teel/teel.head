@@ -1,0 +1,42 @@
+{
+  "itemName" : "teelhead",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:head",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : " ",
+  "shortdescription" : "Teel Head",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ffffff" : "ffffff", "f3f3f3" : "f3f3f3", "efefef" : "efefef", "dadada" : "dadada", "bababa" : "bababa", "ff00ff" : "ff00ff" },
+	/* BLACK */
+	{ "ffffff" : "999999", "f3f3f3" : "838383", "efefef" : "707070", "dadada" : "5c5c5c", "bababa" : "474747", "ff00ff" : "333333" },
+	/* GREY */
+	{ "ffffff" : "cccccc", "f3f3f3" : "b5b5b5", "efefef" : "838383", "dadada" : "707070", "bababa" : "5c5c5c", "ff00ff" : "474747" },
+	/* WHITE */
+	{ "ffffff" : "e0e0e0", "f3f3f3" : "cccccc", "efefef" : "b5b5b5", "dadada" : "838383", "bababa" : "707070", "ff00ff" : "5c5c5c" },
+	/* RED */
+	{ "ffffff" : "e88787", "f3f3f3" : "e26565", "efefef" : "d93a3a", "dadada" : "ce2727", "bababa" : "ab2121", "ff00ff" : "891a1a" },
+	/* ORANGE */
+	{ "ffffff" : "f1bf7e", "f3f3f3" : "eead59", "efefef" : "ea9931", "dadada" : "de8817", "bababa" : "b97113", "ff00ff" : "945a10" },
+	/* YELLOW */
+	{ "ffffff" : "eedd95", "f3f3f3" : "e9d172", "efefef" : "e2c344", "dadada" : "deba2b", "bababa" : "c2a11e", "ff00ff" : "9f8419" },
+	/* GREEN */
+	{ "ffffff" : "83d373", "f3f3f3" : "68c954", "efefef" : "51bd3b", "dadada" : "439b31", "bababa" : "357c27", "ff00ff" : "285d1d" },
+	/* BLUE */
+	{ "ffffff" : "9dbae7", "f3f3f3" : "7ca4de", "efefef" : "5588d4", "dadada" : "3b76ce", "bababa" : "2d63b4", "ff00ff" : "255193" },
+	/* PURPLE */
+	{ "ffffff" : "c795db", "f3f3f3" : "b776d0", "efefef" : "a451c4", "dadada" : "943eb6", "bababa" : "7c3498", "ff00ff" : "632a7a" },
+	/* PINK */
+	{ "ffffff" : "e59fcf", "f3f3f3" : "dc7fbe", "efefef" : "d35fae", "dadada" : "ca3f9e", "bababa" : "b03088", "ff00ff" : "90276f" },
+	/* BROWN */
+	{ "ffffff" : "c39d6f", "f3f3f3" : "b78a52", "efefef" : "a47844", "dadada" : "816036", "bababa" : "654a2a", "ff00ff" : "48351e" }
+]
+}

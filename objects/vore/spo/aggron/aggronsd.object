@@ -1,0 +1,69 @@
+{
+  "objectName"  :  "voreaggronsd",
+  "printable"  :  false,
+  "rarity"  :  "Uncommon",
+  "catagory"  :  "furniture",
+  "price"  :  20,
+  "description"  :  "The Iron Armor Pokémon. It claims an entire mountain as its territory, and anything moving its prey. Now shiny! [Digestion] - by Micro-Dragon",
+  "shortdescription"  :  "Hungry Shiny Aggron",
+
+  "apexDescription" : "This Pokémon vigilantly patrols its territory at all times. Be careful.",
+  "avianDescription" : "This pokémon claims an entire mountain as its territory.",
+  "floranDescription" : "The more woundsss it hasss, the more it hasss battled.",
+  "glitchDescription" : "Awe. This pokémon digs tunnels by breaking through bedrock with its steel horns.",
+  "humanDescrtiption" : "This Pokémon will haul topsoil to the area, plant trees, to restore its own territory.",
+  "hylotlDescription" : "Its iron horns grow longer a little at a time.",
+  "novakidDescription" : "This pokémon is surprisingly protective of its environment.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "stomachacid",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon"  :  "aggronsdicon.png",
+  "orientations" : [
+    {
+	  "image" : "aggrons.png:idlecp",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [-40, 22],	  
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [2, 0], [8, 5] ],
+	  "animationPosition" : [0, 0]
+	},
+    {
+	  "image" : "aggrons.png:idlecp",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "sitPosition" : [0, 22],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ],
+      "detectArea" : [ [-8, 0], [-2, 5] ],
+	  "animationPosition" : [0, 0]
+	}
+  ],
+  
+  "animation"  :  "aggron.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "swallow" : [ "/sfx/objects/gulp.ogg" ],
+	  "release" : [ "/sfx/objects/egglay.ogg" ],
+	  "cry" : [ "/sfx/pokemon/aggron.ogg" ],
+	  "gurgle1" : [ "/sfx/objects/belly2.ogg" ],
+	  "gurgle2" : [ "/sfx/objects/belly3.ogg" ]
+	}
+  },
+  "animationParts"  :  {
+    "body"  :  "aggrons.png"
+  },
+ 
+  "scripts" : [ "/objects/vore/spo/aggron/aggrond.lua" ],
+  "scriptDelta" : 3
+}

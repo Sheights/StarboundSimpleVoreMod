@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "voreguilmonsmalldigest",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "all", "digimon", "fatal", "male", "oral", "still" ]
+}

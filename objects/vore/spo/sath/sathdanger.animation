@@ -1,0 +1,226 @@
+{
+  "animatedParts"  :  {
+    "stateTypes"  :  {
+	  "bodyState"  :  {  
+	    "default"  :  "idlecp",
+	    "states"  :  {
+		  "idlecp"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "idle1"  :  {
+		    "frames"  :  11,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  },
+		  "idle2"  :  {
+		    "frames"  :  19,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  },
+		  "idle3"  :  {
+		    "frames"  :  9,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  },
+		  "lay"  :  {
+		    "frames"  :  9,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "sleep"
+		  },
+		  "sleep"  :  {
+		    "frames"  :  2,
+			"cycle"  :  3.0,
+			"mode"  :  "loop"
+		  },
+		  "up"  :  {
+		    "frames"  :  11,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  },
+		  "swallow"  :  {
+		    "frames"  :  34,
+			"cycle"  :  4.0,
+			"mode"  :  "transition",
+			"transition"  :  "fullcp"
+		  },
+		  "fullcp"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "fidle1"  :  {
+		    "frames"  :  11,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "fullcp"
+		  },
+		  "fidle2"  :  {
+		    "frames"  :  17,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "fullcp"
+		  },
+		  "flay"  :  {
+		    "frames"  :  14,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "fulllaycp"
+		  },
+		  "fulllaycp"  :  {
+		    "frames"  :  1,
+			"mode"  :  "end"
+		  },
+		  "flidle1"  :  {
+		    "frames"  :  9,
+			"cycle"  :  1.0,
+			"mode"  :  "transition",
+			"transition"  :  "fulllaycp"
+		  },
+		  "flidle2"  :  {
+		    "frames"  :  13,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "fulllaycp"
+		  },
+		  "flidle3"  :  {
+		    "frames"  :  18,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "fulllaycp"
+		  },
+		  "fup"  :  {
+		    "frames"  :  14,
+			"cycle"  :  2.5,
+			"mode"  :  "transition",
+			"transition"  :  "fullcp"
+		  },
+		  "spit"  :  {
+		    "frames"  :  34,
+			"cycle"  :  3.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  },
+		  "fatal"  :  {
+		    "frames"  :  16,
+			"cycle"  :  2.0,
+			"mode"  :  "transition",
+			"transition"  :  "idlecp"
+		  }
+	    }
+	  }
+    },
+  
+    "parts"  :  {
+      "body"  :  {
+	    "properties"  :  {
+	      "centered"  :  false,
+		  "zLevel"  :  1
+	    },
+	    "partStates"  :  {
+	      "bodyState"  :  {
+	        "idlecp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idlecp"
+		      }
+		    },
+	        "idle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle1.<frame>"
+		      }
+		    },
+	        "idle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle2.<frame>"
+		      }
+		    },
+			"idle3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:idle3.<frame>"
+		      }
+		    },
+			"lay"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:lay.<frame>"
+		      }
+		    },
+			"sleep"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:sleep.<frame>"
+		      }
+		    },
+			"up"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:up.<frame>"
+		      }
+		    },
+	        "swallow"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:swallow.<frame>"
+		      }
+		    },
+			"fullcp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fullcp"
+		      }
+		    },
+	        "fidle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fidle1.<frame>"
+		      }
+		    },
+	        "fidle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fidle2.<frame>"
+		      }
+		    },
+	        "flay"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:flay.<frame>"
+		      }
+		    },
+	        "fulllaycp"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fulllaycp"
+		      }
+		    },
+	        "flidle1"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:flidle1.<frame>"
+		      }
+		    },
+	        "flidle2"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:flidle2.<frame>"
+		      }
+		    },
+	        "flidle3"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:flidle3.<frame>"
+		      }
+		    },
+	        "fup"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fup.<frame>"
+		      }
+		    },
+			"spit"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:spit.<frame>"
+		      }
+		    },
+			"fatal"  :  {
+		      "properties"  :  {
+		        "image"  :  "<partImage>:fatal.<frame>"
+		      }
+		    }
+		  }
+	    }
+   	  }
+    }
+  }
+}

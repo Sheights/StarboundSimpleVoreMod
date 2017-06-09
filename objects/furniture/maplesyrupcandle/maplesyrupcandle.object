@@ -1,0 +1,64 @@
+{
+  "objectName" : "maplesyrupcandle",
+  "colonyTags" : ["glitch","glitchvillage","light"],
+  "rarity" : "Legendary",
+  "category" : "light",
+  "price" : 45,
+
+  "description" : "A small wax candle that smells like sweet maple syrup. Summons Teel as a tennant.",
+  "shortdescription" : "Maple Syrup Candle",
+  "race" : "glitch",
+
+  "maximumLiquidLevel" : 0.2,
+
+  "apexDescription" : "A small candle.",
+  "avianDescription" : "Avian priests often work by candlelight.",
+  "floranDescription" : "Naked flamesss are too dangerousss! But it doesss sssmell nice.",
+  "glitchDescription" : "Sentimental. Maple Syrup, how I wish I could smell it.",
+  "humanDescription" : "A pretty little candle.",
+  "hylotlDescription" : "Little is as beautiful as the flickering of a candle flame.",
+  "novakidDescription" : "A neat lil candle.",
+
+  "statusEffects" : [ ],
+
+  "lightColor" : [179, 149, 107],
+
+  "flickerPeriod" : 0.3,
+  "flickerMinIntensity" : 0.75,
+  "flickerMaxIntensity" : 0.8,
+  "flickerPeriodVariance" : 0.075,
+  "flickerIntensityVariance" : 0.025,
+
+  "inventoryIcon" : "maplesyrupcandleicon.png",
+  "orientations" : [
+    {
+      "image" : "maplesyrupcandle.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      "spaces" : [ [0, 0], [0, 1] ],
+      "fgAnchors" : [ [0, -1] ]
+    },
+    {
+      "image" : "maplesyrupcandle.png:<color>.<frame>",
+      "imagePosition" : [0, 0],
+      "animationPosition" : [0, 0],
+      "direction" : "right",
+      "spaces" : [ [0, 0], [0, 1] ],
+      "fgAnchors" : [ [0, -1] ]
+    }
+  ],
+
+  "animation" : "maplesyrupcandle.animation",
+  "animationParts" : {
+    "bg" : "maplesyrupcandle.png",
+    "fg" : "maplesyrupcandlelit.png"
+  },
+
+  "scripts" : [ "/objects/wired/light/light.lua" ],
+  "scriptDelta" : 60,
+
+  "inputNodes" : [ [0, 0] ]
+
+}
