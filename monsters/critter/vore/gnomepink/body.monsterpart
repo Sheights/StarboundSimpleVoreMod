@@ -1,0 +1,9 @@
+{
+  "name" : "gnomepink",
+  "category" : "gnomepink",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

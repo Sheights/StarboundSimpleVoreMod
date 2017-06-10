@@ -1,0 +1,40 @@
+{
+  "objectName" : "gnometree1",
+  "colonyTags" : ["gnome"],
+  "rarity" : "Common",
+  "category" : "furniture",
+  "price" : 80, 
+
+  "description" : "A gnomish tree. Tiny bark, tiny leaves. A miracle of modern science or the natural world?",
+  "shortdescription" : "Tiny Tree",
+  "race" : "apex",
+
+  "apexDescription" : "This is the smallest tree I've ever seen.",
+  "avianDescription" : "A tiny little tree.",
+  "floranDescription" : "Tiny tiny tree. Or is floran bigger?",
+  "glitchDescription" : "Statement. This tree is of insignificant size.",
+  "humanDescription" : "Crunches with a satisfying snap!",
+  "hylotlDescription" : "Do you think it also bears tiny fruit?",
+  "novakidDescription" : "A little pick-me-up!",
+
+  "inventoryIcon" : "treeicon.png",
+  "orientations" : [
+    {
+      "image" : "tree.png:<color>",
+      "imagePosition" : [0, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "tree.png:<color>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ] 
+}

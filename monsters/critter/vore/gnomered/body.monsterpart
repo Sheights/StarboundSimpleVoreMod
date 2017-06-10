@@ -1,0 +1,9 @@
+{
+  "name" : "gnomered",
+  "category" : "gnomered",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

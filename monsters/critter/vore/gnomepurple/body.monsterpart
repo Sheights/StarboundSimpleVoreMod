@@ -1,0 +1,9 @@
+{
+  "name" : "gnomepurple",
+  "category" : "gnomepurple",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

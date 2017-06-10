@@ -1,0 +1,122 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "hibanihome1"
+  },
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "gnomedome1"
+  },
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "gnomedome2"
+  },
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "gnomedome3"
+  },
+  {
+    "op": "add",
+    "path": "/metadata/anchor/-",
+    "value": "gnomedome4"
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "hibanihome1",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "hibanihome1.json"
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "gnomedome1",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "gnomedome1.json"
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "gnomedome2",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "gnomedome2.json"
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "gnomedome3",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "gnomedome3.json"
+      ]
+    }
+  },
+  {
+    "op": "add",
+    "path": "/parts/-",
+    "value": {
+      "name": "gnomedome4",
+      "rules": [
+        [
+          "maxSpawnCount",
+          [
+            1
+          ]
+        ]
+      ],
+      "def": [
+        "tmx",
+        "gnomedome4.json"
+      ]
+    }
+  }
+]

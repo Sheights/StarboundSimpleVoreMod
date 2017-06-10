@@ -1,0 +1,11 @@
+{
+  "name" : "microeat",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "microeat.lua"
+  ],
+
+  "label" : "You ate a tiny someone"
+}

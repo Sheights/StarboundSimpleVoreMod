@@ -1,0 +1,9 @@
+{
+  "name" : "gnomehat",
+  "category" : "gnomehat",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png"
+  }
+}

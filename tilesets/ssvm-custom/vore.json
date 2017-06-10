@@ -5,7 +5,7 @@
 
     },
  "spacing":0,
- "tilecount":49,
+ "tilecount":53,
  "tileheight":96,
  "tileproperties":
     {
@@ -449,6 +449,16 @@
          "object":"patreonFigurineStore",
          "tilesetDirection":"right"
         },
+	 "49":
+        {
+         "\/\/description":"A gnomish tree. Tiny bark, tiny leaves. A miracle of modern science or the natural world?",
+         "\/\/name":"gnometree1",
+         "\/\/shortdescription":"Tiny Tree",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"gnometree1",
+         "tilesetDirection":"right"
+        },
      "5":
         {
          "\/\/description":"#258: The Mud Fish Pokemon",
@@ -457,6 +467,36 @@
          "imagePositionX":"-9",
          "imagePositionY":"0",
          "object":"mudkipplush",
+         "tilesetDirection":"right"
+        },
+	 "50":
+        {
+         "\/\/description":"A gnomish tree. Tiny bark, tiny leaves. A miracle of modern science or the natural world?",
+         "\/\/name":"gnometree2",
+         "\/\/shortdescription":"Tiny Tree",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"gnometree2",
+         "tilesetDirection":"right"
+        },
+	 "51":
+        {
+         "\/\/description":"A gnomish tree. Tiny bark, tiny leaves. A miracle of modern science or the natural world?",
+         "\/\/name":"gnometree3",
+         "\/\/shortdescription":"Tiny Tree",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"gnometree3",
+         "tilesetDirection":"right"
+        },
+	 "52":
+        {
+         "\/\/description":"A gnomish tree. Tiny bark, tiny leaves. A miracle of modern science or the natural world?",
+         "\/\/name":"gnometree4",
+         "\/\/shortdescription":"Tiny Tree",
+         "imagePositionX":"0",
+         "imagePositionY":"0",
+         "object":"gnometree4",
          "tilesetDirection":"right"
         },
      "6":
@@ -678,9 +718,25 @@
         {
          "image":"..\/..\/..\/..\/tiled\/workspace-custom\/recreationalvehicle.png"
         },
+	 "49":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/tree1.png"
+        },
      "5":
         {
          "image":"..\/..\/..\/..\/tiled\/workspace-custom\/mudkip.png"
+        },
+	 "50":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/tree2.png"
+        },
+	 "51":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/tree3.png"
+        },
+	 "52":
+        {
+         "image":"..\/..\/..\/..\/tiled\/workspace-custom\/tree4.png"
         },
      "6":
         {
