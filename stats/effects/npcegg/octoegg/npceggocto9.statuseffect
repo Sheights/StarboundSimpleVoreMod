@@ -1,0 +1,15 @@
+{
+  "name" : "npceggocto9",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "/stats/effects/npcegg/npcegg.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "animationConfig" : "npceggocto9.animation",
+  
+  "label" : "Egged"
+}

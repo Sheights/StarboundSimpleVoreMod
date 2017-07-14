@@ -1,11 +1,12 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
 duration 	= 120
 
-isDigest = true
-
-projectile	= "dragonvoreprojectile"
-dprojectile	= "dragondvoreprojectile"
+effect = "npcdigestvore"
+capacity = 3
+idDigest = true
+legs[2] = "alanasterlegsbelly2"
+legs[3] = "alanasterlegsbelly3"
 
 smallLines = {	"Mrrr~ So nice to have someone in my belly~",
 				"Hush now~  No need to be fussy~",
@@ -24,48 +25,35 @@ largeLines = {	"*purrs* My belly feels so full with you three in there~",
 				"It won't be long, soon you all will be my perfect little clutch~",
 				"I'll take good care of you all~"
 			}
-			
-function digestHook()
 
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "alanasterlegs" )
-	end
-	
+function feedHook(input) 
+	npc.say( "Down you go~" )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function feedHook()
-
-	if requested then
-		npc.say( "Come on in~  There's plenty of room to rest in~" )
-	else
-		npc.say( "Down you go~" )
-	end
-	npc.setItemSlot( "legs", "alanasterlegsbelly" .. #victim )
-	
+function requestHook(input)
+	npc.say( "Come on in~  There's plenty of room to rest in~" )
 end
 
 function updateHook()
 
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
+	if math.random(700) == 1 and containsPlayer() then
 	
 		if #victim == 1 then
-			npc.say( smallLines[math.random(#smallLines)])
+			sayLine(smallLines)
 		elseif #victim == 2 then
-			npc.say( medLines[math.random(#medLines)])
+			sayLine(medLines)
 		elseif #victim == 3 then
-			npc.say( largeLines[math.random(#largeLines)])
+			sayLine(largeLines)
 		end
 		
 	end
 
 end
 
-function forceExit()
+function releaseHook(input, time)
 
 	npc.say( "That was sooo nice~ Please do come back again~" )
-	
-	npc.setItemSlot( "legs", "alanasterlegs" )
 
 end

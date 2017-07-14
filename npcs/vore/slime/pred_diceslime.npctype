@@ -7,7 +7,13 @@
   },
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

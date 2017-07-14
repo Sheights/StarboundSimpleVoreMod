@@ -1,0 +1,192 @@
+{
+  "type" : "pred_alsnapz",
+  "baseType" : "villager",
+
+  "identity" : {
+	"gender" : "male"
+  },
+  "npcname" : "Alsnapz",
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+				"Why would you break that? That was my favorite thing!",
+				"Well. No, no, that's fine. I didn't want it anyway."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+				"But why though?",
+				"...do you want me to get rained on?",
+				"...Good thing I'm waterproof."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+				"Uh... ever hear of personal space?",
+				"I get what you're trying to do, but I'm not looking for a roomie.",
+				"Ok look, we both know that's not going to work."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+				"So... I'm thinking of heading out to better places?",
+				"This place kinda bites now...",
+				"I'd fix this place up if I could, but I can't. Can you... please? No?"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+				"Ok so, I'm heading out. Take care!",
+				"This birbo's outta here!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+				"Who dares summon the peeper?",
+				"Oh hey!",
+				"Peep?",
+				"Oh hey, it's you! What's up?",
+				"Kyah?",
+				"I'm here, what's up?",
+				"Peeeep?",
+				"Peeeeeeeeep?",
+				"Oh hey!",
+				"Peep's here.",
+				"I'm still getting used to this \"NPC\" thing, sorry for the wait."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+				"I present to you... this!",
+				"So I found this out back, thought you might like it.",
+				"Just payin' rent the way the game developer intended.",
+				"Here ya' go!",
+				"Here you are, one thing, ripe and ready for... y'know. Thinging.",
+				"I found this in my pocket, here you go.",
+				"Rent's up!",
+				"This is very dear to me, please don't sell it immediately.",
+				"Take this!" 
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+				"Peep! Get this guy off me!",
+				"Ohgeeze!!",
+				"Kyaaaah!",
+				"Peeeeep!!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+				"Let's... not do that again, shall we?",
+				"I wasn't a fan of that. Definitely not a fan.",
+				"You know what's fun? The whole \"not dying\" thing."
+			]
+		  }
+        }
+	  },
+	  "greeting" : {
+        "default" : {
+          "default" : [
+				"Grettin's!",
+				"Kyah! Survivin'?",
+				"Peep!",
+				"Kyah?"
+		  ]
+		}
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+				"I like this place. It's kinda.. homely, y'know?",
+				"Peep peep peep peep!",
+				"Y'know, I can't really do pixel animations anymore. It's a shame.",
+				"It's a me, a birbo!",
+				"Kyah!",
+				"Wait... did you come from... SPACE!?",
+				"Birds... but IN SPACE.",
+				"I'm kind of an avian, but mostly a birbo.",
+				"Birbo power!",
+				"Birbo power! N-no, I don't... That's not racist, is it?",
+				"So... weather's nice, ain't it?",
+				"Rawr, I'm a dragon! Haa just kidding. I'm a birb.",
+				"I'mma do me a peep. Peep!",
+				"Hello, I do me an animate here and there.",
+				"Hey I'm birb!",
+				"Avians are my favorite space race, but that really shouldn't be a suprise.",
+				"*Flex*",
+				"You ain't seen a little orange dino running around, have you?",
+				"In my opinion... gators.",
+				"Witches are nice. Just personal preference there.",
+				"My namea Alsnapz!",
+				"o3o Peep.",
+				"My right ear is bigger than my left. Please don't nibble on it.",
+				"AH, THERE YOU ARE!",
+				"The irony is that my goggles are actually useless.",
+				"I mean sure I COULD fly, but why would I want to do that?",
+				"Wait a second, am I in SPACE??",
+				"Bound for any stars, lately?",
+				"Yes, it is I, Alsnapz. In the blue! Fear my mighty peeps!",
+				"Kyah?",
+				"Kyah..?",
+				"But, kyah."
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/birb/alsnapz.lua"
+  ],
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+			"head" : [
+              { "name" : "alsnapzrighthead", "parameters" : { "colorIndex" : [ 0 ] } }
+            ],
+            "legs" : [
+              { "name" : "alsnapzlegs", "parameters" : { "colorIndex" : [ 0 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

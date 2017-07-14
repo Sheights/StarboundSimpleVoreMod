@@ -12,33 +12,26 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digestive system o
 }
 
 function initHook()
-
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "sergallegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "sergallegsbelly",
 		parameters = {
 					colorIndex = index
 	}}
-
 end
 
-function loseHook()
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	isPlayer = false
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		npc.say( playerLines )
 	end
-
 end

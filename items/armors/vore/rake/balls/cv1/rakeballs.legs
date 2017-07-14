@@ -1,0 +1,41 @@
+{
+  "itemName" : "rakelegsballscv1",
+  "price" : 0,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "Made from the highest quality of synthetic fur. How pent up is he?",
+  "shortdescription" : "Rake Ball Pants",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pantsm.png",
+  "femaleFrames" : "pantsm.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ff00ff" : "ff00ff", "e37100" : "e37100", "c56300" : "c56300", "ac5600" : "ac5600" },
+	/* BLACK */
+	{ "ff00ff" : "838383", "e37100" : "555555", "c56300" : "383838", "ac5600" : "151515" },
+	/* GREY */
+	{ "ff00ff" : "b5b5b5", "e37100" : "808080", "c56300" : "555555", "ac5600" : "303030" },
+	/* WHITE */
+	{ "ff00ff" : "e6e6e6", "e37100" : "b6b6b6", "c56300" : "7b7b7b", "ac5600" : "373737" },
+	/* RED */
+	{ "ff00ff" : "f4988c", "e37100" : "d93a3a", "c56300" : "932625", "ac5600" : "601119" },
+	/* ORANGE */
+	{ "ff00ff" : "ffd495", "e37100" : "ea9931", "c56300" : "af4e00", "ac5600" : "6e2900" },
+	/* YELLOW */
+	{ "ff00ff" : "ffffa7", "e37100" : "e2c344", "c56300" : "a46e06", "ac5600" : "642f00" },
+	/* GREEN */
+	{ "ff00ff" : "b2e89d", "e37100" : "51bd3b", "c56300" : "247824", "ac5600" : "144216" },
+	/* BLUE */
+	{ "ff00ff" : "96cbe7", "e37100" : "5588d4", "c56300" : "344495", "ac5600" : "1a1c51" },
+	/* PURPLE */
+	{ "ff00ff" : "d29ce7", "e37100" : "a451c4", "c56300" : "6a2284", "ac5600" : "320c40" },
+	/* PINK */
+	{ "ff00ff" : "eab3db", "e37100" : "d35eae", "c56300" : "97276d", "ac5600" : "59163f" },
+	/* BROWN */
+	{ "ff00ff" : "ccae7c", "e37100" : "a47844", "c56300" : "754c23", "ac5600" : "472b13" }
+]
+}

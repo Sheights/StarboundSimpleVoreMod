@@ -1,10 +1,9 @@
 require "/scripts/vore/npcvore.lua"
 
-isDigest = true
+isDigest	= true
+effect 		= "npcdigestvore"
 
-legs = "ampharosnormallegs"
-
-fulllegs = "ampharosnormallegsbelly"
+legs[2] = "ampharosnormallegsbelly"
 
 bellyLines = {	"Feel free to wriggle in there, I don't mind <3",
 				"I-I'm so big! Look at my belly!",
@@ -34,7 +33,6 @@ requestLeaveLines = {	"I want to hold you a little longer but if you want to roa
 }
 			
 function initHook()
-	
 	if storage.shiny == nil and math.random(100) == 1 then
 		storage.shiny = true
 		makeShiny()
@@ -43,51 +41,48 @@ function initHook()
 	else
 		storage.shiny = false
 	end
-	
 end
 
-function interactHook()
+function deathHook(input)
+	sayLine( gurgleLines )
+end
 
+function interactHook(input)
 	if math.random(4) == 1 then
 		world.spawnProjectile( "ampharosprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 	end
-	
 end
 
-function digestHook()
-	
-	isPlayer = false
-	if request then
-		npc.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
-	else
-		npc.say( releaseLines[ math.random( #releaseLines ) ] )
-	end
-	
+function digestHook(id, time, dead)
+	sayLine( releaseLines )
+end
+
+function releaseHook(input, time)
+	sayLine( requestLeaveLines )
 end
 
 function feedHook()
-	
-	if request == true then
-		npc.say( requestLines[ math.random( #releaseLines ) ] )
-	else
-		npc.say( gulpLines[ math.random( #gulpLines ) ] )
-	end
-
+	sayLine( gulpLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function updateHook()
+function requestHook()
+	sayLine( requestLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer and math.random(700) == 1 and ( stopWatch < duration or request ) then
-		npc.say( bellyLines[math.random(#bellyLines)])
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( bellyLines )
 	end
-
 end
 
 function makeShiny()
-
 	npc.setItemSlot( "chest", "ampharosshinychest" )
 	npc.setItemSlot( "legs", "ampharosshinylegs" )
-	legs = "ampharosshinylegs"
-	fulllegs = "ampharosshinylegsfull"
-
+	chest[1] = "ampharosshinychest"
+	legs[1] = "ampharosshinylegs"
+	legs[2] = "ampharosshinylegsfull"
 end

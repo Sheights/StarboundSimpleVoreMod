@@ -7,7 +7,8 @@ function init()
 
 	pred = effect.sourceEntity()
 	blink = false
-	status.addPersistentEffects( "rpvore", {"intents", "nofalldamage", "paralysis"} )
+	status.addPersistentEffects( "rpvore", {"intents", "paralysis"} )
+	effect.addStatModifierGroup({{stat = "fallDamageMultiplier", effectiveMultiplier = 0}})
 
 end
 

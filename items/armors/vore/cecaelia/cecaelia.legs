@@ -1,0 +1,41 @@
+{
+  "itemName" : "cecaelialegs",
+  "price" : 250,
+  "inventoryIcon" : "icons.png:pants",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "The tentacles of a cecaelia! By Micro-Dragon",
+  "shortdescription" : "Cecaelia Tentacles",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "pants.png",
+  "femaleFrames" : "pants.png",
+  
+  "colorOptions" : [
+	/* CLEAR */
+	{ "000000" : "000000", "dc1f00" : "dc1f00", "be1b00" : "be1b00", "951500" : "951500" },
+	/* BLACK */
+	{ "000000" : "000000", "dc1f00" : "554d5a", "be1b00" : "3d3840", "951500" : "150f19" },
+	/* GREY */
+	{ "000000" : "000000", "dc1f00" : "656ba6", "be1b00" : "3c3b5a", "951500" : "1a182b" },
+	/* WHITE */
+	{ "000000" : "000000", "dc1f00" : "e8e4d9", "be1b00" : "d9d3c0", "951500" : "c7bea3" },
+	/* RED */
+	{ "000000" : "000000", "dc1f00" : "e3a5a7", "be1b00" : "e38c88", "951500" : "db7b7a" },
+	/* ORANGE */
+	{ "000000" : "000000", "dc1f00" : "f0ba70", "be1b00" : "eda94d", "951500" : "dc8929" },
+	/* YELLOW */
+	{ "000000" : "000000", "dc1f00" : "ecdb95", "be1b00" : "e6d07f", "951500" : "d9bc68" },
+	/* GREEN */
+	{ "000000" : "000000", "dc1f00" : "97a240", "be1b00" : "586428", "951500" : "2d3815" },
+	/* BLUE */
+	{ "000000" : "000000", "dc1f00" : "27617b", "be1b00" : "414a86", "951500" : "3d3579" },
+	/* PURPLE */
+	{ "000000" : "000000", "dc1f00" : "d3abed", "be1b00" : "a976ca", "951500" : "9154b8" },
+	/* PINK */
+	{ "000000" : "000000", "dc1f00" : "d7a6ca", "be1b00" : "c37ab0", "951500" : "ac4e93" },
+	/* BROWN */
+	{ "000000" : "000000", "dc1f00" : "574b6c", "be1b00" : "63386c", "951500" : "4c3151" }
+]
+}

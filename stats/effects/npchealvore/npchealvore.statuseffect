@@ -1,0 +1,12 @@
+{
+  "name" : "npchealvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npchealvore.lua"
+  ],
+
+  "label" : "Eaten",
+  "icon" : "/interface/statuses/vicon.png"
+}

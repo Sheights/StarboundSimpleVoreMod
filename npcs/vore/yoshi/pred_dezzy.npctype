@@ -7,7 +7,13 @@
   },
   "npcname" : "Dezzy",
    "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -96,7 +102,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "It's nice to see you.",
+			"If you need a room,  I'm willing to help you with that."
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 			"If you're need of a warm place to rest at, I'll always make room for you ^.=.~",

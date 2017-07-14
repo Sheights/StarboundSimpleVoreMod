@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibaniknife",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "I'm ready to make a horror movie.",
+  "shortdescription" : "Hibani Head Wound",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

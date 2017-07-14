@@ -7,7 +7,13 @@
   },
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -100,18 +106,7 @@
 			]
 		  }
 		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-							"Engage!",
-							"You fight like the Demon!",
-							"Puncture their flanks!",
-							"Run for your miserable lives, vermin!",
-							"Win the fight so I can eat you myself afterwards!"
-			]
-		  }
-        },
-        "safe" : {
+		"safe" : {
 		  "default" : {
 			"default" : [
 							" Augh! Must you kill them all?!",
@@ -124,7 +119,14 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello."
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 						"Stop looking at me like that. I'm NOT going to kiss you. I may do something else with my mouth, though...",

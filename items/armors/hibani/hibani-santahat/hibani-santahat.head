@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibanisantahat",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "Hat about a human holiday that other races adopted later",
+  "shortdescription" : "Hibani Santa Hat",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

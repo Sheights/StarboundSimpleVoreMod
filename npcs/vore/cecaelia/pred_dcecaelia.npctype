@@ -1,0 +1,163 @@
+{
+  "type" : "pred_dcecaelia",
+  "baseType" : "villager",
+  
+    "identity" : {
+	"gender" : "female"
+  },
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["normal"],
+      "enableParticipation" : true
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"I insist you replace my decor.",
+							"Hmph... Somethings missing.",
+							"Oh dear, please put that back.",
+							"No queen can live like this."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"That chill you feel is more than the hole in the wall.",
+								"Put that back, or I'll put you away.",
+								"Replace my walls, or I'll replace you."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"There's only room for one sea queen around here.",
+							"You are mine and mine alone. I will not share.",
+							"I take up plenty of room by myself, thank you."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"Fix my house, or you'll be sleeping with the fishes.",
+						"I demand you fix my home immediately!"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"Tch. You're not worth my time, then.",
+						"Good riddance, land dweller."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Aaaah, I could get used to this place.",
+						"My tentacles are tired, I'm glad I can rest them here.",
+						"I could use a good soak.",
+						"Massage my tentacles, or leave."
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"A small token of my appreciation, land dweller.",
+						"A gift from the royal aquatic treasury.",
+						"A trinket, for my prey.",
+						"You won't need this when I'm done with you, but here."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"I'm a little too delicate for this.",
+					"Please, protect me!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Finally, some peace and quiet.",
+					"Humph, as it should be.",
+					"I prefer it peaceful like this."
+			]
+		  }
+        }
+	  },
+      "greeting" : {
+        "default" : {
+          "default" : [
+			"Have you come to greet your queen?",
+			"It's about time you greeted me today.",
+			"I hope you're adressing me to become my meal~",
+			"Hello, meal. It's time for you to fufil your duty.",
+			"What a delightful day, right, my prey?",
+			"Hello. Have you stopped by for dinner?"
+			
+          ]
+        }
+      },
+	  "converse" : {
+        "default" : {
+          "default" : [
+            "You look like quite the delight. Come, entertain me.",
+			"I've been expecting you~",
+			"What are you wandering around for? Come, be with me.",
+			"How 'bout I give you a big hug with these tentacles?",
+			"I've got an empty space for you, right here~"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/cecaelia/dcecaelia.lua" 
+  ],
+
+  "matchColorIndices" : false,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "cecaeliahair1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair2", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair3", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair4", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair5", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair6", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair7", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair8", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair9", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "chest" : [
+              { "name" : "cecaeliachest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "cecaelialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

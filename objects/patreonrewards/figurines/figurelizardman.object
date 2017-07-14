@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurelizardman",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "He was cursed with becoming an adorable, always frowny scalie.",
+  "shortdescription" : "Lizardman Figure",
+
+  "inventoryIcon" : "figurine.png:lizardman",
+  "orientations" : [
+    {
+      "image" : "figurine.png:lizardman",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:lizardman",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

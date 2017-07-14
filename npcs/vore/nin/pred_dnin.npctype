@@ -9,7 +9,13 @@
   },
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -115,7 +121,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Hey.",
+			"Hey food :9"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Hey food :9",

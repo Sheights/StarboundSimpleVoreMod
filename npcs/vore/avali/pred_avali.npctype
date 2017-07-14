@@ -2,6 +2,179 @@
   "type" : "pred_avali",
   "baseType" : "villager",
 
+  "scriptConfig" : {
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+	"dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+				  "This place... I don't like this feeling."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+				  "This place could use some maintenance."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+				"Oh come on! I thought this place was for me?",
+				"Look, I'm not averse to sharing but why this way?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+				  "Well, I'm not gonna take this sitting down.",
+				  "Where do I go to complain about these things?"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+				  "Okay, that's it. I'm getting outta here.",
+				  "Screw you guys, I'm going somewhere else!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+				"May I help you?",
+				"What is it?",
+				"Yeeeesss?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+				"This should cover it.",
+				"Happy to be a productive member of society."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+			  "I need an assist!",
+			  "Back me up!",
+			  "Requesting drone support!",
+			  "Get it off me!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+			  "That ruffled my feathers a little.",
+			  "What an ordeal.",
+			  "Well, at least I'm safe now.",
+			  "That was close.",
+			  "I'm alright!"
+			]
+		  }
+        }
+	  },
+	  "converse" : {
+        "default" : {
+          "default" : [ 
+			"Hello.",
+			"Hi. I'm <selfname>. Who're you?",
+			"Like it around?",
+			"You came this far to visit our settlement?",
+			"*hums to self*"
+		  ],
+		  "apex":[  
+			"Hello, Apex.",
+			"How goes the rebellion?",
+			"Are you a Miniknog spy?",
+			"What's a banana?",
+			"Is it true Apex actually clone their dead?",
+			"That's a lot of fur, are you from a non-CHZ world too?",
+			"A shame the Miniknog censor the media, you'd make good use of a Nexus system."
+		  ],
+		  "avian":[  
+			"Hello, Avian.",
+			"If you speak to a geneticist we could give you wings too, you know.",
+			"Are you grounded, or... the other ones?",
+			"How come your feathers are so much less interesting than ours?",
+			"How do you tell your males and females apart? You have the same markings.",
+			"Do you have any good songs to share from Avos?",
+			"Want to trade crest feathers as a souvenir?",
+			"Religion? No, the Oracle isn't our god..."
+		  ],
+		  "floran":[  
+			"Hello, Floran.",
+			"...er, just to remind you, we're inedible.",
+			"What do you mean, we smell like miracle-gro?",
+			"No, that's not for stabbi- WHOA, ok, apparently it can also be used for stabbing. Learn something new every day.",
+			"Want to join us on a hunt later? We heard florans are amazing hunters.",
+			"Why do Florans need to hunt for meat if you can photosynthesise?",
+			"Mind explaining to me what 'drysap' is?"
+		  ],
+		  "human":[  
+			"Hello... oh, a human.",
+			"I thought something smelled bad.",
+			"I understand, it wasn't your fault. But some of my kin might not be so understanding.",
+			"You have Impervium gonads coming here, human.",
+			"So, are you still into bombarding fledgling races on first contact?",
+			"How's that whole civil war working out, oh right, tentacle beast stopped it.",
+			"What's the weather like on Earth lately, violent with a chance of tentacles?",
+			"Now where'd I put my tiny violin..."
+		  ],
+		  "hylotl":[  
+			"Hello, Hylotl.",
+			"Can I interest you in some tapestries?",
+			"I hear the Hylotl civilisation has some amazing music and culture, want to share some with us?",
+			"If Hylotl cities are aquatic, does that mean you don't have water features in your gardens?",
+			"Is it true Hylotl breed through amplexus?",
+			"No, my feathers are not for trade!"
+		  ],
+		  "avali":[  
+			"Find anything interesting out there?",
+			"Hello, hunter.",
+			"Did you catch that news flash for the local network?",
+			"Hmm? Sorry, I was checking my messages.",
+			"I'm developing a new sim if you want to help me test it.",
+			"Are you in the right tent?... am I?",
+			"Got any interesting tales from your travels?",
+			"Kill anything big lately?",
+			"My pack's come up with a new routine, wanna watch later?",
+			"Can I get your opinion on this song I'm writi- wait, where are you going?"
+		  ],
+		  "glitch":[  
+			"Hello, Glitch.",
+			"Friendly. Greetings! I've been studying your mode of speech.",
+			"Do you mind if I have a look at your neural architecture?",
+			"If Glitch are able to self reproduce and upgrade, why haven't you undergone singularity yet?",
+			"Have you thought about getting a tune up from the drone techs?",
+			"Is that a tin can used in your construction?"
+		  ]
+        }
+      }
+    }
+  },
+  
   "disableWornArmor" : false,
   "scriptDelta" : 5,
 

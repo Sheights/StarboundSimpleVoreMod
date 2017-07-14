@@ -4,6 +4,7 @@
   
   "damageTeamType" : "friendly",
   "scriptConfig" : {
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
 	"damageTeamType" : "friendly"
   },
   "scripts" : [ "/npcs/bmain.lua",

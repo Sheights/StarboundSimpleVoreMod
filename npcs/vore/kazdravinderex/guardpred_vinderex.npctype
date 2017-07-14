@@ -113,7 +113,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello.",
+			"Hi!"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 			"Don't be put off by the nicknames. They just mean I like you.",

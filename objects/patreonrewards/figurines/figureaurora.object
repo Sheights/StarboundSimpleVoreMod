@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureaurora",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A vinyl statue remembering Aurora, a Vaporeon whose priority was always healing everybody else.",
+  "shortdescription" : "Aurora Figure",
+
+  "inventoryIcon" : "figurine.png:aurora",
+  "orientations" : [
+    {
+      "image" : "figurine.png:aurora",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:aurora",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

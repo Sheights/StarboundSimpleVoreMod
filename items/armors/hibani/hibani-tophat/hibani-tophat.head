@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibanitophat",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "Now I just need the monocle.",
+  "shortdescription" : "Hibani Top Hat",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

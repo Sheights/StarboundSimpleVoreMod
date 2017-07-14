@@ -1,16 +1,5 @@
 require "/scripts/vore/npcvore.lua"
 
-chest = "harpybluechest"
-legs = "harpybluelegs"
-
-fullchest = "harpybluechestbelly"
-fulllegs = "harpybluelegsbelly"
-
-voreeffect = "harpyvore"
-projectile = "npcharpyvoreprojectile"
-
-duration = 60
-
 audio = false
 
 playerLines = {	"It's been a while since I felt like this!",
@@ -23,19 +12,30 @@ playerLines = {	"It's been a while since I felt like this!",
 				"Your heartbeat matches mine. Do you hear it?"
 }
 
-function loseHook()
-	
-	if isPlayer then
+function initHook()
+	chest[2]	= "harpybluechestbelly"
+	legs[2]		= "harpybluelegsbelly"
+end
+
+function digestHook(id, time, dead)
+	world.sendEntityMessage( id, "applyStatusEffect", "npceggbase", 60, entity.id() )
+	if containsPlayer then
 		npc.say("Resting soundly in an egg. I'll see you in a while my dear!")
 	end
-	
-	isPlayer = false
-	
+end
+
+function releaseHook(input, time)
+	if time >= 60 then
+		if containsPlayer() then
+			npc.say("Resting soundly in an egg. I'll see you in a while my dear!")
+		end
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", "voreclear", 1, entity.id() )
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", "npceggbase", 60, entity.id() )
+	end
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
 end

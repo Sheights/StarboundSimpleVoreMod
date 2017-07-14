@@ -38,9 +38,9 @@ function update(dt, fireMode, shiftHeld)
 
   if storage.firing and animator.animationState("firing") == "off" then
 	item.consume(1)
-    activeItem.giveOwnerItem("vorechip-chip")
-	activeItem.giveOwnerItem("vorechip-chip")
-	activeItem.giveOwnerItem("vorerptoolmanual-codex")
+    player.giveItem("vorechip-chip")
+	player.giveItem("vorechip-chip")
+	player.giveItem("vorerptoolmanual-codex")
 	
     storage.firing = false
 	return

@@ -1,0 +1,12 @@
+{
+  "name" : "npcdigestvore",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npcdigestvore.lua"
+  ],
+
+  "label" : "Digesting",
+  "icon" : "/interface/statuses/poison.png"
+}

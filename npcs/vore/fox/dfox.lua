@@ -1,47 +1,31 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
-capacity = 2
-
-isDigest = true
+capacity	= 2
+isDigest	= true
+effect 		= "npcdigestvore"
 
 playerLines = {		"Surprise! I hope you enjoy learning about the digestive system of foxes. <3",
 					"Such a scrumptious thing you are~",
-					"Ooooo~ Gonna love to add ya to my body~",
+					"Ooooo~ I love having you inside my body~",
 					"*Yips* Mmm, hope I can find more like you, so delicious~",
-					"I hope you aren't TOO fattening. *Giggles*",
-					"Gonna be a shame to digest you, I just love a full belly. *Kneads you about*",
+					"I hope you aren't making me look TOO fat. *Giggles*",
+					"Gonna be a shame to let ya out, just love a full belly. *Kneads you about*",
 					"Gosh, I bet it's hot in there with all my fur and fat heating you up.",
-					"You'll be making my furcoat even more gorgeous soon~",
+					"You would make my furcoat so gorgeous~",
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
-
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "foxnewlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "foxnewlegs" )
-	end
-	
-end
 
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "foxnewlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs1 = {
+
+	legs[2] = {
 		name = "foxnewlegsbelly1",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	fulllegs2 = {
+	legs[3] = {
 		name = "foxnewlegsbelly2",
 		parameters = {
 					colorIndex = index
@@ -50,19 +34,19 @@ function initHook()
 end
 
 function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	if #victim == 1 then
-		npc.setItemSlot( "legs", fulllegs1 )
-	else
-		npc.setItemSlot( "legs", fulllegs2 )
-	end
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
+		sayline( playerLines )
 	end
 
 end

@@ -7,41 +7,32 @@ playerLines = {		"I'll keep you safe~",
 }
 
 function initHook()
-
-	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "sykeslegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	index = npc.getItemSlot("legs").parameters.colorIndex	
+	legs[2] = {
 		name = "sykeslegsbelly",
 		parameters = {
 					colorIndex = index
 	}}
-
 end
 
 function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function loseHook()
-
-	if isPlayer then
+	if containsPlayer() then
 		npc.say("Come back anytime, hehe.")
 	end
-
-	isPlayer = false
-
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

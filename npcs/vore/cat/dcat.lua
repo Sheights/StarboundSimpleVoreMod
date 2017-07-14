@@ -2,41 +2,28 @@ require "/scripts/vore/npcvore.lua"
 
 isDigest = true
 
-playerLines = {		"Surprise! I hope you enjoy learning about the digestive system of felines. <3",
+playerLines = {		"Surprise! I hope you enjoy learning about the digestive system of cats. <3",
 					"Such a scrumptious thing you are~",
-					"Ooooo~ Gonna love to add ya to my body~",
-					"*Purrs* Mmm, hope I can find more like you, so delicious~",
-					"I hope you aren't TOO fattening. *Giggles*",
-					"Gonna be a shame to have you gone, I just love having a full belly. *Kneads you about*",
+					"Ooooo~ I love having you inside my body~",
+					"*Purrs* Mmm, hope I can find more like you, so delicious.",
+					"I hope having you inside doesn't make me look TOO fat. *Giggles*",
+					"Gonna be a shame to let ya out, just love a full belly. *Kneads you about*",
 					"Gosh, I bet it's hot in there with all my fur and fat heating you up.",
 					"You'll be making my furcoat even more gorgeous soon~",
 					"Mnnng~ Keep squirming, you feel so good in there~"
 }
 
-
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	chest = {
-		name = "catchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
+
+	chest[2] = {
 		name = "catchestbelly",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	legs = {
-		name = "catlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "catlegsbelly",
 		parameters = {
 					colorIndex = index
@@ -44,20 +31,18 @@ function initHook()
 
 end
 
-function loseHook()
+function digestHook(id, time, dead)
 
-	if isPlayer then
-		npc.say("Thank you so much for feeding me. You'll enjoy being cat fat~")
+	if containsPlayer() then
+		npc.say("Thank you so much for feeding me. We are both so going to enjoy your visit~")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLines( playerLines )
 	end
 
 end

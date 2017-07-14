@@ -1,23 +1,16 @@
 require "/scripts/vore/npcvore.lua"
 
-playerLines = {		"Gonna be a shame to let ya out, just love a full belly~ *kneads you about*",
-					"Mrrr~ Keep squirming, you feel wonderful in there~",
-					"I got you now~",
-					"*Idly hums*",
-					"I do hope you enjoy your stay!"
+playerLines = {		"I'll keep you safe~",
+					"Enemies can't get you in there~",
+					"Mnnng~ Keep squirming, you feel so good in there~",
+					"It's too dangerous to be walking around by yourself, stay in me a while~"
 }
 
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
 	
-	legs = {
-		name = "avalirarulegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "avalirarulegsbelly",
 		parameters = {
 					colorIndex = index
@@ -25,24 +18,18 @@ function initHook()
 
 end
 
-function feedHook()
+function digestHook(id, time, dead) end
 
-end
-
-function loseHook()
-
-	if isPlayer then
+	if containsPlayer() then
 		npc.say("Thank you so much for filling my tummy. Hope to get to nom ya again soon ^..^")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
 
 end

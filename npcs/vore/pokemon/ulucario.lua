@@ -1,14 +1,8 @@
 require "/scripts/vore/npcvore.lua"
 
-legs = "lucarionormallegs"
-
-fulllegs = "lucarionormallegsbelly"
-
-voreeffect = "harpyvore"
+legs[2] = "lucarionormallegsbelly"
 
 audio = false
-
-duration = 60
 
 playerLines = {	"Our aura is merging.",
 				"Luu~ Oh my that feels wonderful!",
@@ -21,7 +15,6 @@ playerLines = {	"Our aura is merging.",
 }
 
 function initHook()
-	
 	if storage.shiny == nil and math.random(100) == 1 then
 		storage.shiny = true
 		makeShiny()
@@ -30,43 +23,44 @@ function initHook()
 	else
 		storage.shiny = false
 	end
-	
 end
 
-function interactHook()
-
+function interactHook(input)
 	if math.random(4) == 1 then
 		world.spawnProjectile( "lucarioprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 	end
-	
 end
 
-function loseHook()
-	
-	if isPlayer and stopWatch > 60 then
-		npc.say("Goodnight my new little pup <3")
-	elseif isPlayer then
-		npc.say("I really enjoyed our time. Thank you for making me feel like that. I sense it was as pleasurable for you as it was for me~")
-	end
-	
-	isPlayer = false
-	
+function feedHook()
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function updateHook()
+function requestHook()
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+function digestHook(id, time, dead)
+	world.sendEntityMessage( id, "applyStatusEffect", "npceggbase", 60, entity.id() )
+end
+
+function releaseHook(input, time)
+	if time >= 60 then
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", "npceggbase", 60, entity.id() )
 	end
+end
 
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
+	end
 end
 
 function makeShiny()
-
 	npc.setItemSlot( "head", "lucarioshinyhead" )
 	npc.setItemSlot( "chest", "lucarioshinychest" )
 	npc.setItemSlot( "legs", "lucarioshinylegs" )
-	legs = "lucarioshinylegs"
-	fulllegs = "lucarioshinylegsbelly"
-
+	head[1] = "lucarioshinyhead"
+	chest[1] = "lucarioshinychest"
+	legs[1] = "lucarioshinylegs"
+	legs[2] = "lucarioshinylegsbelly"
 end

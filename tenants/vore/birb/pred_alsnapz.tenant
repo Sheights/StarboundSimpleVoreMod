@@ -1,0 +1,27 @@
+{
+  "name": "pred_alsnapz",
+  "priority": 18,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"steampunk": 24,
+    "vore": 1
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "birb",
+      "type": "pred_alsnapz",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "villagerGift"
+  }
+}

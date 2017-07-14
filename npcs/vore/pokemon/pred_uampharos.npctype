@@ -4,8 +4,17 @@
   
   "npcname" : "Ampharos",
   
+  "identity": {
+	"gender" : "female"
+  },
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -87,21 +96,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-							"My comrades need help!"
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-							"Run away and pay!",
-							"I'm sure you've been through worse."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -112,7 +106,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "To be perfectly honest, I'm not sure how I got here.",
+			"Ampharos! *ahem* I meant to say, I'm Ampharos.",
+			"I don't think I can find my way home. I might as well live here now."
+          ]
+        }
+	  },
+	  "converse" : {
         "default" : {
           "default" : [
 							"I'm here if you want to relax after your adventures.",

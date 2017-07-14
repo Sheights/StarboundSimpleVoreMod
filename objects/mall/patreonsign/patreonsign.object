@@ -12,8 +12,8 @@
     {
       "dualImage" : "patreonsign.png:<frame>",
       "imagePosition" : [0, 0],
-	  "frames" : 187,
-      "animationCycle" : 35.0,
+	  "frames" : 213,
+      "animationCycle" : 40.0,
 
       "spaceScan" : 0.1,
       "anchors" : [ "bottom" ]

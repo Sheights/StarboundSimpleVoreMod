@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuretyranitar",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "Vinyl statue of the Pokémon Tyranitar. It emits a growl when you touch it.",
+  "shortdescription" : "Tyranitar Figure",
+
+  "inventoryIcon" : "figurine.png:tyranitar",
+  "orientations" : [
+    {
+      "image" : "figurine.png:tyranitar",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:tyranitar",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

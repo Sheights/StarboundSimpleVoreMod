@@ -6,9 +6,10 @@ function init()
 	status.clearPersistentEffects("rpvoredigest")
 	status.clearPersistentEffects("rpvoreheal")
 
-	status.addPersistentEffects( "egg", {"intents", "nofalldamage"} )
+	status.addPersistentEffects( "egg", {"intents"} )
 	status.addPersistentEffects( "para", {"paralysis"} )
 	animator.setAnimationState( "objectState", "default" )
+	effect.addStatModifierGroup({{stat = "fallDamageMultiplier", effectiveMultiplier = 0}})
 	
 	base = mcontroller.position()
 	state = 1

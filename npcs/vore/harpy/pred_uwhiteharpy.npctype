@@ -2,9 +2,18 @@
   "type" : "pred_uwhiteharpy",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "female"
+  },
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
-    "dialog" : {
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+	"dialog" : {
       "tenant" : {
         "grumbles" : {
           "tagCriteria" : "/dialog/grumble.config:tagCriteria",
@@ -78,16 +87,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Someone should help them!",
-						"Agressors!",
-						"I'm not a raptor. Those people need help!"
-			]
-		  }
-		},
-        "encourage" : "/dialog/flee.config:encourage",
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -98,7 +97,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hey sweetie.",
+			"Wanna know how it feels to be an egg?"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Hey sweetie.",

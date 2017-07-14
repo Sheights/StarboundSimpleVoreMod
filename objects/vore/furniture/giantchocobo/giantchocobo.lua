@@ -1,60 +1,55 @@
 fed = false
-initialized = false
-voreActive = true
+victim = nil
+stopwatch = 0
 
 animState = ""
 
-swallowTimer = 0
-timer = 0
-
 function init()
-
-	if world.getProperty("invinciblePlayers") == true then
-		voreActive = false
-	end
-	
 	object.setInteractive(true)
-	
+end
+
+function containerCallback()
+	if math.random(30) == 1 and fed == false and animState == "fullOpen" then
+		local people = world.entityQuery( object.position(), 4, {
+			includedTypes = {"player"},
+			boundMode = "CollisionArea"
+		})
+		if #people > 0 then
+			victim = people[math.random(#people)]
+			if victim ~= nil then
+				world.sendEntityMessage( victim, "applyStatusEffect", "npcvore", 90, entity.id() )
+				animator.setAnimationState("bodyState", "eat")
+				object.setInteractive(false)
+				fed = true
+			end
+		end
+	end
 end
 
 function update(dt)
-
 	animState = animator.animationState("bodyState")
+	
 	if fed then
-		---The estimated time the player is realeased
-		if timer >=90 then
-
-			---If the player was projected to die
-
-			---Set states and reset variables
-			animator.setAnimationState("bodyState", "spitup")
-			object.setInteractive(true)
-			animator.playSound("close")
-
-			fed = false
-			swallowTimer = 0
-			timer = 0
-			
-			do return end
-
-		end
-		
-		---While the player is eaten
-		timer = timer + dt
-		
+		stopwatch = stopwatch + dt
 		if animState == "idle3" and math.random(600) == 1 then
 			animator.setAnimationState("bodyState", "fed")
 			do return end
 		end
-		
-		if swallowTimer < 7 then
-			swallowTimer = swallowTimer + 1
-		elseif swallowTimer == 7 then
-			animator.playSound("swallow")
-			swallowTimer = swallowTimer + 1
+		if stopwatch >= 90 then
+			if victim ~= nil then
+				world.sendEntityMessage( victim, "applyStatusEffect", "voreclear", 90, entity.id() )
+			end
+			animator.setAnimationState("bodyState", "spitup")
+			object.setInteractive(true)
+			animator.playSound("close")
+			stopwatch = 0
+			victim = nil
+			fed = false
+			do return end
 		end
+	end
 
-	elseif animState == "idle1" and math.random(600) == 1 then
+	if animState == "idle1" and math.random(600) == 1 then
 		animator.setAnimationState("bodyState", "idle2")
 		do return end
 	end
@@ -63,8 +58,7 @@ function update(dt)
 		includedTypes = {"player"},
 		boundMode = "CollisionArea"
 	})
-			
-	if animState == "idle1" and #people == 1 then
+	if animState == "idle1" and #people > 0 then
 		animator.setAnimationState("bodyState", "open")
 		-- play open sound
 		animator.playSound("open")
@@ -73,44 +67,4 @@ function update(dt)
 		-- play close sound
 		animator.playSound("close")
 	end
-end
-
-function onInteraction()
-
-	if initialized == true and fed == false then
-		if math.random() >= 0.97 then
-			---get the player		
-			local people = world.entityQuery( object.position(), 7, {
-				includedTypes = {"player"},
-				boundMode = "CollisionArea"
-			})
-			if #people == 1 then
-				victim = people[1]
-			else
-				do return end
-			end
-		
-			---spawn projectile
-			temp = entity.id()
-			
-			local mergeOptions = {
-				statusEffects = {
-				{
-					effect = "objectvore",
-					duration = temp
-			}}}
-			world.spawnProjectile( "objectvoreprojectile" , world.entityPosition( victim ), entity.id(), {0, 0}, false, mergeOptions)
-			animator.playSound("eat")
-		
-			---change states
-			world.containerClose( entity.id() )
-			animator.setAnimationState("bodyState", "eat")
-			object.setInteractive(false)
-			fed = true
-		
-			---check if the encounter will be fatal
-		end
-	end
-	initialized = true
-
 end

@@ -124,10 +124,8 @@
       "converse" : {
         "default" : {
           "default" : [
-            "It's a lovely day, isn't it?",
-			"Let me know whenever you want a warm place to rest.",
-			"Drop by later tonight and I'll give you a personal bed, hehe."
-          ]
+				""
+		  ]
         }
       }
     }
@@ -136,7 +134,7 @@
   "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/rake/rake.lua" 
+				"/npcs/vore/rake/pred_rake.lua" 
   ],
 
   "matchColorIndices" : true,
@@ -152,7 +150,10 @@
             ],
             "legs" : [
               { "name" : "rakelegs", "parameters" : { "colorIndex" : [ 0 ] } }
-            ]
+            ],
+			"back" : [
+			  { "name" : "rakewings", "parameters" : { "colorIndex" : [ 0 ] } }
+			]
           }
         ] ]
     ]

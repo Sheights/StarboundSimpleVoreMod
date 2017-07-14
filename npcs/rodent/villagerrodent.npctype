@@ -1,0 +1,143 @@
+{
+  "type" : "villagerrodent",
+  "baseType" : "villager",
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Hey, please bring that back. I liked it."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"Dude, I cant live in a place with holes."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"I don't think there's enough space for two people in here."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+							"Please, fix the problem or I'll have to leave."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+							"Last warning. I really don't like this place right now."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"Oh hey! How's going?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Here's your payment!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Help! I'm unarmed!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Aaaah, peace at last!",
+					"Those nasty things didn't stand a chance!",
+					"Finally, back to normal!"
+			]
+		  }
+        }
+	  },
+      "breakObject" : {
+		"default" : {
+		  "default" : [
+			"Hey, that's not nice."
+		  ]
+		}
+	  },
+	  "greeting" : "/dialog/converse.config:greeting",
+	  "converse" : "/dialog/converse.config:converse",
+	  "accuse" : {
+		"default" : {
+		  "default" : [
+			"Why did you do that?"
+		  ]
+		}
+	  },
+	  "alert" : {
+		"default" : {
+		  "default" : [
+			"There's a thief here. And it isn't me."
+		  ]
+		}
+	  }
+    }
+  },
+  "disableWornArmor" : false,
+
+  "matchColorIndices" : false,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "hibanitophat", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibaniblackmask", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanicheapbuds", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanielizabethiancollar", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanifloralband", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibaniknife", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanisantahat", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanispikedcollar", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanicommunicatorhead", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibaniheadsethead", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibaninerdglasseshead", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibanhibaniscouterheaditophat", "parameters" : { "colorIndex" : [ 0 ] } },
+			  {}
+			],
+            "chest" : [
+              { "name" : "hibaniclawchest", "parameters" : { "colorIndex" : [ 0 ] } },
+			  { "name" : "hibaniwristbandchest", "parameters" : { "colorIndex" : [ 0 ] } },
+			  {}
+            ]
+          }
+        ] ]
+    ]
+  }
+}

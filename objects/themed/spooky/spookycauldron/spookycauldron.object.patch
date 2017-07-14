@@ -1,0 +1,22 @@
+[
+  {
+    "op": "add",
+    "path": "/colonyTags/-",
+    "value": "vore"
+  },
+  {
+    "op": "add",
+    "path": "/colonyTags/-",
+    "value": "cvore"
+  },
+  {
+    "op": "add",
+    "path": "/colonyTags/-",
+    "value": "dvore"
+  },
+  {
+    "op": "add",
+    "path": "/colonyTags/-",
+    "value": "prey"
+  }
+]

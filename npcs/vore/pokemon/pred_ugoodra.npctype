@@ -7,7 +7,13 @@
 	"gender" : "female"
   },
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -90,25 +96,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"G-Goo!",
-						"Goodra!",
-						"Draaa!"
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Goo! Dra! Goo! Dra!",
-					"Goo! Goo! Goo!",
-					"Dra! Dra! Dra!",
-					"You can do it!"
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -119,7 +106,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"So Good to see you!",
+			"Oh my! Look at all the cute things here!"
+          ]
+        }
+	  },
+	  "converse" : {
         "default" : {
           "default" : [
 					"My horns are really strong.",

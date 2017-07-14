@@ -1,23 +1,22 @@
 require "/scripts/vore/npcvore.lua"
 
-soundLock = true
+ci			= nil
 
-ci = nil
+animFlagEat	= false
+animFlagLay	= false
+soundLock	= false
 
-duration = 60
+animTimer	= 0
 
-swallowsound = "yoshitongueprojectile"
+eggEffect	= "npceggbase"
 
 function initHook()
-
 	if storage.ci == nil then
 		ci = npc.getItemSlot("legs").parameters.colorIndex
 		storage.ci = ci
 	else
 		ci = storage.ci
 	end
-	
-	
 	legs = {
 		name = "yoshilegs",
 		parameters = {
@@ -53,65 +52,100 @@ function initHook()
 		parameters = {
 					colorIndex = ci
 	}}
-
 	if ci == 0 then
-		voreeffect = "yoshired"
+		eggEffect = "npceggyoshired"
 	elseif ci == 1 then
-		voreeffect = "yoshigreen"
+		eggEffect = "npceggyoshigreen"
 	elseif ci == 2 then
-		voreeffect = "yoshiindigo"
+		eggEffect = "npceggyoshiindigo"
 	elseif ci == 3 then
-		voreeffect = "yoshiyellow"
+		eggEffect = "npceggyoshiyellow"
 	elseif ci == 4 then
-		voreeffect = "yoshiblack"
+		eggEffect = "npceggyoshiblack"
 	elseif ci == 5 then
-		voreeffect = "yoshicyan"
+		eggEffect = "npceggyoshicyan"
 	elseif ci == 6 then
-		voreeffect = "yoshipink"
+		eggEffect = "npceggyoshipink"
 	elseif ci == 7 then
-		voreeffect = "yoshiwhite"
+		eggEffect = "npceggyoshiwhite"
 	elseif ci == 8 then
-		voreeffect = "yoshiorange"
+		eggEffect = "npceggyoshiorange"
 	elseif ci == 9 then
-		voreeffect = "yoshipurple"
+		eggEffect = "npceggyoshipurple"
 	end
-	
 end
 
-function interactHook()
+function dress()
+end
 
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "yoshitongueprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	animFlagEat = true
+	animTimer 	= 0
+	soundLock 	= true
+end
+
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "yoshitongueprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	animFlagEat = true
+	animTimer 	= 0
+	soundLock 	= true
+end
+
+function interactHook(input)
 	if math.random(4) == 1 then
 		world.spawnProjectile( "yoshiyoshiprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
-	end
-	
+	end	
 end
 
-function loseHook()
-
+function digestHook(id, time, dead)
 	world.spawnProjectile( "yoshilayprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
-	
+	world.sendEntityMessage( id, "applyStatusEffect", eggEffect, 60, entity.id() )
+	npc.setItemSlot( "legs", legs )
+	animFlagEat = false
+	animFlagLay = true
 end
 
-function updateHook()
+function releaseHook(input, time)
+	if time >= 60 then
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", "voreclear", 1, entity.id() )
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", eggEffect, 60, entity.id() )
+	end
+	world.spawnProjectile( "yoshilayprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
+	npc.setItemSlot( "legs", legs )
+	animFlagEat = false
+	animFlagLay = true
+end
 
-	if fed then
-		if stopWatch < 0.3 then
+function updateHook(dt)
+	if animFlagEat then
+		if animTimer < 0.3 then
 			npc.setItemSlot( "head", head2 )
-		elseif	stopWatch < 0.6 then			
+		elseif	animTimer < 0.6 then			
 			npc.setItemSlot( "head", head3 )
-		elseif	stopWatch < 0.9 then			
+		elseif	animTimer < 0.9 then			
 			npc.setItemSlot( "head", head4 )
 			if soundLock then
 				world.spawnProjectile( "yoshiswallowprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 				soundLock = false
 			end
-		elseif	stopWatch < 1.2 then
-			soundLock = true
+		else
 			npc.setItemSlot( "head", head )
 			npc.setItemSlot( "legs", legsbelly )
-		elseif stopWatch > 59.7 then
-			npc.setItemSlot( "head", head5 )
+			animFlagEat = false
+			animTimer = 0
 		end
+		animTimer = animTimer + dt
 	end
-
+	if animFlagLay then
+		if animTimer < 0.4 then
+			npc.setItemSlot( "head", head5 )
+		else
+			npc.setItemSlot( "head", head )
+			animFlagLay = false
+		end
+		animTimer = animTimer + dt
+	end
 end

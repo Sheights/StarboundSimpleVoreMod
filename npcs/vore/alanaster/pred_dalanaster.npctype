@@ -2,6 +2,9 @@
   "type" : "pred_dalanaster",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "male"
+  },
   "npcname" : "Alanaster",
   
   "scriptConfig" : { 

@@ -4,8 +4,11 @@
   
   "scriptConfig" : { 
 	"questGenerator" : {
-      "pools" : ["normal", "villager"],
-      "enableParticipation" : true
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
     },
     "dialog" : {
       "tenant" : {
@@ -82,16 +85,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"That one is too weak to hunt for itself. Go help them!",
-						"Not everyone's fit to be a predator, but go aide them!",
-						"Fight in a pack!"
-			]
-		  }
-		},
-        "encourage" : "/dialog/flee.config:encourage",
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -102,7 +95,17 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Hey~",
+			"Why don't you ssstick around later.",
+			"Come here often?"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Hello there!",

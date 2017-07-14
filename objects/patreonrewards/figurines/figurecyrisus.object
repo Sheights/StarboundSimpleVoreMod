@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurecyrisus",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A shy and reserved Avian with pure morals, he's really just a big feathery ball of love.",
+  "shortdescription" : "Cyrisus Figure",
+
+  "inventoryIcon" : "figurine.png:cyrisus",
+  "orientations" : [
+    {
+      "image" : "figurine.png:cyrisus",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:cyrisus",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

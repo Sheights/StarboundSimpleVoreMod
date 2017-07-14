@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuretg",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : ". . . do it look at me?",
+  "shortdescription" : "TG Figure",
+
+  "inventoryIcon" : "figurine.png:tg",
+  "orientations" : [
+    {
+      "image" : "figurine.png:tg",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:tg",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

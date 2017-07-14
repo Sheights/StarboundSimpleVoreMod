@@ -1,20 +1,17 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
-chest = "goodranormalchest"
-legs = "goodranormallegs"
+chest[2] = "goodranormalchestmid"
+legs[2] = "goodranormallegsmid"
 
-midchest = "goodranormalchestmid"
-midlegs = "goodranormallegsmid"
+chest[4] = "goodranormalchestfull"
+legs[4] = "goodranormallegsfull"
 
-fullchest = "goodranormalchestfull"
-fulllegs = "goodranormallegsfull"
-
+capacity = 3
 duration = 120
 
-projectile	= "dragonvoreprojectile"
-dprojectile	= "dragondvoreprojectile"
+playerLines = {}
 
-smallLines = {	"It's the best hug!",
+playerLines[1] = {	"It's the best hug!",
 				"Dra!",
 				"My gooy full course! How scrumptions!",
 				"Hahaha. You are getting all gooy now!",
@@ -22,7 +19,7 @@ smallLines = {	"It's the best hug!",
 				"It's really warm and slimy in there huh? Sounds great!"
 			}
 			
-medLines = {	"You two are so cute together!",
+playerLines[2] = {	"You two are so cute together!",
 				"Goo!",
 				"Hug! Hug!",
 				"I love you!",
@@ -30,7 +27,7 @@ medLines = {	"You two are so cute together!",
 				"I bet it's really sticky in there!"
 			}
 
-largeLines = {	"Heavy!",
+playerLines[3] = {	"Heavy!",
 				"You're squishing my insides. I can't breathe!",
 				"Draaa!",
 				"This was a bad idea.",
@@ -42,7 +39,6 @@ largeLines = {	"Heavy!",
 			}
 			
 function initHook()
-	
 	if storage.shiny == nil and math.random(100) == 1 then
 		storage.shiny = true
 		makeShiny()
@@ -51,42 +47,37 @@ function initHook()
 	else
 		storage.shiny = false
 	end
-	
 end
 
-function interactHook()
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
+function requestHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
+
+function interactHook(input)
 	if math.random(4) == 1 then
 		world.spawnProjectile( "goodraprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 	end
-	
 end
 
-function updateHook()
-
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
-	
-		if #victim == 1 then
-			npc.say( smallLines[math.random(#smallLines)])
-		elseif #victim == 2 then
-			npc.say( medLines[math.random(#medLines)])
-		elseif #victim == 3 then
-			npc.say( largeLines[math.random(#largeLines)])
-		end
-		
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines[#victim] )
 	end
-
 end
 
 function makeShiny()
-
 	npc.setItemSlot( "chest", "goodrashinychest" )
 	npc.setItemSlot( "legs", "goodrashinylegs" )
-	chest = "goodrashinychest"
-	legs = "goodrashinylegs"
-	midchest = "goodrashinychestmid"
-	midlegs = "goodrashinylegsmid"
-	fullchest = "goodrashinychestfull"
-	fulllegs = "goodrashinylegsfull"
-
+	chest[1] = "goodrashinychest"
+	legs[1] = "goodrashinylegs"
+	chest[2] = "goodrashinychestmid"
+	legs[2] = "goodrashinylegsmid"
+	chest[4] = "goodrashinychestfull"
+	legs[4] = "goodrashinylegsfull"
 end

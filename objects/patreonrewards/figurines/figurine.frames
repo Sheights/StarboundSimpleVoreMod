@@ -2,11 +2,14 @@
 
   "frameGrid" : {
     "size" : [12, 12],
-    "dimensions" : [7, 3],
+    "dimensions" : [7, 6],
     "names" : [
-      [ "lynn", "blake", "charizard", "graeskar", "kato", "raito", "ruben" ],
-	  [ "rubyrose", "sheights", "snappy", "snefug", "sparky", "starlily", "tricky" ],
-	  [ "thoshgalv", "treebuddy", "victor", "wiess", "yang" ]
+      [ "agentwashington", "amethyst", "lynn", "aurora", "blake", "charizard", "cinccino" ],
+	  [ "courin", "cyrisus", "eyalia", "fan", "graeskar", "imukai", "jovial" ],
+	  [ "kass", "kato", "lizardman", "mousani", "nothing", "pixelgryph", "raito" ],
+	  [ "redshygirl", "ruben", "rubyrose", "sheights", "snappy", "snefug", "sparky" ],
+	  [ "spyro", "starlily", "tg", "tricky", "thoshgalv", "treebuddy", "tyranitar" ],
+	  [ "valentine", "victor", "wiess", "yang" ]
     ]
   }
 }

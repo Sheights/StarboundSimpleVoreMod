@@ -4,7 +4,7 @@
   "image" : "invisibleprojectile.png",
   "frameNumber" : 1,
   "speed" : 0,
-  "timeToLive" : 3,
+  "timeToLive" : 0.1,
   "animationLoops" : false,
   "flippable" : true,
   "piercing" : true,

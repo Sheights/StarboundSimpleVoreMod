@@ -1,8 +1,6 @@
 require "/scripts/vore/npcvore.lua"
 
-legs = "sharktanlegs"
-
-fulllegs = "sharktanlegsbelly"
+legs[2] = "sharktanlegsbelly"
 
 playerLines = {	"Mmm you're fishfood now~",
 				"Sorry meat, you needed a bigger boat...",
@@ -12,16 +10,18 @@ playerLines = {	"Mmm you're fishfood now~",
 				"If you find anything interesting in there, bring it back would you?"
 }
 
-function loseHook()
-	
-	isPlayer = false
-	
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
+
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

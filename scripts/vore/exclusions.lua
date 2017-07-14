@@ -1,3 +1,3 @@
-exclusionList = {	"Nin the Folf",
-					"Victor"
+exclusionList = {	"pred_dnin",
+					"pred_dvictor"
 }

@@ -1,12 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
-legs = "humanclothedlegs"
-
-fulllegs = "humanclothedlegsbelly"
-
-duration = 60
-
-audio = false
+audio	= false
+legs[2] = "humanclothedlegsbelly"
 
 playerLines = {	"Ah, so full and gravid with a child in my tummy~",
 				"I hope you don't mind stewing in there for a while...Nine months sound good to you?",
@@ -18,19 +13,20 @@ playerLines = {	"Ah, so full and gravid with a child in my tummy~",
 				"Your heartbeat matches mine. Do you feel it? I feel it."
 }
 
-function loseHook()
-	
-	if isPlayer then
-		npc.say("Why hello, my daughter~")
+function digestHook(id, time, dead)	
+	if containsPlayer() then
+		npc.say("Why hello, my child~")
+	end	
+end
+
+function releaseHook()
+	if containsPlayer() then
+		npc.say("Why hello, my child~")
 	end
-	
-	isPlayer = false
-	
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
 end

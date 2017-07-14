@@ -2,6 +2,213 @@
   "type" : "pred_mantizi",
   "baseType" : "villager",
 
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+				  "Something feels... off.",
+				"Oh no no no, this simply won't do.",
+				"You expect me to just live like this?"
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+				  "What would my neighbours think?",
+				"My home has fallen into disrepair!",
+				"I can feel the property value plummeting."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+				"Sorry, I'm not ready for such a drastic lifestyle change.",
+				"Are you serious? This is my place!",
+				"Not accepting guests right now. Especially not permanent ones."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+				  "We need to have a talk about my accommodations.",
+				"I'm going to be filing a very angry report!",
+				"Are you ignoring my needs? Do you even know who I am?"
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+				  "I truly thought we could work something out, here.",
+				"I didn't even want to live in this garbage heap in the first place!",
+				"That's it, I'm out."
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+				"Hey, how can I help you?",
+				"Yes, yes, I'm home. What is it?",
+				"Is there a problem?",
+				"Speak.",
+				"What is up?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+				"I found this, and thought you would like to have it.",
+				"Keep this between us.",
+				"Here. For everything you've done.",
+				"This should do.",
+				"Capitalism! Gotta' love it."
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+			  "Oh!",
+				"By the gods!",
+				"Guards! Guards!",
+				"I am being accosted!",
+				"Can you not?"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+			  "Is it over?",
+				"Well, that was exciting.",
+				"I'm just glad I'm safe.",
+				"They didn't steal anything, did they?"
+			]
+		  }
+        }
+	  },
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello there.",
+				"Greetings!",
+				"Welcome!",
+				"My, what kind of creature are you?",
+				"Mind the furniture, just had it cleaned.",
+				"Who let you inside?",
+				"Well just waltz right in, I guess.",
+				"Oh, I didn't know we were having visitors!"
+          ]
+        }
+      },
+	  "converse" : {
+        "default" : {
+          "default" : [
+				"Hello there.",
+				"Greetings!",
+				"Welcome!",
+				"My, what kind of creature are you?",
+				"Mind the furniture, just had it cleaned.",
+				"Who let you inside?",
+				"Well just waltz right in, I guess.",
+				"Oh, I didn't know we were having visitors!"
+			],
+			"apex" : [
+				"Hey there.",
+				"What brings you to this side of the galaxy, my furry friend?",
+				"You won't find any Miniknog spies here, friend. Probably.",
+				"Big Ape, Emperor, tyrants are all the same.",
+				"I have a lot of respect for rebels. You're doing good work.",
+				"I love what you're doing with your beard, there."
+			],
+			"avian" : [
+				"Welcome, my feathered friend!",
+				"You're free to pray to Kleux or whomever you wish in our temples.",
+				"Those feathers must be difficult to clean.",
+				"Mind if I borrow a few feathers? That color would look great on me.",
+				"Being grounded sounds terrible. My sympathies.",
+				"I know some people who might be interested in a few of those temple relics of yours."
+			],
+			"floran" : [
+				"Oh. Hey.",
+				"It seems my garden as grown legs... and an attitude.",
+				"Try not to shed leaves all over my floor.",
+				"Barbaric.",
+				"I guess they'll let anyone in here these days.",
+				"Last time I talked to a Floran, she bit me! And that was only the first date."
+			],
+			"human" : [
+				"Hey hey.",
+				"Semper Fi! Hoorah!",
+				"Big fans of the whole Capitalism thing.",
+				"Oh, you and your cute little eyes and soft, weak skin.",
+				"Do you party?",
+				"I served time in a USMC prison once. Nice place."
+			],
+			"glitch" : [
+				"Good day.",
+				"Friendly. Greetings, tin man.",
+				"Real bucket of fun, you are.",
+				"Met a Glitch once. Nice guy. Tried to stab me.",
+				"Do you always preface your speech with an emotion? That's super annoying.",
+				"Time to break out the ethanol. Let's get demolished."
+			],
+			"hylotl" : [
+				"Koi-nichiwa. Ha!",
+				"You're a long way from the ocean, friend.",
+				"Master Hylotl.",
+				"Want to hear a joke? The lower class! Ha!",
+				"How's it going, honored friend?",
+				"I sometimes wish I could swim."
+			],
+			"novakid" : [
+				"Well, aren't you interesting.",
+				"Howdy. Did I say that right?",
+				"Please don't burn my furniture.",
+				"I'd offer you a drink, but... uhm...",
+				"Did you just wink at me? I honestly can't tell.",
+				"I've been to one of your hoedowns before. Great fun."
+			],
+			"mantizi" : [
+				"Goodness, look at you!",
+				"Hello there.",
+				"Finally, a little class.",
+				"Love what you've done with your setae.",
+				"Do you polish your carapace? Looks good.",
+				"You here for the party?"
+			],
+			"felin" : [
+				"Hello.",
+				"Here kitty-kitty.",
+				"Please don't shred my curtains, I just got them pressed.",
+				"Are you one of those hug salespeople?",
+				"If I'd known you would show up, I'd have set out a saucer of milk.",
+				"Oh, me-ow."
+			]
+        }
+      }
+    }
+  },
   "disableWornArmor" : false,
   "scriptDelta" : 5,
 

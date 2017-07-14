@@ -1,0 +1,26 @@
+{
+  "objectName" : "aaabadge",
+  "printable" : false,
+  "colonyTags" : ["avore"],
+  "rarity" : "Legendary",
+  "description" : "Signifies this space for an 'anal vore' tenant. You can remove it and replace it with any vore object when you are done.",
+  "shortdescription" : "Anal Vore Badge",
+  "race" : "generic",
+  "category" : "decorative",
+  "price" : 50,
+
+  "inventoryIcon" : "avicon.png",
+  "orientations" : [
+    {
+      "image" : "badge.png:AV",
+
+      "imagePosition" : [-1, -1],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaces" : [ [0, 0], [0, 0] ],
+      "anchors" : [ "background" ]
+
+    }
+  ]
+}

@@ -1,40 +1,57 @@
 require "/scripts/vore/npcvore.lua"
 
-isDigest = true
-
-legs = "slimegreenlegs"
-
-fulllegs = "slimegreenlegsbelly1"
+isDigest	= true
+effect 		= "npcdigestvore"
 
 playerLines = {	"I'm so happy you decided to join me <3",
 				"Can I borrow a little of you? I lost some of me when I went for a walk yesterday.",
 				"There is no way we could be closer. Well, there is one way~",
+				"How are you doing in there? I can feel you're scared. Aww don't be. I'll keep you safe.",
 				"Relax and be one with me~",
-				"Mmmm, don't worry about the melting feeling, soon you'll feel amazing~",
-				"You'll probably make me look fat with all the mass you'll be adding~",
 				"I-I couldn't be happier! Thank you."
 }
 
-function loseHook()
-	
-	if isPlayer then
-		npc.say("Thank you so much for the time. I hope we can be together again.")
-	end
-	
-	isPlayer = false
-	
+function initHook()
+	index = npc.getItemSlot("legs").parameters.colorIndex
+	legs[2] = {
+		name = "trueslimegreenlegsbelly1",
+		parameters = {
+					colorIndex = index
+	}}
+	legsbelly = {
+		name = "trueslimegreenlegsbelly",
+		parameters = {
+					colorIndex = index
+	}}
 end
 
-function updateHook()
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
-	end
-	
-	if fed then
-		if stopWatch >= 45 then
-			npc.setItemSlot( "legs", "slimegreenlegsbelly" )
-		end
-	end
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
+function releaseHook(input, time)
+	if containsPlayer() then
+		npc.say("Thank you so much for the time. I hope we can be together again.")
+	end
+end
+
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		npc.say("Thank you so much for the time. I hope we can be together again.")
+	end	
+end
+
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
+	end
+	if stopWatch[1] >= 45 then
+		npc.setItemSlot( "legs", legsbelly )
+	end
 end

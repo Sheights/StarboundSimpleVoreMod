@@ -2,9 +2,18 @@
   "type" : "pred_lalim",
   "baseType" : "villager",
 
+  "identity" : {
+	"gender" : "male"
+  },
   "npcname" : "Lalim",
-  "scriptConfig" : {
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

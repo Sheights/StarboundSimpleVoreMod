@@ -1,14 +1,15 @@
-require "/scripts/vore/multivore.lua"
-
-stopWatch	= { 0, 0, 0, 0 }
+require "/scripts/vore/npcvore.lua"
 
 capacity = 4
-
-request		= { false, false, false, false }
-victim		= { nil, nil, nil, nil }
+duration = 12
 
 isDigest = true
-fauxrequested = false
+effect 	= "npcdigestvore"
+
+legs[2] = "victorlegsbelly1"
+legs[3] = "victorlegsbelly2"
+legs[4] = "victorlegsbelly3"
+legs[5] = "victorlegsbelly4"
 
 playerLines = {}
 
@@ -44,72 +45,33 @@ playerLines["plea"] = {	"Why would I do that?",
 						"If I release you, I'll have to do it with everyone."
 }
 
-function redress()
-
-	digest()
-	
+function deathHook(input)
+	sayLine( playerLines[ "die" ] )
 end
 
 function digestHook()
-
-	npc.say( playerLines[ "release" ][ math.random( #playerLines[ "release" ] ) ] )
-	
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "victorlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "victorlegs" )
-	end
-	
+	sayLine( playerLines[ "release" ] )
 end
 
 function feedHook()
-
-	if fauxrequested then
-		npc.say( playerLines["request"][ math.random( #playerLines["request"] )] )
-	else
-		npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
-	end
-	fauxrequested = false
-	npc.setItemSlot( "legs", "victorlegsbelly" .. #victim )
-	
+	sayLine( playerLines[ "eat" ] )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function interact(args)
-	
-	if talkTimer < 1 then
-	
-		if isVictim( world.entityName( args.sourceId ) ) then
-		
-			npc.say( playerLines["plea"][ math.random( #playerLines["plea"] )] )
-		
-		else
-			fauxrequested = true
-			feed()
-		end
-		
-		talkTimer = 1
-		
-	else
-		talkTimer = 0
-	end
+function requestHook(args)
+	sayLine( playerLines[ "request" ] )
+	request[#victim] = false
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	interactHook()
-	oldInteract(args)
-
-	return nil
-
+function reqRelease(input, time)
+	sayLine( playerLines[ "plea" ] )
 end
 
 function updateHook(dt)
-	
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		npc.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
+	if math.random(700) == 1 and containsPlayer() then
+		sayLine( playerLines[1] )
 	end
-
-end
-
-function forceExit()
-
-	npc.setItemSlot( "legs", "victorlegs" )
-
 end

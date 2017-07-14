@@ -1,23 +1,20 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
-isDigest = true
-
-stopWatch	= { 0, 0 }
-
-capacity = 2
-
-request		= { false, false }
-victim		= { nil, nil }
-
+capacity	= 2
+effect		= "npcdigestvore"
+isDigest	= true
 playerLines = {}
 
+legs[2]	= "ninlegsbelly1"
+legs[3]	= "ninlegsbelly2"
+
 playerLines[1] = {	"I can feel you getting softer in there.",
-	"Soon you'll just be another layer of pudge.",
-	"I wonder how much your bones will sell for this time?",
-	"I hope you had something valuable on you.",
-	"Mmm, I could still go for more :9",
-	"Every moment you're in there, more and more of you becomes mine~",
-	"I hope the others taste even better than you.",
+					"Soon you'll just be another layer of pudge.",
+					"I wonder how much your bones will sell for this time?",
+					"I hope you had something valuable on you.",
+					"Mmm, I could still go for more :9",
+					"Every moment you're in there, more and more of you becomes mine~",
+					"I hope the others taste even better than you.",
 }
 
 playerLines["eat"] = {	"Ahh, down you go.",
@@ -50,54 +47,34 @@ playerLines["exit"] = {	"Bah, I shouldn't be letting you go.",
 						"Meh, I'm sure I'll find something even better."
 }
 
-function redress()
-
-	digest()
-	
+function deathHook(input)
+	sayLine( playerLines["die"] )
 end
 
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "ninlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "ninlegs" )
+function digestHook(id, time, dead)
+	if not dead then
+		sayLine( playerLines["release"] )
 	end
-	
 end
 
 function feedHook()
+	sayLine( playerLines["eat"] )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	if #victim == 1 then
-		npc.setItemSlot( "legs", "ninlegsbelly1" )
-	else
-		npc.setItemSlot( "legs", "ninlegsbelly2" )
-	end
-	
-	if requested then
-		npc.say( playerLines["request"][ math.random( #playerLines["request"] )] )
-	else
-		npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
-	end
-	
+function requestHook()
+	sayLine( playerLines["request"] )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
+
+function releaseHook(input, time)
+	sayLine( playerLines["exit"] )
 end
 
 function updateHook(dt)
-	
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		npc.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
+	if math.random(700) == 1 and containsPlayer() then
+		sayLine( playerLines[1] )
 	end
-
-end
-
-function forceExit()
-
-	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
-
-	if #victim > 1 then
-		npc.setItemSlot( "legs", "ninlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "ninlegs" )
-	end
-
 end

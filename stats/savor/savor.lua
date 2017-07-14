@@ -2,12 +2,12 @@ function init()
 
   script.setUpdateDelta(5)
 
-  self.digestRate = -(1.0 / config.getParameter("digestTime", 100))
+  self.digestRate = -(1.0 / 150)
 end
 
 function update(dt)
 
-	if status.resourcePercentage("health") > 0.03 then
+	if status.resourcePercentage("health") > 0.02 then
 		status.modifyResourcePercentage("health", self.digestRate * dt)
 	end
 
@@ -15,8 +15,8 @@ end
 
 function uninit()
 
-	if status.resourcePercentage("health") <= 0.03 then
-		status.modifyResourcePercentage( "health", -0.04 )
+	if status.resourcePercentage("health") <= 0.02 then
+		status.modifyResourcePercentage( "health", -0.03 )
 	end
 	
 end

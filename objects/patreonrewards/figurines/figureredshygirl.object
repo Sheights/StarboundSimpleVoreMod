@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureredshygirl",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "O.O",
+  "shortdescription" : "Red Shy Girl Figure",
+
+  "inventoryIcon" : "figurine.png:redshygirl",
+  "orientations" : [
+    {
+      "image" : "figurine.png:redshygirl",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:redshygirl",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

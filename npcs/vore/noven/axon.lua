@@ -1,18 +1,10 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
 animFlag = false
-
-stopWatch	= { 0, 0, 0, 0, 0 }
-
 animTimer = 0
+
 capacity = 5
 duration = 180
-playerTimer = 180
-
-request		= { false, false, false, false, false }
-victim		= { nil, nil, nil, nil, nil }
-
-voreeffect = "dragonvoremed"
 
 playerLines = {}
 
@@ -74,50 +66,69 @@ playerLines["exit"] = {	"Fine... I guess you can leave now.",
 						"I await your inevitable return."
 }
 
-function redress()
-
-	digest()
-	
-end
-
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "axonlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "axonlegs" )
-	end
-	
-end
+function dress() end
 
 function feedHook()
-
-	if requested then
-		npc.say( playerLines["request"][ math.random( #playerLines["request"] )] )
-	else
-		npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
-	end
-	
+	sayLine( playerLines["eat"] )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 	if animFlag == true then
 		animTimer = 0
 	else
 		animFlag = true
 	end
-	
+end
+
+function requestHook(input)
+	sayLine( playerLines["request"] )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	if animFlag == true then
+		animTimer = 0
+	else
+		animFlag = true
+	end
+end
+
+function digestHook(id, time, dead)
+	sayLine( playerLines["release"] )
+	if #victim == 5 then
+		npc.setItemSlot( "legs", "axonlegsbelly4" )
+	elseif #victim == 4 then
+		npc.setItemSlot( "legs", "axonlegsbelly3" )
+	elseif #victim == 3 then
+		npc.setItemSlot( "legs", "axonlegsbelly2" )
+	elseif #victim == 2 then
+		npc.setItemSlot( "legs", "axonlegsbelly1" )
+	else
+		npc.setItemSlot( "legs", "axonlegs" )
+	end
+end
+
+function releaseHook(input, time)
+	sayLine( playerLines["exit"] )
+	if #victim == 5 then
+		npc.setItemSlot( "legs", "axonlegsbelly4" )
+	elseif #victim == 4 then
+		npc.setItemSlot( "legs", "axonlegsbelly3" )
+	elseif #victim == 3 then
+		npc.setItemSlot( "legs", "axonlegsbelly2" )
+	elseif #victim == 2 then
+		npc.setItemSlot( "legs", "axonlegsbelly1" )
+	else
+		npc.setItemSlot( "legs", "axonlegs" )
+	end
 end
 
 function updateHook(dt)
-
 	if animFlag then
-
-		dt = dt or 0.01
 		if animTimer < 5.0 then
 			npc.setItemSlot( "head", "axonheadbelly1" )
 		elseif animTimer < 7.0 then
 			npc.setItemSlot( "head", "axonheadbelly2" )
-		elseif animTimer < 9.0 then
+		elseif animTimer < 8.5 then
 			npc.setItemSlot( "head", "axonheadbelly3" )
-		elseif animTimer < 11.0 then
+		elseif animTimer < 10.0 then
 			npc.setItemSlot( "head", "axonheadbelly4" )
 		else
 			npc.setItemSlot( "head", "axonhead" )
@@ -129,24 +140,9 @@ function updateHook(dt)
 			animFlag = false
 			animTimer = 0
 		end
-		
 		animTimer = animTimer + dt
 	end
-	
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		npc.say( playerLines[ 1 ][ math.random( #playerLines[ 1 ] ) ] )
+	if math.random(700) == 1 and containsPlayer() then
+		sayLine( playerLines[1] )
 	end
-
-end
-
-function forceExit()
-
-	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
-
-	if #victim > 1 then
-		npc.setItemSlot( "legs", "axonlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "axonlegs" )
-	end
-
 end

@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -106,7 +112,17 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "...Hello...",
+			"...",
+			"...Look tasty...",
+			"...You food?..."
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "...Hello...",

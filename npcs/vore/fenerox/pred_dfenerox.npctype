@@ -2,14 +2,15 @@
   "type" : "pred_dfenerox",
   "baseType" : "villager",
 
-  "statusControllerSettings" : {
-    "statusProperties" : {
-      "effectDirectives" : ""
-    }
-  },
-
   "scriptConfig" : {
     "questGenerator" : { "pools" : [], "enableParticipation" : false },
+
+    "reactions" : {
+      "spontaneous" : [
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "patrol", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
 
     "behaviorConfig" : {
       "greetingChance" : 0
@@ -30,16 +31,8 @@
         }
       },
 
-      "flee" : {
-        "helpme" : "/dialog/fenerox.config:helpme",
-        "helpthem" : "/dialog/fenerox.config:helpthem",
-        "encourage" : "/dialog/fenerox.config:encourage",
-        "safe" : "/dialog/fenerox.config:safe"
-      },
-
       "converse" : "/dialog/fenerox.config:converse",
       "accuse" : "/dialog/fenerox.config:accuse",
-      "alert" : "/dialog/fenerox.config:alert",
 
       "attack" : "/dialog/fenerox.config:attack",
       "reattack" : "/dialog/fenerox.config:reattack",

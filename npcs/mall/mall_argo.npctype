@@ -8,12 +8,8 @@
   
   "npcname" : "Lynn",
   "damageTeamType" : "friendly",
-  "scriptConfig" : {
-	"questGenerator" : {
-      "pools" : ["normal"],
-      "enableParticipation" : false
-    },
-    "damageTeamType" : "friendly",
+  "scriptConfig" : { 
+    "questGenerator" : { "pools" : [], "enableParticipation" : false },
 	"dialog" : {
       "tenant" : {
         "grumbles" : {

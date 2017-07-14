@@ -2,8 +2,17 @@
   "type" : "pred_dorbspider",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "female"
+  },
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

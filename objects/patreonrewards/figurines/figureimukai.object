@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureimukai",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "I'm glad he does not exist in this game otherwise I'll be his lunch's.",
+  "shortdescription" : "Imukai Figure",
+
+  "inventoryIcon" : "figurine.png:imukai",
+  "orientations" : [
+    {
+      "image" : "figurine.png:imukai",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:imukai",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

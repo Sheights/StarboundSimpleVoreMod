@@ -2,6 +2,9 @@
   "type" : "pred_cdfox",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "male"
+  },
   "scriptConfig" : { 
 	"questGenerator" : {
       "pools" : ["normal"],
@@ -70,7 +73,7 @@
 			"default" : {
 			  "default" : [
 						"Here I am!",
-						"Surprised you stayed solid long enough to earn this.",
+						"I am happy you decided to stick around long enough to earn this.",
 						"Here's a little gift my sweet heart.",
 						"That's for being so kind."
 			  ]
@@ -88,24 +91,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Oh no they're gonna steal my toy!",
-						"Can anyone help them?",
-						"I don't want dead toys."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Take that!",
-					"You wanna see my insides, then I'll show you.",
-					"You just got one way trip in."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -116,6 +101,15 @@
 		  }
         }
 	  },
+	  "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Hiya!",
+			"Hi Hi!"
+          ]
+        }
+      },
       "converse" : {
         "default" : {
           "default" : [

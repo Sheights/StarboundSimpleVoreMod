@@ -11,49 +11,46 @@ playerLines = {	"I'm so happy you decided to join me <3",
 }
 
 function initHook()
-
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "slimeicelegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "slimeicelegsbelly1",
 		parameters = {
 					colorIndex = index
-	}}
-	
+	}}	
 	legsbelly = {
 		name = "slimeicelegsbelly",
 		parameters = {
 					colorIndex = index
 	}}
-
 end
 
-function loseHook()
-	
-	if isPlayer then
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
+
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
+
+function releaseHook(input, time)
+	if containsPlayer() then
 		npc.say("Thank you so much for the time. I hope we can be together again.")
 	end
-	
-	isPlayer = false
-	
 end
 
-function updateHook()
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		npc.say("Thank you so much for the time. I hope we can be together again.")
+	end	
+end
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-	
-	if fed then
-		if stopWatch >= 45 then
-			npc.setItemSlot( "legs", legsbelly )
-		end
+	if stopWatch[1] >= 45 then
+		npc.setItemSlot( "legs", legsbelly )
 	end
-
 end

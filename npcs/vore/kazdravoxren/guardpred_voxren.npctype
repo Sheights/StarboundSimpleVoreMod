@@ -111,7 +111,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello.",
+			"Hi!"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Need a place to stay warm?",

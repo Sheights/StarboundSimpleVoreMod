@@ -70,7 +70,7 @@
 			"default" : {
 			  "default" : [
 						"Here I am!",
-						"I'm happy you stayed around long enough to earn this.",
+						"Surprised you stayed undigested long enough to earn this.",
 						"Here's a little gift my sweet heart.",
 						"That's for being so kind."
 			  ]
@@ -88,24 +88,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Oh no they're gonna steal my prey!",
-						"Can anyone help them?",
-						"I don't want dead food."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Take that!",
-					"You wanna see my insides, then I'll show you.",
-					"You just got one way trip in."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -116,6 +98,15 @@
 		  }
         }
 	  },
+	  "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Hiya!",
+			"Hi Hi!"
+          ]
+        }
+      },
       "converse" : {
         "default" : {
           "default" : [

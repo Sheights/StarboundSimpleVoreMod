@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureeyalia",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This Goodra is just a big softie. While she loves being close with others, she's sometimes a little too eager in doing so.",
+  "shortdescription" : "Eyalia Figure",
+
+  "inventoryIcon" : "figurine.png:eyalia",
+  "orientations" : [
+    {
+      "image" : "figurine.png:eyalia",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:eyalia",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

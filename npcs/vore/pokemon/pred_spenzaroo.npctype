@@ -3,11 +3,14 @@
   "baseType" : "villager",
   
   "npcname" : "Spenzaroo",
-  "scriptConfig" : {
+  "scriptConfig" : { 
 	"questGenerator" : {
-      "pools" : [],
-      "enableParticipation" : false
-	},
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
 	"reactions" : {
       "spontaneous" : [
         [1.0, "sit", { "timeRange" : [0.6,0.2]}],

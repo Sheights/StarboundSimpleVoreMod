@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 50 }
+  ],
+  "output" : {
+    "item" : "aaabadge",
+    "count" : 1
+  },
+  "groups" : [ "smallBellyBound" ]
+}

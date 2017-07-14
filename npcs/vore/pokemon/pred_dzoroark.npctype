@@ -5,7 +5,13 @@
   "npcname" : "Zoroark",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -80,23 +86,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Save those poor people.",
-						"I'll be over here if you want to hide."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"You can do this!",
-					"Use your mighty power!",
-					"Fight well!"
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -107,7 +96,17 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "It's not often I show myself like this.",
+			"I've been searching forever for a home.",
+			"It's been a while since I could lay my feet up.",
+			"Hey! How are you doing?"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Such a nice person, to want to talk to me.",

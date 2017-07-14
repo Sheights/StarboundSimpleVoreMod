@@ -1,0 +1,15 @@
+{
+  "name" : "npceggyoshiwhite",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "/stats/effects/npcegg/npcegg.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "animationConfig" : "npceggyoshiwhite.animation",
+  
+  "label" : "Egged"
+}

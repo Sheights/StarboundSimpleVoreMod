@@ -1,0 +1,132 @@
+{
+	"animatedParts" : {
+		"stateTypes" : {
+			"objectState" : {
+				"default" : "default",
+				"priority" : 1,
+				"states" : {
+					"default" : {
+						"frames" : 1
+					},
+					"idle1" : {
+						"frames" : 1
+					},
+					"idle2" : {
+						"frames" : 1
+					},
+					"idle3" : {
+						"frames" : 1
+					},
+					"ready" : {
+						"frames" : 4,
+						"cycle" : 0.8,
+						"mode" : "loop"
+					},
+					"right1" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle1"
+					},
+					"left1" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle1"
+					},
+					"right2" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle2"
+					},
+					"left2" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle2"
+					},
+					"right3" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle3"
+					},
+					"left3" : {
+						"frames" : 5,
+						"cycle" : 1.0,
+						"mode" : "transition",
+						"transition": "idle3"
+					}
+				}
+			}
+		},
+		"parts" : {
+			"objectState" : {
+				"properties" : {
+					"centered" : true,
+					"zLevel" : 1
+				},
+				"partStates" : {
+					"objectState" : {
+						"default" : {
+							"properties" : {
+							"image" : "npceggocto0.png:default"
+							}
+						},
+						"idle1" : {
+							"properties" : {
+							"image" : "npceggocto0.png:idle1"
+							}
+						},
+						"idle2" : {
+							"properties" : {
+							"image" : "npceggocto0.png:idle2"
+							}
+						},
+						"idle3" : {
+							"properties" : {
+							"image" : "npceggocto0.png:idle3"
+							}
+						},
+						"ready" : {
+							"properties" : {
+								"image" : "npceggocto0.png:ready.<frame>"
+							}
+						},
+						"right1" : {
+							"properties" : {
+								"image" : "npceggocto0.png:right1.<frame>"
+							}
+						},
+						"left1" : {
+							"properties" : {
+								"image" : "npceggocto0.png:left1.<frame>"
+							}
+						},
+						"right2" : {
+							"properties" : {
+								"image" : "npceggocto0.png:right2.<frame>"
+							}
+						},
+						"left2" : {
+							"properties" : {
+								"image" : "npceggocto0.png:left2.<frame>"
+							}
+						},
+						"right3" : {
+							"properties" : {
+								"image" : "npceggocto0.png:right3.<frame>"
+							}
+						},
+						"left3" : {
+							"properties" : {
+								"image" : "npceggocto0.png:left3.<frame>"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

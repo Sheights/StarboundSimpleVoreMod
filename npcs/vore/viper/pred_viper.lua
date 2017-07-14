@@ -1,37 +1,25 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
 capacity = 2
+
+legs[2] = "viperlegsbelly1"
+legs[3] = "viperlegsbelly2"
 
 playerLines = {	"Hisssssss...."
 }
 
-legs = "viperlegs"
-fulllegs = "viperlegsbelly"
-
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "viperlegsbelly" .. #victim )
-	else
-		npc.setItemSlot( "legs", "viperlegs" )
-	end
-	
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function initHook()
-	
-end		
-
-function feedHook()
-
-	npc.setItemSlot( "legs", fulllegs .. #victim )
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

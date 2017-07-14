@@ -1,15 +1,13 @@
 require "/scripts/vore/npcvore.lua"
 
-legs = "spiderorblegs"
+legs[2] = "spiderorblegsbelly"
 
-fulllegs = "spiderorblegsbelly"
-
-function loseHook()
-	
-	isPlayer = false
-	
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function updateHook()
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end

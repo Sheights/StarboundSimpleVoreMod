@@ -124,10 +124,8 @@
       "converse" : {
         "default" : {
           "default" : [
-            "It's a lovely day, isn't it?",
-			"Let me know whenever you want a warm and sticky place to rest.",
-			"Drop by later tonight and I'll give you a pleasant bed, hehe."
-          ]
+				""
+		  ]
         }
       }
     }
@@ -136,7 +134,7 @@
   "scriptDelta" : 5,
   
   "scripts" : [ "/npcs/bmain.lua",
-				"/npcs/vore/rake/crake.lua" 
+				"/npcs/vore/rake/pred_crake.lua" 
   ],
 
   "matchColorIndices" : true,
@@ -152,7 +150,10 @@
             ],
             "legs" : [
               { "name" : "rakelegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
-            ]
+            ],
+			"back" : [
+			  { "name" : "rakewings", "parameters" : { "colorIndex" : [ 0 ] } }
+			]
           }
         ] ]
     ]

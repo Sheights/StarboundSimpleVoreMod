@@ -3,6 +3,136 @@
   "baseType" : "villager",
   
   "npcname" : "Saph",
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"...",
+							"...",
+							"..."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+							"....",
+							"....",
+							"...."
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"....",
+							"....",
+							"...."
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						".....",
+						".....",
+						"....."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"......",
+						"......",
+						"......"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"*waves*",
+						"...",
+						"....!"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"...~",
+						"Heh...~",
+						"*smiles*",
+						"*nods*"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"!",
+					"...!!",
+					"..."
+			]
+		  }
+		},
+        "helpthem" : {
+		  "default" : {
+			"default" : [
+						"...",
+						".....",
+						".."
+			]
+		  }
+		},
+        "encourage" : {
+		  "default" : {
+			"default" : [
+					"...!~",
+					"!!!~",
+					"..~ "
+			]
+		  }
+        },
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"....?",
+					"?",
+					".."
+			]
+		  }
+        }
+	  },
+      "converse" : {
+        "default" : {
+          "default" : [
+            "...~",
+			"*hugs*",
+			".....",
+			"...",
+			"......~"
+          ]
+        }
+      }
+    }
+  },
 
   "disableWornArmor" : false,
   "scriptDelta" : 5,

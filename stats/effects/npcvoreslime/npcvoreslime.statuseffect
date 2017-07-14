@@ -1,0 +1,12 @@
+{
+  "name" : "npcvoreslime",
+  "effectConfig" : {},
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "npcvoreslime.lua"
+  ],
+
+  "label" : "Melting",
+  "icon" : "/interface/statuses/slime.png"
+}

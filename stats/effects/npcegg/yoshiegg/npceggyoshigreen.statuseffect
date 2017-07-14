@@ -1,0 +1,15 @@
+{
+  "name" : "npceggyoshigreen",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "/stats/effects/npcegg/npcegg.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "animationConfig" : "npceggyoshigreen.animation",
+  
+  "label" : "Egged"
+}

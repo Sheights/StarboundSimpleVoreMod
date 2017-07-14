@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurejovial",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A short little skunk, although he isn't stereotypically smelly, you still probably don't want to go behind him.",
+  "shortdescription" : "Jovial Figure",
+
+  "inventoryIcon" : "figurine.png:jovial",
+  "orientations" : [
+    {
+      "image" : "figurine.png:jovial",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:jovial",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

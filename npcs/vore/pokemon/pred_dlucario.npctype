@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -80,16 +86,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"By the power of aura!",
-						"The strong must protect the weak!",
-						"I see an aura flickering in the distance"
-			]
-		  }
-		},
-        "encourage" : "/dialog/flee.config:encourage",
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -99,7 +95,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Salutations.",
+			"You're a new aura.",
+			"You smell fresh."
+          ]
+        }
+	  },
+	  "converse" : {
         "default" : {
           "default" : [
             "Hello Landlord.",

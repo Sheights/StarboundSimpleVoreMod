@@ -2,8 +2,15 @@
   "type" : "pred_dlopunny",
   "baseType" : "villager",
   
+  "npcname" : "Lopunny",
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -88,23 +95,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-							"Make it a double battle!",
-							"Come on, if a 10 year old can fight mosnters, so can you!"
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-							"Go, go, Lo, lo!",
-							"You're goign to get Lo-ts of support",
-							"Lopunny used HELPING HAND"
-			]
-		  }
-		},
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -116,7 +106,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hi!",
+			"Hel-Lopunny!",
+			"*Lopunny!*"
+          ]
+        }
+	  },
+	  "converse" : {
         "default" : {
           "default" : [
 				"Lopunny?",

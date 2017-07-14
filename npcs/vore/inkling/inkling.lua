@@ -14,25 +14,13 @@ function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
 	
-	chest = {
+	chest[2] = {
 		name = "inklingchest",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	fullchest = {
-		name = "inklingchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	legs = {
-		name = "inklinglegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "inklingbellylegs",
 		parameters = {
 					colorIndex = index
@@ -41,23 +29,28 @@ function initHook()
 end
 
 function feedHook()
-
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function loseHook()
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer then
+function digestHook(id, time, dead)
+	if containsPlayer() then
 		npc.say("Come back anytime you feel like a stay in a warm squidkid belly~")
 	end
-
-	isPlayer = false
-
+end
+function releaseHook(input, time)
+	if containsPlayer() then
+		npc.say("Come back anytime you feel like a stay in a warm squidkid belly~")
+	end
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

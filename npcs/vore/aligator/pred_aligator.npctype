@@ -5,7 +5,10 @@
   "scriptConfig" : { 
 	"questGenerator" : {
       "pools" : ["common"],
-      "enableParticipation" : true
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
     },
     "dialog" : {
       "tenant" : {
@@ -13,42 +16,43 @@
           "tagCriteria" : {
 			"default" : {
 			  "default" : [
-								"...?...",
-								"...Missing...",
-								"...Put back..."
+				  "...?...",
+				  "...Missing...",
+			  	  "...Put back..."
 			  ]
 			}
 		  },
           "enclosedArea" : {
 			"default" : {
 			  "default" : [
-								"...?...",
-								"...Fix..."
+				  "...?...",
+			  	  "...Fix..."
 			  ]
 			}
 		  },
           "otherDeed" : {
 			"default" : {
 			  "default" : [
-							"...?...",
-							"...Alone...",
-							"...No..."
+				"...?...",
+				"...Alone...",
+				"...No..."
 			  ]
 			}
 		  },
           "severe" : {
 			"default" : {
 			  "default" : [
-						"...!?...",
-						"...Now..."
+				  "...!?...",
+				  "...Now..."
 			  ]
 			}
 		  },
           "final" : {
 			"default" : {
 			  "default" : [
-						"...",
-						"...Goodbye..."
+				  "...",
+				  "...Goodbye...",
+				  "...Later..."
 			  ]
 			}
           }
@@ -57,17 +61,18 @@
           "beacon" : {
 			"default" : {
 			  "default" : [
-						"...?...",
-						"...Yes?...",
-						"...Hello..."
+				"...?...",
+				"...Yes?...",
+				"...Hello..."
 			  ]
 			}
 		  },
           "rent" : {
 			"default" : {
 			  "default" : [
-						"...~...",
-						"...Thank you..."
+				"...~...",
+				"...Thank you...",
+				"...Present..."
 			  ]
 			}
           }
@@ -77,47 +82,39 @@
         "helpme" : {
 		  "default" : {
 			"default" : [
-					"...?!...",
-					"...Help..."
+			  "...?!...",
+			  "...Help..."
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"...?!...",
-						"...Save them!..."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"...!...",
-					"...Thank you...",
-					"...Fight well..."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
-					"...Peace...",
-					"...",
-					"...Quiet..."
+			  "...Peace...",
+			  "...",
+			  "...Quiet..."
 			]
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
         "default" : {
           "default" : [
             "...Hello...",
 			"...",
 			"...Look tasty...",
+			"...You food?..."
+          ]
+        }
+      },
+	  "converse" : {
+        "default" : {
+          "default" : [
+			"...",
 			"...You need?...",
 			"...Mmm...",
-			"...You food?..."
+			"...Nice day...",
+			"...Stay close..."
           ]
         }
       }

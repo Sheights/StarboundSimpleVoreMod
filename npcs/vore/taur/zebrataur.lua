@@ -1,5 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
+legs[2] = "zebrataurlegsbelly"
+
 playerLines = {	"Soon, you'll be a spirit too!",
 				"It's always lovely when I don't need to hunt.",
 				"The spirits have gifted you to me, surely!",
@@ -8,19 +10,18 @@ playerLines = {	"Soon, you'll be a spirit too!",
 				"Another successful hunt!"
 }
 
-legs = "zebrataurlegs"
-fulllegs = "zebrataurlegsbelly"
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-function loseHook()
-	
-	isPlayer = false
-	
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

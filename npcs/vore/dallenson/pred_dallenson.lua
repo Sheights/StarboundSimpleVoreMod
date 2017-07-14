@@ -27,38 +27,44 @@ requestLeaveLines = {	"You can come out. I won't force you to stay.",
 						"Awwww, you feel really good in there but if you want out..."
 }
 
-function digestHook()
-	
-	if request then
-		npc.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
-	else
-		npc.say( releaseLines[ math.random( #releaseLines ) ] )
-	end
+function digestHook(id, time, dead)
+
+	sayLine( releaseLines )
+
+end
+
+function releaseHook(input)
+
+	sayLine( requestLeaveLines )
 	
 end
 
 function initHook()
 	
-	legs = "dallensonlegs"
-	
-	fulllegs = "dallensonlegsbelly"
+	legs[2] = "dallensonlegsbelly"
 
 end
 
-function feedHook()
-	
-	if request == true then
-		npc.say( requestLines[ math.random( #releaseLines ) ] )
-	else
-		npc.say( gulpLines[ math.random( #gulpLines ) ] )
-	end
+function feedHook(input)
+
+	sayLine( gulpLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+
+end
+
+function requestHook(input)
+
+	sayLine( requestLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 and ( stopWatch < duration or request ) then
-		npc.say( bellyLines[math.random(#bellyLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLines( bellyLines )
 	end
 
 end

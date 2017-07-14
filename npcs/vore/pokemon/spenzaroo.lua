@@ -1,20 +1,17 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
-chest = "goodraspenzaroochest"
-legs = "goodraspenzaroolegs"
+chest[2] = "goodraspenzaroochestmid"
+legs[2] = "goodraspenzaroolegsmid"
 
-midchest = "goodraspenzaroochestmid"
-midlegs = "goodraspenzaroolegsmid"
+chest[4] = "goodraspenzaroochestfull"
+legs[4] = "goodraspenzaroolegsfull"
 
-fullchest = "goodraspenzaroochestfull"
-fulllegs = "goodraspenzaroolegsfull"
-
+capacity = 3
 duration = 120
 
-projectile	= "dragonvoreprojectile"
-dprojectile	= "dragondvoreprojectile"
+effect = "npcvoreslime"
 
-bellyLines = {	"Aaahhhhh you feel delightful in there~",
+playerLines = {	"Aaahhhhh you feel delightful in there~",
 				"*squeezes the gooey belly around you* <3",
 				"Keep on squirming, you'll notice when your body starts to turn into goo~",  
 				"Shame that other goodra can't do things quite the same~"
@@ -29,34 +26,37 @@ requestLines = 	{	"Aw, so sweet of you <3",
 					"Have fun while in there, cutie~"
 				}
 			
-function initHook()
-	
-end
-
 function feedHook()
-	npc.say( eatLines[math.random(#eatLines)])
+	sayLine( eatLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function forceExit()
+function requestHook()
+	sayLine( requestLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
+
+function digestHook(id, time, dead)
+	world.sendEntityMessage( id, "applyStatusEffect", "npcslimespenz", 60, entity.id() )
+end
+
+function releaseHook(input, time)
 	npc.say( "There you go, come back later!" )
-end
-
-function forceFeed()
-	npc.say( requestLines[math.random(#requestLines)])
+	if world.entityHealth(input.sourceId)[1] / world.entityHealth(input.sourceId)[2] <= 0.03 then
+		world.sendEntityMessage( input.sourceId, "applyStatusEffect", "npcslimespenz", 60, entity.id() )
+	end
 end
 
 function interactHook()
-
 	if math.random(4) == 1 then
 		world.spawnProjectile( "goodraprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 	end
-	
 end
 
-function updateHook()
-
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true ) then
-		npc.say( bellyLines[math.random(#bellyLines)])	
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

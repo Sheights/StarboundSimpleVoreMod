@@ -1,8 +1,6 @@
 require "/scripts/vore/npcvore.lua"
 
-legs = "lucarionormallegs"
-
-fulllegs = "lucarionormallegsbelly"
+legs[2] = "lucarionormallegsbelly"
 
 playerLines = {	"That feels great. Don't stop moving, OK?",
 				"I am your master now!",
@@ -13,7 +11,6 @@ playerLines = {	"That feels great. Don't stop moving, OK?",
 }
 
 function initHook()
-	
 	if storage.shiny == nil and math.random(100) == 1 then
 		storage.shiny = true
 		makeShiny()
@@ -22,41 +19,36 @@ function initHook()
 	else
 		storage.shiny = false
 	end
-	
 end
 
-function interactHook()
-
+function interactHook(input)
 	if math.random(4) == 1 then
 		world.spawnProjectile( "lucarioprojectile" , mcontroller.position(), entity.id(), {0, 0}, false )
 	end
-	
 end
 
-function loseHook()
-	
-	if isPlayer then
-		npc.say("Don't you feel it? We are becoming one. In more than one way!")
-	end
-	
-	isPlayer = false
-	
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function updateHook()
+function requestHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+function updateHook(dt)
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end
 
 function makeShiny()
-
 	npc.setItemSlot( "head", "lucarioshinyhead" )
 	npc.setItemSlot( "chest", "lucarioshinychest" )
 	npc.setItemSlot( "legs", "lucarioshinylegs" )
-	legs = "lucarioshinylegs"
-	fulllegs = "lucarioshinylegsbelly"
-
+	head[1] = "lucarioshinyhead"
+	chest[1] = "lucarioshinychest"
+	legs[1] = "lucarioshinylegs"
+	legs[2] = "lucarioshinylegsbelly"
 end

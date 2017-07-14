@@ -1,4 +1,7 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
+
+capacity = 2
+duration = 90
 
 playerLines = {		"Surprise! Hope you enjoy learning about the digest system of wolves~<3",
 					"Such a scrumptious thing you are~",
@@ -12,54 +15,32 @@ playerLines = {		"Surprise! Hope you enjoy learning about the digest system of w
 					"Hunters always win, and in this case, they win a tasty meal~"
 }
 
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", fulllegs1 )
-	else
-		npc.setItemSlot( "legs", legs )
-	end
-	
-end
-
 function initHook()
-
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "wolfnewlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs1 = {
+	legs[2] = {
 		name = "wolfnewlegsbelly1",
 		parameters = {
 					colorIndex = index
 	}}
-	
-	fulllegs2 = {
+	legs[3] = {
 		name = "wolfnewlegsbelly2",
 		parameters = {
 					colorIndex = index
 	}}
-
 end
 
 function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	if #victim == 1 then
-		npc.setItemSlot( "legs", fulllegs1 )
-	else
-		npc.setItemSlot( "legs", fulllegs2 )
-	end
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

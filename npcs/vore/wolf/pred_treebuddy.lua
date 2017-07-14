@@ -1,4 +1,7 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
+
+capacity = 2
+duration = 90
 
 bellyLines = {	"Can u wiggle some more",
 				"Hope ur good in there ",
@@ -28,68 +31,52 @@ requestLeaveLines = {	"Ya want out ",
 						"Okay let me a second "
 }
 
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", fulllegs1 )
-	else
-		npc.setItemSlot( "legs", legs )
-	end
-	
-	if request[1] == false and request [2] == false then
-		npc.say( releaseLines[ math.random( #releaseLines ) ] )
-	end
-	
-end
-
 function initHook()
-
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "wolfnewlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs1 = {
+	legs[2] = {
 		name = "wolfnewlegsbelly1",
 		parameters = {
 					colorIndex = index
 	}}
-	
-	fulllegs2 = {
+	legs[3] = {
 		name = "wolfnewlegsbelly2",
 		parameters = {
 					colorIndex = index
 	}}
+end
 
+function deathHook(input)
+	if containsPlayer() then
+		sayLine( gurgleLines )
+	end
+end
+
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		sayLine( releaseLines )
+	end
+end
+
+function releaseHook(input, time)
+	if containsPlayer() then
+		sayLine( requestLeaveLines )
+	end
 end
 
 function feedHook()
+	sayLine( gulpLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-	if #victim == 1 then
-		npc.setItemSlot( "legs", fulllegs1 )
-	else
-		npc.setItemSlot( "legs", fulllegs2 )
-	end
-	
-	if request == true then
-		npc.say( requestLines[ math.random( #releaseLines ) ] )
-	else
-		npc.say( gulpLines[ math.random( #gulpLines ) ] )
-	end
-
+function requestHook(args)
+	sayLine( requestLines )
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true ) then
-		npc.say( bellyLines[math.random(#bellyLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( bellyLines )
 	end
-
-end
-
-function forceExit()
-	npc.say( requestLeaveLines[ math.random( #requestLeaveLines ) ] )
 end

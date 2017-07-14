@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -95,7 +101,17 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Greetings whelp.",
+			"How wonderful to be invited to your home.",
+			"This is a regal welcome?",
+			"Oh good. My welcome feast is here!"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "Your lair is impressive.",

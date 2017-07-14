@@ -1,0 +1,49 @@
+{
+  "itemName" : "cecaeliachest",
+  "price" : 250,
+  "inventoryIcon" : "icons.png:chest",
+  "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "The torso of a cecaelia! By Micro-Dragon",
+  "shortdescription" : "Cecaelia Torso",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+
+  "femaleFrames" : {
+    "body" : "chest.png",
+    "backSleeve" : "bsleeve.png",
+    "frontSleeve" : "fsleeve.png"
+  },
+  "colorOptions" : [
+	/* CLEAR */
+	{ "ffe2c5" : "ffe2c5", "ffc181" : "ffc181", "d39c6c" : "d39c6c", "c7815b" : "c7815b" },
+	/* BLACK */
+	{ "ffe2c5" : "c5ad98", "ffc181" : "a47a59", "d39c6c" : "865d40", "c7815b" : "66412e" },
+	/* GREY */
+	{ "ffe2c5" : "e8cebc", "ffc181" : "cfa97d", "d39c6c" : "ae774b", "c7815b" : "804e34" },
+	/* WHITE */
+	{ "ffe2c5" : "fff7ec", "ffc181" : "f9d3a9", "d39c6c" : "d3a57c", "c7815b" : "b37c5d" },
+	/* RED */
+	{ "ffe2c5" : "c594a1", "ffc181" : "b27082", "d39c6c" : "874e62", "c7815b" : "603347" },
+	/* ORANGE */
+	{ "ffe2c5" : "f4d0d2", "ffc181" : "eab2b5", "d39c6c" : "cc8288", "c7815b" : "a55b61" },
+	/* YELLOW */
+	{ "ffe2c5" : "e8e4d9", "ffc181" : "d9d3c0", "d39c6c" : "c7bea3", "c7815b" : "b4a78f" },
+	/* GREEN */
+	{ "ffe2c5" : "e3f0da", "ffc181" : "a6dfd1", "d39c6c" : "68b5a2", "c7815b" : "3d664f" },
+	/* BLUE */
+	{ "ffe2c5" : "d9f0ea", "ffc181" : "addbd0", "d39c6c" : "8fd0c6", "c7815b" : "77aeba" },
+	/* PURPLE */
+	{ "ffe2c5" : "bfb0ea", "ffc181" : "ab98e0", "d39c6c" : "8973c8", "c7815b" : "81689d" },
+	/* PINK */
+	{ "ffe2c5" : "97cac9", "ffc181" : "3aa4a2", "d39c6c" : "447d91", "c7815b" : "3a6583" },
+	/* BROWN */
+	{ "ffe2c5" : "9e9ad7", "ffc181" : "8883cb", "d39c6c" : "736ec2", "c7815b" : "534b98" }
+]
+}

@@ -1,0 +1,66 @@
+{
+  "objectName" : "vorerenamonanim",
+  "rarity" : "uncommon",
+  "description" : "A nice warm place to spend the night~",
+  "shortdescription" : "Renamon",
+  "race" : "avian",
+  "category" : "furniture",
+  "price" : 0,
+  "printable" : false,
+  
+  "apexDescription" : "This renamon seems to be inviting me... but for what?",
+  "avianDescription" : "Something about this girl seems... intriguing...",
+  "floranDescription" : "...Floran like renamon, but why?",
+  "glitchDescription" : "Wonder.  There is something about this female...",
+  "humanDescrtiption" : "Whatever it is you want miss, I'm saying yes~",
+  "hylotlDescription" : "Why are you looking at me like that?",
+  "novakidDescription" : "I like the way this lady's eyein' me.",
+  
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false,
+  "sitOrientation" : "lay",
+  "sitAngle" : 0,
+  "sitStatusEffects" : [
+    "voreheal",
+	"nude",
+	"intents"
+  ],
+  
+  "inventoryIcon" : "femaleicon.png",
+  "orientations" : [
+    {
+	  "image" : "renamon.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "sitPosition" : [20, 20],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "renamon.png:idle.1",
+	  "imagePosition" : [-16, 0],
+	  "direction" : "right",	  
+	  "sitPosition" : [20, 20],
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  
+  "scripts" : [ "/objects/vore/spo/renamon/renamon.lua" ],
+  
+  "animation" : "renamon.animation",
+  "animationCustom" : {
+    "sounds" : {
+	  "belly1" : [ "/sfx/objects/belly1.ogg" ],
+	  "belly2" : [ "/sfx/objects/belly2.ogg" ],
+	  "belly3" : [ "/sfx/objects/belly3.ogg" ],
+	  "spit" : [ "/sfx/objects/eggLay.ogg" ],
+	  "swallow" : [ "/sfx/humanoid/drink.ogg" ]
+	}
+  },
+  "animationParts" : {
+      "body" : "renamon.png"
+  },
+  "animationPosition" : [-16, 0]
+}

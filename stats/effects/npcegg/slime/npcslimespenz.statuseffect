@@ -1,0 +1,16 @@
+{
+  "name" : "npcslimespenz",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "/stats/effects/npcegg/npcslime.lua"
+  ],
+  "scriptDelta" : 1,
+  
+  "animationConfig" : "npcslimespenz.animation",
+  
+  "label" : "Reforming",
+  "icon" : "/interface/statuses/slime.png"
+}

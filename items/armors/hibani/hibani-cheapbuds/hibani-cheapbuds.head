@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibanicheapbuds",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "The music's quality sounds bad and the volume sucks. But it's cheap!",
+  "shortdescription" : "Hibani Cheap Earbuds",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

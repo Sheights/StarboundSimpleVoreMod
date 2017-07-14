@@ -10,13 +10,7 @@ function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
 	
-	legs = {
-		name = "avalirarulegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "avalirarulegsbelly",
 		parameters = {
 					colorIndex = index
@@ -24,24 +18,18 @@ function initHook()
 
 end
 
-function feedHook()
+function digestHook(id, time, dead) end
 
-end
-
-function loseHook()
-
-	if isPlayer then
+	if containsPlayer() then
 		npc.say("Thank you so much for filling my tummy. Hope to get to nom ya again soon ^..^")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
 
 end

@@ -1,13 +1,6 @@
 require "/scripts/vore/npcvore.lua"
 
-capacity = 1
-
-request		= { false, false }
-victim		= { nil, nil }
-
-playerLines = {}
-
-playerLines[1] = {	"Ooh, keep squirming~",
+playerLines = {	"Ooh, keep squirming~",
 					"Mmm, might just keep you in there all night.",
 					"*groans, stroking over your form.*",
 					"Nnnngg... lively one, aren't you?"
@@ -15,15 +8,8 @@ playerLines[1] = {	"Ooh, keep squirming~",
 }
 
 function initHook()
-	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "sykeslegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	index = npc.getItemSlot("legs").parameters.colorIndex	
+	legs[2] = {
 		name = "sykeslegsballs",
 		parameters = {
 					colorIndex = index
@@ -31,26 +17,23 @@ function initHook()
 end
 
 function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function loseHook()
-
-	if isPlayer then
+	if containsPlayer() then
+		npc.say("Come back anytime, hehe.")
 	end
-
-	isPlayer = false
-
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[1][math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
-end
-
-function forceExit()
-	npc.setItemSlot( "legs", "sykeslegs" )
 end

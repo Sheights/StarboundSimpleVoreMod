@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibanielizabethiancollar",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "Its not fair! I know I'm sick but I dont want to wear this!",
+  "shortdescription" : "Hibani Collar",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

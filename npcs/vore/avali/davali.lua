@@ -1,6 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
-isDigest = true
+isDigest	= true
+effect		= "npcdigestvore"
 
 playerLines = {		"Guess who's the better pred? Me~<3",
 					"Such a scrumptious thing you are~",
@@ -14,14 +15,8 @@ playerLines = {		"Guess who's the better pred? Me~<3",
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	legs = {
-		name = "avalilegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+
+	legs[2] = {
 		name = "avalilegsbelly",
 		parameters = {
 					colorIndex = index
@@ -30,23 +25,27 @@ function initHook()
 end
 
 function feedHook()
-
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function loseHook()
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
 
-	if isPlayer then
+function digestHook(id, time, dead)
+
+	if containsPlayer() then
 		npc.say("Thank you so much for filling my tummy. Hope to get to nom ya again soon ^..^")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if  math.random(700) == 1 and containsPlayer() then
+		sayLine( playerLines )
 	end
-
+	
 end

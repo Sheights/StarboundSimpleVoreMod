@@ -1,0 +1,42 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "bodyState" : {
+        "default" : "idle",
+        "states" : {
+          "idle"  :  {
+		    "frames"  :  4,
+			"cycle"  :  1.0,
+			"mode"  :  "loop"
+		  },
+		  "full"  :  {
+		    "frames"  :  4,
+			"cycle"  :  1.0,
+			"mode"  :  "loop"
+		  }
+        }
+      }
+    },
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "centered" : false
+        },
+        "partStates" : {
+          "bodyState" : {
+            "idle" :{
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            },
+			"full" :{
+              "properties" : {
+                "image" : "<partImage>:full.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

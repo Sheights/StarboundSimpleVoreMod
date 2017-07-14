@@ -1,0 +1,15 @@
+{
+  "itemName" : "hibaniblackmask",
+  "price" : 480,
+  "inventoryIcon" : "icons.png:head",
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "category" : "headarmour",
+  "description" : "Nobody will know who am I with this.",
+  "shortdescription" : "Hibani Black Mask",
+  "tooltipKind" : "armor",
+
+  "maleFrames" : "head.png",
+  "femaleFrames" : "head.png",
+  "mask" : "mask.png"
+}

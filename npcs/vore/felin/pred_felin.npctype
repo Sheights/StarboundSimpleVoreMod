@@ -2,6 +2,227 @@
   "type" : "pred_felin",
   "baseType" : "villager",
 
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default": [
+				"This place... I don't like this feeling."
+			]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default": [
+				"This place could use some maintenance."
+			]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default": [
+				"Oh come on! I thought this place was for me?",
+				"Look, I'm not averse to sharing but why this way?"
+			]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default": [
+				"Well, I'm not gonna take this sitting down.",
+				"Where do I go to complain about these things?"
+			]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default": [
+				"Okay, that's it. I'm getting outta here.",
+				"Screw you guys, I'm going somewhere else!"
+			]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default": [
+				"Shigriaw, raiwum prilw~", //"Honey, I'm home~"
+				"What is it?",
+				"Yeeeesss?"
+			],
+			"felin": [
+				"Honey, I'm home~",
+				"What is it?",
+				"Yeeeesss?"
+			]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default": [
+				"This oughta cover it.",
+				"Happy to be a productive member of society."
+			]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default": [
+				"HISS!",
+				"MROOOW!",
+				"MRAAAWR!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+			  "Peace and quiet"
+			]
+		  }
+        }
+	  },
+      "greeting" : {
+        "default" : {
+          "default" : [
+				"Mihli!",
+				"Hi~!",
+				"Hi. I'm <selfname>. Who're you?",
+				"Hello, visitor!"
+			],
+			"avian" : [
+				"Mihli!",
+				"Hi, birdy!",
+				"Hi, dinner-I mean guest!",
+				"Hi. I'm <selfname>. Who're you?",
+				"Hello, prey."
+			],
+			"floran" : [
+				"Mihli!",
+				"Hello, plant friend.",
+				"Hi. I'm <selfname>. Who're you, plant friend?",
+				"Floran friend, hi!"
+			],
+			"human" : [
+				"Mihli.",
+				"Ah, hi.",
+				"Hello."
+			],
+			"hylotl" : [
+				"Mihli.",
+				"Oh, hello.",
+				"Hello, honored hylotl.",
+				"Master Hylotl."
+			],
+			"novakid" : [
+				"Mihli!",
+				"Starman.",
+				"Howdy, starman."
+			],
+			"felin" : [
+				"Mihli!",
+				"Mihli, vliromifhra!",
+				"Hello~!",
+				"Hello, traveler!"
+			],
+			"avali" : [
+				"Mihli!",
+				"Hi, birdy!",
+				"Hi, prey-I mean guest!"
+			],
+			"khajiit-sr" : [
+				"Hello, fellow cat.",
+				"Do'pal, friend.",
+				"May you walk on warm sands."
+			]
+        }
+      },
+	  "converse" : {
+        "default" : {
+          "default" : [
+				"Like it around?",
+				"You came this far to visit our humble village?",
+				"You came to trade or to hunt?"
+			],
+			"apex" : [
+				"Minikong? Is that a smaller Apex?",
+				"I've always wanted to know... how far does Big Ape see?",
+				"How are things holding up for you?"
+			],
+			"avian" : [
+				"We don't pray to Kluex or anybody here. We got our heroes!",
+				"Don't worry. We may call you prey but we won't hurt you.",
+				"How fast can you run? Just wondering."
+			],
+			"floran" : [
+				"Hunter.",
+				"Good hunt to you, plant friend.",
+				"Mind your step, plant friend."
+			],
+			"human" : [
+				"Why does your kind have so little fur?",
+				"I once saw a bunch of humans in the forest with guns!",
+				"Please don't touch me?"
+			],
+			"hylotl" : [
+				"Master Hylotl.",
+				"<selfname> bows to you.",
+				"We're actually being very sarcastic towards you."
+			],
+			"novakid" : [
+				"How's it glowin', starman?",
+				"Looking hot, starman.",
+				"Is this town big enough for both of us?"
+			],
+			"felin" : [
+				"Hi. I'm <selfname>. Who're you, Hunter?",
+				"What's new, pussycat?",
+				"Big haul yesterday. 50 pixels for hugs, all for <selfname>~",
+				"Have you met this weird monk? Mike something?",
+				"The weather's so pretty, no matter what it is.",
+				"You belong to me. No arguments.",
+				"My butt itches.",
+				"Pull finger, recieve joke. Pull tail, die.",
+				"Sup, friend?",
+				"Always good to see another Felin~!",
+				"All we are is cats in the wind, friend.",
+				"Remember: be nice to each other «",
+				"How's travel?",
+				"I want chicken, I want liver~",
+				"<selfname> says wassup?"
+			],
+			"avali" : [
+				"Did the Scholars figure out the Nexus yet?",
+				"Space raptor :D",
+				"Something smells of cleaning products.",
+				"Nice feathers.",
+				"You look interesting."
+			],
+			"khajiit-sr" : [
+				"Why do you look like that?",
+				"<selfname> always knew Felin weren't the only cats around.",
+				"Is your name Ma'... Ma'-whatever?",
+				"<selfname> heard Omes-rath are prettier than you.",
+				"Got any moon sugar? No? Good!",
+				"Talos preserve me, it's another cat!"
+			]
+        }
+      }
+    }
+  },
   "disableWornArmor" : false,
   "scriptDelta" : 5,
 

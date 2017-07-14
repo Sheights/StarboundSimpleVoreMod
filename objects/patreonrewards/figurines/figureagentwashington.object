@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureagentwashington",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This is the best mod ever, of all time.",
+  "shortdescription" : "Agent Washington Figure",
+
+  "inventoryIcon" : "figurine.png:agentwashington",
+  "orientations" : [
+    {
+      "image" : "figurine.png:agentwashington",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:agentwashington",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

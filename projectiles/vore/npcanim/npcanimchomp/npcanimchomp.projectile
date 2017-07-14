@@ -1,0 +1,11 @@
+{
+  "projectileName" : "npcanimchomp",
+  "image" : "npcanimchomp.png",
+  "animationCycle" : 0.25,
+  "frameNumber" : 6,
+  "speed" : 0.0,
+  "timeToLive" : 0.25,
+  "orientationLocked" : true,
+  "animationLoops" : false,
+  "flippable" : true
+}

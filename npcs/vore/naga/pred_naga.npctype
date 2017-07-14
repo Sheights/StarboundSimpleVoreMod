@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -88,25 +94,7 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"...They are being attacked...",
-						"...You... Help them...",
-						"Invaders... attacking others..."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"...End it...",
-					"...put it to an end...",
-					"...Make them pay..."
-			]
-		  }
-        },
-        "safe" : {
+		"safe" : {
 		  "default" : {
 			"default" : [
 					"...The stress... Nearly lost my lunch...",
@@ -116,7 +104,17 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "...Hello...",
+			"...",
+			"...You Look tasssty...",
+			"...You are the food?..."
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "...Why are you still outside? ...Not for long...",

@@ -1,0 +1,31 @@
+{
+  "objectName" : "figuremousani",
+  "colonyTags" : ["pretty", "victor"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "I wonder if this statue wants to eat me too.",
+  "shortdescription" : "Mousani Figure",
+
+  "inventoryIcon" : "figurine.png:mousani",
+  "orientations" : [
+    {
+      "image" : "figurine.png:mousani",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:mousani",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

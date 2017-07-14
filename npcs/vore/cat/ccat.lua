@@ -12,26 +12,14 @@ playerLines = {		"Surprise! I hope you enjoy learning about the reproductive sys
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	chest = {
-		name = "catchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
+
+	chest[2] = {
 		name = "catchestballs",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	legs = {
-		name = "catlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "catlegsballs",
 		parameters = {
 					colorIndex = index
@@ -39,24 +27,18 @@ function initHook()
 
 end
 
-function feedHook()
+function digestHook(id, time, dead)
 
-end
-
-function loseHook()
-
-	if isPlayer then
-		npc.say("Ooooh, that felt wonderful. Do come back! *Purrrrrrr*")
+	if containsPlayer() then
+		npc.say("Ooooh, that felt wonderful. Do come back! *Purrrrrrr")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLines( playerLines )
 	end
 
 end

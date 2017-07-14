@@ -1,0 +1,18 @@
+[
+  {
+    "op": "add",
+    "path": "/scriptConfig/chatSounds/hibani",
+    "value": {
+      "male": [
+        "/sfx/humanoid/hibani_chatter1.ogg",
+        "/sfx/humanoid/hibani_chatter2.ogg",
+        "/sfx/humanoid/hibani_chatter3.ogg"
+      ],
+      "female": [
+        "/sfx/humanoid/hibani_chatter1.ogg",
+        "/sfx/humanoid/hibani_chatter2.ogg",
+        "/sfx/humanoid/hibani_chatter3.ogg"
+      ]
+    }
+  }
+]

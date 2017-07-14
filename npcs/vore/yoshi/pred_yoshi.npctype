@@ -4,7 +4,13 @@
   
    "npcname" : "Yoshi",
    "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -101,7 +107,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Yoshi!",
+			"Yoshi."
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 			"Yoshi!",

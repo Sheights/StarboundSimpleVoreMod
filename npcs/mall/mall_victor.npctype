@@ -6,10 +6,7 @@
   "damageTeamType" : "friendly",
   "scriptConfig" : { 
 	"damageTeamType" : "friendly",
-	"questGenerator" : {
-      "pools" : ["normal"],
-      "enableParticipation" : true
-    },
+	"questGenerator" : { "pools" : [], "enableParticipation" : false },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

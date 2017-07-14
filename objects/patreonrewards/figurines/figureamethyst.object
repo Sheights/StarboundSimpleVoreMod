@@ -1,0 +1,31 @@
+{
+  "objectName" : "figureamethyst",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "It is a trophy of a very rare naga which has gold skins.",
+  "shortdescription" : "Amethyst Figure",
+
+  "inventoryIcon" : "figurine.png:amethyst",
+  "orientations" : [
+    {
+      "image" : "figurine.png:amethyst",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:amethyst",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -82,24 +88,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-							"Hop to it, they're in trouble!",
-							"I'll handle things here. Go help the others!",
-							"There's still monsters here..."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-							"Help has arrived!",
-							"Make sure to show them a one way trip into your belly",
-							"You're lucky that I didn't get to eat you!"
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -109,7 +97,16 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello",
+			"Hi",
+			"Greeting young traveler"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 						"Good day.",

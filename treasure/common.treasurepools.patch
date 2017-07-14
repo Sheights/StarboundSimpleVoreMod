@@ -33,5 +33,61 @@
     "value": 
 	    	{"weight" : 0.0003, "item" : [ "hibaniclawchest", 1]}
     
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibaniblackmask", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibanicheapbuds", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibanielizabethiancollar", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+            {"weight" : 0.0003, "item" : [ "hibanifloralband", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+	    	{"weight" : 0.0003, "item" : [ "hibaniknife", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+	    	{"weight" : 0.0003, "item" : [ "hibanisantahat", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+	    	{"weight" : 0.0003, "item" : [ "hibanispikedcollar", 1]}
+    
+  },
+  {
+    "op": "add",
+    "path": "/costume/0/1/pool/-",
+    "value": 
+	    	{"weight" : 0.0003, "item" : [ "hibanitophat", 1]}
+    
   }
 ]

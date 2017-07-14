@@ -9,24 +9,17 @@ require "/scripts/actions/status.lua"
 request = false
 
 function init()
-
 	if effect.duration() > 100 then
-	
-		status.addPersistentEffects( "voreEffects", {"intents", "nofalldamage", "npcpreyacid", "paralysis"} )
-		
+		status.addPersistentEffects( "voreEffects", {"intents", "npcpreyacid", "paralysis"} )
 	else
-	
-		status.addPersistentEffects( "voreEffects", {"intents", "nofalldamage", "paralysis"} )
-	
+		status.addPersistentEffects( "voreEffects", {"intents", "paralysis"} )
 	end
-	
+	effect.addStatModifierGroup({{stat = "fallDamageMultiplier", effectiveMultiplier = 0}})
 	local people = world.entityQuery( mcontroller.position(), 7, {
 				includedTypes = {"player"},
 				boundMode = "CollisionArea"
 	})
-	
 	predator = people[1]
-	
 end
 
 function update(dt)

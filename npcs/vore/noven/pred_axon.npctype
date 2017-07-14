@@ -3,8 +3,14 @@
   "baseType" : "villager",
 
   "npcname" : "Axon",
-  "scriptConfig" : {
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {

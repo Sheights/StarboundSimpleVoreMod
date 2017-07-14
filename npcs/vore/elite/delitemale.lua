@@ -1,7 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
-digested = false
-isDigest = true
+isDigest	= true
+effect 		= "npcdigestvore"
 
 playerLines = {}
 
@@ -100,41 +100,52 @@ playerLines["die"] = {	"After all that, and I'm not even full yet. Anyone else w
 						"You weren't my first prey, weakling, and you sure won't be the last."
 }
 
-legs = "elitelegs"
-fulllegs = "elitelegsbelly"
+legs[2] = "elitelegsbelly"
 	
 function feedHook()
-	if request then
-		npc.say( playerLines["request"][math.random(#playerLines["request"])])
+	if request[1] then
+		sayLine( playerLines["request"] )
 	else
-		npc.say( playerLines["eat"][math.random(#playerLines["eat"])])
+		sayLine( playerLines["eat"] )
+	end
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
+
+function deathHook()
+	if containsPlayer(input) then
+		sayLine ( playerLines["die"] )
 	end
 end
 
-function loseHook()
-	
-	if digested == false then
-		if stopWatch <= 91 and stopWatch >=89 then
-			npc.say( playerLines["release"][math.random(#playerLines["release"])])
-		else
-			npc.say( playerLines["leave"][math.random(#playerLines["leave"])])
-		end
-	else
-		digested = false
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		sayLine( playerLines["release"] )
 	end
-	
-	isPlayer = false
-	
+end
+
+function releaseHook(input, time)
+	if containsPlayer() then
+		sayLine( playerLines["leave"] )
+	end
+end
+
+function requestHook(input)
+	if containsPlayer() then
+		sayLine( playerLines["request"] )
+	end
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines["idle"][math.random(#playerLines["idle"])])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines["idle"] )
 	end
 	
 	if digested == false then
-		if fed and world.entityHealth(victim)[1] <= 5 and (stopWatch <= 85 or request) then
+		if fed and world.entityHealth(victim)[1] * 100 <= 5 and stopWatch <= 85 then
 			digested = true
 			if isPlayer then
 				npc.say( playerLines["die"][math.random(#playerLines["die"])])

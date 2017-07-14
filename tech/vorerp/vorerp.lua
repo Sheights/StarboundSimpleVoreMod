@@ -54,7 +54,7 @@ end
 function update(args)
 	
 	if not self.active then
-		if not self.specialLast and args.moves["special"] == 1 and self.timer == 15 then
+		if not self.specialLast and args.moves["special1"] == true and self.timer == 15 then
 			self.timer = 0
 			attemptActivate()
 		end
@@ -62,7 +62,7 @@ function update(args)
 		if not world.entityExists(self.target) then
 			deactivate()
 		end
-		if not self.specialLast and args.moves["special"] == 1 and self.timer == 15 then
+		if not self.specialLast and args.moves["special1"] == true and self.timer == 15 then
 			self.timer = 0
 			deactivate()
 		end
@@ -74,7 +74,7 @@ function update(args)
 		end
 	end
 	
-	self.specialLast = args.moves["special"] == 1
+	self.specialLast = args.moves["special1"] == true
 	
 	if self.timer < 15 then
 		self.timer = self.timer + 1
@@ -151,8 +151,6 @@ function initiateCommon()
 	self.timer = 0
 	self.typeCount	= 0
 	self.voreType	= "base"
-	
-	sb.logInfo("Initilaized")
 end
 
 function switchType()

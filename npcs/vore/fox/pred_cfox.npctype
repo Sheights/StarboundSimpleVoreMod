@@ -2,6 +2,9 @@
   "type" : "pred_cfox",
   "baseType" : "villager",
   
+  "identity" : {
+	"gender" : "male"
+  },
   "scriptConfig" : { 
 	"questGenerator" : {
       "pools" : ["normal"],
@@ -88,24 +91,6 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Oh no they're gonna steal my toy!",
-						"Can anyone help them?",
-						"I don't want dead toys."
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Take that!",
-					"You wanna see my insides, then I'll show you.",
-					"You just got one way trip in."
-			]
-		  }
-        },
         "safe" : {
 		  "default" : {
 			"default" : [
@@ -116,6 +101,15 @@
 		  }
         }
 	  },
+	  "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Hiya!",
+			"Hi Hi!"
+          ]
+        }
+      },
       "converse" : {
         "default" : {
           "default" : [

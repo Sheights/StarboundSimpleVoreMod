@@ -3,7 +3,13 @@
   "baseType" : "villager",
   
   "scriptConfig" : { 
-	"questGenerator" : { "pools" : [], "enableParticipation" : false },
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
     "dialog" : {
       "tenant" : {
         "grumbles" : {
@@ -84,25 +90,7 @@
 			]
 		  }
 		},
-        "helpthem" : {
-		  "default" : {
-			"default" : [
-						"Somebody help!",
-						"Look out!",
-						"Oh splat!"
-			]
-		  }
-		},
-        "encourage" : {
-		  "default" : {
-			"default" : [
-					"Booyah!",
-					"Ink 'em up!",
-					"Splat 'em!"
-			]
-		  }
-        },
-        "safe" : {
+		"safe" : {
 		  "default" : {
 			"default" : [
 					"Whoo! Safe!",
@@ -112,7 +100,15 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+            "Hello!",
+			"Stay Fresh!"
+          ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
             "When do you think the next Splatfest will start?",
@@ -121,8 +117,8 @@
 			"The Squid Sisters are the best!",
 			"Have you ever heard of the Chirpy Chips? Or ABXY?",
 			"We should set up a turf war around here.",
-			"Wanna help me in my next match?",
-			"Stick around. I might need an ink refill."
+			"Wanna help me train for my next match?",
+			"I might be part squid, but I got a warm belly if ya want it~"
           ]
         }
       }

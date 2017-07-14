@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurepixelgryph",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "This trophy makes you feel soft and feathery inside.",
+  "shortdescription" : "Pixelgryph Figure",
+
+  "inventoryIcon" : "figurine.png:pixelgryph",
+  "orientations" : [
+    {
+      "image" : "figurine.png:pixelgryph",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:pixelgryph",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}

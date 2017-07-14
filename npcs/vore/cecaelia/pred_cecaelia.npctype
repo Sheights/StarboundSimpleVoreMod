@@ -1,0 +1,165 @@
+{
+  "type" : "pred_cecaelia",
+  "baseType" : "villager",
+  
+    "identity" : {
+	"gender" : "female"
+  },
+  
+  "scriptConfig" : { 
+	"questGenerator" : {
+      "pools" : ["common"],
+      "enableParticipation" : true,
+	  "graduation" : {
+	    "nextNpcType" : []
+	  }
+    },
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+			"default" : {
+			  "default" : [
+							"Hey hey! Put that back, please?",
+							"You're cool and all, but this place is missing something.",
+							"The ocean's a little homier than this..."
+			  ]
+			}
+		  },
+          "enclosedArea" : {
+			"default" : {
+			  "default" : [
+								"Brrr, do you feel that draft?",
+								"There seems to be a hole in my wall! And my stomach...",
+								"My tentacles don't need THAT much room!",
+								"I swam through the arctic once, and it wasn't as cold as this!"
+			  ]
+			}
+		  },
+          "otherDeed" : {
+			"default" : {
+			  "default" : [
+							"My tentacles take up enough space already!",
+							"I love friends and all, but there's not enough space!",
+							"How about you build them another house instead?"
+			  ]
+			}
+		  },
+          "severe" : {
+			"default" : {
+			  "default" : [
+						"It's about time I get going, unless you fix this up...",
+						"It's pretty easy to find a nice place to stay, so I might be leaving."
+			  ]
+			}
+		  },
+          "final" : {
+			"default" : {
+			  "default" : [
+						"It's been great, but I'm going home now!",
+						"Oh well, perhapse another time...",
+						"And I had high hopes for you, too. Bye bye!"
+			  ]
+			}
+          }
+		},
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+			  "default" : [
+						"This is better than my place in the ocean!",
+						"My tentacles are tired, I'm glad I can rest them here.",
+						"I could use a good soak.",
+						"Now that we're both here, could you massage my tentacles?"
+			  ]
+			}
+		  },
+          "rent" : {
+			"default" : {
+			  "default" : [
+						"Thank you so much for letting me stay here!",
+						"You're a great partner, have this gift!",
+						"Some lovely treasure for you!",
+						"Hehe, I hope you like this!"
+			  ]
+			}
+          }
+		}
+      },
+      "flee" : {
+        "helpme" : {
+		  "default" : {
+			"default" : [
+					"Oooh goodness, badguys!",
+					"Please, protect me!"
+			]
+		  }
+		},
+        "safe" : {
+		  "default" : {
+			"default" : [
+					"Aaaah, peace at last!",
+					"Those nasty things didn't stand a chance!",
+					"Finally, back to normal!"
+			]
+		  }
+        }
+	  },
+      "greeting" : {
+        "default" : {
+          "default" : [
+			"Heya! Would you like to cuddle?",
+			"Hey sweetie~",
+			"Hello~ You're looking delicious today~",
+			"Well hello there, lovely~",
+			"Oooh, hello! Have you come to play~?",
+			"Hi there! My belly is sooo eager for you!."
+          ]
+        }
+      },
+	  "converse" : {
+        "default" : {
+          "default" : [
+            "Come over here, let me give you a biiiig hug!",
+			"I bet I could fit you inside me!",
+			"You're so cute, may I wrap you in my tentacles?",
+			"Thanks for having me! May I have you now?"
+          ]
+        }
+      }
+    }
+  },
+  "disableWornArmor" : false,
+  "scriptDelta" : 5,
+  
+  "scripts" : [ "/npcs/bmain.lua",
+				"/npcs/vore/cecaelia/cecaelia.lua" 
+  ],
+
+  "matchColorIndices" : false,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "cecaeliahair1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair2", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair3", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair4", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair5", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair6", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair7", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair8", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "cecaeliahair9", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "chest" : [
+              { "name" : "cecaeliachest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ],
+            "legs" : [
+              { "name" : "cecaelialegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,8 +1,7 @@
 require "/scripts/vore/npcvore.lua"
 
-digested = false
-isDigest = true
-
+isDigest	= true
+effect 		= "npcdigestvore"
 breasts = nil
 
 playerLines = {}
@@ -108,76 +107,70 @@ playerLines["die"] = {	"After all that, and I'm not even full yet. Anyone else w
 
 	
 function initHook()
-
 	if storage.breasts == nil then
 		breasts = 0
 	else
 		breasts = storage.breasts
 	end
-	
-	if breasts == 0 then
-		legs = "elitelegs"
-		fulllegs = "elitelegsbelly"
-	elseif breasts == 1 then
-		legs = "elitelegsbreasts"
-		fulllegs = "elitelegsbellybreasts"
-	else
-		legs = "elitelegsbreastsxl"
-		fulllegs = "elitelegsbellybreastsxl"
-	end
-	
+	setBreasts()
 end
 
 function feedHook()
-	if request then
-		npc.say( playerLines["request"][math.random(#playerLines["request"])])
+	if request[1] then
+		sayLine( playerLines["request"] )
 	else
-		npc.say( playerLines["eat"][math.random(#playerLines["eat"])])
+		sayLine( playerLines["eat"] )
+	end
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
+
+function deathHook()
+	if containsPlayer(input) then
+		sayLine ( playerLines["die"] )
+	end
+	if breasts < 2 then
+		breasts = breasts + 1
+		storage.breasts = breasts
+	end
+	setBreasts()
+end
+
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		sayLine( playerLines["release"] )
 	end
 end
 
-function loseHook()
-	
-	if digested == false then
-		if stopWatch <= 91 and stopWatch >=89 then
-			npc.say( playerLines["release"][math.random(#playerLines["release"])])
-		else
-			npc.say( playerLines["leave"][math.random(#playerLines["leave"])])
-		end
-	else
-		digested = false
+function releaseHook(input, time)
+	if containsPlayer() then
+		sayLine( playerLines["leave"] )
 	end
-	
-	isPlayer = false
-	
+end
+
+function requestHook(input)
+	if containsPlayer() then
+		sayLine( playerLines["request"] )
+	end
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+end
+
+function setBreasts()
+	if breasts == 0 then
+		legs[1] = "elitelegs"
+		legs[2] = "elitelegsbelly"
+	elseif breasts == 1 then
+		legs[1] = "elitelegsbreasts"
+		legs[2] = "elitelegsbellybreasts"
+	else
+		legs[1] = "elitelegsbreastsxl"
+		legs[2] = "elitelegsbellybreastsxl"
+	end
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines["idle"][math.random(#playerLines["idle"])])
-	end
-	
-	if digested == false then
-		if fed and world.entityHealth(victim)[1] <= 5 and (stopWatch <= 85 or request) then
-			digested = true
-			
-			if breasts < 2 then
-				breasts = breasts + 1
-				storage.breasts = breasts
-			end
-			
-			if breasts == 1 then
-				legs = "elitelegsbreasts"
-				fulllegs = "elitelegsbellybreasts"
-			else
-				legs = "elitelegsbreastsxl"
-				fulllegs = "elitelegsbellybreastsxl"
-			end
-			
-			if isPlayer then
-				npc.say( playerLines["die"][math.random(#playerLines["die"])])
-			end
-		end
+	if containsPlayer and math.random(700) == 1 then
+		sayLine( playerLines["idle"] )
 	end
 end

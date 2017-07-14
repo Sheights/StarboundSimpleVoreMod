@@ -12,53 +12,43 @@ playerLines = {		"Surprise! Hope you enjoy learning about the reproductive syste
 }
 
 function initHook()
-
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	chest = {
-		name = "wolfchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
+	chest[2] = {
 		name = "wolfchestballs",
 		parameters = {
 					colorIndex = index
 	}}
-	
-	legs = {
-		name = "wolflegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "wolflegsballs",
 		parameters = {
 					colorIndex = index
 	}}
+end
 
+function digestHook(id, time, dead)
+	if containsPlayer() then
+		npc.say("That felt great having you come out.")
+	end
+end
+
+function releaseHook(input, time)
+	if containsPlayer() then
+		npc.say("That felt great having you come out.")
+	end
 end
 
 function feedHook()
-
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
 end
 
-function loseHook()
-
-	if isPlayer then
-		npc.say("That felt great having you come out.")
-	end
-
-	isPlayer = false
-
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

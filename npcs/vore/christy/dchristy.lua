@@ -1,13 +1,11 @@
-require "/scripts/vore/multivore.lua"
+require "/scripts/vore/npcvore.lua"
 
-animFlag = false
-isDigest = true
+animFlag	= false
+isDigest	= true
+effect 		= "npcdigestvore"
 
 animTimer = 0
 capacity = 2
-
-request		= { false, false }
-victim		= { nil, nil }
 
 playerLines = {}
 
@@ -120,25 +118,24 @@ playerLines["exit"] = {	"Aww.. how come you won't stay?",
 						"Come back soon, I'm always around to say hey to."
 }
 
-function redress()
+function digestHook(id, time, dead)
 
-	digest()
-	
-end
-
-function digestHook()
-
-	if #victim > 0 then
-		npc.setItemSlot( "legs", "christylegsbelly" .. #victim )
+	if #victim > 1 then
+		npc.setItemSlot( "legs", "christylegsbelly" .. #victim - 1 )
 	else
 		npc.setItemSlot( "legs", "christylegs" )
 	end
 	
 end
 
-function feedHook()
+function initHook()
+	legs[1] = nil
+end
 
-	npc.say( playerLines["eat"][ math.random( #playerLines["eat"] )] )
+function feedHook(input)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	sayLine( playerLines["eat"] )
 	
 	if animFlag == true then
 		animTimer = 0
@@ -148,11 +145,22 @@ function feedHook()
 	
 end
 
+function requestHook(input)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	sayLine( playerLines["eat"] )
+	
+	if animFlag == true then
+		animTimer = 0
+	else
+		animFlag = true
+	end
+end
+
 function updateHook(dt)
 
 	if animFlag then
 
-		dt = dt or 0.01
 		if animTimer < 1.0 then
 			npc.setItemSlot( "head", "christyheadbelly1" )
 		elseif animTimer < 2.0 then
@@ -173,15 +181,27 @@ function updateHook(dt)
 		animTimer = animTimer + dt
 	end
 	
-	if math.random(700) == 1 and ( playerTimer < duration or request[1] == true or request[2] == true or request[3] == true or request[4] == true ) then
-		npc.say( playerLines[ #victim ][ math.random( #playerLines[ #victim ] ) ] )
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines[#victim] )
 	end
+	
 end
 
-function forceExit()
+function digestHook(id, time, dead)
 
-	npc.say( playerLines["exit"][ math.random( #playerLines["exit"] )] )
+	releaseHook( id, time )
+end
 
-	npc.setItemSlot( "legs", "christylegs" )
+function dress() end
+
+function releaseHook(input, time)
+
+	sayLine( playerLines["exit"] )
+	
+	if #victim - 1 > 0 then
+		npc.setItemSlot( "legs", "christylegsbelly" .. #victim )
+	else
+		npc.setItemSlot( "legs", "christylegs" )
+	end
 
 end

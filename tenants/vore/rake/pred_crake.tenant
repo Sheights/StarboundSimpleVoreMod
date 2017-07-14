@@ -14,7 +14,7 @@
   "tenants": [
     {
       "spawn": "npc",
-      "species": "glitch",
+      "species": "dummy",
       "type": "pred_crake",
       "overrides": {
         "damageTeamType" : "friendly"

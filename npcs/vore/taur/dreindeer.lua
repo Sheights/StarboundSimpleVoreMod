@@ -1,5 +1,10 @@
 require "/scripts/vore/npcvore.lua"
 
+isDigest	= true
+effect 		= "npcdigestvore"
+
+legs[2] = "reindeerlegsbelly"
+
 playerLines = {	"You're about to become one with nature sweetie. Quite the honour.",
 				"Elves taste better, but you'll do.",
 				"You'll help the plants grow, and importantly, me~",
@@ -7,25 +12,18 @@ playerLines = {	"You're about to become one with nature sweetie. Quite the honou
 				"I won't be hopping, skipping, or jumping anytime soon."
 }
 
-legs = "reindeerlegs"
-fulllegs = "reindeerlegsbelly"
+function feedHook()
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( tempTarget ), entity.id(), {0, 0}, false)
+end
 
-isDigest = true
-
-function initHook()
-	
-end		
-
-function loseHook()
-	
-	isPlayer = false
-	
+function requestHook(args)
+	world.spawnProjectile( "npcanimchomp" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
+	world.spawnProjectile( "swallowprojectile" , world.entityPosition( victim[#victim] ), entity.id(), {0, 0}, false)
 end
 
 function updateHook()
-
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLine( playerLines )
 	end
-
 end

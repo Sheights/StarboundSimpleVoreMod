@@ -14,26 +14,14 @@ playerLines = {		"Surprise! I hope you enjoy learning about the digestive system
 function initHook()
 
 	index = npc.getItemSlot("legs").parameters.colorIndex
-	
-	chest = {
-		name = "catchest",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fullchest = {
+
+	chest[2] = {
 		name = "catchestbelly",
 		parameters = {
 					colorIndex = index
 	}}
 	
-	legs = {
-		name = "catlegs",
-		parameters = {
-					colorIndex = index
-	}}
-	
-	fulllegs = {
+	legs[2] = {
 		name = "catlegsbelly",
 		parameters = {
 					colorIndex = index
@@ -41,24 +29,18 @@ function initHook()
 
 end
 
-function feedHook()
+function digestHook(id, time, dead)
 
-end
-
-function loseHook()
-
-	if isPlayer then
+	if containsPlayer() then
 		npc.say("Thank you so much for feeding me. We are both so going to enjoy your visit~")
 	end
-
-	isPlayer = false
 
 end
 
 function updateHook()
 
-	if isPlayer and math.random(700) == 1 then
-		npc.say( playerLines[math.random(#playerLines)])
+	if containsPlayer() and math.random(700) == 1 then
+		sayLines( playerLines )
 	end
 
 end

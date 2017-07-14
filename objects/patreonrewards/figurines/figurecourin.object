@@ -1,0 +1,31 @@
+{
+  "objectName" : "figurecourin",
+  "colonyTags" : ["pretty"],
+  "rarity" : "Legendary",
+  "category" : "actionFigure",
+  "price" : 5000,
+  "printable" : false,
+  "description" : "A mischievous demon who owns a casino.",
+  "shortdescription" : "Courin Figure",
+
+  "inventoryIcon" : "figurine.png:courin",
+  "orientations" : [
+    {
+      "image" : "figurine.png:courin",
+      "imagePosition" : [-2, 0],
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "figurine.png:courin",
+      "imagePosition" : [-2, 0],
+      "direction" : "right",
+
+      "spaces" : [ [0, 0], [0, 1] ],
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}
