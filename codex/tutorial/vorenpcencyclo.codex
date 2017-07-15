@@ -8,8 +8,8 @@
 
 "Table of Contents:
 Predators: Page 2
-Prey: Page 31
-Misc: Page 37",
+Prey: Page 32
+Misc: Page 38",
 
 "Predators
 
@@ -24,37 +24,42 @@ Types: Oral, Digest
 Requirements -
 swamp : 24",
 
-"Name: Ampharos
+"Name: Alsnapz
+Types: Oral
+Requirements -
+steampunk : 24
+
+Name: Ampharos
 Types: Oral, Digest, Unbirth
 Requirements -
 electronic : 12,
 nature : 12,
-poke : 1
+poke : 1",
 
-Name: Anthro Deer
+"Name: Anthro Deer
 Types: Oral, Digest
 Requirements -
-nature : 18",
+nature : 18
 
-"Name: Avali
-Types: Oral, Digest
+Name: Avali
+Types: Oral, Digest, Unbirth
 Requirements -
 outpost : 6,
 OR
-avali : 6
+avali : 6",
 
-Name: Axon
+"Name: Axon
 Types: Oral, Digest
 Requirements -
 Cell : 12,
-sea : 12",
+sea : 12
 
-"Name: Bunyip
+Name: Bunyip
 Types: Oral
 Requirements -
-Ritual Obelisk
+Ritual Obelisk",
 
-Name: Bunyip (Swampy)
+"Name: Bunyip (Swampy)
 Types: Oral
 Requirements -
 swamp : 6,
@@ -62,12 +67,17 @@ Ritual Obelisk
 
 Name: Cat
 Types: Oral, Digest, Cock, Fatal Cock
-Requirements - none",
+Requirements - none
 
-"Name: Catfish
+Name: Catfish
 Types: Oral, Digest
 Requirements -
-swamp : 24
+swamp : 24",
+
+"Name: Cecaelia
+Types: Oral, Digest, Unbirth
+Requirements -
+sea : 16,
 
 Name: Centaur
 Types: Oral, Digest
@@ -96,12 +106,7 @@ executive : 12
 Name: Deertaur
 Types: Oral, Digest
 Requirements -
-nature : 18
-
-Name: Devout
-Types: Oral, Digest
-Requirements -
-science : 24",
+nature : 18",
 
 "Name: Dezzy
 Types: Oral
@@ -266,20 +271,20 @@ outpost : 6,
 OR
 avali : 6",
 
-"Name: Raru Guard
+"Name: Rake
+Types: Oral, Anal, Cock
+Requirements -
+avian : 8,
+science : 8
+
+Name: Raru Guard
 Types: Oral
 Requirements -
 bioluminescence : 4,
 combat : 6,
 outpost : 6,
 OR
-avali : 6
-
-Name: Rake
-Types: Oral, Cock
-Requirements -
-avian : 8,
-science : 8",
+avali : 6",
 
 "Name: Saph
 Types: Oral, Cock
@@ -389,20 +394,25 @@ poke : 1",
 
 "Prey
 
+Name: Alsnapz
+Types: Oral
+Requirements -
+steampunk : 24
+
 Name: Christy Kitsune
 Types: Oral, Digest
 Requirements -
 avian : 6,
 nature : 6,
-science : 6
+science : 6",
 
-Name: Dallenson
+"Name: Dallenson
 Types: Oral, Digest
 Requirements -
 electronic : 24,
-executive : 12",
+executive : 12
 
-"Name: Doey
+Name: Doey
 Types: Oral
 Requirements -
 slime : 12
@@ -420,13 +430,18 @@ Requirements -
 1 Hylotl Water Feature
 1 Outpost Desk
 
-Name: Rich
+Name: Teel
+Types: Oral, Digest
+Requirements -
+1 Maple Syrup Candle",
+
+"Name: Rich
 Types: Oral
 Requirements -
 Human : 6,
-1 Zorua Plush",
+1 Zorua Plush
 
-"Random Prey
+Random Prey
 Types: Oral, Digest
 Requirements - none
 

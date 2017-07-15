@@ -121,7 +121,14 @@
 		  }
         }
 	  },
-      "converse" : {
+      "greeting" : {
+        "default" : {
+          "default" : [
+				""
+		  ]
+        }
+      },
+	  "converse" : {
         "default" : {
           "default" : [
 				""

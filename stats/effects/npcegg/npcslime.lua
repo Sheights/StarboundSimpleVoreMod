@@ -2,8 +2,7 @@ require "/scripts/vec2.lua"
 
 function init()
 
-	status.addPersistentEffects( "egg", {"intents"} )
-	status.addPersistentEffects( "para", {"paralysis"} )
+	status.addPersistentEffects( "egg", {"intents", "paralysis"} )
 	animator.setAnimationState( "objectState", "default" )
 	effect.addStatModifierGroup({{stat = "fallDamageMultiplier", effectiveMultiplier = 0}})
 	effect.addStatModifierGroup({{stat = "invulnerable", amount = 1}})
@@ -31,7 +30,6 @@ function update(dt)
 			effect.modifyDuration(1)
 		else
 			status.clearPersistentEffects("egg")
-			status.clearPersistentEffects("para")
 		end
 	end
 	
@@ -78,7 +76,7 @@ function update(dt)
 		else
 			timer = timer + dt
 			if timer > 10 then
-				status.clearPersistentEffects("para")
+				status.setPersistentEffects( "egg", {"intents"} )
 			end
 		end
 		mcontroller.setPosition( base )
@@ -89,7 +87,10 @@ function update(dt)
 end
 
 function uninit()
-	effect.expire()
+	local effects = status.getPersistentEffects("egg")
+	if #effects > 0 then
+		status.setPersistentEffects( "egg", {"intents", "paralysis"} )
+	end
 end
 
 function atRest()

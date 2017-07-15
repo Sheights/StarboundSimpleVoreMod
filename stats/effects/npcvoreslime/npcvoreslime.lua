@@ -1,6 +1,4 @@
-
 function init()
-
 	pred = effect.sourceEntity()
 	blink = false
 	status.addPersistentEffects( "vore", {"intents", "paralysis" } )
@@ -9,7 +7,6 @@ function init()
 end
 
 function update(dt)
-	
 	if world.entityExists( pred ) then
 		vector = world.entityPosition( pred )
 	else
@@ -33,6 +30,8 @@ function update(dt)
 			effect.modifyDuration(1)
 		else
 			status.clearPersistentEffects("vore")
+			effect.expire()
+			do return end
 		end
 	end
 
@@ -48,14 +47,8 @@ function update(dt)
 	if status.resourcePercentage("health") > 0.02 then
 		status.modifyResourcePercentage("health", self.digestRate * dt)
 	end
-
 end
 
 function uninit()
-	local effects = status.getPersistentEffects("vore")
-	if #effects == 0 then
-		status.clearPersistentEffects("vore")
-	end
 	effect.expire()
-
 end

@@ -1,11 +1,10 @@
 
 function init()
-
 	pred = effect.sourceEntity()
 	blink = false
 	status.addPersistentEffects( "vore", {"intents", "paralysis", "savor"} )
 	effect.addStatModifierGroup({{stat = "fallDamageMultiplier", effectiveMultiplier = 0}})
-
+	effect.addStatModifierGroup({{stat = "invulnerable", amount = 1}})
 end
 
 function update(dt)
@@ -37,6 +36,7 @@ function update(dt)
 --			sb.logInfo("exited via low duration")
 			status.clearPersistentEffects("vore")
 			effect.expire()
+			do return end
 		end
 	end
 
@@ -49,14 +49,13 @@ function update(dt)
 		do return end
 	end
 	blink = true
-
 end
 
 function uninit()
 	local effects = status.getPersistentEffects("vore")
-	if #effects == 0 then
+	if #effects > 0 and status.resourcePercentage("health") <= 0.02 then
+--		sb.logInfo("attempting to clear")
 		status.clearPersistentEffects("vore")
 	end
---	sb.logInfo("ending")
-	effect.expire()
+--	sb.logInfo("digest ending")
 end

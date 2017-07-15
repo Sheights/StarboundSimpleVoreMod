@@ -130,13 +130,13 @@
 			  { "name" : "hibanicommunicatorhead", "parameters" : { "colorIndex" : [ 0 ] } },
 			  { "name" : "hibaniheadsethead", "parameters" : { "colorIndex" : [ 0 ] } },
 			  { "name" : "hibaninerdglasseshead", "parameters" : { "colorIndex" : [ 0 ] } },
-			  { "name" : "hibanhibaniscouterheaditophat", "parameters" : { "colorIndex" : [ 0 ] } },
-			  {}
+			  { "name" : "hibaniscouterhead", "parameters" : { "colorIndex" : [ 0 ] } },
+			  ""
 			],
             "chest" : [
               { "name" : "hibaniclawchest", "parameters" : { "colorIndex" : [ 0 ] } },
 			  { "name" : "hibaniwristbandchest", "parameters" : { "colorIndex" : [ 0 ] } },
-			  {}
+			  ""
             ]
           }
         ] ]

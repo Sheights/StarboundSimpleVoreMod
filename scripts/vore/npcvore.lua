@@ -424,4 +424,5 @@ function initHook() end
 function interactHook(input) end
 function releaseHook(input, time) end
 function requestHook(input) end
+function rub(input) end
 function updateHook(input) end

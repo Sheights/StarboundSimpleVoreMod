@@ -1,3 +1,4 @@
+fed = false
 blink = false
 
 gurgles = {
@@ -57,11 +58,6 @@ function onInteraction(args)
 	if world.loungeableOccupied(entity.id()) then
 		object.say( rubLines[ math.random(#rubLines) ])
 	end
-	if animator.animationState("bodyState") == "idle" then
-		animator.setAnimationState("bodyState", "full")
-		object.say( gulpLines[ math.random(#gulpLines) ])
-		animator.playSound("swallow")
-	end
 end
 
 function update(dt)
@@ -86,13 +82,13 @@ function update(dt)
 	if math.random(400) == 1 and world.loungeableOccupied(entity.id()) then
 		animator.playSound( gurgles[ math.random(#gurgles) ] )
 	end
-	if world.loungeableOccupied(entity.id()) == false and animator.animationState("bodyState") == "full" then
-		if blink == false then
-			blink = true
-		else
-			animator.setAnimationState("bodyState", "idle")
-			animator.playSound("spit")
-			blink = false
-		end
+
+	if world.loungeableOccupied(entity.id()) and animator.animationState("bodyState") == "idle" then
+		animator.setAnimationState("bodyState", "full")
+		object.say( gulpLines[ math.random(#gulpLines) ])
+		animator.playSound("swallow")
+	elseif world.loungeableOccupied(entity.id()) == false and animator.animationState("bodyState") == "full" then
+		animator.setAnimationState("bodyState", "idle")
+		animator.playSound("spit")
 	end
 end

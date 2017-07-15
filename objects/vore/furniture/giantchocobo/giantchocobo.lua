@@ -30,6 +30,15 @@ function update(dt)
 	animState = animator.animationState("bodyState")
 	
 	if fed then
+		if not world.entityExists(victim) then
+			animator.setAnimationState("bodyState", "spitup")
+			object.setInteractive(true)
+			animator.playSound("close")
+			stopwatch = 0
+			victim = nil
+			fed = false
+			do return end
+		end
 		stopwatch = stopwatch + dt
 		if animState == "idle3" and math.random(600) == 1 then
 			animator.setAnimationState("bodyState", "fed")
