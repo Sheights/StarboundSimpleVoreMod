@@ -3,7 +3,7 @@
     { "item" : "orcanatoken", "count" : 1 }
   ],
   "output" : {
-    "item" : "orcanahead9",
+    "item" : "ssvmorcanahead9",
     "count" : 1
   },
   "groups" : [ "npctoken" ]

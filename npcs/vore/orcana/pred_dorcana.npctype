@@ -173,22 +173,22 @@
       [0, [
           {
 			"head" : [
-              { "name" : "orcanahead1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead2", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead3", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead4", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead5", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead6", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead7", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead8", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
-			  { "name" : "orcanahead9", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+              { "name" : "ssvmorcanahead1", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead2", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead3", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead4", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead5", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead6", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead7", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead8", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } },
+			  { "name" : "ssvmorcanahead9", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
 			  
             ],
 			"chest" : [
-              { "name" : "orcanachest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+              { "name" : "ssvmorcanachest", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
             ],
             "legs" : [
-              { "name" : "orcanalegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
+              { "name" : "ssvmorcanalegs", "parameters" : { "colorIndex" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ] } }
             ]
           }
         ] ]

@@ -1,8 +1,0 @@
-{
-  "itemName" : "kineptictoken",
-  "price" : 500,
-  "rarity" : "Rare",
-  "inventoryIcon" : "Kineptic.png",
-  "description" : "A token that can be exchanged for aa kineptic costume",
-  "shortdescription" : "Kineptic Token"
-}

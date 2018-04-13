@@ -1,5 +1,5 @@
 {
-  "itemName" : "orcanahead4",
+  "itemName" : "ssvmorcanahead4",
   "price" : 0,
   "inventoryIcon" : "icons.png:head",
   "dropCollision" : [-4.0, -3.0, 4.0, 3.0],
