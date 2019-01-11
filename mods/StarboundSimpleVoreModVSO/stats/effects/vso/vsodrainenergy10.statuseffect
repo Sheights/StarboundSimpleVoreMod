@@ -1,0 +1,17 @@
+{
+  "name" : "vsodrainenergy10",
+  "blockingStat" : "digestionImmunity",
+  "effectConfig" : {
+	  "seconds" : 10,
+	  "resource" : "energy"
+  },
+  "defaultDuration" : 0.25,
+
+  "scripts" : [
+    "vsodrainstat.lua"
+  ],
+
+  "label" : "Being Drained",
+  "icon" : "/stats/effects/vso/vsodrainstat.png"
+  
+}

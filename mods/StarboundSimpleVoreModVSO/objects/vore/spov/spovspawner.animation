@@ -1,0 +1,53 @@
+{
+	"globalTagDefaults" : {
+		"directives" : ""
+	}
+  ,"animatedParts" : {
+    "stateTypes" : {
+      "part" : {
+        "default" : "off",
+        "states" : {
+          "on" : {
+            "cycle" : 1
+          },
+          "off" : {
+            "cycle" : 1
+          },
+          "ghost" : {
+            "cycle" : 1
+          }
+        }
+      }
+    },
+    "parts" : {
+      "bg" : {
+        "properties" : {
+          "centered" : true,
+		  "zlevel":-1
+        },
+
+        "partStates" : {
+          "part" : {
+            "on" : {
+              "properties" : {
+                "image" : "<partImage>"
+              }
+            },
+
+            "off" : {
+              "properties" : {
+                "image" : "<partImage>?multiply=80808000"
+              }
+            },
+
+            "ghost" : {
+              "properties" : {
+                "image" : "<partImage>?multiply=80808060"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

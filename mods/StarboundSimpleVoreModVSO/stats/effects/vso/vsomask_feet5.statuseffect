@@ -1,0 +1,10 @@
+{
+  "name" : "vsomask_feet5",
+  "effectConfig" : {
+	"maskimage" : "/stats/effects/vso/masks/vsomask_feet5.png"
+  },
+  "defaultDuration" : 1,
+  "scripts" : [
+    "/stats/effects/vso/vsomaskapply.lua"
+  ]
+}

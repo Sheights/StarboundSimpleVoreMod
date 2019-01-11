@@ -1,0 +1,17 @@
+{
+  "name" : "vsodrainhealth60",
+  "blockingStat" : "digestionImmunity",
+  "effectConfig" : {
+	  "seconds" : 60,
+	  "resource" : "health"
+  },
+  "defaultDuration" : 0.25,
+
+  "scripts" : [
+    "vsodrainstat.lua"
+  ],
+
+  "label" : "Being Digested",
+  "icon" : "/stats/stomachacid/stomachacid.png"
+  
+}

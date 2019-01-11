@@ -1,0 +1,17 @@
+{
+  "name" : "vsodrainfood10",
+  "blockingStat" : "digestionImmunity",
+  "effectConfig" : {
+	  "seconds" : 10,
+	  "resource" : "food"
+  },
+  "defaultDuration" : 0.25,
+
+  "scripts" : [
+    "vsodrainstat.lua"
+  ],
+
+  "label" : "Being Absorbed",
+  "icon" : "/stats/effects/vso/vsodrainstat.png"
+  
+}

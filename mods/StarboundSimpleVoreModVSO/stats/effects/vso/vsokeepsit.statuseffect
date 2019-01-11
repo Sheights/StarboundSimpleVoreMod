@@ -1,0 +1,10 @@
+{
+  "name" : "vsokeepsit",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsokeepsit.lua"
+  ]
+
+}

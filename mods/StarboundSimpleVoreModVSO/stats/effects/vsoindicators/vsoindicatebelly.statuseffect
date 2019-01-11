@@ -1,0 +1,8 @@
+{
+  "name" : "vsoindicatebelly",
+  "effectConfig" : {},
+  "defaultDuration" : 0.25,
+  "scripts" : [ ],
+  "label" : "Inside Belly",
+  "icon" : "/stats/effects/vsoindicators/vsoindicatebelly1.png"
+}

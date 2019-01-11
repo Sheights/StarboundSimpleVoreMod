@@ -1,0 +1,8 @@
+{
+  "name" : "vsoindicatemaw",
+  "effectConfig" : {},
+  "defaultDuration" : 0.25,
+  "scripts" : [ ],
+  "label" : "Inside Maw",
+  "icon" : "/stats/effects/vsoindicators/vsoindicatemaw1.png"
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "vsokeepsit3",
+  "defaultDuration" : 0.2,
+  "effectConfig" : {
+	"fixedSeatIndex" : 3
+  },
+  "scripts" : [
+    "vsokeepsitFixedIndex.lua"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name" : "vsodrainbreath30",
+  "blockingStat" : "digestionImmunity",
+  "effectConfig" : {
+	  "seconds" : 30,
+	  "resource" : "breath"
+  },
+  "defaultDuration" : 0.25,
+
+  "scripts" : [
+    "vsodrainstat.lua"
+  ],
+
+  "label" : "Being Suffocated",
+  "icon" : "/stats/effects/vso/vsodrainstat.png"
+  
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "vsoremoveforcesit",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsoremoveforcesit.lua"
+  ]
+
+}

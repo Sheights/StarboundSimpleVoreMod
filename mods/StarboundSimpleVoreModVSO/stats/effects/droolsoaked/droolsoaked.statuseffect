@@ -1,0 +1,15 @@
+{
+  "name" : "droolsoaked",
+  "blockingStat" : "wetImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 2,
+
+  "scripts" : [
+    "droolsoaked.lua"
+  ],
+
+  "animationConfig" : "droolsoaked.animation",
+
+  "label" : "Drool Soaked",
+  "icon" : "/interface/statuses/wet.png"
+}

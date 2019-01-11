@@ -1,0 +1,10 @@
+{
+  "name" : "vsomask_head5",
+  "effectConfig" : {
+	"maskimage" : "/stats/effects/vso/masks/vsomask_head5.png"
+  },
+  "defaultDuration" : 1,
+  "scripts" : [
+    "/stats/effects/vso/vsomaskapply.lua"
+  ]
+}

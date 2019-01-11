@@ -1,0 +1,11 @@
+{
+  "name" : "vsomask",
+  "effectConfig" : {
+	"maskimage" : "/celestial/system/terrestrial/dynamics/temperate/22.png"
+  },
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsomask.lua"
+  ]
+}

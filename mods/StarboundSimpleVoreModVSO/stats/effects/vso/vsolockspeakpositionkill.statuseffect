@@ -1,0 +1,10 @@
+{
+  "name" : "vsolockspeakpositionkill",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+  
+  "scripts" : [
+    "vsolockspeakpositionkill.lua"
+  ]
+
+}

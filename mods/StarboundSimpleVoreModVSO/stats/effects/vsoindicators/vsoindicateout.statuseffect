@@ -1,0 +1,8 @@
+{
+  "name" : "vsoindicateout",
+  "effectConfig" : {},
+  "defaultDuration" : 0.25,
+  "scripts" : [ ],
+  "label" : "Pushed Out",
+  "icon" : "/stats/effects/vsoindicators/vsoindicateout1.png"
+}

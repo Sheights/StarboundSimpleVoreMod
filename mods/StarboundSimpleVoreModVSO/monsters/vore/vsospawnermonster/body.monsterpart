@@ -1,0 +1,9 @@
+{
+  "name" : "body",
+  "category" : "vsospawnermonster",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "blank8x8.png"
+  }
+}

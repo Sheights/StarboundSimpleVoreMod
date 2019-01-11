@@ -1,0 +1,10 @@
+{
+  "name" : "vsoinvisible",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+  
+  "scripts" : [
+    "vsoinvisible.lua"
+  ]
+
+}

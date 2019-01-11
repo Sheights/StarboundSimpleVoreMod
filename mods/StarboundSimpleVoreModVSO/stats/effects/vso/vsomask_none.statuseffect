@@ -1,0 +1,9 @@
+{
+  "name" : "vsomask_none",
+  "effectConfig" : {
+  },
+  "defaultDuration" : 1,
+  "scripts" : [
+    "/stats/effects/vso/vsomaskapply.lua"
+  ]
+}

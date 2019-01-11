@@ -1,0 +1,7 @@
+[
+	{
+		"op": "add",
+		"path": "/statusControllerSettings/primaryScriptSources/-",
+		"value": "/stats/npc_primary_vso.lua"
+	}
+]
