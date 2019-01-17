@@ -1,0 +1,1 @@
+R:\T\PythonScipy\python\python.exe main.py

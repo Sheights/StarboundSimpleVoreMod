@@ -16,19 +16,19 @@
     "hAnchor" : "left",
     "value" : "0"
   },
-  "primaryLabel" : {
+  "statusLabel" : {
     "type" : "label",
     "position" : [11, 69],
     "hAnchor" : "left",
     "vAnchor" : "top",
-    "wrapWidth" : 123,
-    "value" : "Place this in the world to give it life."
+    "wrapWidth" : 123
   },
-  "rarityLabel" : {
+  "lowerLeftLabel" : {
     "type" : "label",
     "position" : [7, 23],
     "hAnchor" : "left",
     "centered" : true,
+    "value" : "",
     "wrapWidth" : 126
   },
   "largeImage" : {
@@ -36,6 +36,14 @@
     "position" : [70, 100],
     "centered" : true,
     "file" : "/interface/quests/mainquestreceiver.png",
+    "maxSize" : [100, 52],
+    "minSize" : [100, 52]
+  }
+  ,"objectImage" : {
+    "type" : "image",
+    "position" : [70, 100],
+    "file" : "",
+    "centered" : true,
     "maxSize" : [100, 52],
     "minSize" : [100, 52]
   }

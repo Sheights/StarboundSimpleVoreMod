@@ -1,3 +1,58 @@
+--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
+
+
+--Utilities for item building
+function spovSpawnerPick( list )
+	local listlen = #list;
+	if listlen > 0 then
+		return list[ 1 + (math.floor( math.random() * listlen ) % listlen) ]
+	end
+	return nil;
+end
+
+function spovSpawnerMakeColorReplaceDirectiveString( colmap )
+	local R = "replace=";
+	for k,v in pairs( colmap ) do
+		R = R..k.."="..v..";"
+	end
+	return R;
+end
+
+function spovSpawnerSetDirectives( dirstring )
+	animator.setGlobalTag( "directives", "?"..dirstring )
+end
+
+function spovSpawnerStorageSetIfNotNil( defaults )
+	if storage.vso ~= nil then
+	
+	else
+		storage.vso = {}
+	end
+	for k,v in pairs( defaults ) do
+		if storage.vso[k] ~= nil then
+			--Dont overwrite.
+		else
+			storage.vso[k] = v;
+		end
+	end
+end
+
+--1 is lightest, 4 is darkest
+spovSpawnerDefaultPrimaryColorOptions = {
+	{ "a7d485",  "5fab55",  "338033",  "18521a" }	--dino green
+	,{ "838383",  "555555",  "383838",  "151515" }
+	,{ "b5b5b5",  "808080",  "555555",  "303030" }
+	,{ "e6e6e6",  "b6b6b6",  "7b7b7b",  "373737" }
+	,{ "f4988c",  "d93a3a",  "932625",  "601119" }
+	,{ "ffd495",  "ea9931",  "af4e00",  "6e2900" }
+	,{ "ffffa7",  "e2c344",  "a46e06",  "642f00" }
+	,{  "b2e89d",  "51bd3b",  "247824",  "144216" }
+	,{  "96cbe7",  "5588d4",  "344495",  "1a1c51" }
+	,{  "d29ce7",  "a451c4",  "6a2284",  "320c40" }
+	,{  "eab3db",  "d35eae",  "97276d",  "59163f" }
+	,{  "ccae7c",  "a47844",  "754c23",  "472b13" }
+}
 
 --This is used to load / check the SPOV spawner configuration and return it
 function spovSpawnerLoadConfig()
@@ -52,6 +107,7 @@ function spovSpawnerLoadConfig()
 			--	--storage.vso[k] = v;
 			--	--sb.logInfo( k.." = "..tostring( v ) )
 			--end
+			
 		end
 	end
 
@@ -149,9 +205,18 @@ function spovSpawnerDie( spawnedone )
 
 	--storage = {}	--Wipes out storage??? Hm...
 	--sb.logInfo( "spovSpawnerDie" );
+	--Hm... scriptStorage
+	
+	--Need to call "update item info" function if present... Hm... How to do that?
+	--
+	if _ENV['spovSpawnerItemGenerateCallback'] ~= nil then
+		spovSpawnerItemGenerateCallback();
+	end
 	
 	if spawnedone ~= nil then
 		if world.entityExists( spawnedone ) then
+			--This might be TOO MUCH (doesnt let use do a "final" or "deny" or things like that...)
+			--	Hm.
 			world.callScriptedEntity( spawnedone, "vehicle.destroy" )	--Works perfectly!
 			return true;
 		end
@@ -175,6 +240,7 @@ function changeAnimState( setpart, towhat )
 end
 
 --Select a random element from a list
+--[[
 function randomPick( list )
 	local dowhat = #list;
 	if dowhat > 0 then
@@ -186,10 +252,16 @@ function randomPick( list )
 	end
 	return nil;
 end
+]]--
 
 function init( args )
 
 	params = spovSpawnerLoadConfig();
+	
+	--Is this important? No. (maybe? because it SETS stuff...)
+	if _ENV['spovSpawnerItemGenerateCallback'] ~= nil then
+		spovSpawnerItemGenerateCallback();
+	end
 	
 	myvehicle = spovSpawnerInit( params );
 	

@@ -1,0 +1,15 @@
+{
+  "projectileName" : "spovwarpouteffectprojectile",
+  "image" : "spovwarpouteffectprojectile.png",
+  "animationCycle" : 1.0,
+  "frameNumber" : 13,
+  "animationLoops" : false,
+  "power" : 0,
+  "speed" : 0,
+  "timeToLive" : 1.0,
+  "damageTeam" : { "type" : "passive" },
+  "piercing" : true,
+  "bounces" : 0,
+  "damagePoly" : [ [-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1] ],
+  "damageKind" : "nodamage"
+}

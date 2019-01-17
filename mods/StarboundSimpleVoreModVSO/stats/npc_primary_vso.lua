@@ -1,3 +1,5 @@
+--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
 
 oldinit = init
 function init()
@@ -39,4 +41,28 @@ function init()
 	message.setHandler( "vsoStatusPropertyGet", function( _, _, prop, defaultvalue )
 		return status.statusProperty( prop, defaultvalue )
 	end )
+	
+	message.setHandler( "vsoResourceGetSummary", function( _, _ )
+		local R = {}
+		for i,k in pairs( status.resourceNames() ) do
+			R[k] = {
+				status.resource(k)	--isResource
+				,status.resourceMax(k)
+				,status.resourcePercentage(k)
+				,status.resourcePositive(k)
+				,status.resourceLocked(k)
+			}
+		end
+		return R;
+	end )
+	
+	message.setHandler( "vsoResourceAddPercent", function( arga_, argb_, resname, deltapercent )
+		if deltapercent < 0 then
+			status.overConsumeResource( resname, -deltapercent*status.resourceMax( resname ) )
+		else
+			status.modifyResourcePercentage( resname, deltapercent );
+		end
+		return status.resource( resname ) > 0;
+	end )
+	
 end

@@ -1,0 +1,18 @@
+{
+  "name" : "victimrun",
+  "states" : ["idle", "walk", "sit", "lay"],
+  "cycle" : 1.0,
+  "cyclic" : true,
+  "duration" : 1.0,
+  "steps" : [
+    // body, frontArm, backArm, headOffset, frontArmOffset, backArmOffset
+    [ "run.1", null, null, null, null, null ]
+    ,[ "run.2", null, null, null, null, null ]
+    ,[ "run.3", null, null, null, null, null ]
+    ,[ "run.4", null, null, null, null, null ]
+    ,[ "run.5", null, null, null, null, null ]
+    ,[ "run.6", null, null, null, null, null ]
+    ,[ "run.7", null, null, null, null, null ]
+    ,[ "run.8", null, null, null, null, null ]
+  ]
+}

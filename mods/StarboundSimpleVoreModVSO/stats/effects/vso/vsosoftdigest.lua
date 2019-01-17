@@ -1,3 +1,6 @@
+--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
+
 function init()
 	status.setStatusProperty( "vsoDigestRate", effect.getParameter( "vsoDigestRate", 0 ) );	-- -(1.0 / 120)	--100% every 120 seconds?
 	status.setStatusProperty( "vsoVoreAmount", effect.getParameter( "vsoVoreAmount", 100 ) );	--100% vored
@@ -53,6 +56,7 @@ function uninit()
 			--Inform owner of stat that we kill't someone? (or at least intended to)
 			
 			status.modifyResourcePercentage( "health", -100 );	--Hm.
+			--status.overConsumeResource();
 		end
 	elseif status.statusProperty( "vsoDigestEnd", 1 ) > 0 then
 		status.modifyResourcePercentage( "health", self.originalHealthPercent - status.resourcePercentage("health") );

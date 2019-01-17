@@ -1,3 +1,6 @@
+--This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+--https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
+
 require "/scripts/rect.lua"
 --From monsters/pets
 require "/scripts/vsopathing.lua"
@@ -158,6 +161,18 @@ function vsoRatioSafe( aval, b )
 		end
 	end
 	return 0.0;
+end
+
+function vsoRand( vmin, vmax )
+	if vmin ~= nil then
+		if vmax ~= nil then
+			return vmin + vmax*math.random()
+		else
+			return vmin*math.random()
+		end
+	else
+		return math.random()
+	end
 end
 
 function vsoRandomPick( list )--Select a random element from a list
@@ -419,6 +434,9 @@ function vsoEatForce( victimid, seatindex )
 			--vsoForceSit( victimid, seatindex );	---Hm!
 			
 			local rpcresult = world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
+			
+			--world.callScriptedEntity( entity.id(), "npc.resetLounging" );
+			--world.callScriptedEntity( victimid, "npc.setLounging", entity.id(), seatindex )
 			
 			--Its possible to try eating someone who IS EATEN. careful.
 			--Need to know about this. Can the status effect do this?? Hm...
@@ -886,13 +904,16 @@ function _vsoStorageLoadData( callback )
 	return false;
 end
 
-function _vsoStorageSaveData( data )
+function _vsoStorageSaveData( data, optionalcallback )
 	--Queue this so we can wait for the vsoSpawnOwner... (forced single queue first in first out)
 	--sb.logInfo( "vsoStorageSaveData "..tostring(self.vsoSpawnOwner) );
 	if self.vsoSpawnOwner ~= nil then
 		--sb.logInfo( "vsoStorageSaveData sent" );
 		--data is sent as a json string?
-		world.sendEntityMessage( self.vsoSpawnOwner, "vsoStorageSaveData", entity.id(), data )
+		local rpc = world.sendEntityMessage( self.vsoSpawnOwner, "vsoStorageSaveData", entity.id(), data )
+		if optionalcallback ~= nil then
+			_add_vso_rpc( rpc, optionalcallback );
+		end
 		return true
 	end
 	return false;
@@ -914,17 +935,27 @@ function vsoStorageLoadData( callback )
 	self._storageLoadQueue = { callback }
 end
 
-function vsoStorageSaveData( userdata )
-	self._storageSaveQueue = { userdata }
+function vsoStorageSaveData( userdata, optcallback )
+	self._storageSaveQueue = { userdata, optcallback }	--HARDLY A QUEUE. Sheesh.
 end
 
-function vsoStorageSave()
+function vsoStorageSetIfNotNil( defaults )
+	for k,v in pairs( defaults ) do
+		if storage[k] ~= nil then
+			--Dont overwrite.
+		else
+			storage[k] = v;
+		end
+	end
+end
+	
+function vsoStorageSave( optcallback )
 	--Should do this every time anything you want saved changes (the object can be destroyed ANY time so. careful. memory loss for tragedy)
 	R = {}
 	for k,v in pairs( storage ) do
 		R[ k ] = v
 	end
-	vsoStorageSaveData( storage );
+	vsoStorageSaveData( storage, optcallback );
 end
 
 function vsoStorageSaveKey( key )
@@ -943,6 +974,14 @@ function vsoStorageLoad( callback )
 		
 		callback( data )
 	end )
+		
+end
+
+--Useful.
+function vsoStorageSaveAndLoad( callback )
+	vsoStorageSave( function() 		--Because we CHANGED defaults... AND the item config changed them...
+		vsoStorageLoad( callback )
+	end );
 end
 
 --Useful for a treed statistic ( stattable -> method -> key = value
@@ -964,17 +1003,30 @@ end
 function vsoTimeDelta( timername, readonly )
 
 	--Get the current delta time since the last time this was called (0.0 by default)
-	local nowvalue = os.clock();	--world.time()
+	--local nowvalue = self.vsoclock;	--os.clock();	--world.time()
 	local retv = 0.0;
 	if self.sv.td[ timername ] ~= nil then
-		retv = nowvalue - self.sv.td[ timername ];
+		retv = self.vsoclock - self.sv.td[ timername ];
 	end
 	if readonly == true then
 		--
 	else
-		self.sv.td[ timername ] = nowvalue;
+		self.sv.td[ timername ] = self.vsoclock;
 	end
 	return retv;
+end
+
+function vsoTimeDeltaEvery( timername, readonly, maxdelta )
+
+	local dv = vsoTimeDelta( timername, readonly );
+	if dv > 0 then
+		if maxdelta ~= nil then
+			return dv > ( maxdelta*math.random() );
+		else
+			--ignore
+		end
+	end
+	return false
 end
 	
 -------------------------------------------------------------------------------
@@ -1054,7 +1106,7 @@ function vsoMakeChoiceDialog( data )
 
 	--Hack to force a JSON object
 	local default_choicedlg = sb.jsonMerge( {}, {
-		config = "/interface/scripted/vsochoice/vsochoicedefault.config"
+		config = "/interface/scripted/vsochoice/vsochoiceempty.config"
 		,gui = {
 			panefeature = {
 				type = "panefeature"
@@ -1216,6 +1268,572 @@ function vsoMakeChoiceDialog( data )
 
 	return default_choicedlg
 
+end
+
+--Maps ASCII ord -> to width in DISPLAY pixels, which you can use for the gui conversion maybe...
+--gui is 2x the pixels of the DISPLAY coordinates.
+--Also, the space BETWEEN each letter is 2 pixels.
+vsoCharSizeMap = { 
+	3,3,3,3, 3,3,3,3, 3,12,0,3, 3,0,3,3, --0		""	9 == tab, 10 == new line, 13 == carriage return
+	3,3,3,3, 3,3,3,3, 3,3,3,3, 3,3,3,3,  --16	""
+	3,2,6,10, 8,10,10,2, 4,4,6,6, 4,6,2,10, --32	" !"# $%&' ()*+ ,-./"
+	8,4,8,8, 8,8,8,8, 8,8,2,2, 6,6,6,8, --48	"0123 4567 89:; <=>?"
+	10,8,9,6, 8,6,6,8, 8,6,8,8, 6,10,8,8, --64 	"@ABCDEFGHIJKLMNO"
+	8,8,8,8, 6,8,8,10, 8,8,6,4, 10,4,6,8, --80	"PQRSTUVWXYZ[ \]^_"
+	4,8,8,7, 8,8,6,8, 8,2,4,7, 2,10,8,8, --96 	"`abc defg hijk lmno"
+	8,8,6,8, 6,8,8,10, 6,8,8,6, 2,6,8,3, --112	"pqrs tuvw xyz{ |}~ "
+	3
+}
+
+function stripStarboundFormatTags( S )
+
+	if S ~= nil then
+		--ok
+	else
+		return S;
+	end
+	
+	--[[
+	
+	--SPECIAL CASES for starbound formatting strings:
+	--Lua formats as %% in lua.
+	--\n becomes 10 from json
+	--But this crap: ^green; becomes NO SPACE AT ALL due to starbound formatting rules.
+	--we dont know how to get a ^ character. Assume it's ^^?
+	if cc == 94 then
+		--find the ; within some range?
+		--if the NEXT CHARACTER is a ^, then it becomes ^^ and nothing is a problem.
+		--^#6f6f6f;
+		--^green ^cyan ^white yellow blue lightgray 
+		--^shadow,cyan
+		--More complicated that I would like 
+		--^#6f6f6f;$ status ^cyan;>
+		--"^#6f6f6f;$ status -f ^cyan;
+		--^#15ce02;
+		--List of things found:
+		--	^-^		Allowed, ignored?
+		--	^reset;
+		--		Any of color names 
+		--	orange yellow green blue indigo violet black white magenta darkmagenta cyan clear darkcyan cornflowerblue gray lightgray darkgray darkgreen pink
+		--	^#FFFFFF;	Hexadecimal color. 
+		
+	end
+	--224 2 Heh! ^green;mmm^white;. Longer strings in buttons.
+
+	--Hey this is handy. Neat. Will it... do anything else?
+	sb.replaceTags( string, tagmap )
+		from player.config:
+			"^cyan;> Name: ^white;<name>\n^cyan;> Job:^white; <role>\n^cyan;> Rank:^white; <rank>\n^cyan;> Status:^white; <status>"
+			
+		  description = sb.replaceTags(description, {
+			  name = self.name or "Cannon Fodder",
+			  role = self.role.name or "Soldier",
+			  rank = self.rank or "Ensign",
+			  status = self.statusText or "Slacking off"
+			})
+	]]--
+	
+	--the MAXIMUM LENGTH seen is ^cornflowerblue; so, check the 16 byte substring for the ^..; length
+	local matchablecommands = {
+		orange=1
+		,yellow=1 
+		,green=1
+		,blue=1
+		,indigo=1 
+		,violet =1
+		,black =1
+		,white =1
+		,magenta =1
+		,darkmagenta =1
+		,cyan =1
+		,clear =1
+		,darkcyan=1 
+		,cornflowerblue =1
+		,gray =1
+		,lightgray =1
+		,darkgray =1
+		,darkgreen =1
+		,pink=1
+		,reset=1
+	}
+	
+	local slen = string.len(S)
+	if slen > 0 then
+		local R = "";
+		local si = 1;
+		while si <= slen do
+			local cc = string.byte(S, si);
+			if cc == 94 then
+				
+				local matched = false;
+				local si2 = si + 1;
+				if si2 < slen then
+					local checks = string.sub( S, si2, si2+15 );
+					
+					--checks MUST MATCH something (or start as a #)
+					local hassemi = string.find( checks, ";" );
+					
+					if hassemi ~= nil then
+						local semiindex = hassemi;	--[1];	--lua issue. string.find does NOT return a pair in this case.
+						--we know a list of POSSIBLE codes  this is allowed to be:
+						local commandcode = string.sub( checks, 1, semiindex-1 );
+						
+						--sb.logInfo( "Found checks "..tostring( si ).." "..checks.." "..tostring( hassemi ).." "..commandcode )
+					
+						--DOES IT MATCH something we know
+						if matchablecommands[ commandcode ] ~= nil then
+							--valid
+							matched = true;
+							si = si + semiindex;
+						elseif string.sub( commandcode, 1, 1 ) == "#" then
+							--assume it's OK if length <=9
+							if string.len( commandcode ) <= 9 then
+								--valid
+								matched = true;
+								si = si + semiindex;
+							end
+						end
+					end
+				end
+				if matched then
+					--good.
+				else
+					R = R..string.sub( S, si, si );	--extract ONE character.
+				end
+			else
+				R = R..string.sub( S, si, si );	--extract ONE character.
+			end
+			si = si + 1;
+		end
+		
+		--sb.logInfo( "Removing: " );
+		--sb.logInfo( S );
+		--sb.logInfo( R );
+		--[23:29:50.530] [Info] Removing: 
+		--[23:29:50.530] [Info] Heh! 2^^2 ^green;mmm^white;. Longer ^#FF00FF;s^#FFFF00;tri^reset;ngs in buttons.
+		--[23:29:50.530] [Info] Heh! 2^^2 mmm. Longer strings in buttons.
+			
+		return R;
+	end
+	return S;
+end
+
+function estimateTextWrap( S, pixels )
+
+	--REad through chracter, find "word pixel size"
+	--determine if we need to wrap the line (or cut, in case you have a word that is TOO LONG)
+	--split along space.
+	--for each word, get length into	array... Hm.
+	--
+	
+	if S ~= nil then
+		--ok
+	else
+		return 0;
+	end
+	
+	S = stripStarboundFormatTags( S );
+	
+	local nlines = 0;
+	
+	local slen = string.len(S)
+	if slen > 0 then
+		nlines = 1;
+		local si = 1;
+		local lastwordlen = 0;
+		local lastlinelen = 0;
+		while si <= slen do
+			local cc = string.byte(S, si)
+			
+			local wordend = false;
+			local mustline = false;
+			local deltalen = 2;
+			if cc < #vsoCharSizeMap then
+				if cc == 10 then
+					mustline = true; deltalen = 0;	--MUST create a new line. Period.
+				elseif cc == 32 or cc == 9 then
+					wordend = true; --We have ENDED the current word. (tab or space)
+					deltalen = deltalen + vsoCharSizeMap[ 32 ];	--Counts as space.
+				else
+					deltalen = deltalen + vsoCharSizeMap[ cc ];
+				end
+			else
+				deltalen = deltalen + 3;
+			end
+			
+			lastlinelen = lastlinelen + deltalen;
+			lastwordlen = lastwordlen + deltalen;
+			
+			local nextguilen = ( lastlinelen )/2.0;
+			if nextguilen > pixels or mustline then
+				--MUST wrap a line here.
+				--However, we have to check our word length. if our WORD is small enough to NOT split, we push it to the NEXT line.
+				
+				if mustline then
+					lastlinelen = 0;
+					lastwordlen = 0;
+					wordend = true;
+				else
+				
+					if (lastwordlen)/2.0 > pixels then
+					
+						lastlinelen = 0;
+						wordend = true;
+					else
+					
+						lastlinelen = lastwordlen;
+						wordend = true;
+					end
+				end
+				
+				nlines = nlines + 1;	
+			end
+			
+			if wordend then
+				lastwordlen = 0;
+			end
+			
+			si = si + 1;
+		end
+	end
+	return nlines;
+end
+
+
+function vsoMakeChoiceListDialog( data )
+
+	local default_choicedlg = root.assetJson( "/interface/scripted/vsochoicelist/vsochoicelistdefault.config" );
+	
+	--The short answer:
+	--	There IS no dynamic gui.
+	--So, we have to rebuild the damn thing each time.
+	--Ugh. THERE ARE radio button lists which we will use.
+	--But estimating text size... what a pain in the neck!
+	--	Hmph. Just have to make a list. Hm. How to stretch out a gui item???
+	--
+	--Turns out you CANT have a dynamic gui.
+	--But you CAN change the background image out, with a image that would "enclose" the dialog you want...
+	--Hm. So how to estimate text wrapping?
+	--
+	--So we gotta create HOW many headers/footers to have a dynamic width gui?
+	--Huh. Option sizes are a thing I guess.
+	--
+	--Well, division by 16 is fair.
+	--Just for LESS resources, 
+		
+	--Returned value is ALWAYS greater or equal to v, but quantized.
+	function floorenclose( v, d )
+		ivalue = d*math.floor( v/d )
+		if ivalue == v then
+			return ivalue
+		end
+		return ivalue + d
+	end
+	
+	local inwidth = 128
+	local inheight = 64
+	
+	--	
+	--local dwidth = 32 * 6;		--DESIRED width and height... Hm.
+	--local dheight = 32 * 4;
+	--Compute message size, then option sizes (bah!)
+	
+	local usemessage = data.message;
+	if usemessage ~= nil then else usemessage = "" end
+	local nlines = 0;
+	
+	-- we just want 3 lines displayed in general... (hax)
+	if data.fixedWidth ~= nil then
+		inwidth = floorenclose( data.fixedWidth, 32 );
+		nlines = estimateTextWrap( usemessage, inwidth );
+	else
+		local linewrapsize = floorenclose( inwidth, 32 );
+		nlines = estimateTextWrap( usemessage, linewrapsize );
+		while nlines >= 5 do
+			inwidth = inwidth + 32;	--add some more! Up to a MAXIMUM:
+			if inwidth >= 320 then
+				inwidth = 320;
+				break;
+			else
+				linewrapsize = floorenclose( inwidth, 32 );
+				nlines = estimateTextWrap( usemessage, linewrapsize );
+			end
+		end
+	end
+	
+	--Okay we have the Width for the MESSAGE
+	--But what about the responses? Hmmmm...
+	--Force them to same width options? Huh.
+	
+	
+	local dwidth = floorenclose( inwidth, 32 );
+	local dybottompadding = 20;
+	local dytoppadding = 26;
+	local dxleftpadding = 4;
+	local dxrightpadding = 14;
+	local dbuttonsize = 22;	--button image is about this big... Hm.
+	local dtextheight = 10;	--DEFAULT TEXT SIZE is 8 pixels (16 gui pixels) and I've seen 12 as an alternate. Multiply your inputs to scale text results... 8/12*linewidth.
+	
+	--Estimate wrapping... 
+	local cmessageheight = 0;
+	if usemessage ~= nil then
+		cmessageheight = nlines * dtextheight + 4
+	end
+	
+	local dheight = cmessageheight;--floorenclose( cmessageheight, 32 );
+	
+	--sb.logInfo( tostring( nlines ).." "..tostring( cmessageheight ).." "..tostring( dwidth ).." "..usemessage )
+	
+	--Build button list (template???)
+	local stackbegin = 0;
+	local stackheight = 0;
+	--local buttonlist = {};
+	--local stacklist = {};
+	local childrenset = {};
+	if data.options then
+		
+		--local buttonwrapwidth = dwidth;	--Hm missing padding
+		
+		--get total size
+		local textlineoffset = 2;
+		local textlinesize = dtextheight;	--not 8 apparently.
+		local buttonsizes = {}
+		local dtotalbuttonsize = 0;
+		for k,v in pairs( data.options ) do
+			
+			local nbuttonlines = 0;
+			
+			if v.icon ~= nil then
+				nbuttonlines = estimateTextWrap( v.caption, dwidth - 22 );
+			else
+				nbuttonlines = estimateTextWrap( v.caption, dwidth - 2 );	--At text size 8, it's 16 gui pixels per line? odd.
+			end
+			if nbuttonlines < 1 then nbuttonlines = 1; end 	--missing text? Hm...
+			
+			if v.icon ~= nil then
+				dtotalbuttonsize = dtotalbuttonsize + 14;	--button WITH icon size
+			else
+				dtotalbuttonsize = dtotalbuttonsize + 8;	--button with NO icon size
+			end
+			dtotalbuttonsize = dtotalbuttonsize + textlinesize * nbuttonlines;
+			
+			table.insert( buttonsizes, nbuttonlines );
+		end
+		dheight = floorenclose( cmessageheight + dtotalbuttonsize, 32 );
+		
+		--Okay, it'd be more aesthetic if we EVENLY divided the buttons, OR worked our way UP.
+	
+		--Create buttons as needed.
+		stackheight = dtotalbuttonsize;
+		dtotalbuttonsize = dtotalbuttonsize + dybottompadding;	--Hmmm
+		butcount = 0;
+		for k,v in pairs( data.options ) do
+			butcount = butcount + 1;
+			--v.button
+			--v.value
+			--v.caption
+			
+			--TYPE of button:
+			--	Plain text button
+			--	Button with ICON on left (hm)
+			--	?
+			--
+			local nbuttonlines = buttonsizes[ butcount ]
+			
+			if v.icon ~= nil then
+				dtotalbuttonsize = dtotalbuttonsize - 14;	--button WITH icon size
+			else
+				dtotalbuttonsize = dtotalbuttonsize - 8;	--button with NO icon size
+			end
+			dtotalbuttonsize = dtotalbuttonsize - textlinesize * nbuttonlines;
+			
+			--If we use a "layout"
+			
+			local nbuttonstring = "";
+			if nbuttonlines > 1 then
+				if nbuttonlines > 7 then
+					nbuttonlines = 8;
+				end
+				nbuttonstring = "_"..tostring( nbuttonlines );
+			end
+			
+			local usecaption = v.caption;
+			if usecaption ~= nil then
+			
+			else
+				usecaption = "";
+			end
+			
+			local usevalue = butcount;
+			if v.value ~= nil then
+				usevalue = v.value
+			end
+			
+			--sb.logInfo( tostring(dwidth).." "..tostring( nbuttonlines ) .. " " .. v.caption );
+			
+			local adjustedbuttonwrapwidth = dwidth - 2
+			if v.icon ~= nil then
+				adjustedbuttonwrapwidth = dwidth - 20 - 2;
+			end
+			
+			local imagedirectives = "";
+			if v.imagecolor ~= nil then
+				if string.len( imagedirectives ) < 1 then
+					imagedirectives = "?";
+				end
+				--multiply=ffffff00=0.85;
+				
+				--Process image color to ADD alpha.
+				local muldir = v.imagecolor
+				if string.len( muldir ) == 6 then
+					muldir = muldir.."FF"
+				end
+				
+				--imagedirectives = imagedirectives.."replace="..v.imagecolor..";";
+				imagedirectives = imagedirectives.."multiply="..muldir..";";
+			end
+			
+			local baseposition = {4, dtotalbuttonsize };
+			local stackdata = {
+				label={
+					type="label"
+					,position = { baseposition[1] + 4 + dxleftpadding, baseposition[2]+textlineoffset+textlinesize*nbuttonlines }
+					,textAlign = "left"
+					,wrapWidth = adjustedbuttonwrapwidth
+					,hAnchor = "left"
+					,vAnchor = "top"
+					,zlevel = 4
+					,value = usecaption
+				}
+				,button = {
+					type="button"
+					,callback = "buttonClickEvent"
+					,base="/interface/scripted/vsochoicelist/gen/gen_item_"..tostring(dwidth)..nbuttonstring..".png"..imagedirectives
+					,hover="/interface/scripted/vsochoicelist/gen/gen_itemover_"..tostring(dwidth)..nbuttonstring..".png"..imagedirectives
+					,position= baseposition
+					,caption= ""
+					,pressedOffset={0,0}
+					,data = usevalue
+					,hAnchor = "left"
+					,vAnchor = "top"
+					,zlevel = 5
+				}
+			}
+			if v.icon ~= nil then
+				stackdata.image = {
+					type="image"
+					,position = { baseposition[1] + 4+8, baseposition[2]+textlineoffset+textlinesize*nbuttonlines }
+					,maxSize = {16,16}
+					,centered = true
+					,file= v.icon
+					,hAnchor = "left"
+					,vAnchor = "top"
+					,zlevel = 6
+				}
+				stackdata.label.position = { baseposition[1] + 4 + dxleftpadding + 20, baseposition[2]+5+textlineoffset+textlinesize*nbuttonlines }
+			end
+			
+			if v.color ~= nil then
+				--stackdata.label.fontColor = v.color
+				stackdata.label.color = v.color
+			end
+			
+			--if v.fontsize ~= nil then
+			--	stackdata.label.fontSize = v.fontsize;
+			--end
+			
+			--stackdata.label.fontSize = 8;	--DEFAULT font size.
+			
+			--Adjust button images.
+			if v.icon ~= nil then
+				--
+				stackdata.button.base = "/interface/scripted/vsochoicelist/gen/gen_itemicon_"..tostring(dwidth)..nbuttonstring..".png"..imagedirectives
+				stackdata.button.hover = "/interface/scripted/vsochoicelist/gen/gen_itemiconover_"..tostring(dwidth)..nbuttonstring..".png"..imagedirectives
+			end
+			
+			for stak_k,stak_v in pairs( stackdata ) do
+				childrenset[ "btn_"..tostring(butcount).."_"..stak_k ] = stak_v
+			end
+			
+			--table.insert( stacklist, stackdata );
+			
+			--table.insert( buttonlist, buttondata)
+		end
+		stackbegin = dtotalbuttonsize;
+		
+	else
+	
+		--With NO DIALOG options, it's just a vsoSay??? Hm.
+	end
+	
+	dheight = floorenclose( dheight, 32 );
+		
+	default_choicedlg = sb.jsonMerge( default_choicedlg, { gui = {
+		background = {
+			fileBody = "/interface/scripted/vsochoicelist/gen/gen_body_"..tostring(dwidth).."_"..tostring(dheight)..".png"
+			,fileHeader = "/interface/scripted/vsochoicelist/gen/gen_header_"..tostring(dwidth)..".png"
+			,fileFooter = "/interface/scripted/vsochoicelist/gen/gen_footer_"..tostring(dwidth)..".png"
+		}
+		,windowtitle = {
+			--type="title"
+			--,title = ""
+			--position = { dxpadding, dheight - 15 - 15 - dypadding }
+			--,icon={
+				--position = { dxpadding, dheight - 15 - dypadding }
+			--}
+		}
+		,close={
+			position = { dwidth - 4, dheight + dybottompadding }	--clsoe button size
+		}
+		--,collectionButtons = {
+		--	buttons = buttonlist
+		--}
+		,optionsLayout = {
+			--rect = { 0, stackbegin+stackheight, dwidth, stackbegin }
+			rect = { 0, 0, dwidth+dxleftpadding+dxrightpadding, dheight }	--UH WHY???
+			,children = childrenset
+		}
+	}
+	} )
+	
+	if data.title then default_choicedlg.gui.windowtitle.title = data.title; end
+	
+	--
+	if data.message then default_choicedlg.gui.message.value = data.message; end
+	default_choicedlg.gui.message.wrapWidth = dwidth	--Strange...
+	default_choicedlg.gui.message.position = { dxleftpadding, dheight + dybottompadding - dtextheight }
+	
+	--default_choicedlg.gui.windowtitle.position
+	
+	--[[
+	
+	--Remapping DIRECT gui assets
+	--if data.title then default_choicedlg.gui.windowtitle.title = data.title; end
+	if data.title then default_choicedlg.gui.windowtitle.value = data.value; end
+	--if data.subtitle then default_choicedlg.gui.windowtitle.subtitle = data.subtitle; end
+	if data.message then default_choicedlg.gui.message.value = data.message; end
+	
+	if data.options then
+		
+		--uhhhh how to SET the itemList ???
+		local txo = {};
+		
+		local butcount = 0;
+		for k,v in pairs( data.options ) do
+			table.insert( txo, v );
+			--v.button
+			--v.value
+			--v.caption
+		end
+		
+		default_choicedlg = sb.jsonMerge( default_choicedlg, { textOptionList = txo } )
+		--default_choicedlg.textOptionList = txo;
+		
+	end
+	
+	]]--
+	
+	return default_choicedlg
 end
 
 -------------------------------------------------------------------------------
@@ -1608,6 +2226,8 @@ function init()
 			
 			--
 			self.vsodt = dt;
+			self.vsoclock = os.clock();
+			self.vsoclock_start = self.vsoclock;
 			
 			--
 			self.ats = {};	--anitag anitags
@@ -1724,6 +2344,14 @@ function vsoDelta()
 	return self.vsodt;	--iiiiinteresting idea. emulating slowdown? nope...
 end
 
+function vsoDeltaFromStart()
+	return self.vsoclock - self.vsoclock_start;	--iiiiinteresting idea. emulating slowdown? nope...
+end
+
+function vsoClock()
+	return self.vsoclock;	--iiiiinteresting idea. emulating slowdown? nope...
+end
+
 function vsoGetRandomInputOverride( inputs, params, controls )
 
 	if inputs.npcdelay == nil then inputs.npcdelay = params.minTime + (params.maxTime - params.minTime) * math.random(); end
@@ -1751,13 +2379,30 @@ function vsoGetRandomInputOverride( inputs, params, controls )
 	return inputs.overrides;
 end
 
+function vsoInputOverride( seatname, options )
+
+	local v = self.sv.eaten[ seatname ]
+	if v ~= nil then
+
+		if v.input == nil then
+			v.input = vsoInputCreate( seatname )
+		end
+				
+		local over = vsoGetRandomInputOverride( v.input, { dt=self.vsodt, minTime=0.2, maxTime=1.0 }, {"L", "R", "U", "D"} );
+		vsoInputUpdate( seatname, v.input, self.vsodt, over )
+		return true
+	end
+	return false;
+end
+-----------------------------------------------------------------------
+
 function update( dt )
 
 	if self._storageLoadQueue ~= nil then
 		_vsoStorageLoadData( self._storageLoadQueue[1] );
 		self._storageLoadQueue = nil;
 	elseif self._storageSaveQueue ~= nil then
-		_vsoStorageSaveData( self._storageSaveQueue[1] );
+		_vsoStorageSaveData( self._storageSaveQueue[1], self._storageSaveQueue[2] );
 		self._storageSaveQueue = nil;
 	end
 
@@ -1791,6 +2436,7 @@ function update( dt )
 	end
 	
 	self.vsodt = dt;
+	self.vsoclock = os.clock();
 	local mpos = mcontroller.position();	--current mcontroller.position
 	
 	--Forced to update all timers to keep in sync with REAL timers.
@@ -2286,6 +2932,24 @@ function vsoSet( key, values )
 	return self.cfgVSO.simple.sets[ key ]
 end
 
+--local animkey = vsoChoose( { "full": "suckle", "fullidle":"lay" }, { "full":25, "fullidle":100 } )
+function vsoChoose( dict )
+	--Pick a random key from a dictionary
+	local count = 0
+	for k,v in pairs( dict ) do
+		count = count + 1;
+	end
+	local findme = math.random() * count;
+	local total = 0;
+	for k,v in pairs( A ) do
+		total = total + 1;
+		if total >= findme then	--0 influence elements are ignored (but the FIRST element may be selected as default)
+			return k;
+		end
+	end
+	return nil;
+end
+
 --Get a histo set ( list of lists[ freq, value ] pairs
 function vsoHisto( key )
 
@@ -2729,7 +3393,7 @@ function vsoTakeItemFromTarget( targetname, itemname, itemcount, callback );
 	return false;
 end
 		
-function vsoGetItemParameter( itemname, key )
+function vsoGetItemParameter( itemname, key, defaultvalue )
 	local cfg = root.itemConfig( self.foodtargetname );
 	if cfg ~= nil then
 		if cfg.config ~= nil then
@@ -2738,7 +3402,7 @@ function vsoGetItemParameter( itemname, key )
 			end
 		end	
 	end
-	return nil
+	return defaultvalue
 end
 						
 -------------------------------------------------------------
@@ -2822,6 +3486,33 @@ function vsoHasStatus( targetid, statname, callback )
 	local alist = {}
 	alist[statname] = 1;
 	vsoHasStatusSet( targetid, alist, callback );
+end
+
+function vsoResourceGetSummary( targetid, callback )
+	if world.entityExists( targetid ) then
+		_add_vso_rpc( 	world.sendEntityMessage( targetid, "vsoResourceGetSummary" ), callback )
+		return true
+	end
+	return false;
+end
+
+function vsoResourceGet( targetid, resname, callback )
+	if world.entityExists( targetid ) then
+		_add_vso_rpc( 	world.sendEntityMessage( targetid, "vsoResourceGetSummary", resname ), callback )
+		return true
+	end
+	return false;
+end
+
+function vsoResourceAddPercent( targetid, resname, respercent, optcallback )
+	if world.entityExists( targetid ) then
+		local rpc = world.sendEntityMessage( targetid, "vsoResourceAddPercent", resname, respercent/100.0 )
+		if optcallback ~= nil then
+			_add_vso_rpc( rpc, optcallback )
+		end
+		return true
+	end
+	return false;
 end
 
 --------------------------------------------------------------------------------------------
@@ -3707,7 +4398,13 @@ end
 
 --We would LIKE to also get RESOURCE percentages too...
 --	Huh...
-
+function vsoGetResourceHealthPercent( entityid )
+	local enthp = world.entityHealth( entityid );
+	if enthp ~= nil then
+		return 100.0 * enthp[1] / enthp[2];
+	end
+	return 0.0
+end
 
 -------------------------------------------------------------------------------
 
@@ -4116,6 +4813,16 @@ function vsoVictimAnimReplay( seatname, name, animstate )
 	end
 	return didit;
 end
+
+
+
+function vsoEffectProjectile( name, options )
+	world.spawnProjectile( name, mcontroller.position(), entity.id(), {0,0}, true, options )
+end
+	--Create warp in particle emission...EntityId 
+function vsoEffectWarpIn( options ) vsoEffectProjectile( "spovwarpineffectprojectile", options ); end
+function vsoEffectWarpOut( options ) vsoEffectProjectile( "spovwarpouteffectprojectile", options ); end
+
 
 --These are REALLY inefficient. (for n > 10 lol)
 function _ListAddStatus( list, statlist )
@@ -4894,7 +5601,35 @@ function vsoAnimatorDataGet( animationpath, animationfilename )
 	
 	--Dances can EASILY be made custom! crazy... and there are a lot of them
 	--Hm.
-	AA.player.dances = { "", "wiggledance", "wave", "warmhands" }
+	AA.player.dances = { ""
+		,"armswingdance"
+		,"comfort"
+		,"crouchcollect"
+		,"crouchwarm"
+		,"drink"
+		,"estherhover"
+		,"flipswitch"
+		,"hylotldance"
+		,"koichihologramfading"
+		,"koichihologramstanding"
+		,"koichihologramstudying"
+		,"mourn"
+		,"posedance"
+		,"postmail"
+		,"pressbutton"
+		,"punch"
+		,"sell"
+		,"steer"
+		,"titanic"
+		,"tonauacdoorlifting"
+		,"typing"
+		,"warmhands"
+		,"wave"
+		,"wiggledance"
+		,"victimrun"
+		,"victimsquirm"
+		,"victimwalk"
+	}
 	
 	--Custom dances? Hm...
 		

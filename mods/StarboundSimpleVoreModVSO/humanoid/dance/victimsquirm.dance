@@ -1,0 +1,14 @@
+{
+  "name" : "victimsquirm",
+  "states" : ["idle", "walk", "sit", "lay", "duck"],
+  "cycle" : 0.5,
+  "cyclic" : true,
+  "duration" : 0.5,
+  "steps" : [
+    // body, frontArm, backArm, headOffset, frontArmOffset, backArmOffset
+    [ "swim.1", null, null, null, null, null ]
+    ,[ "swim.2", null, null, null, null, null ]
+    ,[ "swim.3", null, null, null, null, null ]
+    ,[ "swim.4", null, null, null, null, null ]
+  ]
+}

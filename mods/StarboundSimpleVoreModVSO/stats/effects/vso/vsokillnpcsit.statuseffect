@@ -1,0 +1,10 @@
+{
+  "name" : "vsokillnpcsit",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsokillnpcsit.lua"
+  ]
+
+}
