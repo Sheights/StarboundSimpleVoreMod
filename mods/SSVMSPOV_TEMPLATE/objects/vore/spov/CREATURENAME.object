@@ -1,0 +1,75 @@
+{
+    "objectName": "spovspawnerCREATURENAME"
+    , "colonyTags": ["vore"]
+    , "rarity": "Rare"
+    , "shortdescription": "SPOV CREATURENAME"
+    , "race": "generic"
+    , "category": "other"
+    , "price": 500  
+	, "health" : 5
+	
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
+    , "description": "DESCRIPTION CREATURENAME"
+	, "tooltipSubtitle" : "SPOV Summoner"
+	
+    , "orientations": [{
+            "image": "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
+            , "imagePosition": [-40, 0]
+            , "direction": "left"
+            , "flipImages": true
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }, {
+            "image": "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
+            , "imagePosition": [-40, 0]
+            , "direction": "right"
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }]
+
+    , "inventoryIcon": "/vehicles/spov/CREATURENAME/CREATURENAMEicon.png"
+
+    , "animationParts": {
+        "bg": "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
+    }
+
+    , "spov": {
+        "types": ["spovCREATURENAME"]
+        , "position": [0.0, 4, 0.0, 4]
+        , "template": {}
+    }
+	
+    , "animation": "spovspawner.animation"
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+    , "scripts": [
+        "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/CREATURENAME/CREATURENAMEitemscript.lua" 
+    ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+	  }
+}

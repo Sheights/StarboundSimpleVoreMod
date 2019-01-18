@@ -1,0 +1,16 @@
+{
+  "name" : "clothedbed1",
+  "effectConfig" : {
+    "healTime" : 60
+  },
+  "defaultDuration" : 10,
+
+  "scripts" : [
+    "clothedbed.lua"
+  ],
+
+  "animationConfig" : "clothedbed.animation",
+
+  "label" : "Resting",
+  "icon" : "/interface/statuses/sleep.png"
+}

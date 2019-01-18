@@ -1,6 +1,6 @@
 {
   "name" : "victimwalk",
-  "states" : ["idle", "walk", "sit", "lay"],
+  "states" : ["idle", "walk", "sit", "lay", "duck"],
   "cycle" : 1.0,
   "cyclic" : true,
   "duration" : 1.0,

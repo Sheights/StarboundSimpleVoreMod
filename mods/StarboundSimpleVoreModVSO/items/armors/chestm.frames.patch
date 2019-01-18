@@ -1,0 +1,22 @@
+[
+	{ "op": "add", "path": "/aliases/run.1", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.2", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.3", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.4", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.5", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.6", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.7", "value": "run" }
+	,{ "op": "add", "path": "/aliases/run.8", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.1", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.2", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.3", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.4", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.5", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.6", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.7", "value": "run" }
+	,{ "op": "add", "path": "/aliases/walk.8", "value": "run" }
+	,{ "op": "add", "path": "/aliases/swim.1", "value": "swim" }
+	,{ "op": "add", "path": "/aliases/swim.2", "value": "swim" }
+	,{ "op": "add", "path": "/aliases/swim.3", "value": "swim" }
+	,{ "op": "add", "path": "/aliases/swim.4", "value": "swim" }
+]

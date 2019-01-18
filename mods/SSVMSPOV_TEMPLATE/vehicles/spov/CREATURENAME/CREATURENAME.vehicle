@@ -1,0 +1,68 @@
+{
+	"name" : "spovCREATURENAME",
+	"script" : "CREATURENAME.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+	
+	"directoryPath" : "/vehicles/spov/CREATURENAME/",
+	"animation" : "CREATURENAME.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+	
+	, "mouthPosition" : [ 0.0, 0.0 ],
+
+	"boundBox" : [-5, -4, 5, 4],
+	"metaBoundBox" : [-5, -4, 5, 4],
+
+	"physicsCollisions" : {
+	},
+	
+	"vso" : {
+		"useAnimatorFirst":0
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [[-5, 4], [-5, -4], [5, -4], [5, 4]]
+				,"gravityMultiplier" : 0.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : false
+				,"frictionEnabled" : false
+				,"gravityEnabled" : false
+				,"ignorePlatformCollision" : true
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+			}
+		}
+		,"victimAnimations":{
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			}
+		}
+	}
+}
