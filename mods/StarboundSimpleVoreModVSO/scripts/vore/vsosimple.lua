@@ -104,6 +104,10 @@ function vsoError( msg )
 	sb.logInfo( "#VSOERROR("..tostring(entity.id())..") "..tostring( msg ) )
 	self.vsoForcedToDie = true;	--Yup.
 end
+
+function vsoForceDeath()
+	self.vsoForcedToDie = true;	--Yup.
+end
 		
 function vsoInfo( msg )
 	sb.logInfo( "#VSOINFO("..tostring(entity.id())..") "..tostring( msg ) )
@@ -350,24 +354,26 @@ end
 --Utility functions with self VSO scope----------------------------------------
 -------------------------------------------------------------------------------
 function vsoChangeSpawnOwnerState( towhat )	--Changes the spawn owner animation state (spawn owner config selects part and such...)
-	if towhat ~= self.vsoSpawnOwnerState then
+	--if towhat ~= self.vsoSpawnOwnerState then
 		self.vsoSpawnOwnerState = towhat
-		if self.vsoSpawnOwner ~= nil then
-			world.sendEntityMessage( self.vsoSpawnOwner, "vsoSpawnerAnimState", entity.id(), self.vsoSpawnOwnerState );
+		if storage._vsoSpawnOwner ~= nil then
+			world.sendEntityMessage( storage._vsoSpawnOwner, "vsoSpawnerAnimState", entity.id(), self.vsoSpawnOwnerState );
 		end
-	end
+	--end
 end
 
 function vsoShouldFlipAnimator()
 	if self.vsoInitialDirection == -1 then
 		if self.vsoCurrentDirection == -1 then
-			return true;
+			--return true;
 		else
+			return true;
 		end
 	else
 		if self.vsoCurrentDirection == -1 then
-		else
 			return true;
+		else
+			--return true;
 		end
 	end
 	return false
@@ -447,9 +453,32 @@ function vsoEatForce( victimid, seatindex )
 	return false;
 end
 
+function vsoFaceDirection( direction )
+	if direction < 0 then
+		if self.vsoInitialDirection == -1 then
+			animator.setFlipped( false );--true )
+			--self.vsoCurrentDirection = -1
+		else
+			animator.setFlipped( true )
+			--self.vsoCurrentDirection = 1
+		end
+		self.vsoCurrentDirection = -1
+	else
+		if self.vsoInitialDirection == -1 then
+			animator.setFlipped( true )--false )
+			--self.vsoCurrentDirection = 1
+		else
+			animator.setFlipped( false )
+			--self.vsoCurrentDirection = -1
+		end
+		self.vsoCurrentDirection = 1
+	end
+end
 			
 function vsoFacePoint( x )
 	if x ~= nil then
+		vsoFaceDirection( x - mcontroller.position()[1] );
+		--[[
 		if x < mcontroller.position()[1] then
 			if self.vsoInitialDirection == -1 then
 				animator.setFlipped( true )
@@ -467,6 +496,7 @@ function vsoFacePoint( x )
 				self.vsoCurrentDirection = -1
 			end
 		end
+		]]--
 	end
 end
 
@@ -780,21 +810,38 @@ end
 -------------------------------------------------------------------------------
 --Message Handlers for self VSO scope------------------------------------------
 -------------------------------------------------------------------------------
-function vsoMsgHdlCreatedFrom(_, _, ownerKey, originalPos)	--Handle created from message
-	self.vsoSpawnOwner = ownerKey;
+function vsoMsgHdlCreatedFrom(_, _, ownerKey, originalPos, uidopt )	--Handle created from message
+
+	if self.vsoSpawnOwnerLast ~= ownerKey then
+		--changed owner? issues...
+		--
+		--scary...
+	end
+	
+	--???? do vehicles HAVE a unique id? Hm.
+	
+	--sb.logInfo( tostring( entity.id() ).." _vsoSpawnOwner created from msg: "..tostring( ownerKey ).." "..tostring( storage._vsoSpawnOwner ).." "..tostring( uidopt ) )
+	
+	storage._vsoSpawnOwner = ownerKey;
+	if uidopt ~= nil then
+		storage._vsoSpawnOwnerUID = uidopt;	--send "vsoRelinkVehicleToSpawner"
+		--world.sendEntityMessage( getidfrom( storage._vsoSpawnOwnerUID ), "vsoRelinkVehicleToSpawner", entity.id(), storage._vsoSpawnOwnerUID )
+	end
+	storage._vsoSpawnOwnerName = world.entityName( ownerKey );
+	
 	self.vsoSpawnCenter = originalPos;
-	vsoChangeSpawnOwnerState( self.vsoSpawnOwnerStateDefault )
+	vsoChangeSpawnOwnerState( self.vsoSpawnOwnerState )
 end
 
 function vsoMsgHdlCreatedMonster(_, _, ownerKey, originalPos)	--Handle created as monster message
-	self.vsoSpawnOwner = ownerKey;
+	storage._vsoSpawnOwner = ownerKey;
 	self.vsoSpawnCenter = originalPos;
 	self.vsoSpawnMonster = true;
-	vsoChangeSpawnOwnerState( self.vsoSpawnOwnerStateDefault )
+	vsoChangeSpawnOwnerState( self.vsoSpawnOwnerState )
 end
 
 function vsoMsgHdlComeHome(_, _, ownerKey, whotouched)	--Handle a interact on the spawn owner
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		local laststate = self.sv.laststate;
 		if laststate ~= nil then
 			local doit = self.sv.ss[ laststate ].comehomefn
@@ -808,34 +855,37 @@ function vsoMsgHdlComeHome(_, _, ownerKey, whotouched)	--Handle a interact on th
 end
 
 function vsoMsgHdlPlayerInteracted(_, _, ownerKey, whotouched)	--Handle a interact from a player
-	if self.vsoSpawnOwner ~= nil then
-		local laststate = self.sv.laststate;
-		if laststate ~= nil then
-			--If we HAVE eaten:
-				--treat as belly rub by player
-			--Else:
-				--change target to this thing
-			onInteraction( { sourceId=whotouched } )
+	if storage._vsoSpawnOwner ~= nil then
+		if self.sv ~= nil then
+			local laststate = self.sv.laststate;
+			if laststate ~= nil then
+				--If we HAVE eaten:
+					--treat as belly rub by player
+				--Else:
+					--change target to this thing
+				onInteraction( { sourceId=whotouched } )
+			end
 		end
 	end
 end
 
 function vsoMsgHdlNPCInteracted(_, _, ownerKey, whotouched)	--Handle a interact from a npc
-	if self.vsoSpawnOwner ~= nil then
-		local laststate = self.sv.laststate;
-		if laststate ~= nil then
-			--If we HAVE eaten:
-				--treat as belly rub by NPC
-			--Else:
-				--change target to this thing
-			onInteraction( { sourceId=whotouched } )
-			
+	if storage._vsoSpawnOwner ~= nil then
+		if self.sv ~= nil then
+			local laststate = self.sv.laststate;
+			if laststate ~= nil then
+				--If we HAVE eaten:
+					--treat as belly rub by NPC
+				--Else:
+					--change target to this thing
+				onInteraction( { sourceId=whotouched } )
+			end
 		end
 	end
 end
 
 function vsoMsgDlgInteracted(_, _, arg1, arg2)	--Handle a dialog response
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		onDialog( { response=arg1, sourceId=arg2 } )
 	end
 end
@@ -867,9 +917,9 @@ function vsoMsgHdlSeatIndexGet(_, _, victimid, ownercheck )
 end
 
 function vsoMsgHdlStorageLoadData(_, _, objectid, data )
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		--sb.logInfo( "vsoMsgHdlStorageLoadData calling "..tostring(objectid).." "..tostring(self.vsoSpawnOwner) );
-		if objectid == self.vsoSpawnOwner then
+		if objectid == storage._vsoSpawnOwner then
 			if self._storagecallback ~= nil then
 				--sb.logInfo( "vsoMsgHdlStorageLoadData ok "..tostring(data) );
 				self._storagecallback( data );
@@ -886,7 +936,7 @@ function notify( notification )
 end
 
 function vsoStorageAble()
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		return true;
 	end
 	return false;
@@ -895,10 +945,10 @@ end
 function _vsoStorageLoadData( callback )
 	--Queue this so we can wait for the vsoSpawnOwner... (forced single queue first in first out)
 	--sb.logInfo( "vsoStorageLoadData "..tostring(self.vsoSpawnOwner) );
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		self._storagecallback = callback;
 		--sb.logInfo( "vsoStorageLoadData sent" );
-		world.sendEntityMessage( self.vsoSpawnOwner, "vsoStorageLoadData", entity.id() )
+		world.sendEntityMessage( storage._vsoSpawnOwner, "vsoStorageLoadData", entity.id() )
 		return true
 	end
 	return false;
@@ -907,10 +957,10 @@ end
 function _vsoStorageSaveData( data, optionalcallback )
 	--Queue this so we can wait for the vsoSpawnOwner... (forced single queue first in first out)
 	--sb.logInfo( "vsoStorageSaveData "..tostring(self.vsoSpawnOwner) );
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		--sb.logInfo( "vsoStorageSaveData sent" );
 		--data is sent as a json string?
-		local rpc = world.sendEntityMessage( self.vsoSpawnOwner, "vsoStorageSaveData", entity.id(), data )
+		local rpc = world.sendEntityMessage( storage._vsoSpawnOwner, "vsoStorageSaveData", entity.id(), data )
 		if optionalcallback ~= nil then
 			_add_vso_rpc( rpc, optionalcallback );
 		end
@@ -922,10 +972,10 @@ end
 function _vsoStorageSaveDataKey( key, data )
 	--Queue this so we can wait for the vsoSpawnOwner... (forced single queue first in first out)
 	--sb.logInfo( "vsoStorageSaveData "..tostring(self.vsoSpawnOwner) );
-	if self.vsoSpawnOwner ~= nil then
+	if storage._vsoSpawnOwner ~= nil then
 		--sb.logInfo( "vsoStorageSaveData sent" );
 		--data is sent as a json string?
-		world.sendEntityMessage( self.vsoSpawnOwner, "vsoStorageSaveDataKey", entity.id(), key, data )
+		world.sendEntityMessage( storage._vsoSpawnOwner, "vsoStorageSaveDataKey", entity.id(), key, data )
 		return true
 	end
 	return false;
@@ -955,6 +1005,7 @@ function vsoStorageSave( optcallback )
 	for k,v in pairs( storage ) do
 		R[ k ] = v
 	end
+	--vsoSpawnOwner	--Remove all keys that start with _ ? Hm...
 	vsoStorageSaveData( storage, optcallback );
 end
 
@@ -967,9 +1018,19 @@ function vsoStorageLoad( callback )
 	
 		--Load values from data
 		if data ~= nil then
+			--careful...
+			local nixft = string.byte( '_', 1 );
 			for k,v in pairs( data ) do
-				storage[ k ] = data[ k ];
+				--Remove ALL keys with '_' or zero length keys
+				if #k > 0 then
+					if k:byte(1) == nixft then
+						--NO IGNORE THIS (hm)
+					else
+						storage[ k ] = data[ k ];
+					end
+				end
 			end
+			--
 		end
 		
 		callback( data )
@@ -1062,7 +1123,7 @@ function applyDamage( damageRequest )	--Take damage, or not
 				res = {{	--squishy? adjust targetMaterialKind
 					sourceEntityId = sourcentity,
 					targetEntityId = entity.id(),
-					position = mcontroller.position(),
+					position = mcontroller.position(),	--Uh.
 					damageDealt = damage,
 					healthLost = healthLost,
 					hitType = "Hit",
@@ -1911,14 +1972,74 @@ function onDialog( args )	--Interacted with
 	end
 end
 
--------------------------------------------------------------------------------
-function uninit( )	--Destroyed
+function _vsoOnDeath()
+
+	--WAIT A MINUTE:
+	--	uninit is called to UNLOAD not "destroy" ...	if storage.health <= 0 then
+
+	sb.logInfo( "vsoforce to die..." )
+			
 	if onEnd ~= nil then onEnd() end
+
+	--WAIT this is odd...
+	if storage._vsoSpawnOwner ~= nil then
+		if world.entityExists( storage._vsoSpawnOwner ) then
+			--on a /reload, things are UNINIT then INIT again.
+			--sooooooo problems.
+			--sb.logInfo( "Sending vsoSpawnerDie..." )
+			--okay fine but... if we TELL OUR SPAWNER to "get smashed"...
+			world.sendEntityMessage( storage._vsoSpawnOwner, "vsoSpawnerDie", entity.id(), self.vsoOnDeathOptions )
+		end
+	end
+
+	--sb.logInfo( tostring( entity.id() ).." dying vso" );
+
+	vehicle.destroy()	--Not sure.
+end
+
+-------------------------------------------------------------------------------
+function uninit( )	--"Unloaded" does not mean "destroyed"
+
+	if self.vsoForcedToDie then
+	
+	else
+		if (storage.health <= 0) then
+			_vsoOnDeath();
+		elseif ( mcontroller.atWorldLimit() ) then
+			_vsoOnDeath();
+		end
+	end
+
+	--sb.logInfo( tostring( entity.id() ).." uninit vso" );
+	
+	--[[
+	--WAIT A MINUTE:
+	--	uninit is called to UNLOAD not "destroy" ...	if storage.health <= 0 then
+	
+	--WAIT this is odd...
+	if storage._vsoSpawnOwner ~= nil then
+		if world.entityExists( storage._vsoSpawnOwner ) then
+			--on a /reload, things are UNINIT then INIT again.
+			--sooooooo problems.
+			--sb.logInfo( "Sending vsoSpawnerDie..." )
+			--okay fine but... if we TELL OUR SPAWNER to "get smashed"...
+			world.sendEntityMessage( storage._vsoSpawnOwner, "vsoSpawnerDie", entity.id(), self.vsoOnDeathOptions )
+		end
+	end
+
+	if onEnd ~= nil then onEnd() end
+	
+	sb.logInfo( tostring( entity.id() ).." dying vso" );
+	
+	vehicle.destroy()	--Not sure.
+	]]--
 end
 
 -------------------------------------------------------------------------------
 function init()
 
+	--sb.logInfo( tostring( entity.id() ).." init vso" );
+	
 	self.cfgAnimationFile = vsoNotnil( config.getParameter("animation"), "missing animation in config file" )	--Animation file to use
 	self.cfgLounge = vsoNotnil( config.getParameter("loungePositions"), "missing loungePositions in config file" )--Dictionary of seats...
 	self.cfgPhysics = vsoIfnil( config.getParameter("physicsCollisions"), {} )	--Do we have platforms or other things? This is required as is
@@ -1974,22 +2095,33 @@ function init()
 		
 			self.useAnimatorFirst = vsoIfnil( self.cfgVSO.useAnimatorFirst, 0 ) > 0;
 			
-			self.cfgVSO.damageTeamType = vsoIfnil( self.cfgVSO.damageTeamType, "passive" );
-			
+			self.cfgVSO.damageTeamType = vsoIfnil( self.cfgVSO.damageTeamType, "indiscriminate" );	--"ghostly", "passive", "enemy", "assistant" + team=1, "friendly", "indiscriminate"
+				--npc.setDamageTeam({ type = "assistant", team = 1 }) -- Friendly NPCs always on team 1
+				--"enemy" "friendly" "passive" "ghostly" "environment" "indiscriminate"
+				  
 			self.maxHealth = vsoIfnil( config.getParameter("maxHealth"), 100 );
 			
-			self.vsoInitialDirection = vsoIfnil( config.getParameter("initialFacing"), 1 );
-			self.vsoCurrentDirection = 1;
+			self.vsoInitialDirection = 1	--This should ADJUST how the "facing" responds... if you make a character that is flipped that is (1 is right/+x, -1 is left/-x)
+			self.vsoCurrentDirection = vsoIfnil( config.getParameter("initialFacing"), 1 );	--	"initialFacing" set by spawner
 			
 			self.vsoMouthPosition = vsoIfnil( config.getParameter("mouthPosition"), {0.0,0.0} );	--IMPORTANT!!!
 			self.mouthPosition = self.vsoMouthPosition;	--Hey you can play with this.
 	
 			self.vsoForcedToDie = false;
-			self.vsoSpawnOwner = nil;
+			
+			
+			self.vsoSpawnOwnerLast = config.getParameter( "ownerKey", nil );	--When a vehicle is reloaded it REMEMBERS it's last object that owned it... But those change?
+			--self.vsoSpawnOwner = nil;	--Well...
+			--storage._vsoSpawnOwner
+			
 			self.vsoSpawnCenter = mcontroller.position();
-			self.vsoSpawnOwnerState = nil;
-			self.vsoSpawnOwnerStateDefault = vsoIfnil( config.getParameter("spawnOwnerState"), "off" );
+			self.vsoSpawnOwnerStateDefault = vsoIfnil( self.cfgVSO.spawnOwnerState, "off" );
+			self.vsoSpawnOwnerState = self.vsoSpawnOwnerStateDefault;
 			self.vsoSpawnMonster = false;
+			
+			self.vsoOnDeathOptions = nil;
+			
+			--world.sendEntityMessage( self.vsoSpawnOwnerLast, "vsoSpawnerAnimState", entity.id(), self.vsoSpawnOwnerState );
 			
 			self.vsoPhysList = vsoIfnil( config.getParameter("physicsCollisions"), {} );
 	
@@ -2107,18 +2239,24 @@ function init()
 			self.motionControls.y = 0;
 			self.motionControls.jump = 0;
 			self.motionControls.dropDown = 0;
-		
+			--self.motionControls.xspeed = 4;
+			--self.motionControls.xrunspeed = 8;
+			
 			--sb.logInfo( "has air jump: ".. tostring( self.cfgVSO.movementSettings.default.airJumpSpeed ) );
 			
 			mcontroller.resetParameters();-- self.cfgVSO.movementSettings.default ) --Apply movement controller settings
-			mcontroller.applyParameters( self.cfgVSO.movementSettings.default );
 			
-			--sb.logInfo( "STILL has air jump: ".. tostring( mcontroller.parameters().airJumpSpeed ) );
+			mParams();	--this call does a LOT so watch out...
 			
-			vsoFacePoint( mcontroller.position()[1] + 10*self.vsoInitialDirection );	--hack, should work
+			vsoMotionParam( self.cfgVSO.movementSettings.default );
+			
+			
+			
+			vsoFacePoint( mcontroller.position()[1] + 10*self.vsoCurrentDirection );	--hack, should work
 			
 			vehicle.setInteractive( true );	--Always interactive? Hm.
 			vehicle.setPersistent( false );	--Not tracked once level is left?
+			--Note, this could be problematic if type is "assistant" and team = 1 is used...
 			vehicle.setDamageTeam( { type = self.cfgVSO.damageTeamType } );	--Not sure. If I'm passive, anyone can damage me?
 			
 			for k,v in pairs( self.cfgLounge ) do
@@ -2132,7 +2270,7 @@ function init()
 				vehicle.setLoungeOrientation( k, "stand" )
 			end
 			
-			message.setHandler("store",	--Some vehicles can be stored, so dont let this happen
+			message.setHandler("store",	--Some vehicles can be stored, so dont let this happen (for now)
 				function(_, _, ownerKey)
 					return { storable = false, healthFactor = 1.0 }
 				end)
@@ -2336,6 +2474,7 @@ function init()
 					onBegin();	--USER CALLBACK
 				end
 			end
+			
 		end
 	end
 end
@@ -2581,14 +2720,38 @@ function update( dt )
 	end
 	
 	--Checking for continued existence
+		--if self.vsoForcedToDie then sb.logInfo( "vsoForcedToDie unknown" ) end
 	self.vsoForcedToDie = self.vsoForcedToDie or self.sv == nil;	--Must have been created correctly
-			
-	self.vsoForcedToDie = self.vsoForcedToDie or (mpos[2] < 4)	--offWorld check (forced?)
-	
+	self.vsoForcedToDie = self.vsoForcedToDie or ( mcontroller.atWorldLimit() )	--(mpos[2] < 4)	--offWorld check (forced?)
 	self.vsoForcedToDie = self.vsoForcedToDie or (storage.health <= 0);	--Invulnerble check
-		
+	
 	if not self.vsoSpawnMonster then
-		self.vsoForcedToDie = self.vsoForcedToDie or (self.vsoSpawnOwner == nil)	--Placed VSO requires a spawn owner check
+		if storage._vsoSpawnOwner ~= nil then
+			if world.entityExists( storage._vsoSpawnOwner ) then	--not ALL the time checking?
+				if world.entityName( storage._vsoSpawnOwner ) == storage._vsoSpawnOwnerName then
+				
+				else
+					self.vsoForcedToDie = true;
+					sb.logInfo( "vsoForcedToDie spawnowner id points to wrong type of thing" )
+				end
+			else
+				self.vsoForcedToDie = true;
+				sb.logInfo( "vsoForcedToDie spawnowner invalid" )
+			end
+			
+		else
+			self.vsoForcedToDie = true;
+			sb.logInfo( "vsoForcedToDie spawnowner nil" )
+		end
+	
+		--else
+		--	self.vsoForcedToDie = true --Huh
+		--	sb.logInfo( "vsoForcedToDie spawnowner did not exist." ) end
+		--end
+	
+		--self.vsoForcedToDie = self.vsoForcedToDie or (storage._vsoSpawnOwner == nil)	--Placed VSO requires a spawn owner check
+		--if self.vsoForcedToDie then sb.logInfo( "vsoForcedToDie spawnowner nil" ) end
+		
 	end
 	
 	--Special escape timer cooldown required. Usually 0.1 - 0.25 seconds is fine
@@ -2640,6 +2803,55 @@ function update( dt )
 				end
 			end
 		end
+		
+		
+		if self.vsoTargetableMonsterNext ~= nil then
+		
+			if self.vsoTargetableMonsterNext[4] < 1 then
+				if self.vsoTargetableMonster ~= nil then
+					world.sendEntityMessage( self.vsoTargetableMonster, "vsoTargetableUpdate", 1, entity.id(), {0,0} );
+					self.vsoTargetableMonster = nil;
+					self.vsoTargetableMonstersRpc = nil;
+					self.vsoTargetableMonstersRpcData = nil;
+					self.vsoTargetableMonsterNext = nil;
+				end
+			else
+				--if self.vsoTargetableMonsters ~= nil then
+				if self.vsoTargetableMonster ~= nil then
+					if world.entityExists( self.vsoTargetableMonster ) then
+						self.vsoTargetableMonstersRpc = world.sendEntityMessage( self.vsoTargetableMonster , "vsoTargetableUpdate", 0, entity.id(), { self.vsoTargetableMonsterNext[2], self.vsoTargetableMonsterNext[3] } );
+						self.vsoTargetableMonstersRpcData = { self.vsoTargetableMonsterNext[1], self.vsoTargetableMonsterNext[2], self.vsoTargetableMonsterNext[3] }
+						self.vsoTargetableMonsterNext = nil;
+					else
+						self.vsoTargetableMonster = nil;	--self.vsoTargetableMonsters[ self.vsoTargetableMonsterNext[1] ] = nil;
+					end
+				end
+				
+				if self.vsoTargetableMonster == nil then
+					self.vsoTargetableMonster = world.spawnMonster( "vsotargetablemonster", mcontroller.position(), {
+						agressive = false,
+						level = 1,
+						masterId = entity.id(),
+						targetOffset = { self.vsoTargetableMonsterNext[2], self.vsoTargetableMonsterNext[3] }
+					} )
+					self.vsoTargetableMonsterNext = nil;
+				end
+			end
+		end
+		
+		if self.vsoTargetableMonstersRpc ~= nil then
+			if self.vsoTargetableMonstersRpc:finished() then
+				local res = self.vsoTargetableMonstersRpc:result()
+				if res == true then
+					self.vsoTargetableMonstersRpc = nil;
+				else
+					vsoSetTargetable( self.vsoTargetableMonstersRpcData[2], self.vsoTargetableMonstersRpcData[3], self.vsoTargetableMonstersRpcData[1] )
+					--vsoSay( self.vsoTalkMonsterRpcMsg );
+				end
+			end
+		end
+		
+		
 		
 		if self.vsoForceDelayRequested ~= nil then
 		
@@ -2714,7 +2926,7 @@ function update( dt )
 			
 			if self.motionControls.dropDown > 0 then
 				--We should ignore platforms
-				mcontroller.applyParameters( { ignorePlatformCollision = true } );
+				vsoMotionParam( { ignorePlatformCollision = true } );
 				
 				--FAKE!!! Should turn this off after x TIME as well (works)
 				if ( mcontroller.yPosition() < self.motionControls.dropDownLastY - 0.5 ) 
@@ -2728,7 +2940,7 @@ function update( dt )
 			else
 				self.motionControls.dropDownLastT = 0;
 				self.motionControls.dropDownLastY = mcontroller.yPosition();
-				mcontroller.applyParameters( { ignorePlatformCollision = false } );
+				vsoMotionParam( { ignorePlatformCollision = false } );
 			end
 			
 			
@@ -2742,7 +2954,7 @@ function update( dt )
 		  
 			--local BackfireMomentum = {0, self.jumpVelocity * 0.5}
 			
-			--mcontroller.applyParameters(self.occupiedMovementSettings)
+			--vsoMotionParam(self.occupiedMovementSettings)
 			--if groundDistance <= self.hoverTargetDistance then
 			--  mcontroller.approachYVelocity((self.hoverTargetDistance - groundDistance) * self.hoverVelocityFactor, self.hoverControlForce)
 			--end
@@ -2751,15 +2963,41 @@ function update( dt )
 			
 			--mcontroller.setYVelocity(self.jumpVelocity)
 			
+			--self.motionControls.jumphold = false;
+			
+			if self.motionControls.jump > 0 then
+				self.motionControls.jump = 0;
+				
+				--self.motionControls.jumphold = false;
+				--vec2.add( {0,0}, 
+				--
+				local jforce = self.motionControls.airJumpProfile.jumpSpeed;
+				
+				--sb.logInfo( "JUMP DAMMIT" );
+				--self.motionControls.jumpForce = mParams().airJumpProfile.jumpSpeed	--CAREFUL need to detect water... liquidJumpProfile
+				--local hack2 = vec2.add( vec2.sub( mcontroller.position(), mcontroller.position() ), { 0, jforce } )
+				--mcontroller.accelerate( hack2 );	--does gravity change? hm.
+				--mcontroller.force( hack2 );
+				
+				--local deltay = 
+				if mcontroller.yVelocity() < jforce then
+					mcontroller.setYVelocity( jforce );--jforce - mcontroller.yVelocity()
+				end
+				
+			end
+			
 			--if self.motionControls.x ~= 0 then
 			if self.motionControls.xrunning == true then
 				--mcontroller.translate( { dt * 8 * self.motionControls.x , 0 } )
 				--mcontroller.setXVelocity( 8 * self.motionControls.x )
-				mcontroller.approachXVelocity( 8.0 * self.motionControls.x, 400 )--self.horizontalControlForce)
+				--sb.logInfo( self.motionControls.runSpeed );
+				mcontroller.approachXVelocity( self.motionControls.runSpeed * self.motionControls.x, 400 )--self.horizontalControlForce)
 				--sb.logInfo( "approach 8 "..tostring( 8.0 * self.motionControls.x ) );
 			else
 				--mcontroller.translate( { dt * 4 * self.motionControls.x , 0 } )
-				mcontroller.approachXVelocity( 4.0 * self.motionControls.x, 400 )
+				mcontroller.approachXVelocity( self.motionControls.walkSpeed * self.motionControls.x, 400 )
+				
+				--mParams()?
 				
 				--sb.logInfo( "approach 4 "..tostring( 4.0 * self.motionControls.x ) );
 			end
@@ -2911,7 +3149,8 @@ function update( dt )
 	end
 
 	if self.vsoForcedToDie then
-		vehicle.destroy();
+			
+		_vsoOnDeath();
 	end
 	
 end
@@ -2975,6 +3214,49 @@ function vsoHisto( key )
 	end
 	return nil;
 end
+
+function vsoHistoLinear( key )
+	--If you have a LINEAR NUMERICAL histoset:
+	
+	--Returns a continuous value from it as if it were a linear approximation of a PDF
+
+	local A = self.cfgVSO.simple.histosets[ key ]
+	
+	if A ~= nil then
+		
+		local total = 0
+		for k,v in pairs( A ) do
+			total = total + v[1];
+		end
+		local findme = math.random() * total;
+		local bestmsg = A[1][2];
+		total = 0;
+		for k,v in pairs( A ) do
+			local lasttotal = total;
+			total = total + v[1];
+			if total >= findme and v[1] > 0 then	--0 influence elements are ignored (but the FIRST element may be selected as default)
+				bestmsg = v[2];
+				
+				--Now we can interpolate.
+				local k2 = k + 1;
+				if k2 <= #A then
+					local nextbest = A[ k + 1 ][2];
+					local dt = (findme - lasttotal);
+					local delta = A[ k + 1 ][1] - v[1];
+					if delta < 0 then delta = math.abs( delta ) end
+					if delta > 0 then
+						bestmsg = bestmsg + (nextbest - bestmsg)*(dt / delta);
+					end
+				end
+				break;
+			end
+		end
+		return bestmsg;
+	end
+	return nil;
+	
+end
+
 
 function vsoPick( list )
 	local listlen = #list;
@@ -3368,6 +3650,14 @@ function vsoTargetHoldingItemMatch( targetname, itemformat )
 	return bestmatch, bestmatchbest, bestname;
 end
 
+
+
+--world.entityHasCountOfItem(EntityId entityId, Json itemDescriptor, [bool exactMatch])
+--Returns the nubmer of the specified item that the specified player entity is currently carrying, or nil if the entity is not a player. If exactMatch is true then parameters as well as item name must match.
+--NOTE: This function currently does not work correctly over the network, making it inaccurate when not used from client side scripts such as status. 
+--bool player.hasItem(ItemDescriptor item, [bool exactMatch])
+--player.hasCountOfItem
+
 	--vsoItemMatching()  and vsoTargetHoldingItemMatching() and vsoTargetHasItemMatching()  ??
 	
 function _add_vso_rpc( rpc, callback )
@@ -3550,6 +3840,10 @@ function vsoSetDirectives( dirstring )
 	
 end
 
+function vsoSetDeathOptions( opts )
+	self.vsoOnDeathOptions = opts;
+end
+
 --Animated approach
 --vsoAnitagAnim( vsoVal( "ani_head_none" ) )
 --vsoAnitagAnim( vsoVal( "ani_head_angry" ) )
@@ -3701,11 +3995,24 @@ function vsoValidTarget( targetname )	--Return true if a named target exists
 	local targ = self.sv.targets[ targetname ]
 	if targ ~= nil then
 		if world.entityExists( targ.id ) then
+			--if self.sv.targets[ targetname ].rpc == nil then
 			return targ.validstatus and targ.state >= 0
 		
 			--if targ.validstatus ~= nil then	--Asynchronous checking for status effects.
 			--end
 			--return targ.state >= 0;
+		end
+		self.sv.targets[ targetname ] = nil;
+		return false;
+	end
+	return false;
+end
+
+function vsoValidTargetId( targetname )	--Return true if a named target exists
+	local targ = self.sv.targets[ targetname ]
+	if targ ~= nil then
+		if world.entityExists( targ.id ) then
+			return true;
 		end
 		self.sv.targets[ targetname ] = nil;
 		return false;
@@ -3768,6 +4075,9 @@ function vsoTargetHitBox( targetname, xMin, yMin, xMax, yMax )
 end
   
 function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
+	--options.worldspace = false;	if true, input coordinates are ALREADY in world space... input box directly.
+	--options.los = true	if false, ignores line of sight.
+	--options.callback = nil; function cb( id, is_eaten )
 
 	local retval = false;
 	
@@ -3780,6 +4090,9 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 			if world.entityExists( oldtarget.id ) then
 				if oldtarget.state < 0 then
 					--You are updating a EATEN target. this is pointless.
+					if options.callback ~= nil then
+						options.callback( oldtarget.id, true );					
+					end
 					return true;
 				end
 				oldtargetid = oldtarget.id;	--I currently exist and am valid!
@@ -3806,18 +4119,30 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 	local hasplayer = world.playerQuery( pos1, pos2, { order = "nearest" })
 	
 	--Check for old target
+	local optionslos = false;
+	if options ~= nil then
+		if (options.los ~= true) then
+			optionslos = false;
+		else
+			optionslos = true;
+		end
+	end
 	local setid = nil;
 	if oldtargetid ~= nil then
 		for k,v in pairs( hasnpc ) do
 			if v == oldtargetid then
-				setid = oldtargetid;
+				if (optionslos ~= true) or entity.entityInSight( v ) then
+					setid = oldtargetid;
+				end
 				break;
 			end
 		end
 		for k,v in pairs( hasplayer ) do
 			if v == oldtargetid then
-				setid = oldtargetid;
-				break;
+				if (optionslos ~= true) or entity.entityInSight( v ) then
+					setid = oldtargetid;
+					break;
+				end
 			end
 		end
 	end
@@ -3826,9 +4151,27 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 	if setid == nil then
 		--List of targets.
 		if #hasnpc > 0 then
-			setid = hasnpc[1];	--How do we know WHAT NPC is OK to use as a target??? dammit!!
+			if optionslos == true then
+				for k,v in pairs( hasnpc ) do
+					if entity.entityInSight( v ) then
+						setid = v;
+						break;
+					end
+				end
+			else
+				setid = hasnpc[1];	--How do we know WHAT NPC is OK to use as a target??? dammit!!
+			end
 		elseif #hasplayer > 0 then
-			setid = hasplayer[1];
+			if optionslos == true then
+				for k,v in pairs( hasplayer ) do
+					if entity.entityInSight( v ) then
+						setid = v;
+						break;
+					end
+				end
+			else
+				setid = hasplayer[1];
+			end
 		end
 		
 		if setid ~= nil then
@@ -3879,6 +4222,11 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 	
 	if self.sv.targets[ targetname ] ~= nil then
 		if self.sv.targets[ targetname ].validstatus then
+			if options ~= nil then
+				if options.callback ~= nil then
+					options.callback( oldtarget.id, false );					
+				end
+			end
 			return true;
 		end
 	end
@@ -4158,6 +4506,7 @@ function vsoParticleBurst( systemname, count )
 	animator.burstParticleEmitter( systemname )
 end
 
+--[[
 function vsoLocalParticle( config )
 
 	 localAnimator.spawnParticle( {
@@ -4165,6 +4514,7 @@ function vsoLocalParticle( config )
 	 
 	 } )
 end
+]]--
 
 function vsoTimerReset( timername, secondsmin, secondsmax )
 	local tim = self.sv.ts[ timername ];
@@ -4280,6 +4630,10 @@ function vsoCounter( countername, countmin, countmax )	--Add one to counter, ret
 	return vsoCounterAdd( countername, 1, countmin, countmax );
 end
 	
+function vsoGetSpawnPosition()
+	return { self.vsoSpawnCenter[1], self.vsoSpawnCenter[2] }
+end
+	
 -------------------------------------------------------------------------------
 
 function vsoGetSayContext( id )	--Speak from this VSO
@@ -4362,6 +4716,21 @@ function vsoSayLastCompleted()
 		end
 	end
 	return true;]]--
+end
+
+-------------------------------------------------------------------------------
+
+function vsoSetTargetable( rx, ry, targetableid )
+	if targetableid == nil then targetableid = "default" end
+	
+	if vsoShouldFlipAnimator() then rx = -rx; end
+		
+	self.vsoTargetableMonsterNext = { targetableid, rx, ry, 1 }
+end
+
+function vsoClearTargetable( targetableid )
+	if targetableid == nil then targetableid = "default" end
+	self.vsoTargetableMonsterNext = { targetableid, 0, 0, 0 }
 end
 
 -------------------------------------------------------------------------------
@@ -6059,6 +6428,44 @@ end
 --		Because vehicles dont have mcontroller.baseParameters()		( In vehicles it is mcontroller.parameters() )
 --		Because vehicles dont have mcontroller.facingDirection()		( In vehicles it does not exist so we use self.vsoCurrentDirection )
 --
+function vsoMotionParam( job )
+	--[[
+	{
+		walkSpeed=16
+		, runSpeed=16
+		, jumpSpeed=34
+		, flySpeed=16
+		
+		, groundForce=400
+		, jumpControlForce=40 
+	
+		, collisionPoly = { {x,y}, ... }
+
+		,mass = 1
+		,airFriction = 0.5
+		,groundFriction = 40
+		,liquidBuoyancy = 1.25
+		,gravityMultiplier = 1.0
+		,airBuoyancy = 0.0
+		,bounceFactor = 0.0
+		,collisionEnabled = true
+		,frictionEnabled = true
+		,gravityEnabled = true
+		,ignorePlatformCollision = false
+		
+	}
+	]]--
+	--MANY MORE
+	
+	--mcontroller.applyParameters( self.cfgVSO.movementSettings.default );
+	--mMotionParametersSet( self.cfgVSO.movementSettings.default );	--mcontroller.applyParameters( self.cfgVSO.movementSettings.default );
+	
+	--sb.logInfo( "STILL has air jump: ".. tostring( mcontroller.parameters().airJumpSpeed ) );
+	
+	mMotionParametersSet( job );	--HOWEVER we DO store (some) values in motionControls for vehicles.
+	--mcontroller.applyParameters( job ); --This just overrides them
+	
+end
 
 function followActionApproachPoint(dt, targetPosition, stopDistance, running)
   local toTarget = world.distance(targetPosition, mcontroller.position())
@@ -6075,13 +6482,30 @@ function followActionApproachPoint(dt, targetPosition, stopDistance, running)
 	self.pather = PathMover:new( 
 	{	run = running
 		,pathOptions = {
-			mustEndOnGround = false
+			mustEndOnGround = false	--HM! curious.
 			,openDoorCallback = nil
+			--,returnBest = false
+			--,maxDistance = 200,
+			--,swimCost = 5,
+			--,dropCost = 2,
+			--,boundBox = mBoundBox(),
+			--,droppingBoundBox = padBoundBox(0.2, 0), --Wider bound box for dropping
+			--,standingBoundBox = padBoundBox(-0.7, 0), --Thinner bound box for standing and landing
+			--,smallJumpMultiplier = 1 / math.sqrt(2), -- 0.5 multiplier to jump height
+			--,jumpDropXMultiplier = 1,
+			--,enableWalkSpeedJumps = true,
+			--,enableVerticalJumpAirControl = true,	--normally off
+			--,maxFScore = 400,
+			--,maxNodesToSearch = 70000,
 		}	
 	} )	--Where is PathMover ?
   end
   self.pather.options.run = running
   
+  --If our path movement is UP a "staircase" add 1 to y motion as well?
+  --	Hm.
+  --self.motionControls.y = 1;
+   
   if self.approachPosition and ( targetDistance > stopDistance or not mcontroller.onGround() ) then
   
     local whatdo = self.pather:move(self.approachPosition, dt);
@@ -6089,14 +6513,19 @@ function followActionApproachPoint(dt, targetPosition, stopDistance, running)
 	  mControlFace( self.pather.deltaX or toTarget[1] )
 	elseif whatdo == "pathfinding" then
       self.motionControls.x = 0;	--Hm, thinking
+	elseif whatdo then
+	  --at destination? maybe...
+	  --return true;
 	else
-	  --
+	  --not there yet
+	  --moveX( );
 	end
 	
-    return false
+    return whatdo
   elseif targetDistance <= stopDistance then
     return true
   end
+  return false
 end
 
 --------------------------------------------------------------------------------
@@ -6137,25 +6566,34 @@ end
 ]]--
 
 function followActionEnterWith( args )
-  if not args.followTarget then return nil end
+  if not args.followPosition and not args.followTarget then return nil end
 
   local startDistance = 3;--config.getParameter("actionParams.follow.startDistance", 6)
-  local targetPosition = world.entityPosition( args.followTarget )
+  local targetPosition = args.followPosition ;
+  if args.followTarget ~= nil then targetPosition = world.entityPosition( args.followTarget ) end
   
   --sb.logInfo( tostring( targetPosition ).." " ..tostring( args.followTarget ).." "..tostring( mcontroller.position() ) )
   --targetPosition can be undefined??? no! (closing/simple error)
   if targetPosition ~= nil then
 	  
 	  local targetDistance = world.magnitude(targetPosition, mcontroller.position())
-	  if targetDistance < startDistance or not entity.entityInSight(args.followTarget) then
+	  local cansee = true;
+	  if args.followTarget ~= nil then cansee = entity.entityInSight(args.followTarget) end
+	  if targetDistance < startDistance or not cansee then
 		--return nil
 	  end
+	  
+	  local stopdist = 2.5;
+	  if args.stopDistance ~= nil then stopdist = args.stopDistance end;
+	  local rundist = 20;
+	  if args.runDistance ~= nil then rundist = args.runDistance end;
 
 	  return {
 		targetId = args.followTarget,
-		stopDistance = 2.5;--config.getParameter("actionParams.follow.stopDistance", 3),
+		targetPosition = args.followPosition,
+		stopDistance = stopdist;--config.getParameter("actionParams.follow.stopDistance", 3),
 		startDistance = startDistance,
-		runDistance = 20;--config.getParameter("actionParams.follow.runDistance", 20),
+		runDistance = rundist;--config.getParameter("actionParams.follow.runDistance", 20),
 		running = false,
 		waiting = false,
 		boredTimer = 5;--config.getParameter("actionParams.follow.boredTime", 3)
@@ -6165,9 +6603,13 @@ function followActionEnterWith( args )
 end
 
 function followActionUpdate(dt, stateData)
-  if not world.entityExists(stateData.targetId) then return true end
-
-  local targetPosition = world.entityPosition(stateData.targetId)
+  if not stateData.targetPosition and not world.entityExists(stateData.targetId) then return true end
+  --if not world.entityExists(stateData.targetId) then return true end
+  
+  local targetPosition = stateData.targetPosition ;
+  if stateData.targetId ~= nil then targetPosition = world.entityPosition( stateData.targetId ) end
+  --local targetPosition = world.entityPosition(stateData.targetId)
+  
   local targetDistance = world.magnitude(targetPosition, mcontroller.position())
 
   if targetDistance > stateData.runDistance then
@@ -6178,7 +6620,7 @@ function followActionUpdate(dt, stateData)
     stateData.waiting = false
   end
 
-  if not stateData.waiting and followActionApproachPoint( dt, targetPosition, stateData.stopDistance, stateData.running ) then
+  if not stateData.waiting and followActionApproachPoint( dt, targetPosition, stateData.stopDistance, stateData.running ) == true then
     stateData.waiting = true
     stateData.running = false
 
@@ -6200,6 +6642,434 @@ function followActionUpdate(dt, stateData)
   
   return false, 0;	--State remains
 end
+
+function wanderNearActionEnterWith( args )
+
+	local center = mcontroller.position();
+	local range = 20;
+	local direction = 1;
+	
+	if vsoChance(50) then direction = -1; end
+	if args.center ~= nil then center = args.center end
+	if args.range ~= nil then range = args.range end
+	
+	--Zero out motion controls.
+	self.motionControls.x = 0;
+	self.motionControls.y = 0;
+	self.motionControls.jump = 0;
+	self.motionControls.dropDown = 0;
+	
+	--vsoFacePoint( center[1] + 10*direction );
+	mControlFace( direction );
+	
+	return {
+		center = center
+		,range = range
+		,direction = direction
+	}
+	
+	--[[
+	local obstacleHeightThreshold = 1
+	local obstacleLookaheadDistance = 2
+	local setAnimationState = function() end
+	
+	if args.obstacleHeightThreshold ~= nil then obstacleHeightThreshold = args.obstacleHeightThreshold end
+	if args.obstacleLookaheadDistance ~= nil then obstacleLookaheadDistance = args.obstacleLookaheadDistance end
+	if args.setAnimationState ~= nil then setAnimationState = args.setAnimationState end
+
+	local bounds = config.getParameter("metaBoundBox")	--whaaaat
+	local width = bounds[3] - bounds[1]
+	local jumpDirection = nil
+
+	local jump = function(direction)
+		jumpDirection = direction
+		mControlJump()
+		setAnimationState("jump")
+	end
+
+	local klass = {}
+	function klass.move(position, direction, traverseObstacles, run)
+		if not mcontroller.onGround() and jumpDirection ~= nil then
+			mControlJumpHold()
+			moveX(jumpDirection, run)
+
+			return true
+		end
+
+		local positionedBounds = {
+			bounds[1] + position[1],
+			bounds[2] + position[2],
+			bounds[3] + position[1],
+			bounds[4] + position[2]
+		}
+
+		-- Jump over obstacles
+		local jumpRegion = { positionedBounds[1], positionedBounds[2] + obstacleHeightThreshold, positionedBounds[3], positionedBounds[4] }
+		if direction > 0 then
+			jumpRegion[1] = jumpRegion[1] + width
+			jumpRegion[3] = jumpRegion[3] + obstacleLookaheadDistance
+		else
+			jumpRegion[1] = jumpRegion[1] - obstacleLookaheadDistance
+			jumpRegion[3] = jumpRegion[3] - width
+		end
+
+		if world.rectCollision(jumpRegion, {"Null", "Block", "Dynamic"}) then
+			local jumpClearanceRegion = {
+				positionedBounds[1] + direction * (positionedBounds[3] - positionedBounds[1]),
+				positionedBounds[2] + obstacleHeightThreshold + 0.125,
+				positionedBounds[3] + direction * (obstacleLookaheadDistance + positionedBounds[3] - positionedBounds[1]),
+				positionedBounds[4] + obstacleHeightThreshold
+			}
+			if direction > 0 then
+				jumpClearanceRegion[1] = jumpClearanceRegion[1] + width
+				jumpClearanceRegion[3] = jumpClearanceRegion[3] + (obstacleLookaheadDistance + width)
+			else
+				jumpClearanceRegion[1] = jumpClearanceRegion[1] - (obstacleLookaheadDistance + width)
+				jumpClearanceRegion[3] = jumpClearanceRegion[3] - width
+			end
+			if not world.rectCollision(jumpClearanceRegion, {"Null", "Block", "Dynamic"}) then
+				if traverseObstacles then
+					jump(direction)
+				end
+
+				return traverseObstacles
+			end
+		end
+
+		-- Jump over gaps
+		local gapRegion = { positionedBounds[1], positionedBounds[2] - obstacleLookaheadDistance, positionedBounds[3], positionedBounds[2] }
+		if direction > 0 then
+			gapRegion[1] = gapRegion[1] + width
+			gapRegion[3] = gapRegion[3] + width / 2
+		else
+			gapRegion[1] = gapRegion[1] - width / 2
+			gapRegion[3] = gapRegion[3] - width
+		end
+
+		if not world.rectCollision(gapRegion, {"Null", "Block", "Dynamic", "Platform"}) then
+			if traverseObstacles then
+				jump(direction)
+			end
+
+			return traverseObstacles
+		end
+
+		jumpDirection = nil
+
+		if not traverseObstacles then
+			local blockedRect = {
+				positionedBounds[1] + direction, positionedBounds[2] + 1,
+				positionedBounds[3] + direction, positionedBounds[4]
+			}
+			if world.rectCollision(blockedRect, {"Null", "Block", "Dynamic"}) then
+				return false
+			end
+		end
+
+		setAnimationState("run")
+		moveX(direction, run)
+
+		return true
+	end
+
+	klass.center = mcontroller.position();
+	klass.range = 20;
+	klass.direction = 1;
+	if vsoChance(50) then klass.direction = -1; end
+	if args.center ~= nil then klass.center = args.center end
+	if args.range ~= nil then klass.range = args.range end
+	
+	return klass
+	]]--
+end
+
+function wanderNearActionUpdate(dt, stateData)
+	
+	local direction = stateData.direction
+	local position = mcontroller.position()
+	position[1] = position[1] + 1.0*direction;	--bounding box half size + 1
+	--position[2] = position[2] - 1;	--Always step down? 1? Hm.
+	
+	--Here is how "wander" works:
+	--
+	-- Look forward
+	-- Can I move up? check if I can.
+	-- Can I move down? check if I can.
+	-- Dont move down more than 1 square
+	-- Dont move up more than 1 sqare
+	-- Am I blocked forward? (flip)
+	--
+	
+	--Middle check only:
+	--
+	
+	local bounds = mBoundBox()
+	local pbounds = { position[1]+bounds[1], position[2]+bounds[2], position[1]+bounds[3], position[2]+bounds[4] }
+	local domove = true
+	--check DOWN 1,2
+	if ( world.rectTileCollision( { pbounds[1]+direction, pbounds[2]-1.125, pbounds[3]+direction, pbounds[4] } , {"Null", "Block", "Dynamic", "Platform"} ) ) then
+		domove = true;
+	else
+		--check AT SAME LEVEL minus a bit
+		if ( world.rectTileCollision( { pbounds[1]+direction, pbounds[2]-0.125, pbounds[3]+direction, pbounds[4]  } , {"Null", "Block", "Dynamic", "Platform"} ) ) then
+			domove = true;
+		else
+			domove = false;
+		end
+	end
+	
+	--Check if we are at a wall position or not
+	if domove then
+	
+		if ( world.rectTileCollision( { pbounds[1]+direction, pbounds[2], pbounds[3]+direction, pbounds[4] } , {"Null", "Block", "Dynamic", "Platform"} ) ) then
+	
+			--Go up 1 tile to check for wall
+			if ( world.rectTileCollision( { pbounds[1]+direction, pbounds[2]+1.125, pbounds[3]+direction, pbounds[4] } , {"Null", "Block", "Dynamic", "Platform"} ) ) then
+				
+				domove = false;
+			end
+		end
+	end
+	
+	if domove then
+	
+		moveX( direction );
+		
+		--Dont move PAST our designated move point... in X at least.
+		
+	else
+		--Add 1 more block until WIDTH of bounding box is checked.
+		--We dont want to step down to less than half our width or step over it
+		--Edge detection?
+		--"findGroundPosition" is a bit agressive.
+	
+	
+		--Do I need to short hop? hm.
+	
+		--sb.logInfo( "PF false " )
+		if stateData.direction > 0 then
+			stateData.direction = -1;
+		else
+			stateData.direction = 1;
+		end
+		mControlFace( stateData.direction );
+		--vsoFacePoint( center[1] + 10*direction );
+		
+		--Pick a NEW TARGET POINT with a triangular range from center...range (3 sigma)
+		--stateData.center
+		--stateData.range
+		local r = vsoRand();
+		local userange = r*r*stateData.range/2.0;
+		--And pick it on the OPPOSITE SIDE
+		
+	end
+	
+	return false, 0;	--State remains
+  
+	--[[
+	local hasground = findGroundPosition( position, -2, 2, true, {"Null", "Block", "Dynamic", "Platform"}, bounds)	--{"Null", "Block", "Dynamic", "Platform"}
+	if hasground ~= nil then
+	
+		--Scan forward a bit:
+		if validStandingPosition({hasground[1] + direction, hasground[2]}, true, {"Null", "Block", "Dynamic", "Platform"}, bounds) then
+			if validStandingPosition({hasground[1] + 2*direction, hasground[2]}, true, {"Null", "Block", "Dynamic", "Platform"}, bounds) then
+				domove = true;
+			end
+		end
+	end
+	
+	
+	{
+    position[1] + bounds[1], position[2] + bounds[2] - 1,
+    position[1] + bounds[3], position[2] + bounds[2]
+  }
+  
+	--if (world.rectTileCollision( groundRegion, {"Null", "Block", "Dynamic", "Platform"} ) or (not avoidLiquid and world.liquidAt(position)))
+	]]--
+	
+	--local groundPosition = findGroundPosition( position, -1, 1, true, {"Null", "Block", "Dynamic", "Platform"} )	--{"Null", "Block", "Dynamic", "Platform"}
+	--if groundPosition ~= nil then
+	--	followActionApproachPoint( dt, groundPosition, 0.125, false )
+	--	--sb.logInfo( "following" );
+	--else
+	--	--sb.logInfo( "flipping" );
+	
+	--if stateData.move( position, direction, true, false ) then
+		--All good to move!
+	--else
+		--Something BLOCKING me...
+	--end
+	--stateData.mo
+end
+
+function rushAtActionEnterWith( args )
+
+	local bounds = config.getParameter("metaBoundBox")	--whaaaat
+	local width = bounds[3] - bounds[1]
+
+	return {
+		followTarget = args.followTarget
+		,traverseObstacles = true
+		,obstacleHeightThreshold = 5
+		,obstacleLookaheadDistance = 1
+		,run = true
+		,bounds = bounds
+		,width = width
+		,jumpDirection = nil
+		,animstate="idle"
+		,direction = 0;
+	}
+end
+
+function rushAtActionUpdate(dt, stateData)
+
+	--Update some things
+	local position = nil;
+	local direction = stateData.direction;
+	if world.entityExists( stateData.followTarget ) then
+		position = world.entityPosition( stateData.followTarget );
+		
+		if position[1] - mcontroller.xPosition() >= 0 then
+			if direction ~= 1 then
+				vsoFaceDirection( 1 )
+			end
+			direction = 1;
+		else
+			if direction ~= -1 then
+				vsoFaceDirection( -1 )
+			end
+			direction = -1;
+		end
+	else
+		stateData.animstate="lost"
+		return true, 0;	--No more target...
+	end
+
+	--Falling through the air?
+	if mcontroller.onGround() then
+		stateData.jumpDirection = direction
+	end
+	
+	if not mcontroller.onGround() and stateData.jumpDirection ~= nil then
+	  mControlJumpHold();--mcontroller.controlHoldJump()
+	  moveX(stateData.jumpDirection, stateData.run)--mcontroller.controlMove(stateData.jumpDirection, stateData.run)
+
+	  stateData.animstate="inair"
+	  return false, 0
+	end
+
+
+	local positionedBounds = {
+	  stateData.bounds[1] + position[1],
+	  stateData.bounds[2] + position[2],
+	  stateData.bounds[3] + position[1],
+	  stateData.bounds[4] + position[2]
+	}
+
+	-- Jump over obstacles
+	local jumpRegion = { positionedBounds[1], positionedBounds[2], positionedBounds[3], positionedBounds[4] + stateData.obstacleHeightThreshold }
+	if direction > 0 then
+	  jumpRegion[1] = jumpRegion[1] + stateData.width
+	  jumpRegion[3] = jumpRegion[3] + stateData.obstacleLookaheadDistance
+	else
+	  jumpRegion[1] = jumpRegion[1] - stateData.obstacleLookaheadDistance
+	  jumpRegion[3] = jumpRegion[3] - stateData.width
+	end
+
+	if world.rectCollision(jumpRegion, {"Null", "Block", "Dynamic", "Slippery"}) then
+	
+	  --Hey, we should be able to ADJUST the jump height to match as opposed to "blindly" fixing the jump height...
+	  if stateData.traverseObstacles then
+		  local blockup = 0
+		  local canmakeit = false;
+		  while blockup <= stateData.obstacleHeightThreshold do
+			  local jumpClearanceRegion = {
+				positionedBounds[1] + direction * (positionedBounds[3] - positionedBounds[1]),
+				positionedBounds[2] + blockup + 0.125,
+				positionedBounds[3] + direction * (stateData.obstacleLookaheadDistance + positionedBounds[3] - positionedBounds[1]),
+				positionedBounds[4] + blockup + 0.125,
+			  }
+			  if direction > 0 then
+				jumpClearanceRegion[1] = jumpClearanceRegion[1] + stateData.width
+				jumpClearanceRegion[3] = jumpClearanceRegion[3] + (stateData.obstacleLookaheadDistance + stateData.width)
+			  else
+				jumpClearanceRegion[1] = jumpClearanceRegion[1] - (stateData.obstacleLookaheadDistance + stateData.width)
+				jumpClearanceRegion[3] = jumpClearanceRegion[3] - stateData.width
+			  end
+			  if not world.rectCollision(jumpClearanceRegion, {"Null", "Block", "Dynamic", "Slippery"}) then
+				canmakeit = true;
+				break;
+			  end
+			  blockup = blockup + 1;
+		  end
+		  
+		  if canmakeit then
+			stateData.jumpDirection = direction	--jump(stateData.direction)
+			mControlJump()
+			stateData.animstate="jump";--setAnimationState("jump")
+			
+			--Jumping over N blocks is a thing... how to adjust this?
+			--blockup - but gravity CHANGES based on position sooooo estimating this is tricky...
+			
+			--sb.logInfo( "shoulda jumped over "..tostring( blockup ).." blocks" )
+			return false, 0
+		  else
+		  
+			--This seems iffy in a LOT of ways.
+		  
+			--sb.logInfo( "Cant make it why?" )
+			--stateData.animstate="blocked"
+			--return true, 0
+			
+		  end
+	  else
+	    stateData.animstate="blocked"
+		return true, 0
+	  end
+	  
+	end
+
+	-- Jump over gaps
+	local gapRegion = { positionedBounds[1], positionedBounds[2] - stateData.obstacleLookaheadDistance, positionedBounds[3], positionedBounds[2] }
+	if direction > 0 then
+	  gapRegion[1] = gapRegion[1] + stateData.width
+	  gapRegion[3] = gapRegion[3] + stateData.width / 2
+	else
+	  gapRegion[1] = gapRegion[1] - stateData.width / 2
+	  gapRegion[3] = gapRegion[3] - stateData.width
+	end
+
+	if not world.rectCollision(gapRegion, {"Null", "Block", "Dynamic", "Platform"}) then
+	  if stateData.traverseObstacles then
+		stateData.jumpDirection = direction	--jump(stateData.direction)
+		mControlJump()
+		stateData.animstate="jump";--setAnimationState("jump")
+		--sb.logInfo( "shoulda jumped" )
+	    return false, 0
+	  else
+		stateData.animstate="blocked"
+	    return true, 0
+	  end
+	end
+
+	if not stateData.traverseObstacles then
+	  local blockedRect = {
+		positionedBounds[1] + direction, positionedBounds[2] + 1,
+		positionedBounds[3] + direction, positionedBounds[4]
+	  }
+	  if world.rectCollision(blockedRect, {"Null", "Block", "Dynamic", "Slippery"}) then
+		stateData.animstate="blocked"
+		return true, 0
+	  end
+	end
+
+	stateData.animstate="run";--setAnimationState("run")
+	moveX(direction, stateData.run);--mcontroller.controlMove(stateData.direction, stateData.run)
+
+	return false, 0
+
+end
+
 
 
 
@@ -6319,7 +7189,11 @@ function monsterActionUpdate(dt, stateData)
 	--stateData.move( position, direction, traverseObstacles, run )
 end
 
-function vsoActSet( args, actcreate, actupdate )--followAction )
+function vsoActSet( args, actcreate, actupdate )--followAction 
+	if actcreate == nil then
+		self.vsoAction = nil
+		return false
+	end
 	if self.vsoAction == nil then
 		local newact = actcreate( args )
 		if newact ~= nil then
@@ -6340,10 +7214,44 @@ function vsoActSet( args, actcreate, actupdate )--followAction )
 	return false;
 end
 
+function vsoActNotNil()
+	return self.vsoAction ~= nil
+end
+
+function vsoActReady()
+	return vsoActSet( {}, function( args ) end, function(dt, state) end )
+end
+
 function vsoActFollow( targetit )--followAction )
 	return vsoActSet( { followTarget=targetit }, followActionEnterWith, followActionUpdate )
 end
 
+function vsoActGoTo( targetit )--followAction )
+	return vsoActSet( { followPosition=targetit, stopDistance=0.5, runDistance=999999 }, followActionEnterWith, followActionUpdate )
+end
+
+function vsoActWander( direction )
+	
+end
+
+function vsoActWanderNear( wandercenter, wanderrange )
+	return vsoActSet( { center=wandercenter, range=wanderrange }, wanderNearActionEnterWith, wanderNearActionUpdate )
+end
+
+function vsoActRushAtTarget( targetname )
+	local targ = self.sv.targets[ targetname ];
+	if targ ~= nil then
+		local targetid = targ.id;
+		if targetid ~= nil then
+			return vsoActSet( { followTarget=targetid }, rushAtActionEnterWith, rushAtActionUpdate )
+		end
+	end
+	return false;
+end
+	
+function vsoActClear()--followAction )
+	return vsoActSet( nil, nil, nil )
+end
 --Also copy paste in (other actions)
 --	monsters/groundMovement
 --	returnHomeState

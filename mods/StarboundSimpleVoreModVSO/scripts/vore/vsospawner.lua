@@ -140,6 +140,26 @@ function init()
 			
 	animator.setAnimationState( statepart, randomPick( statewhennear ) );
 	
+
+	message.setHandler("vsoSpawnerDie",
+		function(_, _, ownerKey, options)
+			--options.
+			if myvehicle == ownerKey then
+				if options ~= nil then
+					if options.respawn ~= nil then
+						--respawntimer = options.respawn	--Not on VSO's
+					end
+					if options.smash ~= nil then
+						if options.permadeath == true then
+							object.smash( true );
+						else
+							object.smash();
+						end
+					end
+				end
+			end
+		end)
+		
 	message.setHandler("vsoSpawnerSay",
 		function(_, _, ownerKey, message)
 			object.say( message );

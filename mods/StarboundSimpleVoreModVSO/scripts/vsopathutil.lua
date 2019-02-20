@@ -7,41 +7,109 @@ require "/scripts/rect.lua"
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
+--So many issues.
+--A "vehicle" has different instructions than a NPC/Player/Actor
+--
+--	The mcontroller table sometimes contains functions relating to the actor movement controller. 
+--		https://starbounder.org/Modding:Lua/Tables/Actormovementcontroller
+--		controlMove
+--		controlFace
+--		controlDown
+--		controlCrouch
+--		controlJump
+--		controlModifiers
+--
+--	VEHICLE:
+--		vehicle.controlHeld(String loungeName, String controlName)
+--		So yeah.
+
 --pathing.canOpenDoors
 --pathing.forceWalkingBackwards
 
 --Required to abstract out the difference between vehicles and npc/player. Gets the motion parameters
 function mParams()
-	local MP = ( mcontroller.baseParameters or mcontroller.parameters )();
+
+	local MP = nil;
+	if mcontroller.baseParameters then
+		MP = mcontroller.baseParameters()	--Actor
+		--sb.logInfo( "Thing is a Actor: "..tostring( entity.id() ) )
+	else
+		MP = mcontroller.parameters()	--vehicle
+		--Meaning we need EXTRA parameters if we have them...
+		--sb.logInfo( "Thing is a Vehicle: "..tostring( entity.id() ) )
+	end
+	
 	--SOME THINGS will be missing. And we CANNOT use mcontroller.parameters to access them, so.
-	--#ERROR fix this later.
-	if MP.airJumpProfile == nil then
-		MP.airJumpProfile = {
-			jumpSpeed = 34
-			,jumpControlForce = 40
-		}
+	
+	--Shared between vehicldes and actors:
+	if MP.airFriction == nil then MP.airFriction = 0.001 end
+	if MP.liquidFriction == nil then MP.liquidFriction = 0.2 end
+	if MP.liquidImpedance == nil then MP.liquidImpedance = 0.1 end
+	if MP.groundFriction == nil then MP.groundFriction = 40 end
+	if MP.groundForce == nil then MP.groundForce = 400 end
+	if MP.gravityEnabled == nil then MP.gravityEnabled = true end
+	
+	--NOT shared between actors and vehicles.
+	if mcontroller.baseParameters then
+		--Actor
+		
+		if MP.airJumpProfile == nil then
+			MP.airJumpProfile = {
+				jumpSpeed = 34
+				,jumpControlForce = 40
+			}
+		end
+		
+		if MP.liquidJumpProfile == nil then
+			MP.liquidJumpProfile = {
+				jumpSpeed = 4
+				,jumpControlForce = 10
+			}
+		end
+		
+		if MP.walkSpeed == nil then MP.walkSpeed = 4 end
+		if MP.runSpeed == nil then MP.runSpeed = 8 end
+		if MP.jumpSpeed == nil then MP.jumpSpeed = 24 end
+		if MP.flySpeed == nil then MP.flySpeed = 16 end
+		
+	else
+		--Meaning we need to access EXTRA parameters if we have them...
+		if self.motionControls ~= nil then
+		
+		else
+			self.motionControls = {};
+		end
+		
+		if self.motionControls.airJumpProfile == nil then
+			self.motionControls.airJumpProfile = {
+				jumpSpeed = 34
+				,jumpControlForce = 40
+			}
+		end
+		if self.motionControls.airJumpProfile.jumpSpeed == nil then self.motionControls.airJumpProfile.jumpSpeed = 34; end
+		if self.motionControls.airJumpProfile.jumpControlForce == nil then self.motionControls.airJumpProfile.jumpControlForce = 34; end
+		
+		if self.motionControls.liquidJumpProfile == nil then
+			self.motionControls.liquidJumpProfile = {
+				jumpSpeed = 4
+				,jumpControlForce = 10
+			}
+		end
+		if self.motionControls.liquidJumpProfile.jumpSpeed == nil then self.motionControls.liquidJumpProfile.jumpSpeed = 4; end
+		if self.motionControls.liquidJumpProfile.jumpControlForce == nil then self.motionControls.liquidJumpProfile.jumpControlForce = 10; end
+		
+		if self.motionControls.walkSpeed == nil then self.motionControls.walkSpeed = 4 end
+		if self.motionControls.runSpeed == nil then self.motionControls.runSpeed = 8 end
+		if self.motionControls.flySpeed == nil then self.motionControls.flySpeed = 16 end
+		
+		--sb.logInfo( "RESET MOTION CONTROLS" );
+		
+		--MP = sb.jsonMerge( MP, self.motionControls );
+		for k, v in pairs( self.motionControls ) do
+			MP[k] = v;
+		end
 	end
 	
-	if MP.liquidJumpProfile == nil then
-		MP.liquidJumpProfile = {
-			jumpSpeed = 4
-			,jumpControlForce = 10
-		}
-	end
-	
-	if MP.groundForce == nil then	--MUST EXIST?!?!
-		MP.groundForce = 400
-	end
-	--if MP.gravityEnabled == nil then
-	--	MP.gravityEnabled = true		--UH.
-	--end
-
-	--"walkSpeed" : 10,
-	--"runSpeed" : 10,
-
-	--"jumpSpeed" : 5,
-	--"flySpeed" : 3,
-
 	return MP;
 end
 
@@ -62,9 +130,8 @@ end
 function mControlFace( dir )
 	if mcontroller.controlFace ~= nil then
 		mcontroller.controlFace(self.pather.deltaX or toTarget[1])
-	else
-		vsoFacePoint( mcontroller.position()[1] + dir )
 	end
+	vsoFacePoint( mcontroller.position()[1] + dir )
 end
 
 function mMovingFacing( )
@@ -83,38 +150,58 @@ function mJumpModifyer()
 	end
 end
 
-function mMotionParameters()
-	if self.options ~= nil then 
-		if self.options.movementParameters ~= nil then
-			return self.options.movementParameters
-		else
-			return mParams();
-		end
-	else
-		return mParams();
-	end
-end
+--function mMotionParameters()
+	--self.options is NOT motion parameters! it's the pathfinding parameters.
+	--if self.options ~= nil then 
+	--	if self.options.movementParameters ~= nil then
+	--		return self.options.movementParameters
+	--	else
+	--		return mParams();
+	--	end
+	--else
+	--return mParams();
+	--end
+--end
 
 function mMotionParametersSet( dats )
-
-	if mcontroller.controlParameters ~= nil then
-		mcontroller.controlParameters( dats )
+	if mcontroller.controlModifiers ~= nil then
+		mcontroller.controlModifiers( dats )	--Actor
 	else
-		local someshit = mcontroller.parameters()
-		local useem = {
+		mcontroller.applyParameters( dats );	--Vehicle (not all parameters stick? odd... Mainly because SOME parameters are Actor only?
+			
+		if self.motionControls ~= {} then ; else self.motionControls = {}; end
+		
+		--HOWEVER we DO store (some) values in motionControls for vehicles.
+		for k,v in pairs( dats ) do
+			self.motionControls[ k ] = v;
+		end
+		
+		
+		--NOTE we need to track these extra parameters if we can...
+		
+		--local someshit = mParams();	--mcontroller.parameters()
+		--[[
+		local useem = ;
+		
+		{
 			airFriction = 0
 			,liquidFriction = 0.2
 			,liquidImpedance = 0
 			,groundFriction = 40
 			,groundForce = 400
+			--walkSpeed
+			--runSpeed
+			--jumpSpeed
+			--flySpeed
+			--jumpControlForce
 		}
-		if someshit.airFriction ~= nil then useem.airFriction = someshit.airFriction end
-		if someshit.liquidFriction ~= nil then useem.liquidFriction = someshit.liquidFriction end
-		if someshit.liquidImpedance ~= nil then useem.liquidImpedance = someshit.liquidImpedance end
-		if someshit.groundFriction ~= nil then useem.groundFriction = someshit.groundFriction end
-		if someshit.groundForce ~= nil then useem.groundForce = someshit.groundForce end
+		]]--
 		
-		mcontroller.applyParameters( useem );
+		--if someshit.airFriction ~= nil then useem.airFriction = someshit.airFriction end
+		--if someshit.liquidFriction ~= nil then useem.liquidFriction = someshit.liquidFriction end
+		--if someshit.liquidImpedance ~= nil then useem.liquidImpedance = someshit.liquidImpedance end
+		--if someshit.groundFriction ~= nil then useem.groundFriction = someshit.groundFriction end
+		--if someshit.groundForce ~= nil then useem.groundForce = someshit.groundForce end
 	end
 end
 
@@ -182,6 +269,12 @@ function mControlJump()
 		mcontroller.controlJump();
 	else
 		--Hmmmm
+		self.motionControls.jump = true;
+		self.motionControls.jumphold = false;
+		--self.motionControls.jumpForce = mParams().airJumpProfile.jumpSpeed	--CAREFUL need to detect water... liquidJumpProfile
+		
+		--self.motionControls.jumpforce = mParams().airJumpProfile.jumpControlForce
+		--jumpSpeed
         --mControlApproachYVel( velocity[2], mParams().airJumpProfile.jumpControlForce )
 	end
 end
@@ -191,6 +284,7 @@ function mControlJumpHold()
 		mcontroller.controlHoldJump();
 	else
 		--Hmmmm
+		self.motionControls.jumphold = true;
 	end
 end
 

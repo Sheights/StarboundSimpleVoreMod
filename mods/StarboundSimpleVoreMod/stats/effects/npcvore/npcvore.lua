@@ -46,6 +46,15 @@ function update(dt)
 		effect.expire()
 		do return end
 	end
+	
+	if blink then	--fix added for a real problem that should be tracked down. somehow the eaten thing targets ITSELF.
+		if pred == entity.id() then
+			status.clearPersistentEffects("vore")
+			effect.expire()
+			do return end
+		end
+	end
+	
 	blink = true
 end
 

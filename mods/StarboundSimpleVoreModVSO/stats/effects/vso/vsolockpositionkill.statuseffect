@@ -1,0 +1,10 @@
+{
+  "name" : "vsolockpositionkill",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+  
+  "scripts" : [
+    "vsolockpositionkill.lua"
+  ]
+
+}

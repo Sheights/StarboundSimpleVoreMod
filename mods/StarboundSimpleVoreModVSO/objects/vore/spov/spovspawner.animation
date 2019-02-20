@@ -36,7 +36,6 @@
 
             "off" : {
               "properties" : {
-                "image" : "<partImage>?multiply=80808000"
               }
             },
 

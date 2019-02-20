@@ -1,6 +1,24 @@
 --This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 --https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
 
+--storage.myvehicle = nil;
+
+statepart = "part";	--where is this exactly?
+--statewhennear = { "off" }		--Get this from the config file.
+--statewhenaway = { "ghost" }
+
+laststate = nil;
+--lastnear = nil;
+--animator.setAnimationState( statepart, randomPick( statewhennear ) );
+
+--"empty"
+
+sentinit = nil
+initialplacepos = {0,0}
+
+respawntimer = -1;
+loadedparams = nil;
+delaysmashing = nil;
 
 --Utilities for item building
 function spovSpawnerPick( list )
@@ -80,22 +98,40 @@ function spovSpawnerLoadConfig()
 			if object.uniqueId() then
 				storage.uniqueId = object.uniqueId()
 			else
-				storage.uniqueId = storage.uniqueId or sb.makeUuid()	--Hm!
+				if storage.uniqueId ~= nil then
+					--Interesting...
+				else
+					--sb.logInfo("GENERATING UNIQUE ID" );
+					storage.uniqueId = storage.uniqueId or sb.makeUuid()	--Hm!
+				end
+				--sb.logInfo("ASSIGNING UNIQUE ID" );
 				object.setUniqueId( storage.uniqueId )
 			end
 			
+			local excludelist = { myvehicle=0, uniqueId=0 }
+			
 			if havevsostorage then
 				--gotscriptstore.vso = storage.vso;
+				--EXCLUDE:
+				--	"uniqueId", "myvehicle", "vso"
 				for k,v in pairs( gotscriptstore ) do
 					if k ~= "vso" then
-						storage[ k ] = v;
+						if excludelist[k] ~= nil then
+						
+						else
+							storage[ k ] = v;
+						end
 					end
 					--storage.vso[k] = v;
 					--sb.logInfo( k.." = "..tostring( v ) )
 				end
 			else
 				for k,v in pairs( gotscriptstore ) do
-					storage[ k ] = v;
+					if excludelist[k] ~= nil then
+					
+					else
+						storage[ k ] = v;
+					end
 					--storage.vso[k] = v;
 					--sb.logInfo( k.." = "..tostring( v ) )
 				end
@@ -114,20 +150,20 @@ function spovSpawnerLoadConfig()
 	local params = config.getParameter("spov")	--Not quite right...
 	
 	if not params then
-		sb.logInfo( "SPOV spawner at %s is missing configuration!", object.position() )
+		sb.logInfo( tostring(entity.id()).." SPOV spawner at %s is missing configuration!", object.position() )
 	else
 	
 		if params.types == nil then
-			sb.logInfo( "SPOV spawner at %s is missing spawner.types!", object.position() )
+			sb.logInfo( tostring(entity.id()).." SPOV spawner at %s is missing spawner.types!", object.position() )
 		else
 		
 			if params.position == nil then
-				sb.logInfo( "SPOV spawner at %s is missing spawner.position, using 0,0,0,0!", object.position() )
+				sb.logInfo( tostring(entity.id()).." SPOV spawner at %s is missing spawner.position, using 0,0,0,0!", object.position() )
 				params.position = { 0, 0, 0, 0 }
 			end
 					
 			if #params.position < 4 then
-				sb.logInfo( "SPOV spawner at %s position parameter wrong length [ xleft, yleft, xright, yright ]!", object.position() )
+				sb.logInfo( tostring(entity.id()).." SPOV spawner at %s position parameter wrong length [ xleft, yleft, xright, yright ]!", object.position() )
 				params.position = { 0, 0, 0, 0 }
 			end
 			
@@ -143,6 +179,7 @@ function spovSpawnerLoadConfig()
 	end
 	
 	if params == nil then
+		--sb.logInfo( "soft failure" );
 		object.smash( false );	--SOFT failure
 	end
 	return params;
@@ -169,6 +206,7 @@ end
 function spovSpawnerInit( params )
 	
 	if params == nil then
+		--sb.logInfo( "init failure" );
 		object.smash( false );	--SOFT failure
 		return nil;
 	else
@@ -177,26 +215,88 @@ function spovSpawnerInit( params )
 		
 		object.setInteractive( true );
 		
-		local vehicleParams = {
-			ownerKey = entity.id(),
-			startHealthFactor = 1.0,
-			fromItem = true,
-			initialFacing = object.direction()
-		}	
+		initialplacepos = spovSpawnerOffsetPosition( params, {0,0} );
 		
-		local placepos = spovSpawnerOffsetPosition( params, {0,0} );
+		animator.setAnimationState( statepart, "off" )	--Invis when spawned
 		
-		local spawnedone = world.spawnVehicle( params.useThisType, placepos, vehicleParams )--, [Json overrides])
+		if storage.myvehicle ~= nil then
 		
-		if spawnedone == nil then
-			sb.logInfo( "SPOV spawner at %s failed to spawn %s", object.position(), params.useThisType )
-		else
-			world.sendEntityMessage( spawnedone, "vsoCreatedFrom", entity.id(), placepos )
+			--THIS meta information MUST MATCH or else.
+			local worldsvname = world.entityName( storage.myvehicle );	--MUST MATCH: any in list of params.useThisType / params.types ...
+			local worldsvvel = world.entityVelocity( storage.myvehicle );	--MUST NOT BE NIL
+			local worldsvtype = world.entityType( storage.myvehicle );	--MUST MATCH: "vehicle"
+			
+			--sb.logInfo( tostring(entity.id()).." SPOV Spawner 1 : "..tostring( worldsvname ).." "..tostring( worldsvvel ).." "..tostring( worldsvtype ).." "..tostring( storage.myvehicle ) )
+				
+			if worldsvtype == "vehicle" and worldsvvel ~= nil then
+				
+				if object.uniqueId() ~= nil then
+				
+					--world.entityExists()
+					--sb.logInfo( tostring( world.entityUniqueId( storage.myvehicle ) ) );	Not vehicles.
+					
+					--PROBLEM: this "stored" ID may not persist... Hm.
+					--So, this vehicle MUST be queried. (async)
+					if world.entityExists( storage.myvehicle ) then
+						--WAIT FOR IT...
+						--sb.logInfo( tostring( entity.id() ).." SPOV spawner 2 HAS vehicle "..tostring( storage.myvehicle ).." uid:"..tostring( object.uniqueId() ) )
+					else
+						--sb.logInfo( tostring( entity.id() ).." SPOV spawner 2 had a vehicle but it is gone now "..tostring( storage.myvehicle ).." uid:"..tostring( object.uniqueId() ) )
+						storage.myvehicle = nil;
+					end			
+					
+				else
+					if world.entityExists( storage.myvehicle ) then
+						--sb.logInfo( tostring( entity.id() ).." SPOV spawner 2 not using storage but retained an ID."..tostring(storage.myvehicle) );
+						--storage.myvehicle = nil;
+					else
+					
+						--sb.logInfo( tostring( entity.id() ).." SPOV spawner 2 not using storage and has no ID."..tostring(storage.myvehicle) );
+						storage.myvehicle = nil;
+					end
+				end
+			else
+			
+				--sb.logInfo( tostring( entity.id() ).." SPOV spawner stored 2 ID is completely invalid "..tostring(storage.myvehicle) );
+				storage.myvehicle = nil;
+			end
+		
+			--object.uniqueId();
+			--storage.uniqueId
+			--world.entityUniqueId( EntityId entityId )
+			--world.entityUniqueId( EntityId entityId )
+			--world.findUniqueEntity( uid )
+			
+			--if object.uniqueId() then
+			--	storage.uniqueId = object.uniqueId()
+			--end
 		end
 		
-		animator.setAnimationState("part", "off")	--Invis when spawned
+		if storage.myvehicle == nil then
 		
-		return spawnedone;
+			--sb.logInfo( tostring( entity.id() ).." SPOV spawner 3 about to spawn, old id is "..tostring( storage.myvehicle ) );
+				
+			local vehicleParams = {
+				ownerKey = entity.id(),
+				startHealthFactor = 1.0,
+				fromItem = true,
+				initialFacing = object.direction()	--This will be 1 for right or -1 for left. 
+			}	
+			
+			storage.myvehicle = world.spawnVehicle( params.useThisType, initialplacepos, vehicleParams )--, [Json overrides])
+		
+			--sb.logInfo( tostring( entity.id() ).." SPOV spawner 3 SPAWNINED a vehicle: "..tostring( storage.myvehicle ) );
+		
+			if storage.myvehicle == nil then
+				sb.logInfo( "SPOV spawner 3 at %s failed to spawn %s", object.position(), params.useThisType )
+			end
+		end
+		
+		if storage.myvehicle ~= nil then
+			world.sendEntityMessage( storage.myvehicle, "vsoCreatedFrom", entity.id(), initialplacepos, object.uniqueId() )	--It wont have the handler ready...
+		end
+		
+		return storage.myvehicle;
 	end
 end
 
@@ -211,6 +311,10 @@ function spovSpawnerDie( spawnedone )
 	--
 	if _ENV['spovSpawnerItemGenerateCallback'] ~= nil then
 		spovSpawnerItemGenerateCallback();
+	end
+	
+	if _ENV['spovSpawnerEndCallback'] ~= nil then
+		spovSpawnerEndCallback();
 	end
 	
 	if spawnedone ~= nil then
@@ -232,13 +336,6 @@ function spovSpawnerNPCInteracted( spawnedone, npcid )
 	world.sendEntityMessage( spawnedone, "vsoNPCInteracted", entity.id(), npcid )
 end
 
-function changeAnimState( setpart, towhat )
-	if towhat ~= laststate then
-		laststate = towhat;
-		animator.setAnimationState( setpart, towhat );
-	end
-end
-
 --Select a random element from a list
 --[[
 function randomPick( list )
@@ -256,89 +353,183 @@ end
 
 function init( args )
 
-	params = spovSpawnerLoadConfig();
+	--sb.logInfo( tostring( entity.id() ).." SPOV Spawner init() "..tostring( storage.myvehicle ) )
+
+	initialplacepos = { object.position()[1], object.position()[2] }
+
+	loadedparams = spovSpawnerLoadConfig();
 	
+	if storage.myvehicle ~= nil then
+		if world.entityExists( storage.myvehicle ) then
+			--loadedparams
+			--if params.types ~= nil then well. Pick one and STAY with that one forever once placed?
+			if world.entityName( storage.myvehicle ) == loadedparams.useThisType then
+				--sb.logInfo( "Remembered: "..tostring( world.entityName( storage.myvehicle ) ) );
+				--Looks good enough! low probability of collision.
+			else
+				--sb.logInfo( "Id exists, but type is wrong: "..tostring( world.entityName( storage.myvehicle ) ) );
+				storage.myvehicle = nil;
+			end
+		else
+			storage.myvehicle = nil;
+		end
+	end
+
 	--Is this important? No. (maybe? because it SETS stuff...)
 	if _ENV['spovSpawnerItemGenerateCallback'] ~= nil then
 		spovSpawnerItemGenerateCallback();
 	end
-	
-	myvehicle = spovSpawnerInit( params );
-	
-	statepart = "part";	--where is this exactly?
-	--statewhennear = { "off" }		--Get this from the config file.
-	--statewhenaway = { "ghost" }
-	
-	laststate = nil;
-	--lastnear = nil;
-	--animator.setAnimationState( statepart, randomPick( statewhennear ) );
-	
-	--"empty"
 	
 	message.setHandler("vsoSpawnerSay",
 		function(_, _, ownerKey, message)
 			object.say( message );
 		end)
 		
+	message.setHandler("vsoSpawnerDie",
+		function(_, _, ownerKey, options)
+			--options.
+			--sb.logInfo( "spawner die message recieved " );
+			if storage.myvehicle == ownerKey then
+				if options ~= nil then
+					if options.respawn ~= nil then
+						respawntimer = options.respawn
+					end
+					if options.smash ~= nil then
+						--sb.logInfo( "spawner die message recieved and smashing" );
+						if options.permadeath == true then
+							delaysmashing = { arg = true, time = 0, timemax = 0.5 }
+						else
+							delaysmashing = { arg = false, time = 0, timemax = 0.5 }
+						end
+					end
+				end
+			end
+		end)
+		
+	--spovSpawnerInit( loadedparams );
+	
+	
+	message.setHandler("vsoRelinkVehicleToSpawner",
+		function(_, _, fromid, uidreq)
+			--sb.logInfo( "Recieved relink "..tostring( fromid ).." "..tostring( uidreq ).." "..tostring( entity.id() ).." "..tostring( object.uniqueId() ) )
+			if uidreq == object.uniqueId() then
+				delaysmashing = nil;
+				--sb.logInfo( "ID DOES match. "..tostring( storage.myvehicle ).." "..tostring( fromid ) );
+				storage.myvehicle = fromid;	--_vsoSpawnOwnerUID
+				sentinit = nil;
+				--script.setUpdateDelta( 1 )
+			else
+				--sb.logInfo( "ID does not match. "..tostring( storage.myvehicle ) );
+			end
+		end)
+	
 	message.setHandler("vsoSpawnerAnimState",
 		function(_, _, fromKey, state)
-			if myvehicle == fromKey then
-				changeAnimState( statepart, state );
+			if storage.myvehicle == fromKey then
+				--sb.logInfo( "SET"..statepart.." "..state );
+				animator.setAnimationState( statepart, state );
 			end
 		end)
 		
 	message.setHandler( "vsoStorageSaveDataKey",
 		function(_, _, fromKey, key, data)
-			--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( myvehicle ) );
-			if myvehicle == fromKey then
-				--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( myvehicle ) );
+			--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( storage.myvehicle ) );
+			if storage.myvehicle == fromKey then
+				--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( storage.myvehicle ) );
 				storage.vso[ key ] = data;
 			end
 		end )
 		
 	message.setHandler( "vsoStorageSaveData",
 		function(_, _, fromKey, data)
-			--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( myvehicle ) );
-			if myvehicle == fromKey then
-				--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( myvehicle ) );
+			--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( storage.myvehicle ) );
+			if storage.myvehicle == fromKey then
+				--sb.logInfo( "vsoStorageSaveData "..tostring( fromKey ).." "..tostring( storage.myvehicle ) );
 				storage.vso = data;
 			end
 		end )
 		
 	message.setHandler( "vsoStorageLoadData",
 		function(_, _, fromKey)
-			--sb.logInfo( "vsoStorageLoadData "..tostring( fromKey ).." "..tostring( myvehicle ) );
-			if myvehicle == fromKey then
+			--sb.logInfo( "vsoStorageLoadData "..tostring( fromKey ).." "..tostring( storage.myvehicle ) );
+			if storage.myvehicle == fromKey then
 				--sb.logInfo( "vsoStorageLoadData: "..tostring( storage.vso ) );
-				world.sendEntityMessage( myvehicle, "vsoStorageLoadData", entity.id(), storage.vso )
+				world.sendEntityMessage( storage.myvehicle, "vsoStorageLoadData", entity.id(), storage.vso )
 			end
 		end )
 		
-	script.setUpdateDelta( 60 )
+	script.setUpdateDelta( 1 )
+	
+	if _ENV['spovSpawnerInitCallback'] ~= nil then
+		spovSpawnerInitCallback( storage.myvehicle );
+	end
 end
 
 function update( dt )
-	--[[if object.isTouching( myvehicle ) then
-		if lastnear ~= true then
-			animator.setAnimationState( statepart, randomPick( statewhennear ) );
+
+	if delaysmashing ~= nil then
+	
+		--if delaysmashing
+		delaysmashing.time = delaysmashing.time + dt;
+		if delaysmashing.time > delaysmashing.timemax then
+			object.smash( delaysmashing.arg );
+			delaysmashing = nil;
+		else
+			script.setUpdateDelta( 1 )
 		end
-		lastnear = true;
 	else
-		if lastnear ~= false then
-			animator.setAnimationState( statepart, randomPick( statewhenaway ) );
+		
+		--So we defer a bit.
+		if sentinit ~= nil then
+		
+			if respawntimer >= 0 then
+				respawntimer = respawntimer - dt;
+				if respawntimer < 0 then
+					
+					--Do a respawn...
+					if world.entityExists( storage.myvehicle ) then
+						--Hm! wait some more.
+						respawntimer = 1;
+					else
+						
+						sentinit = nil;
+						
+						paramobj = spovSpawnerLoadConfig();	--what??
+						
+						spovSpawnerInit( paramobj );
+										
+						script.setUpdateDelta( 1 )
+						
+						if _ENV['spovSpawnerInitCallback'] ~= nil then
+							spovSpawnerInitCallback( storage.myvehicle );
+						end
+						
+						respawntimer = -1;
+					end
+				end
+			end
+		
+		else
+		
+			spovSpawnerInit( loadedparams );
+			
+			--world.sendEntityMessage( storage.myvehicle, "vsoCreatedFrom", entity.id(), initialplacepos, object.uniqueId() )	--It wont have the handler ready...
+			sentinit = true;
+			script.setUpdateDelta( 60 )
 		end
-		lastnear = false;
-	end]]--
+	
+	end
+
 end
 
 function die()
-	spovSpawnerDie( myvehicle );
+	spovSpawnerDie( storage.myvehicle );
 end
 
 function onInteraction(args)
-	spovSpawnerInteracted( myvehicle, args );
+	spovSpawnerInteracted( storage.myvehicle, args );
 end
 
 function onNpcPlay(npcId)
-	spovSpawnerNPCInteracted( myvehicle, npcId );
+	spovSpawnerNPCInteracted( storage.myvehicle, npcId );
 end

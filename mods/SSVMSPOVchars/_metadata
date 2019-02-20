@@ -1,0 +1,9 @@
+{
+  "version" : "0.0",
+  "tags" : "",
+  "author" : "SSVMSPOVchars",
+  "description" : "SSVMSPOVchars",
+  "name" : "SSVMSPOVchars",
+  "friendlyName" : "SSVMSPOVchars",  
+  "requires" : ["StarboundSimpleVoreModVSO"]
+}

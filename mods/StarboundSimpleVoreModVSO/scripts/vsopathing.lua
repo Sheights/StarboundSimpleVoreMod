@@ -225,9 +225,10 @@ function PathMover:move(targetPosition, dt)
   end
 
   debugPath(self.finder)
-
-  self.controlParameters = copy( mMotionParameters() )
+  
   local result = self:edgeMove()
+  
+  self.controlParameters = mParams();	--sb.jsonMerge( self.options or {}, mParams() );--copy( mParams() )--mMotionParameters() )
   mMotionParametersSet( self.controlParameters );
 
   return result

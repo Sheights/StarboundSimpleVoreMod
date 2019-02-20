@@ -1,0 +1,9 @@
+{
+  "name" : "body",
+  "category" : "vsotargetablemonster",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "blank8x8.png"
+  }
+}
