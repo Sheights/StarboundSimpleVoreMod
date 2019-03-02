@@ -1,5 +1,5 @@
 --This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
---https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
+--https://creativecommons.org/licenses/by-nc-sa/2.0/  @ 
 
 defaultPrice = 3000
 
@@ -67,5 +67,6 @@ function spovSpawnerItemGenerateCallback()	--THIS function is used to create the
 		,price = getItemCurrentPrice()
 		,description = getItemStatusString()
 		,lowerleft = "";	--"Belly: "..tostring( math.floor( storage.vso.belly*100) / 100 )
+		--,itemTags = { "spovpillable" }	--This is required if you want to use pills
 	}
 end

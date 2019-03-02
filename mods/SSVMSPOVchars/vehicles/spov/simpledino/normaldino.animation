@@ -1,0 +1,626 @@
+{  
+	"globalTagDefaults" : {
+		"frame" : "1"
+		,"directives" : ""
+		,"heademote" : "normal"
+		,"heademoteframe" : "1"
+		,"headforce" : "normal.1"
+	}
+    ,"animatedParts": {
+        "stateTypes": {
+			"bodyState": {
+                "default": "idle"
+                , "states": {
+                    "idle": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.5
+						, "mode": "end"
+                    }
+                    ,"idlefat": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.0
+						, "mode": "end"
+                    }
+					,"chatter": {
+                        "frames": 11, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11] }
+                        , "cycle": 2.0
+						, "mode": "end"
+					}
+                    ,"idlestand": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.5
+						, "mode": "end"
+                    }
+					,"idlestanddrool":{
+                        "frames": 2 , "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.5
+						, "mode": "end"
+					}
+					
+					,"lickbegin":{
+                        "frames": 2 , "frameProperties" : { "index":[1,2] }
+                        , "cycle": 0.7
+						, "mode": "end"
+					}
+					,"lickend":{
+                        "frames": 3 , "frameProperties" : { "index":[1,2,3] }
+                        , "cycle": 0.7
+						, "mode": "end"
+					}
+                    , "full": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+                    , "full2": {
+                        "frames": 4, "frameProperties" : { "index":[1,2,3,4] }
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "squirmF": {
+                        "frames": 3
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "squirmB": {
+                        "frames": 3
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "squirmU": {
+                        "frames": 3
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "squirmD": {
+                        "frames": 3
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "squirmrubF": {
+                        "frames": 5
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "squirmrubB": {
+                        "frames": 5
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "squirmrubU": {
+                        "frames": 5
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "squirmrubD": {
+                        "frames": 5
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "itemeatfromhand": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "itemfromhandtochew": {
+                        "frames": 1, "frameProperties" : { "index":[1] }
+                        , "cycle": 0.4
+                        , "mode": "end"
+                    }
+					, "itemfromhandmiss": {
+                        "frames": 3, "frameProperties" : { "index":[1,2,3] }
+                        , "cycle": 0.9
+                        , "mode": "end"
+                    }
+						
+					, "itemeat": {
+                        "frames": 3, "frameProperties" : { "index":[1,2,3] }
+                        , "cycle": 0.9
+                        , "mode": "end"
+                    }
+					, "itemeatmiss": {
+                        "frames": 5, "frameProperties" : { "index":[1,2,3,4,5] }
+                        , "cycle": 1.5
+                        , "mode": "end"
+                    }
+					, "itemtochew": {
+                        "frames": 2
+                        , "cycle": 0.6
+                        , "mode": "end"
+                    }
+					, "itemchew": {
+                        "frames": 2
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "itemgulp": {
+                        "frames": 9, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9] }
+                        , "cycle": 1.5
+                        , "mode": "end"
+                    }
+					, "idleburp": {
+                        "frames": 9 , "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9] }
+                        , "cycle": 2.5
+                        , "mode": "end"
+                    }
+					, "fullbig": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "toonbelly": {
+                        "frames": 1
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "fromonbelly": {
+                        "frames": 1
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+					, "onbelly": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "upsetstand": {
+                        "frames": 2, "frameProperties" : { "index":[1,2] }
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "playerbiteready": {
+                        "frames": 1
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+					, "playereat": {
+                        "frames": 15, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] }
+                        , "cycle": 2.4
+                        , "mode": "end"
+                    }
+					, "playerbitemiss": {
+                        "frames": 3, "frameProperties" : { "index":[1,2,3] }
+                        , "cycle": 0.9
+                        , "mode": "end"
+                    }
+					, "pushout": {
+                        "frames": 8, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] }
+                        , "cycle": 1.6
+                        , "mode": "end"
+                    }
+					, "pushoutend": {
+                        "frames": 1
+                        , "cycle": 0.5
+                        , "mode": "end"
+                    }
+                }
+            }
+        }
+        , "parts": {
+            "body": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": -1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": {  "image": "normaldino.png:empty" } }
+                        , "idlefat": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "chatter": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "idlestand": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "idlestanddrool": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "lickbegin": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "lickend": { "properties": { "image": "normaldino.png:empty" }  }
+                        , "full": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "full2": { "properties": { "image": "normaldino.png:empty"  } }
+						
+                        , "squirmF": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmB": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmU": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmD": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmrubF": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmrubB": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmrubU": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "squirmrubD": { "properties": { "image": "normaldino.png:empty"  } }
+						
+                        , "itemeatfromhand": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemfromhandtochew": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemfromhandmiss": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemeat": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemeatmiss": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemtochew": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemchew": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "itemgulp": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "idleburp": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "fullbig": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "toonbelly": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "fromonbelly": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "onbelly": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "upsetstand": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "playerbiteready": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "playerbitemiss": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "playereat": { "properties": { "image": "normaldino.png:empty"  } }
+                        , "pushout": { "properties": { "image": "normaldino.png:empty"  } }
+						, "pushoutend": { "properties": { "image": "normaldino.png:empty"  } }
+                    }
+                }
+            }
+            , "victim": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": 0
+                    , "transformationGroups": ["flip", "victimposition"]
+                    , "drivingSeatPosition": [0.0, -0.125]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": {}
+						, "idlefat" : {}
+                        , "chatter": {}
+                        , "idlestand": {}
+						, "idlestanddrool": {}
+                        , "lickbegin": {}
+                        , "lickend": {}
+                        , "full": {}
+                        , "full2": {}
+                        , "squirmF": { }
+                        , "squirmB": { }
+                        , "squirmU": { }
+                        , "squirmD": { }
+                        , "squirmrubF": { }
+                        , "squirmrubB": { }
+                        , "squirmrubU": { }
+                        , "squirmrubD": { }
+						
+                        , "itemeatfromhand": {}
+                        , "itemfromhandtochew": {}
+                        , "itemfromhandmiss": {}
+						
+                        , "itemeat": {}
+                        , "itemeatmiss": {}
+                        , "itemtochew": {}
+                        , "itemchew": {}
+                        , "itemgulp": {}
+                        , "idleburp": {}
+                        , "fullbig": {}
+                        , "toonbelly": {}
+                        , "fromonbelly": {}
+                        , "onbelly": {}
+                        , "upsetstand": {}
+                        , "playerbiteready": {}
+                        , "playerbitemiss": {}
+                        , "playereat": {}
+                        , "pushout": {}
+                        , "pushoutend": {}
+                    }
+                }
+            }
+
+            , "fg": {
+                "properties": {
+                    "centered": true
+					,"zLevel": 1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "normaldino.png:idle.<frame><directives>" }  }
+                        , "idlefat": { "properties": { "image": "normaldino.png:idlefat.<frame><directives>" }  }
+                        , "chatter": { "properties": { "image": "normaldino.png:chatter.<frame><directives>" }  }
+                        , "idlestand": { "properties": { "image": "normaldino.png:idlestand.<frame><directives>" }  }
+						, "idlestanddrool": { "properties": { "image": "normaldino.png:idlestanddrool.<frame><directives>" }  }
+						, "lickbegin": { "properties": { "image": "normaldino.png:lickbegin.<frame><directives>" }  }
+						, "lickend": { "properties": { "image": "normaldino.png:lickend.<frame><directives>" }  }
+                        , "full": { "properties": { "image": "normaldino.png:full.<frame><directives>" }  }
+                        , "full2": { "properties": { "image": "normaldino.png:full2.<frame><directives>" }  }
+                        , "squirmF": { "properties": { "image": "normaldino.png:squirmF.<frame><directives>"  } }
+                        , "squirmB": { "properties": { "image": "normaldino.png:squirmB.<frame><directives>"  } }
+                        , "squirmU": { "properties": { "image": "normaldino.png:squirmU.<frame><directives>"  } }
+                        , "squirmD": { "properties": { "image": "normaldino.png:squirmD.<frame><directives>"  } }
+                        , "squirmrubF": { "properties": { "image": "normaldino.png:squirmrubF.<frame><directives>"  } }
+                        , "squirmrubB": { "properties": { "image": "normaldino.png:squirmrubB.<frame><directives>"  } }
+                        , "squirmrubU": { "properties": { "image": "normaldino.png:squirmrubU.<frame><directives>"  } }
+                        , "squirmrubD": { "properties": { "image": "normaldino.png:squirmrubD.<frame><directives>"  } }
+						
+                        , "itemeatfromhand": { "properties": { "image": "normaldino.png:itemeatfromhand.<frame><directives>"  } }
+                        , "itemfromhandtochew": { "properties": { "image": "normaldino.png:itemfromhandtochew.<frame><directives>"  } }
+                        , "itemfromhandmiss": { "properties": { "image": "normaldino.png:itemfromhandmiss.<frame><directives>"  } }
+						
+                        , "itemeat": { "properties": { "image": "normaldino.png:itemeat.<frame><directives>"  } }
+                        , "itemeatmiss": { "properties": { "image": "normaldino.png:itemeatmiss.<frame><directives>"  } }
+                        , "itemtochew": { "properties": { "image": "normaldino.png:itemtochew.<frame><directives>"  } }
+                        , "itemchew": { "properties": { "image": "normaldino.png:itemchew.<frame><directives>"  } }
+                        , "itemgulp": { "properties": { "image": "normaldino.png:itemgulp.<frame><directives>"  } }
+                        , "idleburp": { "properties": { "image": "normaldino.png:idleburp.<frame><directives>"  } }
+                        , "fullbig": { "properties": { "image": "normaldino.png:fullbig.<frame><directives>"  } }
+                        , "toonbelly": { "properties": { "image": "normaldino.png:toonbelly.<frame><directives>"  } }
+                        , "fromonbelly": { "properties": { "image": "normaldino.png:toonbelly.<frame><directives>"  } }
+                        , "onbelly": { "properties": { "image": "normaldino.png:onbelly.<frame><directives>"  } }
+                        , "upsetstand": { "properties": { "image": "normaldino.png:upsetstand.<frame><directives>"  } }
+                        , "playerbiteready": { "properties": { "image": "normaldino.png:playerbiteready.<frame><directives>"  } }
+                        , "playerbitemiss": { "properties": { "image": "normaldino.png:playerbitemiss.<frame><directives>"  } }
+                        , "playereat": { "properties": { "image": "normaldino.png:playereat.<frame><directives>"  } }
+                        , "pushout": { "properties": { "image": "normaldino.png:pushout.<frame><directives>"  } }
+                        , "pushoutend": { "properties": { "image": "normaldino.png:pushoutend.<frame><directives>"  } }
+                    }
+                }
+            }
+            , "overlay": {
+				"properties": {
+                    "centered": true
+					,"zLevel": 2
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": {
+							"properties": {
+								"image": "normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+							}  
+							,"frameProperties" : {
+								"offset" : [ [0.0625, 0.875], [0.0625, 0.875] ]
+							}
+						}
+                        , "chatter": {
+							"properties": {
+								"image": "normaldino_head.png:normal.1<directives>" 
+							}  
+							,"frameProperties" : {
+								"offset" : [ [0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875],[0.0625, 0.875] ]
+								,"image": [
+									"normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:empty.1<directives>" 
+									,"normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+								]
+							}
+						}
+                        , "idlefat": {
+							"properties": {
+								"image": "normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+							}  
+							,"frameProperties" : {
+								"offset" : [  [0.0625, 0.875], [-0.0625, 1.0] ]
+							}
+						}
+                        , "idlestand": {
+							"properties": {
+								"image": "normaldino_head.png:<heademote>.<heademoteframe><directives>" 
+							}  
+							,"frameProperties" : {
+								"offset" : [ [-0.0625, 1.0], [-0.0625, 1.0] ]
+							}
+						}
+						, "idlestanddrool": {}
+                        , "lickbegin": {}
+                        , "lickend": {}
+                        , "full": {}
+                        , "full2": {}
+                        , "squirmF": { }
+                        , "squirmB": { }
+                        , "squirmU": { }
+                        , "squirmD": { }
+                        , "squirmrubF": { }
+                        , "squirmrubB": { }
+                        , "squirmrubU": { }
+                        , "squirmrubD": { }
+						
+                        , "itemeatfromhand": {}
+                        , "itemfromhandtochew": {}
+                        , "itemfromhandmiss": {}
+                        , "itemeat": {}
+                        , "itemeatmiss": {}
+                        , "itemtochew": {}
+                        , "itemchew": {}
+                        , "itemgulp": {}
+                        , "idleburp": {}
+                        , "fullbig": {}
+                        , "toonbelly": {}
+                        , "fromonbelly": {}
+                        , "onbelly": {}
+                        , "upsetstand": {}
+                        , "playerbiteready": {}
+                        , "playerbitemiss": {}
+                        , "playereat": {}
+                        , "pushout": {}
+                        , "pushoutend": {}
+                    }
+                }
+			}
+        }
+	}
+	, "transformationGroups": {
+		"flip": {}
+		, "victimposition": {
+			"interpolated": true
+		}
+	}
+	, "sounds": {
+		"returnvehicle": ["/sfx/tech/vehicle_disappear1.ogg"]
+		, "swallow": ["/sfx/objects/gulp.ogg"]
+		, "digest": [
+			"/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (18).ogg", "/sfx/vore/digest/digest (25).ogg", "/sfx/vore/digest/digest (11).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (16).ogg", "/sfx/vore/digest/digest (19).ogg", "/sfx/vore/digest/digest (20).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg", "/sfx/vore/digest/digest (9).ogg"
+		]
+		, "lay": ["/sfx/objects/eggLay.ogg"]
+		, "struggle": ["/sfx/vore/struggle/burbslosh.ogg","/sfx/vore/struggle/blurbsquish2.ogg","/sfx/vore/struggle/blorbsquish.ogg","/sfx/vore/swallow/swallow (11).ogg"]
+		, "please": ["/vehicles/spov/simpledino/trex_rumble.ogg","/sfx/vore/struggle/stomach-burble.ogg"]
+		, "chatter": [ "/sfx/npc/quadruped/arrowhead_idle1.ogg", "/sfx/npc/quadruped/arrowhead_death.ogg" ]
+		, "chomp" : [ "/sfx/objects/coil.ogg" ]
+		, "eatchomp" : [ "/vehicles/spov/simpledino/raptor_chomp.ogg" ]
+		, "biteready" : [ "/vehicles/spov/simpledino/trex_warning.ogg" ]
+		, "chew" : [ "/sfx/humanoid/eat3.ogg", "/sfx/humanoid/eat4.ogg" ]
+		, "gulp" : [ "/sfx/vore/swallow/swallow (6).ogg" ]
+		, "burp" : [ "/sfx/vore/burp/classic_burp.ogg" ]
+		, "pushout" : [ "/sfx/objects/sw/StomachTransfer.ogg" ]
+		, "fart" : [ "/sfx/npc/quadruped/sandworm_pain2.ogg" ]
+		, "purr" : [ "/vehicles/spov/simpledino/trex_rumble.ogg" ]
+		, "slurp" : [ "/sfx/vore/common/slurp.ogg" ]
+	}
+	,"particleEmitters": {
+		"burp" : {
+		  "emissionRate" : 3,
+		  "particles" : [
+			{
+			  "particle" : {
+				 "type" : "animated",
+				"animation" : "/animations/gas/greengas.animation",
+				"position" : [0, 1.1],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [3, 0],
+				"destructionAction" : "shrink",
+				"destructionTime" : 0.5,
+				"fade" : 1,
+				"size" : 0.3,
+				"layer" : "back",
+				"timeToLive" : 0.75,
+				"variance" : {
+				  "rotation" : 180,
+				  "position" : [0.2, 0.5],
+				  "size" : 0.1,
+				  "timeToLive" : 0.25,
+				  "initialVelocity" : [1, 0.5]
+				}
+			  }
+			}
+			
+		   ]
+		}
+		,"love" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/happy.animation",
+				"position" : [1.0, 2.3],
+				"finalVelocity" : [0, 2],
+				"initialVelocity" : [2, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "back",
+				"timeToLive" : 1.8,
+				"flippable" : true
+			  }
+			}
+		  ]
+		}
+		
+		,"emotehappy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/happy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesad" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sad.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emoteconfused" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/confused.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesleepy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sleepy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,
+		"drips" : {
+		  "emissionRate" : 15,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "ember",
+				"layer" : "front",
+				"size" : 1.0,
+				"color" : [120, 221, 254, 230],
+				"fade" : 0.9,
+				"destructionAction" : "shrink",
+				"destructionTime" : 0.8,
+				"position" : [0.5, 0.9],
+				"offsetRegion" : [0, 0, 0, 0],
+				"initialVelocity" : [0, 0.0],
+				"finalVelocity" : [0, -1],
+				"approach" : [3, 10],
+				"timeToLive" : 0.5,
+				"variance" : {
+				  "initialVelocity" : [0.2, 0.0],
+				  "size" : 0.5,
+				  "position" : [0.3, 0]
+				},
+				"flippable" : true
+			  }
+			}
+		  ]
+		}
+	  }
+}

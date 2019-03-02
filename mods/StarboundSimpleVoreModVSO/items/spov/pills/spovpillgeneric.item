@@ -1,0 +1,13 @@
+{
+  "itemName" : "spovpillgeneric",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillgeneric.png",
+  "description" : "A generic pill that doesn't seem very effective.",
+  "shortdescription" : "Generic Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {},
+  "pillRemove" : []
+}

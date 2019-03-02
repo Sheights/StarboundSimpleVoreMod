@@ -1,0 +1,88 @@
+{
+    "objectName": "spovspawnerdragbagz"
+    , "colonyTags": ["vore"]
+    , "rarity": "Rare"
+    , "shortdescription": "SPOV Dragon Sleeping Bag"
+    , "race": "generic"
+    , "category": "furniture"
+    , "price": 500
+	, "health" : 5
+
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/dragbagz/dragbagz.png:idle.1"
+    , "description": "It's a squishy sleeping bag. I think. We'll both know in the morning."
+	,"tooltipFields": {
+		"statusLabel": "It's a squishy sleeping bag. I think. We'll both know in the morning."
+	}
+	, "tooltipSubtitle" : "SPOV Summoner"
+	
+    , "apexDescription": "Rebel Apex spend many nights sleeping in these."
+    , "avianDescription": "Sleeping here would be uncomfortable on the feathers."
+    , "floranDescription": "Floran does not like sssleeping in bag."
+    , "glitchDescription": "Sarcasm. Oh how wonderful."
+    , "humanDescription": "A sleeping bag. Good protection against the elements in a pinch."
+    , "hylotlDescription": "Do these work underwater?"
+
+    , "orientations": [{
+            "image": "/vehicles/spov/dragbagz/dragbagz.png:idle.1"
+            , "imagePosition": [-28, 0]
+            , "direction": "left"
+            , "flipImages": true
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }, {
+            "image": "/vehicles/spov/dragbagz/dragbagz.png:idle.1"
+            , "imagePosition": [-28, 0]
+            , "direction": "right"
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }]
+
+    , "inventoryIcon": "/vehicles/spov/dragbagz/dragbagzicon.png"
+
+    , "animation": "spovspawner.animation"
+    , "animationParts": {
+        "bg": "/vehicles/spov/dragbagz/dragbagz.png:idle.1"
+    }
+	, "animationPosition" : [0, 12]
+	, "animationCustom" : {}
+
+    , "spov": {
+        "types": ["spovdragbagz"]
+        , "position": [0.0, 1.5, 0.0, 1.5]
+        , "template": {}
+    }
+
+	, "retainObjectParametersInItem" : false
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : true
+	, "interactive" : true
+	, "inspectable" : false
+	, "allowScanning" : true
+	, "isContainer" : false
+	
+    , "scripts": [
+        "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua"
+    ]
+	
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-2.0, 0.0],
+		"preciseStandPositionRight" : [2.0, 0.0],
+		"maxNpcs" : 1
+	  }
+}

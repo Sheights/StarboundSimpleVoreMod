@@ -6,7 +6,7 @@
       "type" : "FloatingDungeon",
       "dungeonWorld" : "foodhall",
       "seed" : 1234,
-	  "persistent" : true,
+	  "persistent" : false,
 	  "beamUpRule" : "Anywhere",
 	  "spawningEnabled" : true,
 	  "disableDeathDrops" : true,

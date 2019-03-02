@@ -1,0 +1,52 @@
+{
+  "objectName" : "spovpillstation",
+  "colonyTags" : ["vore"],
+  "rarity" : "Uncommon",
+  "category" : "other",
+  "printable" : false,
+  "subtitle" : "SPOV Enhancer",
+  "tooltipKind" : "object",
+  "description" : "It's a SPOV Enhancer, change how a SPOV acts by feeding it pills! Forcefully!",
+  "shortdescription" : "SPOV Enhancer",
+  "race" : "generic",
+
+  "statusEffects" : [ ],
+  "price" : 5000,
+
+  "apexDescription" : "A machine to upgrade monsters? This is brilliant!",
+  "avianDescription" : "If if can change creatures, I worry what else it can do.",
+  "floranDescription" : "Scary metal monster makes monsters do things",
+  "glitchDescription" : "I am glad a machine can finally change the minds of the organics.",
+  "humanDescription" : "Yeah it upgrades things, but can it make them dream?",
+  "hylotlDescription" : "I dont like the design of this upgrade station. It feels very... unnerving.",
+  "novakidDescription" : "This may be the only machine that can change minds, neat.",
+
+  "inventoryIcon" : "spovpillstationicon.png",
+  "orientations" : [
+    {
+	  "image" : "spovpillstation.png:closed.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "spovpillstation.png:closed.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+
+  "animation" : "spovpillstation.animation",
+  "animationParts" : {
+    "body" : "spovpillstation.png"
+  },
+  "animationPosition" : [0, 0],
+  "animationCustom" : {},
+  
+  "scripts" : [ "/objects/vore/spov/spovpillstation/spovpillstation.lua" ],
+  "scriptDelta" : 20
+}

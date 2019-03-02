@@ -1,0 +1,35 @@
+{
+  "frameGrid" : {
+    "size" : [64, 32]
+    ,"dimensions" : [10, 1]
+    ,"names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+    ]
+  }
+  ,"aliases"  :  {
+		"empty" : "f.1"
+
+		,"extend.1" : "f.2"
+		,"extend.2" : "f.3"
+		,"extend.3" : "f.4"
+		,"extend.4" : "f.5"
+		,"extend.5" : "f.6"
+		,"extend.6" : "f.7"
+		,"extend.7" : "f.8"
+		,"extend.8" : "f.9"
+		,"extend.9" : "f.10"
+		,"extend.10" : "f.10"
+		,"extend.11" : "f.10"
+		,"extend.12" : "f.10"
+
+		,"retract.1" : "f.10"
+		,"retract.2" : "f.9"
+		,"retract.3" : "f.8"
+		,"retract.4" : "f.7"
+		,"retract.5" : "f.6"
+		,"retract.6" : "f.5"
+		,"retract.7" : "f.4"
+		,"retract.8" : "f.3"
+		,"retract.9" : "f.2"
+	}
+}

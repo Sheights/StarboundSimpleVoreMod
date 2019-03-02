@@ -1,0 +1,83 @@
+{
+  "objectName" : "betavsomachine",
+  "colonyTags" : [],
+  "printable"  :  false,
+  "rarity" : "Legendary",
+  "category" : "decorative",
+  "price" : 80000,
+  "tooltipKind" : "object",
+  "race" : "generic",
+  
+  "shortdescription" : "^red;Beta VSO Machine^reset;",
+  "description" : "It seems this machine was left here, and it seems in disrepair. Perhaps someone will come back to fix it?",
+  "apexDescription" : "The energy from this device makes my hair prickle...What is this?",
+  "avianDescription" : "...I don't think I'm comfortable with machines like this, even if it does summon powerful beings...",
+  "floranDescription" : "Free food!",
+  "glitchDescription" : "Analytic: Machine unknown in origin. There is a schematic of a unfamiliar organism displayed.",
+  "humanDescription" : "Okay...Whatever this thing does it can't be good. What is it going to summon...?",
+  "hylotlDescription" : "This pile of... things is not pleasing to look at...What is this going to lead to?",
+  "novakidDescription" : "I'm not goin' to even pretend I know how this crazy stuff works.",
+
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/vendingmachine.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "Beta VSO Machine",
+        "subtitle" : "Risky Business...",
+        "icon" : {
+          "file" : "/objects/vore/vsoenv/betavsomachine/betavsomachineicon.png"
+        }
+      }
+    },
+	"buyFactor" : 0.9,
+    "sellFactor" : 0.1,
+    "items" : [
+	  { "item" : { "name" : "spovspawnerdragbagz"} },
+	  { "item" : { "name" : "spovspawnernormaldino"} },
+	  { "item" : { "name" : "spovspawnercandy"} },
+	  { "item" : { "name" : "spovspawnerval"} },
+	  { "item" : { "name" : "spovspawnerPakkunLizard"} },
+	  
+	  { "item" : { "name" : "spovpillcleanse"} },
+	  { "item" : { "name" : "spovpilldigest"} },
+	  { "item" : { "name" : "spovpillheal"} },
+	  { "item" : { "name" : "spovpillsoftdigest"} },
+	  { "item" : { "name" : "spovpilleasyescape"} },
+	  { "item" : { "name" : "spovpillantiescape"} },
+	  { "item" : { "name" : "spovpillgeneric"} },
+	  
+	  { "item" : { "name" : "vsopilldispenser"} },
+	  { "item" : { "name" : "spovpillstation"} },
+	  
+	  { "item" : { "name" : "zazergun"} }
+    ]
+  },
+  
+  
+  "inventoryIcon" : "/objects/generic/arcademachine/arcademachineicon.png",
+  "orientations" : [
+    {
+	  "image" : "betavsomachine.png:idle.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "betavsomachine.png:idle.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  
+  "animation" : "betavsomachine.animation",
+  "animationParts" : {
+    "body" : "betavsomachine.png"
+  },
+  "animationPosition" : [0, 0],
+  "animationCustom" : {}
+}

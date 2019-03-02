@@ -188,14 +188,7 @@ poke : 1",
 "Name: Kangaru
 Types: Oral, Digest
 Requirements -
-apex : 6
-
-Name: Kineptic
-Types: Oral, Digest
-Requirements -
-glitchcastle : 6,
-OR
-kineptic : 6",
+apex : 6",
 
 "Name: Kirhos
 Types: Oral, Digest
@@ -243,12 +236,7 @@ Types: Oral, Digest
 Requirements -
 sea : 24",
 
-"Name: Orcana
-Types: Oral, Digest
-Requirements -
-sea : 6
-
-Name: Princess Ruto
+"Name: Princess Ruto
 Types: Oral
 Requirements -
 ocean : 10

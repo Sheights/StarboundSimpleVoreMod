@@ -1,0 +1,74 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "bodyState" : {
+        "default" : "closed",
+        "states" : {
+          "open" : {
+            "frames" : 3,
+            "mode" : "loop",
+            "cycle" : 3
+          },
+          "opening" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "open"
+          },
+          "closing" : {
+            "frames" : 5,
+            "cycle" : 0.5,
+            "mode" : "transition",
+            "transition" : "closed"
+          },
+          "closed" : { 
+            "frames" : 1,
+            "mode" : "loop",
+            "cycle" : 1
+		  }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "bodyState" : {
+            "open" : {
+              "properties" : {
+                "image" : "<partImage>:open.<frame>"
+              }
+            },
+
+            "opening" : {
+              "properties" : {
+                "image" : "<partImage>:opening.<frame>"
+              }
+            },
+			
+            "closing" : {
+              "properties" : {
+                "image" : "<partImage>:closing.<frame>"
+              }
+            },
+
+            "closed" : {
+              "properties" : {
+                "image" : "<partImage>:closed.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "opening" : [],
+    "closing" : []
+  }
+}

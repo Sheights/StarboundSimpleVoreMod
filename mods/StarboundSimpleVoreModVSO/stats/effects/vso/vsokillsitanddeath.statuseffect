@@ -1,0 +1,10 @@
+{
+  "name" : "vsokillsitanddeath",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsokillsitanddeath.lua"
+  ]
+
+}

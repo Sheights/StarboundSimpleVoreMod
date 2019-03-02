@@ -1,0 +1,9 @@
+{
+  "version" : "0.0",
+  "tags" : "",
+  "author" : "SSVMSPOVZovoroth",
+  "description" : "SSVMSPOVZovoroth",
+  "name" : "SSVMSPOVZovoroth",
+  "friendlyName" : "SSVMSPOVZovoroth",  
+  "requires" : ["StarboundSimpleVoreModVSO"]
+}

@@ -213,7 +213,7 @@ function vsoHistoPick( mylist, chances )	--Given a list, and a list of correspon
 	return mylist[ vsoHistoIndex( chances ) ];
 end
 
-function vsoChance( npercent )	--100 always happens. 1 is 1/100 percent change.
+function vsoChance( npercent )	--100 always happens. 1 is 1/100 percent change. 0 CAN happen
 	return ( math.random() * 100.0 ) <= npercent;
 end
 
@@ -439,6 +439,9 @@ function vsoEatForce( victimid, seatindex )
 			--Not sure how to input the seat index yet... #ERROR
 			--vsoForceSit( victimid, seatindex );	---Hm!
 			
+			--MONSTER keep sit... monsters can't sit... so... huh.
+			--vsoeatmonster+seat index to keep that consistent? Hm...
+			
 			local rpcresult = world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
 			
 			--world.callScriptedEntity( entity.id(), "npc.resetLounging" );
@@ -454,25 +457,55 @@ function vsoEatForce( victimid, seatindex )
 end
 
 function vsoFaceDirection( direction )
+	local doflip = false;
 	if direction < 0 then
-		if self.vsoInitialDirection == -1 then
-			animator.setFlipped( false );--true )
+		if self.vsoInitialDirection < 0 then
 			--self.vsoCurrentDirection = -1
 		else
-			animator.setFlipped( true )
-			--self.vsoCurrentDirection = 1
+			doflip = true;--self.vsoCurrentDirection = 1
 		end
 		self.vsoCurrentDirection = -1
 	else
-		if self.vsoInitialDirection == -1 then
-			animator.setFlipped( true )--false )
-			--self.vsoCurrentDirection = 1
+		if self.vsoInitialDirection < 0 then
+			doflip = true;--self.vsoCurrentDirection = 1
 		else
-			animator.setFlipped( false )
 			--self.vsoCurrentDirection = -1
 		end
 		self.vsoCurrentDirection = 1
 	end
+	
+	--Only applies IF you use a "flip" but if you DO use a flip, it STILL doesnt do the physics box.
+	--So yeah, nope.
+	--[[if animator.hasTransformationGroup("flip") then
+		animator.resetTransformationGroup("flip")
+		if doflip then
+			animator.scaleTransformationGroup( "flip", {-1, 1} )
+		end
+	else
+	]]--
+	if self.vsoFlipCollisionPoly then
+		if self.vsoLastDirection ~= self.vsoCurrentDirection then
+		
+			--local poly = mcontroller.collisionPoly();
+			
+			--Is our poly bounding box symmetric? (maxx - minx == 0)
+			--	Hm.
+			--HOW do we know we FLIPPED it?
+			local poly = self.cfgVSO.movementSettings.default.collisionPoly	--want CURRENT movement settings... sorta.
+			if doflip then
+				for k,v in pairs( poly ) do
+					poly[k][1] = -poly[k][1]
+				end
+			end
+			vsoMotionParam( { collisionPoly=poly } )
+			
+			self.vsoLastDirection = self.vsoCurrentDirection;
+		end
+	end
+	
+	animator.setFlipped( doflip )	--CANT DO BOTH. Lets not use "flip" transform groups.
+	--end
+	
 end
 			
 function vsoFacePoint( x )
@@ -1032,8 +1065,9 @@ function vsoStorageLoad( callback )
 			end
 			--
 		end
-		
-		callback( data )
+		if callback ~= nil then
+			callback( data )
+		end
 	end )
 		
 end
@@ -1060,6 +1094,46 @@ function vsoAddStoredStat( stattable, method, key, value )
 	vsoStorageSaveKey( stattable );
 end
 
+
+function vsoPill( pillname ) 
+	if storage.pills ~= nil then
+		return storage.pills[ pillname ] ~= nil;
+	end
+	return false;
+end
+
+function vsoPillValue( pillname ) 
+	if storage.pills ~= nil then
+		if storage.pills[ pillname ] ~= nil then
+			local retval = storage.pills[ pillname ].value
+			if retval ~= nil then
+				return retval;
+			end
+		end
+	end
+	return 0;
+end
+
+function vsoAddPill( pillname, data )
+	if storage.pills ~= nil then
+	else
+		storage.pills = {};
+	end
+	storage.pills[ pillname ] = data
+	vsoStorageSaveKey( "pills" );	--REQUIRES a store to remember this...
+	return true;
+end
+
+function vsoRemovePill( pillname )
+	if storage.pills ~= nil then
+		if storage.pills[ pillname ] ~= nil then
+			storage.pills[ pillname ] = nil;
+			vsoStorageSaveKey( "pills" );	--REQUIRES a store to remember this...
+			return true;
+		end
+	end
+	return false;
+end
 
 function vsoTimeDelta( timername, readonly )
 
@@ -1095,7 +1169,13 @@ end
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
-function applyDamage( damageRequest )	--Take damage, or not
+
+--function applyDamage( damageRequest )	--Take damage, or not
+--	return _vsoapplyDamage( damageRequest )
+--end
+
+function _vsoapplyDamage( damageRequest )
+
 	local laststate = self.sv.laststate;
 	local res = {};
 	local healthLost = 0;
@@ -1977,7 +2057,7 @@ function _vsoOnDeath()
 	--WAIT A MINUTE:
 	--	uninit is called to UNLOAD not "destroy" ...	if storage.health <= 0 then
 
-	sb.logInfo( "vsoforce to die..." )
+	--sb.logInfo( "vsoforce to die..." )
 			
 	if onEnd ~= nil then onEnd() end
 
@@ -2101,6 +2181,7 @@ function init()
 				  
 			self.maxHealth = vsoIfnil( config.getParameter("maxHealth"), 100 );
 			
+			self.vsoLastDirection = 1;
 			self.vsoInitialDirection = 1	--This should ADJUST how the "facing" responds... if you make a character that is flipped that is (1 is right/+x, -1 is left/-x)
 			self.vsoCurrentDirection = vsoIfnil( config.getParameter("initialFacing"), 1 );	--	"initialFacing" set by spawner
 			
@@ -2248,9 +2329,14 @@ function init()
 			
 			mParams();	--this call does a LOT so watch out...
 			
+			self.vsoFlipCollisionPoly = false;
+			if self.cfgVSO.movementSettingsFlipPoly ~= nil then
+				if self.cfgVSO.movementSettingsFlipPoly > 0 then
+					self.vsoFlipCollisionPoly = true;
+				end
+			end
+			
 			vsoMotionParam( self.cfgVSO.movementSettings.default );
-			
-			
 			
 			vsoFacePoint( mcontroller.position()[1] + 10*self.vsoCurrentDirection );	--hack, should work
 			
@@ -2491,6 +2577,47 @@ function vsoClock()
 	return self.vsoclock;	--iiiiinteresting idea. emulating slowdown? nope...
 end
 
+function vsoGetRandomInputOverrideParams( seatname, setdt )
+	local v = self.sv.eaten[ seatname ]
+	if v ~= nil then
+		if v.inputrndoverrides ~= nil then
+			if setdt ~= nil then
+				v.inputrndoverrides.dt = setdt;
+			else
+				v.inputrndoverrides.dt = self.vsodt;
+			end
+			return v.inputrndoverrides;
+		end
+	end
+	return { dt=self.vsodt, minTime=0.2, maxTime=1.0 } 
+end
+
+function vsoSetRandomInputOverrideParams( seatname, params )
+	--PROBLEM: this is NOT per seat!!!
+	local v = self.sv.eaten[ seatname ]
+	if v ~= nil then
+		if self.sv.eaten[ seatname ].inputrndoverrides == nil then
+			self.sv.eaten[ seatname ].inputrndoverrides = { dt=0, minTime=0.2, maxTime=1.0 }
+		end
+		for k,kv in pairs( params ) do
+			self.sv.eaten[ seatname ].inputrndoverrides[ k ] = params[k];
+		end
+	end
+	return false;
+end
+
+function vsoSetRandomInputOverrideToFight( seatname )
+	return vsoSetRandomInputOverrideParams( seatname, { minTime=0.1, maxTime=0.1 } );
+end
+
+function vsoSetRandomInputOverrideToPlease( seatname )
+	return vsoSetRandomInputOverrideParams( seatname, { minTime=0.4, maxTime=0.8 } );
+end
+
+function vsoSetRandomInputOverrideToDefault( seatname )
+	return vsoSetRandomInputOverrideParams( seatname, { minTime=0.2, maxTime=1.0 } );
+end
+
 function vsoGetRandomInputOverride( inputs, params, controls )
 
 	if inputs.npcdelay == nil then inputs.npcdelay = params.minTime + (params.maxTime - params.minTime) * math.random(); end
@@ -2526,8 +2653,8 @@ function vsoInputOverride( seatname, options )
 		if v.input == nil then
 			v.input = vsoInputCreate( seatname )
 		end
-				
-		local over = vsoGetRandomInputOverride( v.input, { dt=self.vsodt, minTime=0.2, maxTime=1.0 }, {"L", "R", "U", "D"} );
+		
+		local over = vsoGetRandomInputOverride( v.input, vsoGetRandomInputOverrideParams( seatname ) , {"L", "R", "U", "D"} );
 		vsoInputUpdate( seatname, v.input, self.vsodt, over )
 		return true
 	end
@@ -2634,7 +2761,7 @@ function update( dt )
 					if overf ~= nil then--OPTIONAL NPC input forwarding function (for SPOV's) vsoNPCInputOverride();	--Hm...
 						overf( k, v )
 					else
-						local over = vsoGetRandomInputOverride( v.input, { dt=dt, minTime=0.2, maxTime=1.0 }, {"L", "R", "U", "D"} );
+						local over = vsoGetRandomInputOverride( v.input, vsoGetRandomInputOverrideParams( k, dt ), {"L", "R", "U", "D"} );
 						vsoInputUpdate( k, v.input, dt, over )
 					end
 				else
@@ -2897,6 +3024,15 @@ function update( dt )
 			
 			if checkstate ~= self.sv.nextstate then
 				vsoError( "#VSOERROR User changed states in a begin function ("..checkstate.."); this is not allowed" );
+			end
+			
+			--Update damage state function
+			if callbegin.damagefn ~= nil then
+				applyDamage = _vsoapplyDamage;
+				vehicle.setDamageTeam( { type = self.cfgVSO.damageTeamType } );	--Not sure. If I'm passive, anyone can damage me?
+			else
+				applyDamage = nil
+				vehicle.setDamageTeam( { type="friendly", team=1 } );	--Not sure. If I'm passive, anyone can damage me?
 			end
 			
 			if _ENV[ checkstate ] ~= nil then
@@ -3805,6 +3941,17 @@ function vsoResourceAddPercent( targetid, resname, respercent, optcallback )
 	return false;
 end
 
+function vsoResourceAddPercentThreshold( targetid, resname, respercent, resthresh, optcallback )
+	if world.entityExists( targetid ) then
+		local rpc = world.sendEntityMessage( targetid, "vsoResourceAddPercent", resname, respercent/100.0, resthresh/100.0 )
+		if optcallback ~= nil then
+			_add_vso_rpc( rpc, optcallback )
+		end
+		return true
+	end
+	return false;
+end
+
 --------------------------------------------------------------------------------------------
 
 function vsoMakeColorReplaceDirectiveString( colmap )
@@ -4117,6 +4264,12 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 	end
 	local hasnpc = world.npcQuery( pos1, pos2, { order = "nearest" } );
 	local hasplayer = world.playerQuery( pos1, pos2, { order = "nearest" })
+	local hasmonster = {};
+	if options ~= nil then
+		if options.monsters == true then
+			hasmonster = world.monsterQuery( pos1, pos2, { order = "nearest" })
+		end
+	end
 	
 	--Check for old target
 	local optionslos = false;
@@ -4129,6 +4282,18 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 	end
 	local setid = nil;
 	if oldtargetid ~= nil then
+	
+		--Priority of target acquisition: monster, npc, player?
+	
+		for k,v in pairs( hasmonster ) do
+			if v == oldtargetid then
+				if (optionslos ~= true) or entity.entityInSight( v ) then
+					setid = oldtargetid;
+					break;
+				end
+			end
+		end
+		
 		for k,v in pairs( hasnpc ) do
 			if v == oldtargetid then
 				if (optionslos ~= true) or entity.entityInSight( v ) then
@@ -4137,6 +4302,7 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 				break;
 			end
 		end
+		
 		for k,v in pairs( hasplayer ) do
 			if v == oldtargetid then
 				if (optionslos ~= true) or entity.entityInSight( v ) then
@@ -4145,6 +4311,7 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 				end
 			end
 		end
+		
 	end
 	
 	--Old target was NOT found.
@@ -4172,10 +4339,21 @@ function vsoUpdateTarget( targetname, xMin, yMin, xMax, yMax, options )
 			else
 				setid = hasplayer[1];
 			end
+		elseif #hasmonster > 0 then
+			if optionslos == true then
+				for k,v in pairs( hasmonster ) do
+					if entity.entityInSight( v ) then
+						setid = v;
+						break;
+					end
+				end
+			else
+				setid = hasmonster[1];
+			end
 		end
 		
 		if setid ~= nil then
-			self.sv.targets[ targetname ] = { id=setid, state=0, validstatus=true, rpc=nil }	--A NEW TARGET was found.
+			self.sv.targets[ targetname ] = { id=setid, state=0, validstatus=false, rpc=nil }	--A NEW TARGET was found.
 		else
 			self.sv.targets[ targetname ] = nil;	--Lost all targets.
 		end
@@ -4754,9 +4932,11 @@ function vsoGetHealth( seatname, defaultvalue )
 	end
 	local eatenstruct = self.sv.eaten[ seatname ]
 	if eatenstruct ~= nil then
-		local enthp = world.entityHealth( eatenstruct.id );
-		
-		return enthp[1] / enthp[2]
+		if eatenstruct.id ~= nil then
+			local enthp = world.entityHealth( eatenstruct.id );
+			
+			return enthp[1] / enthp[2]
+		end
 	end
 	return defaultvalue;
 end

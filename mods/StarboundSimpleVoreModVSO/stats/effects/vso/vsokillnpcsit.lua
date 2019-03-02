@@ -2,23 +2,32 @@
 --https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
 
 function dothing()
-	status.setResource("stunned", 0 )
-	status.setResource("health", 0 )
-	status.overConsumeResource( "health", 2*status.resourceMax( "health" ) )	
 
+	effect.setParentDirectives("multiply=00000000")	--Works always. Hm.
+	
+	status.removeEphemeralEffect( "vsokeepsit" );
+	status.overConsumeResource( "health", 99999999 );-- "health", 2*status.resourceMax( "health" ) )	
+	
+end
+
+function init()
+
+	effect.setParentDirectives("multiply=00000000")	--Works always. Hm.
+	
 	if world.isNpc( entity.id() ) then
+		status.setResource("stunned", 0 )	--only for npcs
 		world.callScriptedEntity( entity.id(), "npc.resetLounging" );
 	else
 		--world.sendEntityMessage( entity.id(), "vsoForcePlayerSit", nil, nil )
 		--sb.logInfo( "Not a npc?" );
-		effect.expire()
+		--effect.expire()
 	end
 	
-	--status.removeEphemeralEffect("");
 	--status.clearPersistentEffects();
-end
-
-function init()
+	status.removeEphemeralEffect( "vsokeepsit" );
+	status.setResource("health", 0 )
+	status.overConsumeResource( "health", 99999999 );--2*status.resourceMax( "health" ) )	
+	
 	dothing()
 end
 

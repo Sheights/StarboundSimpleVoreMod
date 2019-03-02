@@ -113,7 +113,6 @@ Goodra						- Sheights
 Harpy						- Treebuddy + Sheights
 Human						- Paradox
 Kangaru						- based on Kangaru mod - Sheights
-Kineptic					- based on Kineptic mod - Sheights
 Kirhos						- based on Kirhos mod - Sheights
 Lalim						- Bruyaglovae who may be found at http://www.furaffinity.net/user/bruyaglovae/
 Lamia						- Treebuddy
@@ -122,7 +121,6 @@ Lucario						- based on Lucario mod - Treebuddy
 Mantizi						- based on Mantizi mod - Sheights
 Newt						- Sheights
 Orca						- Sheights
-Orcana						- based on Orcana mod - Sheights
 Reindeer					- Treebuddy
 Sergal						- amadeusreworp
 Slime						- ArgobargSoup

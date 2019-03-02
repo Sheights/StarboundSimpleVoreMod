@@ -1,0 +1,20 @@
+{
+  "itemName" : "spovpilldigest",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpilldigest.png",
+  "description" : "A pill that causes SPOVs to digest their prey.",
+  "shortdescription" : "Digestion Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+  	"digest" : {
+  		"name" : "Digestion",
+  		"icon" : "/items/spov/pills/spovpilldigest.png",
+  		"description" : "Digest prey at a steady rate.",
+		"value":1
+  	}
+  },
+  "pillRemove" : [ "softdigest", "heal" ]
+}

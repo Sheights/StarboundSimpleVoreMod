@@ -1,0 +1,86 @@
+{
+    "objectName": "spovspawnerPakkunLizard"
+    , "colonyTags": ["vore"]
+    , "rarity": "Rare"
+    , "shortdescription": "SPOV Pakkun Lizard"
+    , "race": "generic"
+    , "category": "other"
+    , "price": 500  
+	, "health" : 5
+	
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/PakkunLizard/PakkunLizard.png:idle.1"
+    , "description": "Summon a hungry little lizard with a long, sticky tongue!"	
+	,"tooltipFields": {
+		"statusLabel": "Summon a hungry little lizard with a long, sticky tongue!"
+	}
+	, "tooltipSubtitle" : "SPOV Summoner"
+	
+    , "orientations": [{
+            "image": "/vehicles/spov/PakkunLizard/PakkunLizard.png:silhouette"
+            , "imagePosition": [-40, 0]
+            , "direction": "left"
+            , "flipImages": true
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }, {
+            "image": "/vehicles/spov/PakkunLizard/PakkunLizard.png:silhouette"
+            , "imagePosition": [-40, 0]
+            , "direction": "right"
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }]
+
+    , "inventoryIcon": "/vehicles/spov/PakkunLizard/PakkunLizardicon.png"
+
+    , "animation": "spovspawner.animation"
+	, "animationParts" : {
+		"bg" : "/vehicles/spov/PakkunLizard/PakkunLizard.png:silhouette"
+	}
+	, "animationPosition" : [0, 32]
+	, "animationCustom" : {}
+
+    , "spov": {
+        "types": ["spovPakkunLizard"]
+        , "position": [0.0, 4, 0.0, 4]
+        , "template": {}
+        , "pillsAdd": { "digest":{}, "softdigest":{}, "heal":{}, "antiescape":{}, "easyescape":{} }
+    }
+
+	, "colorOptions" : [
+		{ "a0f0f0" : "a0f0f0", "80d0e0" : "80d0e0", "60a0d8" : "60a0d8", "3070c0" : "3070c0", "1050a8" : "1050a8", "203880" : "203880", "f8f800" : "f8f800", "f8a800" : "f8a800", "d84000" : "d84000" },
+		{ "a0f0f0" : "a0f0a0", "80d0e0" : "68e860", "60a0d8" : "58b850", "3070c0" : "408038", "1050a8" : "205818", "203880" : "203800", "f8f800" : "c89000", "f8a800" : "c86800", "d84000" : "d84000" }
+	]
+	
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+    , "scripts": [
+        "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/PakkunLizard/PakkunLizarditemscript.lua" 
+    ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+	  }
+}

@@ -1,0 +1,21 @@
+{
+
+  "frameGrid" : {
+    "size" : [32, 40],
+    "dimensions" : [10, 1],
+    "names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+    ]
+  },
+  "aliases" : {
+	"empty" : "f.1"
+    ,"default.default" : "f.2"
+    ,"default.idle" : "f.2"
+    ,"idle.1" : "f.2"
+    ,"idle.2" : "f.3"
+    ,"idle.3" : "f.4"
+    ,"idle.4" : "f.5"
+  }
+
+}
+

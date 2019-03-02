@@ -1,0 +1,20 @@
+{
+  "itemName" : "spovpillheal",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillheal.png",
+  "description" : "A pill that grants SPOVs the ability to heal their prey.",
+  "shortdescription" : "Healing Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+  	"heal" : {
+  		"name" : "Healing",
+  		"icon" : "/items/spov/pills/spovpillheal.png",
+  		"description" : "Heal prey of any injuries.",
+		"value":1
+  	}
+  },
+  "pillRemove" : [ "digest", "softdigest" ]
+}

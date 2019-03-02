@@ -1,0 +1,15 @@
+{
+  "name" : "zazerstun",
+  "blockingStat" : "stunImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "zazerstun.lua"
+  ],
+
+  "animationConfig" : "zazerstun.animation",
+
+  "label" : "Stun",
+  "icon" : "/interface/statuses/slow.png"
+}

@@ -1,0 +1,10 @@
+[
+	{ "op": "replace"
+		, "path": "/metadata/name"
+		, "value": "foodhall" 
+	},{
+		"op": "add",
+		"path": "/persistent",
+		"value": false
+	}
+]

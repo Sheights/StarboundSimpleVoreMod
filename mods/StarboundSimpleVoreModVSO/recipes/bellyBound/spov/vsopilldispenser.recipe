@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "money", "count" : 20000 }
+  ],
+  "output" : {
+    "item" : "vsopilldispenser",
+    "count" : 1
+  },
+  "groups" : [ "bellyBoundStore", "other" ]
+}

@@ -1,0 +1,45 @@
+{
+	"margin": 0,
+	"name": "vorevso",
+	"properties": {
+
+	},
+	"spacing": 0,
+	"tilecount": 3,
+	"tileheight": 96,
+	"tileproperties": {
+		"0": {
+			"\/\/description": "\"It seems this machine was left here, and it seems in disrepair. Perhaps someone will come back to fix it?\"",
+			"\/\/name": "betavsomachine",
+			"\/\/shortdescription": "^red;Beta VSO Machine^reset;",
+			"imagePositionX": "0",
+			"imagePositionY": "0",
+			"object": "betavsomachine",
+			"tilesetDirection": "right"
+		}
+		,"1": {
+			"\/\/description": "\"It seems this machine was left here, and it seems in disrepair. Perhaps someone will come back to fix it?\"",
+			"\/\/name": "betavsomachine",
+			"\/\/shortdescription": "^red;Beta VSO Machine^reset;",
+			"imagePositionX": "0",
+			"imagePositionY": "0",
+			"object": "betavsomachine",
+			"tilesetDirection": "right"
+		}
+		,"2": {
+			"\/\/description": "\"It seems this machine was left here, and it seems in disrepair. Perhaps someone will come back to fix it?\"",
+			"\/\/name": "betavsomachine",
+			"\/\/shortdescription": "^red;Beta VSO Machine^reset;",
+			"imagePositionX": "0",
+			"imagePositionY": "0",
+			"object": "betavsomachine",
+			"tilesetDirection": "right"
+		}
+	},
+	"tiles": {
+		"0": {
+			"image": "..\/..\/..\/..\/tiled\/workspace-custom\/machine.png"
+		}
+	},
+	"tilewidth": 120
+}

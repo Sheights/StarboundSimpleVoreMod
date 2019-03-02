@@ -1,0 +1,81 @@
+{
+  "objectName" : "vsopilldispenser",
+  "colonyTags" : ["vore"],
+  "rarity" : "Legendary",
+  "category" : "other",
+  "printable" : false,
+  "subtitle" : "SPOV Pill Dispenser",
+  "tooltipKind" : "object",
+  "race" : "generic",
+  "interactAction" : "OpenMerchantInterface",
+  "interactData" : {
+    "config" : "/interface/windowconfig/vendingmachine.config",
+    "paneLayoutOverride" : {
+      "windowtitle" : {
+        "title" : "SPOV Pill Dispenser",
+        "subtitle" : "Tasty Candy!",
+        "icon" : {
+          "file" : "/objects/vore/spov/vsopilldispenser/vsopilldispensericon.png"
+        }
+      }
+    },
+	"buyFactor" : 1.0,
+    "sellFactor" : 0.1,
+    "items" : [
+	  { "item" : { "name" : "spovpillcleanse"} },
+	  { "item" : { "name" : "spovpilldigest"} },
+	  { "item" : { "name" : "spovpillheal"} },
+	  { "item" : { "name" : "spovpillsoftdigest"} },
+	  { "item" : { "name" : "spovpilleasyescape"} },
+	  { "item" : { "name" : "spovpillantiescape"} },
+	  { "item" : { "name" : "spovpillgeneric"} }
+    ]
+  },
+  "price" : 20000,
+  "lightColor" : [23, 33, 38],
+  
+  "flickerPeriod" : 0.3,
+  "flickerMinIntensity" : 0.95,
+  "flickerMaxIntensity" : 1,
+  "flickerPeriodVariance" : 0.1,
+  "flickerIntensityVariance" : 0.0,
+
+  "description" : "This machine dispenses pills that change SPOV behavior",
+  "shortdescription" : "SPOV Pill Dispenser",
+  "generalDescription" : "This machine dispenses pills that change SPOV behavior",
+
+  "apexDescription" : "A pill dispenser",
+  "avianDescription" : "A pill dispenser",
+  "floranDescription" : "A pill dispenser",
+  "glitchDescription" : "A pill dispenser",
+  "humanDescription" : "A pill dispenser",
+  "hylotlDescription" : "A pill dispenser",
+  "novakidDescription" : "A pill dispenser",
+
+  "inventoryIcon" : "vsopilldispensericon.png",
+  
+  "orientations" : [
+    {
+	  "image" : "vsopilldispenser.png:idle.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "left",
+	  "flipImages" : true,
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	},
+	{
+	  "image" : "vsopilldispenser.png:idle.1",
+	  "imagePosition" : [0, 0],
+	  "direction" : "right",
+	  "spaceScan" : 0.1,
+	  "anchors" : [ "bottom" ]
+	}
+  ],
+  
+  "animation" : "vsopilldispenser.animation",
+  "animationParts" : {
+    "body" : "vsopilldispenser.png"
+  },
+  "animationPosition" : [0, 0],
+  "animationCustom" : {}
+}

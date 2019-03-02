@@ -1,0 +1,10 @@
+{
+  "name" : "spovdragbagz_mask1",
+  "effectConfig" : {
+	"maskimage" : "/vehicles/spov/dragbagz/dragbagzmask.png"
+  },
+  "defaultDuration" : 1,
+  "scripts" : [
+    "/stats/effects/vso/vsomaskapply.lua"
+  ]
+}

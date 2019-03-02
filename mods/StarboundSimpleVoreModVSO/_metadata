@@ -5,5 +5,5 @@
   "description" : "StarboundSimpleVoreModVSO",
   "name" : "StarboundSimpleVoreModVSO",
   "friendlyName" : "StarboundSimpleVoreModVSO",  
-  "requires" : []
+  "requires" : ["ssvm"]
 }

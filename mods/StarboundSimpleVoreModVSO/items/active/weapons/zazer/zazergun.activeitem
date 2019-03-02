@@ -1,0 +1,70 @@
+{
+  "itemName" : "zazergun",
+  "price" : 9999,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Stop hurting things, and just stun them! Z Approved.",
+  "shortdescription" : "Stun Phaser",
+  "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : false,
+  "itemTags" : ["weapon","ranged"],
+  "level" : 1,
+
+  "inventoryIcon" : "zazergunicon.png",
+
+  "animation" : "zazergun.animation",
+  "animationParts" : {
+    "gun" : "zazergun.png",
+    "gunfullbright" : "zazergunfullbright.png"
+  },
+  "animationCustom" : {},
+  "muzzleOffset" : [1.5, 0.5],
+
+  "scripts" : ["/items/active/weapons/zazer/zazergun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "chargefire",
+  "primaryAbility" : {
+    "chargeLevels" : [
+      {
+        "time" : 0,
+        "energyCost" : 1,
+        "cooldown" : 0.25,
+        "projectileType" : "zazerboltsmall",
+        "projectileCount" : 1,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire1"
+      },
+      {
+        "time" : 0.5,
+        "energyCost" : 2,
+        "cooldown" : 0.25,
+        "projectileType" : "zazerboltsmall2",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire2"
+      },
+      {
+        "time" : 1.0,
+        "energyCost" : 5,
+        "cooldown" : 0.25,
+        "projectileType" : "zazerboltsmall5",
+        "projectileCount" : 1,
+        "spreadAngle" : 0,
+        "projectileParameters" : {},
+        "inaccuracy" : 0,
+        "baseDamage" : 0,
+        "fireSound" : "fire3"
+      }
+    ]
+  },
+
+  "builder" : "/items/active/weapons/zazer/zazergunitembuild.lua"
+}

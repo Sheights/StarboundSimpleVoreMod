@@ -43,25 +43,27 @@ It has the built in capability to track and manage multiple prey, as well as pre
 	31. Can prevent eaten npcs/players from escaping
 	32. Can read inputs from npcs/players once eaten, and respond accordingly
 	33. Can block every input but teleport and E. They compensate for E by checking and reforcing a sit.
-	34. ... I'm forgetting some I'm sure (TELL US IDEAS)
-	
+	34. Can optionally protect a eaten character from damage, or not by adjusting seat status
+	35. Can toggle whether they are targeted by NPCS, and where the point to attack is (can be made hostile)
+	36. Can alter what happens on vehicle death, either respawning, breaking the spawner, or smashing it forever
+	37. Can pop up a custom dialog with custom options for conversations / choices.
+	39. Can remember who they are or their previous state even after breaking, with a proper item script
+	40. ... I'm forgetting some I'm sure (TELL US IDEAS)
 
 ### In progress capabilities for VSO's are:
 
 	1. Move (red turtle), but movement has not been cleaned up or generalized yet
 	2. Spawned as a monster, and behave as such
-	3. VSO gets killed/destroyed as a monster
-	4. Have behaviour changed by feeding certain items
-	5. Execute pathfinding like a NPC
-	6. Execute monster like pathfinding
-	7. Remember who they are or their previous state (load/save remembering you were eaten glitch)
-	8. Track a specific user/player (IE, if a specific player is nice to one, it should treat them different?)
-	9. Custom wiggle bar / status bar / resource bar display option (because fun gui options are fun?)
-	10. Check targets inventory (can we see what items they have? Read maybe a configurable preference item?)
-	11. Burp up remains/skulls/parts/gibs for fun
-	12. Lay an egg that can be broken apart for prizes?
-	14. Sticky frog tongue to catch prey and pull them back?
-	15. ... I'm forgetting some I'm sure (TELL US IDEAS)
+	3. Execute pathfinding like a NPC (partially working)
+	4. Execute monster like pathfinding (partially working)
+	5. Remember who they are or their previous state (load/save remembering you were eaten glitch) (partially working)
+	6. Track a specific user/player (IE, if a specific player is nice to one, it should treat them different?) (partially working)
+	7. Custom wiggle bar / status bar / resource bar display option (because fun gui options are fun?)
+	8. Check targets inventory (can we see what items they have? Read maybe a configurable preference item?)
+	9. Burp up remains/skulls/parts/gibs for fun (partially working)
+	10. Lay an egg that can be broken apart for prizes?
+	11. Sticky frog tongue to catch prey and pull them back? (partially working)
+	12. ... I'm forgetting some I'm sure (TELL US IDEAS)
 	
 ## SPOV Overview
 
@@ -73,7 +75,10 @@ This means, they behave like a SPO as in you place a object into the world, but 
 
 	1. Can store persistent memory between breaking
 	2. Can customize their own tooltip and item icon on breaking
-	3. ... I'm forgetting some I'm sure
+	3. Can be configured with the SPOV Enhancer and "pills", purchasable at bellybound, to toggle things like digestion
+	4. Can have behaviour / "pills" changed by feeding certain items
+	5. Can be killed / destroyed and either break the item or destroy it, or respawn. Like monsters or gauntlet!
+	6. ... I'm forgetting some I'm sure
 
 ## Technical
 
@@ -137,3 +142,10 @@ The VSO system makes heavy use of these asynchronous operations.
 Sometimes there is a bidirectional need and messages are sent back and forth as opposed to using the return value from a message call.
 
 
+## Additional notes
+
+	Unzipping the mod somtimes causes a folder problem, where there is an additional layer of folder. You have to move this up one to make the folder structure look correctly
+	(add picture)
+	Make sure to backup your player/universe stuff! Sometimes, mods (like FU) will break your players if other mods are used, but should work with a new player. Have not determined how to correct this.
+	There is a large list of "FAQ" type questions we need to answer in a faq. Working on it, including a installation, spriting and how to tutorial which will probably start as a video.
+	

@@ -99,15 +99,6 @@
 			"Your an Adventurer! That's fantastic!",
 			"Will you make sure everything is safe around here? I think can trust an Adventurer like you!"
 		],
-		"kineptic":[  
-			"Well gosh, you make my instincts tingle!",
-			"Hello kitty!",
-			"Thats quite an elegant style you have!",
-			"Please don't take my cheese! Joking, joking!",
-			"I'd trust you to join this rodents adventure party! <3",
-			"I have some string somewhere!",
-			"S-squeak~!"
-		],
 		"vulpes":[  
 			"Greeting to Rodent:",
 			"Hello, little Rodent~",
@@ -270,26 +261,6 @@
 				"I hope you don't see me as a monster! Hehe!",
 				"Come closer, it's safe!"
 			]
-  },
-  {  
-    "op":"add",
-    "path":"/converse/kineptic",
-    "value" : {
-			"rodent" : [
-				"Hello, little Rodent~",
-				"Well, arn't your just a cute little rodent!",
-				"Part of me wants to pounce you, part of me wants to snug you!",
-				"Can you give me a little squeak? It makes me instincts happy.",
-				"May I brush my claws through your fur?",
-				"Those ears look perfect to nibble on~",
-				"You sure do smell nice.",
-				"A little rodent nibble is fine, right?",
-				"Nice to see an Adventurer!",
-				"See anything intresting on your adventures?",
-				"I hope you don't see me as a monster to be defeated! Hehe!",
-				"Come closer, it's safe!"
-			]
-	}
   },
   {  
     "op":"add",

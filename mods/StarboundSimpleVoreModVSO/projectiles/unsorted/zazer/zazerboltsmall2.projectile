@@ -1,0 +1,17 @@
+{
+  "projectileName" : "zazerboltsmall2",
+  "image" : "zazerboltsmall.png",
+  "animationCycle" : 0.15,
+  "timeToLive" : 0.45,
+  "frameNumber" : 6,
+  "speed" : 75,
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "animationLoops" : false,
+  "piercing" : false,
+  "flippable" : true,
+  "damageKind" : "default",
+  "statusEffects" : [
+    {"effect": "zazerstun", "duration" : 2}
+  ],
+  "lightColor" : [80, 40, 140]
+}

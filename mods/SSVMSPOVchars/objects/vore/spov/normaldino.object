@@ -1,0 +1,108 @@
+{
+    "objectName": "spovspawnernormaldino"
+    , "colonyTags": ["vore"]
+    , "rarity": "Rare"
+    , "shortdescription": "SPOV Normal Dino"
+    , "race": "generic"
+    , "category": "other"
+    , "price": 3000  
+	, "health" : 5
+	
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/simpledino/normaldino.png:idle.1"
+    , "description": "Summon a hungry dinosaur, it likes to eat meat! Don't tease it..."
+	,"tooltipFields": {
+		"statusLabel": "Summon a hungry dinosaur, it likes to eat meat! Don't tease it..."
+	}
+	, "tooltipSubtitle" : "SPOV Summoner"
+
+    , "orientations": [{
+            "image": "/vehicles/spov/simpledino/normaldino.png:silhouette"
+            , "imagePosition": [-25.5, 0]
+            , "direction": "left"
+            , "flipImages": true
+            , "spaceScan": 0.1      
+			, "spaces" : [
+				[-2, 0], [-1, 0], [0, 0], [1, 0], [2, 0], [3, 0], [4, 0], 
+				[-2, 1], [-1, 1], [0, 1], [1, 1], [2, 1], [3, 1], [4, 1],
+				[-2, 2], [-1, 2], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2],
+				[-2, 3], [-1, 3], [0, 3], [1, 3], [2, 3], [3, 3], [4, 3]
+			]
+            , "anchors": ["bottom"]
+        }, {
+            "image": "/vehicles/spov/simpledino/normaldino.png:silhouette"
+            , "imagePosition": [-25.5, 0]
+            , "direction": "right"
+            , "spaceScan": 0.1    
+			, "spaces" : [
+				[-5, 0], [-4, 0], [-3, 0], [-2, 0], [-1, 0], [0, 0], [1, 0],
+				[-5, 1], [-4, 1], [-3, 1], [-2, 1], [-1, 1], [0, 1], [1, 1],
+				[-5, 2], [-4, 2], [-3, 2], [-2, 2], [-1, 2], [0, 2], [1, 2],
+				[-5, 3], [-4, 3], [-3, 3], [-2, 3], [-1, 3], [0, 3], [1, 3]
+			]
+            , "anchors": ["bottom"]
+        }]
+
+    , "inventoryIcon": "/vehicles/spov/simpledino/normaldinoicon.png"
+
+    , "animation": "spovspawner.animation"
+	, "animationParts" : {
+        "bg": "/vehicles/spov/simpledino/normaldino.png:silhouette"
+	}
+	, "animationPosition" : [0, 21]
+	, "animationCustom" : {}
+
+    , "spov": {
+        "types": ["spovnormaldino"]
+        , "position": [0.0, 2.625, 0.0, 2.625]
+        , "template": {}
+		, "pillsAdd": { "digest":{}, "softdigest":{}, "heal":{} }
+    }
+	
+	, "colorOptions" : [
+		{ "a7d485" : "a7d485", "5fab55" : "5fab55", "338033" : "338033", "18521a" : "18521a" },
+		{ "a7d485" : "838383", "5fab55" : "555555", "338033" : "383838", "18521a" : "151515" },
+		{ "a7d485" : "b5b5b5", "5fab55" : "808080", "338033" : "555555", "18521a" : "303030" },
+		{ "a7d485" : "e6e6e6", "5fab55" : "b6b6b6", "338033" : "7b7b7b", "18521a" : "373737" },
+		{ "a7d485" : "f4988c", "5fab55" : "d93a3a", "338033" : "932625", "18521a" : "601119" },
+		{ "a7d485" : "ffd495", "5fab55" : "ea9931", "338033" : "af4e00", "18521a" : "6e2900" },
+		{ "a7d485" : "ffffa7", "5fab55" : "e2c344", "338033" : "a46e06", "18521a" : "642f00" },
+		{ "a7d485" : "b2e89d", "5fab55" : "51bd3b", "338033" : "247824", "18521a" : "144216" },
+		{ "a7d485" : "96cbe7", "5fab55" : "5588d4", "338033" : "344495", "18521a" : "1a1c51" },
+		{ "a7d485" : "d29ce7", "5fab55" : "a451c4", "338033" : "6a2284", "18521a" : "320c40" },
+		{ "a7d485" : "eab3db", "5fab55" : "d35eae", "338033" : "97276d", "18521a" : "59163f" },
+		{ "a7d485" : "ccae7c", "5fab55" : "a47844", "338033" : "754c23", "18521a" : "472b13" }
+	]
+
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+    , "scripts": [
+        "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/simpledino/normaldinoitemscript.lua" 
+    ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-2.0, 0.0],
+		"preciseStandPositionRight" : [2.0, 0.0],
+		"maxNpcs" : 1
+	  }
+}

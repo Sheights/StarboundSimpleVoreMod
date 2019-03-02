@@ -1,0 +1,32 @@
+[
+	{
+		"op": "replace",
+		"path": "/layers/2/objects/278/properties/parameters",
+		"value": "{\"interactData\" : \"\/interface\/warping\/foodhallteleport.config\", \"uniqueId\" : \"foodhall\" }"
+	},{
+		"op": "add",
+		"path": "/tilesets/-",
+		"value": {
+         "firstgid":5207,
+         "source":"..\/..\/..\/tilesets\/ssvm-custom\/vore2.json"
+        }
+	},{
+		"op": "add",
+		"path": "/layers/2/objects/-",
+		"value": {
+			 "gid":5207,
+			 "height":80,
+			 "id":630,
+			 "name":"",
+			 "rotation":0,
+			 "type":"",
+			 "visible":true,
+			 "width":104,
+			 "x":2528,
+			 "y":432
+		}
+	},{ "op": "replace"
+		, "path": "/version"
+		, "value": "2" 
+	}
+]

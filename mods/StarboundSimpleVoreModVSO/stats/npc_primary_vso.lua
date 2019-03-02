@@ -56,13 +56,40 @@ function init()
 		return R;
 	end )
 	
-	message.setHandler( "vsoResourceAddPercent", function( arga_, argb_, resname, deltapercent )
-		if deltapercent < 0 then
-			status.overConsumeResource( resname, -deltapercent*status.resourceMax( resname ) )
+	message.setHandler( "vsoResourceAddPercent", function( arga_, argb_, resname, deltapercent, resthresh )
+	
+		if resthresh ~= nil then
+			local epsilon = 1;
+			local retval = true;
+			local resthreshreal = resthresh*status.resourceMax( resname );
+			local currval = status.resource( resname );
+			local deltaval = deltapercent*status.resourceMax( resname );
+			local nextval = currval + deltaval
+			if deltapercent < 0 then
+				if nextval <= resthreshreal+epsilon then
+					status.setResource( resname, resthreshreal+epsilon )
+					retval = false;
+				else
+					status.modifyResource( resname, deltaval )
+				end
+			elseif deltapercent > 0 then
+				if nextval >= resthreshreal-epsilon then
+					status.setResource( resname, resthreshreal-epsilon )
+					retval = false;
+				else
+					status.modifyResource( resname, deltaval )
+				end
+			end
+			return retval;
 		else
-			status.modifyResourcePercentage( resname, deltapercent );
+	
+			if deltapercent < 0 then
+				status.overConsumeResource( resname, -deltapercent*status.resourceMax( resname ) )
+			else
+				status.modifyResourcePercentage( resname, deltapercent );
+			end
+			return status.resource( resname ) > 0;
 		end
-		return status.resource( resname ) > 0;
 	end )
 	
 end

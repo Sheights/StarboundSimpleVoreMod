@@ -1,0 +1,112 @@
+{
+    "animatedParts": {
+        "stateTypes": {
+            "bodyState": {
+                "default": "idle"
+                , "states": {
+                    "idle": {
+                        "frames": 1
+                        , "cycle": 1.0
+						, "mode": "end"
+                    }
+                    , "full": {
+                        "frames": 4
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+                    , "fullidle": {
+                        "frames": 1
+                        , "cycle": 1.0
+                        , "mode": "end"
+                    }
+                }
+            }
+        }
+        , "parts": {
+            "body": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": -1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": {
+                            "properties": {
+                                "image": "dragbagz.png:idle.<frame>"
+                            }
+                        }
+                        , "full": {
+                            "properties": {
+                                "image": "dragbagz.png:full_back.<frame>"
+                            }
+                        }
+						, "fullidle": {
+                            "properties": {
+                                "image": "dragbagz.png:fullidle_back.<frame>"
+                            }
+						}
+                    }
+                }
+            }
+            , "victim": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": 0
+                    , "transformationGroups": ["flip", "victimposition"]
+                    , "drivingSeatPosition": [0.0, 1.0]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": {}
+                        , "full": {}
+                        , "fullidle": {}
+                    }
+                }
+            }
+
+            , "fg": {
+                "properties": {
+                    "centered": true
+					,"zLevel": 1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": {
+                            "properties": {
+                                "image": "dragbagz.png:empty"
+                            }
+                        }
+                        , "full": {
+                            "properties": {
+                                "image": "dragbagz.png:full.<frame>"
+                            }
+                        }
+						, "fullidle": {
+                            "properties": {
+                                "image": "dragbagz.png:fullidle.<frame>"
+                            }
+						}
+                    }
+                }
+            }
+        }
+	}
+	, "transformationGroups": {
+		"flip": {}
+		, "victimposition": {
+			"interpolated": false
+		}
+	}
+	, "sounds": {
+		"returnvehicle": ["/sfx/tech/vehicle_disappear1.ogg"]
+		, "swallow": ["/sfx/objects/gulp.ogg"]
+		, "digest": [
+			"/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (18).ogg", "/sfx/vore/digest/digest (25).ogg", "/sfx/vore/digest/digest (11).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (16).ogg", "/sfx/vore/digest/digest (19).ogg", "/sfx/vore/digest/digest (20).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg", "/sfx/vore/digest/digest (9).ogg"
+		]
+		, "lay": ["/sfx/objects/eggLay.ogg"]
+		, "struggle": ["/sfx/vore/swallow/swallow (11).ogg"]
+		, "chatter": ["/sfx/humanoid/avian_chatter_female1.ogg", "/sfx/humanoid/avian_chatter_female2.ogg", "/sfx/humanoid/avian_chatter_female3.ogg", "/sfx/humanoid/avian_chatter_female4.ogg"]
+	}
+}

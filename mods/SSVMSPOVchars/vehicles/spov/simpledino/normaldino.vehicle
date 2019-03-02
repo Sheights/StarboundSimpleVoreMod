@@ -1,0 +1,200 @@
+{
+	"name" : "spovnormaldino",
+	"script" : "normaldino.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+	
+	"directoryPath" : "/vehicles/spov/simpledino/",
+	"animation" : "normaldino.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+	
+	, "mouthPosition" : [ -0.0, 1.0 ],
+
+	"boundBox" : [-3.1875, -2.625, 3.1875, 2.625],
+	"metaBoundBox" : [-3.1875, -2.625, 3.1875, 2.625],
+
+	"physicsCollisions" : {
+	},
+	
+	"vso" : {
+		"useAnimatorFirst":0
+		,"spawnOwnerState":"off"
+		,"movementSettingsFlipPoly" : 1
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [[-2.1875, 2.0], [-2.1875, -2.625], [1.1875, -2.625], [1.1875, 2.0]]
+				,"gravityMultiplier" : 0.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : false
+				,"frictionEnabled" : false
+				,"gravityEnabled" : false
+				,"ignorePlatformCollision" : true
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+				"ani_head_none":{
+					"setbegin":{ "heademote" : "empty", "heademoteframe" : 1 }
+				}
+				,"ani_head_angry":{
+					"setbegin":{ "heademote" : "angry", "heademoteframe" : 1 }
+				}
+				,"ani_head_dissapoint":{
+					"setbegin":{ "heademote" : "dissapoint", "heademoteframe" : 1 }
+				}
+				,"ani_head_happy":{
+					"setbegin":{ "heademote" : "happy", "heademoteframe" : 1 }
+				}
+				,"ani_head_normal":{
+					"setbegin":{ "heademote" : "normal", "heademoteframe" : 1 }
+				}
+				,"ani_head_liplick":{
+					"setbegin":{ "heademote" : "liplick", "heademoteframe" : 1 }
+					,"anim":{
+						"heademoteframe" : { 
+							"values":[1,2,3,4,5,6,7]
+							, "timemul":0.15
+							, "setend":{ "heademote" : "normal", "heademoteframe" : 1 } 
+						} 
+					}
+				}
+			}
+		}
+		,"victimAnimations":{
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			}
+			, "playereat":{
+				"seat":"drivingSeat"
+				,"loop":false
+				,"interpMode":1
+				,"effectmap": {
+					"f5":["vsomask_feet5"]
+					,"f4":["vsomask_feet4"]
+					,"f3":["vsomask_feet3"]
+					,"f2":["vsomask_feet2"]
+					,"f1":["vsomask_feet1"]
+					,"clear":["vsomask_none"]
+					,"n":[]
+				}
+				,"transformGroup":"victimposition"
+				,"frames":[  0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 ]
+				,"visible": [1,1,1,1,1,1,1,1,1,1,0, 0, 0, 0, 0]
+				,"xs": [ -1 ]
+				,"x": [
+					1.875
+					,1.875
+					,1.875
+					,1.875
+					,1.875
+					,1.625
+					,0.75
+					,-0.25
+					,-0.375
+					,-0.625	
+					,-0.25
+					,0.125
+				]
+				,"y": [ 
+					0.0
+					,0.0
+					,0.0
+					,0.0
+					,0.0
+					,0.125
+					,0.5
+					,0.625
+					,0.375
+					,-0.75
+					,-1.375
+					,-2
+				]
+				,"r": [ 
+					0
+					,0
+					,0
+					,0
+					,0
+					,35
+					,65
+					,90
+					,125
+					,150
+					,165
+					,180
+					,180
+				]
+				,"e": [
+					"e"
+					,"e"
+					,"e"
+					,"f1"
+					,"f2"
+					,"f3"
+					,"f3"
+					,"f3"
+					,"f3"
+					,"f4"
+					,"f5"
+					,"f5"
+					,"f5"
+					,"clear"
+					,"n"
+				]
+				,"sitpos": [ "stand" ]
+				,"emote": [ "oooh" ]	
+				,"dance": [ "victimrun" ]	
+			}
+			, "pushout":{
+				"seat":"drivingSeat"
+				,"loop":false
+				,"interpMode":1
+				,"effectmap": {
+					"h5":["vsomask_head5"]
+					,"h4":["vsomask_head4"]
+					,"h3":["vsomask_head3"]
+					,"h2":["vsomask_head2"]
+					,"h1":["vsomask_head1"]
+					,"clear":["vsomask_none"]
+					,"n":[]
+				}
+				,"transformGroup":"victimposition"
+				,"visible": [0,0,1,1,1,1,1,1,1]
+				,"seconds":[ 0.0, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6 ]
+				,"x": [ -0.5, -0.5, -0.5, -1.0, -2.0, -3.0,	-3.5, -4.75 ]
+				,"y": [ -1.375, -1.375, -1.375, -1.375, -1.375,	-1.375, -1.375, -1.75 ]
+				,"r": [ 90, 90, 90, 90, 90, 90, 90, 100 ]
+				,"e": [ "h5", "h5", "h4", "h3", "h2", "h1", "clear", "n" ]
+				,"sitpos": [ "lay" ]
+				,"emote": [ "sleep" ]	
+				,"dance": [ "victimsquirm" ]
+			}
+		}
+	}
+}

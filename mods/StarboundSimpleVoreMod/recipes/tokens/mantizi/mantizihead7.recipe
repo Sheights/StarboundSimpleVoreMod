@@ -1,9 +1,9 @@
 {
   "input" : [
-    { "item" : "kineptictoken", "count" : 1 }
+    { "item" : "mantizitoken", "count" : 1 }
   ],
   "output" : {
-    "item" : "kineptichead7",
+    "item" : "mantizihead7",
     "count" : 1
   },
   "groups" : [ "npctoken" ]

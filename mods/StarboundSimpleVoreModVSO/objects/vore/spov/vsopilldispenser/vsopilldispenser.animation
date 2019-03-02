@@ -1,0 +1,39 @@
+{
+  "animatedParts" : {
+    "stateTypes" : {
+      "bodyState" : {
+        "default" : "idle",
+        "states" : {
+          "idle" : {
+            "frames" : 4,
+            "mode" : "loop",
+            "cycle" : 2
+          }
+        }
+      }
+    },
+
+    "parts" : {
+      "body" : {
+        "properties" : {
+          "centered" : false
+        },
+
+        "partStates" : {
+          "bodyState" : {
+            "idle" : {
+              "properties" : {
+                "image" : "<partImage>:idle.<frame>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "sounds" : {
+    "opening" : [],
+    "closing" : []
+  }
+}

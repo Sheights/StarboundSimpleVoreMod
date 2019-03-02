@@ -1,0 +1,141 @@
+{
+	"name" : "spovPakkunLizard",
+	"script" : "PakkunLizard.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+	
+	"directoryPath" : "/vehicles/spov/PakkunLizard/",
+	"animation" : "PakkunLizard.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+		,"absorbedSeat" : {
+			"part" : "victim_absorbed",
+			"partAnchor" : "absorbedSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+	
+	, "mouthPosition" : [ 0.0, 0.0 ],
+
+	"boundBox" : [-1, -3, 1, -1],
+	"metaBoundBox" : [-1, -3, 1, -1],
+
+	"physicsCollisions" : {
+		"body" : {
+      		"collision" : [ [-1, -1.4], [1, -1.5], [1, -4], [-1, -4] ],
+      		"attachToPart" : "foreground"
+    	},
+    	"head" : {
+    		"collision" : [ [-1, -1.4], [1, -1.5] ],
+    		"collisionKind" : "platform",
+      		"attachToPart" : "foreground"
+    	},
+    	"head_hurt" : {
+    		"collision" : [ [-1, -1.8], [1, -1.9] ],
+    		"collisionKind" : "platform",
+      		"attachToPart" : "foreground"
+    	},
+    	"head_full" : {
+    		"collision" : [ [-1.2, -1.1], [0.8, -1.2] ],
+    		"collisionKind" : "platform",
+      		"attachToPart" : "foreground"
+    	}
+	},
+	
+	"vso" : {
+		"useAnimatorFirst":0
+		,"spawnOwnerState":"faint"
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [[-0.5, -2], [0.5, -2], [1, -2.5], [1, -3.5], [0.5, -4], [-0.5, -4], [-1, -3.5], [-1, -2.5]]
+				,"gravityMultiplier" : 1.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : true
+				,"frictionEnabled" : true
+				,"gravityEnabled" : true
+				,"ignorePlatformCollision" : true
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+				"tongueOffset": [1.2, -3.0],
+				"tonguePositions":[
+					[0.0, 0.0]
+					,[1.0, 0.0]
+					,[2.0, 0.0]
+					,[3.0, 0.0]
+					,[4.0, 0.0]
+					,[5.0, 0.0]
+					,[6.0, 0.0]
+					,[7.0, 0.0]
+					,[8.0, 0.0]
+					,[8.0, 0.0]
+					,[8.0, 0.0]
+					,[8.0, 0.0]
+				]
+			}
+		}
+		,"victimAnimations":{
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			},
+			"invis_absorbed":{
+				"seconds":[ 0.0 ]
+				,"seat":"absorbedSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"absorbedposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			},
+			"tongue_extend":{
+				"frames":[ 1,2,3,4,5,6,7,8,9,10,11,12 ]
+				,"seat":"drivingSeat"
+				,"loop":false
+				,"visible": [1]
+				,"dance": [ "victimsquirm" ]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 8.0, 8.0, 8.0 ]
+				,"y": [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+				,"r": [ 0.0 ]
+			},
+			"tongue_retract":{
+				"frames":[ 1,2,3,4,5,6,7,8,9 ]
+				,"seat":"drivingSeat"
+				,"loop":false
+				,"visible": [1]
+				,"dance": [ "victimsquirm" ]
+				,"transformGroup":"victimposition"
+				,"x": [ 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.0 ]
+				,"y": [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+				,"r": [ 0.0 ]
+			}
+		}
+	}
+}

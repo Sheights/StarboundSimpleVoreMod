@@ -106,14 +106,16 @@ function init()
 			--Must PUT the victim on a surface taht triggers 'onGround' so...
 			local maxsearch = -10;	--Hmmmm
 			local origpos = world.entityPosition( owner );
-			local hitany = world.collisionBlocksAlongLine( origpos, { origpos[1], origpos[2] + maxsearch }, { "Null", "Block", "Dynamic", "Platform" }, 1 )
-			if #hitany > 0 then
-				local blockPosition = hitany[1];
-				local colb = mcontroller.boundBox();	--{ xmin, ymin, xmax, ymax }
-				mcontroller.setPosition( { blockPosition[1], blockPosition[2] - colb[2] } )	--Hack attempt? Need to hit the ground somehow... This could push you through platforms...
-			else
-				--Could NOT find a place to set er down.
-				--mcontroller.setPosition( origpos )	--Hack attempt? Need to hit the ground somehow...
+			if origpos ~= nil then
+				local hitany = world.collisionBlocksAlongLine( origpos, { origpos[1], origpos[2] + maxsearch }, { "Null", "Block", "Dynamic", "Platform" }, 1 )
+				if #hitany > 0 then
+					local blockPosition = hitany[1];
+					local colb = mcontroller.boundBox();	--{ xmin, ymin, xmax, ymax }
+					mcontroller.setPosition( { blockPosition[1], blockPosition[2] - colb[2] } )	--Hack attempt? Need to hit the ground somehow... This could push you through platforms...
+				else
+					--Could NOT find a place to set er down.
+					--mcontroller.setPosition( origpos )	--Hack attempt? Need to hit the ground somehow...
+				end
 			end
 		end
 		

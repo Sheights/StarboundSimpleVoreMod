@@ -1,0 +1,35 @@
+{
+
+  "frameGrid" : {
+    "size" : [48, 64],
+    "dimensions" : [10, 1],
+    "names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+    ]
+  },
+
+  "aliases" : {
+    "empty" : "f.1"
+    ,"default" : "f.2"
+    ,"default.default" : "f.2"
+    ,"idle" : "f.2"
+    ,"idle.default" : "f.2"
+    ,"idle.1" : "f.2"
+	,"open.1" : "f.6"
+	,"open.2" : "f.7"
+	,"open.3" : "f.8"
+	,"open.default" : "f.6"
+	,"closed.1" : "f.2"
+	,"closed.default" : "f.2"
+    ,"opening.1" : "f.2"
+    ,"opening.2" : "f.3"
+    ,"opening.3" : "f.4"
+    ,"opening.4" : "f.5"
+    ,"opening.5" : "f.6"
+    ,"closing.1" : "f.6"
+    ,"closing.2" : "f.5"
+    ,"closing.3" : "f.4"
+    ,"closing.4" : "f.3"
+    ,"closing.5" : "f.2"
+  }
+}

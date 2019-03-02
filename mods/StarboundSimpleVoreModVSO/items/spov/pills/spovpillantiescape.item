@@ -1,0 +1,20 @@
+{
+  "itemName" : "spovpillantiescape",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillantiescape.png",
+  "description" : "A pill that makes it harder to escape from SPOVs.",
+  "shortdescription" : "Anti-Escape Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+  	"antiescape" : {
+  		"name" : "Anti-Escape",
+  		"icon" : "/items/spov/pills/spovpillantiescape.png",
+  		"description" : "Keep prey from escaping as easily.",
+		  "value":1.0
+  	}
+  },
+  "pillRemove" : [ "easyescape" ]
+}

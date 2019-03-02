@@ -1,0 +1,13 @@
+{
+  "itemName" : "spovpillcleanse",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillcleanse.png",
+  "description" : "A pill that cleanses SPOVs of any unusual effects.",
+  "shortdescription" : "Cleansing Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {},
+  "pillRemove": [ "softdigest", "heal", "digest", "generic", "easyescape", "antiescape", "*" ]
+}

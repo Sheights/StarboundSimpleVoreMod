@@ -1,0 +1,7 @@
+{
+  "frames" : "curewater.png",
+  "variants" : 1,
+  "frameNumber" : 1,
+  "animationCycle" : 1.0,
+  "offset" : [0, 0]
+}

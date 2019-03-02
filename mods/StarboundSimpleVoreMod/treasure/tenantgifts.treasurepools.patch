@@ -195,19 +195,6 @@
       ]
     },
 	{ "op" : "add",
-      "path" : "/kinepticGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "item" : [ "kineptictoken", 1]}
-        ],
-        "poolRounds" : 1,
-      "allowDuplication" : false
-      }]
-      ]
-    },
-	{ "op" : "add",
       "path" : "/kirhosGift",
       "value" : [
       [1, {
@@ -292,19 +279,6 @@
         "pool" : [
 		  {"weight" : 0.9, "pool" : "villagerGift"},
 		  {"weight" : 0.1, "item" : [ "orcatoken", 1]}
-        ],
-        "poolRounds" : 1,
-      "allowDuplication" : false
-      }]
-      ]
-    },
-	{ "op" : "add",
-      "path" : "/orcanaGift",
-      "value" : [
-      [1, {
-        "pool" : [
-		  {"weight" : 0.9, "pool" : "villagerGift"},
-		  {"weight" : 0.1, "item" : [ "orcanatoken", 1]}
         ],
         "poolRounds" : 1,
       "allowDuplication" : false

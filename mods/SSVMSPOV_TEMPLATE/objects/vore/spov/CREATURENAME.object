@@ -11,6 +11,9 @@
 	, "tooltipKind" : "vso"
 	, "objectImage" : "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
     , "description": "DESCRIPTION CREATURENAME"
+	, "tooltipFields": {
+		"statusLabel": "DESCRIPTION CREATURENAME"
+	}
 	, "tooltipSubtitle" : "SPOV Summoner"
 	
     , "orientations": [{
@@ -30,17 +33,20 @@
 
     , "inventoryIcon": "/vehicles/spov/CREATURENAME/CREATURENAMEicon.png"
 
-    , "animationParts": {
+    , "animation": "spovspawner.animation"
+	, "animationParts" : {
         "bg": "/vehicles/spov/CREATURENAME/CREATURENAME.png:idle.1"
-    }
+	}
+	, "animationPosition" : [0, 21]
+	, "animationCustom" : {}
 
     , "spov": {
         "types": ["spovCREATURENAME"]
         , "position": [0.0, 4, 0.0, 4]
         , "template": {}
+		, "pillsAdd": {}
     }
 	
-    , "animation": "spovspawner.animation"
 	, "retainObjectParametersInItem" : true
 	, "isWired" : false
 	, "printable" : false

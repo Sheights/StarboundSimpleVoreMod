@@ -15,6 +15,9 @@
           },
           "ghost" : {
             "cycle" : 1
+          },
+          "faint" : {
+            "cycle" : 1
           }
         }
       }
@@ -42,6 +45,12 @@
             "ghost" : {
               "properties" : {
                 "image" : "<partImage>?multiply=80808060"
+              }
+            },
+
+            "faint" : {
+              "properties" : {
+                "image" : "<partImage>?multiply=80808020"
               }
             }
           }
