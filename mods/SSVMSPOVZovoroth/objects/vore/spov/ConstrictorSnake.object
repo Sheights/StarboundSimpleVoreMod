@@ -1,0 +1,89 @@
+{
+    "objectName": "spovspawnerConstrictorSnake"
+    , "colonyTags": ["vore"]
+    , "rarity": "Rare"
+    , "shortdescription": "SPOV Constrictor Snake"
+    , "race": "generic"
+    , "category": "other"
+    , "price": 500  
+	, "health" : 5
+	
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/ConstrictorSnake/ConstrictorSnakefront.png:display"
+    , "description": "DESCRIPTION Constrictor Snake"
+	, "tooltipFields": {
+		"statusLabel": "DESCRIPTION Constrictor Snake"
+	}
+	, "tooltipSubtitle" : "SPOV Summoner"
+	
+    , "orientations": [{
+            "image": "/vehicles/spov/ConstrictorSnake/ConstrictorSnakefront.png:silhouette"
+            , "imagePosition": [-40, 0]
+            , "direction": "left"
+            , "flipImages": true
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }, {
+            "image": "/vehicles/spov/ConstrictorSnake/ConstrictorSnakefront.png:silhouette"
+            , "imagePosition": [-40, 0]
+            , "direction": "right"
+            , "spaceScan": 0.1
+            , "anchors": ["bottom"]
+        }]
+
+    , "inventoryIcon": "/vehicles/spov/ConstrictorSnake/ConstrictorSnakeicon.png"
+
+    , "animation": "spovspawner.animation"
+	, "animationParts" : {
+        "bg": "/vehicles/spov/ConstrictorSnake/ConstrictorSnakefront.png:silhouette"
+	}
+	, "animationPosition" : [0, 32]
+	, "animationCustom" : {}
+
+    , "spov": {
+        "types": ["spovConstrictorSnake"]
+        , "position": [0.0, 4, 0.0, 4]
+        , "template": {}
+		, "pillsAdd": { "digest":{}, "softdigest":{}, "heal":{}, "antiescape":{}, "easyescape":{} }
+    }
+
+    , "colorOptions" : [
+		{ "ffca8a" : "ffca8a", "e0975c" : "e0975c", "a85636" : "a85636", "6f2919" : "6f2919", "38150b" : "38150b"},
+		{ "ffca8a" : "71ad32", "e0975c" : "4e9400", "a85636" : "187511", "6f2919" : "1c4b07", "38150b" : "002200"},
+		{ "ffca8a" : "c7ad32", "e0975c" : "ac8b15", "a85636" : "8e6900", "6f2919" : "5f4200", "38150b" : "2d1800"},
+		{ "ffca8a" : "c7add5", "e0975c" : "9e78a9", "a85636" : "744e7d", "6f2919" : "59335b", "38150b" : "2a0a28"},
+		{ "ffca8a" : "f66969", "e0975c" : "d5433b", "a85636" : "a32812", "6f2919" : "6d1c0e", "38150b" : "410e0a"}
+	]
+	
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+    , "scripts": [
+        "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/ConstrictorSnake/ConstrictorSnakeitemscript.lua" 
+    ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+	  }
+}

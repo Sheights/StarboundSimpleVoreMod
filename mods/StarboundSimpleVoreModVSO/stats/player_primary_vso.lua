@@ -2,6 +2,9 @@
 --https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
 
 oldinit = init
+oldupdate = update
+oldoverheadBars = overheadBars
+
 function init()
 	oldinit()
 	message.setHandler("vsoForceApply", function( _, _, x, y, xmode, ymode )
@@ -90,4 +93,38 @@ function init()
 			return status.resource( resname ) > 0;
 		end
 	end )
+
+end
+
+function update( dt )
+
+	--This doesnt work...
+	if status.isResource( "stunned" ) then
+		if status.resourcePositive("stunned") then
+	
+		--we would have to summon a "sit only" vso... no good!
+	
+		--animator.setAnimationState("damage", "stunned")
+		--animator.setGlobalTag("hurt", "hurt")
+		--self.stunned = true
+		--mcontroller.clearControls()
+		--mcontroller.setVelocity( 0, ? );
+		--return;
+		--if self.damaged then
+		--	self.suppressDamageTimer = config.getParameter("stunDamageSuppression", 0.5)
+		--	monster.setDamageOnTouch(false)
+		--end
+		end
+	end
+	
+	oldupdate( dt )
+	
+end
+
+function overheadBars()
+	local bars = oldoverheadBars();
+	
+	--ADD OTHER BARS HERE???
+	
+	return bars;
 end

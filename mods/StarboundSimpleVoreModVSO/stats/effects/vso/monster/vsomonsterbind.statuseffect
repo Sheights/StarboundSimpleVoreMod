@@ -1,0 +1,14 @@
+{
+  "name" : "vsomonsterbind",
+  "effectConfig" : {},
+  "defaultDuration" : 1.0,
+
+  "scripts" : [
+    "vsomonsterbind.lua"
+  ],
+
+  "animationConfig" : "vsomonsterbind.animation",
+
+  "label" : "VSOMonsterBind",
+  "icon" : "/interface/statuses/slow.png"
+}

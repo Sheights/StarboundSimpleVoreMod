@@ -1,0 +1,235 @@
+{
+	"name" : "vorevsodinosuit_new",
+	"script" : "dinosuit_new.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+	
+	"directoryPath" : "/vehicles/vso/dinosuit/",
+	"animation" : "dinosuit_new.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "rider",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "sit",
+			"statusEffects" : [ ]
+		}
+		,"victimSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+	
+	, "mouthPosition" : [ -0.0, 1.0 ],
+
+	"boundBox" : [-3, -3, 3, 2.5],
+	"metaBoundBox" : [-5, -3, 5, 3],
+
+	"physicsCollisions" : {
+	},
+	
+	"vso" : {
+		"useAnimatorFirst":0
+		,"spawnOwnerState":"off"
+		,"spawnAsVehicle":true
+		,"movementSettingsFlipPoly" : 0
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [ [-2, 2.5], [-2, -3], [2, -3], [2, 2.5] ]
+				,"gravityMultiplier" : 1.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"mass" : 1
+				,"airFriction" : 1
+				,"groundFriction" : 1
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : true
+				,"frictionEnabled" : false
+				,"gravityEnabled" : true
+				,"ignorePlatformCollision" : false
+				,"slopeSlidingFactor" :0.0
+				,"enableSurfaceSlopeCorrection" : true
+			}
+			,"duck":{
+				"collisionPoly" : [ [-2, 0.3], [-1.5, 0.8], [1.5, 0.8], [2, 0.3], [2, -2.5], [1.5, -3], [-1.5, -3], [-2, -2.5] ]
+			}
+			,"stand":{
+				"collisionPoly" : [ [-2, 2.0], [-1.5, 2.5], [1.5, 2.5], [2, 2.0], [2, -2.5], [1.5, -3], [-1.5, -3], [-2, -2.5] ]
+			}
+			,"bottompoly":{
+				"collisionPoly" : [ [2, -2.5], [1.5, -3], [-1.5, -3], [-2, -2.5] ]
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+				"colorOptions" : [
+					{ "a7d485" : "a7d485", "5fab55" : "5fab55", "338033" : "338033", "18521a" : "18521a" },
+					{ "a7d485" : "838383", "5fab55" : "555555", "338033" : "383838", "18521a" : "151515" },
+					{ "a7d485" : "b5b5b5", "5fab55" : "808080", "338033" : "555555", "18521a" : "303030" },
+					{ "a7d485" : "e6e6e6", "5fab55" : "b6b6b6", "338033" : "7b7b7b", "18521a" : "373737" },
+					{ "a7d485" : "f4988c", "5fab55" : "d93a3a", "338033" : "932625", "18521a" : "601119" },
+					{ "a7d485" : "ffd495", "5fab55" : "ea9931", "338033" : "af4e00", "18521a" : "6e2900" },
+					{ "a7d485" : "ffffa7", "5fab55" : "e2c344", "338033" : "a46e06", "18521a" : "642f00" },
+					{ "a7d485" : "b2e89d", "5fab55" : "51bd3b", "338033" : "247824", "18521a" : "144216" },
+					{ "a7d485" : "96cbe7", "5fab55" : "5588d4", "338033" : "344495", "18521a" : "1a1c51" },
+					{ "a7d485" : "d29ce7", "5fab55" : "a451c4", "338033" : "6a2284", "18521a" : "320c40" },
+					{ "a7d485" : "eab3db", "5fab55" : "d35eae", "338033" : "97276d", "18521a" : "59163f" },
+					{ "a7d485" : "ccae7c", "5fab55" : "a47844", "338033" : "754c23", "18521a" : "472b13" }
+				]
+				,"ani_head_none":{
+					"setbegin":{ "heademote" : "empty", "heademoteframe" : 1 }
+				}
+				,"ani_head_angry":{
+					"setbegin":{ "heademote" : "angry", "heademoteframe" : 1 }
+				}
+				,"ani_head_dissapoint":{
+					"setbegin":{ "heademote" : "dissapoint", "heademoteframe" : 1 }
+				}
+				,"ani_head_happy":{
+					"setbegin":{ "heademote" : "happy", "heademoteframe" : 1 }
+				}
+				,"ani_head_normal":{
+					"setbegin":{ "heademote" : "normal", "heademoteframe" : 1 }
+				}
+				,"ani_head_liplick":{
+					"setbegin":{ "heademote" : "liplick", "heademoteframe" : 1 }
+					,"anim":{
+						"heademoteframe" : { 
+							"values":[1,2,3,4,5,6,7]
+							, "timemul":0.15
+							, "setend":{ "heademote" : "normal", "heademoteframe" : 1 } 
+						} 
+					}
+				}
+			}
+		}
+		,"victimAnimations":{
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			}
+			, "playereat":{
+				"seat":"drivingSeat"
+				,"loop":false
+				,"interpMode":1
+				,"effectmap": {
+					"f5":["vsomask_feet5"]
+					,"f4":["vsomask_feet4"]
+					,"f3":["vsomask_feet3"]
+					,"f2":["vsomask_feet2"]
+					,"f1":["vsomask_feet1"]
+					,"clear":["vsomask_none"]
+					,"n":[]
+				}
+				,"transformGroup":"victimposition"
+				,"frames":[  0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 ]
+				,"visible": [1,1,1,1,1,1,1,1,1,1,0, 0, 0, 0, 0]
+				,"xs": [ -1 ]
+				,"x": [
+					1.875
+					,1.875
+					,1.875
+					,1.875
+					,1.875
+					,1.625
+					,0.75
+					,-0.25
+					,-0.375
+					,-0.625	
+					,-0.25
+					,0.125
+				]
+				,"y": [ 
+					0.0
+					,0.0
+					,0.0
+					,0.0
+					,0.0
+					,0.125
+					,0.5
+					,0.625
+					,0.375
+					,-0.75
+					,-1.375
+					,-2
+				]
+				,"r": [ 
+					0
+					,0
+					,0
+					,0
+					,0
+					,35
+					,65
+					,90
+					,125
+					,150
+					,165
+					,180
+					,180
+				]
+				,"e": [
+					"e"
+					,"e"
+					,"e"
+					,"f1"
+					,"f2"
+					,"f3"
+					,"f3"
+					,"f3"
+					,"f3"
+					,"f4"
+					,"f5"
+					,"f5"
+					,"f5"
+					,"clear"
+					,"n"
+				]
+				,"sitpos": [ "stand" ]
+				,"emote": [ "oooh" ]	
+				,"dance": [ "victimrun" ]	
+			}
+			, "pushout":{
+				"seat":"drivingSeat"
+				,"loop":false
+				,"interpMode":1
+				,"effectmap": {
+					"h5":["vsomask_head5"]
+					,"h4":["vsomask_head4"]
+					,"h3":["vsomask_head3"]
+					,"h2":["vsomask_head2"]
+					,"h1":["vsomask_head1"]
+					,"clear":["vsomask_none"]
+					,"n":[]
+				}
+				,"transformGroup":"victimposition"
+				,"visible": [0,0,1,1,1,1,1,1,1]
+				,"seconds":[ 0.0, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6 ]
+				,"x": [ -0.5, -0.5, -0.5, -1.0, -2.0, -3.0,	-3.5, -4.75 ]
+				,"y": [ -1.375, -1.375, -1.375, -1.375, -1.375,	-1.375, -1.375, -1.75 ]
+				,"r": [ 90, 90, 90, 90, 90, 90, 90, 100 ]
+				,"e": [ "h5", "h5", "h4", "h3", "h2", "h1", "clear", "n" ]
+				,"sitpos": [ "lay" ]
+				,"emote": [ "sleep" ]	
+				,"dance": [ "victimsquirm" ]
+			}
+		}
+	}
+}

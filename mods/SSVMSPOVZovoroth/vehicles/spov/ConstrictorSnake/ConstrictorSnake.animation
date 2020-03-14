@@ -1,0 +1,236 @@
+{  
+	"globalTagDefaults" : {
+		"frame" : "1"
+		,"directives" : ""
+	}
+    ,"animatedParts": {
+        "stateTypes": {
+			"bodyState": {
+                "default": "idle"
+                , "states": {
+                    "idle": { "frames": 1, "cycle": 1.0, "frameProperties" : { "index":[1] } , "mode": "end" }
+                    ,"idle_headbob": { "frames": 4, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+                    ,"idle_tongue": { "frames": 4, "cycle": 0.7, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+                    ,"grab": { "frames": 17, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17] } , "mode": "end" }
+                    ,"grab_miss": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+                    ,"hold": { "frames": 5, "cycle": 2.5, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"hold_squirm": { "frames": 5, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"hold_squirmfast": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"release": { "frames": 10, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10] } , "mode": "end" }
+                    ,"swallow": { "frames": 23, "cycle": 5.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23] } , "mode": "end" }
+                    ,"full": { "frames": 4, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+                    ,"squirmF": { "frames": 5, "cycle": 1.1, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmB": { "frames": 5, "cycle": 1.1, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmU": { "frames": 5, "cycle": 1.1, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmD": { "frames": 5, "cycle": 1.1, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmfastF": { "frames": 5, "cycle": 0.7, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmfastB": { "frames": 5, "cycle": 0.7, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmfastU": { "frames": 5, "cycle": 0.7, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"squirmfastD": { "frames": 5, "cycle": 0.7, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+                    ,"digest": { "frames": 11, "cycle": 2.5, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11] } , "mode": "end" }
+                }
+            }
+        }
+        , "parts": {
+            "background": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": -1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "ConstrictorSnakeback.png:idle.<frame><directives>" }  }
+                        ,"idle_headbob": { "properties": { "image": "ConstrictorSnakeback.png:idle_headbob.<frame><directives>" }  }
+                        ,"idle_tongue": { "properties": { "image": "ConstrictorSnakeback.png:idle_tongue.<frame><directives>" }  }
+                        ,"grab": { "properties": { "image": "ConstrictorSnakeback.png:grab.<frame><directives>" }  }
+                        ,"grab_miss": { "properties": { "image": "ConstrictorSnakeback.png:grab_miss.<frame><directives>" }  }
+                        ,"hold": { "properties": { "image": "ConstrictorSnakeback.png:hold.<frame><directives>" }  }
+                        ,"hold_squirm": { "properties": { "image": "ConstrictorSnakeback.png:hold_squirm.<frame><directives>" }  }
+                        ,"hold_squirmfast": { "properties": { "image": "ConstrictorSnakeback.png:hold_squirm.<frame><directives>" }  }
+                        ,"release": { "properties": { "image": "ConstrictorSnakeback.png:release.<frame><directives>" }  }
+                        ,"swallow": { "properties": { "image": "ConstrictorSnakeback.png:swallow.<frame><directives>" }  }
+                        ,"full": { "properties": { "image": "ConstrictorSnakeback.png:full.<frame><directives>" }  }
+                        ,"squirmF": { "properties": { "image": "ConstrictorSnakeback.png:squirmF.<frame><directives>" }  }
+                        ,"squirmB": { "properties": { "image": "ConstrictorSnakeback.png:squirmB.<frame><directives>" }  }
+                        ,"squirmU": { "properties": { "image": "ConstrictorSnakeback.png:squirmU.<frame><directives>" }  }
+                        ,"squirmD": { "properties": { "image": "ConstrictorSnakeback.png:squirmD.<frame><directives>" }  }
+                        ,"squirmfastF": { "properties": { "image": "ConstrictorSnakeback.png:squirmF.<frame><directives>" }  }
+                        ,"squirmfastB": { "properties": { "image": "ConstrictorSnakeback.png:squirmB.<frame><directives>" }  }
+                        ,"squirmfastU": { "properties": { "image": "ConstrictorSnakeback.png:squirmU.<frame><directives>" }  }
+                        ,"squirmfastD": { "properties": { "image": "ConstrictorSnakeback.png:squirmD.<frame><directives>" }  }
+                        ,"digest": { "properties": { "image": "ConstrictorSnakeback.png:digest.<frame><directives>" }  }
+                    }
+                }
+            }
+            , "victim": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": 0
+                    , "transformationGroups": ["flip", "victimposition"]
+                    , "drivingSeatPosition": [0.0, 0.0]
+                }
+                , "partStates": {
+                    "bodyState": {
+                    }
+                }
+            }
+            , "foreground": {
+                "properties": {
+                    "centered": true
+					,"zLevel": 1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "ConstrictorSnakefront.png:idle.<frame><directives>" }  }
+                        ,"idle_headbob": { "properties": { "image": "ConstrictorSnakefront.png:idle_headbob.<frame><directives>" }  }
+                        ,"idle_tongue": { "properties": { "image": "ConstrictorSnakefront.png:idle_tongue.<frame><directives>" }  }
+                        ,"grab": { "properties": { "image": "ConstrictorSnakefront.png:grab.<frame><directives>" }  }
+                        ,"grab_miss": { "properties": { "image": "ConstrictorSnakefront.png:grab_miss.<frame><directives>" }  }
+                        ,"hold": { "properties": { "image": "ConstrictorSnakefront.png:hold.<frame><directives>" }  }
+                        ,"hold_squirm": { "properties": { "image": "ConstrictorSnakefront.png:hold_squirm.<frame><directives>" }  }
+                        ,"hold_squirmfast": { "properties": { "image": "ConstrictorSnakefront.png:hold_squirm.<frame><directives>" }  }
+                        ,"release": { "properties": { "image": "ConstrictorSnakefront.png:release.<frame><directives>" }  }
+                        ,"swallow": { "properties": { "image": "ConstrictorSnakefront.png:swallow.<frame><directives>" }  }
+                        ,"full": { "properties": { "image": "ConstrictorSnakefront.png:full.<frame><directives>" }  }
+                        ,"squirmF": { "properties": { "image": "ConstrictorSnakefront.png:squirmF.<frame><directives>" }  }
+                        ,"squirmB": { "properties": { "image": "ConstrictorSnakefront.png:squirmB.<frame><directives>" }  }
+                        ,"squirmU": { "properties": { "image": "ConstrictorSnakefront.png:squirmU.<frame><directives>" }  }
+                        ,"squirmD": { "properties": { "image": "ConstrictorSnakefront.png:squirmD.<frame><directives>" }  }
+                        ,"squirmfastF": { "properties": { "image": "ConstrictorSnakefront.png:squirmF.<frame><directives>" }  }
+                        ,"squirmfastB": { "properties": { "image": "ConstrictorSnakefront.png:squirmB.<frame><directives>" }  }
+                        ,"squirmfastU": { "properties": { "image": "ConstrictorSnakefront.png:squirmU.<frame><directives>" }  }
+                        ,"squirmfastD": { "properties": { "image": "ConstrictorSnakefront.png:squirmD.<frame><directives>" }  }
+                        ,"digest": { "properties": { "image": "ConstrictorSnakefront.png:digest.<frame><directives>" }  }
+                    }
+                }
+            }
+        }
+	}
+	, "transformationGroups": {
+		"flip": {}
+		, "victimposition": {
+			"interpolated": true
+		}
+	}
+	, "sounds": {
+		"swallow": ["/sfx/objects/gulp.ogg"]
+		, "digest": [ "/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (18).ogg", "/sfx/vore/digest/digest (25).ogg", "/sfx/vore/digest/digest (11).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (16).ogg", "/sfx/vore/digest/digest (19).ogg", "/sfx/vore/digest/digest (20).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg", "/sfx/vore/digest/digest (9).ogg" ]
+		, "lay": ["/sfx/objects/eggLay.ogg"]
+		, "struggle": ["/sfx/vore/struggle/burbslosh.ogg","/sfx/vore/struggle/blurbsquish2.ogg","/sfx/vore/struggle/blorbsquish.ogg","/sfx/vore/swallow/swallow (11).ogg"]
+		, "slurp" : [ "/sfx/vore/common/slurp.ogg" ]
+		, "suffocate" : [ "/sfx/interface/drowning2faster.ogg" ]
+	}
+	,"particleEmitters": {
+		"emotehappy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/happy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesad" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sad.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emoteconfused" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/confused.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesleepy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sleepy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,
+		"drips" : {
+		  "emissionRate" : 15,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "ember",
+				"layer" : "front",
+				"size" : 1.0,
+				"color" : [120, 221, 254, 230],
+				"fade" : 0.9,
+				"destructionAction" : "shrink",
+				"destructionTime" : 0.8,
+				"position" : [0.5, 0.9],
+				"offsetRegion" : [0, 0, 0, 0],
+				"initialVelocity" : [0, 0.0],
+				"finalVelocity" : [0, -1],
+				"approach" : [3, 10],
+				"timeToLive" : 0.5,
+				"variance" : {
+				  "initialVelocity" : [0.2, 0.0],
+				  "size" : 0.5,
+				  "position" : [0.3, 0]
+				},
+				"flippable" : true
+			  }
+			}
+		  ]
+		}
+	  }
+}

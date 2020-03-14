@@ -30,6 +30,14 @@ vsoInvalidTargetStats = {
 	,["vsokeepsit5"]=1
 	,["vsokeepsit6"]=1
 	,["vsokeepsit7"]=1
+	,["vsomonsterkeepsit0"]=1
+	,["vsomonsterkeepsit1"]=1
+	,["vsomonsterkeepsit2"]=1
+	,["vsomonsterkeepsit3"]=1
+	,["vsomonsterkeepsit4"]=1
+	,["vsomonsterkeepsit5"]=1
+	,["vsomonsterkeepsit6"]=1
+	,["vsomonsterkeepsit7"]=1
 	,["vsoforcesit"]=1
 	,["vsoinvisible"]=1
 	,["healvore"]=1
@@ -76,12 +84,25 @@ vsoInputsKnown ={
 	,["R"] = "right" 
 	,["U"]  = "up"
 	,["D"]  = "down"
-	,["A"]  = "PrimaryFire"
-	,["B"]  = "AltFire"
-	,["J"]  = "jump"
+	,["A"]  = "PrimaryFire"  --primaryFire
+	,["B"]  = "AltFire"  --altFire
+	,["J"]  = "jump"  --
+	,["1"] = "Special1"  --"Activate Head Tech" / "PlayerTechAction1"
+	,["2"] = "Special2"  --"PlayerTechAction2" not implemented in interface (patch this)
+	,["3"] = "Special3"  --"PlayerTechAction3" not implemented in interface (patch this)
+	--"Special1"  "special1"
+	--"Special2"  "special2"
+	--"Special3"  "special3"
+	--tests here self.inputs
+	--self.inputs = vsoGetInput( "drivingSeat" )
+	--if self.inputs["1"] ~= 0 then sb.logInfo( "special 1! "..tostring( self.inputs["1"] ) ); end
+	--if self.inputs["2"] ~= 0 then sb.logInfo( "special 2! "..tostring( self.inputs["2"] ) ); end
+	--if self.inputs["3"] ~= 0 then sb.logInfo( "special 3! "..tostring( self.inputs["3"] ) ); end
 }
 
 --1 is lightest, 4 is darkest
+--vsoDefaultPrimaryColorOptions is NOT a correct map of colors to colors.
+--You must use the STANDARD template colors to map these...
 vsoDefaultPrimaryColorOptions = {
 	{ "a7d485",  "5fab55",  "338033",  "18521a" }	--dino green
 	,{ "838383",  "555555",  "383838",  "151515" }
@@ -96,6 +117,7 @@ vsoDefaultPrimaryColorOptions = {
 	,{  "eab3db",  "d35eae",  "97276d",  "59163f" }
 	,{  "ccae7c",  "a47844",  "754c23",  "472b13" }
 }
+--vsoDefaultPrimaryColorOptionsMap = {}
 
 -------------------------------------------------------------------------------
 --Core isolated utilities and algorithms------------------------------------
@@ -441,8 +463,20 @@ function vsoEatForce( victimid, seatindex )
 			
 			--MONSTER keep sit... monsters can't sit... so... huh.
 			--vsoeatmonster+seat index to keep that consistent? Hm...
+			if world.entityType( victimid ) == 'monster' then
 			
-			local rpcresult = world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
+				--local rpcresult = world.sendEntityMessage( victimid, "applyStatusEffect", "vsomonsterkeepsit"..tostring(seatindex), 0.1, entity.id(), { 0.0, 0.0, 1.0, 1.0, 0.0 } );
+				
+				--what... harder to track versus just a "seat" check...
+				
+				--Oh dear. This should copy stuff from zazergun to do this right
+				world.sendEntityMessage( victimid, "applyStatusEffect", "vsomonsterbind", 1.0, entity.id() );--well, victim position might work but... hm. for later!
+				
+				local rpcresult = world.sendEntityMessage( victimid, "vsoKeepSitEffect", seatindex, entity.id(), { mcontroller.xPosition(), mcontroller.yPosition(), 1.0, 1.0, 0.0 } );
+			else
+			
+				local rpcresult = world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
+			end
 			
 			--world.callScriptedEntity( entity.id(), "npc.resetLounging" );
 			--world.callScriptedEntity( victimid, "npc.setLounging", entity.id(), seatindex )
@@ -454,6 +488,23 @@ function vsoEatForce( victimid, seatindex )
 		end
 	end
 	return false;
+end
+
+function vsoEatForceRPC( victimid, seatindex )
+	if world.entityExists( victimid ) then
+		if vsoExcludeByType[ world.entityType( victimid ) ] == nil then
+			if world.entityType( victimid ) == 'monster' then
+				--Oh dear. This should copy stuff from zazergun to do this right
+				world.sendEntityMessage( victimid, "applyStatusEffect", "vsomonsterbind", 1.0, entity.id() );--well, victim position might work but... hm. for later!
+				
+				return world.sendEntityMessage( victimid, "vsoKeepSitEffect", seatindex, entity.id(), { mcontroller.xPosition(), mcontroller.yPosition(), 1.0, 1.0, 0.0 } );
+			else
+				return world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
+			end
+			return nil;
+		end
+	end
+	return nil;
 end
 
 function vsoFaceDirection( direction )
@@ -492,6 +543,13 @@ function vsoFaceDirection( direction )
 			--	Hm.
 			--HOW do we know we FLIPPED it?
 			local poly = self.cfgVSO.movementSettings.default.collisionPoly	--want CURRENT movement settings... sorta.
+			--the problem is... if you USE motion controls, then it CONSTANTLY flips it back and forth...
+			--if self.motionControls ~= {} then
+			--	if self.motionControls.collisionPoly ~= nil then
+			--		poly = self.motionControls.collisionPoly;
+			--	end
+			--end
+			
 			if doflip then
 				for k,v in pairs( poly ) do
 					poly[k][1] = -poly[k][1]
@@ -594,21 +652,42 @@ function vsoInputComputeLogical( input, dt )
 	input.ty = clipNonzero(input.Ut) - clipNonzero(input.Dt)
 	input.dx = dir * ( clipNonzero(input.R) - clipNonzero(input.L) )
 	input.dy = clipNonzero(input.U) - clipNonzero(input.D)
-
-	if input["Etap"] ~= nil then		
-		if input["E"] == nil then
-			input["E"] = 0;
-		end
-		if input["Etap"] > 0 then
-			input["E"] = input["E"] + 1;
-		else
-			input["E"] = input["E"] - dt;
-			if input["E"] < 0 then
-				input["E"] = 0;
-			end
-		end
+	
+	if input["Etap"] == nil then
 		input["Etap"] = 0;
 	end
+
+	if input["Etap"] > 0 then
+		input["Etap"] = 0;
+		
+		if input["Etaps"] ~= nil then
+			input["Etaps"] = input["Etaps"] + 1;	--Input "Etaps" "decays" but will be +1 for each tap (decays after 1 second...)
+		else
+			input["Etaps"] = 1;
+		end
+		
+		if input["E"] ~= nil then
+			input["E"] = input["E"] + 1;
+		else
+			input["E"] = 1
+		end
+		
+		--sb.logInfo( "ETAP: "..tostring( input["E"] ).." "..tostring( input["Etaps"] ) )
+	else
+	
+		input["E"] = 0;
+		
+		if input["Etaps"] ~= nil then
+			input["Etaps"] = input["Etaps"] - dt;	--Input "Etaps" "decays" but will be +1 for each tap (decays after 1 second...)
+			if input["Etaps"] < 0 then
+				input["Etaps"] = 0;
+			end
+		else
+			input["Etaps"] = 0;
+		end
+		
+	end
+		
 end
 
 function vsoInputUpdate( seatname, input, dt, overrides )
@@ -947,6 +1026,29 @@ function vsoMsgHdlSeatIndexGet(_, _, victimid, ownercheck )
 		end
 	end
 	return retv;	--UHM!!!
+end
+
+function vsoMsgHdlForcePlayerSitRequested(_, _, victimid, seatindex )
+
+	--This means we consider "E" "Etap" down for the seatindex'th victim.
+	--sb.logInfo( "vsoMsgHdlForcePlayerSitRequested "..tostring( victimid ).." "..tostring( seatindex ) );
+	if seatindex >= 0 and seatindex < self.vsoLoungeIndexMax then
+		
+		local seatname = self.vsoLoungeIndexToName[ (1 + seatindex) ];
+		local v = self.sv.eaten[ seatname ]
+		if v ~= nil then
+			if v.id ~= nil then
+				if world.entityExists( v.id ) then	--#ERROR WARNING v.id cannot be nil and it IS when someone warps out or weird stuff happens.
+				
+					if v.input == nil then
+						v.input = vsoInputCreate( seatname )
+					end
+					
+					v.input["Etap"] = 1;	--GUARANTEED
+				end
+			end
+		end
+	end
 end
 
 function vsoMsgHdlStorageLoadData(_, _, objectid, data )
@@ -2118,8 +2220,6 @@ end
 -------------------------------------------------------------------------------
 function init()
 
-	--sb.logInfo( tostring( entity.id() ).." init vso" );
-	
 	self.cfgAnimationFile = vsoNotnil( config.getParameter("animation"), "missing animation in config file" )	--Animation file to use
 	self.cfgLounge = vsoNotnil( config.getParameter("loungePositions"), "missing loungePositions in config file" )--Dictionary of seats...
 	self.cfgPhysics = vsoIfnil( config.getParameter("physicsCollisions"), {} )	--Do we have platforms or other things? This is required as is
@@ -2142,7 +2242,13 @@ function init()
 	--self.stuckPosition = mcontroller.position()
 	--self.stuckCount = 0
 	---
-	  
+	
+	self.vsoSpawnVehicle = config.getParameter( "vsoSpawnVehicle", false );
+	if self.vsoSpawnVehicle then
+	
+		self.vsoSpawnVehicleOwnerEntityId = vsoIfnil( config.getParameter("vsoSpawnOwnerEntityId"), nil )--"missing vso spawn owner entity Id!" )
+	end
+	
 	if self.cfgVSO ~= nil then
 	
 		if self.cfgVSO.vals ~= nil then
@@ -2170,15 +2276,38 @@ function init()
 		else
 			haderrors = true; vsoError( "missing movementSettings" )
 		end
+	
+		self.vsoSpawnCenter = mcontroller.position();
+		self.vsoSpawnOwnerStateDefault = vsoIfnil( self.cfgVSO.spawnOwnerState, "off" );
+		self.vsoSpawnOwnerState = self.vsoSpawnOwnerStateDefault;
+		self.vsoSpawnMonster = false;
+		self.vsoSpawnVehicle = self.vsoSpawnVehicle or vsoIfnil( self.cfgVSO.spawnAsVehicle, false )
+		
+		self.useAnimatorFirst = vsoIfnil( self.cfgVSO.useAnimatorFirst, 0 ) > 0;
+		
+		self.cfgVSO.damageTeamType = vsoIfnil( self.cfgVSO.damageTeamType, "indiscriminate" );	--"ghostly", "passive", "enemy", "assistant" + team=1, "friendly", "indiscriminate"
+			--npc.setDamageTeam({ type = "assistant", team = 1 }) -- Friendly NPCs always on team 1
+			--"enemy" "friendly" "passive" "ghostly" "environment" "indiscriminate"
+		
+		self.vsoSpawnOwnerLast = config.getParameter( "ownerKey", nil );	--When a vehicle is reloaded it REMEMBERS it's last object that owned it... But those change?
+		
+		--sb.logInfo( "IS VSO A VEHICLE: " .. tostring( self.vsoSpawnVehicle ) );
+		if self.vsoSpawnVehicle then
+			--sb.logInfo( "VSO AS VEHICLE: " );
+			self.ownerKey = self.vsoSpawnOwnerLast;
+				
+			--setup the store functionality
+			vehicle.setPersistent(self.ownerKey)
+			
+			--self.ownerKey = config.getParameter("ownerKey");
+			--sb.logInfo( tostring( self.ownerKey ) );
+		else
+			vehicle.setPersistent( false );	--Not tracked once level is left?
+		end
+		
 		
 		if self.cfgAnimationFile ~= nil and self.cfgLounge ~= nil and self.cfgPhysics ~= nil then
 		
-			self.useAnimatorFirst = vsoIfnil( self.cfgVSO.useAnimatorFirst, 0 ) > 0;
-			
-			self.cfgVSO.damageTeamType = vsoIfnil( self.cfgVSO.damageTeamType, "indiscriminate" );	--"ghostly", "passive", "enemy", "assistant" + team=1, "friendly", "indiscriminate"
-				--npc.setDamageTeam({ type = "assistant", team = 1 }) -- Friendly NPCs always on team 1
-				--"enemy" "friendly" "passive" "ghostly" "environment" "indiscriminate"
-				  
 			self.maxHealth = vsoIfnil( config.getParameter("maxHealth"), 100 );
 			
 			self.vsoLastDirection = 1;
@@ -2190,15 +2319,8 @@ function init()
 	
 			self.vsoForcedToDie = false;
 			
-			
-			self.vsoSpawnOwnerLast = config.getParameter( "ownerKey", nil );	--When a vehicle is reloaded it REMEMBERS it's last object that owned it... But those change?
 			--self.vsoSpawnOwner = nil;	--Well...
 			--storage._vsoSpawnOwner
-			
-			self.vsoSpawnCenter = mcontroller.position();
-			self.vsoSpawnOwnerStateDefault = vsoIfnil( self.cfgVSO.spawnOwnerState, "off" );
-			self.vsoSpawnOwnerState = self.vsoSpawnOwnerStateDefault;
-			self.vsoSpawnMonster = false;
 			
 			self.vsoOnDeathOptions = nil;
 			
@@ -2210,7 +2332,7 @@ function init()
 			--Wow, this CHANGES ORDER randomly... careful... man. Maybe these keys need to be in some other order?
 			--We are ASSUMING alphabetical / sorted keys order
 			self.vsoLoungeNameToIndex = {};	--Hm.. Unsure what the "seat index" really is. Damn.
-			self.vsoLoungeIndexMax = 0;
+			self.vsoLoungeIndexToName = {};
 			
 			function pairsByKeys (t, f)
 			  local a = {}
@@ -2226,8 +2348,11 @@ function init()
 			  return iter
 			end
 			
+			self.vsoLoungeIndexMax = 0;
 			for k, v in pairsByKeys( self.cfgLounge ) do
 				self.vsoLoungeNameToIndex[ k ] = self.vsoLoungeIndexMax;
+				
+				table.insert( self.vsoLoungeIndexToName, k );
 				
 				--mcontroller.setAnchorState( seatcount, true );	--NEW
 				--sb.logInfo( "TRUE SEAT MAP : "..k.." = "..tostring( self.vsoLoungeIndexMax ) );
@@ -2341,7 +2466,6 @@ function init()
 			vsoFacePoint( mcontroller.position()[1] + 10*self.vsoCurrentDirection );	--hack, should work
 			
 			vehicle.setInteractive( true );	--Always interactive? Hm.
-			vehicle.setPersistent( false );	--Not tracked once level is left?
 			--Note, this could be problematic if type is "assistant" and team = 1 is used...
 			vehicle.setDamageTeam( { type = self.cfgVSO.damageTeamType } );	--Not sure. If I'm passive, anyone can damage me?
 			
@@ -2358,7 +2482,25 @@ function init()
 			
 			message.setHandler("store",	--Some vehicles can be stored, so dont let this happen (for now)
 				function(_, _, ownerKey)
-					return { storable = false, healthFactor = 1.0 }
+					--What is this? Hm.
+					if self.vsoSpawnVehicle then
+						--Construct stored data as needed (from storage!)
+						local canstore = self.ownerKey and self.ownerKey == ownerKey;
+						if onStore then
+							canstore = canstore and onStore();
+						else
+							if canstore then
+								self.vsoForcedToDie = true;
+							end
+						end
+						if canstore then
+							return { storable = true, healthFactor = 1.0 }
+						else
+							return { storable = false, healthFactor = 1.0 }
+						end
+					else
+						return { storable = false, healthFactor = 1.0 }
+					end
 				end)
 				
 			--Special message stack setup:
@@ -2367,6 +2509,8 @@ function init()
 			message.setHandler("vsoComeHome", vsoMsgHdlComeHome )
 			message.setHandler("vsoGetVictimSeatIndex", vsoMsgHdlSeatIndexGet )
 
+			message.setHandler("vsoForcePlayerSitRequested", vsoMsgHdlForcePlayerSitRequested )
+			
 			message.setHandler("vsoGet", vsoMsgHdlGet )
 			
 			message.setHandler("vsoPlayerInteracted", vsoMsgHdlPlayerInteracted )
@@ -2553,15 +2697,16 @@ function init()
 				self.sv.vsoEatenEject[k] = {};
 			end
 				
-			if self.useAnimatorFirst then
-			
-			else
-				if onBegin ~= nil then
-					onBegin();	--USER CALLBACK
-				end
-			end
-			
 		end
+		
+		if self.useAnimatorFirst then
+		
+		else
+			if onBegin ~= nil then
+				onBegin();	--USER CALLBACK
+			end
+		end
+		
 	end
 end
 
@@ -2729,27 +2874,42 @@ function update( dt )
 				vehicle.setLoungeEnabled( k, true )
 				--mcontroller.setAnchorState( self.vsoLoungeNameToIndex[ k ], true );
 				
-				vsoEatForce( v.id, self.vsoLoungeNameToIndex[ k ] )
-					
-				--Additionally, we need to UPDATE the input for this structure.
-				if v.input == nil then
-					v.input = vsoInputCreate( k )
+				--Kinda need a more specialized message version of this (IE, when we SEND the message, it responds if the victim was tapping E or not...)
+				--That is, because the status effect and the repeated message occur asynchronously, so we need THEM to tell us if the victim is resat or not.
+				--Huh.
+				if false then --do we WANT more accurate E inputs? hm
+					v.eatforcerpc = vsoEatForceRPC( v.id, self.vsoLoungeNameToIndex[ k ] )
+				else
+					vsoEatForce( v.id, self.vsoLoungeNameToIndex[ k ] ) --Not sure on this one. if we ALWAYS send that message... hm.
 				end
 				
-				v.input["Etap"] = 0;	--unsure about this...
+				--Additionally, we need to UPDATE the input for this structure.
+				local justentered = false;
+				if v.input == nil then
+					v.input = vsoInputCreate( k )
+					justentered = true;
+				end
+				
 				if vehicle.entityLoungingIn( k ) == v.id then
 					v.noteaten = 0;--They are OK for now but. Nah.
 				else
 					--Need a FORCE SIT
 					--Also this is a "input" if used "E" bu only by a player
 					--Also, it seems that by using this, it always resets??? somehow the "lounging in" isnt there...
-					v.input["Etap"] = 1;
+					
 					if v.noteaten ~= nil then
 						v.noteaten = v.noteaten + 1;
 					else
 						v.noteaten = 1;
 					end
+					
 					--sb.logInfo( "#VSOERROR("..tostring(entity.id())..") ".."#VSNOTE tapped E "..tostring( v.input["E"] ) )
+				end
+						
+				if not justentered and v.noteaten == 1 then
+					v.input["Etap"] = 1;
+				else
+					v.input["Etap"] = 0;	--unsure about this...
 				end
 				
 				if world.isNpc( v.id ) then
@@ -2852,23 +3012,31 @@ function update( dt )
 	self.vsoForcedToDie = self.vsoForcedToDie or ( mcontroller.atWorldLimit() )	--(mpos[2] < 4)	--offWorld check (forced?)
 	self.vsoForcedToDie = self.vsoForcedToDie or (storage.health <= 0);	--Invulnerble check
 	
-	if not self.vsoSpawnMonster then
+	if self.vsoSpawnMonster or self.vsoSpawnVehicle then
+		--No falling out of the world!
+		if mcontroller.atWorldLimit() then
+			self.vsoForcedToDie = true;
+		end
+		
+		--okay, you MUST custom force to die when stored... (Warp out animation)
+		
+	else
 		if storage._vsoSpawnOwner ~= nil then
 			if world.entityExists( storage._vsoSpawnOwner ) then	--not ALL the time checking?
 				if world.entityName( storage._vsoSpawnOwner ) == storage._vsoSpawnOwnerName then
 				
 				else
 					self.vsoForcedToDie = true;
-					sb.logInfo( "vsoForcedToDie spawnowner id points to wrong type of thing" )
+					sb.logInfo( "vsoForcedToDie spawnowner id points to wrong type of thing "..tostring( entity.id() ).." type "..world.entityName( entity.id() ) );
 				end
 			else
 				self.vsoForcedToDie = true;
-				sb.logInfo( "vsoForcedToDie spawnowner invalid" )
+				sb.logInfo( "vsoForcedToDie spawnowner invalid "..tostring( entity.id() ).." type "..world.entityName( entity.id() ) );
 			end
 			
 		else
 			self.vsoForcedToDie = true;
-			sb.logInfo( "vsoForcedToDie spawnowner nil" )
+			sb.logInfo( "vsoForcedToDie spawnowner nil "..tostring( entity.id() ).." type "..world.entityName( entity.id() ) );
 		end
 	
 		--else
@@ -3495,7 +3663,7 @@ function vsoAnimCurr( state )
 end
 
 function vsoAnimIsAny( state, animlist )	--Returns true if this state's current animation == anim
-	return vsoInList( self.sv.as[ state ].curr, animlist );
+	return vsoInList( animlist,  self.sv.as[ state ].curr );--fixed
 end
 
 function vsoAnimSpeed( rate )	--Returns true if this state's current animation == anim
@@ -4494,6 +4662,9 @@ function vsoGetInput( seatname )
 		,dx=0
 		,dy=0
 		,E=0
+		,Etap=0
+		
+		--[[
 		,J=0
 		,U=0
 		,D=0
@@ -4501,6 +4672,8 @@ function vsoGetInput( seatname )
 		,R=0
 		,A=0
 		,B=0
+		]]--
+		
 		,slowA=0
 		,fastA=0
 		,slowB=0
@@ -4508,6 +4681,12 @@ function vsoGetInput( seatname )
 		,slowJ=0
 		,fastJ=0
 	}
+	
+	--Hang on.... this is BAD
+	for k,v in pairs( vsoInputsKnown ) do  --covers the other cases?
+		R[k] = 0
+	end
+	
 	local eatenstruct = self.sv.eaten[ seatname ]
 	if eatenstruct ~= nil then	--Can't DOUBLE eat from a single seat.
 		local input = eatenstruct.input
@@ -4542,9 +4721,9 @@ function vsoHasAnySPOInputs( seatname, inputlist )
 		if eatenstruct ~= nil then	--Can't DOUBLE eat from a single seat.
 			local input = eatenstruct.input
 			if input ~= nil then
-				if input[ "E" ] ~= nil then
-					if input[ "E" ] > 2 then	--Special case. E must be tapped repeatedly in 1 second... make this a config value
-						--return true	--This isnt reliable yet. Whaaaaat...
+				if input[ "Etaps" ] ~= nil then
+					if input[ "Etaps" ] > 1 then	--Special case. E must be tapped repeatedly in 1 second... make this a config value
+						return true	--This isnt reliable yet. Whaaaaat...
 					end
 				end
 			end
@@ -4596,7 +4775,11 @@ function vsoUneat( seatname )
 		
 			if vehicle.entityLoungingIn( seatname ) == targetid then
 				world.sendEntityMessage( targetid, "vsoForceApply", 0, 0, 2, 2 );	--REMOVE velocity just in case?
-				world.sendEntityMessage( targetid, "applyStatusEffect", "vsoremoveforcesit", 0.1, entity.id() );
+				world.sendEntityMessage( targetid, "applyStatusEffect", "vsoremoveforcesit", 0.1, entity.id() );	--Hey, this doesnt DO anything at all...
+			elseif world.entityType( targetid ) == "monster" then
+				--world.sendEntityMessage( victimid, "applyStatusEffect", "vsomonsterbind", 1.0, entity.id() );--well, victim position might work but... hm. for later!
+				--vsomonsterbindremove
+				world.sendEntityMessage( targetid, "applyStatusEffect", "vsomonsterbindremove", 0.1, entity.id() );
 			end
 		end
 		self.sv.eaten[ seatname ] = nil;
@@ -5069,6 +5252,28 @@ function vsoTransSet( transformname, x, y, rotdeg )
 	end
 end
 
+function vsoTransSetNoFlip( transformname, x, y, rotdeg )
+
+	animator.resetTransformationGroup( transformname );
+	
+	if vsoDirection() > 0 then
+		animator.scaleTransformationGroup( transformname, { 1, 1 } );
+	else
+		animator.scaleTransformationGroup( transformname, { -1, 1 } );
+		if x ~= nil then
+			x = -x;
+		end
+	end
+	
+	if rotdeg ~= nil then
+		animator.rotateTransformationGroup( transformname, rotdeg * 0.01745329251994329576923690768489 );
+	end
+	if x ~= nil and y ~= nil then
+		animator.translateTransformationGroup( transformname, { x, y } );
+	end
+end
+
+
 function vsoTransMoveTo( transformname, x, y )
 	animator.resetTransformationGroup( transformname );	--sad; no way to keep other properties? How to GET transform 
 	animator.translateTransformationGroup( transformname, { x, y } );
@@ -5368,7 +5573,7 @@ end
 function vsoEffectProjectile( name, options )
 	world.spawnProjectile( name, mcontroller.position(), entity.id(), {0,0}, true, options )
 end
-	--Create warp in particle emission...EntityId 
+	--Create warp in particle emission ... EntityId 
 function vsoEffectWarpIn( options ) vsoEffectProjectile( "spovwarpineffectprojectile", options ); end
 function vsoEffectWarpOut( options ) vsoEffectProjectile( "spovwarpouteffectprojectile", options ); end
 
@@ -5411,6 +5616,9 @@ function _ListRemoveStatus( list, statlist )
 end
 
 function vsoVictimAnimClear( seatname, customorigin, makevisible )
+
+	--is someone EVEN SITTING here?
+	--Hm...
 	
 	local animpartname = self.vsoLoungeToPart[ seatname ]
 	
@@ -5475,7 +5683,7 @@ function vsoVictimAnimClear( seatname, customorigin, makevisible )
 		--sb.logInfo( "No cstate: "..tostring( seatname )  );
 		
 		--seat maps to transform group??? Hm.
-		
+		--return true;	--huh... maybe?
 	end
 	
 	if voff[1] ~= vorigin[1] or voff[2] ~= vorigin[2] then
@@ -5486,6 +5694,7 @@ function vsoVictimAnimClear( seatname, customorigin, makevisible )
 end
 
 function vsoVictimAnimClearReady( seatname, customorigin, makevisible )
+	--Since we actually fixed the root cause here, this isnt really that needed anymore
 	return vsoVictimAnimClear( seatname, customorigin, makevisible );
 --[[
 	local cstate = self.sv.va[ seatname ];
@@ -5555,10 +5764,31 @@ function vsoVictimAnimUpdate( seatname, dt )
 		return false;
 	end;
 	
+	local ismonster = nil;
+	if true then
+		local eatenstruct = self.sv.eaten[ seatname ];
+		local handlemonster = nil;
+		if eatenstruct ~= nil then
+			if eatenstruct.id ~= nil then
+				if world.entityExists( eatenstruct.id ) then	--#ERROR WARNING v.id cannot be nil and it IS when someone warps out or weird stuff happens.
+					if world.entityType( eatenstruct.id ) == "monster" then
+						ismonster = eatenstruct.id
+					end
+				end
+			end
+		end
+	end
+	
 	if not cstate.visible then
-		--Hm. Not visible victim animation meeeeeans
+	
+		--Hm. Not visible victim animation meeeeeans different things for players + npcs vs monsters...
 		if _ListAddStatus( cstate.statuslist, { "vsoinvisible" } ) then
 			vehicle.setLoungeStatusEffects( seatname, cstate.statuslist );
+			if ismonster ~= nil then
+				for stati, statv in pairs( cstate.statuslist ) do
+					world.sendEntityMessage( ismonster, "applyStatusEffect", statv, 1.0, entity.id() );
+				end
+			end
 		end
 		return false;
 	end
@@ -5689,6 +5919,11 @@ function vsoVictimAnimUpdate( seatname, dt )
 			--	sb.logInfo( "#VSOLOG 1"..tostring( lv ) )
 			--end
 			vehicle.setLoungeStatusEffects( seatname, cstate.statuslist );
+			if ismonster ~= nil then
+				for stati, statv in pairs( cstate.statuslist ) do
+					world.sendEntityMessage( ismonster, "applyStatusEffect", statv, 1.0, entity.id() );
+				end
+			end
 		end
 	else
 		if _ListAddStatus( cstate.statuslist, {"vsoinvisible"} ) then
@@ -5697,6 +5932,11 @@ function vsoVictimAnimUpdate( seatname, dt )
 			--	sb.logInfo( "#VSOLOG 2"..tostring( lv ) )
 			--end
 			vehicle.setLoungeStatusEffects( seatname, cstate.statuslist );
+			if ismonster ~= nil then
+				for stati, statv in pairs( cstate.statuslist ) do
+					world.sendEntityMessage( ismonster, "applyStatusEffect", statv, 1.0, entity.id() );
+				end
+			end
 		end
 	end
 	
@@ -5770,6 +6010,18 @@ function vsoVictimAnimUpdate( seatname, dt )
 				
 				local seaterid = vehicle.entityLoungingIn( seatname );
 				
+				local eatenstruct = self.sv.eaten[ seatname ];
+				local handlemonster = nil;
+				if eatenstruct ~= nil then
+					if eatenstruct.id ~= nil then
+						if world.entityExists( eatenstruct.id ) then	--#ERROR WARNING v.id cannot be nil and it IS when someone warps out or weird stuff happens.
+							if world.entityType( eatenstruct.id ) == "monster" then
+								handlemonster = eatenstruct.id
+							end
+						end
+					end
+				end
+				
 				cstate.eprevious = cstate.e
 				
 				if seaterid ~= nil then
@@ -5789,6 +6041,26 @@ function vsoVictimAnimUpdate( seatname, dt )
 						--vsoRemoveStatusList( nexteffectlist );
 						--#ERROR hm.
 					end
+					
+				elseif handlemonster ~= nil then	--Hey what? no? Hm?
+					
+					if #nexteffectlist > 0 then
+						
+						--sb.logInfo( "next status: "..tostring( nexteffectlist ) );
+						--for k,v in ipairs( nexteffectlist ) do
+						--	sb.logInfo( tostring( v ) );
+						--end
+						for i, efex in ipairs( nexteffectlist ) do
+							world.sendEntityMessage( handlemonster, "applyStatusEffect", efex, 0.2, entity.id() );	--world.sendEntityMessage( vsoGetTargetId( "food" ), "vsoForceInteract", "OpenAiInterface", {}, entity.id() );	--REMOVE velocity just in case?
+						end
+						--vsoApplyStatusList( vehicle.entityLoungingIn( seatname ), nexteffectlist, 0.2 );
+					else
+						--sb.logInfo( "clearing status: " );
+						
+						--vsoRemoveStatusList( nexteffectlist );
+						--#ERROR hm.
+					end
+					
 				else
 					cstate.eprevious = nil	--can cause problems!
 				end
@@ -7368,6 +7640,57 @@ function monsterActionUpdate(dt, stateData)
 	local retty = stateData.move( position, direction, true, false )
 	--stateData.move( position, direction, traverseObstacles, run )
 end
+
+function vsoGetBoundsAhead( dx, yspace )
+	if dx == nil then dx = 1; end
+	if yspace == nil then yspace = 0.0; end
+
+	local bounds = mcontroller.collisionBoundBox();--rect.translate(mcontroller.collisionBoundBox(), mcontroller.position())
+	bounds[2] = bounds[2] - yspace
+	bounds[4] = bounds[4] + yspace
+	if vsoDirection() > 0 then
+		bounds[1] = bounds[3]
+		bounds[3] = bounds[3] + dx
+	else
+		bounds[3] = bounds[1]
+		bounds[1] = bounds[1] - dx
+	end
+	return bounds;
+end
+
+--[[
+function vsoToggleDoorsAhead( seatname )
+
+	local bounds = vsoGetBoundsAhead( 1, -0.5 );
+	if seatname ~= nil then
+		--local targetpos = vehicle.aimPosition( seatname );
+		--Limit RANGE of targetpos... Hm... strange. Can work on this later... line intersect sphere easy enough...
+		--bounds = { targetpos[1] - 0.5, targetpos[2] - 0.5, targetpos[1] + 0.5, targetpos[2] + 0.5 }
+	end
+
+	local capability = "closedDoor";
+	local action = "openDoor";
+	if world.rectTileCollision(bounds, {"Dynamic"}) then
+		capability = "closedDoor"
+		action = "openDoor";
+	else
+		capability = "openDoor"
+		action = "closeDoor";
+	end
+		
+	local togglecount = 0;
+	
+	local doorIds = world.entityQuery(rect.ll(bounds), rect.ur(bounds), { includedTypes = {"object"}, callScript = "hasCapability", callScriptArgs = { capability } })
+	if #doorIds > 0 then
+		for _, doorId in pairs(doorIds) do
+			world.sendEntityMessage(doorId, action)
+			togglecount = togglecount + 1;
+		end
+	end
+	
+	return togglecount
+end
+]]--
 
 function vsoActSet( args, actcreate, actupdate )--followAction 
 	if actcreate == nil then

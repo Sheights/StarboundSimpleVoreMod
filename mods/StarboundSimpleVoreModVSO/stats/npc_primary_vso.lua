@@ -58,7 +58,7 @@ function init()
 	
 	message.setHandler( "vsoResourceAddPercent", function( arga_, argb_, resname, deltapercent, resthresh )
 	
-		if resthresh ~= nil then
+		if status.isResource( resname ) and resthresh ~= nil then
 			local epsilon = 1;
 			local retval = true;
 			local resthreshreal = resthresh*status.resourceMax( resname );
@@ -81,7 +81,7 @@ function init()
 				end
 			end
 			return retval;
-		else
+		elseif status.isResource( resname ) then
 	
 			if deltapercent < 0 then
 				status.overConsumeResource( resname, -deltapercent*status.resourceMax( resname ) )
@@ -89,6 +89,8 @@ function init()
 				status.modifyResourcePercentage( resname, deltapercent );
 			end
 			return status.resource( resname ) > 0;
+		else
+			--resource DOES NOT EXIST...
 		end
 	end )
 	

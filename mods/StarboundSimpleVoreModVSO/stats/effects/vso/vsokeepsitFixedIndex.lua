@@ -29,6 +29,8 @@ function updateholdings()
 			world.sendEntityMessage( entity.id(), "vsoForcePlayerSit", owner, seatindex )	--This WONT WORK unless we are ON THE GROUND???
 			--mcontroller.setAnchorState( owner, seatindex )	--This COULD WORK but it errors too much.
 		
+			--RPC version sends a message BACK to the owner about this
+			
 			--sb.logInfo( "forcing a sit "..tostring( entity.id() ).." on "..tostring( owner ).." in seat "..tostring( seatindex ) .." was " .. tostring( seatid ).." on "..tostring( sittingon ) );
 			
 		end
@@ -38,6 +40,11 @@ function updateholdings()
 			status.setResource("stunned", 100 )
 		end
 		local didit = world.callScriptedEntity( entity.id(), "npc.setLounging", owner, seatindex )
+	elseif world.isMonster( entity.id() ) then
+	
+		--better apply the vsomonsterbind status effect...
+		--	annoying it still needs to obey the seat index thing...
+	
 	else
 		--
 	end
@@ -55,6 +62,8 @@ function init()
 		effect.expire();
 	else
 	
+		--world.sendEntityMessage( victim, "vsoEquipmentList" );
+		
 		--Remove ALL OTHER "vsokeepsit"..tostring( seatindex ) status effects FIRST. (dont care about order really)
 		
 		--IT kinda looks like only ONE OWNER can do this at once.

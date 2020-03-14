@@ -13,6 +13,36 @@ function init()
 		player.interact( interactionType, config, sourceEntityId )
 	end )
 	
+	--message.setHandler("vsoCallScriptedEntity", function( _, _, targetId, remoteFn, args )
+	--	--Entity 62 does not exist or is not a local master scripted entity
+	--	world.callScriptedEntity( targetId, remoteFn, args );
+	--end )
+	
+	message.setHandler( "vsoEquipmentList", function( _, _ )
+		local R = {
+			headCosmetic=player.equippedItem("headCosmetic")
+			,chestCosmetic=player.equippedItem("chestCosmetic")
+			,legsCosmetic=player.equippedItem("legsCosmetic")
+			,backCosmetic=player.equippedItem("backCosmetic")
+		}
+
+		--[[
+		sb.logInfo( "show equipment" );
+		for k,v in pairs( R.chestCosmetic ) do
+			
+			sb.logInfo( k.." = "..tostring( v ) );
+			
+			if k == "parameters" then
+				for k2,v2 in pairs( R.chestCosmetic.parameters ) do
+					sb.logInfo( "\t"..k2.." = "..tostring( v2 ) );
+				end
+			end
+		end
+		]]--
+		
+		return R;
+	end )
+	
 	--[[
 	--Try and find a call that can STOP the use of a tech
 	message.setHandler("vsoForceCall", function( _, _, fnname, arglist )

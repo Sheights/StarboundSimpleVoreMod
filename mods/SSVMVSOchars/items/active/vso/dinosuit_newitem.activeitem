@@ -1,0 +1,33 @@
+{
+  "itemName" : "vorevsodinosuit_newitem",
+  "level" : 1,
+  "price" : 35000,
+  "rarity" : "Rare",
+  "category" : "vehicleController",
+  "description" : "Be the Raptor",
+  "shortdescription" : "Raptor Suit",
+  "twoHanded" : true,
+  "maxStack" : 1,
+  "itemTags" : ["vehiclecontroller","vsocontroller"],
+
+  "animation" : "/items/active/vso/vsocontrolleritem.animation",
+  "scripts" : ["/items/active/vso/vsocontrolleritem.lua"],
+  "animationScripts" : ["/items/active/vso/vsocursoritem.lua"],
+  "filled" : true,
+  "tooltipKind" : "vehicle",
+  "largeImage" : "/vehicles/vso/dinosuit/dinosuit_new.png:idle.1",
+
+  "respawnTime" : 1.0,
+
+  "vehicleType" : "vorevsodinosuit_new",
+  "vehicleBoundingBox" : [-3.1875, -2.625, 3.1875, 2.625],
+  "vehicleImage" : "/vehicles/vso/dinosuit/dinosuit_new.png:idle.1",
+
+  "animationParts" : {
+    "casing" : "/vehicles/vso/dinosuit/dinosuitcasing.png"
+  },
+
+  "inventoryIcon" : "/vehicles/vso/dinosuit/dinosuitcasing.png:full",
+  "emptyInventoryIcon" : "/vehicles/vso/dinosuit/dinosuitcasing.png:empty",
+  "filledInventoryIcon" : "/vehicles/vso/dinosuit/dinosuitcasing.png:full"
+}

@@ -4,4 +4,9 @@
 		"path": "/statusControllerSettings/primaryScriptSources/-",
 		"value": "/stats/npc_primary_vso.lua"
 	}
+	,{
+		"op": "add",
+		"path": "/scripts/-",
+		"value": "/npcs/bmain_vso.lua"
+	}
 ]

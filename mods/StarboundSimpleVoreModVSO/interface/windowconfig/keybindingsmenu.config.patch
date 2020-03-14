@@ -1,0 +1,18 @@
+[
+	{
+		"op": "add",
+		"path": "/keyActions/player/-",
+		"value": {
+			"label" : "Activate Tech 2",
+			"action" : "PlayerTechAction2"
+		}
+	}
+	,{
+		"op": "add",
+		"path": "/keyActions/player/-",
+		"value": {
+			"label" : "Activate Tech 3",
+			"action" : "PlayerTechAction3"
+		}
+	}
+]
