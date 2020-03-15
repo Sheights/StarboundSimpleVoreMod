@@ -1,0 +1,238 @@
+{
+  "frameGrid" : {
+    "size" : [124, 68]
+    ,"dimensions" : [10, 22]
+    ,"names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+      ,[ "f.11", "f.12", "f.13", "f.14", "f.15", "f.16", "f.17", "f.18", "f.19", "f.20" ]
+      ,[ "f.21", "f.22", "f.23", "f.24", "f.25", "f.26", "f.27", "f.28", "f.29", "f.30" ]
+      ,[ "f.31", "f.32", "f.33", "f.34", "f.35", "f.36", "f.37", "f.38", "f.39", "f.40" ]
+      ,[ "f.41", "f.42", "f.43", "f.44", "f.45", "f.46", "f.47", "f.48", "f.49", "f.50" ]
+      ,[ "f.51", "f.52", "f.53", "f.54", "f.55", "f.56", "f.57", "f.58", "f.59", "f.60" ]
+      ,[ "f.61", "f.62", "f.63", "f.64", "f.65", "f.66", "f.67", "f.68", "f.69", "f.70" ]
+      ,[ "f.71", "f.72", "f.73", "f.74", "f.75", "f.76", "f.77", "f.78", "f.79", "f.80" ]
+      ,[ "f.81", "f.82", "f.83", "f.84", "f.85", "f.86", "f.87", "f.88", "f.89", "f.90" ]
+      ,[ "f.91", "f.92", "f.93", "f.94", "f.95", "f.96", "f.97", "f.98", "f.99", "f.100" ]
+      ,[ "f.101", "f.102", "f.103", "f.104", "f.105", "f.106", "f.107", "f.108", "f.109", "f.110" ]
+      ,[ "f.111", "f.112", "f.113", "f.114", "f.115", "f.116", "f.117", "f.118", "f.119", "f.120" ]
+      ,[ "f.121", "f.122", "f.123", "f.124", "f.125", "f.126", "f.127", "f.128", "f.129", "f.130" ]
+      ,[ "f.131", "f.132", "f.133", "f.134", "f.135", "f.136", "f.137", "f.138", "f.139", "f.140" ]
+      ,[ "f.141", "f.142", "f.143", "f.144", "f.145", "f.146", "f.147", "f.148", "f.149", "f.150" ]
+      ,[ "f.151", "f.152", "f.153", "f.154", "f.155", "f.156", "f.157", "f.158", "f.159", "f.160" ]
+      ,[ "f.161", "f.162", "f.163", "f.164", "f.165", "f.166", "f.167", "f.168", "f.169", "f.170" ]
+      ,[ "f.171", "f.172", "f.173", "f.174", "f.175", "f.176", "f.177", "f.178", "f.179", "f.180" ]
+      ,[ "f.181", "f.182", "f.183", "f.184", "f.185", "f.186", "f.187", "f.188", "f.189", "f.190" ]
+      ,[ "f.191", "f.192", "f.193", "f.194", "f.195", "f.196", "f.197", "f.198", "f.199", "f.200" ]
+      ,[ "f.201", "f.202", "f.203", "f.204", "f.205", "f.206", "f.207", "f.208", "f.209", "f.210" ]
+      ,[ "f.211", "f.212", "f.213", "f.214", "f.215", "f.216", "f.217", "f.218", "f.219", "f.220" ]
+    ]
+  }
+  ,"aliases"  :  {
+    "empty" : "f.2"
+    ,"silhouette" : "f.5"
+
+    ,"idle_quad.default" : "idle_quad.1"
+    ,"idle_quad.1" : "f.12"
+    ,"idle_quad.2" : "f.13"
+
+    ,"idle_quad_breath.1" : "f.16"
+    ,"idle_quad_breath.2" : "f.17"
+    ,"idle_quad_breath.3" : "f.18"
+    ,"idle_quad_breath.4" : "idle_quad_breath.3"
+    ,"idle_quad_breath.5" : "idle_quad_breath.3"
+    ,"idle_quad_breath.6" : "idle_quad_breath.3"
+    ,"idle_quad_breath.7" : "idle_quad_breath.3"
+    ,"idle_quad_breath.8" : "idle_quad_breath.3"
+    ,"idle_quad_breath.9" : "idle_quad_breath.3"
+    ,"idle_quad_breath.10" : "idle_quad_breath.3"
+    ,"idle_quad_breath.11" : "idle_quad_breath.2"
+    ,"idle_quad_breath.12" : "idle_quad_breath.1"
+
+    ,"stand.1" : "f.22"
+    ,"stand.2" : "f.23"
+
+    ,"stand_reverse.1" : "stand.2"
+    ,"stand_reverse.2" : "stand.1"
+
+    ,"stand_idle.1" : "f.26"
+    ,"stand_idle.2" : "f.27"
+
+    ,"stand_blink.1" : "f.32"
+    ,"stand_blink.2" : "f.33"
+    ,"stand_blink.3" : "stand_blink.1"
+
+    ,"pounce.1" : "f.36"
+    ,"pounce.2" : "f.37"
+    ,"pounce.3" : "f.38"
+
+    ,"miss.1" : "f.42"
+    ,"miss.2" : "f.43"
+    ,"miss.3" : "f.44"
+    ,"miss.4" : "f.45"
+    ,"miss.5" : "f.46"
+
+    ,"chomp.1" : "f.52"
+    ,"chomp.2" : "f.53"
+    ,"chomp.3" : "f.54"
+    ,"chomp.4" : "f.55"
+    ,"chomp.5" : "f.56"
+    ,"chomp.6" : "f.57"
+
+    ,"swallow.1" : "f.62"
+    ,"swallow.2" : "f.63"
+    ,"swallow.3" : "f.64"
+    ,"swallow.4" : "f.65"
+    ,"swallow.5" : "f.66"
+    ,"swallow.6" : "f.67"
+    ,"swallow.7" : "f.68"
+    ,"swallow.8" : "f.69"
+
+    ,"acrobatics.1" : "f.72"
+    ,"acrobatics.2" : "f.73"
+    ,"acrobatics.3" : "f.74"
+    ,"acrobatics.4" : "f.75"
+    ,"acrobatics.5" : "f.76"
+    ,"acrobatics.6" : "f.77"
+    ,"acrobatics.7" : "f.78"
+
+    ,"full_idle.1" : "f.82"
+    ,"full_idle.2" : "f.83"
+
+    ,"full_rumbles.1" : "f.86"
+    ,"full_rumbles.2" : "f.87"
+    ,"full_rumbles.3" : "full_rumbles.2"
+    ,"full_rumbles.4" : "full_rumbles.2"
+    ,"full_rumbles.5" : "full_rumbles.2"
+    ,"full_rumbles.6" : "full_rumbles.1"
+
+    ,"full_wiggle_front.1" : "f.92"
+    ,"full_wiggle_front.2" : "f.93"
+    ,"full_wiggle_front.3" : "f.94"
+    ,"full_wiggle_front.4" : "full_wiggle_front.2"
+    ,"full_wiggle_front.5" : "full_wiggle_front.1"
+
+    ,"full_wiggle_back.1" : "f.97"
+    ,"full_wiggle_back.2" : "f.98"
+    ,"full_wiggle_back.3" : "f.99"
+    ,"full_wiggle_back.4" : "full_wiggle_back.2"
+    ,"full_wiggle_back.5" : "full_wiggle_back.1"
+
+    ,"full_wiggle_up.1" : "f.102"
+    ,"full_wiggle_up.2" : "f.103"
+    ,"full_wiggle_up.3" : "f.104"
+    ,"full_wiggle_up.4" : "full_wiggle_up.2"
+    ,"full_wiggle_up.5" : "full_wiggle_up.1"
+
+    ,"full_wiggle_down.1" : "f.107"
+    ,"full_wiggle_down.2" : "f.108"
+    ,"full_wiggle_down.3" : "f.109"
+    ,"full_wiggle_down.4" : "full_wiggle_down.2"
+    ,"full_wiggle_down.5" : "full_wiggle_down.1"
+
+    ,"full_regurgitate.1" : "f.112"
+    ,"full_regurgitate.2" : "f.113"
+    ,"full_regurgitate.3" : "f.114"
+
+    ,"full_burp.1" : "f.115"
+    ,"full_burp.2" : "f.116"
+    ,"full_burp.3" : "full_burp.2"
+    ,"full_burp.4" : "full_burp.2"
+    ,"full_burp.5" : "full_burp.2"
+
+    ,"acrobatics_reverse.1" : "f.122"
+    ,"acrobatics_reverse.2" : "f.123"
+    ,"acrobatics_reverse.3" : "f.124"
+    ,"acrobatics_reverse.4" : "f.125"
+    ,"acrobatics_reverse.5" : "miss.2"
+    ,"acrobatics_reverse.6" : "miss.3"
+    ,"acrobatics_reverse.7" : "miss.4"
+    ,"acrobatics_reverse.8" : "miss.5"
+
+    ,"tail_transfer.1" : "f.132"
+    ,"tail_transfer.2" : "f.133"
+    ,"tail_transfer.3" : "f.134"
+    ,"tail_transfer.4" : "f.135"
+    ,"tail_transfer.5" : "f.136"
+
+    ,"tum_transfer.1" : "tail_transfer.5"
+    ,"tum_transfer.2" : "tail_transfer.4"
+    ,"tum_transfer.3" : "tail_transfer.3"
+    ,"tum_transfer.4" : "tail_transfer.2"
+    ,"tum_transfer.5" : "tail_transfer.1"
+
+    ,"tail_big.1" : "f.139"
+    ,"tail_big.2" : "f.140"
+
+    ,"tail_wiggle_front.1" : "f.142"
+    ,"tail_wiggle_front.2" : "f.143"
+    ,"tail_wiggle_front.3" : "f.144"
+    ,"tail_wiggle_front.4" : "tail_wiggle_front.2"
+    ,"tail_wiggle_front.5" : "tail_wiggle_front.1"
+
+    ,"tail_wiggle_back.1" : "f.147"
+    ,"tail_wiggle_back.2" : "f.148"
+    ,"tail_wiggle_back.3" : "f.149"
+    ,"tail_wiggle_back.4" : "tail_wiggle_back.2"
+    ,"tail_wiggle_back.5" : "tail_wiggle_back.1"
+
+    ,"tail_wiggle_up.1" : "f.152"
+    ,"tail_wiggle_up.2" : "f.153"
+    ,"tail_wiggle_up.3" : "f.154"
+    ,"tail_wiggle_up.4" : "tail_wiggle_up.2"
+    ,"tail_wiggle_up.5" : "tail_wiggle_up.1"
+
+    ,"tail_wiggle_down.1" : "f.157"
+    ,"tail_wiggle_down.2" : "f.158"
+    ,"tail_wiggle_down.3" : "f.159"
+    ,"tail_wiggle_down.4" : "tail_wiggle_down.2"
+    ,"tail_wiggle_down.5" : "tail_wiggle_down.1"
+
+    ,"to_med.1" : "f.162"
+    ,"to_med.2" : "f.163"
+
+    ,"med_idle.1" : "f.166"
+    ,"med_idle.2" : "f.167"
+
+    ,"med_struggle.1" : "f.172"
+    ,"med_struggle.2" : "f.173"
+    ,"med_struggle.3" : "med_struggle.1"
+
+    ,"to_small.1" : "f.176"
+    ,"to_small.2" : "f.177"
+
+    ,"small_idle.1" : "f.182"
+    ,"small_idle.2" : "f.183"
+
+    ,"small_struggle.1" : "f.186"
+    ,"small_struggle.2" : "f.187"
+    ,"small_struggle.3" : "f.188"
+    ,"small_struggle.4" : "small_struggle.2"
+    ,"small_struggle.5" : "small_struggle.1"
+
+    ,"small_digest.1" : "f.192"
+    ,"small_digest.2" : "f.193"
+    ,"small_digest.3" : "f.194"
+
+    ,"small_burp.1" : "f.195"
+    ,"small_burp.2" : "full_burp.2"
+    ,"small_burp.3" : "small_burp.2"
+    ,"small_burp.4" : "small_burp.2"
+    ,"small_burp.5" : "small_burp.2"
+
+    ,"med_digest.1" : "f.202"
+    ,"med_digest.2" : "f.203"
+    ,"med_digest.3" : "f.204"
+    ,"med_digest.4" : "f.205"
+    ,"med_digest.5" : "f.206"
+    ,"med_digest.6" : "f.207"
+
+    ,"tail_digest.1" : "f.212"
+    ,"tail_digest.2" : "f.213"
+    ,"tail_digest.3" : "f.214"
+    ,"tail_digest.4" : "med_digest.6"
+    ,"tail_digest.5" : "tail_digest.4"
+    ,"tail_digest.6" : "tail_digest.4"
+    ,"tail_digest.7" : "tail_digest.4"
+    ,"tail_digest.8" : "tail_digest.4"
+  }
+}

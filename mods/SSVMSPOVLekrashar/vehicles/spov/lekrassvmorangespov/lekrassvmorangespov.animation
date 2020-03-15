@@ -1,0 +1,233 @@
+{
+  "globalTagDefaults" : {
+      "frame" : "1"
+      ,"directives" : ""
+  }
+    ,"animatedParts": {
+      "stateTypes": {
+        "bodyState": {
+          "default": "empty"
+          , "states": {
+            "empty": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"silhouette": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"idle_quad": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"idle_quad_breath": { "frames": 12, "cycle": 1.8, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12] } , "mode": "end" }
+            ,"stand": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"stand_reverse": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"stand_idle": { "frames": 2, "cycle": 0.4, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"stand_blink": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"pounce": { "frames": 3, "cycle": 0.45, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"miss": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"chomp": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"swallow": { "frames": 8, "cycle": 1.4, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+            ,"acrobatics": { "frames": 7, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+            ,"full_idle": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"full_rumbles": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"full_wiggle_front": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_back": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_up": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_down": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_regurgitate": { "frames": 3, "cycle": 0.45, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"full_burp": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"acrobatics_reverse": { "frames": 8, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+            ,"tail_transfer": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"tum_transfer": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"tail_big": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"tail_wiggle_front": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"tail_wiggle_back": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"tail_wiggle_up": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"tail_wiggle_down": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"to_med": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"med_idle": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"med_struggle": { "frames": 3, "cycle": 0.45, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"to_small": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"small_idle": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"small_struggle": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"small_digest": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"small_burp": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"med_digest": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"tail_digest": { "frames": 8, "cycle": 1.6, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+          }
+        }
+      }
+        , "parts": {
+          "background": {
+            "properties": {
+              "offset": [0, 4.25]
+              ,"centered": true
+              , "zLevel": -1
+              , "transformationGroups": ["flip"]
+            }
+            , "partStates": {
+              "bodyState": {
+              }
+            }
+          }
+
+          , "foreground": {
+            "properties": {
+              "offset": [0, 4.25]
+              ,"centered": true
+              , "zLevel": 1
+              , "transformationGroups": ["flip"]
+            }
+            , "partStates": {
+              "bodyState": {
+                "empty": { "properties": { "image": "lekrassvmorangespov.png:empty.<frame><directives>" }  }
+                ,"silhouette": { "properties": { "image": "lekrassvmorangespov.png:silhouette.<frame><directives>" }  }
+                ,"idle_quad": { "properties": { "image": "lekrassvmorangespov.png:idle_quad.<frame><directives>" }  }
+                ,"idle_quad_breath": { "properties": { "image": "lekrassvmorangespov.png:idle_quad_breath.<frame><directives>" }  }
+                ,"stand": { "properties": { "image": "lekrassvmorangespov.png:stand.<frame><directives>" }  }
+                ,"stand_reverse": { "properties": { "image": "lekrassvmorangespov.png:stand_reverse.<frame><directives>" }  }
+                ,"stand_idle": { "properties": { "image": "lekrassvmorangespov.png:stand_idle.<frame><directives>" }  }
+                ,"stand_blink": { "properties": { "image": "lekrassvmorangespov.png:stand_blink.<frame><directives>" }  }
+                ,"pounce": { "properties": { "image": "lekrassvmorangespov.png:pounce.<frame><directives>" }  }
+                ,"miss": { "properties": { "image": "lekrassvmorangespov.png:miss.<frame><directives>" }  }
+                ,"chomp": { "properties": { "image": "lekrassvmorangespov.png:chomp.<frame><directives>" }  }
+                ,"swallow": { "properties": { "image": "lekrassvmorangespov.png:swallow.<frame><directives>" }  }
+                ,"acrobatics": { "properties": { "image": "lekrassvmorangespov.png:acrobatics.<frame><directives>" }  }
+                ,"full_idle": { "properties": { "image": "lekrassvmorangespov.png:full_idle.<frame><directives>" }  }
+                ,"full_rumbles": { "properties": { "image": "lekrassvmorangespov.png:full_rumbles.<frame><directives>" }  }
+                ,"full_wiggle_front": { "properties": { "image": "lekrassvmorangespov.png:full_wiggle_front.<frame><directives>" }  }
+                ,"full_wiggle_back": { "properties": { "image": "lekrassvmorangespov.png:full_wiggle_back.<frame><directives>" }  }
+                ,"full_wiggle_up": { "properties": { "image": "lekrassvmorangespov.png:full_wiggle_up.<frame><directives>" }  }
+                ,"full_wiggle_down": { "properties": { "image": "lekrassvmorangespov.png:full_wiggle_down.<frame><directives>" }  }
+                ,"full_regurgitate": { "properties": { "image": "lekrassvmorangespov.png:full_regurgitate.<frame><directives>" }  }
+                ,"full_burp": { "properties": { "image": "lekrassvmorangespov.png:full_burp.<frame><directives>" }  }
+                ,"acrobatics_reverse": { "properties": { "image": "lekrassvmorangespov.png:acrobatics_reverse.<frame><directives>" }  }
+                ,"tail_transfer": { "properties": { "image": "lekrassvmorangespov.png:tail_transfer.<frame><directives>" }  }
+                ,"tum_transfer": { "properties": { "image": "lekrassvmorangespov.png:tum_transfer.<frame><directives>" }  }
+                ,"tail_big": { "properties": { "image": "lekrassvmorangespov.png:tail_big.<frame><directives>" }  }
+                ,"tail_wiggle_front": { "properties": { "image": "lekrassvmorangespov.png:tail_wiggle_front.<frame><directives>" }  }
+                ,"tail_wiggle_back": { "properties": { "image": "lekrassvmorangespov.png:tail_wiggle_back.<frame><directives>" }  }
+                ,"tail_wiggle_up": { "properties": { "image": "lekrassvmorangespov.png:tail_wiggle_up.<frame><directives>" }  }
+                ,"tail_wiggle_down": { "properties": { "image": "lekrassvmorangespov.png:tail_wiggle_down.<frame><directives>" }  }
+                ,"to_med": { "properties": { "image": "lekrassvmorangespov.png:to_med.<frame><directives>" }  }
+                ,"med_idle": { "properties": { "image": "lekrassvmorangespov.png:med_idle.<frame><directives>" }  }
+                ,"med_struggle": { "properties": { "image": "lekrassvmorangespov.png:med_struggle.<frame><directives>" }  }
+                ,"to_small": { "properties": { "image": "lekrassvmorangespov.png:to_small.<frame><directives>" }  }
+                ,"small_idle": { "properties": { "image": "lekrassvmorangespov.png:small_idle.<frame><directives>" }  }
+                ,"small_struggle": { "properties": { "image": "lekrassvmorangespov.png:small_struggle.<frame><directives>" }  }
+                ,"small_digest": { "properties": { "image": "lekrassvmorangespov.png:small_digest.<frame><directives>" }  }
+                ,"small_burp": { "properties": { "image": "lekrassvmorangespov.png:small_burp.<frame><directives>" }  }
+                ,"med_digest": { "properties": { "image": "lekrassvmorangespov.png:med_digest.<frame><directives>" }  }
+                ,"tail_digest": { "properties": { "image": "lekrassvmorangespov.png:tail_digest.<frame><directives>" }  }
+              }
+            }
+          }
+
+          , "victim": {
+            "properties": {
+              "centered": true
+              , "zLevel": 0
+              , "transformationGroups": ["flip", "drivingSeatPosition"]
+              , "drivingSeatPosition": [0.0, 0.0]
+            }
+            , "partStates": {
+              "bodyState": {
+              }
+            }
+          }
+        }
+  }
+
+
+  , "transformationGroups": {
+    "flip": {}
+    , "drivingSeatPosition": {
+        "interpolated": true
+    }
+  }
+  , "sounds": {
+    "pounce": ["/sfx/objects/eggLay.ogg"],
+    "nom": ["/sfx/objects/sw/Nom.ogg"],
+    "transfer": ["/sfx/objects/sw/StomachTransfer.ogg"],
+    "full": ["/sfx/vore/digest/digest (1).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (9).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (21).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg"],
+    "struggle": ["/sfx/objects/sw/MouthStruggle1.ogg", "/sfx/objects/sw/MouthStruggle2.ogg", "/sfx/objects/sw/StomachStruggle3.ogg"],
+    "burp": ["/sfx/vore/burp/burp (4).ogg"],
+    "digest": ["/sfx/vore/digest/digest (4).ogg", "/sfx/vore/digest/digest (22).ogg", "/sfx/vore/digest/digest (25).ogg"],
+    "med": ["/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (42).ogg", "/sfx/vore/digest/digest (34).ogg", "/sfx/vore/digest/digest (33).ogg", "/sfx/vore/digest/digest (24).ogg", "/sfx/vore/digest/digest (20).ogg"],
+    "small": ["/sfx/vore/digest/digest (5).ogg", "/sfx/vore/digest/digest (8).ogg", "/sfx/vore/digest/digest (12).ogg", "/sfx/vore/digest/digest (14).ogg", "/sfx/vore/digest/digest (23).ogg", "/sfx/vore/digest/digest (26).ogg"]
+  }
+  ,"particleEmitters": {
+    "emotehappystand" : {
+      "emissionRate" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/emotes/happy.animation",
+            "position" : [-1.0, 7.5],
+            "finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "layer" : "front",
+            "timeToLive" : 0.8,
+            "flippable" : true
+          }
+        }
+      ]
+    }
+
+    ,"emotehappysleep" : {
+      "emissionRate" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/emotes/happy.animation",
+            "position" : [-4.0, 4.0],
+            "finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "layer" : "front",
+            "timeToLive" : 0.8,
+            "flippable" : true
+          }
+        }
+      ]
+    }
+
+    ,"emotesad" : {
+      "emissionRate" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/emotes/sad.animation",
+            "position" : [3.0, 5.0],
+            "finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "layer" : "front",
+            "timeToLive" : 0.8,
+            "flippable" : false
+          }
+        }
+      ]
+    }
+
+    ,"emoteconfused" : {
+      "emissionRate" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/emotes/confused.animation",
+            "position" : [-1.5, 7.5],
+            "finalVelocity" : [0, 0],
+            "initialVelocity" : [0, 0],
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "layer" : "front",
+            "timeToLive" : 0.8,
+            "flippable" : false
+          }
+        }
+      ]
+    }
+  }
+}

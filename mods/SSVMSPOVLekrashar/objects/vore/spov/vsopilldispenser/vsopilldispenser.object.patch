@@ -1,0 +1,42 @@
+[
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillsizemicro"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillsizesmall"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillsizenormal"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillsizebig"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillsizehuge"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillovonly"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillavonly"} }
+  },
+  {
+    "op": "add",
+    "path": "/interactData/items/-",
+    "value": { "item" : { "name" : "spovpillanyin"} }
+  }
+]

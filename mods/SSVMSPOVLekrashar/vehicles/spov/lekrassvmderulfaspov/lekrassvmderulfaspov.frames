@@ -1,0 +1,259 @@
+{
+  "frameGrid" : {
+    "size" : [128, 128]
+    ,"dimensions" : [10, 32]
+    ,"names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+      ,[ "f.11", "f.12", "f.13", "f.14", "f.15", "f.16", "f.17", "f.18", "f.19", "f.20" ]
+      ,[ "f.21", "f.22", "f.23", "f.24", "f.25", "f.26", "f.27", "f.28", "f.29", "f.30" ]
+      ,[ "f.31", "f.32", "f.33", "f.34", "f.35", "f.36", "f.37", "f.38", "f.39", "f.40" ]
+      ,[ "f.41", "f.42", "f.43", "f.44", "f.45", "f.46", "f.47", "f.48", "f.49", "f.50" ]
+      ,[ "f.51", "f.52", "f.53", "f.54", "f.55", "f.56", "f.57", "f.58", "f.59", "f.60" ]
+      ,[ "f.61", "f.62", "f.63", "f.64", "f.65", "f.66", "f.67", "f.68", "f.69", "f.70" ]
+      ,[ "f.71", "f.72", "f.73", "f.74", "f.75", "f.76", "f.77", "f.78", "f.79", "f.80" ]
+      ,[ "f.81", "f.82", "f.83", "f.84", "f.85", "f.86", "f.87", "f.88", "f.89", "f.90" ]
+      ,[ "f.91", "f.92", "f.93", "f.94", "f.95", "f.96", "f.97", "f.98", "f.99", "f.100" ]
+      ,[ "f.101", "f.102", "f.103", "f.104", "f.105", "f.106", "f.107", "f.108", "f.109", "f.110" ]
+      ,[ "f.111", "f.112", "f.113", "f.114", "f.115", "f.116", "f.117", "f.118", "f.119", "f.120" ]
+      ,[ "f.121", "f.122", "f.123", "f.124", "f.125", "f.126", "f.127", "f.128", "f.129", "f.130" ]
+      ,[ "f.131", "f.132", "f.133", "f.134", "f.135", "f.136", "f.137", "f.138", "f.139", "f.140" ]
+      ,[ "f.141", "f.142", "f.143", "f.144", "f.145", "f.146", "f.147", "f.148", "f.149", "f.150" ]
+      ,[ "f.151", "f.152", "f.153", "f.154", "f.155", "f.156", "f.157", "f.158", "f.159", "f.160" ]
+      ,[ "f.161", "f.162", "f.163", "f.164", "f.165", "f.166", "f.167", "f.168", "f.169", "f.170" ]
+      ,[ "f.171", "f.172", "f.173", "f.174", "f.175", "f.176", "f.177", "f.178", "f.179", "f.180" ]
+      ,[ "f.181", "f.182", "f.183", "f.184", "f.185", "f.186", "f.187", "f.188", "f.189", "f.190" ]
+      ,[ "f.191", "f.192", "f.193", "f.194", "f.195", "f.196", "f.197", "f.198", "f.199", "f.200" ]
+      ,[ "f.201", "f.202", "f.203", "f.204", "f.205", "f.206", "f.207", "f.208", "f.209", "f.210" ]
+      ,[ "f.211", "f.212", "f.213", "f.214", "f.215", "f.216", "f.217", "f.218", "f.219", "f.220" ]
+      ,[ "f.221", "f.222", "f.223", "f.224", "f.225", "f.226", "f.227", "f.228", "f.229", "f.230" ]
+      ,[ "f.231", "f.232", "f.233", "f.234", "f.235", "f.236", "f.237", "f.238", "f.239", "f.240" ]
+      ,[ "f.241", "f.242", "f.243", "f.244", "f.245", "f.246", "f.247", "f.248", "f.249", "f.250" ]
+      ,[ "f.251", "f.252", "f.253", "f.254", "f.255", "f.256", "f.257", "f.258", "f.259", "f.260" ]
+      ,[ "f.261", "f.262", "f.263", "f.264", "f.265", "f.266", "f.267", "f.268", "f.269", "f.270" ]
+      ,[ "f.271", "f.272", "f.273", "f.274", "f.275", "f.276", "f.277", "f.278", "f.279", "f.280" ]
+      ,[ "f.281", "f.282", "f.283", "f.284", "f.285", "f.286", "f.287", "f.288", "f.289", "f.290" ]
+      ,[ "f.291", "f.292", "f.293", "f.294", "f.295", "f.296", "f.297", "f.298", "f.299", "f.300" ]
+      ,[ "f.301", "f.302", "f.303", "f.304", "f.305", "f.306", "f.307", "f.308", "f.309", "f.310" ]
+      ,[ "f.311", "f.312", "f.313", "f.314", "f.315", "f.316", "f.317", "f.318", "f.319", "f.320" ]
+    ]
+  }
+  ,"aliases"  :  {
+    "empty" : "f.2"
+    ,"silhouette" : "f.5"
+
+    ,"stand_idle.1" : "f.8"
+
+    ,"fly.1" : "f.12"
+    ,"fly.2" : "f.13"
+    ,"fly.3" : "f.14"
+    ,"fly.4" : "fly.2"
+
+    ,"take_off.1" : "f.22"
+    ,"take_off.2" : "f.23"
+    ,"take_off.3" : "f.24"
+    ,"take_off.4" : "f.25"
+    ,"take_off.5" : "f.26"
+    ,"take_off.6" : "f.27"
+
+    ,"hang.1" : "f.32"
+    ,"hang.2" : "f.33"
+    ,"hang.3" : "f.34"
+    ,"hang.4" : "f.35"
+    ,"hang.5" : "f.36"
+    ,"hang.6" : "f.37"
+    ,"hang.7" : "f.38"
+
+    ,"hang_idle.1" : "f.42"
+
+    ,"hang_to_tease.1" : "f.45"
+    ,"hang_to_tease.2" : "f.46"
+    ,"hang_to_tease.3" : "f.47"
+    ,"hang_to_tease.4" : "f.48"
+
+    ,"hang_tease.1" : "f.52"
+
+    ,"dive.1" : "f.55"
+    ,"dive.2" : "f.56"
+
+    ,"dive_fail.1" : "f.62"
+    ,"dive_fail.2" : "f.63"
+    ,"dive_fail.3" : "f.64"
+    ,"dive_fail.4" : "f.65"
+    ,"dive_fail.5" : "f.66"
+    ,"dive_fail.6" : "stand_idle.1"
+
+    ,"tease_to_ground_pound.1" : "f.72"
+    ,"tease_to_ground_pound.2" : "f.73"
+    ,"tease_to_ground_pound.3" : "f.74"
+    ,"tease_to_ground_pound.4" : "f.75"
+    ,"tease_to_ground_pound.5" : "f.76"
+
+    ,"ground_pound.1" : "f.79"
+
+    ,"ground_pound_fail.1" : "f.82"
+    ,"ground_pound_fail.2" : "f.83"
+    ,"ground_pound_fail.3" : "f.84"
+    ,"ground_pound_fail.4" : "f.85"
+    ,"ground_pound_fail.5" : "stand_idle.1"
+
+    ,"dive_catch.1" : "f.92"
+    ,"dive_catch.2" : "f.93"
+    ,"dive_catch.3" : "f.94"
+    ,"dive_catch.4" : "f.95"
+    ,"dive_catch.5" : "f.96"
+    ,"dive_catch.6" : "f.97"
+
+    ,"dive_swallow.1" : "f.102"
+    ,"dive_swallow.2" : "f.103"
+    ,"dive_swallow.3" : "f.104"
+    ,"dive_swallow.4" : "f.105"
+    ,"dive_swallow.5" : "f.106"
+
+    ,"ground_pound_catch.1" : "f.112"
+    ,"ground_pound_catch.2" : "f.113"
+    ,"ground_pound_catch.3" : "f.114"
+    ,"ground_pound_catch.4" : "f.115"
+
+    ,"ground_pound_swallow.1" : "f.122"
+    ,"ground_pound_swallow.2" : "f.123"
+    ,"ground_pound_swallow.3" : "f.124"
+
+    ,"stand_full.1" : "f.127"
+
+    ,"full_flight_take_off.1" : "f.132"
+    ,"full_flight_take_off.2" : "f.133"
+    ,"full_flight_take_off.3" : "f.134"
+    ,"full_flight_take_off.4" : "f.135"
+    ,"full_flight_take_off.5" : "f.136"
+    ,"full_flight_take_off.6" : "f.137"
+
+    ,"full_flight_idle.1" : "f.142"
+    ,"full_flight_idle.2" : "f.143"
+    ,"full_flight_idle.3" : "f.144"
+    ,"full_flight_idle.4" : "f.145"
+
+    ,"full_flight_attempt_digest_in.1" : "f.152"
+    ,"full_flight_attempt_digest_in.2" : "f.153"
+    ,"full_flight_attempt_digest_in.3" : "f.154"
+    ,"full_flight_attempt_digest_in.4" : "f.155"
+
+    ,"full_flight_attempt_digest_out.1" : "full_flight_attempt_digest_in.4"
+    ,"full_flight_attempt_digest_out.2" : "full_flight_attempt_digest_in.3"
+    ,"full_flight_attempt_digest_out.3" : "full_flight_attempt_digest_in.2"
+    ,"full_flight_attempt_digest_out.4" : "full_flight_attempt_digest_in.1"
+
+    ,"full_flight_attempt_digest.1" : "f.162"
+    ,"full_flight_attempt_digest.2" : "f.163"
+    ,"full_flight_attempt_digest.3" : "f.164"
+    ,"full_flight_attempt_digest.4" : "f.165"
+
+    ,"full_flight_digest_fast.1" : "f.172"
+    ,"full_flight_digest_fast.2" : "f.173"
+    ,"full_flight_digest_fast.3" : "f.174"
+    ,"full_flight_digest_fast.4" : "f.175"
+
+    ,"full_flight_digest_normal.1" : "f.182"
+    ,"full_flight_digest_normal.2" : "f.183"
+    ,"full_flight_digest_normal.3" : "f.184"
+    ,"full_flight_digest_normal.4" : "f.185"
+
+    ,"full_flight_land.1" : "f.192"
+    ,"full_flight_land.2" : "f.193"
+    ,"full_flight_land.3" : "f.194"
+
+    ,"stand_tease_in.1" : "f.202"
+    ,"stand_tease_in.2" : "f.203"
+
+    ,"stand_tease_out.1" : "stand_tease_in.2"
+    ,"stand_tease_out.2" : "stand_tease_in.1"
+
+    ,"stand_tease.1" : "f.206"
+    ,"stand_tease.2" : "f.207"
+    ,"stand_tease.3" : "f.208"
+    ,"stand_tease.4" : "f.209"
+
+    ,"wiggle_react_in.1" : "f.212"
+
+    ,"wiggle_react_out.1" : "wiggle_react_in.1"
+
+    ,"wiggle_react.1" : "f.222"
+    ,"wiggle_react.2" : "f.223"
+    ,"wiggle_react.3" : "f.224"
+    ,"wiggle_react.4" : "f.225"
+    ,"wiggle_react.5" : "f.226"
+    ,"wiggle_react.6" : "f.227"
+    ,"wiggle_react.7" : "f.228"
+
+    ,"leave.1" : "f.232"
+    ,"leave.2" : "f.233"
+    ,"leave.3" : "f.234"
+    ,"leave.4" : "f.235"
+    ,"leave.5" : "f.236"
+    ,"leave.6" : "f.237"
+    ,"leave.7" : "f.238"
+    ,"leave.8" : "f.239"
+    ,"leave.9" : "stand_idle.1"
+
+    ,"full_wiggle_front.1" : "f.242"
+    ,"full_wiggle_front.2" : "f.243"
+    ,"full_wiggle_front.3" : "f.244"
+    ,"full_wiggle_front.4" : "full_wiggle_front.2"
+    ,"full_wiggle_front.5" : "full_wiggle_front.1"
+
+    ,"full_wiggle_back.1" : "f.247"
+    ,"full_wiggle_back.2" : "f.248"
+    ,"full_wiggle_back.3" : "f.249"
+    ,"full_wiggle_back.4" : "full_wiggle_back.2"
+    ,"full_wiggle_back.5" : "full_wiggle_back.1"
+
+    ,"full_wiggle_up.1" : "f.252"
+    ,"full_wiggle_up.2" : "f.253"
+    ,"full_wiggle_up.3" : "f.254"
+    ,"full_wiggle_up.4" : "full_wiggle_up.2"
+    ,"full_wiggle_up.5" : "full_wiggle_up.1"
+
+    ,"full_wiggle_down.1" : "f.257"
+    ,"full_wiggle_down.2" : "f.258"
+    ,"full_wiggle_down.3" : "f.259"
+    ,"full_wiggle_down.4" : "full_wiggle_down.2"
+    ,"full_wiggle_down.5" : "full_wiggle_down.1"
+
+    ,"digest.1" : "f.262"
+    ,"digest.2" : "f.263"
+    ,"digest.3" : "f.264"
+    ,"digest.4" : "f.265"
+
+    ,"digest_tease_in.1" : "f.268"
+    ,"digest_tease_in.2" : "f.269"
+
+    ,"digest_tease.1" : "f.272"
+    ,"digest_tease.2" : "f.273"
+    ,"digest_tease.3" : "f.274"
+    ,"digest_tease.4" : "f.275"
+
+    ,"absorb.1" : "f.282"
+    ,"absorb.2" : "f.283"
+    ,"absorb.3" : "f.284"
+    ,"absorb.4" : "f.285"
+
+    ,"absorb_idle.1" : "f.292"
+    ,"absorb_idle.2" : "f.293"
+    ,"absorb_idle.3" : "f.294"
+    ,"absorb_idle.4" : "absorb_idle.2"
+
+    ,"hold_urps.1" : "f.302"
+    ,"hold_urps.2" : "f.303"
+
+    ,"urps.1" : "f.304"
+    ,"urps.2" : "f.305"
+    ,"urps.3" : "urps.2"
+    ,"urps.4" : "urps.2"
+    ,"urps.5" : "urps.2"
+    ,"urps.6" : "urps.2"
+    ,"urps.7" : "f.306"
+    ,"urps.8" : "f.307"
+    ,"urps.9" : "f.308"
+
+    ,"blush.1" : "f.312"
+  }
+}

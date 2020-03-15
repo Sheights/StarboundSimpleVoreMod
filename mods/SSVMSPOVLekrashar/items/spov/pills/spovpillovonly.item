@@ -1,0 +1,20 @@
+{
+  "itemName" : "spovpillovonly",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillovonly.png",
+  "description" : "A pill that allows preds to exclusively swallow preys with their maw.",
+  "shortdescription" : "OV Only Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+    "ovonly" : {
+      "name" : "OV-Only",
+      "icon" : "/items/spov/pills/spovpillovonly.png",
+      "description" : "Allow preds to exclusively swallow preys with their maw.",
+      "value": 1.0
+    }
+  },
+  "pillRemove": [ "avonly" ]
+}
