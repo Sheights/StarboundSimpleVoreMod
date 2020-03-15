@@ -1,0 +1,151 @@
+{
+	"globalTagDefaults" : {
+		"frame" : "1"
+		,"directives" : ""
+	}
+  ,"animatedParts": {
+    "stateTypes": {
+  		"bodyState": {
+        "default": "idle"
+        , "states": {
+          "empty": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+          ,"idle": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+          ,"blink": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+          ,"yawn": { "frames": 10, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10] } , "mode": "end" }
+          ,"pet": { "frames": 8, "cycle": 1.6, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+          ,"mlem": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+          ,"chomp": { "frames": 4, "cycle": 0.8, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+          ,"chomp_miss": { "frames": 12, "cycle": 3.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12] } , "mode": "end" }
+          ,"chomp_devour": { "frames": 10, "cycle": 4.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10] } , "mode": "end" }
+          ,"bellyn_intro": { "frames": 4, "cycle": 0.8, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+          ,"bellyn": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+          ,"bellyn_blink": { "frames": 2, "cycle": 0.4, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+          ,"bellyn_struggle_down": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellyn_struggle_left": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellyn_struggle_right": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellyn_struggle_up": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellyn_digest": { "frames": 13, "cycle": 3.6, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12,13] } , "mode": "end" }
+          ,"bellyn_regurgitate": { "frames": 10, "cycle": 3.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10] } , "mode": "end" }
+          ,"idle_to_sleep": { "frames": 5, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+          ,"sleep": { "frames": 2, "cycle": 3.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+          ,"sleep_to_idle": { "frames": 7, "cycle": 3.5, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellyn_to_bellys": { "frames": 8, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+          ,"bellys": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+          ,"sleep_annoy": { "frames": 1, "cycle": 1.0, "frameProperties" : { "index":[1] } , "mode": "end" }
+          ,"sleep_chomp": { "frames": 4, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+          ,"sleep_chomp_miss": { "frames": 4, "cycle": 3, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+          ,"sleep_chomp_devour": { "frames": 8, "cycle": 4, "frameProperties" : { "index":[1,2,3,4,5,6,7,8] } , "mode": "end" }
+          ,"bellys_struggle_down": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellys_struggle_left": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellys_struggle_right": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellys_struggle_up": { "frames": 7, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+          ,"bellys_digest": { "frames": 6, "cycle": 2.2, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+          ,"bellys_to_bellyn": { "frames": 12, "cycle": 5.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9,10,11,12] } , "mode": "end" }
+        }
+      }
+    }
+    , "parts": {
+      "background": {
+        "properties": {
+          "centered": true
+          , "zLevel": -1
+          , "transformationGroups": ["flip"]
+        }
+        , "partStates": {
+          "bodyState": {
+          }
+        }
+      }
+      , "victim": {
+        "properties": {
+          "centered": true
+          , "zLevel": 0
+          , "transformationGroups": ["flip", "victimposition"]
+          , "drivingSeatPosition": [0.0, 0.0]
+        }
+        , "partStates": {
+          "bodyState": {
+          }
+        }
+      }
+      , "foreground": {
+        "properties": {
+          "centered": true
+          ,"zLevel": 1
+          , "transformationGroups": ["flip"]
+        }
+        , "partStates": {
+          "bodyState": {
+            "empty": { "properties": { "image": "lazygryphon.png:empty.<frame><directives>" }  }
+            ,"idle": { "properties": { "image": "lazygryphon.png:idle.<frame><directives>" }  }
+            ,"blink": { "properties": { "image": "lazygryphon.png:blink.<frame><directives>" }  }
+            ,"yawn": { "properties": { "image": "lazygryphon.png:yawn.<frame><directives>" }  }
+            ,"pet": { "properties": { "image": "lazygryphon.png:pet.<frame><directives>" }  }
+            ,"mlem": { "properties": { "image": "lazygryphon.png:mlem.<frame><directives>" }  }
+            ,"chomp": { "properties": { "image": "lazygryphon.png:chomp.<frame><directives>" }  }
+            ,"chomp_miss": { "properties": { "image": "lazygryphon.png:chomp_miss.<frame><directives>" }  }
+            ,"chomp_devour": { "properties": { "image": "lazygryphon.png:chomp_devour.<frame><directives>" }  }
+            ,"bellyn_intro": { "properties": { "image": "lazygryphon.png:bellyn_intro.<frame><directives>" }  }
+            ,"bellyn": { "properties": { "image": "lazygryphon.png:bellyn.<frame><directives>" }  }
+            ,"bellyn_blink": { "properties": { "image": "lazygryphon.png:bellyn_blink.<frame><directives>" }  }
+            ,"bellyn_struggle_down": { "properties": { "image": "lazygryphon.png:bellyn_struggle_down.<frame><directives>" }  }
+            ,"bellyn_struggle_left": { "properties": { "image": "lazygryphon.png:bellyn_struggle_left.<frame><directives>" }  }
+            ,"bellyn_struggle_right": { "properties": { "image": "lazygryphon.png:bellyn_struggle_right.<frame><directives>" }  }
+            ,"bellyn_struggle_up": { "properties": { "image": "lazygryphon.png:bellyn_struggle_up.<frame><directives>" }  }
+            ,"bellyn_digest": { "properties": { "image": "lazygryphon.png:bellyn_digest.<frame><directives>" }  }
+            ,"bellyn_regurgitate": { "properties": { "image": "lazygryphon.png:bellyn_regurgitate.<frame><directives>" }  }
+            ,"idle_to_sleep": { "properties": { "image": "lazygryphon.png:idle_to_sleep.<frame><directives>" }  }
+            ,"sleep": { "properties": { "image": "lazygryphon.png:sleep.<frame><directives>" }  }
+            ,"sleep_to_idle": { "properties": { "image": "lazygryphon.png:sleep_to_idle.<frame><directives>" }  }
+            ,"bellyn_to_bellys": { "properties": { "image": "lazygryphon.png:bellyn_to_bellys.<frame><directives>" }  }
+            ,"bellys": { "properties": { "image": "lazygryphon.png:bellys.<frame><directives>" }  }
+            ,"sleep_annoy": { "properties": { "image": "lazygryphon.png:sleep_annoy.<frame><directives>" }  }
+            ,"sleep_chomp": { "properties": { "image": "lazygryphon.png:sleep_chomp.<frame><directives>" }  }
+            ,"sleep_chomp_miss": { "properties": { "image": "lazygryphon.png:sleep_chomp_miss.<frame><directives>" }  }
+            ,"sleep_chomp_devour": { "properties": { "image": "lazygryphon.png:sleep_chomp_devour.<frame><directives>" }  }
+            ,"bellys_struggle_down": { "properties": { "image": "lazygryphon.png:bellys_struggle_down.<frame><directives>" }  }
+            ,"bellys_struggle_left": { "properties": { "image": "lazygryphon.png:bellys_struggle_left.<frame><directives>" }  }
+            ,"bellys_struggle_right": { "properties": { "image": "lazygryphon.png:bellys_struggle_right.<frame><directives>" }  }
+            ,"bellys_struggle_up": { "properties": { "image": "lazygryphon.png:bellys_struggle_up.<frame><directives>" }  }
+            ,"bellys_digest": { "properties": { "image": "lazygryphon.png:bellys_digest.<frame><directives>" }  }
+            ,"bellys_to_bellyn": { "properties": { "image": "lazygryphon.png:bellys_to_bellyn.<frame><directives>" }  }
+          }
+        }
+      }
+    }
+	}
+	, "transformationGroups": {
+		"flip": {}
+		, "victimposition": {
+			"interpolated": true
+		}
+	}
+	, "sounds": {
+		"swallow": ["/sfx/objects/gulp.ogg", "/sfx/vore/swallow/swallow (1).ogg", "/sfx/vore/swallow/swallow (6).ogg", "/sfx/vore/swallow/swallow (12).ogg"]
+		, "digest": ["/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (18).ogg", "/sfx/vore/digest/digest (25).ogg", "/sfx/vore/digest/digest (11).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (16).ogg", "/sfx/vore/digest/digest (19).ogg", "/sfx/vore/digest/digest (20).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg", "/sfx/vore/digest/digest (9).ogg"]
+		, "lay": ["/sfx/objects/eggLay.ogg"]
+		, "struggle": ["/sfx/objects/belly1.ogg", "/sfx/objects/belly2.ogg", "/sfx/objects/belly3.ogg"]
+		, "slurp" : ["/sfx/vore/common/slurp.ogg"]
+	}
+	,"particleEmitters": {
+		"emotehappy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+  			{
+  			  "particle" : {
+    				"type" : "animated",
+    				"animation" : "/animations/emotes/happy.animation",
+    				"position" : [3.5, 4.5],
+    				"finalVelocity" : [0, 0],
+    				"initialVelocity" : [0, 0],
+    				"destructionTime" : 0.2,
+    				"destructionAction" : "shrink",
+    				"layer" : "front",
+    				"timeToLive" : 0.8,
+    				"flippable" : false
+  			  }
+  			}
+		  ]
+		}
+  }
+}

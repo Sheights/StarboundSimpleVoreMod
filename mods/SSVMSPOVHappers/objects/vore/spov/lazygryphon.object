@@ -1,0 +1,99 @@
+{
+  "objectName": "spovspawnerlazygryphon"
+  , "colonyTags": ["vore"]
+  , "rarity": "Rare"
+  , "shortdescription": "SPOV Lazy Gryphon"
+  , "race": "generic"
+  , "category": "other"
+  , "price": 500
+	, "health" : 5
+
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/lazygryphon/lazygryphon.png:idle.1"
+  , "description": "A voracious Gryphon that lays around all day."
+	, "tooltipFields": {
+		"statusLabel": "A voracious Gryphon that lays around all day."
+	}
+	, "tooltipSubtitle" : "SPOV Summoner"
+
+  , "orientations": [
+    {
+      "image": "/vehicles/spov/lazygryphon/lazygryphon.png:idle.1"
+      , "imagePosition": [-53, 0]
+      , "direction": "left"
+      , "flipImages": true
+      , "spaceScan": 0.1
+      , "anchors": ["bottom"]
+    }, {
+      "image": "/vehicles/spov/lazygryphon/lazygryphon.png:idle.1"
+      , "imagePosition": [-53, 0]
+      , "direction": "right"
+      , "spaceScan": 0.1
+      , "anchors": ["bottom"]
+    }
+  ]
+
+  , "inventoryIcon": "/vehicles/spov/lazygryphon/lazygryphonicon.png"
+
+  , "animation": "spovspawner.animation"
+	, "animationParts" : {
+    "bg": "/vehicles/spov/lazygryphon/lazygryphon.png:empty"
+	}
+	, "animationPosition" : [0, 21]
+	, "animationCustom" : {}
+
+  , "spov": {
+    "types": ["spovlazygryphon"]
+    , "position": [0.0, 3.375, 0.0, 3.375]
+    , "template": {}
+		, "pillsAdd": {
+      "softdigest": {}
+      ,"antiescape" : {}
+      ,"digest" : {}
+      ,"easyescape" : {}
+      ,"heal" : {}
+    }
+  }
+
+  , "colorOptions": [
+    {  "4b3728": "4b3728", "3b2a1f": "3b2a1f", "322318": "322318", "261b13": "261b13", "8e4f2f": "8e4f2f", "7b4122": "7b4122", "6b351c": "6b351c", "4c2514": "4c2514" }
+    ,{ "4b3728": "4b4b4e", "3b2a1f": "39393d", "322318": "2b2b30", "261b13": "1e1e23", "8e4f2f": "494948", "7b4122": "3d3b39", "6b351c": "302d2b", "4c2514": "23211e" }
+    ,{ "4b3728": "88afb6", "3b2a1f": "6a9fa6", "322318": "508690", "261b13": "3e676e", "8e4f2f": "9f7761", "7b4122": "946851", "6b351c": "815944", "4c2514": "714b37" }
+    ,{ "4b3728": "803329", "3b2a1f": "6e2a24", "322318": "5f211a", "261b13": "481b16", "8e4f2f": "7e4b31", "7b4122": "6e3d24", "6b351c": "5f331e", "4c2514": "442316" }
+    ,{ "4b3728": "973e6a", "3b2a1f": "7f355c", "322318": "6c284a", "261b13": "522039", "8e4f2f": "8f4547", "7b4122": "7f3537", "6b351c": "702c2e", "4c2514": "5f2223" }
+  ]
+
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+  , "scripts": [
+    "/scripts/npcToyObject.lua"
+    , "/scripts/vore/spovspawner.lua"
+    , "/vehicles/spov/lazygryphon/lazygryphonitemscript.lua"
+  ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			 [1.0, "laugh"]
+		  ],
+		  "leave" : [
+  			[1.0, "smile"],
+  			[1.0, "annoyed"],
+  			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+  }
+}
