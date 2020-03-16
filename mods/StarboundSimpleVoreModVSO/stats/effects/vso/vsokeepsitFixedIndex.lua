@@ -27,6 +27,13 @@ function updateholdings()
 		
 			mcontroller.resetAnchorState();	--Not sure if this is needed
 			world.sendEntityMessage( entity.id(), "vsoForcePlayerSit", owner, seatindex )	--This WONT WORK unless we are ON THE GROUND???
+			
+			--sb.logInfo( tostring( dorpcE ).." PLAYER "..tostring( entity.id() ).." "..tostring( seatindex ).." "..tostring( owner ) );
+			
+			if dorpcE then
+				world.sendEntityMessage( owner, "vsoVictimReseatE", entity.id(), seatindex ); --??
+			end
+
 			--mcontroller.setAnchorState( owner, seatindex )	--This COULD WORK but it errors too much.
 		
 			--RPC version sends a message BACK to the owner about this
@@ -39,7 +46,23 @@ function updateholdings()
 		if status.isResource("stunned") then
 			status.setResource("stunned", 100 )
 		end
-		local didit = world.callScriptedEntity( entity.id(), "npc.setLounging", owner, seatindex )
+		
+		local sittingon, seatid = mcontroller.anchorState();	--Useful for "lounging on"
+		if (sittingon ~= owner) or (seatid ~= seatindex) then
+			world.callScriptedEntity( entity.id(), "npc.setLounging", owner, seatindex );  --CONSTANTLY resetting NPC? Hm... we would like to get this E input...
+		
+			--sb.logInfo( tostring( dorpcE ).." NPC "..tostring( entity.id() ).." "..tostring( seatindex ).." "..tostring( owner ) );
+			
+			if dorpcE then
+				world.sendEntityMessage( owner, "vsoVictimReseatE", entity.id(), seatindex ); --?? NPC's can tap "E" ?
+			end
+		end
+		
+		--local sittingon, seatid = mcontroller.anchorState();	--Useful for "lounging on"
+		--if (sittingon ~= owner) or (seatid ~= seatindex) then
+		
+		--local didit = world.callScriptedEntity( entity.id(), "npc.setLounging", owner, seatindex );  --CONSTANTLY resetting NPC? Hm... we would like to get this E input...
+		
 	elseif world.isMonster( entity.id() ) then
 	
 		--better apply the vsomonsterbind status effect...
@@ -57,6 +80,9 @@ function init()
 	self.victimtype = entity.entityType();
 	owner = effect.sourceEntity();
 	seatindex = config.getParameter( "fixedSeatIndex" )
+	dorpcE = config.getParameter( "sendRPCEMessage", 0 ) > 0;
+
+	--sb.logInfo( tostring( config.getParameter( "sendRPCEMessage" ) ).." "..tostring( dorpcE ).." NOSH "..tostring( victim ).." "..tostring( seatindex ).." "..tostring( owner ) );
 	
 	if victim == owner then
 		effect.expire();

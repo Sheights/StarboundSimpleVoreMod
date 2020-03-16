@@ -26,16 +26,23 @@ PHYSICS ISSUES:
 		DONE 4) I think you wanted your pie to start vertically then count CW, but now it starts horizontally and counts CCW (no comment on da basic drawing representing your pie, just need to rotate a little so 0 and 4 are horizontally aligned >..>)
 	Sheights:
 		DONE rage effect, kickback effect can disable player? Hmmm... No, we can't do any better than stopping everything but active items (without a VSO involved)
+	DONE Can't seem to "walk" properly up/down blocks like a NPC can...
+	DONE 	Apparently there is more code to fix for this. (direct block checks? Hm...) Possibly slightly adjusting the bounding box angle?
+	DONE enable jump back in for owner and owner escape failout
+	DONE E key is now seamless in activation frequency (reliable button press for E)
+	DONE interact with NPC's seems to work, position is a bit flakey
+	
 	Holding pie does not FOLLOW your position please fix that (screen position? Hm... because the player can aim, how do we screen pos...)
-	Can't seem to "walk" properly up/down blocks like a NPC can...
-		Apparently there is more code to fix for this. (direct block checks? Hm...) Possibly slightly adjusting the bounding box angle?
+	Holding pie is on wrong layer (need UI for pie?)
 	Can we shoot/eat monsters? Stomp on them? Can we run yet and bite while running??
-
+		More importantly, can we eat monsters without messing with their lua scripts?
+		IE, status-y things are OK for them? Still hard to get access to their state.
 
 
 Without rider
 
-	Does nothing?
+	Does nothing? Probably should auto-return to inventory... or be a "ghost" stand...
+	
 	Or, should the second you spawn it, it "consumes" you and you become it instantly? (no waiting for rider?)
 
 With (player character) rider
@@ -275,24 +282,22 @@ function onBegin()	--This sets up the VSO ONCE.
 	end )
 
 	vsoOnInteract( "state_normal", function( targetid )
-
-		--[[
-		local eatid = vsoHasEatenId("drivingSeat");
-		if eatid then
-			--ignore, already have a driver.
-
-			--Other things someone else can do of course!
-
-		else
-			--Hm... must match "owner" to "safely" get eaten?
-			--if targetid == self.ownerKey ??? but ownerKey is a UID not... hm.
-
-			vsoEat( targetid, "drivingSeat" )
-			--"invis"
-			vsoMakeInteractive( false );
+	
+		if vsoIsVehicleOwner( targetid ) then
+		
+			local eatid = vsoHasEatenId("drivingSeat");
+			if eatid ~= nil then
+				if eatid == targetid then
+					--something else? ignore?
+				else
+					vsoUneat( "drivingSeat" );
+					vsoEat( targetid, "drivingSeat" )
+				end
+			else
+				vsoEat( targetid, "drivingSeat" )
+			end
 		end
-		]]--
-
+		
 	end )
 
 	vsoOnDamage( "state_normal", function( damageRequest )
@@ -303,8 +308,10 @@ function onBegin()	--This sets up the VSO ONCE.
 		changeAnims( { "hit", "idle" } )
 		self.changeanims = true;
 
-		vsoUneat( "victimSeat" )
-		vsoUseLounge( false, "victimSeat" )
+		if false then --"spit out victim if hit" for when we carry people in maw ,or are in the process of eating/pushing them 
+			vsoUneat( "victimSeat" )
+			vsoUseLounge( false, "victimSeat" )
+		end
 		--applyKnockback -> more complicated than desired (needs status controller update and such, refer to monster_primary npc_primary, player_primary)
 		--[[
 		if damageRequest.knockbackMomentum then
@@ -333,16 +340,45 @@ end
 
 function state_normal()
 
+	self.anim = vsoAnimCurr( "bodyState" );
+	self.animended = vsoAnimEnd( "bodyState" );
+
 	local eatid = vsoHasEatenId("drivingSeat");
 
     if (eatid ~= nil) then
-      vehicle.setDamageTeam( world.entityDamageTeam(eatid) )
+		vehicle.setDamageTeam( world.entityDamageTeam(eatid) )
     else
-      vehicle.setDamageTeam( {type = "passive"} )
-    end
+		vehicle.setDamageTeam( {type = "passive"} )
 
-	self.anim = vsoAnimCurr( "bodyState" );
-	self.animended = vsoAnimEnd( "bodyState" );
+		--Do something else? without a driver we should RETURN to the item from where we came...
+		--How the heck do we do that?
+		--Remove all eaten things
+		--Act as if dead, but dont warp out...
+
+		if self.anim ~= "hit" then
+			changeAnims( { "hit" } )
+			self.changeanims = true;
+		end
+		
+		--apply an effect?
+		if self.bellydirectives == self.firstdirectives then
+			self.bellydirectives = "multiply=00000000;"..self.firstdirectives
+			animator.setPartTag( "belly", "bellydirectives", "?"..self.bellydirectives )
+			
+		end
+
+		--animator.setPartTag( "bg", "directives", "?".."multiply=00000000;" ) ??
+		--animator.setPartTag( "fg", "directives", "?".."multiply=00000000;")
+		
+		--Uneat everything I have eaten
+		local eatid = vsoHasEatenId("victimSeat");
+		if eatid ~= nil then
+			vsoUneat( "victimSeat" )
+			vsoUseLounge( false, "victimSeat" )
+		end
+		
+	  return;
+    end
 
 	local new_fall_through_platforms = self.fall_through_platforms;
 
@@ -668,7 +704,8 @@ function state_normal_controls()
 
 		--sb.logInfo( tostring( inputs.Etaps ).." E="..tostring( inputs.E ).." Etap="..tostring( inputs.Etap ));
 		if inputs.E >= 1 then
-			--vsoSay( "E! "..tostring( inputs.E ).." Es="..tostring( inputs.Etaps ).." Etap="..tostring( inputs.Etap ));
+			--vsoSay( tostring( vsoDeltaFromStart() ).." E! "..tostring( inputs.E ).." Es="..tostring( inputs.Etaps ).." Etap="..tostring( inputs.Etap ));
+			--vsoSay( tostring( vsoDeltaFromStart() ).." E!");
 		end
 		
 		if inputs.E == 1 and pie_action == nil then	--E input is VERY reliable now.
@@ -708,6 +745,14 @@ function state_normal_controls()
 				--sb.logInfo( "belly directives OFF" );
 				--sb.logInfo( self.bellydirectives )
 			end
+			
+			if pie_action == "pathto" then
+			
+				--Two tries? 
+				vsoUneat( "drivingSeat" );	--Hmm..
+			
+			end
+			
 		end
 
 		if self.anim == "layfull" or self.anim == "layfullwig" then

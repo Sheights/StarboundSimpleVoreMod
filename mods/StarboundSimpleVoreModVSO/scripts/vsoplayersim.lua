@@ -1,3 +1,10 @@
+--TODO
+--	Make NPC interaction work right (for fake E/interact)
+--	Determine current item/object selected?
+--		Would like it to be easier to "close" a vehicle with item use?
+--
+
+
 
 function vsoSimulatePlayerDistanceSquared( a, b )
 	local dx = b[1] - a[1];
@@ -201,12 +208,194 @@ function vsoSimulatePlayerNPCInteract( npcid, playerid )--targetposition, radius
 	
 	if npcid ~= nil then
 	
-		local configjson = { sourceId = playerid }	--, targetId = npcid
-		sb.logInfo( "attempting NPC interaction "..tostring( npcid ) );
-		world.sendEntityMessage( npcid, "vsoplayerinteract", configjson )	--requires a patch to npc base.
+		world.sendEntityMessage( npcid, "vsoPlayerInteract", {}, playerid );
+		
+		--sb.logInfo( "attempting NPC interaction "..tostring( npcid ) );
+		
+		--player.interact( "Message", data, npcid )
+		--world.sendEntityMessage( playerid, "vsoForceInteract", "Message", 
+		--	{
+		--		messageType = "interaction"	--didnt crash... hm...
+		--		,messageArgs = { { sourceId=playerid } }--sourceId = playerid 
+		--	}, npcid );
+		
+		--	
+			--None
+			--OpenContainer
+			--SitDown
+			--OpenCraftingInterface
+			--OpenSongbookInterface
+			--OpenNpcCraftingInterface
+			--OpenMerchantInterface
+			--OpenAiInterface
+			--OpenTeleportDialog
+			--ShowPopup
+			--ScriptPane
+			--Message
+		--
+		--world.sendEntityMessage(self.target, "notify", {type = "arresting", sourceId = activeItem.ownerEntityId()})
+		
+		--local promise = world.sendEntityMessage( playerid, questId..".participantEvent", entity.uniqueId(), "interaction" )
+		--notify ?
+		
+        --[[
+		
+		self.questParticipant:fireEvent("interaction", args.sourceId)
+		  
+		function QuestParticipant:fireEvent(eventName, ...)
+		  local uniqueId = entity.uniqueId()
+		  for stagehand, role in pairs(self.data.roles) do
+			for player, questId in pairs(role.players) do
+			  if role.participateIn[questId] then
+				local message = questId..".participantEvent"
+				self.outbox:sendMessage(player, message, uniqueId, eventName, ...)
+			  end
+			end
+		  end
+		end
+		
+		--self.outbox:sendMessage(player, questId..".participantEvent", entity.uniqueId(), "interaction", ...)
+		self.outbox:sendMessage(player, message, uniqueId, eventName, ...)
+					
+					
+		function Outbox:sendMessage(recipient, message, ...)
+		  self:sendMessageWithOptions({}, recipient, message, ...)
+		end
+
+		
+		--sendMessageWithOptions({}, player, questId..".participantEvent", entity.uniqueId(), "interaction", ...)
+		function Outbox:sendMessageWithOptions(options, recipient, message, ...)
+		  local messageData = {
+			  options = options,
+			  recipient = recipient,
+			  message = message,
+			  args = {...}
+			}
+		  if not self:trySend(messageData) then
+			self:postpone(messageData)
+		  end
+		end
+				
+		--trySend({
+			  options = {},
+			  recipient = player,
+			  message = questId..".participantEvent",
+			  args = { entity.uniqueId(), "interaction" }
+		})
+		function Outbox:trySend(messageData)
+		  if self.contactList:isEntityAvailable(messageData.recipient) then
+			local promise = world.sendEntityMessage(messageData.recipient, messageData.message, table.unpack(messageData.args))
+			if not messageData.options.unreliable then
+			  messageData.response = promise
+			  self.sent[#self.sent+1] = messageData
+			end
+			self:logMessage(messageData, "sent")
+			return true
+		  end
+		  return false
+		end
+		
+		local promise = world.sendEntityMessage( player, questId..".participantEvent", entity.uniqueId(), "interaction" )
+		]]--
+
+		--local promise = world.sendEntityMessage( messageData.recipient, messageData.message, table.unpack(messageData.args) )
+		
+		--world.sendEntityMessage( npcid, "interaction", playerid ); --nothing...
+	
+		--I really wanted this to work... maybe with more work?
+		--world.sendEntityMessage( playerid, "vsoForceInteract", "Message", {
+		--	messageType = "interaction"	--didnt crash... hm...
+		--	,messageArgs = { { sourceId=playerid } }--sourceId = playerid 
+		--}, npcid );
+		
+		--player.interact( "Message", { messageArgs = {0}, messageType="EntityInteract" }, targetEntityId )
+		
+        --  messageType = action.messageType,
+        --  messageArgs = args
+		  
+		--messageData.recipient
+		--messageData.options
+		
+		--OKAY! there is a OBJECT (contract thingy) that calls the NPC to interact/say at YOU
+		--so how do we deal with that?
+		--	world.callScriptedEntity(primary, "tenant.canDeliverRent") ???
+		--
+		--	self.questParticipant:fireEvent("interaction", args.sourceId)
+		--
+		--	require "/scripts/quest/participant.lua"
+		--
+		--	
+		--
+		--Colony deed:
+		--[[
+			function onInteraction(args)
+			  self.questParticipant:fireEvent("interaction", args.sourceId)
+
+			  if isOccupied() then
+				if isRentDue() then
+				  local primary = primaryTenant()
+				  callTenantsHome("rent")
+				  if not self.npcsDeliverRent or not primary or not world.callScriptedEntity(primary, "tenant.canDeliverRent") then
+					world.spawnTreasure(self.position, getRent().pool, getRentLevel())
+					self.rentTimer:reset()
+				  end
+				else
+				  callTenantsHome("beacon")
+				end
+				animator.setAnimationState("deedState", "beacon")
+
+			  else
+				scanVacantArea()
+			  end
+			end
+		]]--
+		--Somehow this is really hard.
+		--We have the playerid, the npcid, and just need them to trigger a interaction.
+		--BUT the player.interact only has a FIXED LIST of things it can do:
+		--	
+			--None
+			--OpenContainer
+			--SitDown
+			--OpenCraftingInterface
+			--OpenSongbookInterface
+			--OpenNpcCraftingInterface
+			--OpenMerchantInterface
+			--OpenAiInterface
+			--OpenTeleportDialog
+			--ShowPopup
+			--ScriptPane
+			--Message
+		--
+		
+		--world.sendEntityMessage( playerid, "vsoForceInteract", "None", {sourceId = playerid}, npcid );
+		
+		--
+		
+		
+		--local configjson = { sourceId = playerid }	--, targetId = npcid
+		--{ messageArgs = {0}, messageType="EntityInteract" }; --
+		--world.callScriptedEntity( npcid, "interact", {sourceId = playerid} )
+		
+		--world.sendEntityMessage( playerid, "vsoForceInteract", "interact", configjson, npcid );
+		
+		--player.interact( "Message", { messageArgs = {0}, messageType="EntityInteract" }, targetEntityId )
+		
+		--world.sendEntityMessage( npcid, "vsoplayerinteract", configjson, playerid )	--requires a patch to npc base.
 		
 		--Huh. for SOME REASON npc's dont initialize with the base thing... "vsoplayerinteract"
+		--	function handleInteract(args) (merchants)
+		--	function onInteraction(args)  (objects? vehicles?)
+		--	world.sendEntityMessage(uniqueId, "recruit.interactBehavior", { sourceId = entity.id() })   recruit specific? in player scrupt?
 		
+		--world.callScriptedEntity( npcid, "interact", configjson );
+		
+		--world.callScriptedEntity( npcid, "onInteraction", configjson );
+		
+		--player.interact( type, config, target )
+		
+		
+		--world.sendEntityMessage( playerid, "vsoForceInteract", "Message", configjson, npcid ); --Crashes system, messageArgs, etc...
+				
 		finalnpcid = { npcid, "npc" }
 		
 	end
@@ -582,6 +771,10 @@ end
 
 function vsoSimulatePlayerInteraction( playerid, aimposition, usefacingdir, radius )
 	--vsoSimulatePlayerInteraction( self.vsoSpawnVehicleOwnerEntityId, self.last_aim_position, 2.5, vsoDirection() )
+	
+	--Anyway we can get ACTUALLY what is selected/highlighted? Hm...
+	--	not sure.
+	
 	
 	--[[
 	

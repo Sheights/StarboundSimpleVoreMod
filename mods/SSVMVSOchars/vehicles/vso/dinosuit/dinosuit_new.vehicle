@@ -39,6 +39,7 @@
 		"useAnimatorFirst":0
 		,"spawnOwnerState":"off"
 		,"spawnAsVehicle":true
+		,"highAccuracyEInput":true
 		,"movementSettingsFlipPoly" : 0
 		,"movementSettings" : {
 			"default":{

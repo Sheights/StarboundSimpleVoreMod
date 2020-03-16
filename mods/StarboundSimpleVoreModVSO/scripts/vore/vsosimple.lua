@@ -494,12 +494,12 @@ function vsoEatForceRPC( victimid, seatindex )
 	if world.entityExists( victimid ) then
 		if vsoExcludeByType[ world.entityType( victimid ) ] == nil then
 			if world.entityType( victimid ) == 'monster' then
-				--Oh dear. This should copy stuff from zazergun to do this right
+				--Oh dear. This should copy stuff from zazergun to do this right...
 				world.sendEntityMessage( victimid, "applyStatusEffect", "vsomonsterbind", 1.0, entity.id() );--well, victim position might work but... hm. for later!
-				
+				--Since its a monster, 'E' commands are synthetic.
 				return world.sendEntityMessage( victimid, "vsoKeepSitEffect", seatindex, entity.id(), { mcontroller.xPosition(), mcontroller.yPosition(), 1.0, 1.0, 0.0 } );
 			else
-				return world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsit"..tostring(seatindex), 0.1, entity.id() );
+				return world.sendEntityMessage( victimid, "applyStatusEffect", "vsokeepsitresp"..tostring(seatindex), 0.1, entity.id() );
 			end
 			return nil;
 		end
@@ -735,6 +735,17 @@ function vsoInputUpdate( seatname, input, dt, overrides )
 		end
 	end
 	
+	if input["Etap"] == nil then
+		input["Etap"] = 0;
+	end
+
+	if input["Etapproxy"] ~= nil then
+		if input["Etapproxy"] > 0 then
+			input["Etap"] = 1;
+			input["Etapproxy"] = 0;
+		end
+	end
+
 	vsoInputComputeLogical( input, dt )
 
 	--Check for special case resets: ( hold primary, secondary, and jump, then tap "down" )
@@ -1028,6 +1039,19 @@ function vsoMsgHdlSeatIndexGet(_, _, victimid, ownercheck )
 	return retv;	--UHM!!!
 end
 
+function vsoMsgHdlVictimReseatE(_, _, victimid, seatid)	--Handle a interact from a player
+	if seatid >= 0 and seatid < 8 then
+		local seatname = self.vsoLoungeIndexToName[ (1 + seatid) ];
+		if self.sv.eaten[ seatname ] ~= nil then
+			--self.sv.eaten[ seatid ]
+			if self.sv.eaten[ seatname ].input ~= nil then
+				--self.sv.eaten[ seatname ].input["Etap"] = 1;	--for certain!
+				self.sv.eaten[ seatname ].input["Etapproxy"] = 1;
+			end
+		end
+	end
+end
+
 function vsoMsgHdlForcePlayerSitRequested(_, _, victimid, seatindex )
 
 	--This means we consider "E" "Etap" down for the seatindex'th victim.
@@ -1196,6 +1220,21 @@ function vsoAddStoredStat( stattable, method, key, value )
 	vsoStorageSaveKey( stattable );
 end
 
+function vsoIsVehicleOwner( targetid )
+	--vehicleParams.vsoSpawnOwnerEntityId (who OWNS the item currrently)
+	--vehicleParams.ownerKey  ( SPECIAL unique key to check vehicle-item relationship )
+	if world.entityExists( targetid ) then	--not ALL the time checking?
+		if world.entityExists( self.vsoSpawnVehicleOwnerEntityId ) then	--not ALL the time checking?
+			if world.entityUniqueId( targetid ) == world.entityUniqueId( self.vsoSpawnVehicleOwnerEntityId ) then  --world.entityName
+			
+				--Might need more?
+			
+				return true
+			end
+		end
+	end
+	return false
+end
 
 function vsoPill( pillname ) 
 	if storage.pills ~= nil then
@@ -2285,6 +2324,8 @@ function init()
 		
 		self.useAnimatorFirst = vsoIfnil( self.cfgVSO.useAnimatorFirst, 0 ) > 0;
 		
+		self.useHighAccuracyEInput = vsoIfnil( self.cfgVSO.highAccuracyEInput, false );
+		
 		self.cfgVSO.damageTeamType = vsoIfnil( self.cfgVSO.damageTeamType, "indiscriminate" );	--"ghostly", "passive", "enemy", "assistant" + team=1, "friendly", "indiscriminate"
 			--npc.setDamageTeam({ type = "assistant", team = 1 }) -- Friendly NPCs always on team 1
 			--"enemy" "friendly" "passive" "ghostly" "environment" "indiscriminate"
@@ -2297,7 +2338,7 @@ function init()
 			self.ownerKey = self.vsoSpawnOwnerLast;
 				
 			--setup the store functionality
-			vehicle.setPersistent(self.ownerKey)
+			vehicle.setPersistent( self.ownerKey )
 			
 			--self.ownerKey = config.getParameter("ownerKey");
 			--sb.logInfo( tostring( self.ownerKey ) );
@@ -2510,6 +2551,7 @@ function init()
 			message.setHandler("vsoGetVictimSeatIndex", vsoMsgHdlSeatIndexGet )
 
 			message.setHandler("vsoForcePlayerSitRequested", vsoMsgHdlForcePlayerSitRequested )
+			message.setHandler("vsoVictimReseatE", vsoMsgHdlVictimReseatE )
 			
 			message.setHandler("vsoGet", vsoMsgHdlGet )
 			
@@ -2877,8 +2919,8 @@ function update( dt )
 				--Kinda need a more specialized message version of this (IE, when we SEND the message, it responds if the victim was tapping E or not...)
 				--That is, because the status effect and the repeated message occur asynchronously, so we need THEM to tell us if the victim is resat or not.
 				--Huh.
-				if false then --do we WANT more accurate E inputs? hm
-					v.eatforcerpc = vsoEatForceRPC( v.id, self.vsoLoungeNameToIndex[ k ] )
+				if self.useHighAccuracyEInput then --do we WANT more accurate E inputs? hm...
+					vsoEatForceRPC( v.id, self.vsoLoungeNameToIndex[ k ] )
 				else
 					vsoEatForce( v.id, self.vsoLoungeNameToIndex[ k ] ) --Not sure on this one. if we ALWAYS send that message... hm.
 				end
