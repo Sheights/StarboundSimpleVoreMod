@@ -1,0 +1,14 @@
+{
+  "itemName" : "spovpillanyin",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillanyin.png",
+  "description" : "A pill that allows preds to swallow preys how they want to.",
+  "shortdescription" : "Any Entry Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+  },
+  "pillRemove": [ "avonly", "ovonly" ]
+}

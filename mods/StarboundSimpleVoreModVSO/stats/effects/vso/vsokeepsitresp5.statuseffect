@@ -1,0 +1,11 @@
+{
+  "name" : "vsokeepsitresp5",
+  "defaultDuration" : 0.2,
+  "effectConfig" : {
+	"fixedSeatIndex" : 5
+	,"sendRPCEMessage":1
+  },
+  "scripts" : [
+    "vsokeepsitFixedIndex.lua"
+  ]
+}

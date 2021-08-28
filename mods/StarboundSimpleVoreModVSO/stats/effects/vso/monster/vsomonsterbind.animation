@@ -1,0 +1,13 @@
+{
+  "particleEmitters" : {
+    "sparks" : {
+      "enabled" : false,
+      "emissionRate" : 5.0,
+      "particles" : [ ]
+    }
+  },
+  "lights" : {
+  },
+  "sounds" : {
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "globalTagDefaults" : {
+      "frame" : "1"
+      ,"directives" : ""
+  }
+    ,"animatedParts": {
+      "stateTypes": {
+        "bodyState": {
+          "default": "empty"
+          , "states": {
+            "empty": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"silhouette": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"stand_idle": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"fly": { "frames": 4, "cycle": 0.6, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"take_off": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"hang": { "frames": 7, "cycle": 1.05, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+            ,"hang_idle": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"hang_to_tease": { "frames": 4, "cycle": 0.6, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"hang_tease": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"dive": { "frames": 2, "cycle": 0.4, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"dive_fail": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"tease_to_ground_pound": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"ground_pound": { "frames": 1, "cycle": 0.15, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"ground_pound_fail": { "frames": 5, "cycle": 0.75, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"dive_catch": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"dive_swallow": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"ground_pound_catch": { "frames": 4, "cycle": 0.8, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"ground_pound_swallow": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"stand_full": { "frames": 1, "cycle": 0.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"full_flight_take_off": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] } , "mode": "end" }
+            ,"full_flight_idle": { "frames": 4, "cycle": 0.4, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_attempt_digest_in": { "frames": 4, "cycle": 0.4, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_attempt_digest_out": { "frames": 4, "cycle": 0.4, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_attempt_digest": { "frames": 4, "cycle": 0.4, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_digest_fast": { "frames": 4, "cycle": 0.4, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_digest_normal": { "frames": 4, "cycle": 0.6, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"full_flight_land": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] } , "mode": "end" }
+            ,"stand_tease_in": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"stand_tease_out": { "frames": 2, "cycle": 0.3, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"stand_tease": { "frames": 4, "cycle": 0.8, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"wiggle_react_in": { "frames": 1, "cycle": 0.2, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"wiggle_react_out": { "frames": 1, "cycle": 0.2, "frameProperties" : { "index":[1] } , "mode": "end" }
+            ,"wiggle_react": { "frames": 7, "cycle": 1.4, "frameProperties" : { "index":[1,2,3,4,5,6,7] } , "mode": "end" }
+            ,"leave": { "frames": 9, "cycle": 1.8, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9] } , "mode": "end" }
+            ,"full_wiggle_front": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_back": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_up": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"full_wiggle_down": { "frames": 5, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4,5] } , "mode": "end" }
+            ,"digest": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"digest_tease_in": { "frames": 2, "cycle": 0.4, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"digest_tease": { "frames": 4, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"absorb": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"absorb_idle": { "frames": 4, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4] } , "mode": "end" }
+            ,"hold_urps": { "frames": 2, "cycle": 2.0, "frameProperties" : { "index":[1,2] } , "mode": "end" }
+            ,"urps": { "frames": 9, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4,5,6,7,8,9] } , "mode": "end" }
+            ,"blush": { "frames": 1, "cycle": 1.5, "frameProperties" : { "index":[1] } , "mode": "end" }
+          }
+        }
+      }
+        , "parts": {
+          "background": {
+            "properties": {
+              "offset": [0, 0.5]
+              ,"centered": true
+              , "zLevel": -1
+              , "transformationGroups": ["flip"]
+            }
+            , "partStates": {
+              "bodyState": {
+              }
+            }
+          }
+
+          , "foreground": {
+            "properties": {
+              "offset": [0, 0.5]
+              ,"centered": true
+              , "zLevel": 1
+              , "transformationGroups": ["flip"]
+            }
+            , "partStates": {
+              "bodyState": {
+                "empty": { "properties": { "image": "lekrassvmderulfaspov.png:empty.<frame><directives>" }  }
+                ,"silhouette": { "properties": { "image": "lekrassvmderulfaspov.png:silhouette.<frame><directives>" }  }
+                ,"stand_idle": { "properties": { "image": "lekrassvmderulfaspov.png:stand_idle.<frame><directives>" }  }
+                ,"fly": { "properties": { "image": "lekrassvmderulfaspov.png:fly.<frame><directives>" }  }
+                ,"take_off": { "properties": { "image": "lekrassvmderulfaspov.png:take_off.<frame><directives>" }  }
+                ,"hang": { "properties": { "image": "lekrassvmderulfaspov.png:hang.<frame><directives>" }  }
+                ,"hang_idle": { "properties": { "image": "lekrassvmderulfaspov.png:hang_idle.<frame><directives>" }  }
+                ,"hang_to_tease": { "properties": { "image": "lekrassvmderulfaspov.png:hang_to_tease.<frame><directives>" }  }
+                ,"hang_tease": { "properties": { "image": "lekrassvmderulfaspov.png:hang_tease.<frame><directives>" }  }
+                ,"dive": { "properties": { "image": "lekrassvmderulfaspov.png:dive.<frame><directives>" }  }
+                ,"dive_fail": { "properties": { "image": "lekrassvmderulfaspov.png:dive_fail.<frame><directives>" }  }
+                ,"tease_to_ground_pound": { "properties": { "image": "lekrassvmderulfaspov.png:tease_to_ground_pound.<frame><directives>" }  }
+                ,"ground_pound": { "properties": { "image": "lekrassvmderulfaspov.png:ground_pound.<frame><directives>" }  }
+                ,"ground_pound_fail": { "properties": { "image": "lekrassvmderulfaspov.png:ground_pound_fail.<frame><directives>" }  }
+                ,"dive_catch": { "properties": { "image": "lekrassvmderulfaspov.png:dive_catch.<frame><directives>" }  }
+                ,"dive_swallow": { "properties": { "image": "lekrassvmderulfaspov.png:dive_swallow.<frame><directives>" }  }
+                ,"ground_pound_catch": { "properties": { "image": "lekrassvmderulfaspov.png:ground_pound_catch.<frame><directives>" }  }
+                ,"ground_pound_swallow": { "properties": { "image": "lekrassvmderulfaspov.png:ground_pound_swallow.<frame><directives>" }  }
+                ,"stand_full": { "properties": { "image": "lekrassvmderulfaspov.png:stand_full.<frame><directives>" }  }
+                ,"full_flight_take_off": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_take_off.<frame><directives>" }  }
+                ,"full_flight_idle": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_idle.<frame><directives>" }  }
+                ,"full_flight_attempt_digest_in": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_attempt_digest_in.<frame><directives>" }  }
+                ,"full_flight_attempt_digest_out": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_attempt_digest_out.<frame><directives>" }  }
+                ,"full_flight_attempt_digest": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_attempt_digest.<frame><directives>" }  }
+                ,"full_flight_digest_fast": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_digest_fast.<frame><directives>" }  }
+                ,"full_flight_digest_normal": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_digest_normal.<frame><directives>" }  }
+                ,"full_flight_land": { "properties": { "image": "lekrassvmderulfaspov.png:full_flight_land.<frame><directives>" }  }
+                ,"stand_tease_in": { "properties": { "image": "lekrassvmderulfaspov.png:stand_tease_in.<frame><directives>" }  }
+                ,"stand_tease_out": { "properties": { "image": "lekrassvmderulfaspov.png:stand_tease_out.<frame><directives>" }  }
+                ,"stand_tease": { "properties": { "image": "lekrassvmderulfaspov.png:stand_tease.<frame><directives>" }  }
+                ,"wiggle_react_in": { "properties": { "image": "lekrassvmderulfaspov.png:wiggle_react_in.<frame><directives>" }  }
+                ,"wiggle_react_out": { "properties": { "image": "lekrassvmderulfaspov.png:wiggle_react_out.<frame><directives>" }  }
+                ,"wiggle_react": { "properties": { "image": "lekrassvmderulfaspov.png:wiggle_react.<frame><directives>" }  }
+                ,"leave": { "properties": { "image": "lekrassvmderulfaspov.png:leave.<frame><directives>" }  }
+                ,"full_wiggle_front": { "properties": { "image": "lekrassvmderulfaspov.png:full_wiggle_front.<frame><directives>" }  }
+                ,"full_wiggle_back": { "properties": { "image": "lekrassvmderulfaspov.png:full_wiggle_back.<frame><directives>" }  }
+                ,"full_wiggle_up": { "properties": { "image": "lekrassvmderulfaspov.png:full_wiggle_up.<frame><directives>" }  }
+                ,"full_wiggle_down": { "properties": { "image": "lekrassvmderulfaspov.png:full_wiggle_down.<frame><directives>" }  }
+                ,"digest": { "properties": { "image": "lekrassvmderulfaspov.png:digest.<frame><directives>" }  }
+                ,"digest_tease_in": { "properties": { "image": "lekrassvmderulfaspov.png:digest_tease_in.<frame><directives>" }  }
+                ,"digest_tease": { "properties": { "image": "lekrassvmderulfaspov.png:digest_tease.<frame><directives>" }  }
+                ,"absorb": { "properties": { "image": "lekrassvmderulfaspov.png:absorb.<frame><directives>" }  }
+                ,"absorb_idle": { "properties": { "image": "lekrassvmderulfaspov.png:absorb_idle.<frame><directives>" }  }
+                ,"hold_urps": { "properties": { "image": "lekrassvmderulfaspov.png:hold_urps.<frame><directives>" }  }
+                ,"urps": { "properties": { "image": "lekrassvmderulfaspov.png:urps.<frame><directives>" }  }
+                ,"blush": { "properties": { "image": "lekrassvmderulfaspov.png:blush.<frame><directives>" }  }
+              }
+            }
+          }
+
+          , "victim": {
+            "properties": {
+              "centered": true
+              , "zLevel": 0
+              , "transformationGroups": ["flip", "drivingSeatPosition"]
+              , "drivingSeatPosition": [0.0, 0.0]
+            }
+            , "partStates": {
+              "bodyState": {
+              }
+            }
+          }
+        }
+  }
+
+
+  , "transformationGroups": {
+    "flip": {}
+    , "drivingSeatPosition": {
+        "interpolated": true
+    }
+  }
+  , "sounds": {
+    "pounce": ["/sfx/objects/eggLay.ogg"],
+    "nom": ["/sfx/objects/sw/Nom.ogg"],
+    "transfer": ["/sfx/objects/sw/StomachTransfer.ogg"],
+    "full": ["/sfx/vore/digest/digest (1).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (9).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (21).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg"],
+    "struggle": ["/sfx/objects/sw/MouthStruggle1.ogg", "/sfx/objects/sw/MouthStruggle2.ogg", "/sfx/objects/sw/StomachStruggle3.ogg"],
+    "burp": ["/sfx/vore/burp/burp (4).ogg"],
+    "digest": ["/sfx/vore/digest/digest (4).ogg", "/sfx/vore/digest/digest (22).ogg", "/sfx/vore/digest/digest (25).ogg"],
+    "med": ["/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (42).ogg", "/sfx/vore/digest/digest (34).ogg", "/sfx/vore/digest/digest (33).ogg", "/sfx/vore/digest/digest (24).ogg", "/sfx/vore/digest/digest (20).ogg"],
+    "small": ["/sfx/vore/digest/digest (5).ogg", "/sfx/vore/digest/digest (8).ogg", "/sfx/vore/digest/digest (12).ogg", "/sfx/vore/digest/digest (14).ogg", "/sfx/vore/digest/digest (23).ogg", "/sfx/vore/digest/digest (26).ogg"]
+  }
+  ,"particleEmitters": {
+    "drips" : {
+      "emissionRate" : 7.5,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "ember",
+            "layer" : "front",
+            "size" : 1.0,
+            "color" : [120, 221, 254, 230],
+            "fade" : 0.9,
+            "destructionAction" : "shrink",
+            "destructionTime" : 0.8,
+            "position" : [-1.5, -1.0],
+            "offsetRegion" : [0, 0, 0, 0],
+            "initialVelocity" : [0, 0.0],
+            "finalVelocity" : [0, -30],
+            "approach" : [3, 10],
+            "timeToLive" : 1.5,
+            "variance" : {
+              "initialVelocity" : [0.2, 0.5],
+              "size" : 0.5,
+              "position" : [0.3, 0],
+              "timeToLive": 1.0
+            },
+            "flippable" : true
+          }
+        }
+      ]
+    },
+    "urps" : {
+      "emissionRate" : 1,
+      "particles" : [
+        {
+          "particle" : {
+            "type" : "animated",
+            "animation" : "/animations/lekrastuff/lekraskullgreengas.animation",
+            "size": 0.25,
+            "position" : [2.5, -1.0],
+            "finalVelocity" : [0, 2],
+            "initialVelocity" : [4, 0],
+            "destructionTime" : 0.2,
+            "destructionAction" : "shrink",
+            "layer" : "back",
+            "timeToLive" : 1.6,
+            "flippable" : true
+          }
+        }
+      ]
+    }
+  }
+}

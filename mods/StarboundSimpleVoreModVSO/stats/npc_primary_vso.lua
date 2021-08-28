@@ -1,6 +1,8 @@
 --This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 --https://creativecommons.org/licenses/by-nc-sa/2.0/  @ ZMakesThingsGo & Sheights
 
+hasinteract = interact;
+
 oldinit = init
 function init()
 	oldinit()
@@ -58,7 +60,7 @@ function init()
 	
 	message.setHandler( "vsoResourceAddPercent", function( arga_, argb_, resname, deltapercent, resthresh )
 	
-		if resthresh ~= nil then
+		if status.isResource( resname ) and resthresh ~= nil then
 			local epsilon = 1;
 			local retval = true;
 			local resthreshreal = resthresh*status.resourceMax( resname );
@@ -81,7 +83,7 @@ function init()
 				end
 			end
 			return retval;
-		else
+		elseif status.isResource( resname ) then
 	
 			if deltapercent < 0 then
 				status.overConsumeResource( resname, -deltapercent*status.resourceMax( resname ) )
@@ -89,7 +91,50 @@ function init()
 				status.modifyResourcePercentage( resname, deltapercent );
 			end
 			return status.resource( resname ) > 0;
+		else
+			--resource DOES NOT EXIST...
 		end
+	end )
+	
+	message.setHandler( "vsoPlayerInteract", function( arga_, argb_, config, playerid )
+		
+		config.sourceId = playerid
+		config.source = playerid
+		
+		--Merchants? do they work??
+		
+		local res = world.callScriptedEntity( entity.id(), "interact", config ) --uh...
+		
+		if res ~= nil then
+		
+			world.sendEntityMessage( playerid, "vsoForceInteract", res[1], res[2], entity.id() );
+			
+		else
+		
+			local res = world.callScriptedEntity( entity.id(), "onInteraction", config ) --uh...
+		
+			if res ~= nil then
+			
+				world.sendEntityMessage( playerid, "vsoForceInteract", res[1], res[2], entity.id() );
+				
+			end
+		end
+		
+		--sb.logInfo( "NPC fake interacted2 " );
+		
+		--??
+		--Not sure here which to call...
+		--world.callScriptedEntity( entity.id(), "onInteraction", config ) --for objects?
+		--sb.logInfo( "vsoPlayerInteract "..tostring( interact ).." "..tostring( _ENV["interact"] ).." "..tostring( tostring( hasinteract ) ) );
+		
+		--world.callScriptedEntity( entity.id(), "_criticalinteractcall", { source=playerid, sourceId=playerid } )
+		
+		--Oddly, this doesnt work for QUEST acceptance.
+		--	Need to check what is going on there...
+		
+			--player.interact();
+			--sb.logInfo( tostring( res ) );
+			
 	end )
 	
 end

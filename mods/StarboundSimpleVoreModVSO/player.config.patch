@@ -9,4 +9,28 @@
 		"path": "/statusControllerSettings/primaryScriptSources/-",
 		"value": "/stats/player_primary_vso.lua"
 	}
+	
+	,{
+		"op": "add",
+		"path": "/statusControllerSettings/stats/voredBy",
+		"value": { "baseValue" : -1 }
+	}
+	
+	,{
+		"op": "add",
+		"path": "/statusControllerSettings/stats/shrinkFactor",
+		"value": { "baseValue" : 1.0 }
+	}
+	
+	,{
+		"op": "add",
+		"path": "/statusControllerSettings/resources/stunned",
+		"value": { "initialValue" : 0.0, "maxValue" : 1.0 }
+	}
+	
+	,{
+		"op": "add",
+		"path": "/genericScriptContexts",
+		"value": { "player_vorevso" : "/scripts/player/player_vorevso.lua" }
+	}
 ]

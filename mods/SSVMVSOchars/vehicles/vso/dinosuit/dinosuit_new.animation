@@ -1,0 +1,377 @@
+{  
+	"globalTagDefaults" : {
+		"frame" : "1"
+		,"directives" : ""
+		,"pieicon0image":""
+		,"pieicon1image":""
+		,"pieicon2image":""
+		,"pieicon3image":""
+		,"pieicon4image":""
+		,"pieicon5image":""
+		,"pieicon6image":""
+		,"pieicon7image":""
+	}
+    ,"animatedParts": {
+        "stateTypes": {
+			"bodyState": {
+                "default": "idle"
+                , "states": {
+                    "idle": { "frames": 6, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+                    ,"jumpup": { "frames": 3, "cycle": 0.6, "frameProperties" : { "index":[1,2,3] }, "mode": "end" }
+                    ,"jumpdown": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"duck": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"duckcrawl": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+                    ,"walk": { "frames": 6, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+                    ,"run": { "frames": 6, "cycle": 0.6, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+                    ,"runopen": { "frames": 6, "cycle": 0.6, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+					,"hit": { "frames": 4, "cycle": 0.5, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+					,"pounce": { "frames": 4, "cycle": 1.0, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"full": { "frames": 4, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"fullwig": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+                    ,"bite": { "frames": 5, "cycle": 0.1, "frameProperties" : { "index":[1,2,3,4,5] }, "mode": "end" }
+                    ,"bitemiss": { "frames": 4, "cycle": 0.1, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"sitfull": { "frames": 4, "cycle": 2.0, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                    ,"sitfullwig": { "frames": 6, "cycle": 1.2, "frameProperties" : { "index":[1,2,3,4,5,6] }, "mode": "end" }
+					,"layfull": { "frames": 4, "cycle": 1.5, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+					,"layfullwig": { "frames": 4, "cycle": 0.9, "frameProperties" : { "index":[1,2,3,4] }, "mode": "end" }
+                }
+            }
+			,"main": {
+				"default":"invisible"
+                , "states": {
+					"invisible" : { "frames":1, "cycle": 1.0, "mode": "end" }
+					,"visible" : { "frames":1, "cycle": 1.0, "mode": "end" }
+				}
+			}
+        }
+        , "parts": {
+			
+			"pieicon0":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon0trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon0image>" } } } } }
+			, "pieicon1":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon1trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon1image>" } } } } }
+			, "pieicon2":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon2trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon2image>" } } } } }
+			, "pieicon3":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon3trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon3image>" } } } } }
+			, "pieicon4":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon4trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon4image>" } } } } }
+			, "pieicon5":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon5trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon5image>" } } } } }
+			, "pieicon6":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon6trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon6image>" } } } } }
+			, "pieicon7":{ "properties": { "centered": true ,"zLevel": 2, "transformationGroups": ["pieicon7trans"] }, "partStates": { "main": { "visible":{ "properties": {"image": "<pieicon7image>" } } } } }
+			
+			,"body": {
+                "properties": {
+                    "centered": false
+					, "offset" : [-6.0, -3.0]
+                    , "zLevel": -1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                    }
+                }
+            }
+            , "bg": {
+                "properties": {
+                    "centered": false
+					, "offset" : [-6.0, -3.0]
+					,"zLevel": -2
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "dinosuit_new_bot.png:idle.<frame><directives>" }  }
+                        ,"jumpup": { "properties": { "image": "dinosuit_new_bot.png:jumpup.<frame><directives>" }  }
+                        ,"jumpdown": { "properties": { "image": "dinosuit_new_bot.png:jumpdown.<frame><directives>" }  }
+                        ,"duck": { "properties": { "image": "dinosuit_new_bot.png:duck.<frame><directives>" }  }
+                        ,"duckcrawl": { "properties": { "image": "dinosuit_new_bot.png:duckcrawl.<frame><directives>" }  }
+                        ,"walk": { "properties": { "image": "dinosuit_new_bot.png:walk.<frame><directives>" }  }
+                        ,"run": { "properties": { "image": "dinosuit_new_bot.png:run.<frame><directives>" }  }
+                        ,"runopen": { "properties": { "image": "dinosuit_new_bot.png:runopen.<frame><directives>" }  }
+                        ,"hit": { "properties": { "image": "dinosuit_new_bot.png:hit.<frame><directives>" }  }
+                        ,"pounce": { "properties": { "image": "dinosuit_new_bot.png:pounce.<frame><directives>" }  }
+                        ,"full": { "properties": { "image": "dinosuit_new_bot.png:full.<frame><directives>" }  }
+                        ,"fullwig": { "properties": { "image": "dinosuit_new_bot.png:fullwig.<frame><directives>" }  }
+                        ,"bite": { "properties": { "image": "dinosuit_new_bot.png:bite.<frame><directives>" }  }
+                        ,"bitemiss": { "properties": { "image": "dinosuit_new_bot.png:bitemiss.<frame><directives>" }  }
+                        ,"sitfull": { "properties": { "image": "dinosuit_new_bot.png:sitfull.<frame><directives>" }  }
+                        ,"sitfullwig": { "properties": { "image": "dinosuit_new_bot.png:sitfullwig.<frame><directives>" }  }
+                    }
+                }
+            }
+			, "rider" :{
+                "properties": {
+                    "centered": true
+                    , "zLevel": 0
+                    , "transformationGroups": ["flip", "riderposition"]
+                    , "drivingSeatPosition": [0.0, 0.0]
+                }
+                , "partStates": {
+                    "bodyState": {
+					}
+				}
+			}
+            , "victim": {
+                "properties": {
+                    "centered": true
+                    , "zLevel": 0
+                    , "transformationGroups": ["flip", "victimposition"]
+                    , "drivingSeatPosition": [0.0, 0.0]
+                }
+                , "partStates": {
+                    "bodyState": {
+                    }
+                }
+            }
+
+            , "belly": {
+                "properties": {
+                    "centered": false
+					, "offset" : [-6.0, -3.0]
+					,"zLevel": 1
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "dinosuit_new_belly.png:idle.<frame><bellydirectives>" }  }
+                        ,"jumpup": { "properties": { "image": "dinosuit_new_belly.png:jumpup.<frame><bellydirectives>" }  }
+                        ,"jumpdown": { "properties": { "image": "dinosuit_new_belly.png:jumpdown.<frame><bellydirectives>" }  }
+                        ,"duck": { "properties": { "image": "dinosuit_new_belly.png:duck.<frame><bellydirectives>" }  }
+                        ,"duckcrawl": { "properties": { "image": "dinosuit_new_belly.png:duckcrawl.<frame><bellydirectives>" }  }
+                        ,"walk": { "properties": { "image": "dinosuit_new_belly.png:walk.<frame><bellydirectives>" }  }
+                        ,"run": { "properties": { "image": "dinosuit_new_belly.png:run.<frame><bellydirectives>" }  }
+                        ,"runopen": { "properties": { "image": "dinosuit_new_belly.png:runopen.<frame><bellydirectives>" }  }
+                        ,"hit": { "properties": { "image": "dinosuit_new_belly.png:hit.<frame><bellydirectives>" }  }
+                        ,"pounce": { "properties": { "image": "dinosuit_new_belly.png:pounce.<frame><bellydirectives>" }  }
+                        ,"full": { "properties": { "image": "dinosuit_new_belly.png:full.<frame><bellydirectives>" }  }
+                        ,"fullwig": { "properties": { "image": "dinosuit_new_belly.png:fullwig.<frame><bellydirectives>" }  }
+                        ,"bite": { "properties": { "image": "dinosuit_new_belly.png:bite.<frame><bellydirectives>" }  }
+                        ,"bitemiss": { "properties": { "image": "dinosuit_new_belly.png:bitemiss.<frame><bellydirectives>" }  }
+                        ,"sitfull": { "properties": { "image": "dinosuit_new_belly.png:sitfull.<frame><bellydirectives>" }  }
+                        ,"sitfullwig": { "properties": { "image": "dinosuit_new_belly.png:sitfullwig.<frame><bellydirectives>" }  }
+                    }
+                }
+            }
+			
+            , "fg": {
+                "properties": {
+                    "centered": false
+					, "offset" : [-6.0, -3.0]
+					,"zLevel": 2
+                    , "transformationGroups": ["flip"]
+                }
+                , "partStates": {
+                    "bodyState": {
+                        "idle": { "properties": { "image": "dinosuit_new_top.png:idle.<frame><directives>" }  }
+                        ,"jumpup": { "properties": { "image": "dinosuit_new_top.png:jumpup.<frame><directives>" }  }
+                        ,"jumpdown": { "properties": { "image": "dinosuit_new_top.png:jumpdown.<frame><directives>" }  }
+                        ,"duck": { "properties": { "image": "dinosuit_new_top.png:duck.<frame><directives>" }  }
+                        ,"duckcrawl": { "properties": { "image": "dinosuit_new_top.png:duckcrawl.<frame><directives>" }  }
+                        ,"walk": { "properties": { "image": "dinosuit_new_top.png:walk.<frame><directives>" }  }
+                        ,"run": { "properties": { "image": "dinosuit_new_top.png:run.<frame><directives>" }  }
+                        ,"runopen": { "properties": { "image": "dinosuit_new_top.png:runopen.<frame><directives>" }  }
+                        ,"hit": { "properties": { "image": "dinosuit_new_top.png:hit.<frame><directives>" }  }
+                        ,"pounce": { "properties": { "image": "dinosuit_new_top.png:pounce.<frame><directives>" }  }
+                        ,"full": { "properties": { "image": "dinosuit_new_top.png:full.<frame><directives>" }  }
+                        ,"fullwig": { "properties": { "image": "dinosuit_new_top.png:fullwig.<frame><directives>" }  }
+                        ,"bite": { "properties": { "image": "dinosuit_new_top.png:bite.<frame><directives>" }  }
+                        ,"bitemiss": { "properties": { "image": "dinosuit_new_top.png:bitemiss.<frame><directives>" }  }
+                        ,"sitfull": { "properties": { "image": "dinosuit_new_top.png:sitfull.<frame><directives>" }  }
+                        ,"sitfullwig": { "properties": { "image": "dinosuit_new_top.png:sitfullwig.<frame><directives>" }  }
+                        ,"layfull": { "properties": { "offset" : [-7.0, -3.0], "image": "dinosuit_new_lay.png:layfull.<frame><directives>" }  }
+                        ,"layfullwig": { "properties": { "offset" : [-7.0, -3.0], "image": "dinosuit_new_lay.png:layfullwig.<frame><directives>" }  }
+                    }
+                }
+            }
+        }
+	}
+	, "transformationGroups": {
+		"flip": {}
+		, "victimposition":{ "interpolated": true }
+		, "riderposition" :{ "interpolated": true }
+		, "pieicon0trans" :{ "interpolated": true }
+		, "pieicon1trans" :{ "interpolated": true }
+		, "pieicon2trans" :{ "interpolated": true }
+		, "pieicon3trans" :{ "interpolated": true }
+		, "pieicon4trans" :{ "interpolated": true }
+		, "pieicon5trans" :{ "interpolated": true }
+		, "pieicon6trans" :{ "interpolated": true }
+		, "pieicon7trans" :{ "interpolated": true }
+	}
+	, "sounds": {
+		"returnvehicle": ["/sfx/tech/vehicle_disappear1.ogg"]
+		, "swallow": ["/sfx/objects/gulp.ogg"]
+		, "digest": [
+			"/sfx/vore/digest/digest (17).ogg", "/sfx/vore/digest/digest (18).ogg", "/sfx/vore/digest/digest (25).ogg", "/sfx/vore/digest/digest (11).ogg", "/sfx/vore/digest/digest (13).ogg", "/sfx/vore/digest/digest (15).ogg", "/sfx/vore/digest/digest (16).ogg", "/sfx/vore/digest/digest (19).ogg", "/sfx/vore/digest/digest (20).ogg", "/sfx/vore/digest/digest (3).ogg", "/sfx/vore/digest/digest (31).ogg", "/sfx/vore/digest/digest (36).ogg", "/sfx/vore/digest/digest (37).ogg", "/sfx/vore/digest/digest (9).ogg"
+		]
+		, "lay": ["/sfx/objects/eggLay.ogg"]
+		, "struggle": ["/sfx/vore/struggle/burbslosh.ogg","/sfx/vore/struggle/blurbsquish2.ogg","/sfx/vore/struggle/blorbsquish.ogg","/sfx/vore/swallow/swallow (11).ogg"]
+		, "please": ["/vehicles/spov/simpledino/trex_rumble.ogg","/sfx/vore/struggle/stomach-burble.ogg"]
+		, "chatter": [ "/sfx/npc/quadruped/arrowhead_idle1.ogg", "/sfx/npc/quadruped/arrowhead_death.ogg" ]
+		, "chomp" : [ "/sfx/objects/coil.ogg" ]
+		, "eatchomp" : [ "/vehicles/spov/simpledino/raptor_chomp.ogg" ]
+		, "biteready" : [ "/vehicles/spov/simpledino/trex_warning.ogg" ]
+		, "chew" : [ "/sfx/humanoid/eat3.ogg", "/sfx/humanoid/eat4.ogg" ]
+		, "gulp" : [ "/sfx/vore/swallow/swallow (6).ogg" ]
+		, "burp" : [ "/sfx/vore/burp/classic_burp.ogg" ]
+		, "pushout" : [ "/sfx/objects/sw/StomachTransfer.ogg" ]
+		, "fart" : [ "/sfx/npc/quadruped/sandworm_pain2.ogg" ]
+		, "purr" : [ "/vehicles/spov/simpledino/trex_rumble.ogg" ]
+		, "slurp" : [ "/sfx/vore/common/slurp.ogg" ]
+	}
+	,"particleEmitters": {
+		"burp" : {
+		  "emissionRate" : 3,
+		  "particles" : [
+			{
+			  "particle" : {
+				 "type" : "animated",
+				"animation" : "/animations/gas/greengas.animation",
+				"position" : [0, 1.1],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [3, 0],
+				"destructionAction" : "shrink",
+				"destructionTime" : 0.5,
+				"fade" : 1,
+				"size" : 0.3,
+				"layer" : "back",
+				"timeToLive" : 0.75,
+				"variance" : {
+				  "rotation" : 180,
+				  "position" : [0.2, 0.5],
+				  "size" : 0.1,
+				  "timeToLive" : 0.25,
+				  "initialVelocity" : [1, 0.5]
+				}
+			  }
+			}
+			
+		   ]
+		}
+		,"love" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/happy.animation",
+				"position" : [1.0, 2.3],
+				"finalVelocity" : [0, 2],
+				"initialVelocity" : [2, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "back",
+				"timeToLive" : 1.8,
+				"flippable" : true
+			  }
+			}
+		  ]
+		}
+		
+		,"emotehappy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/happy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesad" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sad.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emoteconfused" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/confused.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,"emotesleepy" : {
+		  "emissionRate" : 1,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "animated",
+				"animation" : "/animations/emotes/sleepy.animation",
+				"position" : [-0.2, 3.3],
+				"finalVelocity" : [0, 0],
+				"initialVelocity" : [0, 0],
+				"destructionTime" : 0.2,
+				"destructionAction" : "shrink",
+				"layer" : "front",
+				"timeToLive" : 0.8,
+				"flippable" : false
+			  }
+			}
+		  ]
+		}
+
+		,
+		"drips" : {
+		  "emissionRate" : 15,
+		  "particles" : [
+			{
+			  "particle" : {
+				"type" : "ember",
+				"layer" : "front",
+				"size" : 1.0,
+				"color" : [120, 221, 254, 230],
+				"fade" : 0.9,
+				"destructionAction" : "shrink",
+				"destructionTime" : 0.8,
+				"position" : [0.5, 0.9],
+				"offsetRegion" : [0, 0, 0, 0],
+				"initialVelocity" : [0, 0.0],
+				"finalVelocity" : [0, -1],
+				"approach" : [3, 10],
+				"timeToLive" : 0.5,
+				"variance" : {
+				  "initialVelocity" : [0.2, 0.0],
+				  "size" : 0.5,
+				  "position" : [0.3, 0]
+				},
+				"flippable" : true
+			  }
+			}
+		  ]
+		}
+	  }
+}

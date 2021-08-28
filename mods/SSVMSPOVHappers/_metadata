@@ -1,0 +1,9 @@
+{
+  "version" : "0.0",
+  "tags" : "",
+  "author" : "Happers",
+  "description" : "Happers' SPOVs",
+  "name" : "SSVMSPOVHappers",
+  "friendlyName" : "SSVMSPOVHappers",  
+  "requires" : ["StarboundSimpleVoreModVSO"]
+}

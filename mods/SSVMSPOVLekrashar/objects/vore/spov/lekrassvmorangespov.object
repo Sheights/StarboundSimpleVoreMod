@@ -1,0 +1,80 @@
+{
+  "objectName": "spovspawnerlekrassvmorangespov"
+  , "colonyTags": ["vore"]
+  , "rarity": "Rare"
+  , "shortdescription": "SPOV Orange"
+  , "race": "generic"
+  , "category": "other"
+  , "price": 500
+  , "health" : 5
+
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespov.png:silhouette"
+  , "description": "His legs are way too strong! Make sure his tummy isn't as strong!"
+	, "tooltipSubtitle" : "SPOV Summoner"
+
+  , "orientations": [{
+    "image": "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespov.png:silhouette"
+    , "imagePosition": [-62, 0]
+    , "direction": "left"
+    , "flipImages": true
+    , "spaceScan": 0.0
+    , "anchors": ["bottom"]
+  }, {
+    "image": "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespov.png:silhouette"
+    , "imagePosition": [-62, 0]
+    , "direction": "right"
+    , "spaceScan": 0.0
+    , "anchors": ["bottom"]
+  }]
+
+  , "inventoryIcon": "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespovicon.png"
+
+  , "animationParts": {
+    "bg": "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespov.png:idle_quad.1"
+  }
+
+  , "spov": {
+    "types": ["lekrassvmorangespov"]
+    , "position": [0.0, 0.0, 0.0, 0.0]
+    , "template": {}
+    , "pillsAdd": {
+      "digest": {},
+      "softdigest": {},
+      "heal": {}
+    }
+  }
+
+  , "animation": "spovspawner.animation"
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+  , "scripts": [
+      "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/lekrassvmorangespov/lekrassvmorangespovitemscript.lua"
+  ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			[1.0, "laugh"]
+		  ],
+		  "leave" : [
+			[1.0, "smile"],
+			[1.0, "annoyed"],
+			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+  }
+}

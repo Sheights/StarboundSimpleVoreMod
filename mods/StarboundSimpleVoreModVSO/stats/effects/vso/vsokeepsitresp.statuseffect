@@ -1,0 +1,12 @@
+{
+  "name" : "vsokeepsitresp",
+  "defaultDuration" : 1,
+  "effectConfig" : {
+	"sendRPCEMessage":1
+  },
+  
+  "scripts" : [
+    "vsokeepsit.lua"
+  ]
+
+}

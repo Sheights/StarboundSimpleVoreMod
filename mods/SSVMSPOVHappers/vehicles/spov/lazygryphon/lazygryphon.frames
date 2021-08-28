@@ -1,0 +1,268 @@
+{
+  "frameGrid": {
+    "size": [106, 54],
+    "dimensions": [10, 26],
+    "names": [
+      ["f.1",   "f.2",   "f.3",   "f.4",   "f.5",   "f.6",   "f.7",   "f.8",   "f.9",   "f.10"]
+      ,["f.11",  "f.12",  "f.13",  "f.14",  "f.15",  "f.16",  "f.17",  "f.18",  "f.19",  "f.20"]
+      ,["f.21",  "f.22",  "f.23",  "f.24",  "f.25",  "f.26",  "f.27",  "f.28",  "f.29",  "f.30"]
+      ,["f.31",  "f.32",  "f.33",  "f.34",  "f.35",  "f.36",  "f.37",  "f.38",  "f.39",  "f.40"]
+      ,["f.41",  "f.42",  "f.43",  "f.44",  "f.45",  "f.46",  "f.47",  "f.48",  "f.49",  "f.50"]
+      ,["f.51",  "f.52",  "f.53",  "f.54",  "f.55",  "f.56",  "f.57",  "f.58",  "f.59",  "f.60"]
+      ,["f.61",  "f.62",  "f.63",  "f.64",  "f.65",  "f.66",  "f.67",  "f.68",  "f.69",  "f.70"]
+      ,["f.71",  "f.72",  "f.73",  "f.74",  "f.75",  "f.76",  "f.77",  "f.78",  "f.79",  "f.80"]
+      ,["f.81",  "f.82",  "f.83",  "f.84",  "f.85",  "f.86",  "f.87",  "f.88",  "f.89",  "f.90"]
+      ,["f.91",  "f.92",  "f.93",  "f.94",  "f.95",  "f.96",  "f.97",  "f.98",  "f.99",  "f.100"]
+      ,["f.101", "f.102", "f.103", "f.104", "f.105", "f.106", "f.107", "f.108", "f.109", "f.110"]
+      ,["f.111", "f.112", "f.113", "f.114", "f.115", "f.116", "f.117", "f.118", "f.119", "f.120"]
+      ,["f.121", "f.122", "f.123", "f.124", "f.125", "f.126", "f.127", "f.128", "f.129", "f.130"]
+      ,["f.131", "f.132", "f.133", "f.134", "f.135", "f.136", "f.137", "f.138", "f.139", "f.140"]
+      ,["f.141", "f.142", "f.143", "f.144", "f.145", "f.146", "f.147", "f.148", "f.149", "f.150"]
+      ,["f.151", "f.152", "f.153", "f.154", "f.155", "f.156", "f.157", "f.158", "f.159", "f.160"]
+      ,["f.161", "f.162", "f.163", "f.164", "f.165", "f.166", "f.167", "f.168", "f.169", "f.170"]
+      ,["f.171", "f.172", "f.173", "f.174", "f.175", "f.176", "f.177", "f.178", "f.179", "f.180"]
+      ,["f.181", "f.182", "f.183", "f.184", "f.185", "f.186", "f.187", "f.188", "f.189", "f.190"]
+      ,["f.191", "f.192", "f.193", "f.194", "f.195", "f.196", "f.197", "f.198", "f.199", "f.200"]
+      ,["f.201", "f.202", "f.203", "f.204", "f.205", "f.206", "f.207", "f.208", "f.209", "f.210"]
+      ,["f.211", "f.212", "f.213", "f.214", "f.215", "f.216", "f.217", "f.218", "f.219", "f.220"]
+      ,["f.221", "f.222", "f.223", "f.224", "f.225", "f.226", "f.227", "f.228", "f.229", "f.230"]
+      ,["f.231", "f.232", "f.233", "f.234", "f.235", "f.236", "f.237", "f.238", "f.239", "f.240"]
+      ,["f.241", "f.242", "f.243", "f.244", "f.245", "f.246", "f.247", "f.248", "f.249", "f.250"]
+      ,["f.251", "f.252", "f.253", "f.254", "f.255", "f.256", "f.257", "f.258", "f.259", "f.260"]
+    ]
+  },
+  "aliases": {
+    "empty": "f.1"
+
+    ,"idle.default": "idle.1"
+    ,"idle.1": "f.3"
+
+    ,"blink.1": "f.4"
+    ,"blink.2": "f.5"
+    ,"blink.3": "blink.1"
+
+    ,"yawn.1": "blink.1"
+    ,"yawn.2": "blink.2"
+    ,"yawn.3": "f.6"
+    ,"yawn.4": "f.7"
+    ,"yawn.5": "yawn.4"
+    ,"yawn.6": "yawn.4"
+    ,"yawn.7": "yawn.4"
+    ,"yawn.8": "yawn.3"
+    ,"yawn.9": "yawn.2"
+    ,"yawn.10": "yawn.1"
+
+    ,"pet.1": "blink.1"
+    ,"pet.2": "blink.2"
+    ,"pet.3": "f.8"
+    ,"pet.4": "pet.3"
+    ,"pet.5": "pet.3"
+    ,"pet.6": "pet.3"
+    ,"pet.7": "pet.2"
+    ,"pet.8": "pet.1"
+
+    ,"mlem.1": "f.12"
+    ,"mlem.2": "f.13"
+    ,"mlem.3": "f.14"
+    ,"mlem.4": "f.15"
+    ,"mlem.5": "f.16"
+    ,"mlem.6": "f.17"
+
+    ,"chomp.1": "f.22"
+    ,"chomp.2": "f.23"
+    ,"chomp.3": "f.24"
+    ,"chomp.4": "f.25"
+
+    ,"chomp_miss.1": "f.32"
+    ,"chomp_miss.2": "chomp_miss.1"
+	,"chomp_miss.3": "chomp_miss.1"
+	,"chomp_miss.4": "chomp_miss.1"
+	,"chomp_miss.5": "f.33"
+	,"chomp_miss.6": "chomp_miss.5"
+	,"chomp_miss.7": "chomp_miss.5"
+    ,"chomp_miss.8": "f.34"
+	,"chomp_miss.9": "chomp_miss.8"
+	,"chomp_miss.10": "chomp_miss.8"
+    ,"chomp_miss.11": "f.35"
+    ,"chomp_miss.12": "f.36"
+
+    ,"chomp_devour.1": "f.42"
+    ,"chomp_devour.2": "f.43"
+    ,"chomp_devour.3": "f.44"
+    ,"chomp_devour.4": "f.45"
+    ,"chomp_devour.5": "f.46"
+    ,"chomp_devour.6": "f.47"
+    ,"chomp_devour.7": "f.48"
+    ,"chomp_devour.8": "f.49"
+    ,"chomp_devour.9": "f.50"
+    ,"chomp_devour.10": "f.51"
+
+    ,"bellyn_intro.1": "f.53"
+    ,"bellyn_intro.2": "f.54"
+    ,"bellyn_intro.3": "f.55"
+    ,"bellyn_intro.4": "f.56"
+
+    ,"bellyn.1": "f.62"
+
+    ,"bellyn_blink.1": "f.64"
+    ,"bellyn_blink.2": "f.65"
+
+    ,"bellyn_struggle_down.1": "f.72"
+    ,"bellyn_struggle_down.2": "f.73"
+    ,"bellyn_struggle_down.3": "f.74"
+    ,"bellyn_struggle_down.4": "f.75"
+    ,"bellyn_struggle_down.5": "f.76"
+    ,"bellyn_struggle_down.6": "f.77"
+    ,"bellyn_struggle_down.7": "f.78"
+
+    ,"bellyn_struggle_left.1": "f.82"
+    ,"bellyn_struggle_left.2": "f.83"
+    ,"bellyn_struggle_left.3": "f.84"
+    ,"bellyn_struggle_left.4": "f.85"
+    ,"bellyn_struggle_left.5": "f.86"
+    ,"bellyn_struggle_left.6": "f.87"
+    ,"bellyn_struggle_left.7": "f.88"
+
+    ,"bellyn_struggle_right.1": "f.92"
+    ,"bellyn_struggle_right.2": "f.93"
+    ,"bellyn_struggle_right.3": "f.94"
+    ,"bellyn_struggle_right.4": "f.95"
+    ,"bellyn_struggle_right.5": "f.96"
+    ,"bellyn_struggle_right.6": "f.97"
+    ,"bellyn_struggle_right.7": "f.98"
+
+    ,"bellyn_struggle_up.1": "f.102"
+    ,"bellyn_struggle_up.2": "f.103"
+    ,"bellyn_struggle_up.3": "f.104"
+    ,"bellyn_struggle_up.4": "f.105"
+    ,"bellyn_struggle_up.5": "f.106"
+    ,"bellyn_struggle_up.6": "f.107"
+    ,"bellyn_struggle_up.7": "f.108"
+
+    ,"bellyn_digest.1": "f.112"
+    ,"bellyn_digest.2": "f.113"
+    ,"bellyn_digest.3": "f.114"
+    ,"bellyn_digest.4": "f.115"
+    ,"bellyn_digest.5": "f.116"
+    ,"bellyn_digest.6": "f.117"
+    ,"bellyn_digest.7": "f.118"
+    ,"bellyn_digest.8": "f.119"
+    ,"bellyn_digest.9": "f.120"
+    ,"bellyn_digest.10": "f.121"
+    ,"bellyn_digest.11": "f.122"
+    ,"bellyn_digest.12": "f.123"
+    ,"bellyn_digest.13": "f.124"
+
+    ,"bellyn_regurgitate.1": "f.132"
+    ,"bellyn_regurgitate.2": "f.133"
+    ,"bellyn_regurgitate.3": "f.134"
+    ,"bellyn_regurgitate.4": "f.135"
+    ,"bellyn_regurgitate.5": "f.136"
+    ,"bellyn_regurgitate.6": "f.137"
+    ,"bellyn_regurgitate.7": "bellyn_regurgitate.6"
+    ,"bellyn_regurgitate.8": "bellyn_regurgitate.6"
+    ,"bellyn_regurgitate.9": "bellyn_regurgitate.6"
+    ,"bellyn_regurgitate.10": "f.138"
+
+    ,"idle_to_sleep.1": "f.142"
+    ,"idle_to_sleep.2": "f.143"
+    ,"idle_to_sleep.3": "f.144"
+    ,"idle_to_sleep.4": "f.145"
+    ,"idle_to_sleep.5": "f.146"
+
+    ,"sleep.1": "f.148"
+    ,"sleep.2": "f.149"
+
+    ,"sleep_to_idle.1": "f.152"
+    ,"sleep_to_idle.2": "f.153"
+    ,"sleep_to_idle.3": "f.154"
+    ,"sleep_to_idle.4": "sleep_to_idle.3"
+    ,"sleep_to_idle.5": "sleep_to_idle.3"
+    ,"sleep_to_idle.6": "f.155"
+    ,"sleep_to_idle.7": "f.156"
+
+    ,"bellyn_to_bellys.1": "f.162"
+    ,"bellyn_to_bellys.2": "f.163"
+    ,"bellyn_to_bellys.3": "f.164"
+	,"bellyn_to_bellys.4": "bellyn_to_bellys.3"
+    ,"bellyn_to_bellys.5": "f.165"
+	,"bellyn_to_bellys.6": "bellyn_to_bellys.5"
+    ,"bellyn_to_bellys.7": "f.166"
+	,"bellyn_to_bellys.8": "bellyn_to_bellys.7"
+
+    ,"bellys.1": "f.172"
+
+    ,"sleep_annoy.1": "f.174"
+
+    ,"sleep_chomp.1": "f.176"
+    ,"sleep_chomp.2": "f.177"
+    ,"sleep_chomp.3": "f.178"
+    ,"sleep_chomp.4": "f.179"
+
+    ,"sleep_chomp_miss.1": "f.182"
+    ,"sleep_chomp_miss.2": "f.183"
+    ,"sleep_chomp_miss.3": "f.184"
+    ,"sleep_chomp_miss.4": "f.185"
+
+    ,"sleep_chomp_devour.1": "f.192"
+    ,"sleep_chomp_devour.2": "f.193"
+    ,"sleep_chomp_devour.3": "f.194"
+    ,"sleep_chomp_devour.4": "f.195"
+    ,"sleep_chomp_devour.5": "f.196"
+    ,"sleep_chomp_devour.6": "f.197"
+    ,"sleep_chomp_devour.7": "f.198"
+    ,"sleep_chomp_devour.8": "f.199"
+
+    ,"bellys_struggle_down.1": "f.202"
+    ,"bellys_struggle_down.2": "f.203"
+    ,"bellys_struggle_down.3": "f.204"
+    ,"bellys_struggle_down.4": "f.205"
+    ,"bellys_struggle_down.5": "f.206"
+    ,"bellys_struggle_down.6": "f.207"
+    ,"bellys_struggle_down.7": "f.208"
+
+    ,"bellys_struggle_left.1": "f.212"
+    ,"bellys_struggle_left.2": "f.213"
+    ,"bellys_struggle_left.3": "f.214"
+    ,"bellys_struggle_left.4": "f.215"
+    ,"bellys_struggle_left.5": "f.216"
+    ,"bellys_struggle_left.6": "f.217"
+    ,"bellys_struggle_left.7": "f.218"
+
+    ,"bellys_struggle_right.1": "f.222"
+    ,"bellys_struggle_right.2": "f.223"
+    ,"bellys_struggle_right.3": "f.224"
+    ,"bellys_struggle_right.4": "f.225"
+    ,"bellys_struggle_right.5": "f.226"
+    ,"bellys_struggle_right.6": "f.227"
+    ,"bellys_struggle_right.7": "f.228"
+
+    ,"bellys_struggle_up.1": "f.232"
+    ,"bellys_struggle_up.2": "f.233"
+    ,"bellys_struggle_up.3": "f.234"
+    ,"bellys_struggle_up.4": "f.235"
+    ,"bellys_struggle_up.5": "f.236"
+    ,"bellys_struggle_up.6": "f.237"
+    ,"bellys_struggle_up.7": "f.238"
+
+    ,"bellys_digest.1": "f.242"
+    ,"bellys_digest.2": "f.243"
+    ,"bellys_digest.3": "f.244"
+    ,"bellys_digest.4": "f.245"
+    ,"bellys_digest.5": "f.246"
+    ,"bellys_digest.6": "f.247"
+
+    ,"bellys_to_bellyn.1": "f.252"
+	,"bellys_to_bellyn.2": "bellys_to_bellyn.1"
+    ,"bellys_to_bellyn.3": "f.253"
+    ,"bellys_to_bellyn.4": "f.254"
+	,"bellys_to_bellyn.5": "bellys_to_bellyn.4"
+	,"bellys_to_bellyn.6": "bellys_to_bellyn.4"
+	,"bellys_to_bellyn.7": "bellys_to_bellyn.4"
+    ,"bellys_to_bellyn.8": "f.255"
+    ,"bellys_to_bellyn.9": "bellys_to_bellyn.8"
+    ,"bellys_to_bellyn.10": "bellys_to_bellyn.8"
+    ,"bellys_to_bellyn.11": "f.256"
+    ,"bellys_to_bellyn.12": "f.257"
+  }
+}
