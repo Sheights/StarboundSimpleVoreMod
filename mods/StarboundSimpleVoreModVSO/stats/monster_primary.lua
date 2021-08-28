@@ -100,7 +100,33 @@ end
 --CAREFUL! we have to update this each time and it may be dangerous to replace the monster_stat handling!
 --Also it's hard to mod every monster to handle this so...
 --Some mods like frackin' remap it to a different handler.
+--I dont see a good way to handle this.
+--The problem lies in the fact most every monster does:
+--
+--      "primaryScriptSources" : [
+--        "/stats/monster_primary.lua"
+--      ],
+--
+--So that raises some questions. In PLAYERS and NPC's there are ways to config against this...
+--
+--		"path": "/genericScriptContexts",
+--		"value": { "player_vorevso" : "/scripts/player/player_vorevso.lua" }
+--
+--		"path": "/companionsConfig/scripts/-",
+--		"value": "/scripts/companions/player_vso.lua"
+--	
+--Maybe there is a key for monster scripts? But I dont see a config for monsters at all...
+--
+--since monster.lua has a require "/scripts/companions/capturable.lua"
+--	Not likely, but also points to util.lua
+--
+--We really want a "status" injection more than anything else...
+--	No obvious way other than a LOT of patch files for certain monsters...
+--
+--
 
+
+	
 function init()
   self.damageFlashTime = 0
 	vsoinit();

@@ -1,0 +1,9 @@
+{
+  "version" : "1.0",
+  "tags" : "",
+  "author" : "Lekrashar",
+  "description" : "SPOV made by Lekra",
+  "name" : "SSVMSPOVLekrashar",
+  "friendlyName" : "SSVMSPOVLekrashar",
+  "requires" : ["StarboundSimpleVoreModVSO"]
+}

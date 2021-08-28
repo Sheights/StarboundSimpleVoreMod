@@ -1,0 +1,186 @@
+{
+	"name" : "lekrassvmderulfaspov",
+	"script" : "lekrassvmderulfaspov.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+
+	"directoryPath" : "/vehicles/spov/lekrassvmderulfaspov/",
+	"animation" : "lekrassvmderulfaspov.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+
+	, "mouthPosition" : [ 2.5, 0.0 ],
+
+	"boundBox" : [-5, -4, 5, 4],
+	"metaBoundBox" : [-5, -4, 5, 4],
+
+	"physicsCollisions" : {
+	},
+
+	"vso" : {
+		"useAnimatorFirst": 0
+		,"movementSettingsFlipPoly": 1
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [[-2.5, -7.5], [2.5, -7.5], [2.5, 8.5], [-2.5, 8.5]]
+				,"gravityMultiplier" : 0.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : false
+				,"frictionEnabled" : false
+				,"gravityEnabled" : false
+				,"ignorePlatformCollision" : true
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+			}
+		}
+		,"victimAnimations": {
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop":true
+				,"visible": [0]
+				,"transformGroup":"drivingSeatPosition"
+				,"x": [ 0.0 ]
+				,"y": [ 5.0 ]
+				,"r": [ 0.0 ]
+			},
+	    "ovcatch": {
+				"frames":[ 0, 1, 2, 3, 4, 5, 6 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ -1.25, -1.25, 3.5, 4.5, 5.5, 5.5, 1.5 ],
+	      "y": [ -6.0, -6.0, -6.0, -6.0, -6.0, -4.0, 0.5 ],
+	      "r": [ 45, 60, 90, 90, 125, 150, 160 ],
+	      "e": ["f3", "f3", "f3", "f3", "f3", "clear", "n"]
+	    },
+	    "ovswallow": {
+				"frames":[ 0, 1, 2, 3, 4, 5 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1, 1, 0, 0, 0, 0 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ 1.5 ],
+	      "y": [ 0.5, -1.5, -3.5, -4.5, -6.0, -5.0 ],
+	      "r": [ 180, 180, 180, 180, 90, 0 ],
+	      "e": ["f3", "f4", "f5", "f5", "clear", "n"]
+	    },
+	    "avcatch": {
+				"frames":[ 0, 1, 2, 3, 4 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ -1.0, -1.0, -1.0, 0.0, -2.0 ],
+	      "y": [ -5.5 ],
+	      "r": [ 0.0, 0.0, 0.0, -45, -90 ],
+	      "e": ["f3", "f3", "f3", "f3", "f3", "clear", "n"]
+	    },
+	    "avswallow": {
+				"frames":[ 0, 1, 2, 3 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1, 1, 0, 0 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ -2.0, -1.0, 0.0, 1.5 ],
+	      "y": [ -5.5, -6.0, -6.0, -5.0 ],
+	      "r": [ -90, -90, -90, 0.0 ],
+	      "e": ["f3", "f4", "f5", "f5", "clear", "n"]
+	    },
+	    "takeoff": {
+				"frames":[ 0, 1, 2, 3, 4, 5, 6 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "visible": [ 0 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ 1.5, 1.5, 0.0, 1.5, 1.5, 2.0, 2.0 ],
+	      "y": [ -5.5, -6.0, -6.0, -4.5, -3.0, -1.5, -3.0 ],
+	      "r": [ 0.0 ]
+	    },
+	    "land": {
+				"frames":[ 0, 1, 2, 3 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "visible": [ 0 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ 2.0, 2.0, 1.5, 1.5 ],
+	      "y": [ -3.0, -3.75, -4.5, -5.0 ],
+	      "r": [ 0.0 ]
+	    },
+	    "leave": {
+				"frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "visible": [ 0, 0, 0, 0, 1 ],
+	      "transformGroup": "drivingSeatPosition",
+	      "x": [ 1.5, 1.5, 1.25, 0.75, 0.0, -1.0, -4.25 ],
+	      "y": [ -5.5, -6.5, -6.5, -6.5, -6.5, -6.5, -6.5, -5.5, -4.5 ],
+	      "r": [ 0, 90, 90, 90, 120, 90, 90, 90, 45, 0 ]
+	    }
+		}
+	}
+}

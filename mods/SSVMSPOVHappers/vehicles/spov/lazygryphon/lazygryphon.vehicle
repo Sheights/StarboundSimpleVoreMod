@@ -1,0 +1,145 @@
+{
+	"name" : "spovlazygryphon",
+	"script" : "lazygryphon.lua",
+	"slaveControlTimeout" : 2.0,
+	"slaveControlHeartbeat" : 1.0,
+	"canBeHit" : false,
+
+	"protection" : 50,
+	"maxHealth" : 100,
+	"materialKind" : "organic",
+
+	"directoryPath" : "/vehicles/spov/lazygryphon/",
+	"animation" : "lazygryphon.animation",
+
+	"loungePositions" : {
+		"drivingSeat" : {
+			"part" : "victim",
+			"partAnchor" : "drivingSeatPosition",
+			"orientation" : "stand",
+			"statusEffects" : [ ]
+		}
+	}
+
+	, "mouthPosition" : [ 0.0, 0.0 ],
+
+	"boundBox" : [-5, -4, 5, 4],
+	"metaBoundBox" : [-5, -4, 5, 4],
+
+	"physicsCollisions" : {
+	},
+
+	"vso" : {
+		"useAnimatorFirst":0
+		,"spawnOwnerState":"faint"
+		,"movementSettingsFlipPoly" : 0
+		,"movementSettings" : {
+			"default":{
+				"collisionPoly" : [[-6.625, 3.375], [-6.625, -3.375], [6.625, -3.375], [6.625, 3.375]]
+				,"gravityMultiplier" : 0.0
+				,"liquidBuoyancy" : 0.0
+				,"airBuoyancy" : 0.0
+				,"bounceFactor" : 0.0
+				,"collisionEnabled" : false
+				,"frictionEnabled" : false
+				,"gravityEnabled" : false
+				,"ignorePlatformCollision" : true
+			}
+		}
+		,"simple":{
+			"sets":{
+			}
+			,"histosets":{
+			}
+			,"vals":{
+			}
+		}
+		,"victimAnimations":{
+			"invis":{
+				"seconds":[ 0.0 ]
+				,"seat":"drivingSeat"
+				,"loop": false
+				,"visible": [0]
+				,"transformGroup":"victimposition"
+				,"x": [ 0.0 ]
+				,"y": [ 0.0 ]
+				,"r": [ 0.0 ]
+			},
+	    "chomp_devour": {
+				"frames":[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 ],
+	      "transformGroup": "victimposition",
+	      "x": [ 5.875, 5.875, 3.325, 1.375, 1.375, 1.375, 1.375, 0.875, 0.875, 0.875, 0.875 ],
+	      "y": [ -0.625, -0.625, 0.875, 1.3, 0.775, 0.575, 0.3, 0.0, -0.625, -0.375, 0.375 ],
+	      "r": [ 0, 20, 90, 90, 135, 135, 160, 160, 135, 90 ],
+	      "e": ["f3", "f3", "f4", "f5", "f5", "f5", "f5", "clear", "n"]
+		  ,"dance": ["victimrun"]
+	    },
+	    "bellyn_intro": {
+				"frames":[ 0, 1, 2, 3, 4 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "visible": [ 0 ],
+	      "transformGroup": "victimposition",
+	      "x": [ 0.875, 0.625, 0.125, -0.125, -0.625 ],
+	      "y": [ 0.375, 0.0, 0.0, 0.0, 0.0 ],
+	      "r": [ 90 ]
+	    },
+	    "sleep_chomp_devour": {
+				"frames":[ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 1, 1, 1, 1, 1, 0, 0 ],
+	      "transformGroup": "victimposition",
+	      "x": [ 5.375, 5.375, 5.125, 4.125, 4.125, 3.875, 3.625, 0.625, -0.625 ],
+	      "y": [ 0.375, 0.375, 1.375, 2.125, 0.625, 0.0, 0.0, 0.0, 0.0 ],
+	      "r": [ 0, 90, 135, 180, 180, 180, 135, 90 ],
+	      "e": ["f3", "f3", "f3", "f4", "f5", "f5", "clear", "n"]
+	    },
+	    "bellyn_regurgitate": {
+				"frames":[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
+	      "seat": "drivingSeat",
+	      "loop": false,
+	      "interpMode": 1,
+	      "effectmap": {
+	      	"f1": ["vsomask_feet1"],
+	      	"f2": ["vsomask_feet2"],
+	      	"f3": ["vsomask_feet3"],
+	      	"f4": ["vsomask_feet4"],
+	      	"f5": ["vsomask_feet5"],
+					"clear": ["vsomask_none"],
+					"n": []
+	      },
+	      "visible": [ 0, 0, 0, 0, 1 ],
+	      "transformGroup": "victimposition",
+	      "x": [ -0.625, -0.625, -0.625, 1.375, 2.375, 3.875 ],
+	      "y": [ -1.625, -1.625, -1.625, -1.375, 0.375, 0.0, -0.375 ],
+	      "r": [ 90, 90, 90, 70, 50, 35, 0 ],
+	      "e": ["f5", "f5", "f5", "f4", "f3", "f2", "clear", "n"]
+	    }
+		}
+	}
+}

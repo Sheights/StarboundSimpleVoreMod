@@ -1,0 +1,82 @@
+{
+  "objectName": "spovspawnerlekrassvmderulfaspov"
+  , "colonyTags": ["vore"]
+  , "rarity": "Rare"
+  , "shortdescription": "SPOV Derulfa"
+  , "race": "generic"
+  , "category": "other"
+  , "price": 500
+  , "health" : 5
+
+	, "tooltipKind" : "vso"
+	, "objectImage" : "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspov.png:silhouette"
+  , "description": "Isn't he a little too big?!"
+	, "tooltipSubtitle" : "SPOV Summoner"
+
+  , "orientations": [{
+    "image": "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspov.png:silhouette"
+    , "imagePosition": [-64, -120]
+    , "direction": "left"
+    , "flipImages": true
+    , "spaceScan": 0.1
+    , "anchors": ["top"]
+  }, {
+    "image": "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspov.png:silhouette"
+    , "imagePosition": [-64, -120]
+    , "direction": "right"
+    , "spaceScan": 0.1
+    , "anchors": ["top"]
+  }]
+
+  , "inventoryIcon": "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspovicon.png"
+
+  , "animationParts": {
+    "bg": "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspov.png:hang_idle.1"
+  }
+
+  , "spov": {
+    "types": ["lekrassvmderulfaspov"]
+    ,"position": [0.0, -7.5, 0.0, -7.5]
+    ,"template": {}
+    ,"pillsAdd": {
+      "digest": {},
+      "softdigest": {},
+      "heal": {},
+      "ovonly": {},
+      "avonly": {}
+    }
+  }
+
+  , "animation": "spovspawner.animation"
+	, "retainObjectParametersInItem" : true
+	, "isWired" : false
+	, "printable" : false
+	, "scannable" : false
+	, "interactive" : false
+	, "inspectable" : false
+	, "allowScanning" : false
+	, "isContainer" : false
+	, "builder" : "/scripts/vore/spovitembuilder.lua"
+  , "scripts": [
+      "/scripts/npcToyObject.lua", "/scripts/vore/spovspawner.lua", "/vehicles/spov/lekrassvmderulfaspov/lekrassvmderulfaspovitemscript.lua"
+  ]
+	, "npcToy" : {
+		"influence" : [
+		  "approach",
+		  "leave"
+		],
+		"defaultReactions" : {
+		  "approach" : [
+			 [1.0, "laugh"]
+		  ],
+		  "leave" : [
+  			[1.0, "smile"],
+  			[1.0, "annoyed"],
+  			[1.0, "laugh"]
+		  ]
+		},
+		"preciseStandPositionLeft" : [-4.0, 0.0],
+		"preciseStandPositionRight" : [4.0, 0.0],
+		"maxNpcs" : 1
+  }
+}

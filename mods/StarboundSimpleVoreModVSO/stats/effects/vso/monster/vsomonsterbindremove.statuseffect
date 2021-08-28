@@ -1,0 +1,10 @@
+{
+  "name" : "vsomonsterbindremove",
+  "effectConfig" : {},
+  "defaultDuration" : 1,
+  
+  "scripts" : [
+    "vsomonsterbindremove.lua"
+  ]
+
+}

@@ -1,0 +1,33 @@
+{
+  "frameGrid" : {
+    "size" : [18, 14],
+    "dimensions" : [10, 2],
+    "names" : [
+      [ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+      ,[ "f.11", "f.12", "f.13", "f.14", "f.15", "f.16", "f.17", "f.18", "f.19", "f.20" ]
+    ]
+  },
+	"aliases"  :  {
+		"default.1":"f.1"
+		,"default.default":"f.1"
+		,"empty.1" : "f.1"
+		,"normal.1" : "f.2"
+		,"yap.1" : "f.3"
+		,"yap.2" : "f.1"
+		,"yap.3" : "f.3"
+		,"yap.4" : "f.1"
+		,"yap.5" : "f.3"
+		,"yap.6" : "f.3"
+		,"angry.1" : "f.4"
+		,"dissapoint.1" : "f.13" 
+		,"happy.1" : "f.12"
+		
+		,"liplick.1" : "f.5"
+		,"liplick.2" : "f.6"
+		,"liplick.3" : "f.7"
+		,"liplick.4" : "f.8"
+		,"liplick.5" : "f.9"
+		,"liplick.6" : "f.10"
+		,"liplick.7" : "f.11"
+	}
+}

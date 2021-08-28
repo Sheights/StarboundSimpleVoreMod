@@ -1,0 +1,148 @@
+{
+  "frameGrid" : {
+    "size" : [80, 64]
+    ,"dimensions" : [10, 8]
+    ,"names" : [
+      [ "a.1", "a.2", "a.3", "a.4", "a.5", "a.6", "a.7", "a.8", "a.9", "a.10" ]
+      ,[ "b.1", "b.2", "b.3", "b.4", "b.5", "b.6", "b.7", "b.8", "b.9", "b.10" ]
+      ,[ "c.1", "c.2", "c.3", "c.4", "c.5", "c.6", "c.7", "c.8", "c.9", "c.10" ]
+      ,[ "d.1", "d.2", "d.3", "d.4", "d.5", "d.6", "d.7", "d.8", "d.9", "d.10" ]
+      ,[ "e.1", "e.2", "e.3", "e.4", "e.5", "e.6", "e.7", "e.8", "e.9", "e.10" ]
+      ,[ "f.1", "f.2", "f.3", "f.4", "f.5", "f.6", "f.7", "f.8", "f.9", "f.10" ]
+      ,[ "g.1", "g.2", "g.3", "g.4", "g.5", "g.6", "g.7", "g.8", "g.9", "g.10" ]
+      ,[ "h.1", "h.2", "h.3", "h.4", "h.5", "h.6", "h.7", "h.8", "h.9", "h.10" ]
+    ]
+  }
+  ,"aliases"  :  {
+		"empty" : "a.1"
+
+		,"display" : "h.7"
+
+		,"silhouette" : "h.8"
+		
+		,"idle.default" : "a.2"
+
+		,"idle.1" : "a.2"
+
+		,"idle_headbob.1" : "a.2"
+		,"idle_headbob.2" : "a.3"
+		,"idle_headbob.3" : "a.4"
+		,"idle_headbob.4" : "a.3"
+
+		,"idle_tongue.1" : "a.2"
+		,"idle_tongue.2" : "a.5"
+		,"idle_tongue.3" : "a.6"
+		,"idle_tongue.4" : "a.5"
+
+		,"grab.1" : "a.7"
+		,"grab.2" : "a.8"
+		,"grab.3" : "a.9"
+		,"grab.4" : "a.10"
+		,"grab.5" : "b.1"
+		,"grab.6" : "b.2"
+		,"grab.7" : "b.3"
+		,"grab.8" : "b.4"
+		,"grab.9" : "b.5"
+		,"grab.10" : "b.6"
+		,"grab.11" : "b.7"
+		,"grab.12" : "b.8"
+		,"grab.13" : "b.9"
+		,"grab.14" : "b.10"
+		,"grab.15" : "c.1"
+		,"grab.16" : "c.2"
+		,"grab.17" : "c.3"
+
+		,"grab_miss.1" : "a.10"
+		,"grab_miss.2" : "a.9"
+		,"grab_miss.3" : "a.8"
+		,"grab_miss.4" : "a.7"
+
+		,"hold.1" : "c.3"
+		,"hold.2" : "c.4"
+		,"hold.3" : "c.5"
+		,"hold.4" : "c.4"
+		,"hold.5" : "c.3"
+
+		,"hold_squirm.1" : "c.3"
+		,"hold_squirm.2" : "c.6"
+		,"hold_squirm.3" : "c.7"
+		,"hold_squirm.4" : "c.6"
+		,"hold_squirm.5" : "c.3"
+
+		,"release.1" : "c.3"
+		,"release.2" : "c.8"
+		,"release.3" : "c.9"
+		,"release.4" : "c.10"
+		,"release.5" : "d.1"
+		,"release.6" : "d.2"
+		,"release.7" : "d.3"
+		,"release.8" : "d.4"
+		,"release.9" : "d.5"
+		,"release.10" : "a.2"
+		
+		,"swallow.1" : "c.3"
+		,"swallow.2" : "d.6"
+		,"swallow.3" : "d.7"
+		,"swallow.4" : "d.8"
+		,"swallow.5" : "d.9"
+		,"swallow.6" : "d.10"
+		,"swallow.7" : "e.1"
+		,"swallow.8" : "e.2"
+		,"swallow.9" : "e.3"
+		,"swallow.10" : "e.4"
+		,"swallow.11" : "e.5"
+		,"swallow.12" : "e.6"
+		,"swallow.13" : "e.7"
+		,"swallow.14" : "e.8"
+		,"swallow.15" : "e.9"
+		,"swallow.16" : "e.10"
+		,"swallow.17" : "f.1"
+		,"swallow.18" : "f.2"
+		,"swallow.19" : "f.3"
+		,"swallow.20" : "f.4"
+		,"swallow.21" : "f.5"
+		,"swallow.22" : "f.6"
+		,"swallow.23" : "f.7"
+
+		,"full.1" : "f.9"
+		,"full.2" : "f.10"
+		,"full.3" : "f.9"
+		,"full.4" : "f.8"
+
+		,"squirmF.1" : "f.7"
+		,"squirmF.2" : "g.1"
+		,"squirmF.3" : "g.2"
+		,"squirmF.4" : "g.1"
+		,"squirmF.5" : "f.7"
+
+		,"squirmB.1" : "f.7"
+		,"squirmB.2" : "g.7"
+		,"squirmB.3" : "g.8"
+		,"squirmB.4" : "g.7"
+		,"squirmB.5" : "f.7"
+
+		,"squirmU.1" : "f.7"
+		,"squirmU.2" : "g.5"
+		,"squirmU.3" : "g.6"
+		,"squirmU.4" : "g.5"
+		,"squirmU.5" : "f.7"
+
+		,"squirmD.1" : "f.7"
+		,"squirmD.2" : "g.3"
+		,"squirmD.3" : "g.4"
+		,"squirmD.4" : "g.3"
+		,"squirmD.5" : "f.7"
+
+		,"digest.1" : "f.7"
+		,"digest.2" : "g.9"
+		,"digest.3" : "g.10"
+		,"digest.4" : "h.1"
+		,"digest.5" : "h.2"
+		,"digest.6" : "h.3"
+		,"digest.7" : "h.4"
+		,"digest.8" : "h.5"
+		,"digest.9" : "h.6"
+		,"digest.10" : "a.2"
+		,"digest.11" : "a.2"
+	}
+}

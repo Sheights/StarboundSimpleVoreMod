@@ -1,0 +1,20 @@
+{
+  "itemName" : "spovpillavonly",
+  "price" : 10,
+  "rarity" : "Uncommon",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "spovpillavonly.png",
+  "description" : "A pill that allows preds to exclusively swallow preys with their butt.",
+  "shortdescription" : "AV Only Pill",
+  "itemTags" : [ "reagent", "vsopill" ],
+
+  "pillAdd" : {
+    "avonly" : {
+      "name" : "AV-Only",
+      "icon" : "/items/spov/pills/spovpillavonly.png",
+      "description" : "Allow preds to exclusively swallow preys with their butt.",
+      "value": 1.0
+    }
+  },
+  "pillRemove": [ "ovonly" ]
+}

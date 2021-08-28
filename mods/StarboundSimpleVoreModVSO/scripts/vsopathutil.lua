@@ -37,6 +37,7 @@ function mParams()
 		MP = mcontroller.parameters()	--vehicle
 		--Meaning we need EXTRA parameters if we have them...
 		--sb.logInfo( "Thing is a Vehicle: "..tostring( entity.id() ) )
+		--sb.logInfo( "VSO mParams: "..tostring( entity.id() ).." friction: ".. tostring( MP.groundFriction ) )
 	end
 	
 	--SOME THINGS will be missing. And we CANNOT use mcontroller.parameters to access them, so.
