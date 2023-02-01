@@ -186,24 +186,22 @@ function digest()
 			removeit = true;
 		end
 		if removeit then
-			if not world.entityExists( victim[i] ) then
-				for j = i, capacity do
-					if j == capacity then
-						dead[j] = false
-						stopWatch[j] = 0
-						victim[j] = nil
-						request[j] = false
-						isPlayer[j] = false
-					else
-						dead[j] = dead[j+1]
-						stopWatch[j] = stopWatch[j+1]
-						victim[j] = victim[j+1]
-						request[j] = request[j+1]
-						isPlayer[j] = isPlayer[j+1]
-					end
+			for j = i, capacity do
+				if j == capacity then
+					dead[j] = false
+					stopWatch[j] = 0
+					victim[j] = nil
+					request[j] = false
+					isPlayer[j] = false
+				else
+					dead[j] = dead[j+1]
+					stopWatch[j] = stopWatch[j+1]
+					victim[j] = victim[j+1]
+					request[j] = request[j+1]
+					isPlayer[j] = isPlayer[j+1]
 				end
-				do return end
 			end
+			do return end
 		end
 		if isDigest then
 			if not dead[i] and world.entityHealth(victim[i])[1] / world.entityHealth(victim[i])[2] < 0.03 then
